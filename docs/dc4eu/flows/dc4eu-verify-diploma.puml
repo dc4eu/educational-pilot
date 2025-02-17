@@ -1,0 +1,88 @@
+@startuml dc4eu-verify-diploma
+'https://plantuml.com/sequence-diagram
+skinparam handwritten true
+
+
+
+header 
+    Present a Diploma Credential
+end header
+title
+    Student present a Diploma (OpenID VP)
+end title
+footer 
+    Present a Diploma Credential
+end footer
+
+actor "Student" as student
+participant "wwWallet" as mobile #LightCoral
+participant "Student GUI" as stdGUI #LightGreen
+participant "uSelf\n Verifier Agent" as verifier #LightGreen
+participant "Authentic Source" as authSource #LightSalmon
+participant "Postgres DB" as db #LightSalmon
+
+participant "EBSI DID Registry" as didr #LightBlue
+participant "EBSI TR Registry" as trr #LightBlue
+participant "EBSI Schema Registry" as sr #LightBlue
+participant "EBSI Proxy" as proxy #LightBlue
+
+participant "uSelf\n Issuer Agent" as issuer #LightGreen
+
+autonumber
+
+
+    student->stdGUI:**GET** http://student-web/verify-diploma
+    activate stdGUI #LightGreen
+    stdGUI->verifier:**GET** http://uself-verifier/auth/authorize
+    activate verifier #LightGreen
+    return redirect direct_post
+    stdGUI->stdGUI: generate QRCode
+    mobile->stdGUI: read QRCode
+    activate mobile #LightCoral
+    student->mobile: consent to send PID
+    mobile<--mobile: redirect - http status = 302
+    mobile->verifier:**POST** http://uself-verifier/direct_post
+    activate verifier #LightGreen
+    note right of verifier: sent the EducationalId of the student and generate an access_token with this information
+    verifier->verifier: verify Diploma
+
+    verifier->didr:**GET** http://ebsi-did-registry/did
+    activate didr #LightBlue
+    return did
+
+    verifier->trr:**GET** http://ebsi-tr-registry/tr
+    activate trr #LightBlue
+    return tr
+
+    verifier->sr:**GET** http://ebsi-schema-registry/schema
+    activate sr #LightBlue
+    return schema
+
+    verifier->proxy:**GET** http://ebsi-proxy/verify
+    activate proxy #LightBlue
+        proxy->issuer:**get** http://uself-issuer/status
+        activate issuer #LightGreen
+        return status
+    return status
+
+    return code
+    mobile<--mobile: HTTP 302 
+    mobile ->verifier:**GET** http://uself-verifier/callback
+    activate verifier #LightGreen
+
+    mobile->student: success
+    deactivate mobile
+
+    
+    verifier-->>stdGUI: event
+    deactivate verifier
+    
+    stdGUI->verifier:**POST** http://uself-verifier/auth/token
+    activate verifier #LightGreen
+    return access_token
+    stdGUI->student: success
+    
+    deactivate mobile
+    deactivate stdGUI
+
+@enduml

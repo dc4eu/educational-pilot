@@ -1,0 +1,92 @@
+@startuml dc4eu-issue-educationalId
+'https://plantuml.com/sequence-diagram
+skinparam handwritten true
+
+
+
+header 
+    Issue an EducationalId Credential
+end header
+title
+    Student obtains an EducationalId presenting a PID (OpenID VCI)
+end title
+footer 
+    Issue an EducationalId Credential
+end footer
+
+actor "Student" as student
+participant "wwWallet" as mobile #LightCoral
+participant "Student GUI" as stdGUI #LightGreen
+participant "uSelf\n Issuer Agent" as agent #LightGreen
+participant "Authentic Source" as authSource #LightSalmon
+participant "Postgres DB" as db #LightSalmon
+
+participant "EBSI DID Registry" as didr #LightBlue
+participant "EBSI TR Registry" as trr #LightBlue
+participant "EBSI Schema Registry" as sr #LightBlue
+participant "EBSI Proxy" as proxy #LightBlue
+
+participant "uSelf\n PID Issuer Agent" as issuer #LightGreen
+
+autonumber
+
+    student->stdGUI:**GET** http://student-web/issue
+    activate stdGUI #LightGreen
+    stdGUI->agent:**GET** http://uself-agent/issuer/crendential-offer
+    activate agent #LightGreen
+    return credential_offer
+    stdGUI->stdGUI: generate QRCode
+    mobile->stdGUI: read QRCode
+    activate mobile #LightCoral
+    mobile<--mobile: redirect - http status = 302
+    mobile->agent:**GET** http://uself-agent/auth/authorize
+    activate agent #LightGreen
+    return redirect direct_post
+    student->mobile: consent to send PID
+    mobile<--mobile: redirect - http status = 302
+    mobile->agent:**POST** http://uself-agent/direct_post
+    activate agent #LightGreen
+    note left of agent: sent the pid of the student and to be verified
+    agent->agent: verify PID VP
+    activate agent #LightGreen
+
+    agent->didr:**GET** http://ebsi-did-registry/did
+    activate didr #LightBlue
+    return did
+
+    agent->trr:**GET** http://ebsi-tr-registry/tr
+    activate trr #LightBlue
+    return tr
+
+    agent->sr:**GET** http://ebsi-schema-registry/schema
+    activate sr #LightBlue
+    return schema
+
+    agent->proxy:**GET** http://ebsi-proxy/verify
+    activate proxy #LightBlue
+        proxy->issuer:**get** http://uself-issuer/status
+        activate issuer #LightGreen
+        return status
+    return status
+    deactivate agent
+
+    
+    return code
+    mobile<--mobile: redirect - http status = 302 
+    mobile->agent:**GET** http://uself-agent/auth/token
+    activate agent #LightGreen
+    return access_token
+    mobile->agent:**POST** http://uself-agent/issuer/credential
+    activate agent #LightGreen
+    agent->authSource:**GET** http://auth-source/educationalId/pid_identifier
+    activate authSource #LightSalmon
+    authSource->db: SELECT * FROM educationalId\n WHERE pid = pid_identifier
+    activate db #LightSalmon
+    return educationalId info
+    return educationalId info
+    agent--//stdGUI: send event credential_issued
+    return credential
+    deactivate mobile
+    deactivate stdGUI
+
+@enduml
