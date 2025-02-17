@@ -6,8 +6,8 @@
 
 **Reviewers:**
 
-* Ross Little (<ross.little@eviden.com>)
-* Juan Carlos Perez (<juan.perezb@eviden.com>)
+* Alberto Crespo (<alberto.crespo@eviden.com>)
+* Lluis Ariño (<lluisalfons.arino@urv.cat>)
 
 **Status:** Approved for v1.0 release???
 
