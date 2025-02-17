@@ -83,8 +83,7 @@ This section needs to defined
 | uself-agent            | v0.0.3 |   ✅   |   ✅    |  ✅     |  ✅     |
 | uself-mobile-app       | v0.0.3 |   ✅   |         |         |  ✅     |
 
-### Gaia X Compliance Test
-This sections need to be defined
+
 
 ## Licensing
 

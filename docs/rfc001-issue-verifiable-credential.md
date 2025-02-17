@@ -7,7 +7,7 @@
 **Reviewers:**
 
 * Alberto Crespo (<alberto.crespo@eviden.com>)
-* Lluis Ariño ()
+* Lluis Ariño (<lluisalfons.arino@urv.cat>)
 
 **Status:** Approved for v1.0 release???
 
