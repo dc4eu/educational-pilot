@@ -88,7 +88,10 @@ Ledger uSelf is compliant with EBSI wallet compliance tests in order to assure t
 ### 5 Deployment
 (TBD)
 
-## Licensing
+## Notice
 
 The content in this repository is copyrighted by ATOS Spain S.A. (hereinafter referred to as ATOS or EVIDEN) unless otherwise specified. The information in this repository can only be used by the beneficiaries of the EU funded DC4EU Project and only for the purposes of the integration activities of this project, and that any other use is forbidden unless accepted in writing by ATOS. For more information please refer to the
-license.
+license below.
+
+## License
+Copyright Notice Copyright © 2025 ATOS Spain S.A. (hereinafter referred to as "Atos" or "EVIDEN"). All rights reserved. Unauthorized use of this content, beyond the permissions specified in this license, without the prior written consent of Atos/EVIDEN is strictly prohibited. Authorized Use This content is authorized to the beneficiaries of the DC4EU project (European Commission’s Grant Agreement 101102611) solely for integration activities. Any other use, including reproduction, modification, distribution, or sharing with third parties, is forbidden without prior written authorization from Atos/EVIDEN. Confidentiality The content in this repository is marked as CONFIDENTIAL and is intended exclusively for internal use by DC4EU project partners. Disclosure or use of this content outside of the project requires explicit written consent from Atos/EVIDEN. Duration of Access Access to this repository is granted for the duration of the DC4EU Project. Upon the project’s conclusion, access will be terminated unless otherwise agreed upon in writing. Additionally, all Confidential Information that has been stored by the beneficiaries must be erased or destroyed.
