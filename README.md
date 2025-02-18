@@ -90,4 +90,5 @@ Ledger uSelf is compliant with EBSI wallet compliance tests in order to assure t
 
 ## Licensing
 
-The content in this repository is copyrighted by ATOS Spain S.A. (hereinafter referred to as ATOS or EVIDEN) unless otherwise specified. Any other use is forbidden unless accepted in writing by ATOS
+The content in this repository is copyrighted by ATOS Spain S.A. (hereinafter referred to as ATOS or EVIDEN) unless otherwise specified. The information in this repository can only be used by the beneficiaries of the EU funded DC4EU Project and only for the purposes of the integration activities of this project, and that any other use is forbidden unless accepted in writing by ATOS. For more information please refer to the
+license.
