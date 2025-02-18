@@ -2,11 +2,12 @@
 
 ## 1 About
 
-This repository is created for describing the details associated to Educational Pilot
+This repository is created for describing the details associated to Educational Credentials and Professional Qualifications Pilot.
+It covers the high level technical architecture, lists the main components with pointers to their descriptions, describes through RFCs the basic operations (workflows) implemented by the system as well as the specific use cases approved for the pilot. Details about EBSI Wallet Compliance tests are provided as well as Deployment instructions and license related to this documentation.
 
 ## 2 Architecture
 
-The following diagrams show a high level detail of the different components to be deployed within the Educational Pilot
+The following diagrams show a high level detail of the different components to be deployed within the Educational Credentials and Professional Qualifications Pilot
 
 ![image](docs/images/Architecture.png)
 
@@ -43,9 +44,9 @@ Following are the candidates' RFCs taken up. Note that the title, etc, may chang
 | RFC-003   | [To be defined](docs/rfc003-to-be-defined.md) |
 
 
-## 4. Use Cases by project
+## 4 Use Cases by project
 
-For each of the different projects where uSelf is han been applied, they have been identified some specific use cases. This section is devoted for providing a view of those specific uses cases by project
+For each of the different projects where uSelf has been applied, they some specific use cases have been identified. This section is devoted for providing a view of those specific uses cases by project.
 
 ### 4.1 DC4EU
 
@@ -73,18 +74,20 @@ Following are the candidates'Use cases taken up. Note that the title, etc, may c
 
 ## uSelf Compliance Test
 
-Ledger uSelf is compliance with some test in order to assure the interoperability with others
+Ledger uSelf is compliant with EBSI wallet compliance tests in order to assure the interoperability with other issuer, verifier and wallet solutions.
+(Add mention to Izertis wallet)
 ### EUDI Wallet Compliance Test
-This section needs to defined
-### Ebsi Compliance Test
+(This section needs to defined)
+### EBSI Compliance Test
 
 | Tool |Version | Holder | Issuer | Verifier | Trust Model |
 | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------                   | :----: | :----: | :------:|:------: |
 | uself-agent            | v0.0.3 |   ✅   |   ✅    |  ✅     |  ✅     |
-
+(To be added Izertis Wallet EBSI compliance)
 
 ### 5 Deployment
+(TBD)
 
 ## Licensing
 
-The content in this repository is copyrighted by ATOS IT SOLUTIONS AND SERVICES IBERIA, S.L. (hereinafter referred to as ATOS or EVIDEN) unless otherwise specified. Any other use is forbidden unless accepted in writing by ATOS”
+The content in this repository is copyrighted by ATOS Spain S.A. (hereinafter referred to as ATOS or EVIDEN) unless otherwise specified. Any other use is forbidden unless accepted in writing by ATOS
