@@ -3,11 +3,11 @@
 ## 1 About
 
 This repository is created for describing the details associated to Educational Credentials and Professional Qualifications Pilot.
-It covers the high level technical architecture, lists the main components with pointers to their descriptions, describes through RFCs the basic operations (workflows) implemented by the system as well as the specific use cases approved for the pilot. Details about EBSI Wallet Compliance tests are provided as well as Deployment instructions and license related to this documentation.
+It covers the high level technical architecture, lists the main components from core technical infrastructure with pointers to their descriptions, describes through RFCs the basic operations (workflows) implemented by the system as well as the specific use cases approved for the pilot. Details about EBSI Wallet Compliance tests are provided as well as Deployment instructions and license related to this documentation.
 
 ## 2 Architecture
 
-The following diagrams show a high level detail of the different components to be deployed within the Educational Credentials and Professional Qualifications Pilot
+The following diagrams show a high level detail of the different core technical infrastructure components to be deployed within the Educational Credentials and Professional Qualifications Pilot (dPKI profile).
 
 ![image](docs/images/Architecture.png)
 
@@ -46,7 +46,7 @@ Following are the candidates' RFCs taken up. Note that the title, etc, may chang
 
 ## 4 Use Cases by project
 
-For each of the different projects where uSelf has been applied, they some specific use cases have been identified. This section is devoted for providing a view of those specific uses cases by project.
+For each of the different projects where uSelf has been applied, some specific use cases have been identified. This section is devoted for providing a view of those specific uses cases by project.
 
 ### 4.1 DC4EU
 
