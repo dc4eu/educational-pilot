@@ -1,0 +1,193 @@
+services:
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    container_name: nginx-proxy
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./data/nginx-data/certs:/etc/nginx/certs
+      - ./data/nginx-data/conf.d:/etc/nginx/conf.d
+      - ./data/nginx-data/vhost.d:/etc/nginx/vhost.d
+      - ./data/nginx-data/html:/usr/share/nginx/html
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+    networks:
+      - uself_net
+
+  nginx-letsencrypt:
+    image: nginxproxy/acme-companion
+    container_name: nginx-proxy-acme
+    restart: always
+    volumes_from:
+      - nginx-proxy
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./data/acme:/etc/acme.sh
+    environment:
+      - DEFAULT_EMAIL=ledger-uself@lists.atosresearch.eu
+    networks:
+      - uself_net
+
+  uself-pid-generator:
+    image: ossdc4eu.urv.cat:8081/eviden/rd/uself/uself-pid-generator:test
+    hostname: uself-pid-generator.${DOMAIN}
+    container_name: uself-pid-generator.dc4eu
+    environment:
+      #- LETSENCRYPT_HOST=uself-pid-generator.${DOMAIN}
+      - VIRTUAL_HOST=uself-pid-generator.${DOMAIN}
+      - VIRTUAL_PORT=80
+      - USELF_AGENT_URL=${PROTOCOL}://uself-issuer-agent.${DOMAIN}
+      - USELF_AUTHENTIC_SOURCE_URL=${PROTOCOL}://uself-authentic-source.${DOMAIN}
+      - USELF_KEYCLOAK_URL=${PROTOCOL}://uself-keycloak.${DOMAIN}
+    depends_on:
+      - "uself-issuer-agent"
+    networks:
+      - uself_net
+
+  uself-issuer-gui:
+    image: ossdc4eu.urv.cat:8081/eviden/rd/uself/uself-issuer-gui:test
+    container_name: uself-issuer-gui.dc4eu
+    environment:
+      #- LETSENCRYPT_HOST=uself-issuer-gui.${DOMAIN}
+      - VIRTUAL_HOST=uself-issuer-gui.${DOMAIN}
+      - VIRTUAL_PORT=80
+      - USELF_AGENT_URL=${PROTOCOL}://uself-issuer-agent.${DOMAIN}
+      - USELF_AUTHENTIC_SOURCE_URL=${PROTOCOL}://uself-authentic-source.${DOMAIN}
+      - USELF_KEYCLOAK_URL=${PROTOCOL}://uself-keycloak.${DOMAIN}
+    depends_on:
+      - "uself-issuer-agent"
+    networks:
+      - uself_net
+
+  uself-verifier-gui:
+    image: ossdc4eu.urv.cat:8081/eviden/rd/uself/uself-verifier-gui:test
+    container_name: uself-verifier-gui.dc4eu
+    environment:
+      #- LETSENCRYPT_HOST=uself-verifier-gui.${DOMAIN}
+      - VIRTUAL_HOST=uself-verifier-gui.${DOMAIN}
+      - VIRTUAL_PORT=80
+      - USELF_AGENT_URL=${PROTOCOL}://uself-issuer-agent.${DOMAIN}
+    depends_on:
+      - "uself-issuer-agent"
+    networks:
+      - uself_net
+  
+  uself-issuer-agent:
+    image: ossdc4eu.urv.cat:8081/eviden/rd/uself/uself-agent:test
+    container_name: uself-issuer-agent.dc4eu
+    environment:
+      #- LETSENCRYPT_HOST=uself-issuer-agent.${DOMAIN}
+      - VIRTUAL_HOST=uself-issuer-agent.${DOMAIN}
+      - VIRTUAL_PORT=8888
+      - uself_server=${PROTOCOL}://uself-issuer-agent.${DOMAIN}
+      - uself_authentic-source-url=http://uself-authentic-source:8080/api
+      - uself_openid-idp-server=http://uself-keycloak/realms/uself-issuer
+      - uself_preload=dc4eu
+      - uself_did_method=DID_EBSI_LEGAL_ENTITY_PRELOADED
+      - uself_openid-client-gui=${PROTOCOL}://uself-issuer-agent.${DOMAIN}/present
+      - uself_openid-client-provider=uself
+      - spring_data_redis_host=uself-redis
+    depends_on:
+      uself-keycloak:
+        condition: service_healthy
+    networks:
+      - uself_net
+
+  uself-authentic-source:
+    image: ossdc4eu.urv.cat:8081/eviden/rd/uself/uself-authentic-source:test-1
+    container_name: uself-authentic-source.dc4eu
+    environment:
+      #- LETSENCRYPT_HOST=uself-authentic-source.${DOMAIN}
+      - VIRTUAL_HOST=uself-authentic-source.${DOMAIN}
+      - VIRTUAL_PORT=8080
+      - spring_security_oauth2_resourceserver_jwt_issuer-uri=http://uself-keycloak/realms/uself-issuer
+      - spring_datasource_url=jdbc:postgresql://uself-postgres:5432/uself_authentic_source_db
+      - spring_datasource_username=${POSTGRES_USER}
+      - spring_datasource_password=${POSTGRES_PASSWORD}
+      - spring_datasource_driver-class-name=org.postgresql.Driver
+    depends_on:
+      uself-keycloak:
+        condition: service_healthy
+    networks:
+      - uself_net
+     
+  uself-keycloak:
+    container_name: uself-keycloak.${DOMAIN}
+   
+    build:
+      context: ./data/keycloak
+      args:
+        KEYCLOAK_VERSION: 25.0.0
+    environment:
+      #- LETSENCRYPT_HOST=uself-keycloak.${DOMAIN}
+      - VIRTUAL_HOST=uself-keycloak.${DOMAIN}
+      - VIRTUAL_PORT=80
+      - JAVA_OPTS_APPEND=-Dkeycloak.profile.feature.upload_scripts=enabled
+     
+      - KC_HTTP_PORT=80
+      - KC_HOSTNAME_STRICT=false
+      - KC_HTTP_ENABLED=true
+      - KC_PROXY_HEADERS=xforwarded
+
+      - KC_DB=postgres
+      - KC_DB_USERNAME=${POSTGRES_USER}
+      - KC_DB_PASSWORD=${POSTGRES_PASSWORD}
+      - KC_DB_URL=jdbc:postgresql://uself-postgres:5432/keycloak_db
+      
+
+      - KC_HEALTH_ENABLED=true
+      - KC_METRICS_ENABLED=true
+
+      - KEYCLOAK_ADMIN=${KEYCLOAK_ADMIN}
+      - KEYCLOAK_ADMIN_PASSWORD=${KEYCLOAK_ADMIN_PASSWORD}
+
+    command: ['start', '--import-realm', '--optimized']
+    healthcheck:
+      test: ["CMD-SHELL", "exec 3<>/dev/tcp/127.0.0.1/9000;echo -e 'GET /health/ready HTTP/1.1\r\nhost: http://localhost\r\nConnection: close\r\n\r\n' >&3;if [ $? -eq 0 ]; then echo 'Healthcheck Successful';exit 0;else echo 'Healthcheck Failed';exit 1;fi;"]
+      start_period: 10s
+      interval: 30s
+      retries: 3
+      timeout: 5s
+    depends_on:
+      uself-postgres:
+        condition: service_healthy
+    networks:
+      - uself_net
+    volumes:
+      - ./data/keycloak/import-new:/opt/keycloak/data/import
+
+  uself-postgres:
+    container_name: uself-postgres
+    image: "postgres:14.4"
+    healthcheck:
+      test: [ "CMD", "pg_isready", "-q", "-d", "postgres", "-U", "postgres" ]
+      timeout: 45s
+      interval: 10s
+      retries: 10
+    volumes:
+      - "postgres_data:/var/lib/postgresql/data"
+      - "./data/psql/init.sql:/docker-entrypoint-initdb.d/init.sql"
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_HOST: uself-postgres
+    networks:
+      - uself_net
+
+  uself-redis:
+    container_name: uself-redis
+    image: redis:alpine
+    volumes:
+      - redis_data:/data
+    networks:
+      - uself_net
+
+volumes:
+  postgres_data:
+  redis_data:
+
+networks:
+  uself_net:
+    name: uself_net
+    driver: bridge 

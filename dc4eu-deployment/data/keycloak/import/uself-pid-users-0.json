@@ -1,0 +1,30 @@
+{
+  "realm" : "uself-pid",
+  "users" : [ {
+    "id" : "02748ae9-3b82-45c5-ac33-300fb0171c6f",
+    "username" : "john",
+    "firstName" : "John",
+    "lastName" : "Doe",
+    "email" : "john.doe@uself.eu",
+    "emailVerified" : true,
+    "attributes" : {
+      "document_number" : [ "123456789" ]
+    },
+    "createdTimestamp" : 1739202703440,
+    "enabled" : true,
+    "totp" : false,
+    "credentials" : [ {
+      "id" : "eab5e21b-e322-4985-93ca-5c5e0db9ab25",
+      "type" : "password",
+      "userLabel" : "My password",
+      "createdDate" : 1739202723116,
+      "secretData" : "{\"value\":\"qlUUBP9NBJn7xhwh/HQbbGmB2JSd0S4iB9e/ClnazME=\",\"salt\":\"lCh3U9NVj+WKF9krVGm1FA==\",\"additionalParameters\":{}}",
+      "credentialData" : "{\"hashIterations\":5,\"algorithm\":\"argon2\",\"additionalParameters\":{\"hashLength\":[\"32\"],\"memory\":[\"7168\"],\"type\":[\"id\"],\"version\":[\"1.3\"],\"parallelism\":[\"1\"]}}"
+    } ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "default-roles-uself-pid" ],
+    "notBefore" : 0,
+    "groups" : [ ]
+  } ]
+}
