@@ -46,8 +46,8 @@ For new users, we recommend starting with:
 
 ## License and Notice
 
-Copyright © 2025 ATOS Spain S.A. (hereinafter referred to as "Atos" or "EVIDEN"). All rights reserved.
+Copyright © 2025 DC4EU. All rights reserved.
 
-The content in this repository is copyrighted by ATOS Spain S.A. unless otherwise specified. The information can only be used by the beneficiaries of the EU funded DC4EU Project and only for the purposes of the integration activities of this project. Any other use is forbidden unless accepted in writing by ATOS.
+The content of this repository, except in those sections where explicitly announced otherwise, belongs to DC4EU under EUPLv2 licence.
 
 For complete license details, see [License Information](./docs/license.md).

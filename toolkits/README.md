@@ -73,3 +73,12 @@ When implementing these toolkits:
 ## Contributing
 
 To contribute new use cases, workflows, or component descriptions, please follow the templates provided in each section and submit a pull request.
+
+
+# License and Notice
+
+Copyright © 2025 ATOS Spain S.A. (hereinafter referred to as "Atos" or "EVIDEN"). All rights reserved.
+
+The content in this repository is copyrighted by ATOS Spain S.A. unless otherwise specified. The information can only be used by the beneficiaries of the EU funded DC4EU Project and only for the purposes of the integration activities of this project. Any other use is forbidden unless accepted in writing by ATOS.
+
+For complete license details, see [License Information](./docs/license.md).
