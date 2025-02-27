@@ -19,18 +19,20 @@ Selective disclosure acknowledges that the issuer has liability regarding the is
 # Embedded Disclosure
 
 Embedded disclosure is linked to the EAA catalogue and serves to restrict which relying parties can request and process specific Electronic Attestations of Attributes (EAAs). This mechanism operates at the ecosystem level, creating structural controls for data access.
-Key Characteristics:
-•	Pre-defined Access Control: Establishes which categories of relying parties can access specific types of credentials or attributes
-•	Catalogue Integration: Directly integrated with the EAA catalogue, creating systemic restrictions
-•	Ecosystem Governance: Managed through formal governance structures with sectorial oversight
-•	Category-based Restrictions: Limits access based on relying party categories and classifications
-•	Structural Protection: Creates ecosystem-wide guardrails for credential usage
-Implementation Mechanisms:
-•	Registry-based access control lists
-•	Formal classification of relying parties
-•	Credential type categorisation
-•	Trust framework integration
-•	Access policy enforcement in verification protocols
+
+## Key Characteristics:
+- Pre-defined Access Control: Establishes which categories of relying parties can access specific types of credentials or attributes
+- Catalogue Integration: Directly integrated with the EAA catalogue, creating systemic restrictions
+- Ecosystem Governance: Managed through formal governance structures with sectorial oversight
+- Category-based Restrictions: Limits access based on relying party categories and classifications
+- Structural Protection: Creates ecosystem-wide guardrails for credential usage
+
+## Implementation Mechanisms:
+- Registry-based access control lists
+- Formal classification of relying parties
+- Credential type categorisation
+- Trust framework integration
+- Access policy enforcement in verification protocols
 
 
 
