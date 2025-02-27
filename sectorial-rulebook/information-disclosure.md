@@ -1,8 +1,16 @@
 # Information Disclosure
 
+## Overview
+
+Information disclosure mechanisms define how personal data contained within educational and professional credentials is shared with relying parties. These mechanisms are critical for balancing data protection with credential utility, ensuring appropriate access while maintaining privacy and contextual integrity. The framework implements a dual approach to information disclosure that respects both individual privacy rights and issuer liability concerns.
+
 ## Embeded Disclosure
+
+Embedded disclosure is linked to the EAA catalogue and serves to restrict which relying parties can request and process specific Electronic Attestations of Attributes (EAAs). This mechanism operates at the ecosystem level, creating structural controls for data access
+
 ## Selective Disclosure
 
+Selective disclosure acknowledges that the issuer has liability regarding the issued EAA and, therefore, enables the definition of policies, templates, and profiles on the disclosure of part of the EAA information that ensures the context is not lost. This mechanism operates at the credential level, preserving the semantic integrity of shared information
 
 
 # Selective Disclosure
