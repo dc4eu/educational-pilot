@@ -4,13 +4,34 @@
 
 Information disclosure mechanisms define how personal data contained within educational and professional credentials is shared with relying parties. These mechanisms are critical for balancing data protection with credential utility, ensuring appropriate access while maintaining privacy and contextual integrity. The framework implements a dual approach to information disclosure that respects both individual privacy rights and issuer liability concerns.
 
+The system supports two complementary types of disclosure control:
+
 ## Embeded Disclosure
 
 Embedded disclosure is linked to the EAA catalogue and serves to restrict which relying parties can request and process specific Electronic Attestations of Attributes (EAAs). This mechanism operates at the ecosystem level, creating structural controls for data access
 
 ## Selective Disclosure
 
+
 Selective disclosure acknowledges that the issuer has liability regarding the issued EAA and, therefore, enables the definition of policies, templates, and profiles on the disclosure of part of the EAA information that ensures the context is not lost. This mechanism operates at the credential level, preserving the semantic integrity of shared information
+
+
+#Embedded Disclosure
+
+Embedded disclosure is linked to the EAA catalogue and serves to restrict which relying parties can request and process specific Electronic Attestations of Attributes (EAAs). This mechanism operates at the ecosystem level, creating structural controls for data access.
+Key Characteristics:
+•	Pre-defined Access Control: Establishes which categories of relying parties can access specific types of credentials or attributes
+•	Catalogue Integration: Directly integrated with the EAA catalogue, creating systemic restrictions
+•	Ecosystem Governance: Managed through formal governance structures with sectorial oversight
+•	Category-based Restrictions: Limits access based on relying party categories and classifications
+•	Structural Protection: Creates ecosystem-wide guardrails for credential usage
+Implementation Mechanisms:
+•	Registry-based access control lists
+•	Formal classification of relying parties
+•	Credential type categorisation
+•	Trust framework integration
+•	Access policy enforcement in verification protocols
+
 
 
 # Selective Disclosure
