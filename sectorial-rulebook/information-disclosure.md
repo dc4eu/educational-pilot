@@ -16,7 +16,7 @@ Embedded disclosure is linked to the EAA catalogue and serves to restrict which 
 Selective disclosure acknowledges that the issuer has liability regarding the issued EAA and, therefore, enables the definition of policies, templates, and profiles on the disclosure of part of the EAA information that ensures the context is not lost. This mechanism operates at the credential level, preserving the semantic integrity of shared information
 
 
-#Embedded Disclosure
+# Embedded Disclosure
 
 Embedded disclosure is linked to the EAA catalogue and serves to restrict which relying parties can request and process specific Electronic Attestations of Attributes (EAAs). This mechanism operates at the ecosystem level, creating structural controls for data access.
 Key Characteristics:
