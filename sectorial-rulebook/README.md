@@ -24,7 +24,7 @@ This sectorial rulebook covers the following key areas:
 
 - **[Issuance](./issuance.md)**: The process for issuing different types of attestations.
 
-- **[Selective Disclosure](./selective-disclosure.md)**: How users can share only necessary credential data to protect privacy.
+- **[Disclosure of information](./information-disclosure.md)**: How information can be dislcosed to protect privacy.
 
 - **[Sharing Mechanisms](./sharing-mechanisms.md)**: The framework supporting European mobility through credential sharing.
 
