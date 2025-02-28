@@ -46,8 +46,8 @@ For new users, we recommend starting with:
 
 ## License and Notice
 
-Copyright © 2025 DC4EU. All rights reserved.
+Copyright © 2025 DC4EU under EUPL-2.0 License 
 
-The content of this repository, except in those sections where explicitly announced otherwise, belongs to DC4EU under EUPLv2 licence.
+The content of this repository, except in those sections where explicitly announced otherwise, belongs to DC4EU under EUPL-2.0 licence.
 
 For complete license details, see [License Information](./docs/license.md).
