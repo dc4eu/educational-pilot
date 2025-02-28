@@ -43,7 +43,7 @@ This section covers identifiers and credentials that are not based on foundation
 
 This section contains the common data models that support all three categories above:
 
-- European Learning Model (ELM) implementation
+- European Learning Model (ELM) implementation (./data-models/elm-implementation-schema.md)
 - W3C Verifiable Credentials data model adaptations
 - EDCI (Europass Digital Credentials Infrastructure) alignment
 - Multi-language support structures
