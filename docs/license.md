@@ -50,4 +50,4 @@ In addition to the EUPL-2.0 license, the following project-specific restrictions
 For licensing inquiries, please contact:
 
 DC4EU
-[Contact details to be added]
+[info@dc4eu.eu]
