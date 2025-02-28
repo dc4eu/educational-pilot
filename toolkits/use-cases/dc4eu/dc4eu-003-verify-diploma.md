@@ -1,4 +1,4 @@
-# RFC001: Issue Verifiable Credentials - v1.0
+# Verify EducationalId for authentication - v1.0
 
 **Authors:**
 
@@ -6,10 +6,10 @@
 
 **Reviewers:**
 
-* Alberto Crespo (<alberto.crespo@eviden.com>)
-* Lluis Ariño (<lluisalfons.arino@urv.cat>)
+* LLuis Ariño ()
 
-**Status:** Approved for v1.0 release???
+
+**Status:** Approved for v1.0
 
 **Table of Contents:**
 
@@ -25,115 +25,17 @@
 
 ## [1 Summary](#1-summary)
 
-This specification details the implementation of the OID4VP workflow for any verifier (relying party) in accordance with the reference specification of the European Wallet Ecosystem defined in the Architecture and Reference Framework [ARF](https://eu-digital-identity-wallet.github.io/eudi-doc-architecture-and-reference-framework/1.1.0/arf/).
+This specification details the implementation of the OIDC4VP workflow for any verifier (relying party) in accordance with the reference specification of the European Wallet Ecosystem defined in the [ARF](https://eu-digital-identity-wallet.github.io/eudi-doc-architecture-and-reference-framework/1.1.0/arf/) and using EBSI infrastructure for Trust Model
+
+The main aim of this use case is to shoe how an student can present an educationalID to be authenticate into the system.
 
 ## [2 Verification Flow](#2-verification-flow)
 
-The following diagrams show the different use cases taken into consideration: 
-- Relying Party with only a Front End and 
-- Relying Party with a Front End and Back End
-
-### Relying Party with only a Front End
-
 Figure 1 shows when the Relying Party only has a Front End:
 
-``` mermaid
-  sequenceDiagram
-    autonumber
-    actor user as End User
-    participant mobile as Mobile Wallet
-    participant rpFE as Relying Party (Front End)  
-    participant verifier as uSelf Verifier Agent
+![image](../images/dc4eu-verify-diploma.png)
 
-
-      user->>rpFE: /verify-presentation
-      activate rpFE
-      rpFE--)verifier: subscribe(<state_id>)
-      rpFE->>verifier: /authorize?state=<state_id>&redirect_uri=/callback (GET)
-      activate verifier 
-      verifier-->>rpFE: openid://?request_uri=<request_uri_id>
-      deactivate verifier
-      rpFE->>rpFE: generate QRCode
-      user->>mobile: open wallet 
-      activate mobile
-      mobile->>rpFE: read QRCode
-      mobile->>verifier: /request_uri/<request_uri_id>
-      activate verifier    
-      verifier-->>mobile: jwt(authorization_request)
-      deactivate verifier
-      user->>mobile: consent to send Presentation
-      mobile->>verifier: /direct_post (POST)
-      activate verifier 
-      verifier->>verifier: verify Diploma
-      verifier-->>mobile: /callback?code=<code_id>&state=<state_id>
-      deactivate verifier
-      mobile-->>mobile: (http status=302)
-      mobile-->>+verifier: /callback?code=<code_id>&state=<state_id>
-      mobile-->>user: success
-      deactivate mobile
-      verifier--)-rpFE:  message={code:<code_id>&state:<state_id>}
-      rpFE->>verifier: /token (POST)
-      activate verifier 
-      verifier-->>rpFE: access_token,id_token
-      deactivate verifier
-      rpFE-->>user: success
-      deactivate rpFE
-```
-
-      Figure 1: Verification Flow with a Relaying Party with only a Front End
-      
-### Relying Party with a Front End and Back End
-
-In this case, Figure 2 details the Verification Flow to applied when the Relying Party has a Front End and Back End.
-
-```mermaid
-  sequenceDiagram
-
-    actor user as End User
-    participant mobile as Mobile Wallet
-    participant rpFE as Relying Party (Front End)
-    participant rpBE as Relying Party (Back End)  
-    participant verifier as uSelf Verifier Agent
-
-    autonumber
-      user->>rpFE: /verify-presentation
-      activate rpFE
-      rpFE--)rpBE: subscribe(<state_id>)
-      rpFE->>verifier: /authorize?state=<state_id>&redirect_uri=/callback (GET)
-      activate verifier 
-      verifier-->>rpFE: openid://?request_uri=<request_uri_id>
-      deactivate verifier
-      rpFE->>rpFE: generate QRCode
-      user->>mobile: open wallet 
-      activate mobile
-      mobile->>rpFE: read QRCode
-      mobile->>verifier: /request_uri/<request_uri_id>
-      activate verifier    
-      verifier-->>mobile: jwt(authorization_request)
-      deactivate verifier
-      user->>mobile: consent to send Presentation
-      mobile->>verifier: /direct_post (POST)
-      activate verifier 
-      verifier->>verifier: verify Diploma
-      verifier-->>mobile: /callback?code=code_id>&state=<state_id>
-    
-      deactivate verifier
-      mobile-->>mobile: (http status=302)
-      mobile->>rpBE: /callback?code=<code_id>&state=<state_id>
-      activate rpBE
-      mobile-->>user: success
-      deactivate mobile
-      rpBE->>verifier: /token (POST)
-      activate verifier 
-      verifier-->>rpBE: access_token,id_token
-      rpBE--)rpFE:  message={access_token,id_token}
-      deactivate rpBE
-      deactivate verifier
-      rpFE-->>user: success
-      deactivate rpFE
-```
-
-          Figure 2: Verification Flow with a Relaying Party with a Front End and a Back End
+          Figure 1: Verification Flow with a Relaying Party with a Front End and a Back End
 
 ## [3 Message Details](#3-message-details)
 
@@ -152,65 +54,6 @@ GET from https://verifier.com/authorize?
   &state=8d8b6a3d-4bc0-4234-9a9a-ed1928815502
   &nonce=d527c191-6e1d-4c3d-9843-9eaf2005fba9
 ```
-
-The authorization request will contain the following parameters:
-
-<table>
-  <tr>
-   <td><code>client_id</code>
-   </td>
-   <td>Verifier identifier that cab be a  URI or a DID. This value must be present in <code>sub</code> field of the verifiable presentation JWT
-   </td>
-  </tr>
-  <tr>
-   <td><code>response_type</code>
-   </td>
-   <td>The value must be <code>code</code>
-   </td>
-  </tr>
-  <tr>
-   <td><code>scope</code>
-   </td>
-   <td>Optional. Details are specified in [Section 3.1.1](#3111-scope-parameter-usage)
-   </td>
-  </tr>
-  <tr>
-   <td><code>redirect_uri</code>
-   </td>
-   <td> Optional. URL for redirecting back to the client. If not defined will be returned openid://
-   </td>
-  </tr>
-  <tr>
-   <td><code>state</code>
-   </td>
-   <td>The client uses an opaque value to maintain the state between the request and callback. This value will be used for obtaining the events associated to this specific verification flow.
-   </td>
-  </tr>
-  <tr>
-   <td><code>nonce</code>
-   </td>
-   <td>Securely bin verifiable presentations provided by the wallet to a particular transaction
-   </td>
-  </tr>
-  <tr>
-   <td><code>client_metadata??</code>
-   </td>
-   <td>The verifier requires proof. It must conform to the DIF Presentation Exchange specification
-   </td>
-  </tr>
-</table>
-
-##### 3.1.1.1 Scope Parameter Usage
-
-According to OIDCVP draft version >= 18, the scope parameter can be used as an optional parameter to request verifiable presentations using the scope parameter. When this parameter is presented, it must fulfill the following requirements:
-
-1. The scope value MUST serve as an alias for a well-defined Presentation Definition, which will be referenced in the `presentation_submission` response parameter.
-2. Scope value definition MUST enable Verifiers to determine:
-    * **Presentation definition** `definition_id` and **Input Descriptor(s)** `descriptor_map.id` in the `presentation_submission` response parameter
-    * **Credential formats and types** in the `vp_token` response parameter
-3. It is RECOMMENDED to use collision-resistant scope values.
-4. An example could be: `scope=com.example.passport_credential_presentation`
-5. The specific scope values and their mapping to Presentation Definitions are not defined in this specification.
 
 #### 3.1.2 Response (Step 4)
 

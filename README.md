@@ -1,90 +1,53 @@
-# Educational Pilot
+# Educational and Professional Qualifications Framework
 
-## 1 About
+## Overview
 
-This repository is created for describing the details associated to Educational Pilot
+This repository provides comprehensive documentation and implementation guidance for the European Educational and Professional Qualifications digital credentials framework. It encompasses sectorial rulebooks, data models, implementation toolkits, and compliance information for creating interoperable systems that respect European values of privacy, institutional autonomy, and cross-border mobility.
 
-## 2 Architecture
+## Repository Structure
 
-The following diagrams show a high level detail of the different components to be deployed within the Educational Pilot
+This repository is organised into several key sections:
 
-![image](docs/images/Architecture.png)
+- **[Sectorial Rulebook](./sectorial-rulebook/)**: The core framework that establishes standardised approaches for managing digital educational and professional credentials within the European Union.
 
-### 2.1 Components description
+- **[Sectorial EAA Rulebook](./sectorial-eaa-rulebook/)**: Contains all data models and schemas agreed at sectorial level for Education and Professional Qualifications, including formal education, quality assurance regimes, and non-foundational ID.
 
-- Keycloak: tbd
-- Status Web GUI: tbd
-- PID Generator GUI: tbd
-- Student Web GUI: tbd
-- Issuer Agent: tbd
-- Authentic Source: tbd
-- Izertis Holder Wallet (mobile app): tbd
-- EUDI Wallet (mobile app): tbd
+- **[Toolkits](./toolkits/)**: Implementation resources including technical architecture, component descriptions, workflows (RFCs), and specific use cases to help develop user journeys.
 
-## 3 Basic Building blocks
+- **[Compliance](./compliance/)**: Information about EBSI and EUDI Wallet compliance tests to ensure interoperability with other issuer, verifier, and wallet solutions.
 
-The basic operations implemented by the system are gathered in a RFCs format. The following section is devoted for describing them.
+## Key Features
 
-### 3.1.1 Approved RFCs
+This framework brings together European educational priorities:
 
-These are the approved RFCs identified. 
+- Respects member state sovereignty in education
+- Maintains institutional independence
+- Protects student privacy
+- Supports educational mobility
+- Links to quality frameworks
+- Creates trusted credentials
+- Enables automatic recognition
+- Supports lifelong learning
+- Records formal and informal learning
+- Works across European borders
 
-| **RFC #** | **RFC Title**                                                                                                |
-| --------- | ------------------------------------------------------------------------------------------------------------ |
-| RFC-001   | [Issue Verifiable Credentials Workflow - v1.0](docs/rfc001-issue-verifiable-credential.md)                   |
-| RFC-002   | [Present Verifiable Credentials Workflow - v1.0](docs/rfc002-present-verifiable-credential.md)               |
+## Getting Started
 
-#### 3.1.2 Candidate RFCs (Work in progress)
+For new users, we recommend starting with:
 
-Following are the candidates' RFCs taken up. Note that the title, etc, may change.
+1. Review the [Sectorial Rulebook](./sectorial-rulebook/) to understand the framework principles
+2. Explore the [Toolkits](./toolkits/) section for implementation guidance
+3. Check the [Compliance](./compliance/) requirements for interoperability information
 
-| **RFC #** | **RFC Title**                                                                               |
-| --------- | ------------------------------------------------------------------------------------------- |
-| RFC-003   | [To be defined](docs/rfc003-to-be-defined.md) |
+## Projects Using This Framework
 
+- **DC4EU**: Digital Credentials for Europe (Grant Agreement 101102611)
+- [Other projects to be added as they adopt the framework]
 
-## 4. Use Cases by project
+## License and Notice
 
-For each of the different projects where uSelf is han been applied, they have been identified some specific use cases. This section is devoted for providing a view of those specific uses cases by project
+Copyright © 2025 DC4EU. All rights reserved.
 
-### 4.1 DC4EU
+The content of this repository, except in those sections where explicitly announced otherwise, belongs to DC4EU under EUPLv2 licence.
 
-#### 4.1.1 Approved Use Cases
-
-These are the approved use cases identified in DC4EU for applying in the Educational Pilot
-
-| **Use Case #** | **Use Case Title**                                                                                           |
-| -------------- | ------------------------------------------------------------------------------------------------------------ |
-| DC4EU-001      | [Issue EducationalId using a PID for authentication - v1.0](docs/dc4eu/dc4eu-001-issue-eudcationalId.md)     |
-| DC4EU-002      | [Issue a Diploma using a EducationalId for authentication - v1.0](docs/dc4eu/dc4eu-002-issue-diploma.md)        |
-| DC4EU-003      | [Verify EducationalId for authentication - v1.0](docs/dc4eu/dc4eu-003-verify-diploma.md)                  |
-
-#### 4.1.2 Candidate Use Cases (Work in progress)
-
-Following are the candidates'Use cases taken up. Note that the title, etc, may change.
-
-| **Use Case #** | **Use Case Title**                                                                                           |
-| -------------- | ------------------------------------------------------------------------------------------------------------ |
-| DC4EU-004      | [Issue a PID - v1.0](docs/dc4eu/dc4eu-004-issue-pid.md)                                                      |
-
-
-
-
-
-## uSelf Compliance Test
-
-Ledger uSelf is compliance with some test in order to assure the interoperability with others
-### EUDI Wallet Compliance Test
-This section needs to defined
-### Ebsi Compliance Test
-
-| Tool |Version | Holder | Issuer | Verifier | Trust Model |
-| --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------                   | :----: | :----: | :------:|:------: |
-| uself-agent            | v0.0.3 |   ✅   |   ✅    |  ✅     |  ✅     |
-| uself-mobile-app       | v0.0.3 |   ✅   |         |         |  ✅     |
-
-
-
-## Licensing
-
-The content in this repository is copyrighted by ATOS IT SOLUTIONS AND SERVICES IBERIA, S.L. (hereinafter referred to as ATOS or EVIDEN) unless otherwise specified. Any other use is forbidden unless accepted in writing by ATOS”
+For complete license details, see [License Information](./docs/license.md).
