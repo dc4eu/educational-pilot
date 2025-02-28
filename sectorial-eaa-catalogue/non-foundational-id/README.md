@@ -16,7 +16,7 @@ These schemas support digital versions of student identification. Our models inc
 - Academic period validity
 - Service entitlements
 
-For detailed schema information, see [Student ID Card Schema](./student-id-schema.md).
+For detailed schema information, see [Educational ID Schema](./educational-id-schema.md).
 
 ### Alumni Credentials
 
