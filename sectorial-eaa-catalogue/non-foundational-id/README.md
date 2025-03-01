@@ -6,6 +6,18 @@ This section covers identifiers and credentials that are not based on foundation
 
 ## Non-foundational Credential Types
 
+### MyAcademicID
+
+The MyAcademicID provides a standardized academic non-foundational identity for students and staff across European higher educational institutions linked to mobility programmes. Our schemas include:
+
+- Community user identification
+- European student identification
+- Academic affiliations
+- Identity assurance levels
+- Academic entitlements
+
+For detailed schema information, see MyAcademicID Schema.
+
 ### Student Identity Cards
 
 These schemas support digital versions of student identification. Our models include:
