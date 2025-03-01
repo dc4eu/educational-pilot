@@ -6,6 +6,29 @@ This section covers identifiers and credentials that are not based on foundation
 
 ## Non-foundational Credential Types
 
+### EducationalID
+
+These schemas support digital versions of student identification and affilitaion. Our models include:
+
+- Institutional affiliation
+- Student status verification
+- Access rights documentation
+- Academic period validity
+- Service entitlements
+
+For detailed schema information, see [Educational ID Schema](./educational-id-schema.md).
+
+### Verifiable AllianceID
+The Verifiable AllianceID provides identity credentials for natural persons participating in European University Alliances. Our schemas include:
+
+- Alliance-specific identification
+- Cross-institutional identity verification
+- Standardized identifier format
+- Alliance membership attestation
+- Alliance-based cooperation support
+
+For detailed schema information, see [AllianceID Schema](./allianceid-schema.md).
+
 ### MyAcademicID
 
 The MyAcademicID provides a standardized academic non-foundational identity for students and staff across European higher educational institutions linked to mobility programmes. Our schemas include:
@@ -18,9 +41,9 @@ The MyAcademicID provides a standardized academic non-foundational identity for 
 
 For detailed schema information, see [MyAcademicID Schema](./myacademicid-schema.md).
 
-### Student Identity Cards
+### European Student Card
 
-These schemas support digital versions of student identification. Our models include:
+These schemas support digital versions of euroepan student card. Our models include:
 
 - Institutional affiliation
 - Student status verification
@@ -28,7 +51,7 @@ These schemas support digital versions of student identification. Our models inc
 - Academic period validity
 - Service entitlements
 
-For detailed schema information, see [Educational ID Schema](./educational-id-schema.md).
+For detailed schema information, see [European Student Card ESI Schema](./esi-schema.md).
 
 ### Alumni Credentials
 
