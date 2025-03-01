@@ -18,7 +18,7 @@ These schemas support digital versions of student identification and affilitaion
 
 For detailed schema information, see [Educational ID Schema](./educational-id-schema.md).
 
-### Verifiable AllianceID
+### AllianceID
 The Verifiable AllianceID provides identity credentials for natural persons participating in European University Alliances. Our schemas include:
 
 - Alliance-specific identification

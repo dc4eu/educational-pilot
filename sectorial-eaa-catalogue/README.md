@@ -43,7 +43,10 @@ This section focuses on the data models and schemas related to quality assurance
 
 This section covers identifiers and credentials that are not based on foundational identity but are still relevant in educational contexts:
 
-- Student identity cards
+- EductaionalID for student and academic identification
+- AllianceID for European University Alliances participants
+- MyAcademicID for student and academic mobility
+- European Student Card
 - Alumni credentials
 - Professional membership attestations
 - Continuing education certificates
