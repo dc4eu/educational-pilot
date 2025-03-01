@@ -24,6 +24,7 @@ This section contains data models and schemas for representing formal educationa
 
 - Diploma credentials
 - Degree certificates
+- Microcredentials for HE & VET
 - Transcripts of records
 - Educational identifiers
 - Course certificates
