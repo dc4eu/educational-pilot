@@ -41,6 +41,18 @@ Transcripts document the courses taken and results achieved during an educationa
 
 For detailed schema information, see [Transcript Schema](./transcript-schema.md).
 
+### Microcredentials in Higher Education
+
+Microcredentials attest to the achievement of specific learning outcomes following a short learning experience. Our schemas support:
+
+- University microcredentials
+- Short learning programmes with ECTS credits
+- EQF-aligned certifications
+- Learning outcomes with ESCO skills alignment
+- Quality-assured short credentials
+
+For detailed schema information, see [Microcredential HE Schema](./microcredential-he.md).
+
 ### Educational Identifiers
 
 Educational identifiers provide verifiable proof of student status. Our schemas support:
@@ -97,6 +109,7 @@ These formal education schemas support key user journeys including:
 - Employment verification of educational achievements
 - Professional licensing based on formal qualifications
 - Continued education and lifelong learning pathways
+- Microcredential stacking into larger qualifications
 
 ## Versioning
 
