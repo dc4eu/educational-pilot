@@ -1,0 +1,67 @@
+@startuml dc4eu-issue-pid
+'https://plantuml.com/sequence-diagram
+skinparam handwritten true
+
+
+
+header 
+    Issue a Pid
+end header
+title
+    Student obtains a PID (OpenID VCI) after authentication
+end title
+footer 
+    Issue Pid
+end footer
+
+actor "Student" as student
+participant "wwWallet" as mobile #LightCoral
+participant "Student GUI" as stdGUI #LightGreen
+participant "uSelf\n Issuer Agent" as agent #LightGreen
+participant "Authentic Source" as authSource #LightSalmon
+participant "Postgres DB" as db #LightSalmon
+participant "Identity Provider" as ip #LightSalmon
+
+
+participant "uSelf\n PID Issuer Agent" as issuer #LightGreen
+
+autonumber
+
+== Authentication ==
+
+    student->stdGUI:**GET** http://student-web/issue
+    activate stdGUI #LightGreen
+    stdGUI->ip:**GET** http://identity-provider/authorize
+    activate ip #LightSalmon
+    ip-->stdGUI: student authenticated
+    deactivate ip
+  
+== Issuing PID ==
+    
+    stdGUI->agent:**GET** http://uself-agent/issuer/crendential-offer
+    activate agent #LightGreen
+    return credential_offer
+    stdGUI->stdGUI: generate QRCode
+    mobile->stdGUI: read QRCode & user_pin
+    activate mobile #LightCoral
+    mobile<--mobile: redirect - http status = 302
+    
+
+    mobile<--mobile: redirect - http status = 302 
+    mobile->agent:**GET** http://uself-agent/auth/token?user_pin
+    activate agent #LightGreen
+    return access_token
+    mobile->agent:**POST** http://uself-agent/issuer/credential
+    activate agent #LightGreen
+    agent->authSource:**GET** http://auth-source/educationalId/pid_identifier
+    activate authSource #LightSalmon
+    authSource->db: SELECT * FROM educationalId\n WHERE pid = pid_identifier
+    activate db #LightSalmon
+    return educationalId info
+    return educationalId info
+    agent--//stdGUI: send event credential_issued
+    return credential
+    deactivate mobile
+    deactivate stdGUI
+
+@enduml

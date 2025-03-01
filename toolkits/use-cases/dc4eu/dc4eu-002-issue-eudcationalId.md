@@ -33,7 +33,7 @@ The main aim of this use case is to shoe how an student can present an education
 
 Figure 1 shows when the Relying Party only has a Front End:
 
-![image](../images/dc4student-issue-educationalId.png)
+![image](../images/dc4eu-issue-educationalId.png)
 
           Figure 1: Verification Flow with a Relaying Party with a Front End and a Back End
 

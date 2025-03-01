@@ -36,15 +36,15 @@ Documentation of the basic operations implemented by the system in RFC format:
 
 #### Approved RFCs
 
-| **RFC #** | **RFC Title**                                                  |
-| --------- | -------------------------------------------------------------- |
-| RFC-001   | [Issue Verifiable Credentials Workflow - v1.0](./workflows/rfc001-issue-verifiable-credential.md) |
+| **RFC #** | **RFC Title**                                                                                         |
+|-----------|-------------------------------------------------------------------------------------------------------|
+| RFC-001   | [Issue Verifiable Credentials Workflow - v1.0](./workflows/rfc001-issue-verifiable-credential.md)     |
 | RFC-002   | [Present Verifiable Credentials Workflow - v1.0](./workflows/rfc002-present-verifiable-credential.md) |
 
 #### Candidate RFCs (Work in progress)
 
-| **RFC #** | **RFC Title**                                     |
-| --------- | ------------------------------------------------- |
+| **RFC #** | **RFC Title**                                        |
+|-----------|------------------------------------------------------|
 | RFC-003   | [To be defined](./workflows/rfc003-to-be-defined.md) |
 
 ### [Use Cases](./use-cases/)
@@ -53,12 +53,13 @@ Specific use cases approved for implementation, organised by project:
 
 #### DC4EU Project
 
-| **Use Case #** | **Use Case Title**                                                                                    |
-| -------------- | ----------------------------------------------------------------------------------------------------- |
-| DC4EU-001      | [Issue EducationalId using a PID for authentication - v1.0](./use-cases/dc4eu/dc4eu-001-issue-eudcationalId.md) |
-| DC4EU-002      | [Issue a Diploma using a EducationalId for authentication - v1.0](./use-cases/dc4eu/dc4eu-002-issue-diploma.md) |
-| DC4EU-003      | [Verify EducationalId for authentication - v1.0](./use-cases/dc4eu/dc4eu-003-verify-diploma.md) |
-| DC4EU-004      | [Issue a PID - v1.0](./use-cases/dc4eu/dc4eu-004-issue-pid.md) |
+| **Use Case #** | **Use Case Title**                                                                                              |
+|----------------|-----------------------------------------------------------------------------------------------------------------|
+| DC4EU-001      | [Issue a PID - v1.0](./use-cases/dc4eu/dc4eu-001-issue-pid.md)                                                  |
+| DC4EU-002      | [Issue EducationalId using a PID for authentication - v1.0](./use-cases/dc4eu/dc4eu-002-issue-eudcationalId.md) |
+| DC4EU-003      | [Issue a Diploma using a EducationalId for authentication - v1.0](./use-cases/dc4eu/dc4eu-003-issue-diploma.md) |
+| DC4EU-004      | [Verify EducationalId for authentication - v1.0](./use-cases/dc4eu/dc4eu-004-verify-diploma.md)                 |
+
 
 ## Implementation Guidance
 
@@ -77,7 +78,7 @@ To contribute new use cases, workflows, or component descriptions, please follow
 
 # License and Notice
 
-Copyright © 2025 ATOS Spain S.A. (hereinafter referred to as "Atos" or "EVIDEN"). All rights reserved.
+Copyright ï¿½ 2025 ATOS Spain S.A. (hereinafter referred to as "Atos" or "EVIDEN"). All rights reserved.
 
 The content in this repository is copyrighted by ATOS Spain S.A. unless otherwise specified. The information can only be used by the beneficiaries of the EU funded DC4EU Project and only for the purposes of the integration activities of this project. Any other use is forbidden unless accepted in writing by ATOS.
 
