@@ -6,7 +6,17 @@ This Sectorial Electronic Attestation of Attributes (EAA) Rulebook contains all 
 
 ## Structure
 
-The EAA Rulebook is organised into three main categories:
+The EAA Rulebook is organised into the following categories:
+
+### [Foundational Identity](./foundational-identity/)
+
+This section covers the foundational identity models that serve as the basis for secure identification across the educational ecosystem:
+
+- Person Identification Data (PID) for natural persons
+- Legal Entity Identification for educational institutions
+- Identity matching mechanisms
+- Cross-border identity verification
+- Privacy-preserving identity protocols
 
 ### [Formal Education](./formal-education/)
 
