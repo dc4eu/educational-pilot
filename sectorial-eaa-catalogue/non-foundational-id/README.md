@@ -16,7 +16,7 @@ The MyAcademicID provides a standardized academic non-foundational identity for 
 - Identity assurance levels
 - Academic entitlements
 
-For detailed schema information, see MyAcademicID Schema.
+For detailed schema information, see [MyAcademicID Schema](./myacademicid-schema.md).
 
 ### Student Identity Cards
 
