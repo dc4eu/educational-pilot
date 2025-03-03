@@ -223,7 +223,7 @@ Content-Type: application/x-www-form-urlencoded
    "c_nonce_expires_in":1741013554149
 }
 ```
-
+ 
 Once the University GUI receive this token information will be available for subsequence request to the back end, allowing to the back-end to authorize the request using the access_token provided.
 
 ## [4 References](#4-references)
