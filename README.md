@@ -12,6 +12,10 @@ This repository is organised into several key sections:
 
 - **[Sectorial EAA Catalogue](./sectorial-eaa-catalogue/)**: Contains all data models and schemas agreed at sectorial level for Education and Professional Qualifications, including formal education, quality assurance regimes, and non-foundational ID.
 
+- **[eIDAS Scenarios](./ebsi-scenarios.md)**: Outlines the four trust models for electronic attestation of attributes (EAAs) within the European Digital Ecosystem, explaining how EBSI enhances traditional PKI approaches.
+
+- **[Authorisation Model](./authorisation-model.md)**: Defines a structured framework for managing authorisations, accreditation, and recognition within educational, professional, and quality assurance domains.
+
 - **[Toolkits](./toolkits/)**: Implementation resources including technical architecture, component descriptions, workflows (RFCs), and specific use cases to help develop user journeys.
 
 - **[Compliance](./compliance/)**: Information about EBSI and EUDI Wallet compliance tests to ensure interoperability with other issuer, verifier, and wallet solutions.
@@ -36,8 +40,10 @@ This framework brings together European educational priorities:
 For new users, we recommend starting with:
 
 1. Review the [Sectorial Rulebook](./sectorial-rulebook/) to understand the framework principles
-2. Explore the [Toolkits](./toolkits/) section for implementation guidance
-3. Check the [Compliance](./compliance/) requirements for interoperability information
+2. Learn about the [eIDAS Scenarios](./ebsi-scenarios.md) to understand the trust models
+3. Explore the [Authorisation Model](./authorisation-model.md) to understand how trust chains work
+4. Explore the [Toolkits](./toolkits/) section for implementation guidance
+5. Check the [Compliance](./compliance/) requirements for interoperability information
 
 ## Projects Using This Framework
 
