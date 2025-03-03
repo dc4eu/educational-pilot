@@ -296,7 +296,7 @@ Content-Type: application/x-www-form-urlencoded
 &redirect_uri=https://client.example.com
 &code=7711230612178833271
 &code_verifier=aJkAL61GwJ0tN~llJWnjVXbfvoBG5C~czfQU6RBQw1R0M02pa6iCUWDsbCCF.d3WKhGllsHW4dOQc~sgp4skFfsBsSNexhXb36q~_nstQMEL.KLomKLaEHYtECj11ixB
-}
+
 ```
 
 ### [3.6 Token Response](#36-token-response)

@@ -208,7 +208,7 @@ Content-Type: application/x-www-form-urlencoded
 &grant_type=authorization_code,
 &code=6577180341307828641
 &client_id=https://verifier.eu
-}
+
 ```
 
 #### 3.4.2 Response
