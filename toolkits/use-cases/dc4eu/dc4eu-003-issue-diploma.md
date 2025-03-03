@@ -1,4 +1,4 @@
-# Issue a Diploma Id - v1.0
+# Issue a Diploma - v1.0
 
 **Authors:**
 
