@@ -140,7 +140,7 @@ Although the standard doesn't specify how to trigger the credential offer, we de
 
 ```http
 GET https://issuer.eu/issuer/initiate-credential-offer?
-  credential_type=VerifiableEducationalID
+  &credential_type=VerifiableEducationalID
   &nonce=d527c191-6e1d-4c3d-9843-9eaf2005fba9
 ```
 
@@ -148,7 +148,7 @@ GET https://issuer.eu/issuer/initiate-credential-offer?
 
 In order to avoid overloading the result of the QRCode, the standard defines a entry point based on `credential_offer_uri`parameter:
 
-```http
+```bash
 openid-credential-offer://?credential_offer_uri=https://issuer.eu/issuer/offers/719307744250317677
 ```
 
@@ -305,7 +305,7 @@ Once the Mobile Wallet has read the credential offer, it will request an authori
 
 ```http
 GET https://issuer.eu/auth/authorize?
-  client_id=did:key:z2dmzD81cg...
+  &client_id=did:key:z2dmzD81cg...
   &response_type=code
   &scope=openid
   &response_uri=https://client.example.com
@@ -322,7 +322,7 @@ GET https://issuer.eu/auth/authorize?
 
 The issuer then will respond with the following answer:
 
-```http
+```bash
 https://client.example.com?
 client_id=https%3A%2F%2Fussuer.eu%2Fauth&redirect_uri=https%3A%2F%2Fissuer.eu%2Fauth%2Fdirect_post
 &response_type=vp_token
@@ -351,7 +351,7 @@ Content-Type: application/json
 
 The issuer then must verify the verifiable presentation presented by the student and validate that the verifiable credential contained is valid and complies with all the trust model requirements. If the verifiable presentation complies with all the requirements the issuer will response will the following answer:
 
-```http
+```bash
 https://client.example.com?code=glkFFoisdfEui4312&state=92b6e05c-5c3b-4194-bba8-1da1b2a5dd62
 ```
 
@@ -363,12 +363,11 @@ The following section describes the process for obtaining an access token, that 
 POST https://issuer.eu/token
 Content-Type: application/x-www-form-urlencoded
 
-grant_type=authorization_code
+&grant_type=authorization_code
 &client_id=did:key:z2dmzD81cgPx8Vki7JbuuMmFYrWPgYoytykUZ3eyqht1j9Kbndi4FzE7bq9irPGQVyZG7SWHy8iqpKMjjhmtB7JF3eFYnM67SxNd4gjT3DsKUb7NKeKLcNTEocYUf2kpBQRQqCvGMCvC87F8jgydShFCPTwrDpvJKrZMdq8zjQLQxwW2kL
 &redirect_uri=https://client.example.com
 &code=glkFFoisdfEui4312
 &code_verifier=FF4uUpKOK7LkTEvwMM9O~qf4.NL1._~p6QrEnngvT0kne_tbUw17NYUGFexiNbN0Wecp2cOuIkMal8EbXxS4rQ5PQe7Ou1EvHoqLr8obdJeeUcjM8bRDZTVIIkgXTEzT
-}
 ```
 
 ### [3.6 Token Response](#36-token-response)
@@ -376,7 +375,6 @@ grant_type=authorization_code
 The response from the issuer will have the following aspect:
 
 ```http
-HTTP Response Payload: Content-Type application/json
 {
    "access_token":"eyJraWQiOiJkaWQ6ZWJzaTp6dFJvWXlKTmRHcjh0bUF0Vmg5Y2c5biIsInR5cCI6IkpXVCIsImFsZyI6IkVTMjU2In0.eyJhdWQiOiJodHRwczovL3RhZHBvbGUtaW50ZXJuYWwtbWFtbWFsLm5ncm9rLWZyZWUuYXBwL2lzc3VlciIsInN1YiI6ImRpZDprZXk6ejJkbXpEODFjZ1B4OFZraTdKYnV1TW1GWXJXUGdZb3l0eWtVWjNleXFodDFqOUtibmRpNEZ6RTdicTlpclBHUVZ5Wkc3U1dIeThpcXBLTWpqaG10QjdKRjNlRlluTTY3U3hOZDRnalQzRHNLVWI3TktlS0xjTlRFb2NZVWYya3BCUVJRcUN2R01DdkM4N0Y4amd5ZFNoRkNQVHdyRHB2SktyWk1kcTh6alFMUXh3VzJrTCIsImlzcyI6Imh0dHBzOi8vdGFkcG9sZS1pbnRlcm5hbC1tYW1tYWwubmdyb2stZnJlZS5hcHAvYXV0aCIsImNsYWltcyI6eyJhdXRob3JpemF0aW9uRGV0YWlscyI6W3sidHlwZSI6Im9wZW5pZF9jcmVkZW50aWFsIiwiZm9ybWF0Ijoiand0X3ZjIiwibG9jYXRpb25zIjpbImh0dHBzOi8vdGFkcG9sZS1pbnRlcm5hbC1tYW1tYWwubmdyb2stZnJlZS5hcHAvaXNzdWVyIl0sInR5cGVzIjpbIlZlcmlmaWFibGVDcmVkZW50aWFsIiwiVmVyaWZpYWJsZUVkdWNhdGlvbmFsSUQiXSwiY3JlZGVudGlhbENvbmZpZ3VyYXRpb25JZCI6bnVsbCwiY3JlZGVudGlhbERlZmluaXRpb24iOm51bGwsInZjdCI6bnVsbH1dLCJjTm9uY2UiOiJnbGtGRm9pc2RmRXVpNDMxMiIsImNOb25jZUV4cGlyZXNJbiI6MTczODU3Nzc5MDgyMiwiY2xpZW50SWQiOiJkaWQ6a2V5OnoyZG16RDgxY2dQeDhWa2k3SmJ1dU1tRllyV1BnWW95dHlrVVozZXlxaHQxajlLYm5kaTRGekU3YnE5aXJQR1FWeVpHN1NXSHk4aXFwS01qamhtdEI3SkYzZUZZbk02N1N4TmQ0Z2pUM0RzS1ViN05LZUtMY05URW9jWVVmMmtwQlFSUXFDdkdNQ3ZDODdGOGpneWRTaEZDUFR3ckRwdkpLclpNZHE4empRTFF4d1cya0wifSwiZXhwIjoxNzM4NTc3NzkwLCJpYXQiOjE3Mzg1NzcxOTAsIm5vbmNlIjoiZ2xrRkZvaXNkZkV1aTQzMTIifQ.2aR_d9W2yMN20LEG9j7tvvqnYtx2VsZjbXvmk9nl_GzH7bCadiLmaGm4gR1C2PYT7wYgJXYYNJVe_CFYKOkeHA",
    "id_token":"eyJraWQiOiJkaWQ6ZWJzaTp6dFJvWXlKTmRHcjh0bUF0Vmg5Y2c5biIsInR5cCI6IkpXVCIsImFsZyI6IkVTMjU2In0.eyJzdWIiOiJkaWQ6a2V5OnoyZG16RDgxY2dQeDhWa2k3SmJ1dU1tRllyV1BnWW95dHlrVVozZXlxaHQxajlLYm5kaTRGekU3YnE5aXJQR1FWeVpHN1NXSHk4aXFwS01qamhtdEI3SkYzZUZZbk02N1N4TmQ0Z2pUM0RzS1ViN05LZUtMY05URW9jWVVmMmtwQlFSUXFDdkdNQ3ZDODdGOGpneWRTaEZDUFR3ckRwdkpLclpNZHE4empRTFF4d1cya0wiLCJhdWQiOiJkaWQ6a2V5OnoyZG16RDgxY2dQeDhWa2k3SmJ1dU1tRllyV1BnWW95dHlrVVozZXlxaHQxajlLYm5kaTRGekU3YnE5aXJQR1FWeVpHN1NXSHk4aXFwS01qamhtdEI3SkYzZUZZbk02N1N4TmQ0Z2pUM0RzS1ViN05LZUtMY05URW9jWVVmMmtwQlFSUXFDdkdNQ3ZDODdGOGpneWRTaEZDUFR3ckRwdkpLclpNZHE4empRTFF4d1cya0wiLCJpc3MiOiJodHRwczovL3RhZHBvbGUtaW50ZXJuYWwtbWFtbWFsLm5ncm9rLWZyZWUuYXBwL2F1dGgiLCJleHAiOjE3Mzg1Nzc3OTAsImlhdCI6MTczODU3NzE5MCwibm9uY2UiOiJnbGtGRm9pc2RmRXVpNDMxMiJ9.xrMJ_vYVsdOJEhTCLIeGA08TuKrthnE4XCZcnF13rPr2FRJYmR4SNR--wvsnqVNCVCP9h38Gvt8MVUyQ9tpWlQ",
