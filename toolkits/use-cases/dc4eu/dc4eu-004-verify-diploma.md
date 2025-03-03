@@ -128,7 +128,7 @@ Figure 1 shows when the detailed flow:
 
 The University Graphical Interface will execute the authorization request with the specific parameters for obtaining the Diploma. An example of how to invoke this request is as follows:
 ```http
-GET from https://verifier.com/authorize?
+GET https://verifier.com/authorize?
   client_id=https://verifier.com
   &response_type=code
   &redirect_uri=https://verifier.eu/auth/callback
@@ -189,7 +189,7 @@ The Mobile Wallet will, following the redirection response, request the callback
 
 An example for the use case described in the Figure 1 is as follows:
 ```http
-GET from https://verifier.com/callback?
+GET https://verifier.com/callback?
   code=6577180341307828641
   &client_id=https://verifier.eu
 ```

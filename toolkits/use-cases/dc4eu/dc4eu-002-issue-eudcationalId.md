@@ -139,7 +139,7 @@ autonumber
 Although the standard doesn't specify how to trigger the credential offer, we define the initialize of the credential offer following the suggestions proposed by EBSI.
 
 ```http
-GET from https://issuer.eu/issuer/initiate-credential-offer?
+GET https://issuer.eu/issuer/initiate-credential-offer?
   credential_type=VerifiableEducationalID
   &nonce=d527c191-6e1d-4c3d-9843-9eaf2005fba9
 ```
@@ -304,7 +304,7 @@ The response to resolving the  `credential_offer_uri` will be different dependin
 Once the Mobile Wallet has read the credential offer, it will request an authorization with the following parameters:
 
 ```http
-GET from https://issuer.eu/auth/authorize?
+GET https://issuer.eu/auth/authorize?
   client_id=did:key:z2dmzD81cg...
   &response_type=code
   &scope=openid
