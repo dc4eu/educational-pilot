@@ -251,7 +251,7 @@ GET from https://issuer.eu/auth/authorize?
 The issuer then will respond with the following answer:
 
 ```http
-https://www.izertis.com?
+https://client.example.com?
 client_id=https%3A%2F%2Fissuer.eu%2Fauth&redirect_uri=https%3A%2F%2Fissuer.eu%2Fauth%2Fdirect_post
 &response_type=vp_token
 &response_mode=direct_post
