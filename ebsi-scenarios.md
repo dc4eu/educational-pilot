@@ -1,4 +1,4 @@
-# EBSI Scenarios in the European Digital Ecosystem
+# eIDAS Scenarios in the European Digital Ecosystem
 
 ## Overview
 
