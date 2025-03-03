@@ -12,7 +12,7 @@ This repository is organised into several key sections:
 
 - **[Sectorial EAA Catalogue](./sectorial-eaa-catalogue/)**: Contains all data models and schemas agreed at sectorial level for Education and Professional Qualifications, including formal education, quality assurance regimes, and non-foundational ID.
 
-- **[EBSI Scenarios[(./ebsi-scenarios.md)**: Outlines the four trust models for electronic attestation of attributes (EAAs) within the European Digital Ecosystem, explaining how EBSI enhances traditional PKI approaches.
+- **[EBSI Scenarios](./ebsi-scenarios.md)**: Outlines the four trust models for electronic attestation of attributes (EAAs) within the European Digital Ecosystem, explaining how EBSI enhances traditional PKI approaches.
 
 - **[Authorisation Model](./authorisation-model.md)**: Defines a structured framework for managing authorisations, accreditation, and recognition within educational, professional, and quality assurance domains.
 
