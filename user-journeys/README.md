@@ -9,7 +9,6 @@ Each user journey includes:
 - **A visual representation** using **Mermaid.js diagrams** to illustrate the key touchpoints.
 - **Technical details** aligned with the **EBSI (European Blockchain Services Infrastructure)** standards.
 
----
 
 ## Available User Journeys
 
@@ -28,12 +27,11 @@ Each user journey includes:
 - **Description:** Explains the issuance process for **digital diplomas**, ensuring authenticity and compliance with European identity frameworks.
 - **Key Steps:** Diploma request, verification, authentication, and credential issuance.
 
-### 4️⃣ **Verifying a Verifiable Diploma**
-- **File:** [`verify-diploma.md`](./verify-diploma.md)
+### 4️⃣ **Verifying a Verifiable Diploma (DC4EU 004)**
+- **File:** [`verify-diploma.md`](./dc4eu-004.md)
 - **Description:** Covers the process of **diploma verification** by employers or educational institutions using the EBSI infrastructure.
 - **Key Steps:** QR code scanning, authentication, verification against trust registries, and validation.
 
----
 
 ## Usage Instructions
 
@@ -42,7 +40,6 @@ Each user journey includes:
 3. Align implementation details with the **EBSI & OpenID4VP** frameworks.
 4. Contribute by improving user journeys or adding new credential flows.
 
----
 
 ## Contribution Guidelines
 
@@ -54,7 +51,6 @@ If you wish to contribute to these **user journeys**, follow these steps:
 
 For any issues or suggestions, please open an **Issue** in the repository.
 
----
 
 **Maintainers:**  
 - DC4EU Development Team  
