@@ -18,6 +18,8 @@ This repository is organised into several key sections:
 
 - **[Toolkits](./toolkits/)**: Implementation resources including technical architecture, component descriptions, workflows (RFCs), and specific use cases to help develop user journeys.
 
+- **[[User journeys](./user-journeys/)**: Provided user journeys to demonstrate cross-border interaction, ready-to go infrastructure, and foundation to extend/provide more user journeys and/or EAAs
+
 - **[Compliance](./compliance/)**: Information about EBSI and EUDI Wallet compliance tests to ensure interoperability with other issuer, verifier, and wallet solutions.
 
 ## Key Features
