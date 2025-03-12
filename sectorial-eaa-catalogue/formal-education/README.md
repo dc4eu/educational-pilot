@@ -13,6 +13,8 @@ Diploma credentials represent the formal completion of an educational programme 
 - Bachelor's degrees
 - [Higher Education Diploma](./highereducation-diploma.md)
 - [Higher Education Diploma Supplement](./highereducation-diplomasupplement.md) 
+- [Higher Education Transcript of Records](./highereducation-transcriptofrecords.md)
+- [Higher Education Proof of Enrolment](./highereducation-proofofenrolment.md)
 - Master's degrees
 - Doctoral degrees
 - Professional diplomas
