@@ -15,7 +15,8 @@ Diploma credentials represent the formal completion of an educational programme 
 - Doctoral degrees
 - Professional diplomas
 - Vocational qualifications
-  
+
+EAA's defined
 - [Higher Education Diploma](./highereducation-diploma.md)
 - [Higher Education Diploma Supplement](./highereducation-diplomasupplement.md) 
 
@@ -30,6 +31,7 @@ Degree certificates provide formal recognition of educational achievements. Our 
 - Programme completion certificates
 - Institutional certificates
 
+EAA's defined
 - [Higher Education Proof of Enrolment](./highereducation-proofofenrolment.md)
 
 For detailed schema information, see [Degree Certificate Schema](./degree-certificate-schema.md).
@@ -44,6 +46,7 @@ Transcripts document the courses taken and results achieved during an educationa
 - Learning outcome attainment
 - Programme progression
 
+EAA's defined
 - [Higher Education Transcript of Records](./highereducation-transcriptofrecords.md)
   
 For detailed schema information, see [Transcript Schema](./transcript-schema.md).
@@ -58,6 +61,7 @@ Microcredentials attest to the achievement of specific learning outcomes followi
 - Learning outcomes with ESCO skills alignment
 - Quality-assured short credentials
 
+EAA's defined
 - [Higher Education Microcredential ](./highereducation-microcredential.md)
 
 For detailed schema information, see [Microcredential HE Schema](./microcredential-he.md).
@@ -72,6 +76,7 @@ Educational identifiers provide verifiable proof of student status. Our schemas 
 - Academic status
 - Access rights
 
+EAA's defined
 For detailed schema information, see [Educational ID Schema](./educational-id-schema.md).
 
 ### Course Certificates
@@ -84,6 +89,7 @@ Course certificates document completion of specific educational components. Our 
 - Professional development courses
 - Specialised training
 
+EAA's defined
 - [Upper Secondary Education Transcript of Records](./uppersecondaryeducation-transcriptofrecords.md)
 
 For detailed schema information, see [Course Certificate Schema](./course-certificate-schema.md).
