@@ -15,6 +15,7 @@ Diploma credentials represent the formal completion of an educational programme 
 - [Higher Education Diploma Supplement](./highereducation-diplomasupplement.md) 
 - [Higher Education Transcript of Records](./highereducation-transcriptofrecords.md)
 - [Higher Education Proof of Enrolment](./highereducation-proofofenrolment.md)
+- [Upper Secondary Education Transcript of Records](./uppersecondaryeducation-transcriptofrecords.md)
 - Master's degrees
 - Doctoral degrees
 - Professional diplomas
