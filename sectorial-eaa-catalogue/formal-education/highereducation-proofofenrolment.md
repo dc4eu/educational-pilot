@@ -5,7 +5,6 @@ The *Higher Education Proof of Enrolment* is an official document issued by a hi
 
 This specification defines the data model for issuing the *Proof of Enrolment* as a verifiable digital credential, ensuring compliance with *Europass*, *ECTS*, and the *European Learning Model (ELM)*.
 
-
 ## **Data Model**
 
 ### **1. Credential Subject Information**
