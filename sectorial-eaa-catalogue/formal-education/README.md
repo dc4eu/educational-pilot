@@ -11,13 +11,13 @@ This section contains data models and schemas for representing formal educationa
 Diploma credentials represent the formal completion of an educational programme at a specific level. Our schemas support:
 
 - Bachelor's degrees
-- [Higher Education Diploma](./highereducation-diploma.md)
-- [Higher Education Diploma Supplement](./highereducation-diplomasupplement.md) 
-- [Upper Secondary Education Transcript of Records](./uppersecondaryeducation-transcriptofrecords.md)
 - Master's degrees
 - Doctoral degrees
 - Professional diplomas
 - Vocational qualifications
+  
+- [Higher Education Diploma](./highereducation-diploma.md)
+- [Higher Education Diploma Supplement](./highereducation-diplomasupplement.md) 
 
 For detailed schema information, see [Diploma Schema](./diploma-schema.md).
 
@@ -45,7 +45,7 @@ Transcripts document the courses taken and results achieved during an educationa
 - Programme progression
 
 - [Higher Education Transcript of Records](./highereducation-transcriptofrecords.md)
-- 
+  
 For detailed schema information, see [Transcript Schema](./transcript-schema.md).
 
 ### Microcredentials in Higher Education
@@ -83,6 +83,8 @@ Course certificates document completion of specific educational components. Our 
 - Short programme completion
 - Professional development courses
 - Specialised training
+
+- [Upper Secondary Education Transcript of Records](./uppersecondaryeducation-transcriptofrecords.md)
 
 For detailed schema information, see [Course Certificate Schema](./course-certificate-schema.md).
 
