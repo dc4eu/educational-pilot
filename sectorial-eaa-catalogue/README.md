@@ -4,6 +4,11 @@
 
 This Sectorial Electronic Attestation of Attributes (EAA) Rulebook contains all data models and schemas agreed at the sectorial level for Education and Professional Qualifications. It provides the technical specifications that implement the principles outlined in the [Sectorial Rulebook](../sectorial-rulebook/).
 
+### Diploma vs EAA (Pendind)
+### EAA catalogue <=> Entrades del catàleg, responsable (creació/evolució) <=> Attribute schema provider (Pendig)
+
+
+
 ## Structure
 
 The EAA Rulebook is organised into the following categories:
