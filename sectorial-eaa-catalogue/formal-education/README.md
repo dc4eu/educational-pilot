@@ -11,6 +11,8 @@ This section contains data models and schemas for representing formal educationa
 Diploma credentials represent the formal completion of an educational programme at a specific level. Our schemas support:
 
 - Bachelor's degrees
+- [Higher Education Diploma](./highereducation-diploma.md)
+- [Higher Education Diploma Supplement](./highereducation-diplomasupplement.md) 
 - Master's degrees
 - Doctoral degrees
 - Professional diplomas

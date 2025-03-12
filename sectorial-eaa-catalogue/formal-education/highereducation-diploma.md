@@ -1,4 +1,3 @@
-
 # **Higher Education Diploma - Digital Credential Specification**
 
 ## **Introduction**
