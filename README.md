@@ -44,9 +44,10 @@ For new users, we recommend starting with:
 1. Review the [Sectorial Rulebook](./sectorial-rulebook/) to understand the framework principles
 2. Learn about the [eIDAS Scenarios](./ebsi-scenarios.md) to understand the trust models
 3. Explore the [Authorisation Model](./authorisation-model.md) to understand how trust chains work
-4. Explore the [Toolkits](./toolkits/) section for implementation guidance
-5. Understand the [User journeys](./user-journeys/) provided
-6. Check the [Compliance](./compliance/) requirements for interoperability information
+4. Identify your [role(s)](./docs/eIDAS-roles.md) within the ecosystem
+5. Explore the [Toolkits](./toolkits/) section for implementation guidance
+6. Understand the [User journeys](./user-journeys/) provided
+7. Check the [Compliance](./compliance/) requirements for interoperability information
 
 ## Projects Using This Framework
 
