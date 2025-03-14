@@ -15,7 +15,7 @@ This section describes the high-level technical architecture of the system, incl
 - Deployment models
 - Security architecture
 
-![Architecture Overview](./technical-architecture/images/Architecture.png)
+![Architecture Overview](./technical-architecture/images/DC4EU-architecture-general.png)
 
 ### [Components](./components/)
 
