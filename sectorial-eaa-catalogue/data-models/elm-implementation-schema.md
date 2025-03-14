@@ -4,6 +4,20 @@
 
 This document describes the implementation of the European Learning Model (ELM) version 3.2 using the W3C Verifiable Credentials Data Model (VCDM). The ELM provides a standardised format for representing educational and professional qualifications in a machine-readable, verifiable way across the European ecosystem.
 
+## Entity-relatonship data model
+´´´mermaid
+flowchart LR
+    A["Credential"] --> B["credentialSubject"]
+    B --> C["hasClaim"]
+    C --> D["Learning i\nAchievement"]
+    C --> E["Learning Activity"]
+    C --> F["Learning\nEntitlement"]
+    C --> G["Learning\nAssessment"]
+    D --> H["Learning\nOutcome"]
+    D --> I["Learning Activity"]
+    D --> J["Learning\nEntitlement"]
+    D --> K["Learning\nAssessment"]
+
 ## Key Components
 
 The European Learning Model implementation consists of several interconnected data structures that together form a comprehensive framework for educational credentials:
