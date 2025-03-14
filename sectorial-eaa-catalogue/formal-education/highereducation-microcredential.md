@@ -18,6 +18,7 @@ flowchart LR
     B --> F["Activities<br>(optional)"]
     B --> G["Entitlement<br>(optional)"]
     D --> H["Competencies<br>(mandatory)"]
+```
 
 ### **1. Credential Subject Information**
 These fields identify the holder of the Microcredential.
