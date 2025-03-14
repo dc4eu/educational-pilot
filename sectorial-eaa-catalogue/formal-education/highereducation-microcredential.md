@@ -11,13 +11,14 @@ This specification defines the data model for issuing a **Microcredential** as a
 ### **ELM-based Entity-Relationship diagram**
 ```mermaid
 flowchart LR
-    A["Credential"] --> B["1 Achievement\n(mandatory)"]
-    A --> C["Accreditation\n(SAIC-mandatory)"]
-    B --> D["Learning Outcomes\n(mandatory)"]
-    B --> E["Assessment\n(mandatory)"]
-    B --> F["Activities\n(optional)"]
-    B --> G["Entitlement\n(optional)"]
-    D --> H["Competencies\n(mandatory)"]
+    A["Credential"] --> B["1 Achievement<br>(mandatory)"]
+    A --> C["Accreditation<br>(SAIC-mandatory)"]
+    B --> D["Learning Outcomes<br>(mandatory)"]
+    B --> E["Assessment<br>(mandatory)"]
+    B --> F["Activities<br>(optional)"]
+    B --> G["Entitlement<br>(optional)"]
+    D --> H["Competencies<br>(mandatory)"]
+
 
 
 ### **1. Credential Subject Information**
