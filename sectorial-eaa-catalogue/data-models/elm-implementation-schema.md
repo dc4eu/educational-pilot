@@ -17,7 +17,7 @@ flowchart LR
     D --> I["Learning Activity"]
     D --> J["Learning\nEntitlement"]
     D --> K["Learning\nAssessment"]
-´´´
+```
 
 ## Key Components
 
