@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository provides comprehensive documentation and implementation guidance for the European Educational and Professional Qualifications digital credentials framework. It encompasses sectorial rulebooks, data models, implementation toolkits, and compliance information for creating interoperable systems that respect European values of privacy, institutional autonomy, and cross-border mobility.
+This repository provides comprehensive documentation and implementation guidance for the European Educational and Professional Qualifications digital credentials framework. It encompasses sectorial rulebooks, sectorial EAA catalogues, data models, implementation toolkits, and compliance information for creating interoperable systems that respect European values of privacy, institutional autonomy, and cross-border mobility for students and professionals.
 
 ## Repository Structure
 
@@ -26,7 +26,7 @@ This repository is organised into several key sections:
 
 ## Key Features
 
-This framework brings together European educational priorities:
+This framework brings together European educational and professinal qualifications priorities:
 
 - Respects member state sovereignty in education
 - Maintains institutional independence
