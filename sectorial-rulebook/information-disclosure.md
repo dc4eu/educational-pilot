@@ -42,6 +42,88 @@ Embedded disclosure is linked to the EAA catalogue and serves to restrict which 
 
 The system enables users to share only necessary credential data, meeting privacy requirements through advanced cryptographic techniques and carefully designed disclosure policies. This capability gives individuals control over their personal information while still enabling credential verification.
 
+## Data flow
+
+```mermaid
+
+sequenceDiagram
+    participant I as Issuer
+    participant ES as EAA Subject (Wallet)
+    participant RP as Relying Party
+    participant VDR as Verifiable Data Registry
+    
+    rect rgb(240, 230, 255)
+    Note over I, VDR: Issuance Phase
+    
+    I->>I: Create EAA (JSON/JSON-LD)
+    I->>I: Apply Data Model (EAA)
+    I->>I: Prepare for Selective Disclosure
+    Note over I: Identify disclosable attributes
+    Note over I: Generate disclosure hashes
+    
+    I->>I: Apply Signature (JWS/JAdES)
+    Note over I: Sign using private key
+    
+    I->>VDR: Register public keys/schemas
+    I->>ES: Issue SD-JWT EAA
+    Note over ES: Store complete EAA
+    end
+    
+    rect rgb(230, 255, 240)
+    Note over ES, RP: Presentation Phase
+    
+    RP->>ES: Request presentation/attributes
+    ES->>ES: Select attributes to disclose
+    Note over ES: User consent
+    
+    ES->>ES: Create Presentation
+    Note over ES: Include disclosure proofs
+    Note over ES: Add EAA subject binding if required
+    
+    ES->>RP: Present Selected Attributes
+    end
+    
+    rect rgb(255, 240, 230)
+    Note over RP, VDR: Verification Phase
+    
+    RP->>VDR: Resolve issuer public key
+    RP->>RP: Verify Signature
+    Note over RP: Authentic & unmodified
+    
+    RP->>RP: Verify Disclosure Proofs
+    Note over RP: Validate hash commitments
+    
+    RP->>RP: Verify EAA Subject Binding
+    Note over RP: If EAA subject proof included
+    
+    RP->>VDR: Check EAA status
+    Note over RP: Not revoked
+    
+    RP->>RP: Validate Critical Claims
+    Note over RP: Expiration, audience, etc.
+    
+    RP->>RP: Decision
+    end
+    
+    rect rgb(230, 240, 255)
+    Note over RP: Post-Processing Phase
+    
+    alt JSON-LD processing
+        RP->>VDR: Resolve JSON-LD Context
+        RP->>RP: Process semantics
+        Note over RP: Apply linked data processing
+    end
+    
+    RP->>RP: Schema Validation
+    Note over RP: Verify against business-defined structure
+    
+    RP->>RP: Apply Application Logic
+    Note over RP: Internationalization, rendering, etc.
+    end
+    
+    RP->>ES: Acknowledgment/Result
+```
+
 ## Key Components
 
 ### Technical Implementations
