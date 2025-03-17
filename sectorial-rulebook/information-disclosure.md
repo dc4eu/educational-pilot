@@ -128,7 +128,7 @@ sequenceDiagram
 ## Key Components
 
 ### Technical Implementations
-- **SD-JWS** (Selective Disclosure for JSON Web Signatures)
+- **SD-JWS** (Selective Disclosure for JSON Web Signatures) [SD-JWS explained](./docs/sd-jws-explained.md)
 - **SD-JWT** (Selective Disclosure for JSON Web Tokens)
 - **BBS+** cryptography for zero-knowledge proofs
 - Other privacy-preserving credential formats
