@@ -80,10 +80,5 @@ verified = BBSPlus.verify_proof(proof, disclosed_attributes)
 print("Verification successful:", verified)
 ```
 
-## Deployment on GitHub Pages
-1. **Create a GitHub repository** named `bbs-plus-guide`.
-2. **Enable GitHub Pages** via repository settings.
-3. **Commit this `index.md` file** to the `main` branch.
-4. **GitHub will generate a webpage** at `https://yourusername.github.io/bbs-plus-guide/`.
 
 
