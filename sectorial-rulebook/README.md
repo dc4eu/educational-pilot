@@ -33,6 +33,10 @@ This sectorial rulebook covers the following key areas:
 - **[Enforcement Policy Agent](./enforcement-policy-agent.md)**: How wallets implement European privacy principles.
 
 - **[Supporting Infrastructure](./supporting-infrastructure.md)**: The systems supporting the credential ecosystem.
+- 
+- **[Trust models](./trust-models/)**: Trust models supported for Education and professional Qualifications.
+- 
+- **[Technical profiles](./profiles/)**: Technical profiles supported for Education and Professional Qualifications.
 
 ## Purpose
 
