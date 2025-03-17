@@ -42,6 +42,7 @@ Embedded disclosure is linked to the EAA catalogue and serves to restrict which 
 
 The system enables users to share only necessary credential data, meeting privacy requirements through advanced cryptographic techniques and carefully designed disclosure policies. This capability gives individuals control over their personal information while still enabling credential verification.
 
+
 ## Data flow
 
 ```mermaid
