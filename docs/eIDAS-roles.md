@@ -5,6 +5,31 @@ The European Digital Identity Framework, established under **Regulation (EU) 202
 
 These roles form the backbone of the **European Digital Identity Framework**, ensuring that electronic identification and trust services remain **secure, interoperable, and legally recognised across the EU**. Each role carries specific responsibilities and compliance requirements, supporting the **digital transformation of public and private services**.
 
+
+# eIDAS Role Compliance Matrix
+
+This table summarises the compliance requirements for different roles under **Regulation (EU) 2024/1183** (eIDAS 2). Each "X" indicates that the role is required to meet the specified requirement.
+
+| **Requirement** | **Authentic Source** | **Public Sector Body in Charge of an Authentic Source** | **Trust Service Provider (TSP)** | **Qualified Trust Service Provider (QTSP)** | **Relying Party** | **Relying Party Intermediary** |
+|----------------|---------------------|---------------------------------------------------------|----------------------------------|---------------------------------------------|------------------|-----------------------------|
+| Recognised under Union or national law | X | X |  |  |  |  |
+| Ensures secure access and data integrity | X | X | X | X |  |  |
+| Provides electronic attestations of attributes (EAA) | X | X | X | X |  |  |
+| Compliance with Annex VII of Regulation (EU) 2024/1183 | X | X | X | X |  |  |
+| Must allow verification by QTSPs | X | X |  |  |  |  |
+| Must provide an interface for Digital Identity Wallets |  | X |  |  | X | X |
+| Supervised by a national authority |  | X | X | X | X | X |
+| Subject to regular security audits |  |  | X | X | X | X |
+| Use of qualified electronic signatures or seals |  |  |  | X |  |  |
+| Notifies authorities of security breaches within 24 hours |  |  |  | X |  |  |
+| Must register and provide intended use cases |  |  |  |  | X | X |
+| Must not request unauthorised data |  |  |  |  | X | X |
+| Responsible for validating electronic attestations |  |  |  |  | X | X |
+| Must respect pseudonyms when full identification is not required |  |  |  |  | X | X |
+| Cannot store transaction content |  |  |  |  |  | X |
+| Facilitates secure interactions between users and relying parties |  |  |  |  |  | X |
+
+
 ## Authentic Source
 
 ### Definition
