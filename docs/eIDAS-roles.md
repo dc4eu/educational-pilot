@@ -6,7 +6,7 @@ The European Digital Identity Framework, established under **Regulation (EU) 202
 These roles form the backbone of the **European Digital Identity Framework**, ensuring that electronic identification and trust services remain **secure, interoperable, and legally recognised across the EU**. Each role carries specific responsibilities and compliance requirements, supporting the **digital transformation of public and private services**.
 
 
-# eIDAS role(s) compliance matrix
+# eIDAS roles compliance matrix
 
 This table summarises the compliance requirements for different roles under **Regulation (EU) 2024/1183** (eIDAS 2). Each "X" indicates that the role is required to meet the specified requirement.
 
