@@ -28,29 +28,6 @@ An **Authentic Source** is a repository or system, maintained under the responsi
 - Must ensure **secure access mechanisms** to protect data integrity.
 - Must allow designated entities (e.g., **Qualified Trust Service Providers**) to verify data electronically.
 
-## Public Sector Body in Charge of an Authentic Source
-
-### Definition
-A **Public Sector Body in Charge of an Authentic Source** is a governmental entity responsible for maintaining and ensuring the integrity of an authentic source, or for issuing electronic attestations of attributes on behalf of such a source.
-
-### Role
-- Ensures that the authentic source **operates in compliance with regulatory requirements**.
-- May directly issue **electronic attestations of attributes (EAA)** on behalf of the authentic source.
-- Facilitates secure data exchange mechanisms with **relying parties** and **qualified trust service providers**.
-
-### Type of Attestation Issued
-- **Public Sector Body Electronic attestation of attributes (PubEAA)**
-- **Qualified electronic attestation of attributes (QEAA)** (if authorised)
-
-### Regulatory References
-- **Regulation (EU) 2024/1183**, Article 3(46)
-- **Annex VII** of Regulation (EU) 2024/1183
-
-### Requirements
-- Must be designated by a **Member State** as responsible for an **authentic source**.
-- Must ensure **secure storage and transfer** of identity-related data.
-- Must comply with **eIDAS security and interoperability standards**.
-
 ## Trust Service Provider (TSP)
 
 ### Definition
@@ -74,6 +51,29 @@ A **Trust Service Provider (TSP)** is an entity providing **electronic trust ser
 - Must comply with **eIDAS technical and legal requirements** for trust services.
 - Must undergo **regular security audits and conformity assessments**.
 - Must ensure **secure and verifiable issuance of electronic attestations**.
+
+## Public Sector Body in Charge of an Authentic Source
+
+### Definition
+A **Public Sector Body in Charge of an Authentic Source** is a governmental entity responsible for maintaining and ensuring the integrity of an authentic source, or for issuing electronic attestations of attributes on behalf of such a source.
+
+### Role
+- Ensures that the authentic source **operates in compliance with regulatory requirements**.
+- May directly issue **electronic attestations of attributes (EAA)** on behalf of the authentic source.
+- Facilitates secure data exchange mechanisms with **relying parties** and **qualified trust service providers**.
+
+### Type of Attestation Issued
+- **Public Sector Body Electronic attestation of attributes (PubEAA)**
+- **Qualified electronic attestation of attributes (QEAA)** (if authorised)
+
+### Regulatory References
+- **Regulation (EU) 2024/1183**, Article 3(46)
+- **Annex VII** of Regulation (EU) 2024/1183
+
+### Requirements
+- Must be designated by a **Member State** as responsible for an **authentic source**.
+- Must ensure **secure storage and transfer** of identity-related data.
+- Must comply with **eIDAS security and interoperability standards**.
 
 ## Qualified Trust Service Provider (QTSP)
 
