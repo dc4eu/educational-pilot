@@ -1,7 +1,7 @@
 # eIDAS Roles
 
 ## Introduction
-The European Digital Identity Framework, established under **Regulation (EU) 2024/1183**, defines various roles related to electronic identification and trust services. These roles are essential for ensuring secure and reliable digital transactions across the European Union. This document provides an overview of key actors within the eIDAS framework, detailing their functions, the types of attestations they issue, regulatory references, and the requirements to assume each role.
+The European Digital Identity Framework, established under **Regulation (EU) 2024/1183**, defines various roles related to electronic identification and trust services. These roles are essential for ensuring secure and reliable digital transactions across the European Union. This document provides an overview of key actors within the eIDAS framework, detailing their functions, the types of attestations they **issue** or **consume**, regulatory references, and the requirements to assume each role.
 
 These roles form the backbone of the **European Digital Identity Framework**, ensuring that electronic identification and trust services remain **secure, interoperable, and legally recognised across the EU**. Each role carries specific responsibilities and compliance requirements, supporting the **digital transformation of public and private services**.
 
@@ -103,35 +103,48 @@ A **Qualified Trust Service Provider (QTSP)** is a trust service provider that m
 ## Relying Party
 
 ### Definition
-
 A Relying Party is a natural or legal person that depends on electronic identification means, electronic attestations of attributes, or trust services to authenticate users or verify digital transactions.
 
 ### Role
-
-Consumes electronic identification means and trust services for authentication and verification.
-
-Ensures compliance with eIDAS trust service requirements.
-
-Uses qualified electronic attestations of attributes for verifying identity or entitlements.
+- **Consumes electronic identification means and trust services for authentication and verification.**
+- **Ensures compliance with eIDAS trust service requirements.**
+- **Uses qualified electronic attestations of attributes for verifying identity or entitlements.**
 
 ### Type of Attestation USED
-
-Electronic attestation of attributes (EAA)
-
-Qualified electronic attestation of attributes (QEAA)
-
-Qualified electronic signatures and seals
+- **Electronic attestation of attributes (EAA)**
+- **Qualified electronic attestation of attributes (QEAA)**
+- **Qualified electronic signatures and seals**
 
 ### Regulatory References
-
-Regulation (EU) 2024/1183, Article 3(6)
-
-Regulation (EU) 2024/1183, Articles 45-49
+- **Regulation (EU) 2024/1183, Article 3(6)**
+- **Regulation (EU) 2024/1183, Articles 45-49**
 
 ### Requirements
+- **Must ensure proper verification mechanisms for relying on trust services.**
+- **Must comply with eIDAS security and interoperability requirements.**
+- **Must establish secure authentication workflows when handling digital identity attributes.**
 
-Must ensure proper verification mechanisms for relying on trust services.
+## Relying Party Intermediary
 
-Must comply with eIDAS security and interoperability requirements.
+### Definition
+A Relying Party Intermediary is an entity that facilitates the interaction between a Relying Party and other eIDAS trust services, enabling the verification and processing of electronic identification means and electronic attestations of attributes.
 
-Must establish secure authentication workflows when handling digital identity attributes.
+### Role
+- **Acts as a bridge between relying parties and trust services.**
+- **Ensures secure and standardised communication of electronic attestations.**
+- **May provide validation services for digital signatures, seals, or attributes.**
+
+### Type of Attestation USED
+- **Electronic attestation of attributes (EAA)**
+- **Qualified electronic attestation of attributes (QEAA)**
+- **Qualified electronic signatures and seals**
+
+### Regulatory References
+- **Regulation (EU) 2024/1183, Article 3(7)**
+- **Regulation (EU) 2024/1183, Articles 45-49**
+
+### Requirements
+- **Must ensure compliance with eIDAS security and interoperability standards.**
+- **Must facilitate trustworthy interactions between relying parties and trust service providers.**
+- **Must be capable of verifying electronic attestations of attributes and signatures.**
+
