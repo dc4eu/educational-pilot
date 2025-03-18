@@ -1,4 +1,4 @@
-# eIDAS Bridge - Connecting SSI & eIDAS Trust Framework
+# eIDAS Bridge - Connecting SSI & eIDAS Trust Models
 
 The **eIDAS Bridge** is a middleware solution that connects **Self-Sovereign Identity (SSI)** with **eIDAS trust services**, ensuring **legal validity and cross-border recognition** of **Verifiable Credentials (VCs)** in the **European Single Digital Market**.
 
