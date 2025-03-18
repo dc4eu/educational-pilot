@@ -3,6 +3,14 @@
 ## Introduction
 The European Digital Identity Framework, established under **Regulation (EU) 2024/1183**, defines various roles related to electronic identification and trust services. These roles are essential for ensuring secure and reliable digital transactions across the European Union. This document provides an overview of key actors within the eIDAS framework, detailing their functions, the types of attestations they **issue** or **consume**, regulatory references, and the requirements to assume each role.
 
+Relevant roles (issuance and verification perspetive):
+- Authentic Source
+- Trust Service Provider
+- Public Sector Body in Charge of an Authentic Source
+- Qualified Trust Service Provider
+- Relying Party
+- Relying Party Intermediary
+
 These roles form the backbone of the **European Digital Identity Framework**, ensuring that electronic identification and trust services remain **secure, interoperable, and legally recognised across the EU**. Each role carries specific responsibilities and compliance requirements, supporting the **digital transformation of public and private services**.
 
 
