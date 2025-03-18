@@ -99,3 +99,39 @@ A **Qualified Trust Service Provider (QTSP)** is a trust service provider that m
 - Must undergo **certification by an accredited conformity assessment body**.
 - Must be **supervised by a national authority** designated under eIDAS.
 - Must provide **enhanced security and transparency** in trust service operations.
+
+## Relying Party
+
+### Definition
+
+A Relying Party is a natural or legal person that depends on electronic identification means, electronic attestations of attributes, or trust services to authenticate users or verify digital transactions.
+
+### Role
+
+Consumes electronic identification means and trust services for authentication and verification.
+
+Ensures compliance with eIDAS trust service requirements.
+
+Uses qualified electronic attestations of attributes for verifying identity or entitlements.
+
+### Type of Attestation USED
+
+Electronic attestation of attributes (EAA)
+
+Qualified electronic attestation of attributes (QEAA)
+
+Qualified electronic signatures and seals
+
+### Regulatory References
+
+Regulation (EU) 2024/1183, Article 3(6)
+
+Regulation (EU) 2024/1183, Articles 45-49
+
+### Requirements
+
+Must ensure proper verification mechanisms for relying on trust services.
+
+Must comply with eIDAS security and interoperability requirements.
+
+Must establish secure authentication workflows when handling digital identity attributes.
