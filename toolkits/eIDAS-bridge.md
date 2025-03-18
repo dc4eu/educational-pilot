@@ -21,7 +21,7 @@ The eIDAS Bridge is based on:
 - **Trust Service Providers (QTSPs)**
 
 ## Architecture
-The eIDAS Bridge enables **issuers** (e.g., universities, governments) to seal credentials and **verifiers** to validate them.
+The eIDAS Bridge enables **issuers** (e.g., universities, governments) to seal credentials and **verifiers** to validate them combining both trust models: Classical PKI and Decentralized PKI using EBSI.
 
 ```mermaid
 graph TD;
