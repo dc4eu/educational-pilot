@@ -20,6 +20,7 @@ EAA's defined
 - [Higher Education Diploma](./highereducation-diploma.md)
 - [Higher Education Diploma Supplement](./highereducation-diplomasupplement.md) 
 - [Higher Edcuation Master Degree](highereducation-master.md)
+- [Higher Edcuation Transcript of Records](./highereducation-transcriptofrecords.md)
 
 For detailed schema information, see [Diploma Schema](./diploma-schema.md).
 
