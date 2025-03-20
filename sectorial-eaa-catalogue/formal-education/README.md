@@ -19,6 +19,7 @@ Diploma credentials represent the formal completion of an educational programme 
 EAA's defined
 - [Higher Education Diploma](./highereducation-diploma.md)
 - [Higher Education Diploma Supplement](./highereducation-diplomasupplement.md) 
+- [Higher Edcuation Master Degree](highereducation-master.md)
 
 For detailed schema information, see [Diploma Schema](./diploma-schema.md).
 
