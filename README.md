@@ -18,7 +18,7 @@ This repository is organised into several key sections:
 
 - **[Authorisation Model](./authorisation-model.md)**: Defines a structured framework for managing authorisations, accreditation, and recognition within educational, professional, and quality assurance domains.
 
-- **[Toolkits](./toolkits/)**: Implementation resources including technical architecture, component descriptions, workflows (RFCs), and specific use cases to help develop user journeys.
+- **[Toolkits](./toolkits/README.md)**: Implementation resources including technical architecture, component descriptions, workflows (RFCs), and specific use cases to help develop user journeys.
 
 - **[User Journeys](./user-journeys/)**: Provided user journeys to demonstrate cross-border interaction, ready-to go infrastructure, and foundation to extend/provide more user journeys and/or EAAs
 
@@ -47,7 +47,7 @@ For new users, we recommend starting with:
 2. Learn about the [eIDAS Scenarios](./ebsi-scenarios.md) to understand the trust models
 3. Explore the [Authorisation Model](./authorisation-model.md) to understand how trust chains work
 4. Identify your [role(s)](./docs/eIDAS-roles.md) within the ecosystem
-5. Explore the [Toolkits](./toolkits/) section for implementation guidance
+5. Explore the [Toolkits](./toolkits/README.md) section for implementation guidance
 6. Understand the [User journeys](./user-journeys/) provided
 7. Check the [Compliance](./compliance/) requirements for interoperability information
 

@@ -1,0 +1,29 @@
+# DC4EU Pilot Architecture Overview
+
+The **DC4EU** project defines two distinct pilot tracks based on the **trust model** and the **verifiable credential format** adopted. Each pilot explores different technical and governance configurations aligned with European interoperability principles and the evolving digital identity ecosystem.
+
+## Pilot 1 – Classical PKI with SD-JWT
+
+**Pilot 1** relies on a trust model based exclusively on **Classical PKI** (Public Key Infrastructure). In this configuration:
+
+- Credentials are issued and verified through hierarchical trust chains using established Certificate Authorities.
+- The **credential format** follows the **SD-JWT** (Selective Disclosure JSON Web Token) specification.
+- This approach is compatible with existing digital infrastructures and emphasises short-term interoperability.
+
+## Pilot 2 – Combined PKI & Decentralised PKI with W3C VC
+
+**Pilot 2** implements a **combined trust model**, where both **Classical PKI** and **Decentralised PKI** mechanisms coexist.
+
+- Decentralised trust is supported via **trusted ledgers**, in particular the **European Blockchain Services Infrastructure (EBSI)**.
+- Credentials are issued using the **W3C Verifiable Credentials (VC)** standard.
+- This model supports long-term interoperability, alignment with the **eIDAS 2.0 Regulation**, and integration with the **EUDI Wallet** ecosystem.
+
+## Summary
+
+| Pilot    | Trust Model                          | Credential Format      | Infrastructure Reference          |
+|----------|--------------------------------------|------------------------|-----------------------------------|
+| Pilot 1  | Classical PKI                        | SD-JWT                 | Traditional CA-based trust chains |
+| Pilot 2  | Classical PKI + Decentralised PKI    | W3C Verifiable Credentials | EBSI-ledger, eIDAS 2.0, ARF        |
+
+Each pilot supports specific use cases and technological pathways that will inform future large-scale adoption across Member States in the fields of education and professional qualifications.
+
