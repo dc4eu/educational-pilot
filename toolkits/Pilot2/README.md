@@ -27,8 +27,8 @@ Detailed descriptions of the main components from core technical infrastructure:
 - Student Web GUI
 - Issuer Agent
 - Authentic Source
-- Izertis Holder Wallet (mobile app)
-- EUDI Wallet (mobile app)
+- Natural Person Holder Wallet provided by IZERTIS (mobile app)
+- EUDI Reference Wallet integration provided by GRNET 
 
 ### [Workflows (RFCs)](./workflows/)
 
