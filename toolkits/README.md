@@ -10,6 +10,8 @@ The **DC4EU** project defines two distinct pilot tracks based on the **trust mod
 - The **credential format** follows the **SD-JWT** (Selective Disclosure JSON Web Token) specification.
 - This approach is compatible with existing digital infrastructures and emphasises short-term interoperability.
 
+[Access to Pilot1 technincal documentation](./Pilot1/)
+
 ## Pilot 2 – Combined PKI & Decentralised PKI with W3C VC
 
 **Pilot 2** implements a **combined trust model**, where both **Classical PKI** and **Decentralised PKI** mechanisms coexist.
@@ -17,6 +19,8 @@ The **DC4EU** project defines two distinct pilot tracks based on the **trust mod
 - Decentralised trust is supported via **trusted ledgers**, in particular the **European Blockchain Services Infrastructure (EBSI)**.
 - Credentials are issued using the **W3C Verifiable Credentials (VC)** standard.
 - This model supports long-term interoperability, alignment with the **eIDAS 2.0 Regulation**, and integration with the **EUDI Wallet** ecosystem.
+
+[Access to Pilot1 technincal documentation](./Pilot2/README.md)
 
 ## Summary
 
