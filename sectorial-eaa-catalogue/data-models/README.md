@@ -6,6 +6,14 @@ This section contains the common data models that support all credential types i
 
 ## Table Data Models
 
+| Scope                        | Data model name          | Brief explanation                                                                 | Schema URL                                                                                                                                             | Registry URL                                                                                         |
+|-----------------------------|--------------------------|------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
+| Higher education alliances  | AllianceID               | Identifies a student or staff member as affiliated with a European university alliance | [Schema](https://code.europa.eu/ebsi/json-schema/-/tree/main/schemas/vcdm1.1/alliance-id)                       | [Registry](https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/zCHc3ZfYg2871W2WftjLu4QNMQrDzG57oG5pvGoyHcagB) |
+| Foundational identity       | Educational ID           | Identifies the natural person in the context of an educational organisation, including national extensions | [Schema](https://code.europa.eu/ebsi/json-schema/-/tree/main/schemas/vcdm1.1/education/verifiable-education-id) | [Registry](https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/zEmFZquJtANNz7XNE46thRi1E2cAfpQiXVLSBdDgLyfGP) |
+| Learning achievements       | Europass EDC credential  | Europass-compliant credential model supporting the Diploma and Certificate Supplement structure | [Schema](https://code.europa.eu/ebsi/json-schema/-/tree/main/schemas/vcdm1.1/europass/edc)                        | [Registry](https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/z5P8ebAhZjuvypiSXSHoba6vstbhTwnLhVuULWKenuiNJ) |
+| Cross-border identity       | MyAcademicID             | Identity credential for student mobility based on MyAcademicID services and eduGAIN  | [Schema](https://code.europa.eu/ebsi/json-schema/-/tree/main/schemas/vcdm1.1/multi-uni-pilot/my-academic-id)     | [Registry](https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/z3XDm4kDtztE8DzLsVdhfshYvx2upnfLmqHtyVjkaXM1g) |
+| Foundational identity       | PID (Natural Person)     | Person Identification Data (PID) schema for issuing foundational identity credentials in compliance with eIDAS and ARF | [Schema](https://code.europa.eu/ebsi/json-schema/-/tree/main/schemas/vcdm1.1/vid/natural-person)                 | [Registry](https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/z2bTCgjmBDY5kwNWGL3hfSQUZP6d8AZUnLFXe8coTa3zK) |
+
 
 ## Core Data Models
 
