@@ -33,7 +33,7 @@ This guide explains how to install, register, and configure the **Identfy Wallet
 
 ## Managing Credentials
 
-- Use the **main menu** to access:
+Use the **main menu** to access:
   - **Credentials** – view and request new credentials.
   - **Identities** – manage your DIDs.
   - **Privacy dashboard** – monitor data sharing.
