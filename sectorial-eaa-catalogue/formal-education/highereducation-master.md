@@ -1,9 +1,9 @@
-# Master's Degree - European Digital Credential
+# Master's Degree - EAA
 
 ## Introduction
-This page documents a **Master's Degree** as a **European Digital Credential (EDC)**, ensuring full compliance with **ELM v3.2** and **W3C Verifiable Credential Data Model (VCDM) 1.1**.
+This page documents a **Master's Degree** as a **Electronic Attesttaion of Attributes**, ensuring full compliance with **ELM v3.2** and **W3C Verifiable Credential Data Model (VCDM) 1.1**.
 
-The credential follows **Europass, EQF/NQF, and EBSI** standards, allowing seamless **recognition, portability, and verification** across EU Member States.
+The credential follows **Europass, EQF/NQF, W3C and EBSI** standards, allowing seamless **recognition, portability, and verification** across EU Member States.
 
 ---
 
