@@ -14,7 +14,7 @@ This guide explains how to install, register, and configure the **Identfy Wallet
 1. Download **TestFlight** from the App Store.
 2. Join the beta program:  
    [Join on TestFlight](https://testflight.apple.com/join/tpUBUZUK)
-3. Install the **Identfy-v1-I** application.
+3. Open the following TestFlight link [Identify testFlight link](https://testflight.apple.com/join/tpUBUZUK) from your mobile  **Identfy-v1-I** application.
 4. Launch the app and follow the initial setup steps.
 
 > ⚠️ Note: The current iOS version may not yet reflect DC4EU branding. This will be updated upon Apple approval.
