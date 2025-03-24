@@ -19,9 +19,7 @@ While the methodology defines common building blocks, each scenario will reflect
 
 
 
-## Scenarios list
-
-# Toolkits, templates, and supporting artefacts aligned to scenarios
+# Scenarios list
 
 This section outlines the common and pilot-specific artefacts that support scenario implementation across Pilots 1 and 2. These include toolkits, templates, and technical components used by piloting agents, SPOCs, and end users.
 
