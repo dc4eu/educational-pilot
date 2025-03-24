@@ -20,7 +20,7 @@
       - [Recognised accreditations:](#recognised-accreditations-1)
       - [3.1.1 Spain](#311-spain)
     - [3.2 Vocational Education and Training (VET)](#32-vocational-education-and-training-vet)
-  - [Governance implementation in DC4EU](#conclusion)
+  - [Governance implementation in DC4EU](#EAA-based)
 
 
 ## Introduction
