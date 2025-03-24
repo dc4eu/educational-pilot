@@ -21,13 +21,15 @@ While the methodology defines common building blocks, each scenario will reflect
 
 ## Scenarios list
 
-|Pilot 1|Provided cenytraly by DC4EU|
-|Pilot 1|Provided nationaly by Finland|
+Pilot 1
+- Provided cenytraly by DC4EU
+- Provided nationaly by Finland
 
 
-|Pilot 2|Provided cenytraly by DC4EU|
-|Pilot 2|Provided nationaly by Poland|
-|Pilot 2|Provided individualy by Walt.ID|
+Pilot 2
+- Provided cenytraly by DC4EU
+- Provided nationaly by Poland
+- Provided individualy by Walt.ID
 
 
 
