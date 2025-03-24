@@ -155,7 +155,7 @@ The authorisation model has been designed to be implemented using Electronic Att
 
 # Governnace identified and modeled for Edcuation and professional Qualifcations
 
-[DC4EU governnace](./docs/governance/README.md)
+[DC4EU governance](./docs/governance/README.md)
 
 # Conclusion
 
