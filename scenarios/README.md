@@ -19,6 +19,21 @@ While the methodology defines common building blocks, each scenario will reflect
 
 ---
 
+## Scenarios list
+
+|Pilot 1|Provided cenytraly by DC4EU|
+|Pilot 1|Provided nationaly by Finland|
+
+
+|Pilot 2|Provided cenytraly by DC4EU|
+|Pilot 2|Provided nationaly by Poland|
+|Pilot 2|Provided individualy by Walt.ID|
+
+
+
+
+---
+
 ## Scenario checklist template (optional structure)
 
 To support documentation and review of each scenario, piloting agents are encouraged to complete a structured overview using the template below:
