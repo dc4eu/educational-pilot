@@ -154,8 +154,11 @@ The authorisation model has been designed to be implemented using Electronic Att
 - **Trust anchor**: An entity that is inherently trusted within a specific context (typically a public authority)
 
 # Governance identified and modeled for Edcuation and professional Qualifcations
+The implementation of the Electronic Attestation of Attributes (EAA)-based authorisation model within the DC4EU Large Scale Pilot for the domains of Education and Professional Qualifications. 
 
-[DC4EU governance](./docs/governance/README.md)
+The model reflects the structured feedback from the 23 consortium members and is designed to be extendable to all Member States and associated countries of the European Union. It supports full alignment with the eIDAS 2.0 framework, the European Education Area (EEA), and the European Qualifications Framework (EQF).
+
+Get access to [DC4EU governance](./docs/governance/README.md)
 
 # Conclusion
 
