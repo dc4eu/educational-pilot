@@ -21,15 +21,73 @@ While the methodology defines common building blocks, each scenario will reflect
 
 ## Scenarios list
 
-Pilot 1
-- Provided cenytraly by DC4EU
-- Provided nationaly by Finland
+# Toolkits, templates, and supporting artefacts aligned to scenarios
 
+This section outlines the common and pilot-specific artefacts that support scenario implementation across Pilots 1 and 2. These include toolkits, templates, and technical components used by piloting agents, SPOCs, and end users.
 
-Pilot 2
-- Provided cenytraly by DC4EU
-- Provided nationaly by Poland
-- Provided individualy by Walt.ID
+---
+
+## Common elements for all Pilots
+
+| Item              | Type            | Purpose                                               | Used by                     | Provided by         |
+|-------------------|------------------|--------------------------------------------------------|------------------------------|----------------------|
+| Governance template | Template        | Register credential type, issuer authority, DID, X509v3 | Piloting agents              | GovPart & SGAD       |
+| Feedback form      | Template        | Capture end-user satisfaction and issues               | Piloting agents / end users | Neumann              |
+| KPI dashboard      | Reporting tool  | Track operational indicators                           | SPOC / Piloting agents       | GRNet                |
+
+---
+
+## Pilot 1
+
+### Centrally provided by DC4EU
+
+| Item                      | Type    | Purpose                                                                          | Used by        | Provided by |
+|---------------------------|---------|----------------------------------------------------------------------------------|----------------|-------------|
+| Issuer interface          | Toolkit | Enable issuance of verifiable credentials                                       | Piloting agents| SUNET       |
+| Verifier interface        | Toolkit | Enable verification of credentials including governance                         | Piloting agents| SUNET       |
+| Natural person wallet     | Toolkit | Enable end-user to request/share credentials and perform user journeys          | Piloting agents| GUNet       |
+| Basic user journey provisioner | Toolkit | Provide basic user journeys as building blocks that can be easily used or extended | Piloting agents| SUNET       |
+
+### Centrally provided as national solution – Finland
+
+| Item                      | Type    | Purpose                                                                          | Used by        | Provided by |
+|---------------------------|---------|----------------------------------------------------------------------------------|----------------|-------------|
+| Issuer interface          | Toolkit | Enable issuance of verifiable credentials                                       | Piloting agents| OPH         |
+| Verifier interface        | Toolkit | Enable verification of credentials including governance                         | Piloting agents| OPH         |
+| Natural person wallet     | Toolkit | Enable end-user to request/share credentials and perform user journeys          | Piloting agents| OPH         |
+| Basic user journey provisioner | Toolkit | Provide basic user journeys as building blocks that can be easily used or extended | Piloting agents| OPH         |
+
+---
+
+## Pilot 2
+
+### Centrally provided by DC4EU
+
+| Item                      | Type    | Purpose                                                                          | Used by        | Provided by |
+|---------------------------|---------|----------------------------------------------------------------------------------|----------------|-------------|
+| Issuer interface          | Toolkit | Enable issuance of verifiable credentials                                       | Piloting agents| ATOS        |
+| Verifier interface        | Toolkit | Enable verification of credentials including governance                         | Piloting agents| ATOS        |
+| Natural person wallet     | Toolkit | Enable end-user to request/share credentials and perform user journeys          | Piloting agents| IZERTIS     |
+| Basic user journey provisioner | Toolkit | Provide basic user journeys as building blocks that can be easily used or extended | Piloting agents| ATOS        |
+
+### Centrally provided as national solution – Poland
+
+| Item                      | Type    | Purpose                                                                          | Used by        | Provided by |
+|---------------------------|---------|----------------------------------------------------------------------------------|----------------|-------------|
+| Issuer interface          | Toolkit | Enable issuance of verifiable credentials                                       | Piloting agents| NASK        |
+| Verifier interface        | Toolkit | Enable verification of credentials including governance                         | Piloting agents| NASK        |
+| Natural person wallet     | Toolkit | Enable end-user to request/share credentials and perform user journeys          | Piloting agents| NASK        |
+| Basic user journey provisioner | Toolkit | Provide basic user journeys as building blocks that can be easily used or extended | Piloting agents| NASK        |
+
+### Institutionally provided as a piloting agent – Howest University
+
+| Item                      | Type    | Purpose                                                                          | Used by        | Provided by |
+|---------------------------|---------|----------------------------------------------------------------------------------|----------------|-------------|
+| Issuer interface          | Toolkit | Enable issuance of verifiable credentials                                       | Piloting agents| Walt.ID     |
+| Verifier interface        | Toolkit | Enable verification of credentials including governance                         | Piloting agents| Walt.ID     |
+| Natural person wallet     | Toolkit | Enable end-user to request/share credentials and perform user journeys          | Piloting agents| Walt.ID     |
+| Basic user journey provisioner | Toolkit | Provide basic user journeys as building blocks that can be easily used or extended | Piloting agents| Walt.ID     |
+
 
 
 
