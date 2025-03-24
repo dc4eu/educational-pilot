@@ -153,7 +153,11 @@ The authorisation model has been designed to be implemented using Electronic Att
 - **Verifier**: The entity responsible for validating an authorisation or credential
 - **Trust anchor**: An entity that is inherently trusted within a specific context (typically a public authority)
 
-## Conclusion
+# Governnace identified and modeled for Edcuation and professional Qualifcations
+
+[DC4EU governnace](./docs/governance/README.md)
+
+# Conclusion
 
 This authorisation model provides a robust, interoperable framework for ensuring trusted authorisation processes in education and professional qualifications. By defining clear structures, attributes, and verification methods, it facilitates compliance, interoperability, and long-term validation of authorisations across different domains and jurisdictions.
 
