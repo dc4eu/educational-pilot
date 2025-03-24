@@ -4,6 +4,27 @@
 
 This document introduces the implementation of the Electronic Attestation of Attributes (EAA)-based authorisation model within the DC4EU Large Scale Pilot for the domains of education and professional qualifications. The model reflects the structured feedback from the 23 consortium members and is designed to be extendable to all Member States and associated countries of the European Union. It supports full alignment with the eIDAS 2.0 framework, the European Education Area (EEA), and the European Qualifications Framework (EQF).
 
+## Table of contents
+
+- [Implementation of the EAA-based Authorisation Model in DC4EU](#implementation-of-the-eaa-based-authorisation-model-in-dc4eu)
+  - [Introduction](#introduction)
+  - [Table of contents](#table-of-contents)
+  - [1. Formal education](#1-formal-education)
+    - [List of potential accreditations:](#list-of-potential-accreditations)
+    - [1.1 Spain: national implementation](#11-spain-national-implementation)
+      - [1.1.1 Ministry of Science, Research and Universities](#111-ministry-of-science-research-and-universities)
+      - [1.1.2 Ministry of Education and Sports](#112-ministry-of-education-and-sports)
+      - [1.1.3 Ministry of Employability](#113-ministry-of-employability)
+  - [2. MyAcademicID](#2-myacademicid)
+    - [Recognised accreditations:](#recognised-accreditations)
+    - [2.1 Spain](#21-spain)
+    - [2.2 France](#22-france)
+  - [3. Quality assurance](#3-quality-assurance)
+    - [3.1 Higher Education (HE)](#31-higher-education-he)
+      - [Recognised accreditations:](#recognised-accreditations-1)
+      - [3.1.1 Spain](#311-spain)
+    - [3.2 Vocational Education and Training (VET)](#32-vocational-education-and-training-vet)
+  - [Conclusion](#conclusion)
 
 
 ## 1. Formal education
