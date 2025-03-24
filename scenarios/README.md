@@ -86,8 +86,6 @@ This section outlines the common and pilot-specific artefacts that support scena
 | Basic user journey provisioner | Toolkit | Provide basic user journeys as building blocks that can be easily used or extended | Piloting agents| Walt.ID     |
 
 
-
-
 ## Scenario checklist template (optional structure)
 
 To support documentation and review of each scenario, piloting agents are encouraged to complete a structured overview using the template below:
