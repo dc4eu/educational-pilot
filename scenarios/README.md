@@ -17,7 +17,7 @@ While the methodology defines common building blocks, each scenario will reflect
 
 > **Note:** Each piloting agent may define one or multiple scenarios, depending on the diversity of credentials, use cases, or user groups involved.
 
----
+
 
 ## Scenarios list
 
@@ -25,7 +25,6 @@ While the methodology defines common building blocks, each scenario will reflect
 
 This section outlines the common and pilot-specific artefacts that support scenario implementation across Pilots 1 and 2. These include toolkits, templates, and technical components used by piloting agents, SPOCs, and end users.
 
----
 
 ## Common elements for all Pilots
 
@@ -35,7 +34,7 @@ This section outlines the common and pilot-specific artefacts that support scena
 | Feedback form      | Template        | Capture end-user satisfaction and issues               | Piloting agents / end users | Neumann              |
 | KPI dashboard      | Reporting tool  | Track operational indicators                           | SPOC / Piloting agents       | GRNet                |
 
----
+
 
 ## Pilot 1
 
@@ -57,7 +56,7 @@ This section outlines the common and pilot-specific artefacts that support scena
 | Natural person wallet     | Toolkit | Enable end-user to request/share credentials and perform user journeys          | Piloting agents| OPH         |
 | Basic user journey provisioner | Toolkit | Provide basic user journeys as building blocks that can be easily used or extended | Piloting agents| OPH         |
 
----
+
 
 ## Pilot 2
 
@@ -90,9 +89,6 @@ This section outlines the common and pilot-specific artefacts that support scena
 
 
 
-
-
----
 
 ## Scenario checklist template (optional structure)
 
