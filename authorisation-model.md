@@ -1,5 +1,28 @@
 # Authorisation Model Based on EAAs
 
+## Table of contents
+
+- [Authorisation Model Based on EAAs](#authorisation-model-based-on-eaas)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+  - [Key benefits](#key-benefits)
+  - [Structure of the model](#structure-of-the-model)
+    - [1. Entity information](#1-entity-information)
+      - [Key attributes:](#key-attributes)
+    - [2. Authorisation information](#2-authorisation-information)
+  - [Verification of authorisations](#verification-of-authorisations)
+  - [Typologies of authorisations](#typologies-of-authorisations)
+    - [1. Formal education](#1-formal-education)
+    - [2. Quality assurance](#2-quality-assurance)
+    - [3. Professional qualifications](#3-professional-qualifications)
+    - [4. Training accreditation \& CPD](#4-training-accreditation--cpd)
+    - [5. Digital identities](#5-digital-identities)
+  - [Entity-relationship diagram](#entity-relationship-diagram)
+  - [Implementation in the EAA framework](#implementation-in-the-eaa-framework)
+  - [Glossary](#glossary)
+- [Governance identified and modeled for Edcuation and professional Qualifcations](#governance-identified-and-modeled-for-edcuation-and-professional-qualifcations)
+- [Conclusion](#conclusion)
+
 ## Overview
 
 This document defines an authorisation model aimed at establishing trusted verification and validation processes across different contexts within education and professional qualifications. It ensures that relying parties (verifiers) can determine the legitimacy of an issuer of verifiable credentials, as well as the authorisation chain that validates the issuer.
