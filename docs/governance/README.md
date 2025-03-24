@@ -20,7 +20,7 @@
       - [Recognised accreditations:](#recognised-accreditations-1)
       - [3.1.1 Spain](#311-spain)
     - [3.2 Vocational Education and Training (VET)](#32-vocational-education-and-training-vet)
-  - [4.Dteailed Governance implementation in DC4EU](#4-Detailed-Governnace-implementation-in-DC4EU)
+- [Detailed Governance implementation in DC4EU](#)
 
 
 ## Introduction
@@ -122,9 +122,9 @@ The equivalent bodies are:
 
 These organisations will follow a similar hierarchy of accreditation and recognition at the national and regional level for VET quality assurance.
 
-## 4.Detailed Governnace implementation in DC4EU
+# Detailed Governnace implementation in DC4EU
 
-# EAA-based Authorisation Model by Country, Role and Governance Type
+## EAA-based Authorisation Model by Country, Role and Governance Type
 
 | Country     | Governance Type                    | Role | Entity                                              | Authorisations |
 |-------------|-------------------------------------|------|------------------------------------------------------|----------------|
