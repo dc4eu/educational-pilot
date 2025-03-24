@@ -22,7 +22,7 @@ This section describes the high-level technical architecture of the system, incl
 Detailed descriptions of the main components from core technical infrastructure:
 
 - [Keycloak](./components/README.md)
-- Status Web GUI
+- [Status Web GUI](./components/status-web-gui/README.md)
 - PID Generator GUI
 - Student Web GUI
 - Issuer Agent
