@@ -33,25 +33,6 @@ Each user journey includes:
 - **Key Steps:** QR code scanning, authentication, verification against trust lists and trust registries, and validation.
 
 
-## Usage Instructions
-
-1. Open the respective `.md` file to read the **user journey description**.
-2. Use **Mermaid.js**-compatible tools to visualize the **journey diagrams**.
-3. Align implementation details with the **EBSI & OpenID4VP** frameworks.
-4. Contribute by improving user journeys or adding new credential flows.
-
-
-## Contribution Guidelines
-
-If you wish to contribute to these **user journeys**, follow these steps:
-- **Fork the repository** and create a new branch.
-- **Update the relevant `.md` files** following the structure of existing journeys.
-- **Ensure consistency** with the DC4EU and EBSI technical specifications.
-- **Submit a Pull Request (PR)** for review.
-
-For any issues or suggestions, please open an **Issue** in the repository.
-
-
 **Maintainers:**  
 - DC4EU Development Team  
 - Contact: [DC4EU Support](mailto:support@dc4eu.eu)  
