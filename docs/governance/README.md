@@ -1,9 +1,5 @@
 # Implementation of the EAA-based Authorisation Model in DC4EU
 
-## Introduction
-
-This document introduces the implementation of the Electronic Attestation of Attributes (EAA)-based authorisation model within the DC4EU Large Scale Pilot for the domains of education and professional qualifications. The model reflects the structured feedback from the 23 consortium members and is designed to be extendable to all Member States and associated countries of the European Union. It supports full alignment with the eIDAS 2.0 framework, the European Education Area (EEA), and the European Qualifications Framework (EQF).
-
 ## Table of contents
 
 - [Implementation of the EAA-based Authorisation Model in DC4EU](#implementation-of-the-eaa-based-authorisation-model-in-dc4eu)
@@ -26,6 +22,10 @@ This document introduces the implementation of the Electronic Attestation of Att
     - [3.2 Vocational Education and Training (VET)](#32-vocational-education-and-training-vet)
   - [Conclusion](#conclusion)
 
+
+## Introduction
+
+This document introduces the implementation of the Electronic Attestation of Attributes (EAA)-based authorisation model within the DC4EU Large Scale Pilot for the domains of education and professional qualifications. The model reflects the structured feedback from the 23 consortium members and is designed to be extendable to all Member States and associated countries of the European Union. It supports full alignment with the eIDAS 2.0 framework, the European Education Area (EEA), and the European Qualifications Framework (EQF).
 
 ## 1. Formal education
 
