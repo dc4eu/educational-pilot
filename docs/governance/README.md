@@ -1,27 +1,5 @@
 # Implementation of the EAA-based Authorisation Model in DC4EU
 
-## Table of contents
-
-- [Implementation of the EAA-based Authorisation Model in DC4EU](#implementation-of-the-eaa-based-authorisation-model-in-dc4eu)
-  - [Table of contents](#table-of-contents)
-  - [Introduction](#introduction)
-  - [1. Formal education](#1-formal-education)
-    - [List of potential accreditations:](#list-of-potential-accreditations)
-    - [Educational and Professional qualifications governance](#educational-and-professional-qualifications-governance)
-  - [2. MyAcademicID](#2-myacademicid)
-    - [Recognised accreditations:](#recognised-accreditations)
-    - [2.1 Spain](#21-spain)
-    - [2.2 France](#22-france)
-    - [MyAcademicID governance](#myacademicid-governance)
-  - [3. Quality assurance](#3-quality-assurance)
-    - [3.1 Higher Education (HE)](#31-higher-education-he)
-      - [Recognised accreditations:](#recognised-accreditations-1)
-      - [3.1.1 Spain](#311-spain)
-    - [3.2 Vocational Education and Training (VET)](#32-vocational-education-and-training-vet)
-    - [Quality assurance regimes governance](#quality-assurance-regimes-governance)
-
-
-
 ## Introduction
 
 This document introduces the implementation of the Electronic Attestation of Attributes (EAA)-based authorisation model within the DC4EU Large Scale Pilot for the domains of education and professional qualifications. The model reflects the structured feedback from the 23 consortium members and is designed to be extendable to all Member States and associated countries of the European Union. It supports full alignment with the eIDAS 2.0 framework, the European Education Area (EEA), and the European Qualifications Framework (EQF).
@@ -62,13 +40,6 @@ GEANT will act as RootTAO at the European (and international) level for MyAcadem
 - MyAcademicIDTAO (assigned to national NRENs)
 - MyAcademicIDIssuer (assigned to Higher Education Institutions or NRENs acting on behalf of HEIs)
 
-### 2.1 Spain
-- GEANT accredits RedIRIS as MyAcademicIDTAO
-- RedIRIS authorises Rovira i Virgili University (URV) as MyAcademicIDIssuer
-
-### 2.2 France
-- GEANT accredits Renater as MyAcademicIDTAO
-- Renater self-authorises as MyAcademicIDIssuer (acting on behalf of French universities)
 
 ### [MyAcademicID governance](./myacademicID.md)
 
@@ -82,12 +53,6 @@ ENQA, and technically EQAR, serve as RootTAO for quality assurance in HE.
 - QAHELicenseToActAtRegionalLevel (to regional QA agencies)
 - QualityAssuranceAtInstitutionalLevel (to HEIs)
 - QualityAssuranceAtProgrammeLevel (to HEIs)
-
-#### 3.1.1 Spain
-- ENQA/EQAR accredits ANECA as TAO (QAHELicenseToActAtNationalLevel)
-- ANECA accredits AQU as TAO (QAHELicenseToActAtRegionalLevel)
-- AQU issues QA authorisations to HEIs at institutional and programme levels
-- ENQA/EQAR may also directly issue QA authorisations to HEIs
 
 ### 3.2 Vocational Education and Training (VET)
 The equivalent bodies are:
