@@ -73,7 +73,7 @@ When implementing these toolkits:
 
 ## Contributing/reporting
 
-To contribute or report on new use cases, workflows, or component descriptions, please follow the [Contribution guideline](./contributing-guideline.md) provided and submit a pull request.
+To contribute or report on new use cases, workflows, or component descriptions, please follow the [Contribution guideline](./contributing-guide.md) provided and submit a pull request.
 
 
 # License and Notice
