@@ -80,7 +80,7 @@ Able to accredit/authorise:
 - EQFlevel4–8 (for professional bodies)
 - ProfessionalID
 
-
+###[Educational and Professional qualifications governnace](./formal-education.md)
 
 ## 2. MyAcademicID
 
