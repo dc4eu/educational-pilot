@@ -1,14 +1,10 @@
 # Implementation of the EAA-based Authorisation Model in DC4EU
 
-## Introduction
-
-This document introduces the implementation of the Electronic Attestation of Attributes (EAA)-based authorisation model within the DC4EU Large Scale Pilot for the domains of education and professional qualifications. The model reflects the structured feedback from the 23 consortium members and is designed to be extendable to all Member States and associated countries of the European Union. It supports full alignment with the eIDAS 2.0 framework, the European Education Area (EEA), and the European Qualifications Framework (EQF).
-
 ## Table of contents
 
 - [Implementation of the EAA-based Authorisation Model in DC4EU](#implementation-of-the-eaa-based-authorisation-model-in-dc4eu)
-  - [Introduction](#introduction)
   - [Table of contents](#table-of-contents)
+  - [Introduction](#introduction)
   - [1. Formal education](#1-formal-education)
     - [List of potential accreditations:](#list-of-potential-accreditations)
     - [Educational and Professional qualifications governance](#educational-and-professional-qualifications-governance)
@@ -23,7 +19,16 @@ This document introduces the implementation of the Electronic Attestation of Att
       - [3.1.1 Spain](#311-spain)
     - [3.2 Vocational Education and Training (VET)](#32-vocational-education-and-training-vet)
     - [Quality assurance regimes governance](#quality-assurance-regimes-governance)
-  - [Conclusion](#conclusion)
+
+
+
+## Introduction
+
+This document introduces the implementation of the Electronic Attestation of Attributes (EAA)-based authorisation model within the DC4EU Large Scale Pilot for the domains of education and professional qualifications. The model reflects the structured feedback from the 23 consortium members and is designed to be extendable to all Member States and associated countries of the European Union. It supports full alignment with the eIDAS 2.0 framework, the European Education Area (EEA), and the European Qualifications Framework (EQF).
+
+This structured authorisation model allows for scalable, decentralised trust management across education and professional qualifications, making use of interoperable EAAs and fully aligned with the European Digital Identity and related European strategies.
+
+This model will enable Member States and European institutions to verify issuer legitimacy, accreditation, and scope of recognition over time and across borders, improving transparency, mobility, and trust within the European Education and Qualifications ecosystem.
 
 
 ## 1. Formal education
@@ -93,8 +98,3 @@ These organisations will follow a similar hierarchy of accreditation and recogni
 
 ### [Quality assurance regimes governance](./quality-assurance.md)
 
-## Conclusion
-
-This structured authorisation model allows for scalable, decentralised trust management across education and professional qualifications, making use of interoperable EAAs and fully aligned with the European Digital Identity and related European strategies.
-
-This model will enable Member States and European institutions to verify issuer legitimacy, accreditation, and scope of recognition over time and across borders, improving transparency, mobility, and trust within the European Education and Qualifications ecosystem.
