@@ -15,7 +15,7 @@ This document introduces the implementation of the Electronic Attestation of Att
       - [1.1.1 Ministry of Science, Research and Universities](#111-ministry-of-science-research-and-universities)
       - [1.1.2 Ministry of Education and Sports](#112-ministry-of-education-and-sports)
       - [1.1.3 Ministry of Employability](#113-ministry-of-employability)
-    - [Educational and Professional qualifications governnace](#educational-and-professional-qualifications-governnace)
+    - [Educational and Professional qualifications governance](#educational-and-professional-qualifications-governance)
   - [2. MyAcademicID](#2-myacademicid)
     - [Recognised accreditations:](#recognised-accreditations)
     - [2.1 Spain](#21-spain)
@@ -81,7 +81,7 @@ Able to accredit/authorise:
 - EQFlevel4–8 (for professional bodies)
 - ProfessionalID
 
-### [Educational and Professional qualifications governnace](./formal-education.md)
+### [Educational and Professional qualifications governance](./formal-education.md)
 
 ## 2. MyAcademicID
 
