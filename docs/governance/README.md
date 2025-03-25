@@ -11,10 +11,6 @@ This document introduces the implementation of the Electronic Attestation of Att
   - [Table of contents](#table-of-contents)
   - [1. Formal education](#1-formal-education)
     - [List of potential accreditations:](#list-of-potential-accreditations)
-    - [1.1 Spain: national implementation](#11-spain-national-implementation)
-      - [1.1.1 Ministry of Science, Research and Universities](#111-ministry-of-science-research-and-universities)
-      - [1.1.2 Ministry of Education and Sports](#112-ministry-of-education-and-sports)
-      - [1.1.3 Ministry of Employability](#113-ministry-of-employability)
     - [Educational and Professional qualifications governance](#educational-and-professional-qualifications-governance)
   - [2. MyAcademicID](#2-myacademicid)
     - [Recognised accreditations:](#recognised-accreditations)
@@ -50,36 +46,6 @@ Root Trusted Accreditation Organisations (RootTAOs), such as national-level bodi
 - EducationalID  
 - ProfessionalID  
 
-### 1.1 Spain: national implementation
-
-#### 1.1.1 Ministry of Science, Research and Universities
-Able to accredit/authorise:
-- HigherEducationInstitution
-- LicenceToActAtNationalLevel (for HEIs)
-- LicenceToActAtEuropeanLevel (for HEIs)
-- EQFlevel6 to EQFlevel8 (for HEIs)
-- EducationalID (for HEIs)
-
-#### 1.1.2 Ministry of Education and Sports
-Able to accredit/authorise:
-- PreSchool
-- PrimarySchool
-- LowerSecondarySchool
-- UpperSecondarySchool
-- VocationalEducationInstitution
-- LicenceToActAtNationalLevel (for primary, secondary and VET institutions)
-- EQFlevel1 (Primary)
-- EQFlevel2 (Lower Secondary)
-- EQFlevel3–4 (Upper Secondary and VET)
-- EQFlevel5 (VET)
-- EducationalID (for primary, secondary and VET institutions)
-
-#### 1.1.3 Ministry of Employability
-Able to accredit/authorise:
-- ProfessionalBody
-- LicenceToActAtNationalLevel (for professional bodies)
-- EQFlevel4–8 (for professional bodies)
-- ProfessionalID
 
 ### [Educational and Professional qualifications governance](./formal-education.md)
 
