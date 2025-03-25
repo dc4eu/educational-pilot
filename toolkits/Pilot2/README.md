@@ -71,9 +71,9 @@ When implementing these toolkits:
 4. Ensure compliance with the data models from the Sectorial EAA Rulebook
 5. Test against the compliance requirements outlined in the [Compliance](../compliance/) section
 
-## Contributing
+## Contributing/reporting
 
-To contribute new use cases, workflows, or component descriptions, please follow the templates provided in each section and submit a pull request.
+To contribute or report on new use cases, workflows, or component descriptions, please follow the guideline provided and submit a pull request.
 
 
 # License and Notice
