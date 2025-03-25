@@ -26,7 +26,7 @@ This document introduces the implementation of the Electronic Attestation of Att
       - [Recognised accreditations:](#recognised-accreditations-1)
       - [3.1.1 Spain](#311-spain)
     - [3.2 Vocational Education and Training (VET)](#32-vocational-education-and-training-vet)
-    - [Quality assurance regimes governnace](#quality-assurance-regimes-governnace)
+    - [Quality assurance regimes governance](#quality-assurance-regimes-governance)
   - [Conclusion](#conclusion)
 
 
@@ -125,7 +125,7 @@ The equivalent bodies are:
 
 These organisations will follow a similar hierarchy of accreditation and recognition at the national and regional level for VET quality assurance.
 
-### [Quality assurance regimes governnace](./quality-assurance.md)
+### [Quality assurance regimes governance](./quality-assurance.md)
 
 ## Conclusion
 
