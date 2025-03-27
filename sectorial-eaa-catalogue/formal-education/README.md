@@ -130,6 +130,13 @@ These formal education schemas support key user journeys including:
 - Continued education and lifelong learning pathways
 - Microcredential stacking into larger qualifications
 
+## Examples
+
+- [Certificate of participation](../formal-education/examples/certificate-of-participation.md)
+- [Transcript of records](../formal-education/examples/transcript-of-records.md)
+- [Joint degree](../formal-education/examples/joint-degree.md)
+- [Master degree](../formal-education/examples/master-degree.md)
+
 ## Versioning
 
 All schemas follow a consistent versioning pattern:
