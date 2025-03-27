@@ -51,7 +51,8 @@ For new users, we recommend starting with:
 4. Identify your [role(s)](./docs/eIDAS-roles.md) within the ecosystem
 5. Explore the [Toolkits](./toolkits/README.md) section for implementation guidance
 6. Understand the [User journeys](./user-journeys/) provided
-7. Check the [Compliance](./compliance/) requirements for interoperability information
+7. Characterise your [Scenario](./scenarios/README.md
+8. Check the [Compliance](./compliance/) requirements for interoperability information
 
 ## Projects Using This Framework
 
