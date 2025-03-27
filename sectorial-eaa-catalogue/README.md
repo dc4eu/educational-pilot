@@ -13,6 +13,15 @@ For the definition of the EAA catalogue, it is essential to identify, for each e
 The common thread throughout the entire EAA catalogue is the utilisation of the European Learning Model (ELM v3.2) as a shared ontology.
 Given the absence of a central authority in education, yet recognising the necessity to establish this sectoral role, we might consider making an assignment based on competencies, bearing in mind that DG-EAC is responsible for Primary, Secondary and Tertiary education, whilst DG-EMPL oversees Adult education and TVET.
 
+## EDC and ELM, closely realted but not the same
+
+ELM (European Learning Model) is an ontology or conceptual data model describing learning achievements, qualifications, and educational credentials, covering formal, non-formal, and informal education. It is a general framework describing educational data clearly and consistently.
+EDC (European Digital Credential) is an application profile that specifically implements the European Learning Model (ELM) to create digital credentials. EDC uses the concepts and structure defined by ELM, adding technical standards and constraints (e.g., SHACL constraints) to ensure data quality, authenticity, and validity specifically for digital credentialing purposes.
+In other words:
+
+- ELM provides the underlying conceptual model.
+- EDC applies this model specifically to digital credentials, including concrete implementations, validations, and practical usage aligned closely—but not entirely—with standards like W3C Verifiable Credentials.
+
 
 ## Structure
 
