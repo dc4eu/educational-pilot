@@ -4,9 +4,19 @@
 
 This Sectorial Electronic Attestation of Attributes (EAA) Rulebook contains all data models and schemas agreed at the sectorial level for Education and Professional Qualifications. It provides the technical specifications that implement the principles outlined in the [Sectorial Rulebook](../sectorial-rulebook/).
 
-## Diploma vs EAA
+## Diploma vs EAAs
 
 It is important to explain and clarify that there is a distinction between the Diploma itself (for example, in Spain this is legally required to be issued on A3 paper with specific weight and security measures) and an EAA of the diploma. The latter does not replace the former, but holds equivalent legal value
+
+## European Learning Model (ELM)
+
+ELM allows educational institutions, employers, learners, and credential-verifying bodies to communicate clearly and effectively about learning achievements and credentials.
+
+Key benefits include:
+- Interoperability across different European systems.
+- Easier recognition of qualifications.
+- Clear communication about learning outcomes and achievements.
+- Standardised descriptions for educational credentials.
 
 ## EAA catalogue governance
 For the definition of the EAA catalogue, it is essential to identify, for each entry in the catalogue, the party responsible for its creation and evolution - that is, the 'Attribute schema provider'.
