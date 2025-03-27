@@ -2,6 +2,8 @@
 
 The **Verifiable Credentials Data Model (VCDM) v1.1** is a standard developed by the World Wide Web Consortium (W3C) designed for creating, exchanging, and verifying digital credentials securely, privately, and interoperably.
 
+1st batch of eIDAS ammedment implementing acts recognised, together with mDL/CBOR, W3C-VCDM1.1 as supported dta models.
+
 
 
 ## What are Verifiable Credentials?
