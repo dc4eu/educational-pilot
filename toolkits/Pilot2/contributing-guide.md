@@ -54,7 +54,7 @@ Most of your activity will be centred on the "Issues" section.
 
 To ask a question or make an enquiry:
 
-1. Go to the "Issues" tab of the repository
+1. Go to the "Issues" tab of the [deployment project](https://github.com/dc4eu/educational-pilot-deployment) or click this [link](https://github.com/dc4eu/educational-pilot-deployment/issues)
 2. Click on the green "New issue" button
 3. In the title, write a brief description of your enquiry
    - **Good example**: "What is the deadline for completing the testing phase?"
@@ -67,7 +67,7 @@ To ask a question or make an enquiry:
 
 If you find something that isn't working as it should:
 
-1. Go to the "Issues" tab
+1. Go to the "Issues" tab of the [deployment project](https://github.com/dc4eu/educational-pilot-deployment) or click this [link](https://github.com/dc4eu/educational-pilot-deployment/issues)
 2. Click on "New issue"
 3. Use a descriptive title that summarises the problem
 4. In the content, include:
@@ -82,7 +82,7 @@ If you find something that isn't working as it should:
 
 If you have ideas to improve the project:
 
-1. Go to the "Issues" tab
+1. Go to the "Issues" tab of the [deployment project](https://github.com/dc4eu/educational-pilot-deployment) or click this [link](https://github.com/dc4eu/educational-pilot-deployment/issues)
 2. Click on "New issue"
 3. Use a title that describes your suggestion
 4. In the content, explain:
