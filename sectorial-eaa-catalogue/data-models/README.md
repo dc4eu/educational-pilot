@@ -42,7 +42,7 @@ These schemas adapt the EDC data model to W3C Verifiable Credentials standard (W
 - Educational subject identifiers
 - Credential status methods
 
-For detailed schema information, see [VC Data Model Adaptations](./vc-model-adaptations.md).
+For detailed schema information, see [Conversion guideline from EDC to W3C-VCDM compliant data model](./vc-model-adaptations.md).
 
 ### EDCI (Europass Digital Credentials Infrastructure) Alignment
 
