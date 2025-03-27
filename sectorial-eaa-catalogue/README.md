@@ -18,6 +18,8 @@ Key benefits include:
 - Clear communication about learning outcomes and achievements.
 - Standardised descriptions for educational credentials.
 
+For further information on ELM, access [European Learning Model information](./elm/elm.md)
+
 ## EAA catalogue governance
 For the definition of the EAA catalogue, it is essential to identify, for each entry in the catalogue, the party responsible for its creation and evolution - that is, the 'Attribute schema provider'.
 The common thread throughout the entire EAA catalogue is the utilisation of the European Learning Model (ELM v3.2) as a shared ontology.
