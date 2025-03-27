@@ -9,7 +9,10 @@ This section covers identifiers and credentials that are not based on foundation
 
 ### DoctorID
 
+The Doctor ID Schema defines the data structure for representing identity credentials of physicians.
+
 For detailed information, see [Doctor ID schema](./doctor-id-schema.md)
+
 
 ## Non-foundational Credential Types for educational domain
 
