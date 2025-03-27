@@ -4,7 +4,14 @@
 
 This section covers identifiers and credentials that are not based on foundational identity but are still relevant in educational contexts. These credentials provide important verification of status, membership, achievements, and skills that complement formal educational qualifications.
 
-## Non-foundational Credential Types
+
+## Non-foundational Credential Types for professional qualifications domain
+
+### DoctorID
+
+For detailed information, see [Doctor ID schema](./doctor-id-schema.md)
+
+## Non-foundational Credential Types for educational domain
 
 ### EducationalID
 
