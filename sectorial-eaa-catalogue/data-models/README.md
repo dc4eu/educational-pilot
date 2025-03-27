@@ -44,17 +44,7 @@ These schemas adapt the EDC data model to W3C Verifiable Credentials standard (W
 
 For detailed schema information, see [Conversion guideline from EDC to W3C-VCDM compliant data model](./vc-model-adaptations.md).
 
-### EDCI (Europass Digital Credentials Infrastructure) Alignment
 
-These schemas ensure alignment with the Europass Digital Credentials Infrastructure. Our models include:
-
-- Europass credential format compatibility
-- Diploma Supplement structure
-- Europass Certificate Supplement format
-- Credential portability support
-- Multi-platform presentation
-
-For detailed schema information, see [EDCI Alignment Schema](./edci-alignment-schema.md).
 
 ### Multi-language Support Structures
 
