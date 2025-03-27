@@ -1,12 +1,12 @@
-# Europass Digital Credentials (EDC) compliant with W3C Verifiable Credentials Data Model v1.1
+# EDC-W3C-VCDM European Digital Credentials (EDC) compliant with W3C Verifiable Credentials Data Model v1.1
 
 ## Introduction
 
-The Europass Digital Credentials (EDC) framework leverages the W3C Verifiable Credentials Data Model (VCDM) version 1.1, ensuring interoperability, authenticity, and trustworthiness of digital educational credentials across Europe.
+The European Digital Credentials (EDC) framework leverages the W3C Verifiable Credentials Data Model (VCDM) version 1.1, ensuring interoperability, authenticity, and trustworthiness of digital educational credentials across Europe.
 
 This document provides an overview of how the EDC instantiates and aligns with the VCDM v1.1, including illustrative JSON code examples updated to reflect compliance with the European Blockchain Services Infrastructure (EBSI) standards.
 
-Europass Digital Credentials aligned with the W3C VCDM v1.1 and EBSI standards ensure credentials are secure, interoperable, and trusted across Europe. Institutions adopting EDC enhance credential issuance and verification, promoting mobility and transparency in European education and employment landscapes.
+Europass Digital Credentials aligned with the W3C VCDM v1.1 and EBSI standards (EDC-W3C-VCDM) ensure credentials are secure, interoperable, and trusted across Europe. Institutions adopting EDC enhance credential issuance and verification, promoting mobility and transparency in European education and employment landscapes.
 
 ## Compliance with eIDAS Implementing Acts
 
