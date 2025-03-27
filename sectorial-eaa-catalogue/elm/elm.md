@@ -65,6 +65,10 @@ ELM uses an ontology-based model clearly defining classes, properties, and relat
 - **ELM** provides the conceptual foundation.
 - **EDC** applies ELM specifically for digital credential implementations, adding technical constraints and validations (e.g., SHACL, JSON-LD contexts).
 
+### Relation to eIDAS supported data models, W3C and EBSI (EDC-W3C-VCDM)  
+- **ELM** provides the conceptual foundation.
+- **EDC-W3C-VCDM** applies ELM specifically for digital credential implementations, adding technical constraints and validations fully aligned and compliant with W3C-VCDM, provided by EBSI.
+
 ### Standards and interoperability  
 ELM aligns closely with existing educational data standards and European frameworks. It is inspired by—but not identical to—W3C verifiable credentials, aiming for broad interoperability.
 
