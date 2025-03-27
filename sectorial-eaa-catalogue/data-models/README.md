@@ -4,7 +4,7 @@
 
 This section contains the common data models that support all credential types in the Educational and Professional Qualifications framework. These foundational models provide consistent structure, semantic definitions, and interoperability standards for the entire credential ecosystem.
 
-## Table Data Models
+## Table with available data models
 
 | Scope                        | Data model name          | Brief explanation                                                                 | Schema URL                                                                                                                                             | Registry URL                                                                                         |
 |-----------------------------|--------------------------|------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
