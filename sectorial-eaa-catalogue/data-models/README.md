@@ -46,8 +46,15 @@ These schemas adapt the EDC data model to W3C Verifiable Credentials standard (W
 - Educational subject identifiers
 - Credential status methods
 
-For detailed schema information, see [Conversion guideline from EDC to W3C-VCDM compliant data model](./vc-model-adaptations.md).
+For detailed guideline, see [Conversion guideline from EDC to W3C-VCDM compliant data model](./vc-model-adaptations.md).
 
+### EDC as W3C-VCDM Compliant Credentials
+
+To comply with the first batch of eIDAS implementing acts regarding supported data models for Verifiable Credentials, EDC credentials must be converted to W3C-VCDM v1.1. This conversion is guided by the European Blockchain Services Infrastructure (EBSI) initiative, with contributions from DG-EMPL, and provides a benchmark for interoperability across the EU.
+
+Europass Digital Credentials instantiate the W3C VCDM v1.1 by defining standardized JSON schemas, ensuring credentials are structured and machine-readable.
+
+For detailed schema information, see [Conversion guideline from EDC to W3C-VCDM compliant data model](./edc-w3cvcdm-compliant.md).
 
 
 ### Multi-language Support Structures
