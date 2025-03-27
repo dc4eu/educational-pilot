@@ -32,9 +32,9 @@ These schemas implement the European Learning Model for credential data. Our mod
 
 For detailed schema information, see [EDC schema](./elm-implementation-schema.md).
 
-### W3C Verifiable Credentials Data Model Adaptations
+### EDC to W3C Verifiable Credentials Data Model adaptations
 
-These schemas adapt the EDC to W3C Verifiable Credentials standard for educational use. Our models include:
+These schemas adapt the EDC data model to W3C Verifiable Credentials standard (W3C-VCDM v1.1) in aliognment to 1st batch of implementing acts for educational use. Our models include:
 
 - Education-specific credential types
 - Contextual definitions for educational terms
