@@ -54,7 +54,8 @@ To comply with the first batch of eIDAS implementing acts regarding supported da
 
 Europass Digital Credentials instantiate the W3C VCDM v1.1 by defining standardized JSON schemas, ensuring credentials are structured and machine-readable.
 
-For detailed schema information, see [Conversion guideline from EDC to W3C-VCDM compliant data model](./edc-w3cvcdm-compliant.md).
+For detailed schema information, see [EDC W3C-VCDM compliant data model](./edc-w3cvcdm-compliant.md).
+For detailed conversion information, see [Conversion guideline from EDC to W3C-VCDM compliant data model](./vc-model-adaptations.md).
 
 
 ### Multi-language Support Structures
