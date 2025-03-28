@@ -21,7 +21,7 @@ This scenario focuses on EAAs issued by entities that are not qualified under eI
 ## Educational applications
 
 This scenario is particularly relevant for:
-- Private educational institutions issuing non-regulated certifications
+- Public and private educational institutions issuing non-regulated certifications
 - Professional development providers offering industry-recognised credentials
 - MOOC platforms and online learning providers
 - Educational technology companies offering skill assessments
