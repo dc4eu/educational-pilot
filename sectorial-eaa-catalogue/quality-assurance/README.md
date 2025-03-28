@@ -4,6 +4,14 @@
 
 This section focuses on the data models and schemas related to quality assurance in education. These models enable verification of institutional quality, accreditation status, and alignment with European and national quality frameworks. They ensure that credentials can be trusted based on the standing of their issuing institutions.
 
+Data models and schemas related to quality assurance in education:
+
+- Accreditation information
+- Institution verification
+- European Quality Assurance Register (EQAR) alignment
+- National quality framework integration
+- Quality labels and certification
+
 ## Quality Assurance Components
 
 ### Accreditation Information
