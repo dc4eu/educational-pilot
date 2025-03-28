@@ -10,17 +10,25 @@ The integration of EBSI with classical PKI (Public Key Infrastructure) models cr
 
 This scenario describes electronic attestations of attributes (EAAs) issued in a closed system, meaning the issuers operate under contractual or administrative law frameworks, outside the European Digital Identity Wallet (EUDIW) trust model.
 
+Detailed information for [Scneario 1](./scenario1/)
+
 ## Scenario 2: EAAs issued by non-qualified trust service providers (TSPs)
 
 This scenario focuses on EAAs issued by entities that are not qualified under eIDAS but still operate as trust service providers (TSPs). These issuers can register as Wallet Relying Parties in the EUDIW ecosystem and issue attestations under an unregulated but recognised trust model.
+
+Detailed information for [Scneario 2](./scenario2/)
 
 ## Scenario 3: EAAs issued by public sector bodies responsible for an authentic source (Pub_EAAs)
 
 In this scenario, public sector bodies or their authorised entities issue electronic attestations of attributes that must meet strict trust and security requirements equivalent to qualified trust services.
 
+Detailed information for [Scneario 3](./scenario3/)
+
 ## Scenario 4: EAAs issued by qualified trust service providers (QEAAs)
 
 This scenario involves qualified trust service providers (QTSPs) that meet the highest level of trust under eIDAS. These entities issue qualified EAAs (QEAAs), ensuring full compliance with EUDIW protocols, interoperability, and legal recognition across EU Member States.
+
+Detailed information for [Scneario 4](./scenario4/)
 
 ## Integration with Sectorial EAA Catalogue
 
