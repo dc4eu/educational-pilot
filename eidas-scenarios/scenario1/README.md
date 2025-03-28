@@ -12,4 +12,4 @@ This scenario describes electronic attestations of attributes (EAAs) issued in a
 
 ## Educational and professional qualifications applications
 
-In the educational context, this scenario might apply to internal university systems or proprietary corporate training platforms that issue credentials only within their closed ecosystem. These credentials lack portability and cross-border recognition but may still serve specific institutional purposes.
+In the educational context, this scenario might apply to internal university systems or proprietary corporate training platforms that issue credentials only within their closed ecosystem. These credentials lack portability and cross-border recognition from an eIDAS perspective but may still serve specific institutional purposes.
