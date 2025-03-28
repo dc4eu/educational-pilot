@@ -6,7 +6,7 @@ The European Digital Ecosystem under the amended eIDAS Regulation (EU) 2024/1183
 
 The integration of EBSI with classical PKI (Public Key Infrastructure) models creates a hybrid trust framework that addresses limitations in traditional approaches while providing enhanced security, privacy, and cross-border interoperability for educational and professional qualifications.
 
-## Scenario 1: EAAs issued within closed systems
+## Scenario 1: **The non-eIDAS scenario** - EAAs issued within closed systems
 
 This scenario describes electronic attestations of attributes (EAAs) issued in a closed system, meaning the issuers operate under contractual or administrative law frameworks, outside the European Digital Identity Wallet (EUDIW) trust model.
 
