@@ -12,7 +12,7 @@ This repository is organised into several key sections:
 
 - **[Sectorial EAA Catalogue](./sectorial-eaa-catalogue/)**: Contains all data models and schemas agreed at sectorial level for Education and Professional Qualifications, including formal education, quality assurance regimes, and non-foundational ID.
 
-- **[eIDAS Scenarios](./ebsi-scenarios.md)**: Outlines the four trust models for electronic attestation of attributes (EAAs) within the European Digital Ecosystem, explaining how EBSI enhances traditional PKI approaches.
+- **[eIDAS scenarios](./README.md)**: Outlines the four trust models for electronic attestation of attributes (EAAs) within the European Digital Ecosystem, explaining how EBSI enhances traditional PKI approaches.
 
 - **[eIDAS Roles](./docs/eIDAS-roles.md)**: Outlines the key roles within the European digital identity framework under eIDAS, detailing their definitions, functions, types of attestations issued, regulatory references, and compliance requirements. 
 
@@ -22,7 +22,7 @@ This repository is organised into several key sections:
 
 - **[User Journeys](./user-journeys/)**: Provided user journeys to demonstrate cross-border interaction, ready-to go infrastructure, and foundation to extend/provide more user journeys and/or EAAs
 
-- **[Scenarios](./scenarios/README.md)**: A scenario within DC4EU, details the elements each piloting agent must provide to characterise, execute, and monitor user journeys in alignment with governance, technical, and reporting requirements.
+- **[Piloting Scenarios](./scenarios/README.md)**: A scenario within DC4EU, details the elements each piloting agent must provide to characterise, execute, and monitor user journeys in alignment with governance, technical, and reporting requirements.
 
 - **[Compliance](./compliance/)**: Information about EBSI and EUDI Wallet compliance tests to ensure interoperability with other issuer, verifier, and wallet solutions.
 
@@ -46,12 +46,12 @@ This framework brings together European educational and professinal qualificatio
 For new users, we recommend starting with:
 
 1. Review the [Sectorial Rulebook](./sectorial-rulebook/) to understand the framework principles
-2. Learn about the [eIDAS Scenarios](./ebsi-scenarios.md) to understand the trust models
+2. Learn about the [eIDAS scenarios](./eidas-scenarios/) to understand the trust models
 3. Explore the [Authorisation Model](./authorisation-model.md) to understand how trust chains work
 4. Identify your [role(s)](./docs/eIDAS-roles.md) within the ecosystem
 5. Explore the [Toolkits](./toolkits/README.md) section for implementation guidance
 6. Understand the [User journeys](./user-journeys/) provided
-7. Characterise your [Scenario](./scenarios/README.md)
+7. Characterise your [Piloting scenario](./scenarios/README.md)
 8. Check the [Compliance](./compliance/) requirements for interoperability information
 
 ## Projects Using This Framework
