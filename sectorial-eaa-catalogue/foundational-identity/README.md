@@ -4,6 +4,14 @@
 
 This section covers the foundational identity models that serve as the basis for secure identification across the European educational and professional qualifications ecosystem. These models implement the principles described in the sectorial rulebook while conforming to European regulations for digital identity.
 
+Foundational identity models that serve as the basis for secure identification across the educational ecosystem:
+
+- Person Identification Data (PID) for natural persons
+- Legal Entity Identification for educational institutions
+- Identity matching mechanisms
+- Cross-border identity verification
+- Privacy-preserving identity protocols
+
 ## Components
 
 ### Person Identification Data (PID) for Natural Persons
