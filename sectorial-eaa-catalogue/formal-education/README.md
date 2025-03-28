@@ -4,6 +4,15 @@
 
 This section contains data models and schemas for representing formal educational qualifications within the European Educational and Professional Qualifications framework. These models provide standardised formats for credentials issued by recognised educational institutions, enabling interoperability and recognition across the European education area.
 
+Data models and schemas for representing formal educational qualifications:
+
+- Diploma credentials
+- Degree certificates
+- Microcredentials for HE & VET
+- Transcripts of records
+- Course certificates
+- Learning agreements
+
 ## Credential Types
 
 ### Diploma Credentials
