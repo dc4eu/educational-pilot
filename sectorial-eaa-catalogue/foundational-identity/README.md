@@ -24,6 +24,7 @@ These models provide standardised digital identification for educational institu
 
 - Legal entity identifiers
 - Digital certificates
+- Decentralised identifiers
 - Qualified seals
 - Organisational structures
 - Accreditation verification
