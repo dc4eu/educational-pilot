@@ -2,7 +2,18 @@
 
 ## Overview
 
-This section covers identifiers and credentials that are not based on foundational identity but are still relevant in educational contexts. These credentials provide important verification of status, membership, achievements, and skills that complement formal educational qualifications.
+This section covers identifiers and credentials that are not based on foundational identity but are still relevant in educational or professinal qualifications contexts. These credentials provide important verification of status, membership, achievements, and skills that complement formal educational qualifications.
+
+Type of credentials:
+
+- EductaionalID for student and academic identification
+- AllianceID for European University Alliances participants
+- MyAcademicID for student and academic mobility
+- European Student Card
+- Alumni credentials
+- Professional membership attestations
+- Continuing education certificates
+- Skill badges and micro-credentials
 
 
 ## Non-foundational Credential Types for professional qualifications domain
