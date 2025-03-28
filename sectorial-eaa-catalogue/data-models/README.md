@@ -2,7 +2,15 @@
 
 ## Overview
 
-This section contains the common data models that support all credential types in the Educational and Professional Qualifications framework. These foundational models provide consistent structure, semantic definitions, and interoperability standards for the entire credential ecosystem.
+This section contains the common data models'schemes that support all credential types in the Educational and Professional Qualifications framework. These foundational models provide consistent structure, semantic definitions, and interoperability standards for the entire credential ecosystem.
+
+Schmemes that support all data model categories:
+
+- European Learning Model (ELM) implementation (./data-models/elm-implementation-schema.md)
+- W3C Verifiable Credentials data model adaptations
+- EDCI (Europass Digital Credentials Infrastructure) alignment
+- Multi-language support structures
+- Semantic definitions and ontologies
 
 ## Table with available data models
 
