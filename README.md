@@ -16,7 +16,7 @@ This repository is organised into several key sections:
 
 - **[eIDAS Roles](./docs/eIDAS-roles.md)**: Outlines the key roles within the European digital identity framework under eIDAS, detailing their definitions, functions, types of attestations issued, regulatory references, and compliance requirements. 
 
-- **[Authorisation Model](./authorisation-model.md)**: Defines a structured framework for managing authorisations, accreditation, and recognition within educational, professional, and quality assurance domains.
+- **[Authorisation Model](./eaa-based-authorisation-model/)**: Defines a structured framework for managing authorisations, accreditation, and recognition within educational, professional, and quality assurance domains.
 
 - **[Toolkits](./toolkits/README.md)**: Implementation resources including technical architecture, component descriptions, workflows (RFCs), and specific use cases to help develop user journeys.
 
@@ -47,7 +47,7 @@ For new users, we recommend starting with:
 
 1. Review the [Sectorial Rulebook](./sectorial-rulebook/) to understand the framework principles
 2. Learn about the [eIDAS scenarios](./eidas-scenarios/) to understand the trust models
-3. Explore the [Authorisation Model](./authorisation-model.md) to understand how trust chains work
+3. Explore the [Authorisation Model](./eaa-based-authorisation-model/) to understand how trust chains work
 4. Identify your [role(s)](./docs/eIDAS-roles.md) within the ecosystem
 5. Explore the [Toolkits](./toolkits/README.md) section for implementation guidance
 6. Understand the [User journeys](./user-journeys/) provided
