@@ -64,6 +64,6 @@ These organisations will follow a similar hierarchy of accreditation and recogni
 ### [Quality assurance regimes governance](./quality-assurance.md)
 
 
-## Authrositaiin model in a nutshell
+## Authrositaion model in a nutshell
 
 For a comprehensive overview of the authorizations identified for all governments, please read the document [Authorizations in a Nutshell](./authorisations-in-a-nutshell.md)
