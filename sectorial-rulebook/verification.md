@@ -77,12 +77,12 @@ The verification process follows these steps:
    - Quality framework alignment
 
 9. **Credential Status Verification**
-   - Check for revocation
-   - Verify suspension status
+   - Check for revocation and/or suspension
+   - Verify revocation and/or suspension status
    - Validate current status
    - Confirm active status
 
-10. **Record Keeping**
+10. **Record Keeping (evidences)**
     - Maintain audit records
     - Document verification results
     - Store minimal verification evidence
