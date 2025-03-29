@@ -181,7 +181,7 @@ The implementation of the Electronic Attestation of Attributes (EAA)-based autho
 
 The model reflects the structured feedback from the 23 consortium members and is designed to be extendable to all Member States and associated countries of the European Union. It supports full alignment with the eIDAS 2.0 framework, the European Education Area (EEA), and the European Qualifications Framework (EQF).
 
-Get access to [DC4EU defined/applied governance](./docs/governance/README.md)
+Get access to [DC4EU defined/applied governance](../docs/governance/README.md)
 
 # Conclusion
 
