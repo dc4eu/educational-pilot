@@ -100,4 +100,4 @@
 - "QualityAssuranceAtProgrammeLevel" to HEIs
 
 ### b. Vocational Education and Training (VET)
-- Equivalent bodies: EQAVET instead of ENQA and CEDEFOP instead of EQAR
+- Equivalent bodies: EQAVET instead of ENQA 
