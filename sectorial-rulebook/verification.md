@@ -30,6 +30,10 @@ The verification process follows these steps:
 
 1. **Secure Wallet Connection**
    - Establish secure channel with the wallet
+   - Verify requester/issuer identity 
+     - Use X.509v3 - clasical PKI - to verify if it is an issuer/RP/RPI authorised to interact with the EUDIW
+     - Use DID - decentrilzed PKI - to verify educaitonal governance/entitlement
+     - Use EAA catalogue to check embded disclosure entitlement - if applies
    - Verify proof of possession
    - Authenticate the verification request
    - Create encrypted communication
