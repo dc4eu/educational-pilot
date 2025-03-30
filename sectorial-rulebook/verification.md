@@ -74,19 +74,25 @@ The verification process follows these steps:
    - Check required fields
    - Ensure proper formatting
 
-8. **Quality Assurance Verification**
+8. **EAA Catalogue Compliance Checking**
+   - Verify ontology mandatory elements
+   - Validate against sectorial catalogue definitions
+   - Check required elements
+   - Ensure proper formatting
+
+9. **Quality Assurance Verification**
    - Issuer entitlement checking
    - Expiration verification
    - Status checking
    - Quality framework alignment
 
-9. **Credential Status Verification**
+10. **Credential Status Verification**
    - Check for revocation and/or suspension
    - Verify revocation and/or suspension status
    - Validate current status
    - Confirm active status
 
-10. **Record Keeping (evidences)**
+11. **Record Keeping (evidences)**
     - Maintain audit records
     - Document verification results
     - Store minimal verification evidence
