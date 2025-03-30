@@ -49,6 +49,22 @@ A strategic initiative aiming to ensure automatic recognition of learning outcom
 ## European Learning Model (ELM)
 A standardised data model used to describe and structure learning achievements and credentials in a machine-readable way.
 
+## 🎓 EDC – European Digital Credentials
+
+A standard digital credential format developed by the European Commission to support the issuance and recognition of learning achievements and qualifications.
+
+- Based on the **European Learning Model (ELM)**
+- Uses **W3C Verifiable Credentials** and **JSON-LD**
+- Typically issued by **educational institutions** and recognised **across Europe**
+- Integrated with **Europass**, **X-Road**, **EMREX**, and increasingly aligned with **EUDI Wallet** standards
+
+EDCs can represent:
+- Degrees, diplomas, and certificates
+- Learning outcomes and qualifications
+- Accreditation or validation statements
+
+In DC4EU, EDCs are used as the payload format for learner credentials, while EAAs provide the authorisation framework for their issuers.
+
 ## Trust List
 An official registry of trusted issuers or authorisation providers (e.g. RootTAOs, QTSPs, TAOs).
 
