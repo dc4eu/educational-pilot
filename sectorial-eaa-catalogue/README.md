@@ -23,7 +23,7 @@ For further information on ELM, access [European Learning Model information](./e
 ## EAA catalogue governance
 For the definition of the EAA catalogue, it is essential to identify, for each entry in the catalogue, the party responsible for its creation and evolution - that is, the 'Attribute schema provider'.
 The common thread throughout the entire EAA catalogue is the utilisation of the European Learning Model (ELM v3.2) as a shared ontology.
-Given the absence of a central authority in education, yet recognising the necessity to establish this sectoral role, we might consider making an assignment based on competencies, bearing in mind that DG-EAC is responsible for Primary, Secondary and Tertiary education, whilst DG-EMPL oversees Adult education and TVET.
+Given the absence of a central authority in education, yet recognising the necessity to establish this sectoral role, we might consider making an assignment based on competencies, bearing in mind that **DG-EAC** is responsible for Primary, Secondary and Tertiary education, whilst **DG-EMPL** oversees Adult education and TVET. **ADD ROLE of MSs and key stakeholdrs e.g. EMREX & ELMO, etc**
 
 ## EDC and ELM, closely realted but not the same
 
