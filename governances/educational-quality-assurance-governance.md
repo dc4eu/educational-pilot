@@ -70,6 +70,26 @@ graph TD
 
 ## Overview for HE
 
+```mermaid
+graph TD
+  EQAR["EQAR - Root Quality Assurance Organization"]
+  NQA["National Quality Assurance Agencies"]
+  RQA["Regional Quality Assurance Agencies"]
+  EDUINST["Educational Institutions"]
+  EDUPRG["Educational Programmes"]
+  STUD["Students"]
+
+  EQAR -->|Coordinates| NQA
+  NQA -->|Coordinates| RQA
+  NQA -->|Recognise| RQA
+  EQAR -->|Can accredit on behalf of national and/or regional agencies| EDUINST
+  EQAR -->|Can accredit on behalf of national and/or regional agencies| EDUPRG
+  NQA -->|Accredits| EDUINST
+  RQA -->|Accredits| EDUINST
+  RQA -->|Accredits| EDUPRG
+  EDUINST -->|Provide| EDUPRG
+  EDUPRG -->|Issues Credentials to| STUD
+```
 
 ## What are the benefits of this governance model?
 
