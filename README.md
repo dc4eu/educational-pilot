@@ -8,6 +8,8 @@ This repository provides comprehensive documentation and implementation guidance
 
 This repository is organised into several key sections:
 
+- **[Governance in Education and Professional Qualifications](./governances)**: Understanding existing governnace(s)
+
 - **[Sectorial Rulebook](./sectorial-rulebook/)**: The core framework that establishes standardised approaches for managing digital educational and professional credentials within the European Union.
 
 - **[Sectorial EAA Catalogue](./sectorial-eaa-catalogue/)**: Contains all data models and schemas agreed at sectorial level for Education and Professional Qualifications, including formal education, quality assurance regimes, and non-foundational ID.
@@ -47,15 +49,16 @@ This framework brings together European educational and professinal qualificatio
 
 For new users, we recommend starting with:
 
-1. Review the [Sectorial Rulebook](./sectorial-rulebook/) to understand the framework principles
-2. Learn about the [eIDAS scenarios](./eidas-scenarios/) to understand the trust models
-3. Explore the [Authorisation Model](./eaa-based-authorisation-model/) to understand how trust chains work
-4. Identify your [Role(s)](./docs/eIDAS-roles.md) within the ecosystem
-5. Explore the [Toolkits](./toolkits/README.md) section for implementation guidance
-6. Explore the [Elements](./elements) section to identify provided solutions to faciliate adoption with existing services.
-7. Understand the [User journeys](./user-journeys/) provided
-8. Characterise your [Piloting scenario](./scenarios/README.md)
-9. Check the [Compliance](./compliance/) requirements for interoperability information
+1. Review the [Governance in Education and Professional Qualifications](./governances): to understand types of governnaces and legal regimes at cross-border level
+2. Review the [Sectorial Rulebook](./sectorial-rulebook/) to understand the framework principles
+3. Learn about the [eIDAS scenarios](./eidas-scenarios/) to understand the trust models
+4. Explore the [Authorisation Model](./eaa-based-authorisation-model/) to understand how trust chains work
+5. Identify your [Role(s)](./docs/eIDAS-roles.md) within the ecosystem
+6. Explore the [Toolkits](./toolkits/README.md) section for implementation guidance
+7. Explore the [Elements](./elements) section to identify provided solutions to faciliate adoption with existing services.
+8. Understand the [User journeys](./user-journeys/) provided
+9. Characterise your [Piloting scenario](./scenarios/README.md)
+10. Check the [Compliance](./compliance/) requirements for interoperability information
 
 ## Projects Using This Framework
 
