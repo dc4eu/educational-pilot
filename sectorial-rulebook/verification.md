@@ -98,6 +98,56 @@ The verification process follows these steps:
     - Store minimal verification evidence
     - Support future audit needs
 
+## Visualisation
+
+```mermaid
+flowchart TD
+  Start([Start])
+  RC["ReceiveCredential"]
+  VI["ValidateIntegrity"]
+  VS["ValidateSignatures"]
+  VC["ValidateCriticalClaims"]
+  VT["ValidateTime"]
+  CD["CheckDelegation"]
+  VB["ValidateHolderBinding"]
+  CS["CheckStatus"]
+  VX["ValidateContext"]
+  AC["Accept Credential"]
+  REJ["Reject Credential"]
+  ABL["Apply business logic"]
+  End([End])
+
+  Start --> RC
+  RC --> VI
+  VI -->|Valid| VS
+  VI -->|Invalid| REJ
+
+  VS -->|Valid| VC
+  VS -->|Invalid| REJ
+
+  VC -->|Valid| VT
+  VC -->|Invalid| REJ
+
+  VT -->|Within Validity| CD
+  VT -->|Outside Validity| REJ
+
+  CD -->|Valid| VB
+  CD -->|Invalid| REJ
+
+  VB -->|Valid| CS
+  VB -->|Invalid| REJ
+
+  CS -->|Active| VX
+  CS -->|Revoked/Suspended| REJ
+
+  VX -->|Valid| AC
+  VX -->|Invalid| REJ
+
+  AC --> ABL --> End
+  REJ --> End
+```
+
+
 ## Implementation Considerations
 
 When implementing verification processes:
