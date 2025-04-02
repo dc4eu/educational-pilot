@@ -1,4 +1,4 @@
-# Sectorial EAA Rulebook for Education and Professional Qualifications
+# Sectorial EAA Catalogue for Education and Professional Qualifications
 
 ## Overview
 
