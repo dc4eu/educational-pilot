@@ -81,13 +81,14 @@ The verification process follows these steps:
    - Ensure proper formatting
 
 9. **Quality Assurance Verification**
-  (If shread credential includes/combines quality assurance related ifnormation)
+  (If shared credential includes/combines quality assurance related information)
    - Issuer entitlement checking
    - Expiration verification
    - Status checking
    - Quality framework alignment
 
 10. **Credential Status Verification**
+   (If shared credential includes status related information)
    - Check for revocation and/or suspension
    - Verify revocation and/or suspension status
    - Validate current status
