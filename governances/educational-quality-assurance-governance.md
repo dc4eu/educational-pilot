@@ -47,7 +47,7 @@ Each actor in this chain is **formally authorised**, and that authorisation can 
 
 ## Overview for VET
 
-´´´mermaid
+```mermaid
 graph TD
   EQAVET["EQAVET - Root Quality Assurance Organization"]
   NQA["National Quality Assurance Agencies"]
@@ -66,7 +66,7 @@ graph TD
   RQA -->|Accredits| VETPrg
   VETP -->|Provide| VETPrg
   VETPrg -->|Issues Credentials to| STU
-´´´
+```
 
 ## Overview for HE
 
