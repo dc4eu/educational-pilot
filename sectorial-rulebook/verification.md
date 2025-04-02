@@ -109,6 +109,7 @@ flowchart TD
   VI["ValidateIntegrity"]
   VS["ValidateSignatures"]
   VC["ValidateCriticalClaims"]
+  VE["ValidateEDC-W3CVDM&ELM"]
   VT["ValidateTime"]
   CD["CheckDelegation"]
   VB["ValidateHolderBinding"]
@@ -127,8 +128,11 @@ flowchart TD
   VS -->|Valid| VC
   VS -->|Invalid| REJ
 
-  VC -->|Valid| VT
+  VC -->|Valid| VE
   VC -->|Invalid| REJ
+
+  VE -->|Valid| VT
+  VE -->|Invalid| REJ
 
   VT -->|Within Validity| CD
   VT -->|Outside Validity| REJ
