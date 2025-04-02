@@ -4,6 +4,8 @@
 
 The education and professional qualifications sectorial rulebook establishes a standardised approach for managing digital educational and professional credentials within the European Union. This framework balances member state sovereignty with European integration needs, creating a unified system that supports educational mobility while respecting national and institutional autonomy.
 
+
+
 ## Components
 
 This sectorial rulebook covers the following key areas:
