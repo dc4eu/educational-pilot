@@ -45,7 +45,31 @@ Each country defines its own **national QA system**, but most follow a **multi-t
 
 Each actor in this chain is **formally authorised**, and that authorisation can be captured in a digital, verifiable way through an **Electronic Attestation of Attributes (EAA)**.
 
----
+## Overview for VET
+
+´´´mermaid
+graph TD
+  EQAVET["EQAVET - Root Quality Assurance Organization"]
+  NQA["National Quality Assurance Agencies"]
+  RQA["Regional Quality Assurance Agencies"]
+  VETP["VET Providers"]
+  VETPrg["VET Programs"]
+  STU["Students"]
+
+  EQAVET -->|Coordinates with| NQA
+  EQAVET -->|Accredits| NQA
+  NQA -->|Coordinates| RQA
+  NQA -->|Recognises| RQA
+  NQA -->|Accredits| VETP
+  NQA -->|Accredits| VETPrg
+  RQA -->|Accredits| VETP
+  RQA -->|Accredits| VETPrg
+  VETP -->|Provide| VETPrg
+  VETPrg -->|Issues Credentials to| STU
+´´´
+
+## Overview for HE
+
 
 ## What are the benefits of this governance model?
 
