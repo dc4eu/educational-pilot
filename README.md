@@ -20,6 +20,8 @@ This repository is organised into several key sections:
 
 - **[Toolkits](./toolkits/README.md)**: Implementation resources including technical architecture, component descriptions, workflows (RFCs), and specific use cases to help develop user journeys.
 
+- **[Elements](./elements)**: Elements produced/provided by DC4EU to facilitate adoption. Includes data model converters, gateways, reports.
+
 - **[User Journeys](./user-journeys/)**: Provided user journeys to demonstrate cross-border interaction, ready-to go infrastructure, and foundation to extend/provide more user journeys and/or EAAs
 
 - **[Piloting Scenarios](./scenarios/README.md)**: A scenario within DC4EU, details the elements each piloting agent must provide to characterise, execute, and monitor user journeys in alignment with governance, technical, and reporting requirements.
@@ -48,11 +50,12 @@ For new users, we recommend starting with:
 1. Review the [Sectorial Rulebook](./sectorial-rulebook/) to understand the framework principles
 2. Learn about the [eIDAS scenarios](./eidas-scenarios/) to understand the trust models
 3. Explore the [Authorisation Model](./eaa-based-authorisation-model/) to understand how trust chains work
-4. Identify your [role(s)](./docs/eIDAS-roles.md) within the ecosystem
+4. Identify your [Role(s)](./docs/eIDAS-roles.md) within the ecosystem
 5. Explore the [Toolkits](./toolkits/README.md) section for implementation guidance
-6. Understand the [User journeys](./user-journeys/) provided
-7. Characterise your [Piloting scenario](./scenarios/README.md)
-8. Check the [Compliance](./compliance/) requirements for interoperability information
+6. Explore the [Elements](./elements) section to identify provided solutions to faciliate adoption with existing services.
+7. Understand the [User journeys](./user-journeys/) provided
+8. Characterise your [Piloting scenario](./scenarios/README.md)
+9. Check the [Compliance](./compliance/) requirements for interoperability information
 
 ## Projects Using This Framework
 
