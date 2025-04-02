@@ -81,6 +81,7 @@ The verification process follows these steps:
    - Ensure proper formatting
 
 9. **Quality Assurance Verification**
+  (If shread credential includes/combines quality assurance related ifnormation)
    - Issuer entitlement checking
    - Expiration verification
    - Status checking
