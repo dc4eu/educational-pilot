@@ -25,15 +25,16 @@ The verification process ensures credential validity while protecting privacy th
 - Maintains temporal relevance
 
 ## Verification Process
+To check identity
+     - Use X.509v3 - clasical PKI - to verify if it is an issuer/RP/RPI authorised to interact with the EUDIW
+     - Use DID - decentralized PKI - to extend X.509v3 limitations and verify educational or professional qualifications governance/entitlement
+     - If needed, use EAA catalogue to check embeded disclosure entitlement - if applies
 
-The verification process follows these steps:
+The verification process shall follow these steps:
 
 1. **Secure Wallet Connection**
    - Establish secure channel with the wallet
    - Verify requester/issuer identity 
-     - Use X.509v3 - clasical PKI - to verify if it is an issuer/RP/RPI authorised to interact with the EUDIW
-     - Use DID - decentrilzed PKI - to verify educaieducational or professional qualifications governance/entitlement
-     - Use EAA catalogue to check embded disclosure entitlement - if applies
    - Verify proof of possession
    - Authenticate the verification request
    - Create encrypted communication
