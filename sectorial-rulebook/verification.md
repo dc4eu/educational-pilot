@@ -92,7 +92,7 @@ The verification process shall follow these steps:
        - 1 assessment
        - But:
          - More Learning outcomes can be included
-         - More Competences and/or Skills can be lonked to a Learning outocme
+         - More Competences and/or Skills can be lonked to a Learning outcome
    - Check required elements
    - Ensure proper formatting against related schemes
 
