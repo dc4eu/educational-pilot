@@ -11,6 +11,8 @@ Given the absence of a central authority in education, yet recognising the neces
 
 ## EAAs are not Diplómas
 
+EAA means an attestation in electronic form that allows attributes to be authenticated.
+
 It is important to explain and clarify that there is a distinction between the Diploma itself and an EAA of the diploma (for example, in Spain this is legally required to be issued on A3 paper with specific weight and security measures, or, using digital means, the Diploma is stored, curated and preserved in a database record). 
 The EAA does not replace the former, but holds equivalent legal value.
 
