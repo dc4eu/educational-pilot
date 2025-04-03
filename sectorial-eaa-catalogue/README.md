@@ -55,7 +55,7 @@ In other words:
 
 | Scope | Data model name | Brief explanation | Detailed explanation | Schema URL | Registry URL |
 |-------|----------------|-------------------|----------------------|------------|--------------|
-| Education | Higher Education Micro Credentials | Educational achievement microcredential for | | [Schema](https://code.europa.eu/ebsi/json-schema/-/tree/main/schemas/vcdm1.1/europass/edc) | [Registry](https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/zAEUqPUrQVE7yiesF8xUVHYh4AnqjfHFxCv6GhZ3uvjkW) |
+| Education | Higher Education Micro Credentials | Educational achievement microcredential for | [HEEUMC](./formal-education/microcredential-he.md) | [Schema](https://code.europa.eu/ebsi/json-schema/-/tree/main/schemas/vcdm1.1/europass/edc) | [Registry](https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/zAEUqPUrQVE7yiesF8xUVHYh4AnqjfHFxCv6GhZ3uvjkW) |
 | Professional qualifications | ProfessionalMedicalCertification | Professional achievement credential for |  | [Schema](https://code.europa.eu/ebsi/json-schema/-/tree/main/schemas/vcdm1.1/medical-certifications/professional-medical-certification) | [Registry](https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/zAEUqPUrQVE7yiesF8xUVHYh4AnqjfHFxCv6GhZ3uvjkW) |
 | Professional qualifications | CertificateProfessionalCompetence | Professional achievement credential for|  | [Schema](https://code.europa.eu/ebsi/json-schema/-/tree/main/schemas/vcdm1.1/medical-certifications/certificate-professional-competence) | [Registry](https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/zFkbzRiX4Q7vcaMtNpgq7RzkvkhvRTt9KqMHqGWXrGn85) |
 
