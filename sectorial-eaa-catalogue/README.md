@@ -34,6 +34,10 @@ In other words:
 - ELM provides the underlying conceptual model.
 - EDC applies this model specifically to digital credentials, including concrete implementations, validations, and practical usage aligned closely—but not entirely—with standards like W3C Verifiable Credentials.
 
+## EDC-W3C
+
+- EDC fully compliant with W3C-VCDM in aligmnent to implementing acts
+
 ## Table with available data models
 
 | Scope                        | Data model name          | Brief explanation                                                                 | Schema URL                                                                                                                                             | Registry URL                                                                                         |
