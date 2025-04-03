@@ -82,6 +82,17 @@ The verification process shall follow these steps:
 
 8. **EAA Catalogue Compliance Checking - EDC-W3C-VC + ELM checking**
    - Verify ontology mandatory elements
+     - E.g. HEEUMC mandatory objects:
+       - 1 Achievement
+         - Linked to the achievement:
+           - Mandatory 1 Learing outcome 
+             - Linked to the Learing outome:
+               - 1 Competence
+       - 1 assessment
+       - But:
+         - More Learning outcomes can be included
+         - More Competences and/or Skills can be lonked to a Learning outocme
+      
    - Validate against sectorial catalogue definitions
    - Check required elements
    - Ensure proper formatting
@@ -93,14 +104,14 @@ The verification process shall follow these steps:
    - Status checking
    - Quality framework alignment
 
-10. **Credential Status Verification**
+1.  **Credential Status Verification**
    (If shared credential includes status related information)
    - Check for revocation and/or suspension
    - Verify revocation and/or suspension status
    - Validate current status
    - Confirm active status
 
-11. **Record Keeping (evidences)**
+2.  **Record Keeping (evidences)**
     - Maintain audit records
     - Document verification results
     - Store minimal verification evidence
