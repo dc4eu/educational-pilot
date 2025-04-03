@@ -34,7 +34,7 @@ EDC (European Digital Credential) is an application profile that specifically im
 In other words:
 
 - ELM provides the underlying conceptual model.
-- EDC applies this model specifically to digital credentials, including concrete implementations, validations, and practical usage aligned closely —but not entirely— with standards like W3C Verifiable Credentials.
+- EDC applies this model specifically to digital credentials, including concrete implementations, validations, and practical usage aligned closely —but not entirely— with W3C Verifiable Credentials.
 
 ## Table with available data models
 
