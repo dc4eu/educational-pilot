@@ -83,7 +83,7 @@ The verification process shall follow these steps:
 8. **EAA Catalogue Compliance Checking - EDC-W3C-VC + ELM checking**
    - Validate against sectorial catalogue definitions
    - Verify ontology mandatory elements
-     - E.g. HEEUMC mandatory objects:
+     - *E.g. HEEUMC mandatory objects:
        - 1 Achievement
          - Linked to the achievement:
            - Mandatory 1 Learing outcome 
@@ -92,7 +92,7 @@ The verification process shall follow these steps:
        - 1 assessment
        - But:
          - More Learning outcomes can be included
-         - More Competences and/or Skills can be lonked to a Learning outocme
+         - More Competences and/or Skills can be lonked to a Learning outocme*
    - Check required elements
    - Ensure proper formatting against related schemes
 
