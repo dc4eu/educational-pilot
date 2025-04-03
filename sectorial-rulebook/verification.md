@@ -109,7 +109,7 @@ flowchart TD
   VI["ValidateIntegrity"]
   VS["ValidateSignatures"]
   VC["ValidateCriticalClaims"]
-  VE["ValidateEDC-W3CVDM&ELM"]
+  VE["Validate EDC-W3C ELM Objects"]
   VT["ValidateTime"]
   CD["CheckDelegation"]
   VB["ValidateHolderBinding"]
