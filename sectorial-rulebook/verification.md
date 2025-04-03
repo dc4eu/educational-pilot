@@ -63,10 +63,10 @@ The verification process shall follow these steps:
    - Confirm appropriate usage context
 
 5. **Issuer Verification**
-   - Digital identifier validation
-   - Educational accreditation checking
+   - Digital identifier validation (X.509v3 or/and DID)
+   - Educational accreditation checking (based on EAA authorisation model)
    - Accreditation issuer verification
-   - Trust chain validation
+   - Trust chain validation (CRLs or/and TRs)
 
 6. **Identity Information Analysis**
    - Validate holder information
