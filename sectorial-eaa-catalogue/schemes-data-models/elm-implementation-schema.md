@@ -1,4 +1,4 @@
-# European Learning Model (ELM) Implementation Schema
+# European Digital Credential (EDC) Implementation Schema
 
 ## Overview
 
