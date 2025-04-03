@@ -74,7 +74,7 @@ The verification process shall follow these steps:
    - Verify identity attributes when necessary
    - Apply appropriate identity assurance levels
 
-7. **Schema Compliance Checking**
+7. **Schema Compliance Checking** 
    - Verify credential structure
    - Validate against schema definitions
    - Check required fields
@@ -96,7 +96,7 @@ The verification process shall follow these steps:
    - Check required elements
    - Ensure proper formatting against related schemes
 
-9. **Quality Assurance Verification**
+9.  **Quality Assurance Verification**
   (If shared credential includes/combines quality assurance related information)
    - Issuer entitlement checking
    - Expiration verification
