@@ -6,7 +6,7 @@ This Sectorial Electronic Attestation of Attributes (EAA) Rulebook contains all 
 
 ## Diploma vs EAAs
 
-It is important to explain and clarify that there is a distinction between the Diploma itself (for example, in Spain this is legally required to be issued on A3 paper with specific weight and security measures) and an EAA of the diploma. The latter does not replace the former, but holds equivalent legal value
+It is important to explain and clarify that there is a distinction between the Diploma itself and an EAA of the diploma (for example, in Spain this is legally required to be issued on A3 paper with specific weight and security measures, or, using digital means, the Diplómanos is stored and preserved in a database record). The latter does not replace the former, but holds equivalent legal value.
 
 ## European Learning Model (ELM)
 
