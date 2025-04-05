@@ -46,7 +46,7 @@ Europass Digital Credentials instantiate the W3C VCDM v1.1 by defining standardi
 
 ### Identifier (`id`)
 ```json
-"id": "urn:uuid:123e4567-e89b-12d3-a456-426614174000"
+"id": "did:ebsi:issuerdidexample"
 ```
 
 ### Type (`type`)
