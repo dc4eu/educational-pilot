@@ -10,7 +10,7 @@ This document presents a converted **Certificate of Participation** in Verifiabl
 
 ---
 
-## 1. Converted Credential (Unsigned)
+## 1. Example Credential (Unsigned)
 
 The following VC has been adapted to match EBSI specifications using the appropriate context and schema. It includes required compliance fields and a simplified representation of the learning outcome.
 
@@ -79,7 +79,7 @@ classDiagram
 
 ---
 
-## 4. Notes on EBSI Compliance
+## 4. Notes on EDC-W3C & EBSI Compliance
 
 - The `credentialSubject.id` uses a valid Decentralised Identifier (DID).
 - Contexts include W3C and example VCs, plus the schema URI for participation credentials.
