@@ -10,7 +10,7 @@ This document presents a converted **Master’s Degree** credential in Verifiabl
 
 ---
 
-## 1. Converted Credential (Unsigned)
+## 1. Example Credential (Unsigned)
 
 The following VC has been adapted to match EBSI specifications using the `EuropeanDigitalCredential` context and schema. It includes all required fields for compliance.
 
@@ -82,7 +82,7 @@ classDiagram
 
 ---
 
-## 4. Compliance Notes
+## 4.  EDC-W3C & EBSI Compliance 
 
 - `credentialSubject.id` is set using a DID (Decentralised Identifier) as required by EBSI.
 - The `@context` includes the W3C base, examples, and the EDC schema.
