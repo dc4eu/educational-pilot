@@ -10,7 +10,7 @@ This document presents a **Transcript of Records** credential converted into a V
 
 ---
 
-## 1. Converted Credential (Unsigned)
+## 1. Example Credential (Unsigned)
 
 This VC is adapted from a Transcript of Records based on a Bachelor's in Computer Science with 30 ECTS. The structure follows the EDC-W3C EBSI-compatible JSON-LD format.
 
@@ -84,7 +84,7 @@ classDiagram
 
 ---
 
-## 4. EBSI Compliance Summary
+## 4.  EDC-W3C & EBSI Compliance Summary
 
 - Uses W3C and EBSI trusted schema contexts
 - Holder identified via a Decentralised Identifier (DID)
