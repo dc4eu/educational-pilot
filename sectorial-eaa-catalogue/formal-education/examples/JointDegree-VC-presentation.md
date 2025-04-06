@@ -10,7 +10,7 @@ This document presents a **Joint Degree** credential converted into a Verifiable
 
 ---
 
-## 1. Converted Credential (Unsigned)
+## 1. Example Credential (Unsigned)
 
 The following VC adheres to EBSI specifications and includes standard fields for a jointly awarded degree qualification.
 
@@ -83,7 +83,7 @@ classDiagram
 
 ---
 
-## 4. EBSI Compliance Overview
+## 4.  EDC-W3C & EBSI Compliance Overview
 
 - The holder is identified by a DID (`did:key:...`)
 - Context includes W3C, example VC and schema URI
