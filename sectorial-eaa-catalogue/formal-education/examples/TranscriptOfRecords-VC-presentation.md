@@ -1,5 +1,5 @@
 
-# Transcript of Records – EBSI Compliant Example
+# Transcript of Records – EDC-W3C Compliant Example
 
 This document presents a **Transcript of Records** credential converted into a Verifiable Credential (VC) format in compliance with the **European Blockchain Services Infrastructure (EBSI)**. The output includes:
 
@@ -12,7 +12,7 @@ This document presents a **Transcript of Records** credential converted into a V
 
 ## 1. Converted Credential (Unsigned)
 
-This VC is adapted from a Transcript of Records based on a Bachelor's in Computer Science with 30 ECTS. The structure follows the EBSI-compatible JSON-LD format.
+This VC is adapted from a Transcript of Records based on a Bachelor's in Computer Science with 30 ECTS. The structure follows the EDC-W3C EBSI-compatible JSON-LD format.
 
 **Download**: [VC Unsigned](./TranscriptOfRecords-EBSI-VC-unsigned.json)
 
