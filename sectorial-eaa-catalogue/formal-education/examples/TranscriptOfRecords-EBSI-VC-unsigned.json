@@ -1,0 +1,48 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://www.w3.org/2018/credentials/examples/v1",
+    "https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/sample-transcript-of-records"
+  ],
+  "id": "urn:uuid:transcript-record-sample",
+  "type": [
+    "VerifiableCredential",
+    "VerifiableAttestation",
+    "EuropeanDigitalCredential"
+  ],
+  "issuer": {
+    "id": "did:ebsi:zTranscriptIssuer"
+  },
+  "issuanceDate": "2025-04-06T18:04:53.736113",
+  "issued": "2025-04-06T18:04:53.736113",
+  "validFrom": "2025-04-06T18:04:53.736113",
+  "validUntil": "2031-12-31T23:59:59Z",
+  "expirationDate": "2031-12-31T23:59:59Z",
+  "credentialStatus": {
+    "id": "https://status.ebsi.eu/credentials/0005",
+    "type": "RevocationList2021Entry"
+  },
+  "credentialSchema": {
+    "id": "https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/sample-transcript-of-records",
+    "type": "JsonSchemaValidator2018"
+  },
+  "credentialSubject": {
+    "id": "did:key:transcriptHolder123",
+    "type": "Person",
+    "givenName": "Jane",
+    "familyName": "Doe",
+    "dateOfBirth": "1995-03-15",
+    "nationality": "Spanish",
+    "hasCredential": {
+      "title": "Transcript of Records - Bachelor in Computer Science",
+      "programmeCode": "BCS001",
+      "eqfLevel": "6",
+      "language": "en",
+      "totalCredits": 30,
+      "averageGrade": 7.8,
+      "gradingScale": "0\u201310",
+      "academicYear": "2023",
+      "courseUnits": []
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://www.w3.org/2018/credentials/examples/v1",
+    "https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/z5P8ebAhZjuvypiSXSHoba6vstbhTwnLhVuULWKenuiNJ"
+  ],
+  "id": "urn:uuid:60957cf6-e152-4f5d-b8a1-4177f705d176",
+  "type": [
+    "VerifiableCredential",
+    "VerifiableAttestation",
+    "EuropeanDigitalCredential"
+  ],
+  "issuer": {
+    "id": "did:ebsi:z21wWdByYSDsiUemHbbgmzSa"
+  },
+  "issuanceDate": "2025-04-06T04:56:36.623913",
+  "issued": "2025-04-06T04:56:36.623913",
+  "validFrom": "2025-04-06T04:56:36.623913",
+  "validUntil": "2030-12-31T23:59:59Z",
+  "expirationDate": "2030-12-31T23:59:59Z",
+  "credentialStatus": {
+    "id": "https://status.ebsi.eu/credentials/0002",
+    "type": "RevocationList2021Entry"
+  },
+  "credentialSchema": {
+    "id": "https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/z5P8ebAhZjuvypiSXSHoba6vstbhTwnLhVuULWKenuiNJ",
+    "type": "JsonSchemaValidator2018"
+  },
+  "credentialSubject": {
+    "id": "did:key:abcdefg123456789",
+    "type": "Person"
+  }
+}

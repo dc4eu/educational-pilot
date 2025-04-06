@@ -1,0 +1,44 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://www.w3.org/2018/credentials/examples/v1",
+    "https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/sample-joint-degree"
+  ],
+  "id": "urn:uuid:joint-degree-sample",
+  "type": [
+    "VerifiableCredential",
+    "VerifiableAttestation",
+    "EuropeanDigitalCredential"
+  ],
+  "issuer": {
+    "id": "did:ebsi:zExampleIssuerJointDegree"
+  },
+  "issuanceDate": "2025-04-06T05:12:14.684534",
+  "issued": "2025-04-06T05:12:14.684534",
+  "validFrom": "2025-04-06T05:12:14.684534",
+  "validUntil": "2030-12-31T23:59:59Z",
+  "expirationDate": "2030-12-31T23:59:59Z",
+  "credentialStatus": {
+    "id": "https://status.ebsi.eu/credentials/0004",
+    "type": "RevocationList2021Entry"
+  },
+  "credentialSchema": {
+    "id": "https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/sample-joint-degree",
+    "type": "JsonSchemaValidator2018"
+  },
+  "credentialSubject": {
+    "id": "did:key:exampleJointDegreeHolder",
+    "type": "Person",
+    "givenName": "Student",
+    "familyName": "Surname",
+    "dateOfBirth": "1995-01-01",
+    "hasCredential": {}
+  },
+  "proof": {
+    "type": "Ed25519Signature2018",
+    "created": "2025-04-06T05:12:14.684534",
+    "proofPurpose": "assertionMethod",
+    "verificationMethod": "did:ebsi:zExampleIssuerJointDegree#keys-1",
+    "jws": "eyJhbGciOiJFZERTQSJ9..simulatedJointSignature"
+  }
+}
