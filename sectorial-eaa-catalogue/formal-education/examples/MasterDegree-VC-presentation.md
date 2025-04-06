@@ -82,7 +82,7 @@ classDiagram
 
 ---
 
-## 4.  EDC-W3C & EBSI Compliance 
+## 4.  EDC-W3C & EBSI Compliance Summary
 
 - `credentialSubject.id` is set using a DID (Decentralised Identifier) as required by EBSI.
 - The `@context` includes the W3C base, examples, and the EDC schema.
