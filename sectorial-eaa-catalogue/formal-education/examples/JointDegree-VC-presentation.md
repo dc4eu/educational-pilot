@@ -83,7 +83,7 @@ classDiagram
 
 ---
 
-## 4.  EDC-W3C & EBSI Compliance Overview
+## 4.  EDC-W3C & EBSI Compliance Summary
 
 - The holder is identified by a DID (`did:key:...`)
 - Context includes W3C, example VC and schema URI
