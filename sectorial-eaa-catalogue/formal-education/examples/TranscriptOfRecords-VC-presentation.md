@@ -84,7 +84,7 @@ classDiagram
 
 ---
 
-## 4.  EDC-W3C & EBSI Compliance Summary
+## 4. EDC-W3C & EBSI Compliance Summary
 
 - Uses W3C and EBSI trusted schema contexts
 - Holder identified via a Decentralised Identifier (DID)
