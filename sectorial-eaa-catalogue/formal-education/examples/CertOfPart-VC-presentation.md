@@ -1,7 +1,7 @@
 
-# Certificate of Participation – EBSI Compliant Example
+# Certificate of Participation – EDC-W3C Compliant Example
 
-This document presents a converted **Certificate of Participation** in Verifiable Credential (VC) format, compliant with the **European Blockchain Services Infrastructure (EBSI)**. It includes:
+This document presents a converted **Certificate of Participation** in Verifiable Credential (VC) format, compliant with the EDC-W3C **European Blockchain Services Infrastructure (EBSI)**. It includes:
 
 - A compliant VC (unsigned)
 - A signed version of the VC (simulated)
