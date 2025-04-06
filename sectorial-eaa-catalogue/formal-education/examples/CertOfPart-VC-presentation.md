@@ -79,7 +79,7 @@ classDiagram
 
 ---
 
-## 4. Notes on EDC-W3C & EBSI Compliance
+## 4. EDC-W3C & EBSI Compliance Summary
 
 - The `credentialSubject.id` uses a valid Decentralised Identifier (DID).
 - Contexts include W3C and example VCs, plus the schema URI for participation credentials.
