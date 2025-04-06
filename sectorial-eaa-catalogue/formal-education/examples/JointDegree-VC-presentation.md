@@ -1,7 +1,7 @@
 
-# Joint Degree Credential – EBSI Compliant Example
+# Joint Degree Credential – EDC-W3C Compliant Example
 
-This document presents a **Joint Degree** credential converted into a Verifiable Credential (VC) compliant with the **European Blockchain Services Infrastructure (EBSI)**. It includes:
+This document presents a **Joint Degree** credential converted into a Verifiable Credential (VC) compliant with the EDC-W3C **European Blockchain Services Infrastructure (EBSI)**. It includes:
 
 - A compliant VC (unsigned)
 - A signed version of the VC (simulated)
