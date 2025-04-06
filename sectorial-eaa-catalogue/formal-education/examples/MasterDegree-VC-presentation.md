@@ -1,7 +1,7 @@
 
-# Master's Degree Credential – EBSI Compliant Example
+# Master's Degree Credential – EDC-W3C Compliant Example
 
-This document presents a converted **Master’s Degree** credential in Verifiable Credential (VC) format, compliant with the **European Blockchain Services Infrastructure (EBSI)**. It includes:
+This document presents a converted **Master’s Degree** credential in Verifiable Credential (VC) format, compliant with the EDC-W3C **European Blockchain Services Infrastructure (EBSI)**. It includes:
 
 - A compliant VC (unsigned)
 - A signed version of the VC (simulated)
