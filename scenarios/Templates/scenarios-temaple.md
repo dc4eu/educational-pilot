@@ -1,3 +1,8 @@
+---
+country: ABC
+pilot: Pilot X
+---
+
 # Scenario Description Template for Piloting Agents
 
 ## Scenario Overview

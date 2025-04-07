@@ -1,3 +1,8 @@
+---
+country: Italy
+pilot: Pilot 2
+---
+
 # University of Bologna (UNIBO) - Pilot 2 - Combined dPKI (EBSI) & classical PKI (Trust Lists)
 
 ## Scenario Description
