@@ -1,8 +1,9 @@
-# Universitat Rovira i Virgili (URV) - Pilot 2 - Combined dPKI (EBSI) & classical PKI (Trust Lists)
 ---
 country: Spain
 pilot: Pilot 2
 ---
+
+# Universitat Rovira i Virgili (URV) - Pilot 2 - Combined dPKI (EBSI) & classical PKI (Trust Lists)
 
 ## Scenario Description
 
