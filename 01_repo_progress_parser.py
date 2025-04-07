@@ -9,11 +9,11 @@ ROOT_DIR = "./piloting"
 
 # SPOC assignment map
 SPOC_MAP = {
-    "Universitat Rovira i Virgili": "SGAD",
-    "Universidad de Alcalá (UAH)": "SGAD",
-    "Universidad Carlos III de Madrid": "SGAD",
-    "Universidad Politécnica de Madrid": "SGAD",
-    "Universidad de Málaga": "SGAD",
+    "Universitat_Rovira_i_Virgili": "SGAD",
+    "Universidad_de_Alcalá_(UAH)": "SGAD",
+    "Universidad_Carlos_III_de_Madrid": "SGAD",
+    "Universidad_Politécnica_de_Madrid": "SGAD",
+    "Universidad_de_Málaga": "SGAD",
     "UNED": "SGAD",
     "CGCOM": "SGAD & CGCOM",
     "University of Murcia": "SGAD",
