@@ -10,7 +10,7 @@ ROOT_DIR = "./piloting"
 # SPOC assignment map
 SPOC_MAP = {
     "Universitat_Rovira_i_Virgili": "SGAD",
-    "Universidad_de_Alcalá_(UAH)": "SGAD",
+    "Universidad_de_Alcalá_UAH": "SGAD",
     "Universidad_Carlos_III_de_Madrid": "SGAD",
     "Universidad_Politécnica_de_Madrid": "SGAD",
     "Universidad_de_Málaga": "SGAD",
@@ -25,7 +25,7 @@ SPOC_MAP = {
     "UMAIA": "Universidade do Porto",
     "COFAC_-_Lusofona_University": "Universidade do Porto",
     "GovPart": "GovPart Gmbh",
-    "Politehnica_University_Timisoara,Romania": "UPT",
+    "Politehnica_University_Timisoara,_Romania": "UPT",
     "UEFISCDI": "UPT",
     "OPI_PIB": "OPI PIB",
     "Neumann_János_Intézet": "OPI PIB",
