@@ -41,6 +41,7 @@ This document lists all piloting agents based on their selected pilot option in 
 | Universidad Politécnica de Madrid                        | Fernando Pescador                   |
 | University of Murcia                                     | Antonio Ruiz Martínez               |
 | SKS                                                      | Virginijus Jasaitis                 |
+| Neumann János Intézet                                    | —                                   |
 
 ---
 
@@ -52,4 +53,3 @@ This document lists all piloting agents based on their selected pilot option in 
 | University of Twente                      | Heleen van der Zaag                  |
 | COFAC - Lusofona University               | paulo.ferreira@lusofona.pt           |
 | Saxion                                    | Franco De Vita                       |
-| Neumann János Intézet                     | —                                    |
