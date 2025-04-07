@@ -1,4 +1,4 @@
-# DC4EU Piloting – Coordination Overview
+# 🧭 DC4EU Piloting – Coordination Overview
 
 | SPOC | # PAs | On Track | At Risk | Blocked | Avg Progress (%) |
 |------|--------|----------|---------|---------|------------------|
