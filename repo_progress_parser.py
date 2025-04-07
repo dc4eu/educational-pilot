@@ -1,6 +1,8 @@
 import os
 import pandas as pd
 from datetime import datetime
+import re
+import yaml
 
 # Set the base path of the piloting directory
 ROOT_DIR = "./piloting"
@@ -22,6 +24,31 @@ def extract_checklist_info(filepath):
     except Exception:
         return 0, "N/A"
 
+# Define helper to infer pilot option and country from README frontmatter
+def extract_metadata(filepath):
+    pilot_option = "Unknown"
+    country = "Unknown"
+    try:
+        with open(filepath, 'r', encoding='utf-8') as f:
+            content = f.read()
+            match = re.match(r'^---\n(.*?)\n---', content, re.DOTALL)
+            if match:
+                metadata = yaml.safe_load(match.group(1))
+                pilot_option = metadata.get("pilot", pilot_option)
+                country = metadata.get("country", country)
+            else:
+                # fallback keyword matching
+                content = content.lower()
+                if "pilot 1" in content:
+                    pilot_option = "Pilot 1"
+                elif "pilot 2" in content:
+                    pilot_option = "Pilot 2"
+                elif "pilot 3" in content:
+                    pilot_option = "Pilot 3"
+    except Exception:
+        pass
+    return pilot_option, country
+
 # Traverse all PA folders
 for pa_dir in os.listdir(ROOT_DIR):
     full_path = os.path.join(ROOT_DIR, pa_dir)
@@ -35,33 +62,29 @@ for pa_dir in os.listdir(ROOT_DIR):
 
         spoc_completion, spoc_date = extract_checklist_info(spoc_file)
         pa_completion, pa_date = extract_checklist_info(pa_file)
+        pilot_option, country = extract_metadata(readme_file)
 
-        pilot_option = "Unknown"
-        country = "Unknown"
-
-        if os.path.exists(readme_file):
-            with open(readme_file, 'r', encoding='utf-8') as f:
-                content = f.read().lower()
-                if "pilot 1" in content:
-                    pilot_option = "Pilot 1"
-                elif "pilot 2" in content:
-                    pilot_option = "Pilot 2"
-                elif "pilot 3" in content:
-                    pilot_option = "Pilot 3"
+        # Infer status
+        if pa_completion >= 80:
+            status = "On Track"
+        elif pa_completion > 0:
+            status = "At Risk"
+        else:
+            status = "Blocked"
 
         progress_data.append({
+            "SPOC": "TBD",  # can be filled in or parsed separately if needed
             "PA": pa_name,
+            "Country": country,
             "Pilot Option": pilot_option,
-            "PA Checklist %": pa_completion,
-            "PA Last Update": pa_date,
-            "SPOC Checklist %": spoc_completion,
-            "SPOC Last Update": spoc_date,
-            "Country": country
+            "Checklist Completion %": pa_completion,
+            "Last Update": pa_date,
+            "Status": status
         })
 
 # Create DataFrame and save to CSV
 df = pd.DataFrame(progress_data)
 output_file = os.path.join(ROOT_DIR, "OVERVIEW", "indicators.csv")
 df.to_csv(output_file, index=False)
-print(f"✔️ Progress data saved to {output_file}")
+print(f"✔️ Enriched progress data saved to {output_file}")
 
