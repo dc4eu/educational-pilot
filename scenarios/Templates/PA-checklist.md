@@ -26,7 +26,8 @@ This checklist summarises essential verification tasks that piloting agents shou
 ## 4. Credential Lifecycle Management
 - [ ] Procedures for credential issuance clearly defined
 - [ ] Functional processes for credential updates
-- [ ] Established credential revocation and suspension procedures
+- [ ] Established credential revocation procedures
+- [ ] Established credential suspension procedures
 - [ ] Operational credential renewal processes
 
 ## 5. Monitoring and Reporting
