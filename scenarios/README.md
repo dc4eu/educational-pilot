@@ -19,7 +19,7 @@ While the methodology defines common building blocks, each scenario will reflect
 
 
 
-# Scenarios list
+# Scenarios characterisation
 
 This section outlines the common and pilot-specific artefacts that support scenario implementation across Pilots 1 and 2. These include toolkits, templates, and technical components used by piloting agents, SPOCs, and end users.
 
@@ -102,6 +102,11 @@ To support documentation and review of each scenario, piloting agents are encour
 | Institutional systems involved          | Local databases or information systems connected                           |
 | Feedback & monitoring mechanism         | Feedback collection tools and KPI reporting plan                           |
 | SPOC contact and review status          | Assigned SPOC and current status of validation                             |
+
+
+# Scenarios list
+
+
 
 ---
 
