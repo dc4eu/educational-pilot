@@ -1,4 +1,4 @@
-# 🧭 Operational Workflow for Tracking Pilots in DC4EU
+# Operational Workflow for Tracking Pilots in DC4EU
 
 This document defines the step-by-step process for maintaining accurate and up-to-date dashboards for Piloting Agents (PAs), SPOCs, and Coordinators.
 
@@ -44,8 +44,9 @@ Ensure that three levels of visibility are always synchronised and consistent:
 | Task | Actor | Tools / Scripts |
 |------|-------|------------------|
 | Run checklist parser to extract completion % and dates | SPOC or Coordinator | `repo_progress_parser.py` |
-| Generate unified CSV of all PAs | Script | `piloting/OVERVIEW/indicators.csv` |
+| Generate unified CSV of all PAs, with pilot, country, progress, status | Script | `piloting/OVERVIEW/indicators.csv` |
 | Generate SPOC dashboards with live progress | Script | `generate_spoc_dashboards.py` → `SPOC-*/index.md` |
+| Generate coordinator summary with SPOC-level status | Script | `generate_progress_summary.py` → `OVERVIEW/progress-summary.md` |
 
 ✅ **Outcome**: Real-time status tables are auto-generated for each SPOC and the whole project.
 
@@ -57,8 +58,24 @@ Ensure that three levels of visibility are always synchronised and consistent:
 |------|-------|----------------|
 | Review CSV file in spreadsheet or dashboard | Coordinator | `OVERVIEW/indicators.csv` |
 | Review SPOC summary dashboards | Coordinator | `SPOC-*/index.md` |
-| Maintain project-level progress summary | Coordinator | `OVERVIEW/progress-summary.md` (manually or auto-generated) |
+| Review global summary of SPOC status | Coordinator | `OVERVIEW/progress-summary.md` |
 
 ✅ **Outcome**: The coordination team has a full picture of implementation across the network.
 
+---
 
+## Script Execution Order
+
+```bash
+# (Optional) If structure doesn't exist
+python generate_repo_structure.py
+
+# 1. Extract data from checklists
+python repo_progress_parser.py
+
+# 2. Generate SPOC dashboards
+python generate_spoc_dashboards.py
+
+# 3. Generate overall coordination summary
+python generate_progress_summary.py
+```
