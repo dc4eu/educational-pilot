@@ -3,9 +3,9 @@
 This checklist summarises essential verification tasks to be performed regularly by the Single Point of Contact (SPOC) in collaboration with piloting agents - UNIBO - within the DC4EU framework.
 
 ## 1. Governance and Compliance
-- [ ] Governance documentation submission and approval
+- [X] Governance documentation submission and approval
 - [ ] DID(s)/X.509 certificates registered in trust frameworks
-- [ ] Application and documentation of authorisation templates
+- [X] Application and documentation of authorisation templates
 - [ ] Regulatory compliance verification (GDPR, eIDAS2, national regulations)
 
 ## 2. Technical Readiness
