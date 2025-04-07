@@ -33,12 +33,12 @@ SPOC_MAP = {
     "University_of_Zielona_Góra": "OPI PIB",
     "RISE_-_Research_Institutes_of_Sweden": "RISE",
     "Vytautas_Magnus_University": "eDelivery",
-    "Lithuanian_Centre_for_Quality_Assessment_(SKVC)": "eDelivery",
+    "Lithuanian_Centre_for_Quality_Assessment_SKVC": "eDelivery",
     "SURF": "SURF",
     "Saxion": "SURF",
     "Sikt": "Sikt",
     "Ladokkonsortiet": "SUNET",
-    "Finnish_National_Agency_for_Education_(OPH)": "OPH",
+    "Finnish_National_Agency_for_Education_OPH": "OPH",
     "DeiC": "DTU"
 }
 
