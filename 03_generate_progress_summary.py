@@ -32,8 +32,7 @@ with open(SUMMARY_FILE, 'w', encoding='utf-8') as f:
     f.write("| SPOC | # PAs | On Track | At Risk | Blocked | Avg Progress (%) |\n")
     f.write("|------|--------|----------|---------|---------|------------------|\n")
     for _, row in summary.iterrows():
-        f.write(f"| {row['SPOC']} | {row['# PAs']} | {row['On Track']} | {row['At Risk']} | {row['Blocked']} | {row['Avg Progress (%)']} |
-")
+        f.write(f"| {row['SPOC']} | {row['# PAs']} | {row['On Track']} | {row['At Risk']} | {row['Blocked']} | {row['Avg Progress (%)']} |\n")
 
 print("✅ progress-summary.md has been generated.")
 
