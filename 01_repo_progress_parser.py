@@ -39,7 +39,7 @@ SPOC_MAP = {
     "Sikt": "Sikt",
     "Ladokkonsortiet": "SUNET",
     "Finnish_National_Agency_for_Education_(OPH)": "OPH",
-    "DeiC/DTU": "DTU"
+    "DeiC": "DTU"
 }
 
 # Initialise list to hold extracted progress data
