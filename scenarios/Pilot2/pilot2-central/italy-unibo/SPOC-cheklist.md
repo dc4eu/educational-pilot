@@ -1,4 +1,4 @@
-# UNIDBO Practical Verification Checklist
+# SPOC Practical Verification Checklist - UNIBO - Pilot 2
 
 This checklist summarises essential verification tasks to be performed regularly by the Single Point of Contact (SPOC) in collaboration with piloting agents - UNIBO - within the DC4EU framework.
 
