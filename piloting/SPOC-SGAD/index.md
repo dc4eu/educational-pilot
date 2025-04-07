@@ -11,4 +11,4 @@
 | Budapest_University_of_Technology_and_Economics | Unknown | Unknown | 0.0% | 2025-04-07 | Blocked |
 | Universidad_Politécnica_de_Madrid | Unknown | Unknown | 0.0% | 2025-04-07 | Blocked |
 | UNED | Unknown | Unknown | 0.0% | 2025-04-07 | Blocked |
-| Universitat_Rovira_i_Virgili | Spain | Pilot 2 | 5.6% | 2025-04-07 | At Risk |
+| Universitat_Rovira_i_Virgili | Spain | Pilot 2 | 45.9% | 2025-04-07 | At Risk |
