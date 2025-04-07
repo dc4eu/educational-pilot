@@ -1,4 +1,4 @@
-# Piloting Agent Practical Verification Checklist - ENTITY - Pilot 2
+# Piloting Agent Practical Verification Checklist - ENTITY - Pilot X
 
 This checklist summarises essential verification tasks that piloting agents should perform regularly to ensure alignment with the DC4EU framework and methodology.
 
