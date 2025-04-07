@@ -7,6 +7,41 @@ import yaml
 # Set the base path of the piloting directory
 ROOT_DIR = "./piloting"
 
+# SPOC assignment map
+SPOC_MAP = {
+    "Universitat Rovira i Virgili": "SGAD",
+    "Universidad de Alcalá (UAH)": "SGAD",
+    "Universidad Carlos III de Madrid": "SGAD",
+    "Universidad Politécnica de Madrid": "SGAD",
+    "Universidad de Málaga": "SGAD",
+    "UNED": "SGAD",
+    "CGCOM": "SGAD & CGCOM",
+    "University of Murcia": "SGAD",
+    "University of Bologna": "SGAD",
+    "Edutus University": "SGAD",
+    "Budapest University of Technology and Economics": "SGAD",
+    "Howest": "Walt.ID",
+    "University of Porto": "Universidade do Porto",
+    "UMAIA": "Universidade do Porto",
+    "COFAC - Lusofona University": "Universidade do Porto",
+    "GovPart": "GovPart Gmbh",
+    "Politehnica University Timisoara, Romania": "UPT",
+    "UEFISCDI": "UPT",
+    "OPI PIB": "OPI PIB",
+    "Neumann János Intézet": "OPI PIB",
+    "SKS": "OPI PIB",
+    "University of Zielona Góra": "OPI PIB",
+    "RISE - Research Institutes of Sweden": "RISE",
+    "Vytautas Magnus University": "eDelivery",
+    "Lithuanian Centre for Quality Assessment (SKVC)": "eDelivery",
+    "SURF": "SURF",
+    "Saxion": "SURF",
+    "Sikt": "Sikt",
+    "Ladokkonsortiet": "SUNET",
+    "Finnish National Agency for Education (OPH)": "OPH",
+    "DeiC/DTU": "DTU"
+}
+
 # Initialise list to hold extracted progress data
 progress_data = []
 
@@ -15,7 +50,6 @@ def extract_checklist_info(filepath):
     try:
         with open(filepath, 'r', encoding='utf-8') as f:
             content = f.read()
-
         total = content.count("- [")
         checked = content.count("- [x]") + content.count("- [X]")
         percent_complete = round((checked / total) * 100, 1) if total > 0 else 0
@@ -37,7 +71,6 @@ def extract_metadata(filepath):
                 pilot_option = metadata.get("pilot", pilot_option)
                 country = metadata.get("country", country)
             else:
-                # fallback keyword matching
                 content = content.lower()
                 if "pilot 1" in content:
                     pilot_option = "Pilot 1"
@@ -55,6 +88,8 @@ for pa_dir in os.listdir(ROOT_DIR):
     if os.path.isdir(full_path) and pa_dir.startswith("PA-"):
         pa_name = pa_dir.replace("PA-", "")
 
+        spoc_name = SPOC_MAP.get(pa_name, "Unknown")
+
         # Files to extract from
         spoc_file = os.path.join(full_path, "SPOC-checklist.md")
         pa_file = os.path.join(full_path, "PA-checklist.md")
@@ -64,7 +99,6 @@ for pa_dir in os.listdir(ROOT_DIR):
         pa_completion, pa_date = extract_checklist_info(pa_file)
         pilot_option, country = extract_metadata(readme_file)
 
-        # Infer status
         if pa_completion >= 80:
             status = "On Track"
         elif pa_completion > 0:
@@ -73,7 +107,7 @@ for pa_dir in os.listdir(ROOT_DIR):
             status = "Blocked"
 
         progress_data.append({
-            "SPOC": "TBD",  # can be filled in or parsed separately if needed
+            "SPOC": spoc_name,
             "PA": pa_name,
             "Country": country,
             "Pilot Option": pilot_option,
@@ -86,5 +120,5 @@ for pa_dir in os.listdir(ROOT_DIR):
 df = pd.DataFrame(progress_data)
 output_file = os.path.join(ROOT_DIR, "OVERVIEW", "indicators.csv")
 df.to_csv(output_file, index=False)
-print(f"✔️ Enriched progress data saved to {output_file}")
+print(f"✔️ Enriched progress data with SPOCs saved to {output_file}")
 

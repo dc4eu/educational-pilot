@@ -1,32 +1,32 @@
 SPOC,PA,Country,Pilot Option,Checklist Completion %,Last Update,Status
-TBD,DeiC,Unknown,Unknown,0.0,N/A,Blocked
-TBD,Finnish_National_Agency_for_Education_OPH,Unknown,Unknown,0.0,2025-04-07,Blocked
-TBD,University_of_Murcia,Unknown,Unknown,0.0,2025-04-07,Blocked
-TBD,"Politehnica_University_Timisoara,_Romania",Unknown,Unknown,0.0,2025-04-07,Blocked
-TBD,Neumann_János_Intézet,Unknown,Unknown,0.0,2025-04-07,Blocked
-TBD,CGCOM,Unknown,Unknown,0.0,2025-04-07,Blocked
-TBD,OPI_PIB,Unknown,Unknown,0.0,2025-04-07,Blocked
-TBD,Universidad_Carlos_III_de_Madrid,Unknown,Unknown,0.0,2025-04-07,Blocked
-TBD,UEFISCDI,Unknown,Unknown,0.0,2025-04-07,Blocked
-TBD,Universidad_de_Alcalá_UAH,Unknown,Unknown,0.0,2025-04-07,Blocked
-TBD,Lithuanian_Centre_for_Quality_Assessment_SKVC,Unknown,Unknown,0.0,2025-04-07,Blocked
-TBD,Howest,Unknown,Unknown,0.0,2025-04-07,Blocked
-TBD,University_of_Bologna,Italy,Pilot 2,5.6,2025-04-07,At Risk
-TBD,SURF,Unknown,Unknown,0.0,2025-04-07,Blocked
-TBD,Universidad_de_Málaga,Unknown,Unknown,0.0,2025-04-07,Blocked
-TBD,COFAC_-_Lusofona_University,Unknown,Unknown,0.0,2025-04-07,Blocked
-TBD,SKS,Unknown,Unknown,0.0,2025-04-07,Blocked
-TBD,Edutus_University,Unknown,Unknown,0.0,2025-04-07,Blocked
-TBD,Sikt,Unknown,Unknown,0.0,2025-04-07,Blocked
-TBD,Ladokkonsortiet,Unknown,Unknown,0.0,2025-04-07,Blocked
-TBD,Budapest_University_of_Technology_and_Economics,Unknown,Unknown,0.0,2025-04-07,Blocked
-TBD,Vytautas_Magnus_University,Unknown,Unknown,0.0,2025-04-07,Blocked
-TBD,University_of_Porto,Unknown,Unknown,0.0,2025-04-07,Blocked
-TBD,UMAIA,Unknown,Unknown,0.0,2025-04-07,Blocked
-TBD,University_of_Zielona_Góra,Unknown,Unknown,0.0,2025-04-07,Blocked
-TBD,Universidad_Politécnica_de_Madrid,Unknown,Unknown,0.0,2025-04-07,Blocked
-TBD,GovPart,Unknown,Unknown,0.0,2025-04-07,Blocked
-TBD,RISE_-_Research_Institutes_of_Sweden,Unknown,Unknown,0.0,2025-04-07,Blocked
-TBD,UNED,Unknown,Unknown,0.0,2025-04-07,Blocked
-TBD,Universitat_Rovira_i_Virgili,Spain,Pilot 2,5.6,2025-04-07,At Risk
-TBD,Saxion,Unknown,Unknown,0.0,2025-04-07,Blocked
+Unknown,DeiC,Unknown,Unknown,0.0,N/A,Blocked
+Unknown,Finnish_National_Agency_for_Education_OPH,Unknown,Unknown,0.0,2025-04-07,Blocked
+Unknown,University_of_Murcia,Unknown,Unknown,0.0,2025-04-07,Blocked
+Unknown,"Politehnica_University_Timisoara,_Romania",Unknown,Unknown,0.0,2025-04-07,Blocked
+Unknown,Neumann_János_Intézet,Unknown,Unknown,0.0,2025-04-07,Blocked
+SGAD & CGCOM,CGCOM,Unknown,Unknown,0.0,2025-04-07,Blocked
+Unknown,OPI_PIB,Unknown,Unknown,0.0,2025-04-07,Blocked
+Unknown,Universidad_Carlos_III_de_Madrid,Unknown,Unknown,0.0,2025-04-07,Blocked
+UPT,UEFISCDI,Unknown,Unknown,0.0,2025-04-07,Blocked
+Unknown,Universidad_de_Alcalá_UAH,Unknown,Unknown,0.0,2025-04-07,Blocked
+Unknown,Lithuanian_Centre_for_Quality_Assessment_SKVC,Unknown,Unknown,0.0,2025-04-07,Blocked
+Walt.ID,Howest,Unknown,Unknown,0.0,2025-04-07,Blocked
+Unknown,University_of_Bologna,Italy,Pilot 2,5.6,2025-04-07,At Risk
+SURF,SURF,Unknown,Unknown,0.0,2025-04-07,Blocked
+Unknown,Universidad_de_Málaga,Unknown,Unknown,0.0,2025-04-07,Blocked
+Unknown,COFAC_-_Lusofona_University,Unknown,Unknown,0.0,2025-04-07,Blocked
+OPI PIB,SKS,Unknown,Unknown,0.0,2025-04-07,Blocked
+Unknown,Edutus_University,Unknown,Unknown,0.0,2025-04-07,Blocked
+Sikt,Sikt,Unknown,Unknown,0.0,2025-04-07,Blocked
+SUNET,Ladokkonsortiet,Unknown,Unknown,0.0,2025-04-07,Blocked
+Unknown,Budapest_University_of_Technology_and_Economics,Unknown,Unknown,0.0,2025-04-07,Blocked
+Unknown,Vytautas_Magnus_University,Unknown,Unknown,0.0,2025-04-07,Blocked
+Unknown,University_of_Porto,Unknown,Unknown,0.0,2025-04-07,Blocked
+Universidade do Porto,UMAIA,Unknown,Unknown,0.0,2025-04-07,Blocked
+Unknown,University_of_Zielona_Góra,Unknown,Unknown,0.0,2025-04-07,Blocked
+Unknown,Universidad_Politécnica_de_Madrid,Unknown,Unknown,0.0,2025-04-07,Blocked
+GovPart Gmbh,GovPart,Unknown,Unknown,0.0,2025-04-07,Blocked
+Unknown,RISE_-_Research_Institutes_of_Sweden,Unknown,Unknown,0.0,2025-04-07,Blocked
+SGAD,UNED,Unknown,Unknown,0.0,2025-04-07,Blocked
+Unknown,Universitat_Rovira_i_Virgili,Spain,Pilot 2,5.6,2025-04-07,At Risk
+SURF,Saxion,Unknown,Unknown,0.0,2025-04-07,Blocked
