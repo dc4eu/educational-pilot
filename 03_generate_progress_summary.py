@@ -28,7 +28,7 @@ summary["Avg Progress (%)"] = summary["Avg Progress (%)"].round(1)
 
 # Write summary to markdown
 with open(SUMMARY_FILE, 'w', encoding='utf-8') as f:
-    f.write("# 🧭 DC4EU Piloting – Coordination Overview\n\n")
+    f.write("# DC4EU Piloting – Global Progress Overview\n\n")
     f.write("| SPOC | # PAs | On Track | At Risk | Blocked | Avg Progress (%) |\n")
     f.write("|------|--------|----------|---------|---------|------------------|\n")
     for _, row in summary.iterrows():
