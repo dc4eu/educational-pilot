@@ -4,30 +4,31 @@ This checklist summarises essential verification tasks that piloting agents shou
 
 ## 1. Governance and Compliance
 - [X] Submission and validation of governance documentation
-- [ ] DID(s) certificates correctly registered
+- [X] DID(s) certificates correctly registered
 - [ ] X.509 certificates correctly registered
-- [ ] Correct application and documentation of authorisation templates
-- [ ] Compliance with regulatory requirements (GDPR, eIDAS2, national laws)
+- [X] Correct application and documentation of authorisation templates
+- [X] Compliance with regulatory requirements (GDPR, eIDAS2, national laws)
 
 ## 2. Technical Readiness
-- [?] Issuer platform deployed, customised, and operational
-- [?] Verifier platform deployed and fully functional
+- [X] Issuer platform deployed, customised, and operational
+- [X] Verifier platform deployed and fully functional
 - [X] Digital wallet integrated and fully operational (EUDIW by IZERTIS)
-- [?] PID retrieval services tested and functional
-- [?] Infrastructure fully compliant with DC4EU standards (hardware/software/network)
+- [X] PID retrieval services tested and functional
+- [X] Infrastructure fully compliant with DC4EU standards (hardware/software/network)
 
 ## 3. User Journey Execution
-- [ ] Pilot user group selected and documented
+- [X] Pilot user group selected and documented
 - [ ] Onboarding and training sessions successfully completed
 - [ ] PID retrieval successfully executed by pilot users
 - [ ] EducationalID issuance processes successfully tested
 - [ ] Educational achievements issuance operational and identity matching successful
-- [ ] Generic EAA verification service tested and fully operational
+- [?] Generic EAA verification service tested and fully operational
 
 ## 4. Credential Lifecycle Management
-- [ ] Procedures for credential issuance clearly defined
+- [X] Procedures for credential issuance clearly defined
 - [ ] Functional processes for credential updates
-- [ ] Established credential revocation and suspension procedures
+- [X] Established credential revocation procedures
+- [X] Established credential suspension procedures
 - [ ] Operational credential renewal processes
 
 ## 5. Monitoring and Reporting
@@ -41,12 +42,12 @@ This checklist summarises essential verification tasks that piloting agents shou
 - [ ] Regular tracking and proactive management of risks
 
 ## 7. Issue Reporting and Escalation
-- [ ] Clear reporting procedures for unresolved issues
+- [X] Clear reporting procedures for unresolved issues
 - [ ] Provision of documented evidence (error logs, screenshots) for reported issues
 - [ ] Regular follow-up on the resolution status of reported issues
 
 ## 8. KPI and Success Metrics Tracking
-- [ ] Clear KPI definitions established and followed
+- [X] Clear KPI definitions established and followed
 - [ ] Consistent and accurate reporting of KPIs
 
 ## 9. Continuous Improvement and Feedback Integration
@@ -55,5 +56,5 @@ This checklist summarises essential verification tasks that piloting agents shou
 - [ ] Documentation of lessons learned and adaptive learning actions
 
 ## 10. Communication and Coordination
-- [ ] Regular participation in coordination meetings with SPOC
-- [ ] Established clear and efficient communication with SPOC and WP5 team
+- [X] Regular participation in coordination meetings with SPOC
+- [X] Established clear and efficient communication with SPOC and WP5 team
