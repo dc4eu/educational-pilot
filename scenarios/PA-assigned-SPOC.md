@@ -2,8 +2,6 @@
 
 This document lists the assigned Single Points of Contact (SPOCs) for each piloting agent based on Task 2.8 methodology documentation.
 
-| Piloting Agent (Institution)                        | Main contact                      |
-|-----------------------------------------------------|-----------------------------------|
 | Piloting Agent (Institution)                    | PA Main Contact                  | SPOC assigned         |
 |:------------------------------------------------|:---------------------------------|:----------------------|
 | SURF                                            | Paul van Veenendaal (SURF)       | SURF                  |
