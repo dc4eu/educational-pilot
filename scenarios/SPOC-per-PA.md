@@ -22,6 +22,8 @@ This document presents the relationship between each SPOC and the piloting agent
 | SGAD                                 | Italy       | University of Bologna                              | Pilot 2         |
 | SGAD                                 | Hungary     | Edutus University                                  | Pilot 2         |
 | SGAD                                 | Hungary     | Budapest University of Technology and Economics    | Pilot 2         |
+| SGAD                                 | Hungary     | Neumann János Intézet                              | Pilot 2         |
+| eDelivery                            | Lithuania   | SKS                                                | Pilot 2         |
 | Universidade do Porto                | Portugal    | University of Porto                                | Pilot 2         |
 | Universidade do Porto                | Portugal    | UMAIA                                              | Pilot 2         |
 | Universidade do Porto                | Portugal    | COFAC - Lusofona University                        | Pilot 3         |
@@ -29,8 +31,6 @@ This document presents the relationship between each SPOC and the piloting agent
 | UPT                                  | Romania     | Politehnica University Timisoara, Romania          | Pilot 2         |
 | UPT                                  | Romania     | UEFISCDI                                           | Pilot 2         |
 | OPI PIB                              | Poland      | OPI PIB                                            | Pilot 2         |
-| OPI PIB                              | Hungary     | Neumann János Intézet                              | Pilot 2         |
-| OPI PIB                              | Lithuania   | SKS                                                | Pilot 2         |
 | OPI PIB                              | Poland      | University of Zielona Góra                         | Pilot 1         |
 | RISE                                 | Sweden      | RISE - Research Institutes of Sweden               | Pilot 2         |
 | eDelivery                            | Lithuania   | Vytautas Magnus University                         | Pilot 2         |
