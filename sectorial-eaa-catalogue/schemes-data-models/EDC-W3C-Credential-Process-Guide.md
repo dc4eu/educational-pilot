@@ -263,19 +263,11 @@ To finalise the credential for EBSI, a proof is added:
 
 ---
 
-## 7️⃣ Summary Diagram
+## 7️⃣ Examples
 
-```mermaid
-flowchart TD
-  FIELDS["🎓 Sector Fields"]
-  MAPPING["🔁 ELM Mapping"]
-  ELMSTRUCT["🧩 ELM Graph"]
-  VCSTRUCT["📦 EDC-W3C Structure"]
-  SIGNING["🔐 Digital Signing"]
-  OUTPUT["🚀 Ready to Issue VC"]
-
-  FIELDS --> MAPPING --> ELMSTRUCT --> VCSTRUCT --> SIGNING --> OUTPUT
-```
+[Mater degree unsigned](../formal-education/examples/MasterDegree-EBSI-VC-unsigned.json)
+[Master degree signed](../formal-education/examples/MasterDegree-EBSI-VC-signed.json)
+[Master degree explained](../formal-education/examples/MasterDegree-VC-presentation.md)
 
 ---
 
