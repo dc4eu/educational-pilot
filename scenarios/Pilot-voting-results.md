@@ -17,7 +17,7 @@ This document lists all piloting agents based on their selected pilot option in 
 
 ---
 
-## Pilot 2 – Decentralised PKI (dPKI EBSI)
+## Pilot 2 – Decentralised PKI (dPKI EBSI) combined with Classical PKI Trusted Lists
 
 | Institution                                               | Contact                              |
 |-----------------------------------------------------------|--------------------------------------|
