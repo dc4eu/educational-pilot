@@ -24,7 +24,7 @@ This page provides the list of DNS endpoints made available by Piloting Agents t
 | Portugal     | COFAC - Lusofona University                              | Paulo Ferreira                   | lspulusofona.ulusofona.pt          |
 | Romania      | Politehnica University of Timisoara, Romania (UPT)       | Diana Andone                     | *(missing)*                        |
 | Hungary      | Edutus University                                        | Laki Balazs                      | TBC                                |
-| Germany      | GovPart                                                  | dc4eu@govpart.de                 | lspgovpart.govpart.de              |
+| Germany      | GovPart                                                  | Helmut & Guido                   | lspgovpart.govpart.de              |
 | Netherlands  | University of Twente                                     | Helenn Vanderzaag                | lsput.utwente.nl                   |
 | Italy        | University of Bologna                                    | Sergio Storari                   | lspdc4edu.unibo.it                 |
 | Spain        | University of Alcalá (UAH)                               | Sergio Caro                      | lspuah.uah.es                      |
