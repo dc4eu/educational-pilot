@@ -17,10 +17,11 @@ flowchart TD
   MAPPING["🔁 ELM Mapping"]
   ELMSTRUCT["🧩 ELM Graph"]
   VCSTRUCT["📦 EDC-W3C Structure"]
+  EDCW3CSCH["EDC-W3C sub-schema for related EAA"]
   SIGNING["🔐 Digital Signing"]
   OUTPUT["🚀 Ready to Issue VC"]
 
-  FIELDS --> MAPPING --> ELMSTRUCT --> VCSTRUCT --> SIGNING --> OUTPUT
+  FIELDS --> MAPPING --> ELMSTRUCT --> VCSTRUCT --> EDCW3CSCH --> SIGNING --> OUTPUT
 ```
 
 ---
