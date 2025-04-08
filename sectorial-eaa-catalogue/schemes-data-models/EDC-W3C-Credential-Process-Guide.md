@@ -272,14 +272,69 @@ To finalise the credential for EBSI, a proof is added:
 
 ---
 
+
+# ✅ Verification Checklist for Higher Education Diploma (EDC-W3C / EBSI Aligned)
+
+This checklist ensures a credential complies with the **EAA Catalogue** and is correctly structured as an **EDC-W3C Verifiable Credential** in line with **EBSI requirements**.
+
+---
+
+## 🔒 Core Verifiable Credential Elements (EBSI)
+
+| Check | Field / Property              | Requirement         | Notes |
+|-------|-------------------------------|---------------------|-------|
+| ✅    | `@context`                    | Required            | Must include VC + EBSI schema context |
+| ✅    | `type`                        | Required            | Must include `VerifiableCredential`, `EuropeanDigitalCredential` |
+| ✅    | `issuer`                      | Required            | Must be a valid EBSI DID |
+| ✅    | `issuanceDate`                | Required            | ISO 8601 format |
+| ✅    | `credentialSubject.id`        | Required            | Must be a DID (e.g. `did:key:`) |
+| ✅    | `credentialSchema.id`         | Required            | Must match EBSI Trusted Schema Registry |
+| ✅    | `proof`                       | Required (signed)   | Signature must be valid if present |
+
+---
+
+## 🎓 EAA Mandatory Fields (Semantic Compliance)
+
+| Check | Field / Object                              | Requirement         | Mapped From |
+|-------|---------------------------------------------|---------------------|-------------|
+| ✅    | `credentialSubject.givenName`               | Required            | EAA: Given name |
+| ✅    | `credentialSubject.familyName`              | Required            | EAA: Family name |
+| ✅    | `credentialSubject.dateOfBirth`             | Required            | EAA: DOB |
+| ✅    | `hasCredential.title`                       | Required            | EAA: Qualification name |
+| ✅    | `hasCredential.eqfLevel`                    | Required            | EAA: Classification |
+| ✅    | `hasCredential.awardingDate`                | Required            | EAA: Award date |
+| ✅    | `hasCredential.awardedBy.awardingBody[].legalName` | Required   | EAA: Institution name |
+
+---
+
+## 🧩 Optional / Enriched Fields (Flexible, not required)
+
+| Check | Field / Object                              | Optional            | Mapped From |
+|-------|---------------------------------------------|---------------------|-------------|
+| ⬜     | `credentialSubject.identifier`              | Optional            | EAA: Personal ID |
+| ⬜     | `hasCredential.educationSubject.notation`   | Optional            | EAA: Study field (e.g., ISCED) |
+| ⬜     | `hasCredential.additionalNote[]`            | Optional            | EAA: Other info, thesis |
+| ⬜     | `hasCredential.subAchievement[]`            | Optional            | List of modules / grades |
+| ⬜     | `credentialSubject.entitlement[]`           | Optional            | EAA: Entitlement (e.g., nurse) |
+| ⬜     | `hasCredential.awardedBy.homepage`          | Optional            | Organisation website |
+
+---
+
+## 🔁 Validator Guidance
+
+- ✅ **Pass** if all *required* fields are present and valid
+- ⚠️ **Warn** if optional elements are malformed
+- ✅ **Allow** extra fields as long as schema still validates
+- ❌ **Fail** if any mandatory element is missing or wrong type
+
+
+
 ## Final Notes
 
 The result is a **standards-based**, **interoperable**, and **verifiable** credential ready for:
 - Use in EBSI wallets
 - Sharing across Member States
 - Automatic verification and recognition
-
-
 ---
 
 
