@@ -37,3 +37,4 @@ This document presents the relationship between each SPOC and the piloting agent
 | Universidade do Porto                | Portugal    | COFAC - Lusofona University                        | Pilot 3         |
 | GovPart Gmbh                         | Germany     | GovPart                                            | Pilot 3         |
 | SURF                                 | Netherlands | Saxion                                             | Pilot 3         |
+| SURF                                 | Netherlands | University of Twente                               | Pilot 3         |
