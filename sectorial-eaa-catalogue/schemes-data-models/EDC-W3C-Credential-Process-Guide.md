@@ -250,3 +250,49 @@ flowchart TD
   FIELDS --> MAPPING --> ELMSTRUCT --> VCSTRUCT --> SIGNING --> OUTPUT
 ```
 
+
+
+### 🧭 Mapping EAA Fields to ELM Concepts
+
+```mermaid
+flowchart TD
+  %% EAA Catalogue Fields
+  DOB["📘 EAA: Date of Birth"]
+  FN["📘 EAA: Family Name"]
+  GN["📘 EAA: Given Name"]
+  PID["📘 EAA: Personal Identifier"]
+  INST["📘 EAA: Institution Name"]
+  QNAME["📘 EAA: Qualification Name"]
+  ADATE["📘 EAA: Award Date"]
+  COUNTRY["📘 EAA: Award Country"]
+  CLASSIF["📘 EAA: Classification"]
+  FIELD["📘 EAA: Study Field"]
+  THESIS["📘 EAA: Degree Project Title"]
+  ENTITLE["📘 EAA: Entitlement"]
+  OTHER["📘 EAA: Other Information"]
+
+  %% ELM Mapping Targets
+  P[elm:Person]
+  ORG[elm:Organisation]
+  LA[elm:LearningAchievement]
+  LAS[elm:LearningAchievementSpecification]
+  AWPROC[elm:AwardingProcess]
+  LOC[elm:Location]
+  ENT[elm:LearningEntitlement]
+
+  DOB --> P
+  FN --> P
+  GN --> P
+  PID --> P
+
+  INST --> ORG
+  QNAME --> LA
+  ADATE --> AWPROC
+  COUNTRY --> LOC
+
+  CLASSIF --> LAS
+  FIELD --> LAS
+  THESIS --> LAS
+  OTHER --> LAS
+  ENTITLE --> ENT
+```
