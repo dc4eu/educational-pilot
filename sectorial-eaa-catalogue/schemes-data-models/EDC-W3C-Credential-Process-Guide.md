@@ -11,8 +11,6 @@ Designed for **business stakeholders** and **technical implementers**, it includ
 - Example credential excerpts
 
 
-## 🔄 Overall Transformation Process
-
 ```mermaid
 flowchart TD
   FIELDS["🎓 Sector Fields (EAA)"]
@@ -72,7 +70,7 @@ The Higher Education community agrees on a core set of fields for diplomas:
 
 
 
-### EAA Fields to ELM Concepts-Objects
+### EAA Fields to ELM Objects
 
 ```mermaid
 flowchart TD
@@ -127,8 +125,6 @@ The diploma is modelled as:
 - Described by a `LearningAchievementSpecification`
 - Granted by an `Organisation` through an `AwardingProcess`
 - May include optional `LearningEntitlement` and `additionalNote`
-
-
 
 ---
 
