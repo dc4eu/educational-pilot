@@ -14,7 +14,7 @@ This page provides the list of DNS endpoints made available by Piloting Agents t
 
 ---
 
-## 🧪 Pilot 2 – Decentralised PKI via EBSI
+## 🧪 Pilot 2 – Decentralised PKI via EBSI combined with classical PKI Trusted Lists
 
 > This section lists DNS endpoints used for **Pilot 2** verification services based on **Decentralised Identifiers (DIDs)** and **EBSI/VC-based** trust frameworks.
 
