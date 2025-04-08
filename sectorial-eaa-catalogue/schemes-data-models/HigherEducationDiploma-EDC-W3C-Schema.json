@@ -1,0 +1,256 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://example.org/schema/edc-w3c-highered.json",
+    "title": "EDC-W3C Higher Education Diploma Credential (EBSI Compliant)",
+    "description": "Schema to validate a Higher Education Diploma VC aligned with EDC-W3C and EAA catalogue requirements.",
+    "type": "object",
+    "required": [
+      "@context",
+      "type",
+      "issuer",
+      "issuanceDate",
+      "credentialSubject",
+      "credentialSchema"
+    ],
+    "properties": {
+      "@context": {
+        "type": "array",
+        "description": "W3C and EBSI schema contexts",
+        "items": {
+          "type": "string"
+        },
+        "minItems": 1
+      },
+      "type": {
+        "type": "array",
+        "description": "Credential types",
+        "contains": {
+          "const": "VerifiableCredential"
+        }
+      },
+      "issuer": {
+        "description": "Issuer as DID (EBSI)",
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "issuanceDate": {
+        "type": "string",
+        "format": "date-time",
+        "description": "ISO 8601 issuance timestamp"
+      },
+      "credentialSchema": {
+        "type": "object",
+        "description": "EBSI Trusted Schema reference",
+        "required": [
+          "id",
+          "type"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          }
+        }
+      },
+      "credentialSubject": {
+        "type": "object",
+        "description": "Subject of the credential (the learner)",
+        "required": [
+          "id",
+          "type",
+          "givenName",
+          "familyName",
+          "dateOfBirth",
+          "hasCredential"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "givenName": {
+            "description": "First name(s) of learner",
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object"
+              }
+            ]
+          },
+          "familyName": {
+            "description": "Surname of learner",
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object"
+              }
+            ]
+          },
+          "dateOfBirth": {
+            "type": "string",
+            "format": "date",
+            "description": "Birthdate (ISO 8601)"
+          },
+          "hasCredential": {
+            "type": "object",
+            "required": [
+              "title",
+              "eqfLevel",
+              "awardingDate",
+              "awardedBy"
+            ],
+            "properties": {
+              "title": {
+                "description": "Name of the qualification",
+                "oneOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "object"
+                  }
+                ]
+              },
+              "eqfLevel": {
+                "type": "string",
+                "description": "EQF level of the qualification"
+              },
+              "awardingDate": {
+                "type": "string",
+                "format": "date"
+              },
+              "awardedBy": {
+                "type": "object",
+                "required": [
+                  "awardingBody"
+                ],
+                "properties": {
+                  "awardingBody": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "legalName"
+                      ],
+                      "properties": {
+                        "legalName": {
+                          "oneOf": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "object"
+                            }
+                          ]
+                        },
+                        "homepage": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "contentURL": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "educationSubject": {
+                "type": "object",
+                "properties": {
+                  "prefLabel": {
+                    "type": "object"
+                  },
+                  "notation": {
+                    "type": "string"
+                  }
+                }
+              },
+              "subAchievement": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "title",
+                    "grade",
+                    "awardingDate",
+                    "ectsCreditPoints"
+                  ],
+                  "properties": {
+                    "title": {
+                      "oneOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "object"
+                        }
+                      ]
+                    },
+                    "grade": {
+                      "type": "string"
+                    },
+                    "awardingDate": {
+                      "type": "string",
+                      "format": "date"
+                    },
+                    "ectsCreditPoints": {
+                      "type": "number"
+                    },
+                    "additionalNote": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "noteLiteral": {
+                            "type": "object"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "additionalNote": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "noteLiteral": {
+                      "type": "object"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
