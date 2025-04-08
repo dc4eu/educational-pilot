@@ -10,6 +10,21 @@ Designed for **business stakeholders** and **technical implementers**, it includ
 - EBSI compliance checklist
 - Example credential excerpts
 
+
+## 🔄 Overall Transformation Process
+
+```mermaid
+flowchart TD
+  FIELDS["🎓 Sector Fields (EAA)"]
+  MAPPING["🔁 ELM Mapping"]
+  ELMSTRUCT["🧩 ELM Graph"]
+  VCSTRUCT["📦 EDC-W3C Structure"]
+  SIGNING["🔐 Digital Signing"]
+  OUTPUT["🚀 Ready to Issue VC"]
+
+  FIELDS --> MAPPING --> ELMSTRUCT --> VCSTRUCT --> SIGNING --> OUTPUT
+```
+
 ---
 
 ## 1️⃣ Sector-Level Field Definition
@@ -55,6 +70,53 @@ The Higher Education community agrees on a core set of fields for diplomas:
 | EQF level                              | `elm:LearningAchievementSpecification` | `elm:Qualification` |
 | Institution name                       | `elm:Organisation`                  | `elm:legalName`       |
 
+
+
+### EAA Fields to ELM Concepts-Objects
+
+```mermaid
+flowchart TD
+  %% EAA Catalogue Fields
+  DOB["📘 EAA: Date of Birth"]
+  FN["📘 EAA: Family Name"]
+  GN["📘 EAA: Given Name"]
+  PID["📘 EAA: Personal Identifier"]
+  INST["📘 EAA: Institution Name"]
+  QNAME["📘 EAA: Qualification Name"]
+  ADATE["📘 EAA: Award Date"]
+  COUNTRY["📘 EAA: Award Country"]
+  CLASSIF["📘 EAA: Classification"]
+  FIELD["📘 EAA: Study Field"]
+  THESIS["📘 EAA: Degree Project Title"]
+  ENTITLE["📘 EAA: Entitlement"]
+  OTHER["📘 EAA: Other Information"]
+
+  %% ELM Mapping Targets
+  P[elm:Person]
+  ORG[elm:Organisation]
+  LA[elm:LearningAchievement]
+  LAS[elm:LearningAchievementSpecification]
+  AWPROC[elm:AwardingProcess]
+  LOC[elm:Location]
+  ENT[elm:LearningEntitlement]
+
+  DOB --> P
+  FN --> P
+  GN --> P
+  PID --> P
+
+  INST --> ORG
+  QNAME --> LA
+  ADATE --> AWPROC
+  COUNTRY --> LOC
+
+  CLASSIF --> LAS
+  FIELD --> LAS
+  THESIS --> LAS
+  OTHER --> LAS
+  ENTITLE --> ENT
+```
+
 ---
 
 ## 3️⃣ Building the ELM Data Graph
@@ -65,6 +127,8 @@ The diploma is modelled as:
 - Described by a `LearningAchievementSpecification`
 - Granted by an `Organisation` through an `AwardingProcess`
 - May include optional `LearningEntitlement` and `additionalNote`
+
+
 
 ---
 
@@ -78,6 +142,67 @@ The diploma is modelled as:
 | `elm:educationSubject`                 | `hasCredential.educationSubject`       |
 | `elm:AwardingProcess.awardingDate`     | `hasCredential.awardingDate`           |
 | `elm:Organisation.legalName`           | `hasCredential.awardedBy.awardingBody.legalName` |
+
+### ELM to EDC-W3C Credential Format
+
+```mermaid
+flowchart TD
+  subgraph "ELM Concepts"
+    P[elm:Person]
+    GN[foaf:givenName]
+    FN[foaf:familyName]
+    DOB[elm:dateOfBirth]
+    IDN[elm:identifier]
+
+    LA[elm:LearningAchievement]
+    LAS[elm:LearningAchievementSpecification]
+    QUAL[elm:Qualification]
+    SUBJ[elm:educationSubject]
+    NOTE[elm:additionalNote]
+
+    AWPROC[elm:AwardingProcess]
+    AWDATE[elm:awardingDate]
+
+    ORG[elm:Organisation]
+    ORGNAME[elm:legalName]
+  end
+
+  subgraph "EDC-W3C Credential"
+    CS[credentialSubject]
+    CSGN[credentialSubject.givenName]
+    CSFN[credentialSubject.familyName]
+    CSDOB[credentialSubject.dateOfBirth]
+    CSID[credentialSubject.id]
+
+    CLAIM[hasCredential]
+    TITLE[hasCredential.title]
+    LEVEL[hasCredential.eqfLevel]
+    SUBJECT[hasCredential.educationSubject]
+    NOTES[hasCredential.additionalNote]
+
+    AWDBY[hasCredential.awardedBy]
+    AWDT[hasCredential.awardingDate]
+    AWORG[hasCredential.awardedBy.awardingBody]
+    AWNAME[awardingBody.legalName]
+  end
+
+  P --> GN --> CSGN
+  P --> FN --> CSFN
+  P --> DOB --> CSDOB
+  P --> IDN --> CSID
+
+  LA --> TITLE --> CLAIM
+  LAS --> QUAL --> LEVEL
+  LAS --> SUBJ --> SUBJECT
+  LAS --> NOTE --> NOTES
+
+  LA --> AWPROC --> AWDBY
+  AWPROC --> AWDATE --> AWDT
+  AWPROC --> ORG --> AWORG --> AWNAME
+  ORG --> ORGNAME --> AWNAME
+
+```
+
 
 ---
 
@@ -168,131 +293,6 @@ The result is a **standards-based**, **interoperable**, and **verifiable** crede
 
 ---
 
-## 📊 Flowcharts
-
-To help visualise the transformation process and mappings, here are three diagrams.
-
----
-
-### 🔁 Mapping ELM to EDC-W3C Credential Format
-
-```mermaid
-flowchart TD
-  subgraph "ELM Concepts"
-    P[elm:Person]
-    GN[foaf:givenName]
-    FN[foaf:familyName]
-    DOB[elm:dateOfBirth]
-    IDN[elm:identifier]
-
-    LA[elm:LearningAchievement]
-    LAS[elm:LearningAchievementSpecification]
-    QUAL[elm:Qualification]
-    SUBJ[elm:educationSubject]
-    NOTE[elm:additionalNote]
-
-    AWPROC[elm:AwardingProcess]
-    AWDATE[elm:awardingDate]
-
-    ORG[elm:Organisation]
-    ORGNAME[elm:legalName]
-  end
-
-  subgraph "EDC-W3C Credential"
-    CS[credentialSubject]
-    CSGN[credentialSubject.givenName]
-    CSFN[credentialSubject.familyName]
-    CSDOB[credentialSubject.dateOfBirth]
-    CSID[credentialSubject.id]
-
-    CLAIM[hasCredential]
-    TITLE[hasCredential.title]
-    LEVEL[hasCredential.eqfLevel]
-    SUBJECT[hasCredential.educationSubject]
-    NOTES[hasCredential.additionalNote]
-
-    AWDBY[hasCredential.awardedBy]
-    AWDT[hasCredential.awardingDate]
-    AWORG[hasCredential.awardedBy.awardingBody]
-    AWNAME[awardingBody.legalName]
-  end
-
-  P --> GN --> CSGN
-  P --> FN --> CSFN
-  P --> DOB --> CSDOB
-  P --> IDN --> CSID
-
-  LA --> TITLE --> CLAIM
-  LAS --> QUAL --> LEVEL
-  LAS --> SUBJ --> SUBJECT
-  LAS --> NOTE --> NOTES
-
-  LA --> AWPROC --> AWDBY
-  AWPROC --> AWDATE --> AWDT
-  AWPROC --> ORG --> AWORG --> AWNAME
-  ORG --> ORGNAME --> AWNAME
-
-```
-
----
-
-### 🔄 Overall Transformation Process
-
-```mermaid
-flowchart TD
-  FIELDS["🎓 Sector Fields (EAA)"]
-  MAPPING["🔁 ELM Mapping"]
-  ELMSTRUCT["🧩 ELM Graph"]
-  VCSTRUCT["📦 EDC-W3C Structure"]
-  SIGNING["🔐 Digital Signing"]
-  OUTPUT["🚀 Ready to Issue VC"]
-
-  FIELDS --> MAPPING --> ELMSTRUCT --> VCSTRUCT --> SIGNING --> OUTPUT
-```
 
 
 
-### 🧭 Mapping EAA Fields to ELM Concepts
-
-```mermaid
-flowchart TD
-  %% EAA Catalogue Fields
-  DOB["📘 EAA: Date of Birth"]
-  FN["📘 EAA: Family Name"]
-  GN["📘 EAA: Given Name"]
-  PID["📘 EAA: Personal Identifier"]
-  INST["📘 EAA: Institution Name"]
-  QNAME["📘 EAA: Qualification Name"]
-  ADATE["📘 EAA: Award Date"]
-  COUNTRY["📘 EAA: Award Country"]
-  CLASSIF["📘 EAA: Classification"]
-  FIELD["📘 EAA: Study Field"]
-  THESIS["📘 EAA: Degree Project Title"]
-  ENTITLE["📘 EAA: Entitlement"]
-  OTHER["📘 EAA: Other Information"]
-
-  %% ELM Mapping Targets
-  P[elm:Person]
-  ORG[elm:Organisation]
-  LA[elm:LearningAchievement]
-  LAS[elm:LearningAchievementSpecification]
-  AWPROC[elm:AwardingProcess]
-  LOC[elm:Location]
-  ENT[elm:LearningEntitlement]
-
-  DOB --> P
-  FN --> P
-  GN --> P
-  PID --> P
-
-  INST --> ORG
-  QNAME --> LA
-  ADATE --> AWPROC
-  COUNTRY --> LOC
-
-  CLASSIF --> LAS
-  FIELD --> LAS
-  THESIS --> LAS
-  OTHER --> LAS
-  ENTITLE --> ENT
-```
