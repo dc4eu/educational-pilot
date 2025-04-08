@@ -1,10 +1,10 @@
-# 🌍 DNS Registry – Public Verification Services
+# DNS Registry – Public Verification Services
 
 This page provides the list of DNS endpoints made available by Piloting Agents to support **cross-border public verification services** developed within the DC4EU pilots. These services enable trusted validation of credentials across borders under the **eIDAS2 and EUDI Wallet framework**.
 
 ---
 
-## 🧪 Pilot 1 – Classical PKI Trusted Lists
+## Pilot 1 – Classical PKI Trusted Lists
 
 > This section will include the DNS references for Piloting Agents providing verification services based on **classical PKI infrastructure** (e.g. X.509 + Trusted Lists).
 
@@ -14,7 +14,7 @@ This page provides the list of DNS endpoints made available by Piloting Agents t
 
 ---
 
-## 🧪 Pilot 2 – Decentralised PKI via EBSI combined with classical PKI Trusted Lists
+## Pilot 2 – Decentralised PKI via EBSI combined with classical PKI Trusted Lists
 
 > This section lists DNS endpoints used for **Pilot 2** verification services based on **Decentralised Identifiers (DIDs)** and **EBSI/VC-based** trust frameworks.
 
@@ -34,13 +34,13 @@ This page provides the list of DNS endpoints made available by Piloting Agents t
 
 ---
 
-## 🧪 Pilot 3 – Combined (Pilot 1 + Pilot 2)
+## Pilot 3 – Combined (Pilot 1 + Pilot 2)
 
 > Piloting Agents who selected **Pilot 3** are expected to deploy **two public endpoints**, one for **Pilot 1 (PKI-based)** and one for **Pilot 2 (dPKI-based)**.
 >
 > These endpoints are listed below under each pilot type.
 
-### 🔐 PKI-based Verification Services
+### PKI-based Verification Services
 
 | Country | Piloting Agent     | Contact                   | DNS (Pilot 1)                  |
 |---------|--------------------|---------------------------|-------------------------------|
