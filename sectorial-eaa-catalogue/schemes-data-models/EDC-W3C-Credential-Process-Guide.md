@@ -271,9 +271,11 @@ To finalise the credential for EBSI, a proof is added:
 - [Master degree example with sub-achievements](../formal-education/examples/HigherEdcuationDiploma-with-subAchievements.json)
 
 ---
+---
+---
 
 
-# ✅ Verification Checklist for Higher Education Diploma (EDC-W3C / EBSI Aligned)
+# Verification Checklist for Higher Education Diploma (EDC-W3C / EBSI Aligned)
 
 This checklist ensures a credential complies with the **EAA Catalogue** and is correctly structured as an **EDC-W3C Verifiable Credential** in line with **EBSI requirements**.
 
