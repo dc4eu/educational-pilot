@@ -7,7 +7,6 @@ This document presents the relationship between each SPOC and the piloting agent
 | SUNET                                | Sweden      | Ladokkonsortiet                                    | Pilot 1         |
 | Sikt                                 | Norway      | Sikt                                               | Pilot 1         |
 | SURF                                 | Netherlands | SURF                                               | Pilot 1         |
-| SURF                                 | Netherlands | Saxion                                             | Pilot 3         |
 | OPH                                  | Finland     | Finnish National Agency for Education (OPH)        | Pilot 1         |
 | DTU                                  | Denmark     | DeiC/DTU                                           | Pilot 1         |
 | OPI PIB                              | Poland      | University of Zielona Góra                         | Pilot 1         |
@@ -37,3 +36,4 @@ This document presents the relationship between each SPOC and the piloting agent
 |--------------------------------------|-------------|----------------------------------------------------|------------------|
 | Universidade do Porto                | Portugal    | COFAC - Lusofona University                        | Pilot 3         |
 | GovPart Gmbh                         | Germany     | GovPart                                            | Pilot 3         |
+| SURF                                 | Netherlands | Saxion                                             | Pilot 3         |
