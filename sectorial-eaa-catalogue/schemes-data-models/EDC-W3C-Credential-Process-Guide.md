@@ -122,6 +122,68 @@ Once the ELM data is modelled, it is **transformed** into the **W3C Verifiable C
 | `elm:AwardingProcess.awardingDate`     | `hasClaim.awardingDate`            |
 | `elm:Qualification`                    | `hasClaim.eqfLevel`                |
 
+> ✅ Represented visually using flow diagrams for clarity.
+
+```mermaid
+flowchart TD
+  %% ELM side
+  subgraph "ELM Concepts"
+    P[elm:Person]
+    GN[foaf:givenName]
+    FN[foaf:familyName]
+    DOB[elm:dateOfBirth]
+    IDN[elm:identifier]
+
+    LA[elm:LearningAchievement]
+    LAS[elm:LearningAchievementSpecification]
+    QUAL[elm:Qualification]
+    SUBJ[elm:educationSubject]
+    NOTE[elm:additionalNote]
+
+    AWPROC[elm:AwardingProcess]
+    AWDATE[elm:awardingDate]
+
+    ORG[elm:Organisation]
+    ORGNAME[elm:legalName]
+  end
+
+  %% EDC-W3C VC side
+  subgraph "EDC-W3C Credential"
+    CS[credentialSubject]
+    CSGN[credentialSubject.givenName]
+    CSFN[credentialSubject.familyName]
+    CSDOB[credentialSubject.dateOfBirth]
+    CSID[credentialSubject.id]
+
+    CLAIM[hasClaim]
+    TITLE[hasClaim.title]
+    LEVEL[hasClaim.eqfLevel]
+    SUBJECT[hasClaim.educationSubject]
+    NOTES[hasClaim.additionalNote]
+
+    AWDBY[hasClaim.awardedBy]
+    AWDT[hasClaim.awardingDate]
+    AWORG[hasClaim.awardedBy.awardingBody]
+    AWNAME[awardingBody.legalName]
+  end
+
+  %% Links
+  P --> GN --> CSGN
+  P --> FN --> CSFN
+  P --> DOB --> CSDOB
+  P --> IDN --> CSID
+
+  LA --> TITLE --> CLAIM
+  LAS --> QUAL --> LEVEL
+  LAS --> SUBJ --> SUBJECT
+  LAS --> NOTE --> NOTES
+
+  LA --> AWPROC --> AWDBY
+  AWPROC --> AWDATE --> AWDT
+  AWPROC --> ORG --> AWORG --> AWNAME
+  ORG --> ORGNAME --> AWNAME
+```
+
 > 📘 The resulting VC structure is a JSON-LD object with proper nesting and schema references.
 
 ---
