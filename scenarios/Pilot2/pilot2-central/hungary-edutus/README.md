@@ -1,4 +1,4 @@
-# 🎓 Edutus University
+# Edutus University
 
 ## Scenario title
 Postgraduate onboarding and achievement verification
