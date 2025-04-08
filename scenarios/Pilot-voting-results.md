@@ -51,5 +51,5 @@ This document lists all piloting agents based on their selected pilot option in 
 |-------------------------------------------|--------------------------------------|
 | GovPart                                   | Helmut Nehrenheim                    |
 | University of Twente                      | Heleen van der Zaag                  |
-| COFAC - Lusofona University               | paulo.ferreira@lusofona.pt           |
+| COFAC - Lusofona University               | Paulo Ferreira                       |
 | Saxion                                    | Franco De Vita                       |
