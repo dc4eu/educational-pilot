@@ -199,10 +199,86 @@ flowchart TD
 
 ```
 
+---
+## 5️⃣  JSON Schema for Validating Higher Education Diploma (EDC-W3C Compliant)
+
+This section explains the purpose and usage of a **JSON Schema** that validates a **Higher Education Diploma** credential compliant with the **EDC-W3C format** and aligned with the **EAA (European Approach for Accreditation) catalogue**.
 
 ---
 
-## 5️⃣ Example: EDC-W3C Unsigned Credential Snippet
+### 📌 Purpose
+
+This schema ensures that a Verifiable Credential (VC):
+
+- Complies with the **W3C VC data model**
+- Meets **EBSI requirements** for trusted credential issuance
+- Aligns with **mandatory fields defined in the EAA catalogue**
+- Supports **optional enrichment**, such as sub-achievements (modules, courses)
+
+---
+
+### ✅ What the Schema Validates
+
+| Field | Description | Requirement |
+|-------|-------------|-------------|
+| `@context`, `type` | VC metadata | Required |
+| `issuer`, `issuanceDate` | VC core | Required |
+| `credentialSubject` | Learner data | Required |
+| `givenName`, `familyName`, `dateOfBirth` | Personal identifiers | Required |
+| `hasCredential.title`, `eqfLevel`, `awardingDate`, `awardedBy.legalName` | Qualification data | Required |
+| `educationSubject`, `additionalNote` | Optional details | Optional |
+| `subAchievement[]` | Nested modules or courses | Optional, dynamic length |
+
+---
+
+### 🔧 How to Use the Schema
+
+1. Download both:
+   - [HigherEducationDiploma-EDC-W3C-Schema.json](./HigherEducationDiploma-EDC-W3C-Schema.json)
+   - The credential to validate (e.g. `HigherEducationDiploma-with-subAchievements.json`)
+2. Use the provided Python script to validate:
+   ```bash
+   python3 validate_edc_w3c_credential.py
+   ```
+
+---
+
+### 🧾 Snippet of the Schema (Extract)
+
+```json
+{
+  "type": "object",
+  "required": ["@context", "type", "issuer", "issuanceDate", "credentialSubject", "credentialSchema"],
+  "properties": {
+    "credentialSubject": {
+      "required": ["id", "type", "givenName", "familyName", "dateOfBirth", "hasCredential"],
+      "properties": {
+        "hasCredential": {
+          "required": ["title", "eqfLevel", "awardingDate", "awardedBy"]
+        }
+      }
+    }
+  }
+}
+```
+
+> 🧠 The full schema includes support for multilingual fields, array-based `subAchievement[]`, and flexible object formats (string or dictionary with language tags).
+
+---
+
+## 📁 Resources
+
+- [EDC-W3C Specification (W3C)](https://www.w3.org/TR/vc-data-model/)
+- [EBSI Trusted Schema Registry](https://api-pilot.ebsi.eu/trusted-schemas-registry/)
+- [EAA Catalogue Reference](https://europa.eu/europass/en)
+- [JSON Schema File](./HigherEducationDiploma-EDC-W3C-Schema.json)
+- [Validation Script](./validate_edc_w3c_credential.py)
+- [Example Credential with subAchievements](./HigherEducationDiploma-with-subAchievements.json)
+
+
+---
+
+## 6️⃣ Example: EDC-W3C Unsigned Credential Snippet
 
 ```json
 {
@@ -247,7 +323,7 @@ flowchart TD
 
 ---
 
-## 6️⃣ Adding a Digital Signature
+## 7️⃣ Adding a Digital Signature
 
 To finalise the credential for EBSI, a proof is added:
 
@@ -329,7 +405,7 @@ This checklist ensures a credential complies with the **EAA Catalogue** and is c
 - ✅ **Allow** extra fields as long as schema still validates
 - ❌ **Fail** if any mandatory element is missing or wrong type
 
-
+## 
 
 ## Final Notes
 
