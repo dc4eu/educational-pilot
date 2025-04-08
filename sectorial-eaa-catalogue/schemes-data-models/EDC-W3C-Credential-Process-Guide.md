@@ -1,132 +1,183 @@
 
-# From Sectoral Fields to EDC-W3C Credentials: End-to-End Credential Transformation Guide
+# From Sectoral Fields to EDC-W3C Credentials: Higher Education Diploma Transformation Guide
 
-This document explains the **end-to-end process** to go from a *sector-agreed academic credential format* to a fully structured and EBSI-compliant **EDC-W3C credential**.
+This document explains the **end-to-end process** to transform a sector-defined Higher Education Diploma into a fully EBSI-compliant **EDC-W3C Verifiable Credential**.
 
-It is intended for both **business stakeholders** and **technical implementers**, providing a common reference for understanding, transforming, and generating Verifiable Credentials based on the **European Learning Model (ELM)** and aligned with the **European Blockchain Services Infrastructure (EBSI)**.
+Designed for **business stakeholders** and **technical implementers**, it includes:
+- Field-to-ELM mapping
+- ELM graph construction
+- EDC-W3C credential structure
+- EBSI compliance checklist
+- Example credential excerpts
 
 ---
 
 ## 1️⃣ Sector-Level Field Definition
 
-Stakeholders in the Higher Education sector have agreed on a **minimum set of fields** required to represent a credential type — e.g., a Higher Education Diploma.
+As a starting point, we refer to the **EAA Catalogue** of attributes for Higher Education Diplomas, which identifies the minimum agreed fields across the education sector.
 
-**Example Fields:**
-- Learner personal data (name, date of birth, ID)
-- Awarded qualification title
-- Awarding organisation name and location
-- Award date
-- EQF level, study field, classification
-- Optional: thesis title, entitlements, additional notes
+| **Field**                                         | **Mandatory** | **Notes** |
+|--------------------------------------------------|---------------|-----------|
+| Date of birth                                    | ✅            | Learner's birthdate |
+| Family name                                      | ✅            | Surname of the learner |
+| Given name                                       | ✅            | First name(s) of the learner |
+| Personal identifier                              | ⬜ Optional   | Institutional or national ID |
+| Name of awarding tertiary education institution  | ✅            | Full name of the awarding body |
+| Name of qualification                            | ✅            | Title of the diploma awarded |
+| Date of award of academic qualification          | ✅            | The date the diploma was issued |
+| Country of award of academic qualification       | ⬜ Optional   | Country of the awarding institution |
+| Overall classification of the academic qualification | ✅        | Qualification level (EQF/NQF) |
+| Name of qualification study field                | ⬜ Optional   | Field of study (e.g., ISCED) |
+| Degree project title                             | ⬜ Optional   | Final thesis/project title |
+| Entitlement                                       | ⬜ Optional   | Professional rights or recognitions (e.g., nurse) |
+| Other information                                 | ⬜ Optional   | Additional notes or clarifications |
+
+
+
+The Higher Education community agrees on a core set of fields for diplomas:
+
+- Learner personal details (name, date of birth, ID)
+- Qualification title and field
+- Award date and institution
+- EQF level
+- Optional: final project, entitlement, classification
 
 ---
 
-## 2️⃣ Mapping Fields to ELM Concepts
+## 2️⃣ Mapping Fields to ELM
 
-Each field is mapped to the **appropriate ELM object and property**.
-
-| Sector Field                              | ELM Object                      | ELM Property                    |
-|------------------------------------------|----------------------------------|----------------------------------|
-| Date of birth                            | `elm:Person`                    | `elm:dateOfBirth`               |
-| Family name                              | `elm:Person`                    | `foaf:familyName`               |
-| Name of awarding institution             | `elm:Organisation`              | `elm:legalName`                 |
-| Qualification title                      | `elm:LearningAchievement`       | `dc:title`                      |
-| Award date                               | `elm:AwardingProcess`           | `elm:awardingDate`             |
-| Qualification level (EQF)                | `elm:LearningAchievementSpecification` | `elm:Qualification`      |
-| Study field                               | `elm:LearningAchievementSpecification` | `elm:educationSubject`    |
-
-> 🔗 These mappings ensure semantic alignment with the **Europass Learning Model**.
+| Field                                   | ELM Object                          | Property              |
+|----------------------------------------|-------------------------------------|------------------------|
+| Given name, family name                | `elm:Person`                        | `foaf:givenName`, `foaf:familyName` |
+| Date of birth                          | `elm:Person`                        | `elm:dateOfBirth`     |
+| Qualification title                    | `elm:LearningAchievement`           | `dc:title`            |
+| Award date                             | `elm:AwardingProcess`               | `elm:awardingDate`    |
+| EQF level                              | `elm:LearningAchievementSpecification` | `elm:Qualification` |
+| Institution name                       | `elm:Organisation`                  | `elm:legalName`       |
 
 ---
 
-## 3️⃣ Structuring the ELM Graph
+## 3️⃣ Building the ELM Data Graph
 
-Using the mappings, we construct a **linked data structure** of ELM objects with clear relationships:
+The diploma is modelled as:
 
-- `elm:Person` — Learner identity
-- `elm:LearningAchievement` — Awarded diploma
-- `elm:LearningAchievementSpecification` — Description of qualification type
-- `elm:AwardingProcess` — Date and institution
-- `elm:Organisation` — Issuer
-- `elm:Location` — Country of award
-- Optional: `elm:LearningEntitlement`, `additionalNote`, `subject`
+- A `LearningAchievement` awarded to a `Person`
+- Described by a `LearningAchievementSpecification`
+- Granted by an `Organisation` through an `AwardingProcess`
+- May include optional `LearningEntitlement` and `additionalNote`
 
-> ✅ Represented visually using flow diagrams for clarity.
+---
 
-```mermaid
-flowchart TD
-  %% Core entity
-  LA[elm:LearningAchievement]
+## 4️⃣ Mapping to EDC-W3C Credential (EBSI Format)
 
-  %% Personal Information
-  PERSON[elm:Person]
-  PERSON_ID[elm:identifier]
-  DOB[elm:dateOfBirth]
-  FNAME[foaf:familyName]
-  GNAME[foaf:givenName]
+| ELM Element                            | EDC-W3C Credential Field                |
+|----------------------------------------|----------------------------------------|
+| `elm:Person`                           | `credentialSubject`                    |
+| `elm:LearningAchievement.title`        | `credentialSubject.hasCredential.title` |
+| `elm:Qualification` (EQF)              | `hasCredential.eqfLevel`               |
+| `elm:educationSubject`                 | `hasCredential.educationSubject`       |
+| `elm:AwardingProcess.awardingDate`     | `hasCredential.awardingDate`           |
+| `elm:Organisation.legalName`           | `hasCredential.awardedBy.awardingBody.legalName` |
 
-  %% Awarding Organisation
-  ORG[elm:Organisation]
-  LEGALID[elm:LegalIdentifier]
-  ORGNAME[elm:preferredName / legalName]
+---
 
-  %% Qualification / Type
-  LAS[elm:LearningAchievementSpecification]
-  QUAL[elm:Qualification]
-  SUBJ[elm:educationSubject]
-  THESIS[elm:additionalNote_thesis]
-  INFO[elm:additionalNote_other]
+## 5️⃣ Example: EDC-W3C Unsigned Credential Snippet
 
-  %% Entitlement
-  ENTITLE[elm:LearningEntitlement]
-
-  %% Awarding context
-  AWPROC[elm:AwardingProcess]
-  AWDATE[elm:awardingDate]
-  LOC[elm:Location]
-
-  %% Relationships
-  LA --> PERSON
-  PERSON -->|has| DOB
-  PERSON -->|has| FNAME
-  PERSON -->|has| GNAME
-  PERSON -->|may have| PERSON_ID
-
-  LA -->|specified by| LAS
-  LAS -->|classified by| QUAL
-  LAS -->|subject| SUBJ
-  LAS -->|optional| THESIS
-  LAS -->|optional| INFO
-
-  LA -->|grants| ENTITLE
-  LA -->|awarded through| AWPROC
-  AWPROC -->|on date| AWDATE
-  AWPROC -->|in| LOC
-  AWPROC -->|by| ORG
-  ORG -->|has name| ORGNAME
-  ORG -->|has ID| LEGALID
+```json
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://www.w3.org/2018/credentials/examples/v1",
+    "https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/z5P8ebAhZjuvypiSXSHoba6vstbhTwnLhVuULWKenuiNJ"
+  ],
+  "type": [
+    "VerifiableCredential",
+    "VerifiableAttestation",
+    "EuropeanDigitalCredential"
+  ],
+  "issuer": {
+    "id": "did:ebsi:z21wWdByYSDsiUemHbbgmzSa"
+  },
+  "issuanceDate": "2025-04-06T12:00:00Z",
+  "credentialSubject": {
+    "id": "did:key:abcdefg123456789",
+    "type": "Person",
+    "givenName": "Ana",
+    "familyName": "Andromeda",
+    "hasCredential": {
+      "title": "Master of Arts in Media Studies",
+      "awardingDate": "2023-06-30",
+      "eqfLevel": "7",
+      "awardedBy": {
+        "awardingBody": [{
+          "legalName": {
+            "en": ["University of Example"]
+          }
+        }]
+      }
+    }
+  },
+  "credentialSchema": {
+    "id": "https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/z5P8ebAhZjuvypiSXSHoba6vstbhTwnLhVuULWKenuiNJ",
+    "type": "JsonSchemaValidator2018"
+  }
+}
 ```
 
 ---
 
-## 4️⃣ Mapping ELM to EDC-W3C Credential Format
+## 6️⃣ Adding a Digital Signature
 
-Once the ELM data is modelled, it is **transformed** into the **W3C Verifiable Credential structure**, as adopted by EBSI.
+To finalise the credential for EBSI, a proof is added:
 
-| ELM Element                            | EDC-W3C Representation              |
-|----------------------------------------|-------------------------------------|
-| `elm:Person`                           | `credentialSubject`                |
-| `foaf:givenName` / `foaf:familyName`   | `credentialSubject.givenName` / `familyName` |
-| `elm:LearningAchievement`              | `credentialSubject.hasClaim`       |
-| `elm:Organisation`                     | `hasClaim.awardedBy`               |
-| `elm:AwardingProcess.awardingDate`     | `hasClaim.awardingDate`            |
-| `elm:Qualification`                    | `hasClaim.eqfLevel`                |
+```json
+"proof": {
+  "type": "Ed25519Signature2018",
+  "created": "2025-04-06T12:00:00Z",
+  "proofPurpose": "assertionMethod",
+  "verificationMethod": "did:ebsi:z21wWdByYSDsiUemHbbgmzSa#keys-1",
+  "jws": "eyJhbGciOiJFZERTQSJ9..simulatedSignature"
+}
+```
 
-> ✅ Represented visually using flow diagrams for clarity.
+---
+
+## 7️⃣ Summary Diagram
 
 ```mermaid
 flowchart TD
-  %% ELM side
+  FIELDS["🎓 Sector Fields"]
+  MAPPING["🔁 ELM Mapping"]
+  ELMSTRUCT["🧩 ELM Graph"]
+  VCSTRUCT["📦 EDC-W3C Structure"]
+  SIGNING["🔐 Digital Signing"]
+  OUTPUT["🚀 Ready to Issue VC"]
+
+  FIELDS --> MAPPING --> ELMSTRUCT --> VCSTRUCT --> SIGNING --> OUTPUT
+```
+
+---
+
+## Final Notes
+
+The result is a **standards-based**, **interoperable**, and **verifiable** credential ready for:
+- Use in EBSI wallets
+- Sharing across Member States
+- Automatic verification and recognition
+
+
+---
+
+## 📊 Flowcharts
+
+To help visualise the transformation process and mappings, here are three diagrams.
+
+---
+
+### 🔁 Mapping ELM to EDC-W3C Credential Format
+
+```mermaid
+flowchart TD
   subgraph "ELM Concepts"
     P[elm:Person]
     GN[foaf:givenName]
@@ -147,7 +198,6 @@ flowchart TD
     ORGNAME[elm:legalName]
   end
 
-  %% EDC-W3C VC side
   subgraph "EDC-W3C Credential"
     CS[credentialSubject]
     CSGN[credentialSubject.givenName]
@@ -155,19 +205,18 @@ flowchart TD
     CSDOB[credentialSubject.dateOfBirth]
     CSID[credentialSubject.id]
 
-    CLAIM[hasClaim]
-    TITLE[hasClaim.title]
-    LEVEL[hasClaim.eqfLevel]
-    SUBJECT[hasClaim.educationSubject]
-    NOTES[hasClaim.additionalNote]
+    CLAIM[hasCredential]
+    TITLE[hasCredential.title]
+    LEVEL[hasCredential.eqfLevel]
+    SUBJECT[hasCredential.educationSubject]
+    NOTES[hasCredential.additionalNote]
 
-    AWDBY[hasClaim.awardedBy]
-    AWDT[hasClaim.awardingDate]
-    AWORG[hasClaim.awardedBy.awardingBody]
+    AWDBY[hasCredential.awardedBy]
+    AWDT[hasCredential.awardingDate]
+    AWORG[hasCredential.awardedBy.awardingBody]
     AWNAME[awardingBody.legalName]
   end
 
-  %% Links
   P --> GN --> CSGN
   P --> FN --> CSFN
   P --> DOB --> CSDOB
@@ -182,58 +231,22 @@ flowchart TD
   AWPROC --> AWDATE --> AWDT
   AWPROC --> ORG --> AWORG --> AWNAME
   ORG --> ORGNAME --> AWNAME
+
 ```
 
-> 📘 The resulting VC structure is a JSON-LD object with proper nesting and schema references.
-
 ---
 
-## 5️⃣ Applying EBSI Compliance Rules
-
-To ensure the VC is valid in the **EBSI ecosystem**, we apply:
-
-- `@context`: includes W3C VC and EBSI schema URIs
-- `type`: includes `"VerifiableCredential"` and `"EuropeanDigitalCredential"`
-- `issuer`: must be a valid EBSI DID (`did:ebsi:...`)
-- `credentialSubject.id`: must be a DID (`did:key:...`)
-- `credentialSchema`: URI from the [EBSI Trusted Schema Registry](https://api-pilot.ebsi.eu/trusted-schemas-registry/)
-- `credentialStatus`: optional but recommended (revocation tracking)
-- `proof`: must include digital signature (e.g., `Ed25519Signature2018`)
-
----
-
-## 6️⃣ Output: Verifiable Credential (Ready to Issue)
-
-The final output is a **machine-verifiable** Verifiable Credential, digitally signed and ready for:
-
-- Wallet delivery to the learner
-- On-chain verification via EBSI infrastructure
-- Integration into national registries and recognition systems
-
----
-
-## 7️⃣ Summary Diagram
+### 🔄 Overall Transformation Process
 
 ```mermaid
 flowchart TD
-  FIELDS["🎓 Sector Fields"]
+  FIELDS["🎓 Sector Fields (EAA)"]
   MAPPING["🔁 ELM Mapping"]
-  ELMSTRUCT["🧩 ELM Structure"]
-  VCSTRUCT["📦 EDC-W3C Credential"]
-  EBSIRULES["✅ EBSI Compliance"]
-  OUTPUT["🚀 Signed VC Issued"]
+  ELMSTRUCT["🧩 ELM Graph"]
+  VCSTRUCT["📦 EDC-W3C Structure"]
+  SIGNING["🔐 Digital Signing"]
+  OUTPUT["🚀 Ready to Issue VC"]
 
-  FIELDS --> MAPPING --> ELMSTRUCT --> VCSTRUCT --> EBSIRULES --> OUTPUT
+  FIELDS --> MAPPING --> ELMSTRUCT --> VCSTRUCT --> SIGNING --> OUTPUT
 ```
-
----
-
-## Final Notes
-
-This process ensures:
-- Interoperability via ELM
-- Verifiability via EBSI
-- Trust and standardisation across sectors and borders
-
-For implementers, templates and schema references can be provided to accelerate adoption.
 
