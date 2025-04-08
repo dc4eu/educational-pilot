@@ -265,9 +265,9 @@ To finalise the credential for EBSI, a proof is added:
 
 ## 7️⃣ Examples
 
-[Mater degree unsigned](../formal-education/examples/MasterDegree-EBSI-VC-unsigned.json)
-[Master degree signed](../formal-education/examples/MasterDegree-EBSI-VC-signed.json)
-[Master degree explained](../formal-education/examples/MasterDegree-VC-presentation.md)
+- [Mater degree unsigned](../formal-education/examples/MasterDegree-EBSI-VC-unsigned.json)
+- [Master degree signed](../formal-education/examples/MasterDegree-EBSI-VC-signed.json)
+- [Master degree explained](../formal-education/examples/MasterDegree-VC-presentation.md)
 
 ---
 
