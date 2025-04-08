@@ -20,8 +20,8 @@ This page provides the list of DNS endpoints made available by Piloting Agents t
 
 | Country      | Piloting Agent                                           | Contact                          | DNS                               |
 |--------------|----------------------------------------------------------|----------------------------------|------------------------------------|
-| Netherlands  | Saxion University of Applied Sciences                    | Franco de Vitta                  | lspsaxion.saxion.nl                |
-| Portugal     | COFAC - Lusofona University                              | Paulo Ferreira                   | lspulusofona.ulusofona.pt          |
+| Netherlands  | Saxion University of Applied Sciences                    | Franco de Vitta                  | [lspsaxion.saxion.nl](https://uself-verifier-gui.lspsaxion.saxion.nl)                |
+| Portugal     | COFAC - Lusofona University                              | Paulo Ferreira                   | [lspulusofona.ulusofona.pt](https://uself-verifier-gui.lspulusofona.ulusofona.pt)          |
 | Romania      | Politehnica University of Timisoara, Romania (UPT)       | Diana Andone                     | *(missing)*                        |
 | Hungary      | Edutus University                                        | Laki Balazs                      | TBC                                |
 | Germany      | GovPart                                                  | Helmut & Guido                   | lspgovpart.govpart.de              |
