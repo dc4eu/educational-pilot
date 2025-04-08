@@ -27,10 +27,10 @@ This page provides the list of DNS endpoints made available by Piloting Agents t
 | Germany      | GovPart                                                  | Helmut & Guido                   | lspgovpart.govpart.de              |
 | Netherlands  | University of Twente                                     | Helenn Vanderzaag                | lsput.utwente.nl                   |
 | Italy        | University of Bologna                                    | Sergio Storari                   | lspdc4edu.unibo.it                 |
-| Spain        | University of Alcalá (UAH)                               | Sergio Caro                      | lspuah.uah.es                      |
-| Spain        | University of Málaga                                     | Victoriano Giralt                | lspuma.uma.es                      |
-| Romania      | UEFISCDI                                                 | Cosmin Cioranu                   | lsp.dc4eu.runidas.rei.gov.ro       |
-| Spain        | Universitat Rovira i Virgili                             | Maria Teresa Bordas              | lspurv.urv.cat                     |
+| Spain        | University of Alcalá (UAH)                               | Sergio Caro                      | [lspuah.uah.es](https://uself-verifier-gui.lspuah.uah.es)                      |
+| Spain        | University of Málaga                                     | Victoriano Giralt                | [lspuma.uma.es](https://uself-verifier-gui.lspuma.uma.es)                       |
+| Romania      | UEFISCDI                                                 | Cosmin Cioranu                   | [lsp.dc4eu.runidas.rei.gov.ro](https://uself-verifier-gui.lsp.dc4eu.runidas.rei.gov.ro)       |
+| Spain        | Universitat Rovira i Virgili                             | Maria Teresa Bordas              | [lspurv.urv.cat](https://uself-verifier-gui.lspurv.urv.cat/)                     |
 
 ---
 
