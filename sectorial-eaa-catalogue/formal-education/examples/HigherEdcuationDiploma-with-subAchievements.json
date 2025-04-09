@@ -1,65 +1,78 @@
 {
-    "@context": [
-      "https://www.w3.org/2018/credentials/v1",
-      "https://www.w3.org/2018/credentials/examples/v1",
-      "https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/z5P8ebAhZjuvypiSXSHoba6vstbhTwnLhVuULWKenuiNJ"
-    ],
-    "id": "urn:uuid:he-diploma-with-subachievements",
-    "type": [
-      "VerifiableCredential",
-      "VerifiableAttestation",
-      "EuropeanDigitalCredential"
-    ],
-    "issuer": {
-      "id": "did:ebsi:z21wWdByYSDsiUemHbbgmzSa"
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://www.w3.org/2018/credentials/examples/v1",
+    "https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/z5P8ebAhZjuvypiSXSHoba6vstbhTwnLhVuULWKenuiNJ"
+  ],
+  "id": "urn:uuid:he-diploma-with-subachievements",
+  "type": [
+    "VerifiableCredential",
+    "VerifiableAttestation",
+    "EuropeanDigitalCredential"
+  ],
+  "issuer": {
+    "id": "did:ebsi:z21wWdByYSDsiUemHbbgmzSa"
+  },
+  "issuanceDate": "2025-04-06T12:00:00Z",
+  "issued": "2025-04-06T12:00:00Z",
+  "validFrom": "2025-04-06T12:00:00Z",
+  "validUntil": "2030-12-31T23:59:59Z",
+  "expirationDate": "2030-12-31T23:59:59Z",
+  "credentialSchema": {
+    "id": "https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/z5P8ebAhZjuvypiSXSHoba6vstbhTwnLhVuULWKenuiNJ",
+    "type": "JsonSchemaValidator2018"
+  },
+  "credentialSubject": {
+    "id": "did:key:abcdefg123456789",
+    "type": "Person",
+    "givenName": {
+      "en": [
+        "Laura"
+      ]
     },
-    "issuanceDate": "2025-04-06T12:00:00Z",
-    "issued": "2025-04-06T12:00:00Z",
-    "validFrom": "2025-04-06T12:00:00Z",
-    "validUntil": "2030-12-31T23:59:59Z",
-    "expirationDate": "2030-12-31T23:59:59Z",
-    "credentialSchema": {
-      "id": "https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/z5P8ebAhZjuvypiSXSHoba6vstbhTwnLhVuULWKenuiNJ",
-      "type": "JsonSchemaValidator2018"
+    "familyName": {
+      "en": [
+        "Est\u00e9vez"
+      ]
     },
-    "credentialSubject": {
-      "id": "did:key:abcdefg123456789",
-      "type": "Person",
-      "givenName": {
+    "dateOfBirth": "1998-09-20",
+    "hasClaim": {
+      "title": {
         "en": [
-          "Laura"
+          "Bachelor of Science in Computer Engineering"
         ]
       },
-      "familyName": {
-        "en": [
-          "Est\u00e9vez"
-        ]
-      },
-      "dateOfBirth": "1998-09-20",
-      "hasCredential": {
-        "title": {
-          "en": [
-            "Bachelor of Science in Computer Engineering"
-          ]
-        },
-        "eqfLevel": "6",
-        "awardingDate": "2024-07-10",
-        "awardedBy": {
-          "awardingBody": [
-            {
-              "legalName": {
-                "en": [
-                  "Technical University of Europe"
-                ]
-              },
-              "homepage": [
-                {
-                  "contentURL": "https://tuexample.edu"
-                }
+      "awardingDate": "2024-07-10",
+      "awardedBy": {
+        "awardingBody": [
+          {
+            "legalName": {
+              "en": [
+                "Technical University of Europe"
               ]
+            },
+            "homepage": [
+              {
+                "contentURL": "https://tuexample.edu"
+              }
+            ],
+            "identifier": {
+              "notation": "TUE-2024",
+              "schemeID": "ErasmusCode"
+            },
+            "location": {
+              "country": "EU",
+              "prefLabel": {
+                "en": [
+                  "Europe"
+                ]
+              }
             }
-          ]
-        },
+          }
+        ]
+      },
+      "specifiedBy": {
+        "eqfLevel": "6",
         "educationSubject": {
           "prefLabel": {
             "en": [
@@ -68,97 +81,124 @@
           },
           "notation": "0612"
         },
-        "subAchievement": [
-          {
-            "title": {
-              "en": [
-                "Algorithms and Data Structures"
-              ]
-            },
-            "grade": "8.5",
-            "awardingDate": "2023-06-15",
-            "ectsCreditPoints": 6
-          },
-          {
-            "title": {
-              "en": [
-                "Computer Architecture"
-              ]
-            },
-            "grade": "7.0",
-            "awardingDate": "2023-06-15",
-            "ectsCreditPoints": 6
-          },
-          {
-            "title": {
-              "en": [
-                "Software Engineering"
-              ]
-            },
-            "grade": "9.0",
-            "awardingDate": "2023-06-15",
-            "ectsCreditPoints": 6
-          },
-          {
-            "title": {
-              "en": [
-                "Databases"
-              ]
-            },
-            "grade": "8.0",
-            "awardingDate": "2023-06-15",
-            "ectsCreditPoints": 6
-          },
-          {
-            "title": {
-              "en": [
-                "Operating Systems"
-              ]
-            },
-            "grade": "7.5",
-            "awardingDate": "2023-06-15",
-            "ectsCreditPoints": 6
-          },
-          {
-            "title": {
-              "en": [
-                "Computer Networks"
-              ]
-            },
-            "grade": "8.0",
-            "awardingDate": "2023-06-15",
-            "ectsCreditPoints": 6
-          },
-          {
-            "title": {
-              "en": [
-                "Web Technologies"
-              ]
-            },
-            "grade": "9.5",
-            "awardingDate": "2023-06-15",
-            "ectsCreditPoints": 6
-          },
-          {
-            "title": {
-              "en": [
-                "Final Year Project"
-              ]
-            },
-            "grade": "9.0",
-            "awardingDate": "2024-06-15",
-            "ectsCreditPoints": 12,
-            "additionalNote": [
-              {
-                "noteLiteral": {
-                  "en": [
-                    "Design and implementation of an AI-based traffic prediction system"
-                  ]
-                }
-              }
+        "qualificationCode": "BSc-CompEng-2024"
+      },
+      "additionalNote": [],
+      "subAchievement": [
+        {
+          "title": {
+            "en": [
+              "Algorithms and Data Structures"
             ]
-          }
-        ]
-      }
+          },
+          "grade": {
+            "gradeValue": "8.5",
+            "gradeScale": "0\u201310"
+          },
+          "awardingDate": "2023-06-15",
+          "ectsCreditPoints": 6
+        },
+        {
+          "title": {
+            "en": [
+              "Computer Architecture"
+            ]
+          },
+          "grade": {
+            "gradeValue": "7.0",
+            "gradeScale": "0\u201310"
+          },
+          "awardingDate": "2023-06-15",
+          "ectsCreditPoints": 6
+        },
+        {
+          "title": {
+            "en": [
+              "Software Engineering"
+            ]
+          },
+          "grade": {
+            "gradeValue": "9.0",
+            "gradeScale": "0\u201310"
+          },
+          "awardingDate": "2023-06-15",
+          "ectsCreditPoints": 6
+        },
+        {
+          "title": {
+            "en": [
+              "Databases"
+            ]
+          },
+          "grade": {
+            "gradeValue": "8.0",
+            "gradeScale": "0\u201310"
+          },
+          "awardingDate": "2023-06-15",
+          "ectsCreditPoints": 6
+        },
+        {
+          "title": {
+            "en": [
+              "Operating Systems"
+            ]
+          },
+          "grade": {
+            "gradeValue": "7.5",
+            "gradeScale": "0\u201310"
+          },
+          "awardingDate": "2023-06-15",
+          "ectsCreditPoints": 6
+        },
+        {
+          "title": {
+            "en": [
+              "Computer Networks"
+            ]
+          },
+          "grade": {
+            "gradeValue": "8.0",
+            "gradeScale": "0\u201310"
+          },
+          "awardingDate": "2023-06-15",
+          "ectsCreditPoints": 6
+        },
+        {
+          "title": {
+            "en": [
+              "Web Technologies"
+            ]
+          },
+          "grade": {
+            "gradeValue": "9.5",
+            "gradeScale": "0\u201310"
+          },
+          "awardingDate": "2023-06-15",
+          "ectsCreditPoints": 6
+        },
+        {
+          "title": {
+            "en": [
+              "Final Year Project"
+            ]
+          },
+          "grade": {
+            "gradeValue": "9.0",
+            "gradeScale": "0\u201310"
+          },
+          "awardingDate": "2024-06-15",
+          "ectsCreditPoints": 12,
+          "additionalNote": [
+            {
+              "noteLiteral": {
+                "en": [
+                  "Design and implementation of an AI-based traffic prediction system"
+                ]
+              }
+            }
+          ]
+        }
+      ]
     }
   }
+}
