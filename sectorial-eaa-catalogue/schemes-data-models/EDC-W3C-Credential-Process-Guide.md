@@ -145,6 +145,7 @@ The diploma is modelled as:
 
 ```mermaid
 flowchart TD
+  %% ELM Concepts
   subgraph "ELM Concepts"
     P[elm:Person]
     GN[foaf:givenName]
@@ -157,14 +158,19 @@ flowchart TD
     QUAL[elm:Qualification]
     SUBJ[elm:educationSubject]
     NOTE[elm:additionalNote]
+    SA[elm:subAchievement]
+    GRADE[elm:grade]
 
     AWPROC[elm:AwardingProcess]
     AWDATE[elm:awardingDate]
 
     ORG[elm:Organisation]
     ORGNAME[elm:legalName]
+    ORGID[elm:LegalIdentifier]
+    ORGLOC[elm:Location]
   end
 
+  %% EDC-W3C Credential
   subgraph "EDC-W3C Credential"
     CS[credentialSubject]
     CSGN[credentialSubject.givenName]
@@ -172,33 +178,56 @@ flowchart TD
     CSDOB[credentialSubject.dateOfBirth]
     CSID[credentialSubject.id]
 
-    CLAIM[hasCredential]
-    TITLE[hasCredential.title]
-    LEVEL[hasCredential.eqfLevel]
-    SUBJECT[hasCredential.educationSubject]
-    NOTES[hasCredential.additionalNote]
+    CLAIM[hasClaim]
+    TITLE[hasClaim.title]
+    AWDT[hasClaim.awardingDate]
+    NOTES[hasClaim.additionalNote]
 
-    AWDBY[hasCredential.awardedBy]
-    AWDT[hasCredential.awardingDate]
-    AWORG[hasCredential.awardedBy.awardingBody]
+    SPEC[hasClaim.specifiedBy]
+    LEVEL[specifiedBy.eqfLevel]
+    SUBJECT[specifiedBy.educationSubject]
+    QCODE[specifiedBy.qualificationCode]
+
+    SUBS[hasClaim.subAchievement[]]
+    SUBTITLE[subAchievement.title]
+    SUBGRADE[subAchievement.grade]
+    SUBECTS[subAchievement.ectsCreditPoints]
+
+    AWDBY[hasClaim.awardedBy]
+    AWORG[awardingBody[]]
     AWNAME[awardingBody.legalName]
+    AWHOME[awardingBody.homepage]
+    AWID[awardingBody.identifier]
+    AWLOC[awardingBody.location]
   end
 
+  %% Links
   P --> GN --> CSGN
   P --> FN --> CSFN
   P --> DOB --> CSDOB
   P --> IDN --> CSID
 
-  LA --> TITLE --> CLAIM
-  LAS --> QUAL --> LEVEL
-  LAS --> SUBJ --> SUBJECT
-  LAS --> NOTE --> NOTES
+  CS --> CLAIM
+  CLAIM --> TITLE
+  CLAIM --> AWDT
+  CLAIM --> NOTES
 
-  LA --> AWPROC --> AWDBY
-  AWPROC --> AWDATE --> AWDT
-  AWPROC --> ORG --> AWORG --> AWNAME
-  ORG --> ORGNAME --> AWNAME
+  CLAIM --> SPEC
+  SPEC --> LEVEL
+  SPEC --> SUBJECT
+  SPEC --> QCODE
 
+  CLAIM --> SUBS
+  SUBS --> SUBTITLE
+  SUBS --> SUBGRADE
+  SUBS --> SUBECTS
+
+  CLAIM --> AWDBY
+  AWDBY --> AWORG
+  AWORG --> AWNAME
+  AWORG --> AWHOME
+  AWORG --> AWID
+  AWORG --> AWLOC
 ```
 
 ---
