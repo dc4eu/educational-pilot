@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://example.org/schema/edc-w3c-highered-full-aligned.json",
-  "title": "Updated EDC-W3C Higher Education Diploma Credential (Full ELM Alignment)",
-  "description": "Schema for validating an EBSI-compliant Higher Education Diploma credential using hasClaim and specifiedBy.",
+  "$id": "https://example.org/schema/edc-w3c-highered-final.json",
+  "title": "Final EDC-W3C Higher Education Diploma Credential Schema",
+  "description": "Includes ELM alignment, subAchievements, and multi-purpose credentialStatus entries.",
   "type": "object",
   "required": [
     "@context",
@@ -60,6 +60,46 @@
         },
         "type": {
           "type": "string"
+        }
+      }
+    },
+    "credentialStatus": {
+      "type": "array",
+      "description": "Multiple StatusList2021Entry entries for revocation and suspension",
+      "items": {
+        "type": "object",
+        "required": [
+          "type",
+          "id",
+          "statusListIndex",
+          "statusListCredential",
+          "statusPurpose"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "StatusList2021Entry"
+            ]
+          },
+          "id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "statusListIndex": {
+            "type": "string"
+          },
+          "statusListCredential": {
+            "type": "string",
+            "format": "uri"
+          },
+          "statusPurpose": {
+            "type": "string",
+            "enum": [
+              "revocation",
+              "suspension"
+            ]
+          }
         }
       }
     },
