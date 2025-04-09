@@ -4,6 +4,7 @@
 This document explains the **end-to-end process** to transform a sector-defined Higher Education Diploma into a fully EBSI-compliant **EDC-W3C Verifiable Credential**.
 
 Designed for **business stakeholders** and **technical implementers**, it includes:
+- EAA attributes identified at Sector-level for a given Edcuatin/Professional achievement
 - Field-to-ELM mapping
 - ELM graph construction
 - EDC-W3C credential structure
