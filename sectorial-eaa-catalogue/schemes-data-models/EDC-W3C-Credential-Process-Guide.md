@@ -236,7 +236,7 @@ This schema ensures that a Verifiable Credential (VC):
 
 1. Download both:
    - [HigherEducationDiploma-EDC-W3C-Schema.json](./HigherEducationDiploma-EDC-W3C-Schema.json)
-   - The credential to validate (e.g. `HigherEducationDiploma-with-subAchievements.json`)
+   - The credential to validate (e.g. [HigherEducationDiploma-with-subAchievements.json](../formal-education/examples/HigherEdcuationDiploma-with-subAchievements.json))
 2. Use the provided Python script to validate:
    ```bash
    python3 validate_edc_w3c_credential.py
