@@ -29,7 +29,7 @@ flowchart TD
 
 ## 1️⃣ Sector-Level Field Definition
 
-As a starting point, we refer to the **EAA Catalogue** of attributes for Higher Education Diplomas, which identifies the minimum agreed fields across the education sector.Example for Higher Education Diploma:
+As a starting point, we refer to the **EAA Catalogue** of attributes for Higher Education Diplomas, which identifies the minimum agreed fields across the education sector.
 
 | **Field**                                         | **Mandatory** | **Notes** |
 |--------------------------------------------------|---------------|-----------|
@@ -419,4 +419,95 @@ The result is a **standards-based**, **interoperable**, and **verifiable** crede
 
 
 
+
+
+---
+
+## 🧩 Updated Example: EDC-W3C Credential (Full Alignment with ELM)
+
+This credential shows a Higher Education Diploma (Master's Degree) fully aligned with:
+
+- The EAA catalogue (mandatory and optional fields)
+- The ELM 3.2 structure (`hasClaim`, `specifiedBy`, `subAchievement`, etc.)
+- EBSI envelope and validation requirements
+
+```json
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://www.w3.org/2018/credentials/examples/v1",
+    "https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/z5P8ebAhZjuvypiSXSHoba6vstbhTwnLhVuULWKenuiNJ"
+  ],
+  "type": [
+    "VerifiableCredential",
+    "VerifiableAttestation",
+    "EuropeanDigitalCredential"
+  ],
+  "issuer": {
+    "id": "did:ebsi:z21wWdByYSDsiUemHbbgmzSa"
+  },
+  "credentialSubject": {
+    "id": "did:key:z6MkvExampleHolderDID",
+    "type": "Person",
+    "givenName": { "en": ["Ana"] },
+    "familyName": { "en": ["Andromeda"] },
+    "dateOfBirth": "1997-05-15",
+    "hasClaim": {
+      "title": { "en": ["Master of Arts in Media Studies"] },
+      "awardingDate": "2023-06-30",
+      "awardedBy": {
+        "awardingBody": [{
+          "legalName": { "en": ["University of Example"] },
+          "homepage": [{ "contentURL": "https://example.edu" }],
+          "identifier": {
+            "notation": "UOE-2024",
+            "schemeID": "ErasmusCode"
+          },
+          "location": {
+            "country": "ES",
+            "prefLabel": { "en": ["Spain"] }
+          }
+        }]
+      },
+      "specifiedBy": {
+        "eqfLevel": "7",
+        "educationSubject": {
+          "notation": "0321",
+          "prefLabel": { "en": ["Media Studies"] }
+        },
+        "qualificationCode": "MA-MS-2023"
+      },
+      "additionalNote": [{
+        "noteLiteral": { "en": ["Thesis on digital storytelling in journalism"] }
+      }],
+      "subAchievement": [
+        {
+          "title": { "en": ["Media Theory and Practice"] },
+          "grade": {
+            "gradeValue": "9.0",
+            "gradeScale": "0–10"
+          },
+          "awardingDate": "2023-06-01",
+          "ectsCreditPoints": 6
+        },
+        {
+          "title": { "en": ["Final Project"] },
+          "grade": {
+            "gradeValue": "9.5",
+            "gradeScale": "0–10"
+          },
+          "awardingDate": "2023-07-01",
+          "ectsCreditPoints": 12,
+          "additionalNote": [{
+            "noteLiteral": { "en": ["Analysis of media influence in political campaigns"] }
+          }]
+        }
+      ]
+    }
+  }
+}
+```
+
+📄 [Download Enhanced Unsigned Credential](./MasterDegree-EBSI-VC-full-aligned-unsigned.json)  
+🔐 [Download Enhanced Signed Credential](./MasterDegree-EBSI-VC-full-aligned-signed.json)
 
