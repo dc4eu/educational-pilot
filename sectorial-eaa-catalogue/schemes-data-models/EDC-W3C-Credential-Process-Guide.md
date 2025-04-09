@@ -268,18 +268,6 @@ This schema ensures that a Verifiable Credential (VC):
 
 ---
 
-## 📁 Resources
-
-- [EDC-W3C Specification (W3C)](https://www.w3.org/TR/vc-data-model/)
-- [EBSI Trusted Schema Registry](https://api-pilot.ebsi.eu/trusted-schemas-registry/)
-- [EAA Catalogue Reference](https://europa.eu/europass/en)
-- [JSON Schema File](./HigherEducationDiploma-EDC-W3C-Schema.json)
-- [Validation Script](./validate_edc_w3c_credential.py)
-- [Example Credential with subAchievements](./HigherEducationDiploma-with-subAchievements.json)
-
-
----
-
 ## 6️⃣ Example: EDC-W3C Unsigned Credential Snippet
 
 ```json
@@ -350,7 +338,6 @@ To finalise the credential for EBSI, a proof is added:
 
 ---
 ---
----
 
 
 # Verification Checklist for Higher Education Diploma (EDC-W3C / EBSI Aligned)
@@ -416,10 +403,6 @@ The result is a **standards-based**, **interoperable**, and **verifiable** crede
 - Sharing across Member States
 - Automatic verification and recognition
 ---
-
-
-
-
 
 ---
 
@@ -510,4 +493,16 @@ This credential shows a Higher Education Diploma (Master's Degree) fully aligned
 
 📄 [Download Enhanced Unsigned Credential](./MasterDegree-EBSI-VC-full-aligned-unsigned.json)  
 🔐 [Download Enhanced Signed Credential](./MasterDegree-EBSI-VC-full-aligned-signed.json)
+
+
+
+
+## 📁 Resources
+
+- [EDC-W3C Specification (W3C)](https://www.w3.org/TR/vc-data-model/)
+- [EBSI Trusted Schema Registry](https://api-pilot.ebsi.eu/trusted-schemas-registry/)
+- [EAA Catalogue Reference](https://europa.eu/europass/en)
+- [JSON Schema File](./HigherEducationDiploma-EDC-W3C-Schema.json)
+- [Validation Script](./validate_edc_w3c_credential.py)
+- [Example Credential with subAchievements](./HigherEducationDiploma-with-subAchievements.json)
 
