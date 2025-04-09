@@ -200,5 +200,21 @@
         }
       ]
     }
-  }
+  },
+  "credentialStatus": [
+    {
+      "type": "StatusList2021Entry",
+      "id": "https://uself-issuer-agent.lspurv.urv.cat/status/v1#5",
+      "statusListIndex": "5",
+      "statusListCredential": "https://uself-issuer-agent.lspurv.urv.cat/status/v1",
+      "statusPurpose": "revocation"
+    },
+    {
+      "type": "StatusList2021Entry",
+      "id": "https://uself-issuer-agent.lspurv.urv.cat/status/v2#5",
+      "statusListIndex": "5",
+      "statusListCredential": "https://uself-issuer-agent.lspurv.urv.cat/status/v2",
+      "statusPurpose": "suspension"
+    }
+  ]
 }
