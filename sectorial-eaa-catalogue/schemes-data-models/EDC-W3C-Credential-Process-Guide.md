@@ -189,13 +189,13 @@ flowchart TD
     SUBJECT[specifiedBy.educationSubject]
     QCODE[specifiedBy.qualificationCode]
 
-    SUBS[hasClaim.subAchievement[]]
+    SUBS[hasClaim.subAchievement]
     SUBTITLE[subAchievement.title]
     SUBGRADE[subAchievement.grade]
     SUBECTS[subAchievement.ectsCreditPoints]
 
     AWDBY[hasClaim.awardedBy]
-    AWORG[awardingBody[]]
+    AWORG[awardingBody]
     AWNAME[awardingBody.legalName]
     AWHOME[awardingBody.homepage]
     AWID[awardingBody.identifier]
