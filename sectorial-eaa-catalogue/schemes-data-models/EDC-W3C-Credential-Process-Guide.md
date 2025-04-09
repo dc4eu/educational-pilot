@@ -141,6 +141,7 @@ The diploma is modelled as:
 | `elm:AwardingProcess.awardingDate`     | `hasCredential.awardingDate`           |
 | `elm:Organisation.legalName`           | `hasCredential.awardedBy.awardingBody.legalName` |
 
+
 ### ELM to EDC-W3C Credential Format
 
 ```mermaid
