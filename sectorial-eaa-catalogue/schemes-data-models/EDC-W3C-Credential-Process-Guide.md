@@ -491,8 +491,8 @@ This credential shows a Higher Education Diploma (Master's Degree) fully aligned
 }
 ```
 
-📄 [Download Enhanced Unsigned Credential](./MasterDegree-EBSI-VC-full-aligned-unsigned.json)  
-🔐 [Download Enhanced Signed Credential](./MasterDegree-EBSI-VC-full-aligned-signed.json)
+📄 [Download Enhanced Unsigned Credential](../formal-education/examples/HigherEdcuationDiploma-with-subAchievements.json)  
+🔐 [Download Enhanced Signed Credential](../formal-education/examples/HigherEducationDiploma-with-subAchievements-updated-signed.json)
 
 
 
