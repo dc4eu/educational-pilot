@@ -29,7 +29,7 @@ flowchart TD
 
 ## 1️⃣ Sector-Level Field Definition
 
-As a starting point, we refer to the **EAA Catalogue** of attributes for Higher Education Diplomas, which identifies the minimum agreed fields across the education sector.Example for Higher Edcuation Diploma:
+As a starting point, we refer to the **EAA Catalogue** of attributes for Higher Education Diplomas, which identifies the minimum agreed fields across the education sector.Example for Higher Education Diploma:
 
 | **Field**                                         | **Mandatory** | **Notes** |
 |--------------------------------------------------|---------------|-----------|
