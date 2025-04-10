@@ -29,6 +29,7 @@ This section outlines the common and pilot-specific artefacts that support scena
 | Item              | Type            | Purpose                                               | Used by                     | Provided by         |
 |-------------------|------------------|--------------------------------------------------------|------------------------------|----------------------|
 | Governance template | Template        | Register credential type, issuer authority, DID, X509v3 | Piloting agents              | GovPart & SGAD       |
+| Scenarios definition | Template        | Final scenario deployed by each piloting agent  | Piloting agents              | SGAD       |
 | Feedback form      | Template        | Capture end-user satisfaction and experience. Capture Piloting agents experience             | Piloting agents / end users | Neumann              |
 | KPI dashboard      | Reporting tool  | Track operational indicators                           | SPOC / Piloting agents       | GRNet                |
 
