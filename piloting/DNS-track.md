@@ -30,6 +30,7 @@ This page provides the list of DNS endpoints made available by Piloting Agents t
 | Hungary      | Edutus University                                        | Laki Balazs                      | *WIP*                                | 🔴 |
 | Hungary      | Budapest University of Technology and Economics          | Dr. Imre Kocsis                  | *WIP*                                | 🔴 |
 | Italy        | University of Bologna                                    | Sergio Storari                   | [lspdc4edu.unibo.it](https://uself-verifier-gui.lspdc4edu.unibo.it)                 | 🔴 |
+| Lithuania     | ---       | ---              | *WIP*                                | 🔴 |
 | Poland      | OPI-PIB        | Krzysztof Cieślikowski              | *WIP*                                | 🔴 |
 | Poland      | SKS       | Virginijus Jasaitis                  | *WIP*                                | 🔴 |
 | Portugal     | Universidade do Porto                              | Jorge Cunha                  | [lspup.up.pt](https://uself-verifier-gui.lspup.up.pt)          | 🟢|
