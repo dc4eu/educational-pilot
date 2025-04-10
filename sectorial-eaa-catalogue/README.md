@@ -83,7 +83,7 @@ For further information on EDC-W3C, access:
 
 ## Table with available datamodels based on EDC-W3C
 
-| Scope | Data model name | Stablished Acronim | Brief explanation | Detailed explanation | Schema URL | Registry URL |
+| Scope | Data model name | Stablished Acronim | Brief explanation | Status/Detailed explanation | Schema URL | Registry URL |
 |-------|----------------|----------------|-------------------|----------------------|------------|--------------|
 | Education | Higher Education European Micro Credentials | HEEUMC | Educational achievement microcredential for | [Higher Education Micro Credential](./formal-education/highereducation-microcredential.md) | [Schema](https://code.europa.eu/ebsi/json-schema/-/tree/main/schemas/vcdm1.1/europass/edc) | [Registry](https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/zAEUqPUrQVE7yiesF8xUVHYh4AnqjfHFxCv6GhZ3uvjkW) |
 | Education | Vocational Educational Training European Micro Credentials | VETEUMC | Educational achievement microcredential for | [Vocational Educational Training Micro Credential](./formal-education/veteducation-microcredential.md) | [Schema](https://code.europa.eu/ebsi/json-schema/-/tree/main/schemas/vcdm1.1/europass/edc) | [Registry](https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/zAEUqPUrQVE7yiesF8xUVHYh4AnqjfHFxCv6GhZ3uvjkW) |
