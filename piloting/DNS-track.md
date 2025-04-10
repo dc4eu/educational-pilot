@@ -49,7 +49,7 @@ This page provides the list of DNS endpoints made available by Piloting Agents t
 ## Pilot 3 – Combined (Pilot 1 + Pilot 2)
 
 > Piloting Agents who selected **Pilot 3** are expected to deploy **two public endpoints**, one for **Pilot 1 (PKI-based)** and one for **Pilot 2 (dPKI-based)**.
->
+> 
 > These endpoints are listed below under each pilot type.
 
 ### PKI-based Verification Services
