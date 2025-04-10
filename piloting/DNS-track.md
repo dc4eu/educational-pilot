@@ -57,6 +57,7 @@ This page provides the list of DNS endpoints made available by Piloting Agents t
 | *(to be filled)* |                    |                           |                               |    |
 | Germany|             GovPart       |                           |                               | 🔴 |
 | Netherlands| University of Twente        |    Helenn Vanderzaag     |    | 🔴 |
+| Netherlands| Saxion University of Applied Sciences        |    Franco de Vitta      |    | 🔴 |
 | Portugal| COFAC - Lusofona University        |    Paulo Ferreira     |    | 🔴 |
 
 ### dPKI-based Verification Services
