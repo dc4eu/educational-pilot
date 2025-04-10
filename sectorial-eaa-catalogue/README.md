@@ -50,9 +50,23 @@ In other words:
 - ELM provides the underlying conceptual model.
 - EDC applies this model specifically to digital credentials, including concrete implementations, validations, and practical usage aligned closely —but not entirely— with W3C Verifiable Credentials.
 
-## EDC-W3C
+## European Digital Credentials – W3C Compliant (EDC-W3C)
 
-- EDC fully compliant with W3C-VCDM in aligmnent to implementing acts
+EDC-W3C represents the European Digital Credentials for Learning (EDC) fully aligned with the W3C Verifiable Credentials Data Model (VCDM), as adopted in the first batch of the Implementing Acts under the European Digital Identity framework.
+
+This enhanced version of EDC ensures full compliance with globally recognised standards for digital credentials, promoting interoperability beyond Europe and supporting secure, verifiable, and privacy-preserving learning achievements.
+
+EDC-W3C is a W3C-VCDM serialisation of the European Learning Model (ELM) provided by DG EMPL (Directorate-General for Employment, Social Affairs and Inclusion).
+
+Key benefits include:
+
+Global interoperability: Based on W3C-VCDM, EDC-W3C enables seamless cross-border and cross-sector recognition of credentials.
+Full alignment with EU and international digital identity standards: Supporting the vision of the European Digital Identity Wallet.
+Data integrity and privacy: Ensures secure, verifiable credentials while respecting the privacy of credential holders.
+Consistency with the European Learning Model: Structured data remains anchored in ELM while adopting the W3C format.
+For further information on EDC-W3C, access:
+- [EDC-W3C compliant with W3C-VCDM 1.0](https://code.europa.eu/ebsi/json-schema/-/tree/main/schemas/vcdm1.1/europass/edc) 
+- [EDC-W3C compliant with W3C-VCDM 2.0](https://code.europa.eu/ebsi/json-schema/-/tree/main/schemas/vcdm2.0/edc)
 
 ## Table with available schemes
 
