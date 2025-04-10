@@ -39,8 +39,14 @@ This page provides the list of DNS endpoints made available by Piloting Agents t
 | Spain        | Consejo General de Colegios Oficiales de Médicos - CGCOM | José Antonio Aguado / Laia Bota Porta    | WIP  | 🔴  |
 | Sweeden      | RISE - Research Institutes of Sweden          | Olle Nyman                 | *WIP*                                | 🔴 |
 | Romania      | UEFISCDI                                                 | Cosmin Cioranu                   | [lsp.dc4eu.runidas.rei.gov.ro](https://uself-verifier-gui.lsp.dc4eu.runidas.rei.gov.ro)       | 🟢 |
-
+| ---      | Vytautas Magnus University          | ---                  | *WIP*                                | 🔴 |
+| ---      | UMAIA          | ---                  | *WIP*                                | 🔴 |
 ---
+| ---      | OPI-PIB        | ---                  | *WIP*                                | 🔴 |
+| ---      | Howest       | ---                  | *WIP*                                | 🔴 |
+| ---      | UNED       | ---                  | *WIP*                                | 🔴 |
+| ---      | Universidad Politécnica de Madrid       | ---                  | *WIP*                                | 🔴 |
+| ---      | SKS       | ---                  | *WIP*                                | 🔴 |
 
 ## Pilot 3 – Combined (Pilot 1 + Pilot 2)
 
