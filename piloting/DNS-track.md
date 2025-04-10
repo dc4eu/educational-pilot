@@ -30,8 +30,8 @@ This page provides the list of DNS endpoints made available by Piloting Agents t
 | Hungary      | Edutus University                                        | Laki Balazs                      | *WIP*                                | 🔴 |
 | Spain        | University of Alcalá (UAH)                               | Sergio Caro                      | [lspuah.uah.es](https://uself-verifier-gui.lspuah.uah.es)                      | 🟢 |
 | Spain        | University of Málaga                                     | Victoriano Giralt                | [lspuma.uma.es](https://uself-verifier-gui.lspuma.uma.es)                       | 🟢 |
-| Romania      | UEFISCDI                                                 | Cosmin Cioranu                   | [lsp.dc4eu.runidas.rei.gov.ro](https://uself-verifier-gui.lsp.dc4eu.runidas.rei.gov.ro)       | 🟢 |
 | Spain        | Universitat Rovira i Virgili                             | Maria Teresa Bordas              | [lspurv.urv.cat](https://uself-verifier-gui.lspurv.urv.cat/)                     | 🟢 |
+| Romania      | UEFISCDI                                                 | Cosmin Cioranu                   | [lsp.dc4eu.runidas.rei.gov.ro](https://uself-verifier-gui.lsp.dc4eu.runidas.rei.gov.ro)       | 🟢 |
 
 ---
 
