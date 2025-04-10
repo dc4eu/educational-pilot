@@ -35,4 +35,20 @@ UAH pilots onboarding of final-year students into the EUDI ecosystem, retrieving
 
 ## Scenario details
 | Element                        | Description                                                                 |
-|
+|-------------------------------|-----------------------------------------------------------------------------|
+| **Scenario Name**             | UAH credential lifecycle pilot                                              |
+| **Piloting Agent**            | Universidad de Alcalá                                                      |
+| **End Users**                 | 25 students                                                                |
+| **EAAs involved**             | EducationalID, Achievement AAs                                             |
+| **PID Retrieval**             | After identity verification                                                |
+| **Wallet Provider**           | IZERTIS                                                                    |
+| **Verification Service**      | Education catalogue-based                                                  |
+| **Governance / DIDs**         | Applied                                                                    |
+| **Monitoring tools**          | Checklist-based                                                            |
+| **Integration level**         | Identity, credentials, wallet                                              |
+| **Regulatory basis**          | eIDAS2, GDPR, education legislation                                        |
+| **Credential lifecycle**      | Full spectrum                                                              |
+| **Training material**         | Provided                                                                   |
+| **Tracking/reporting**        | Checklist and dashboard                                                    |
+| **Escalation contact**        | SGAD                                                                       |
+| **KPIs**                      | #EducationalIDs issued, verification hits                                  |
