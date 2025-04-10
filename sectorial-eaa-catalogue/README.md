@@ -95,7 +95,7 @@ For further information on EDC-W3C, access:
 | Education | Upper secondary education transcript of records | USTOR | Educational achievement microcredential for | [Upper secondary education transcript of records](./formal-education/highereducation-microcredential.md) | [Schema](https://code.europa.eu/ebsi/json-schema/-/tree/main/schemas/vcdm1.1/europass/edc) | [Registry](https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/zAEUqPUrQVE7yiesF8xUVHYh4AnqjfHFxCv6GhZ3uvjkW) |
 | Professional qualifications | Professional Medical Certification | PMC | Professional achievement credential for |  | [Schema](https://code.europa.eu/ebsi/json-schema/-/tree/main/schemas/vcdm1.1/medical-certifications/professional-medical-certification) | [Registry](https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/zAEUqPUrQVE7yiesF8xUVHYh4AnqjfHFxCv6GhZ3uvjkW) |
 | Professional qualifications | Certificate Professional Competence | CPC | Professional achievement credential for|  | [Schema](https://code.europa.eu/ebsi/json-schema/-/tree/main/schemas/vcdm1.1/medical-certifications/certificate-professional-competence) | [Registry](https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/zFkbzRiX4Q7vcaMtNpgq7RzkvkhvRTt9KqMHqGWXrGn85) |
-
+| Professional qualifications | Certificate of Professional Suitability Schema | CPS | Professional achievement credential for|  | [Schema](https://code.europa.eu/ebsi/json-schema/-/tree/main/schemas/vcdm1.1/medical-certifications/certificate-professional-competence) | [Registry](https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/zFkbzRiX4Q7vcaMtNpgq7RzkvkhvRTt9KqMHqGWXrGn85) |
 
 
 ## Detailed information per category or type
