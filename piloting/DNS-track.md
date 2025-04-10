@@ -26,7 +26,7 @@ This page provides the list of DNS endpoints made available by Piloting Agents t
 | Netherlands  | University of Twente                                     | Helenn Vanderzaag                | [lsput.utwente.nl](https://uself-verifier-gui.lsput.utwente.nl)                   |
 | Portugal     | COFAC - Lusofona University                              | Paulo Ferreira                   | [lspulusofona.ulusofona.pt](https://uself-verifier-gui.lspulusofona.ulusofona.pt)          |
 | Portugal     | Universidade do Porto                              | Jorge Cunha                  | [lspup.up.pt](https://uself-verifier-gui.lspup.up.pt)          |
-| Romania      | Politehnica University of Timisoara, Romania (UPT)       | Diana Andone                     | *(missing)*                        |
+| Romania      | Politehnica University of Timisoara, Romania (UPT)       | Diana Andone                     | *WIP*                        |
 | Hungary      | Edutus University                                        | Laki Balazs                      | TBC                                |
 | Spain        | University of Alcalá (UAH)                               | Sergio Caro                      | [lspuah.uah.es](https://uself-verifier-gui.lspuah.uah.es)                      |
 | Spain        | University of Málaga                                     | Victoriano Giralt                | [lspuma.uma.es](https://uself-verifier-gui.lspuma.uma.es)                       |
