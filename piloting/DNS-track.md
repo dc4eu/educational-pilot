@@ -33,7 +33,6 @@ This page provides the list of DNS endpoints made available by Piloting Agents t
 | Netherlands  | Saxion University of Applied Sciences                    | Franco de Vitta                  | [lspsaxion.saxion.nl](https://uself-verifier-gui.lspsaxion.saxion.nl)                | 🔴 |
 | Poland      | OPI-PIB        | Krzysztof Cieślikowski              | *WIP*                                | 🔴 |
 | Poland      | SKS       | Virginijus Jasaitis                  | *WIP*                                | 🔴 |
-| Portugal     | COFAC - Lusofona University                              | Paulo Ferreira                   | [lspulusofona.ulusofona.pt](https://uself-verifier-gui.lspulusofona.ulusofona.pt)          | 🟢 |
 | Portugal     | Universidade do Porto                              | Jorge Cunha                  | [lspup.up.pt](https://uself-verifier-gui.lspup.up.pt)          | 🟢|
 | Portugal      | UMAIA          | Alexandre Sousa                  | *WIP*                                | 🔴 |
 | Romania      | Politehnica University of Timisoara, Romania (UPT)       | Diana Andone                     | *WIP*                        | 🔴 |
@@ -57,13 +56,15 @@ This page provides the list of DNS endpoints made available by Piloting Agents t
 | Country | Piloting Agent     | Contact                   | DNS (Pilot 1)                  | Available    |
 |---------|--------------------|---------------------------|-------------------------------|----|
 | *(to be filled)* |                    |                           |                               |    |
-| Germany|             GovPart       |                           |                               |  |
-| Netherlands| University of Twente        |    Helenn Vanderzaag     |    |  |
+| Germany|             GovPart       |                           |                               | 🔴 |
+| Netherlands| University of Twente        |    Helenn Vanderzaag     |    | 🔴 |
+| Portugal| COFAC - Lusofona University        |    Paulo Ferreira     |    | 🔴 |
 
 ### dPKI-based Verification Services
 
 | Country | Piloting Agent     | Contact                   | DNS (Pilot 2)                  |  Available    |
 |---------|--------------------|---------------------------|-------------------------------|----|
 | *(to be filled)* |                    |                           |                               | |
-| Germany|             GovPart       |                           |                               | | 
+| Germany|             GovPart       |                           |                               | 🔴 | 
 | Netherlands  | University of Twente                                     | Helenn Vanderzaag                | [lsput.utwente.nl](https://uself-verifier-gui.lsput.utwente.nl)                   | 🟢 |
+| Portugal     | COFAC - Lusofona University                              | Paulo Ferreira                   | [lspulusofona.ulusofona.pt](https://uself-verifier-gui.lspulusofona.ulusofona.pt)          | 🟢 |
