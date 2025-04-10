@@ -31,8 +31,8 @@ This page provides the list of DNS endpoints made available by Piloting Agents t
 | Italy        | University of Bologna                                    | Sergio Storari                   | [lspdc4edu.unibo.it](https://uself-verifier-gui.lspdc4edu.unibo.it)                 | 🔴 |
 | Netherlands  | Saxion University of Applied Sciences                    | Franco de Vitta                  | [lspsaxion.saxion.nl](https://uself-verifier-gui.lspsaxion.saxion.nl)                | 🔴 |
 | Netherlands  | University of Twente                                     | Helenn Vanderzaag                | [lsput.utwente.nl](https://uself-verifier-gui.lsput.utwente.nl)                   | 🟢 |
-| Poland      | OPI-PIB        | ---                  | *WIP*                                | 🔴 |
-| Poland      | SKS       | ---                  | *WIP*                                | 🔴 |
+| Poland      | OPI-PIB        | Krzysztof Cieślikowski              | *WIP*                                | 🔴 |
+| Poland      | SKS       | Virginijus Jasaitis                  | *WIP*                                | 🔴 |
 | Portugal     | COFAC - Lusofona University                              | Paulo Ferreira                   | [lspulusofona.ulusofona.pt](https://uself-verifier-gui.lspulusofona.ulusofona.pt)          | 🟢 |
 | Portugal     | Universidade do Porto                              | Jorge Cunha                  | [lspup.up.pt](https://uself-verifier-gui.lspup.up.pt)          | 🟢|
 | Portugal      | UMAIA          | ---                  | *WIP*                                | 🔴 |
