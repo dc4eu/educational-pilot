@@ -1,4 +1,4 @@
-# Doctor ID Schema
+# Professional ID Schema
 
 ## Overview
 
