@@ -3,14 +3,14 @@
 This document presents the relationship between each SPOC and the piloting agents they support, including the piloting option of each agent.
 
 | SPOC                                 | Country     | Piloting Agent (Institution)                       | Piloting Option |
-|--------------------------------------|-------------|----------------------------------------------------|------------------|
+|--------------------------------------|-------------|----------------------------------------------------|-----------------|
 | SUNET                                | Sweden      | Ladokkonsortiet                                    | Pilot 1         |
 | Sikt                                 | Norway      | Sikt                                               | Pilot 1         |
 | SURF                                 | Netherlands | SURF                                               | Pilot 1         |
 | OPH                                  | Finland     | Finnish National Agency for Education (OPH)        | Pilot 1         |
 | DTU                                  | Denmark     | DeiC/DTU                                           | Pilot 1         |
 | OPI PIB                              | Poland      | University of Zielona Góra                         | Pilot 1         |
-|--------------------------------------|-------------|----------------------------------------------------|------------------|
+|--------------------------------------|-------------|----------------------------------------------------|-----------------|
 | Walt.ID                              | Belgium     | Howest                                             | Pilot 2         |
 | SGAD                                 | Spain       | Universidad de Alcalá (UAH)                        | Pilot 2         |
 | SGAD                                 | Spain       | Universidad Carlos III de Madrid                   | Pilot 2         |
@@ -33,7 +33,7 @@ This document presents the relationship between each SPOC and the piloting agent
 | RISE                                 | Sweden      | RISE - Research Institutes of Sweden               | Pilot 2         |
 | eDelivery                            | Lithuania   | Vytautas Magnus University                         | Pilot 2         |
 | eDelivery                            | Lithuania   | Lithuanian Centre for Quality Assessment (SKVC)    | Pilot 2         |
-|--------------------------------------|-------------|----------------------------------------------------|------------------|
+|--------------------------------------|-------------|----------------------------------------------------|-----------------|
 | Universidade do Porto                | Portugal    | COFAC - Lusofona University                        | Pilot 3         |
 | GovPart Gmbh                         | Germany     | GovPart                                            | Pilot 3         |
 | SURF                                 | Netherlands | Saxion                                             | Pilot 3         |
