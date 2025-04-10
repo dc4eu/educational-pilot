@@ -41,7 +41,6 @@ This page provides the list of DNS endpoints made available by Piloting Agents t
 | Romania      | UEFISCDI                                                 | Cosmin Cioranu                   | [lsp.dc4eu.runidas.rei.gov.ro](https://uself-verifier-gui.lsp.dc4eu.runidas.rei.gov.ro)       | 🟢 |
 | ---      | Vytautas Magnus University          | ---                  | *WIP*                                | 🔴 |
 | ---      | UMAIA          | ---                  | *WIP*                                | 🔴 |
----
 | ---      | OPI-PIB        | ---                  | *WIP*                                | 🔴 |
 | ---      | Howest       | ---                  | *WIP*                                | 🔴 |
 | ---      | UNED       | ---                  | *WIP*                                | 🔴 |
