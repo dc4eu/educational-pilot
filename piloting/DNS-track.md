@@ -54,7 +54,6 @@ This page provides the list of DNS endpoints made available by Piloting Agents t
 
 | Country | Piloting Agent     | Contact                   | DNS (Pilot 1)                  | Available    |
 |---------|--------------------|---------------------------|-------------------------------|----|
-| *(to be filled)* |                    |                           |                               |    |
 | Germany|             GovPart       |                           |                               | 🔴 |
 | Netherlands| University of Twente        |    Helenn Vanderzaag     |    | 🔴 |
 | Netherlands| Saxion University of Applied Sciences        |    Franco de Vitta      |    | 🔴 |
@@ -64,7 +63,6 @@ This page provides the list of DNS endpoints made available by Piloting Agents t
 
 | Country | Piloting Agent     | Contact                   | DNS (Pilot 2)                  |  Available    |
 |---------|--------------------|---------------------------|-------------------------------|----|
-| *(to be filled)* |                    |                           |                               | |
 | Germany|             GovPart       |                           |                               | 🔴 | 
 | Netherlands  | University of Twente                                     | Helenn Vanderzaag                | [lsput.utwente.nl](https://uself-verifier-gui.lsput.utwente.nl)                   | 🟢 |
 | Netherlands  | Saxion University of Applied Sciences                    | Franco de Vitta                  | [lspsaxion.saxion.nl](https://uself-verifier-gui.lspsaxion.saxion.nl)                | 🔴 |
