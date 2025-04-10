@@ -56,7 +56,7 @@ This page provides the list of DNS endpoints made available by Piloting Agents t
 
 | Country | Piloting Agent     | Contact                   | DNS (Pilot 1)                  | Available    |
 |---------|--------------------|---------------------------|-------------------------------|----|
-| Germany|             GovPart       |                           |                               | 🔴 |
+| Germany|             GovPart       |     Helmut & Guido               |                               | 🔴 |
 | Netherlands| University of Twente        |    Helenn Vanderzaag     |    | 🔴 |
 | Netherlands| Saxion University of Applied Sciences        |    Franco de Vitta      |    | 🔴 |
 | Portugal| COFAC - Lusofona University        |    Paulo Ferreira     |    | 🔴 |
@@ -65,7 +65,7 @@ This page provides the list of DNS endpoints made available by Piloting Agents t
 
 | Country | Piloting Agent     | Contact                   | DNS (Pilot 2)                  |  Available    |
 |---------|--------------------|---------------------------|-------------------------------|----|
-| Germany|             GovPart       |                           |                               | 🔴 | 
+| Germany|             GovPart       |     Helmut & Guido             |                               | 🔴 | 
 | Netherlands  | University of Twente                                     | Helenn Vanderzaag                | [lsput.utwente.nl](https://uself-verifier-gui.lsput.utwente.nl)                   | 🟢 |
 | Netherlands  | Saxion University of Applied Sciences                    | Franco de Vitta                  | [lspsaxion.saxion.nl](https://uself-verifier-gui.lspsaxion.saxion.nl)                | 🔴 |
 | Portugal     | COFAC - Lusofona University                              | Paulo Ferreira                   | [lspulusofona.ulusofona.pt](https://uself-verifier-gui.lspulusofona.ulusofona.pt)          | 🟢 |
