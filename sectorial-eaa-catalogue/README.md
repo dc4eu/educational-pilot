@@ -59,11 +59,11 @@ This enhanced version of EDC ensures full compliance with globally recognised st
 EDC-W3C is a W3C-VCDM serialisation of the European Learning Model (ELM) provided by DG EMPL (Directorate-General for Employment, Social Affairs and Inclusion).
 
 Key benefits include:
+- Global interoperability: Based on W3C-VCDM, EDC-W3C enables seamless cross-border and cross-sector recognition of credentials.
+- Full alignment with EU and international digital identity standards: Supporting the vision of the European Digital Identity Wallet.
+- Data integrity and privacy: Ensures secure, verifiable credentials while respecting the privacy of credential holders.
+- Consistency with the European Learning Model: Structured data remains anchored in ELM while adopting the W3C format.
 
-Global interoperability: Based on W3C-VCDM, EDC-W3C enables seamless cross-border and cross-sector recognition of credentials.
-Full alignment with EU and international digital identity standards: Supporting the vision of the European Digital Identity Wallet.
-Data integrity and privacy: Ensures secure, verifiable credentials while respecting the privacy of credential holders.
-Consistency with the European Learning Model: Structured data remains anchored in ELM while adopting the W3C format.
 For further information on EDC-W3C, access:
 - [EDC-W3C compliant with W3C-VCDM 1.0](https://code.europa.eu/ebsi/json-schema/-/tree/main/schemas/vcdm1.1/europass/edc) 
 - [EDC-W3C compliant with W3C-VCDM 2.0](https://code.europa.eu/ebsi/json-schema/-/tree/main/schemas/vcdm2.0/edc)
