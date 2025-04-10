@@ -32,6 +32,7 @@ This page provides the list of DNS endpoints made available by Piloting Agents t
 | Netherlands  | Saxion University of Applied Sciences                    | Franco de Vitta                  | [lspsaxion.saxion.nl](https://uself-verifier-gui.lspsaxion.saxion.nl)                | 🔴 |
 | Netherlands  | University of Twente                                     | Helenn Vanderzaag                | [lsput.utwente.nl](https://uself-verifier-gui.lsput.utwente.nl)                   | 🟢 |
 | Poland      | OPI-PIB        | ---                  | *WIP*                                | 🔴 |
+| Poland      | SKS       | ---                  | *WIP*                                | 🔴 |
 | Portugal     | COFAC - Lusofona University                              | Paulo Ferreira                   | [lspulusofona.ulusofona.pt](https://uself-verifier-gui.lspulusofona.ulusofona.pt)          | 🟢 |
 | Portugal     | Universidade do Porto                              | Jorge Cunha                  | [lspup.up.pt](https://uself-verifier-gui.lspup.up.pt)          | 🟢|
 | Portugal      | UMAIA          | ---                  | *WIP*                                | 🔴 |
@@ -40,12 +41,10 @@ This page provides the list of DNS endpoints made available by Piloting Agents t
 | Spain        | University of Málaga                                     | Victoriano Giralt                | [lspuma.uma.es](https://uself-verifier-gui.lspuma.uma.es)                       | 🟢 |
 | Spain        | Universitat Rovira i Virgili                             | Maria Teresa Bordas              | [lspurv.urv.cat](https://uself-verifier-gui.lspurv.urv.cat/)                     | 🟢 |
 | Spain        | Consejo General de Colegios Oficiales de Médicos - CGCOM | José Antonio Aguado / Laia Bota Porta    | WIP  | 🔴  |
+| Spain      | UNED       | ---                  | *WIP*                                | 🔴 |
+| Spain      | Universidad Politécnica de Madrid       | ---                  | *WIP*                                | 🔴 |
 | Sweeden      | RISE - Research Institutes of Sweden          | Olle Nyman                 | *WIP*                                | 🔴 |
 | Romania      | UEFISCDI                                                 | Cosmin Cioranu                   | [lsp.dc4eu.runidas.rei.gov.ro](https://uself-verifier-gui.lsp.dc4eu.runidas.rei.gov.ro)       | 🟢 |
-| ---      | Vytautas Magnus University          | ---                  | *WIP*                                | 🔴 |
-| ---      | UNED       | ---                  | *WIP*                                | 🔴 |
-| ---      | Universidad Politécnica de Madrid       | ---                  | *WIP*                                | 🔴 |
-| ---      | SKS       | ---                  | *WIP*                                | 🔴 |
 
 ## Pilot 3 – Combined (Pilot 1 + Pilot 2)
 
