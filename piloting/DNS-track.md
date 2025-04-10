@@ -21,16 +21,16 @@ This page provides the list of DNS endpoints made available by Piloting Agents t
 | Country      | Piloting Agent                                           | Contact                          | DNS                               |  Available    |
 |--------------|----------------------------------------------------------|----------------------------------|------------------------------------|-----------|
 | Germany      | GovPart                                                  | Helmut & Guido                   | lspgovpart.govpart.de              | 🔴 |
-| Italy        | University of Bologna                                    | Sergio Storari                   | [lspdc4edu.unibo.it](https://uself-verifier-gui.lspdc4edu.unibo.it)                 |    |
-| Netherlands  | Saxion University of Applied Sciences                    | Franco de Vitta                  | [lspsaxion.saxion.nl](https://uself-verifier-gui.lspsaxion.saxion.nl)                |    |
-| Netherlands  | University of Twente                                     | Helenn Vanderzaag                | [lsput.utwente.nl](https://uself-verifier-gui.lsput.utwente.nl)                   |    |
-| Portugal     | COFAC - Lusofona University                              | Paulo Ferreira                   | [lspulusofona.ulusofona.pt](https://uself-verifier-gui.lspulusofona.ulusofona.pt)          |    |
-| Portugal     | Universidade do Porto                              | Jorge Cunha                  | [lspup.up.pt](https://uself-verifier-gui.lspup.up.pt)          |
-| Romania      | Politehnica University of Timisoara, Romania (UPT)       | Diana Andone                     | *WIP*                        |    |
-| Hungary      | Edutus University                                        | Laki Balazs                      | *WIP*                                |    |
-| Spain        | University of Alcalá (UAH)                               | Sergio Caro                      | [lspuah.uah.es](https://uself-verifier-gui.lspuah.uah.es)                      |    |
-| Spain        | University of Málaga                                     | Victoriano Giralt                | [lspuma.uma.es](https://uself-verifier-gui.lspuma.uma.es)                       |    |
-| Romania      | UEFISCDI                                                 | Cosmin Cioranu                   | [lsp.dc4eu.runidas.rei.gov.ro](https://uself-verifier-gui.lsp.dc4eu.runidas.rei.gov.ro)       |    |
+| Italy        | University of Bologna                                    | Sergio Storari                   | [lspdc4edu.unibo.it](https://uself-verifier-gui.lspdc4edu.unibo.it)                 | 🔴 |
+| Netherlands  | Saxion University of Applied Sciences                    | Franco de Vitta                  | [lspsaxion.saxion.nl](https://uself-verifier-gui.lspsaxion.saxion.nl)                | 🔴 |
+| Netherlands  | University of Twente                                     | Helenn Vanderzaag                | [lsput.utwente.nl](https://uself-verifier-gui.lsput.utwente.nl)                   | 🟢 |
+| Portugal     | COFAC - Lusofona University                              | Paulo Ferreira                   | [lspulusofona.ulusofona.pt](https://uself-verifier-gui.lspulusofona.ulusofona.pt)          | 🟢 |
+| Portugal     | Universidade do Porto                              | Jorge Cunha                  | [lspup.up.pt](https://uself-verifier-gui.lspup.up.pt)          | 🟢|
+| Romania      | Politehnica University of Timisoara, Romania (UPT)       | Diana Andone                     | *WIP*                        | 🔴 |
+| Hungary      | Edutus University                                        | Laki Balazs                      | *WIP*                                | 🔴 |
+| Spain        | University of Alcalá (UAH)                               | Sergio Caro                      | [lspuah.uah.es](https://uself-verifier-gui.lspuah.uah.es)                      | 🟢 |
+| Spain        | University of Málaga                                     | Victoriano Giralt                | [lspuma.uma.es](https://uself-verifier-gui.lspuma.uma.es)                       | 🟢 |
+| Romania      | UEFISCDI                                                 | Cosmin Cioranu                   | [lsp.dc4eu.runidas.rei.gov.ro](https://uself-verifier-gui.lsp.dc4eu.runidas.rei.gov.ro)       | 🟢 |
 | Spain        | Universitat Rovira i Virgili                             | Maria Teresa Bordas              | [lspurv.urv.cat](https://uself-verifier-gui.lspurv.urv.cat/)                     | 🟢 |
 
 ---
