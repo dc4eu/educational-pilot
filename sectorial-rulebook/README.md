@@ -46,4 +46,4 @@ Each component serves both practical needs and policy goals, creating a system t
 
 ## Relationship to Other Documentation
 
-This rulebook provides the foundational principles upon which the [Sectorial EAA Rulebook](../sectorial-eaa-rulebook/) and [Implementation Toolkits](../toolkits/) are built.
+This rulebook provides the foundational principles upon which the [Sectorial EAA Rulebook](../sectorial-eaa-catalogue/README.md) and [Implementation Toolkits](../toolkits/README.md) are built.
