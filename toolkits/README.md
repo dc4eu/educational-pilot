@@ -27,7 +27,7 @@ The **DC4EU** project defines two distinct pilot tracks based on the **trust mod
 | Pilot    | Trust Model                          | Credential Format      | Data Model Format| Infrastructure Reference          |
 |----------|--------------------------------------|------------------------|------------------|-----------------------------------|
 | Pilot1  | Classical PKI                        | SD-JWT                 | SD-JWT-VC        | Traditional CA-based trust chains, eIDAS 2.0, ARF |
-| Pilot2  | Classical PKI + Decentralised PKI    | W3C Verifiable Credentials | W3C-VCDM 1.1 & W3C-VCDM 2.0 | Traditional CA-based trust chains, EBSI-ledger, eIDAS 2.0, ARF        |
+| Pilot2  | Decentralised PKI + Classical PKI   | W3C Verifiable Credentials | W3C-VCDM 1.1 & W3C-VCDM 2.0 | Traditional CA-based trust chains, EBSI-ledger, eIDAS 2.0, ARF        |
 | Pilot3  | The pilot agents who chose to pilot both options (Pilot 1 and Pilot 2)        |
 
 Each pilot supports specific use cases and technological pathways that will inform future large-scale adoption across Member States in the fields of education and professional qualifications.
