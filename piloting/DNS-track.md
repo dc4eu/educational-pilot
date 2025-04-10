@@ -25,7 +25,8 @@ This page provides the list of DNS endpoints made available by Piloting Agents t
 | Country      | Piloting Agent                                           | Contact                          | DNS                               |  Available    |
 |--------------|----------------------------------------------------------|----------------------------------|------------------------------------|-----------|
 | Belgium      | Howest       | Daniel Du Seuil                   | *WIP*                                | 🔴 |
-| Germany      | GovPart                                                  | Helmut & Guido                   | lspgovpart.govpart.de              | 🔴 |
+| Germany      | GovPart - Univ1                                                  | Helmut & Guido                   | lspgovpart.govpart.de              | 🔴 |
+| Germany      | GovPart - Univ2                                                  | Helmut & Guido                   | lspgovpart.govpart.de              | 🔴 |
 | Hungary      | Edutus University                                        | Laki Balazs                      | *WIP*                                | 🔴 |
 | Hungary      | Budapest University of Technology and Economics          | Dr. Imre Kocsis                  | *WIP*                                | 🔴 |
 | Italy        | University of Bologna                                    | Sergio Storari                   | [lspdc4edu.unibo.it](https://uself-verifier-gui.lspdc4edu.unibo.it)                 | 🔴 |
@@ -54,12 +55,14 @@ This page provides the list of DNS endpoints made available by Piloting Agents t
 
 ### PKI-based Verification Services
 
-| Country | Piloting Agent     | Contact                   | DNS (Pilot 1)                  |
-|---------|--------------------|---------------------------|-------------------------------|
-| *(to be filled)* |                    |                           |                               |
+| Country | Piloting Agent     | Contact                   | DNS (Pilot 1)                  | Available    |
+|---------|--------------------|---------------------------|-------------------------------|----|
+| *(to be filled)* |                    |                           |                               |    |
+| Germany|             GovPart       |                           |                               |  |
 
 ### dPKI-based Verification Services
 
-| Country | Piloting Agent     | Contact                   | DNS (Pilot 2)                  |
-|---------|--------------------|---------------------------|-------------------------------|
-| *(to be filled)* |                    |                           |                               |
+| Country | Piloting Agent     | Contact                   | DNS (Pilot 2)                  |  Available    |
+|---------|--------------------|---------------------------|-------------------------------|----|
+| *(to be filled)* |                    |                           |                               | |
+| Germany|             GovPart       |                           |                               | | 
