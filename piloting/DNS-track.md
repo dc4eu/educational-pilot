@@ -37,6 +37,7 @@ This page provides the list of DNS endpoints made available by Piloting Agents t
 | Spain        | University of Málaga                                     | Victoriano Giralt                | [lspuma.uma.es](https://uself-verifier-gui.lspuma.uma.es)                       | 🟢 |
 | Spain        | Universitat Rovira i Virgili                             | Maria Teresa Bordas              | [lspurv.urv.cat](https://uself-verifier-gui.lspurv.urv.cat/)                     | 🟢 |
 | Spain        | Consejo General de Colegios Oficiales de Médicos - CGCOM | José Antonio Aguado / Laia Bota Porta    | WIP  | 🔴  |
+| Sweeden      | RISE - Research Institutes of Sweden          | Olle Nyman                 | *WIP*                                | 🔴 |
 | Romania      | UEFISCDI                                                 | Cosmin Cioranu                   | [lsp.dc4eu.runidas.rei.gov.ro](https://uself-verifier-gui.lsp.dc4eu.runidas.rei.gov.ro)       | 🟢 |
 
 ---
