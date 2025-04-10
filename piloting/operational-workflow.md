@@ -64,7 +64,7 @@ Ensure that three levels of visibility are always synchronised and consistent:
 
 ---
 
-## Script Execution Order
+## Script Execution Order (WP5 leadership)
 
 ```bash
 # (Optional) If structure doesn't exist
