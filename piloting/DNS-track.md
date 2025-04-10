@@ -10,7 +10,7 @@ This page provides the list of DNS endpoints made available by Piloting Agents t
 
 | Country      | Piloting Agent                  | Contact                        | DNS                             |  Available  |
 |--------------|----------------------------------|--------------------------------|----------------------------------|-----|
-| *(to be filled)* |                                  |                                |                                  |    |
+| *(to be filled)* |                                  |                                |                                  | 🔴  🟢 |
 
 ---
 
