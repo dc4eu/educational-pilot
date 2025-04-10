@@ -8,9 +8,9 @@ This page provides the list of DNS endpoints made available by Piloting Agents t
 
 > This section will include the DNS references for Piloting Agents providing verification services based on **classical PKI infrastructure** (e.g. X.509 + Trusted Lists).
 
-| Country      | Piloting Agent                  | Contact                        | DNS                             |
+| Country      | Piloting Agent                  | Contact                        | DNS                             |  Available  |
 |--------------|----------------------------------|--------------------------------|----------------------------------|
-| *(to be filled)* |                                  |                                |                                  |
+| *(to be filled)* |                                  |                                |                                  |    |
 
 ---
 
