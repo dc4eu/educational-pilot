@@ -10,7 +10,6 @@ This page provides the list of DNS endpoints made available by Piloting Agents t
 
 | Country      | Piloting Agent                  | Contact                        | DNS                             |  Available  |
 |--------------|----------------------------------|--------------------------------|----------------------------------|-----|
-| *(to be filled)* |                                  |                                |                                  | 🔴  🟢 |
 |Denmark|Amsterdam University of Applied Sciences|Tangui Coulouarn| |🔴|
 |Finland|Finnish National Agency for Education (OPH)|Kristiina Laipio| |🔴|
 |Netherlands|SURF|Paul den Hort| |🔴|
