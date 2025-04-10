@@ -28,6 +28,18 @@ Key benefits include:
 
 For further information on ELM, access [European Learning Model information](./elm/elm.md)
 
+## European Digital Credentials for Learning (EDC)
+
+European Digital Credentials for Learning (EDC) are verifiable digital representations of learning achievements, issued by educational institutions to document qualifications such as diplomas, training certificates, and micro-credentials. They are signed with an electronic seal from a trusted institution, ensuring authenticity and security. EDCs can be issued in all EU and Europass languages, facilitating cross-border recognition of qualifications. ​
+
+Key benefits include:
+
+- Enhanced security and authenticity: EDCs are electronically sealed, making them tamper-evident and legally equivalent to paper-based credentials. ​
+- Efficient sharing and storage: Learners can store their EDCs securely in their Europass wallet and share them easily with employers or educational institutions. ​
+- Standardized format: EDCs provide a consistent structure for describing learning achievements, promoting interoperability across different European systems. ​
+- Support for various learning contexts: They can document formal education, non-formal learning, online courses, and volunteering experiences, among others. ​
+
+For further information on EDC, access [European Digital Credentials for Learning]( https://europass.europa.eu/en/europass-digital-tools/european-digital-credentials-learning)
 
 ## EDC and ELM, closely realted but not the same
 
