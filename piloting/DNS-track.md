@@ -47,7 +47,7 @@ This page provides the list of DNS endpoints made available by Piloting Agents t
 |---------|--------------------|---------------------------|-------------------------------|
 | *(to be filled)* |                    |                           |                               |
 
-### 🪪 dPKI-based Verification Services
+### dPKI-based Verification Services
 
 | Country | Piloting Agent     | Contact                   | DNS (Pilot 2)                  |
 |---------|--------------------|---------------------------|-------------------------------|
