@@ -24,7 +24,7 @@ This page provides the list of DNS endpoints made available by Piloting Agents t
 
 | Country      | Piloting Agent                                           | Contact                          | DNS                               |  Available    |
 |--------------|----------------------------------------------------------|----------------------------------|------------------------------------|-----------|
-| Belgium      | Howest       | ---                  | *WIP*                                | 🔴 |
+| Belgium      | Howest       | Daniel Du Seuil                   | *WIP*                                | 🔴 |
 | Germany      | GovPart                                                  | Helmut & Guido                   | lspgovpart.govpart.de              | 🔴 |
 | Hungary      | Edutus University                                        | Laki Balazs                      | *WIP*                                | 🔴 |
 | Hungary      | Budapest University of Technology and Economics          | Dr. Imre Kocsis                  | *WIP*                                | 🔴 |
