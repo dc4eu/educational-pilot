@@ -2,7 +2,7 @@
 
 ## Overview
 
-These toolkits provide the practical implementation guidance needed to develop user journeys and technical solutions based on the principles outlined in the [Sectorial Rulebook](../sectorial-rulebook/) and the data models defined in the [Sectorial EAA Rulebook](../sectorial-eaa-rulebook/).
+These toolkits provide the practical implementation guidance needed to develop user journeys and technical solutions based on the principles outlined in the [Sectorial Rulebook](../../sectorial-rulebook/README.md) and the data models defined in the [Sectorial EAA Catalogue](../../sectorial-eaa-catalogue/README.md).
 
 ## Components
 
