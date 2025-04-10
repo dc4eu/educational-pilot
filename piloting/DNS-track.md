@@ -30,7 +30,6 @@ This page provides the list of DNS endpoints made available by Piloting Agents t
 | Hungary      | Edutus University                                        | Laki Balazs                      | *WIP*                                | 🔴 |
 | Hungary      | Budapest University of Technology and Economics          | Dr. Imre Kocsis                  | *WIP*                                | 🔴 |
 | Italy        | University of Bologna                                    | Sergio Storari                   | [lspdc4edu.unibo.it](https://uself-verifier-gui.lspdc4edu.unibo.it)                 | 🔴 |
-| Netherlands  | Saxion University of Applied Sciences                    | Franco de Vitta                  | [lspsaxion.saxion.nl](https://uself-verifier-gui.lspsaxion.saxion.nl)                | 🔴 |
 | Poland      | OPI-PIB        | Krzysztof Cieślikowski              | *WIP*                                | 🔴 |
 | Poland      | SKS       | Virginijus Jasaitis                  | *WIP*                                | 🔴 |
 | Portugal     | Universidade do Porto                              | Jorge Cunha                  | [lspup.up.pt](https://uself-verifier-gui.lspup.up.pt)          | 🟢|
@@ -67,4 +66,5 @@ This page provides the list of DNS endpoints made available by Piloting Agents t
 | *(to be filled)* |                    |                           |                               | |
 | Germany|             GovPart       |                           |                               | 🔴 | 
 | Netherlands  | University of Twente                                     | Helenn Vanderzaag                | [lsput.utwente.nl](https://uself-verifier-gui.lsput.utwente.nl)                   | 🟢 |
+| Netherlands  | Saxion University of Applied Sciences                    | Franco de Vitta                  | [lspsaxion.saxion.nl](https://uself-verifier-gui.lspsaxion.saxion.nl)                | 🔴 |
 | Portugal     | COFAC - Lusofona University                              | Paulo Ferreira                   | [lspulusofona.ulusofona.pt](https://uself-verifier-gui.lspulusofona.ulusofona.pt)          | 🟢 |
