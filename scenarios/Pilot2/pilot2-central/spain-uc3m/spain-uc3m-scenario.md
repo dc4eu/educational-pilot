@@ -1,4 +1,4 @@
-# 🎓 Universidad Carlos III de Madrid (UC3M)
+# Universidad Carlos III de Madrid (UC3M)
 
 ## Scenario title
 LMS-integrated onboarding and credential verification
