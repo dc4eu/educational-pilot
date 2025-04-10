@@ -35,7 +35,7 @@ European Digital Credentials for Learning (EDC) are verifiable digital represent
 Key benefits include:
 
 - Enhanced security and authenticity: EDCs are electronically sealed, making them tamper-evident and legally equivalent to paper-based credentials. ​
-- Efficient sharing and storage: Learners can store their EDCs securely in their Europass wallet ("My Library") and share them easily with employers or educational institutions. ​
+- Efficient sharing and storage: Learners can store their EDCs securely in their Europass wallet (the "My Library" repository) and share them easily with employers or educational institutions. ​
 - Standardized format: EDCs provide a consistent structure for describing learning achievements, promoting interoperability across different European systems. ​
 - Support for various learning contexts: They can document formal education, non-formal learning, online courses, and volunteering experiences, among others. ​
 
