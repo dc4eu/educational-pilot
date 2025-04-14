@@ -8,12 +8,14 @@ The system supports two complementary types of disclosure control:
 
 ## Embeded Disclosure
 
-Embedded disclosure is linked to the EAA catalogue and serves to restrict which relying parties can request and process specific Electronic Attestations of Attributes (EAAs). This mechanism operates at the ecosystem level, creating structural controls for data access. In practice, we can restrict, per EAA, relying parties authorised to request/process such EAA based on specific embedded disclosure policies for relying parties (linked to properties/authroisations model), being able to docuble check such against trust anchors (e.g. Trusted Relying Paeties Registry as the source of trust for verifiable authorisation to request, directly linked to embedded disclosure policies)
+Embedded disclosure is linked to the EAA catalogue and serves to restrict which relying parties can request and process specific Electronic Attestations of Attributes (EAAs). This mechanism operates at the ecosystem level, creating structural controls for data access. 
+In practice, we can restrict, relying parties authorised to request/process specific EAA based on specific embedded disclosure policies for relying parties (linked to properties/authroisations model), being able to double check such against trust anchors (e.g. Trusted Relying Paeties Registry as the source of trust for verifiable authorisation to request, directly linked to embedded disclosure policies)
 
 ## Selective Disclosure
 
 
-Selective disclosure acknowledges that the issuer has liability regarding the issued EAA and, therefore, enables the definition of policies, templates, and profiles on the disclosure of part of the EAA information that ensures the context is not lost. This mechanism operates at the credential level, preserving the semantic integrity of shared information
+Selective disclosure acknowledges that the issuer has liability regarding the issued EAA and, therefore, enables the definition of policies, templates, and profiles on the disclosure of part of the EAA information that ensures the context is not lost. This mechanism operates at the credential level, preserving the semantic integrity of shared information.
+In practice, we can restrict, per EAA, what and how specific claims can ge disclose to ensure legal scope and resposnibility will remain liable. Being able to double check such against trust anchors (e.g. Trusted Schemes Registry as the source of trust for data models and schemes, may also contain predefined Selective Disclosure templates/profiles linked to related EAAs. Like "Terms of use" for holder wallet/instance)
 
 
 # Embedded Disclosure
