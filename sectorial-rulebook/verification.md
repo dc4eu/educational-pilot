@@ -37,17 +37,17 @@ If needed, use EAA catalogue to check embeded disclosure entitlement (if applies
 The verification process shall follow these steps:
 
 1. **Secure Wallet Connection**
-   - Establish secure channel with the wallet
-   - Verify requester/issuer identity 
-   - Verify proof of possession
-   - Authenticate the verification request
-   - Create encrypted communication
+- Establish secure channel with the wallet
+- Verify requester/issuer identity 
+- Verify proof of possession
+- Authenticate the verification request
+- Create encrypted communication
 
 2. **Credential Request**
-   - Request specific credentials
-   - Specify required attributes
-   - Indicate purpose of verification
-   - Apply data minimisation
+- Request specific credentials
+- Specify required attributes
+- Indicate purpose of verification
+- Apply data minimisation
 
 3. **Integrity Verification**
 - Check cryptographic signatures
@@ -80,7 +80,7 @@ The verification process shall follow these steps:
 - Ensure proper formatting
 
 8. **EAA Catalogue Compliance Checking - EDC-W3C-VC + required/mandatory ELM objects/elements checking**
-   - Validate against sectorial catalogue definitions
+- Validate against sectorial catalogue definitions
    - Verify ontology mandatory elements
      - E.g. HEEUMC mandatory objects:
        - 1 Achievement
@@ -92,8 +92,8 @@ The verification process shall follow these steps:
        - But, take into account, that:
          - More Learning outcomes can be included
          - More Competences and/or Skills can be linked to a Learning outcome
-   - Check required elements
-   - Ensure proper formatting against related schemes
+- Check required elements
+- Ensure proper formatting against related schemes
 
 9.  **Quality Assurance Verification**
 (If shared credential includes/combines quality assurance related information)
@@ -102,14 +102,14 @@ The verification process shall follow these steps:
 - Status checking
 - Quality framework alignment
 
-10.  **Credential Status Verification**
-   (If shared credential includes status related information)
+10.   **Credential Status Verification**
+(If shared credential includes status related information)
 - Check for revocation and/or suspension
 - Verify revocation and/or suspension status
 - Validate current status
 - Confirm active status
 
-11.  **Record Keeping (evidences)**
+11.   **Record Keeping (evidences)**
 - Maintain audit records
 - Document verification results
 - Store minimal verification evidence
