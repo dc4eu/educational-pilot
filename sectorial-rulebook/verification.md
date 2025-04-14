@@ -102,14 +102,14 @@ The verification process shall follow these steps:
    - Status checking
    - Quality framework alignment
 
-1.  **Credential Status Verification**
+10.  **Credential Status Verification**
    (If shared credential includes status related information)
    - Check for revocation and/or suspension
    - Verify revocation and/or suspension status
    - Validate current status
    - Confirm active status
 
-2.  **Record Keeping (evidences)**
+11.  **Record Keeping (evidences)**
     - Maintain audit records
     - Document verification results
     - Store minimal verification evidence
