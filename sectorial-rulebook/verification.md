@@ -104,16 +104,16 @@ The verification process shall follow these steps:
 
 10.  **Credential Status Verification**
    (If shared credential includes status related information)
-   - Check for revocation and/or suspension
-   - Verify revocation and/or suspension status
-   - Validate current status
-   - Confirm active status
+- Check for revocation and/or suspension
+- Verify revocation and/or suspension status
+- Validate current status
+- Confirm active status
 
 11.  **Record Keeping (evidences)**
-    - Maintain audit records
-    - Document verification results
-    - Store minimal verification evidence
-    - Support future audit needs
+- Maintain audit records
+- Document verification results
+- Store minimal verification evidence
+- Support future audit needs
 
 ## Visualisation
 
