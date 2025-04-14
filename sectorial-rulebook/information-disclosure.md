@@ -8,7 +8,7 @@ The system supports two complementary types of disclosure control:
 
 ## Embeded Disclosure
 
-Embedded disclosure is linked to the EAA catalogue and serves to restrict which relying parties can request and process specific Electronic Attestations of Attributes (EAAs). This mechanism operates at the ecosystem level, creating structural controls for data access
+Embedded disclosure is linked to the EAA catalogue and serves to restrict which relying parties can request and process specific Electronic Attestations of Attributes (EAAs). This mechanism operates at the ecosystem level, creating structural controls for data access. In practice, we can restrict, per EAA, relying parties authorised to request/process such EAA based on specific embedded disclosure policies for relying parties (linked to properties/authroisations model), being able to docuble check such against trust anchors (e.g. Trusted Relying Paeties Registry as the source of trust for verifiable authorisation to request, directly linked to embedded disclosure policies)
 
 ## Selective Disclosure
 
