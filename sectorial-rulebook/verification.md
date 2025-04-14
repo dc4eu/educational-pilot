@@ -50,34 +50,34 @@ The verification process shall follow these steps:
    - Apply data minimisation
 
 3. **Integrity Verification**
-   - Check cryptographic signatures
-   - Validate hash integrity
-   - Verify digital proofs
-   - Ensure credential hasn't been tampered with
+- Check cryptographic signatures
+- Validate hash integrity
+- Verify digital proofs
+- Ensure credential hasn't been tampered with
 
 4. **Metadata Checking**
-   - Verify expiration dates
-   - Check issuance dates
-   - Validate credential type
-   - Confirm appropriate usage context
+- Verify expiration dates
+- Check issuance dates
+- Validate credential type
+- Confirm appropriate usage context
 
 5. **Issuer Verification**
-   - Digital identifier validation (X.509v3 or/and DID)
-   - Educational accreditation checking (based on EAA authorisation model)
-   - Accreditation issuer verification
-   - Trust chain validation (CRLs or/and TRs)
+- Digital identifier validation (X.509v3 or/and DID)
+- Educational accreditation checking (based on EAA authorisation model)
+- Accreditation issuer verification
+- Trust chain validation (CRLs or/and TRs)
 
 6. **Identity Information Analysis**
-   - Validate holder information
-   - Check binding between credential and holder
-   - Verify identity attributes when necessary
-   - Apply appropriate identity assurance levels
+- Validate holder information
+- Check binding between credential and holder
+- Verify identity attributes when necessary
+- Apply appropriate identity assurance levels
 
 7. **Schema Compliance Checking** 
-   - Verify credential structure
-   - Validate against schema definitions (VC datamodel container: W3C-CVDM or SD-JWT-VCDM)
-   - Check required fields
-   - Ensure proper formatting
+- Verify credential structure
+- Validate against schema definitions (VC datamodel container: W3C-CVDM or SD-JWT-VCDM)
+- Check required fields
+- Ensure proper formatting
 
 8. **EAA Catalogue Compliance Checking - EDC-W3C-VC + required/mandatory ELM objects/elements checking**
    - Validate against sectorial catalogue definitions
@@ -96,11 +96,11 @@ The verification process shall follow these steps:
    - Ensure proper formatting against related schemes
 
 9.  **Quality Assurance Verification**
-  (If shared credential includes/combines quality assurance related information)
-   - Issuer entitlement checking
-   - Expiration verification
-   - Status checking
-   - Quality framework alignment
+(If shared credential includes/combines quality assurance related information)
+- Issuer entitlement checking
+- Expiration verification
+- Status checking
+- Quality framework alignment
 
 10.  **Credential Status Verification**
    (If shared credential includes status related information)
