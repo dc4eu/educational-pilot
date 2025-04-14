@@ -76,11 +76,11 @@ The verification process shall follow these steps:
 
 7. **Schema Compliance Checking** 
    - Verify credential structure
-   - Validate against schema definitions
+   - Validate against schema definitions (VC datamodel container: W3C-CVDM or SD-JWT-VCDM)
    - Check required fields
    - Ensure proper formatting
 
-8. **EAA Catalogue Compliance Checking - EDC-W3C-VC + ELM checking**
+8. **EAA Catalogue Compliance Checking - EDC-W3C-VC + required/mandatory ELM objects/elements checking**
    - Validate against sectorial catalogue definitions
    - Verify ontology mandatory elements
      - E.g. HEEUMC mandatory objects:
@@ -89,8 +89,8 @@ The verification process shall follow these steps:
            - Mandatory 1 Learing outcome 
              - Linked to the Learing outome:
                - 1 Competence
-       - 1 assessment
-       - But:
+       - 1 Assessment
+       - But, take into account, that:
          - More Learning outcomes can be included
          - More Competences and/or Skills can be linked to a Learning outcome
    - Check required elements
