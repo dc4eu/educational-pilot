@@ -26,16 +26,15 @@ The verification process ensures credential validity while protecting privacy th
 
 ## Identity considerations
 To check identity
-     - Use X.509v3 - clasical PKI - to verify if it is an issuer/RP/RPI authorised to interact with the EUDIW
-     - Use DID - decentralized PKI - to extend X.509v3 limitations and verify educational or professional qualifications governance/entitlement
-     - If needed, use EAA catalogue to check embeded disclosure entitlement - if applies
+- Use X.509v3 (clasical PKI) to verify if it is an issuer/RP/RPI authorised to interact with the EUDIW
+- Use DID (decentralized PKI) to extend X.509v3 limitations and verify educational or professional qualifications governance/entitlement
+
 
 ## EAA embedded disclosure considerations
-If needed, use EAA catalogue to check embeded disclosure entitlement
-
-The verification process shall follow these steps:
+If needed, use EAA catalogue to check embeded disclosure entitlement (if applies)
 
 ## Verification Process
+The verification process shall follow these steps:
 
 1. **Secure Wallet Connection**
    - Establish secure channel with the wallet
@@ -51,36 +50,36 @@ The verification process shall follow these steps:
    - Apply data minimisation
 
 3. **Integrity Verification**
-   - Check cryptographic signatures
-   - Validate hash integrity
-   - Verify digital proofs
-   - Ensure credential hasn't been tampered with
+- Check cryptographic signatures
+- Validate hash integrity
+- Verify digital proofs
+- Ensure credential hasn't been tampered with
 
 4. **Metadata Checking**
-   - Verify expiration dates
-   - Check issuance dates
-   - Validate credential type
-   - Confirm appropriate usage context
+- Verify expiration dates
+- Check issuance dates
+- Validate credential type
+- Confirm appropriate usage context
 
 5. **Issuer Verification**
-   - Digital identifier validation (X.509v3 or/and DID)
-   - Educational accreditation checking (based on EAA authorisation model)
-   - Accreditation issuer verification
-   - Trust chain validation (CRLs or/and TRs)
+- Digital identifier validation (X.509v3 or/and DID)
+- Educational accreditation checking (based on EAA authorisation model)
+- Accreditation issuer verification
+- Trust chain validation (CRLs or/and TRs)
 
 6. **Identity Information Analysis**
-   - Validate holder information
-   - Check binding between credential and holder
-   - Verify identity attributes when necessary
-   - Apply appropriate identity assurance levels
+- Validate holder information
+- Check binding between credential and holder
+- Verify identity attributes when necessary
+- Apply appropriate identity assurance levels
 
 7. **Schema Compliance Checking** 
-   - Verify credential structure
-   - Validate against schema definitions
-   - Check required fields
-   - Ensure proper formatting
+- Verify credential structure
+- Validate against schema definitions (VC datamodel container: W3C-CVDM or SD-JWT-VCDM)
+- Check required fields
+- Ensure proper formatting
 
-8. **EAA Catalogue Compliance Checking - EDC-W3C-VC + ELM checking**
+8. **EAA Catalogue Compliance Checking - EDC-W3C-VC + required/mandatory ELM objects/elements checking**
    - Validate against sectorial catalogue definitions
    - Verify ontology mandatory elements
      - E.g. HEEUMC mandatory objects:
@@ -89,32 +88,32 @@ The verification process shall follow these steps:
            - Mandatory 1 Learing outcome 
              - Linked to the Learing outome:
                - 1 Competence
-       - 1 assessment
-       - But:
+       - 1 Assessment
+       - But, take into account, that:
          - More Learning outcomes can be included
          - More Competences and/or Skills can be linked to a Learning outcome
    - Check required elements
    - Ensure proper formatting against related schemes
 
 9.  **Quality Assurance Verification**
-  (If shared credential includes/combines quality assurance related information)
-   - Issuer entitlement checking
-   - Expiration verification
-   - Status checking
-   - Quality framework alignment
+(If shared credential includes/combines quality assurance related information)
+- Issuer entitlement checking
+- Expiration verification
+- Status checking
+- Quality framework alignment
 
-1.  **Credential Status Verification**
+10.  **Credential Status Verification**
    (If shared credential includes status related information)
-   - Check for revocation and/or suspension
-   - Verify revocation and/or suspension status
-   - Validate current status
-   - Confirm active status
+- Check for revocation and/or suspension
+- Verify revocation and/or suspension status
+- Validate current status
+- Confirm active status
 
-2.  **Record Keeping (evidences)**
-    - Maintain audit records
-    - Document verification results
-    - Store minimal verification evidence
-    - Support future audit needs
+11.  **Record Keeping (evidences)**
+- Maintain audit records
+- Document verification results
+- Store minimal verification evidence
+- Support future audit needs
 
 ## Visualisation
 
