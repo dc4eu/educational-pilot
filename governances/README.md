@@ -32,8 +32,9 @@ Focuses on identity credentials that are not linked to civil registers but enabl
 Includes:
 - `EducationalID`
 - `ProfessionalID`
-- `MyAcademicID`
 - `AllianceID`
+- `MyAcademicID`
+
 
 ---
 
