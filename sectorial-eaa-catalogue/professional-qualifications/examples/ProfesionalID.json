@@ -1,0 +1,8 @@
+{
+    "id": "123456789",
+    "givenName": "John",
+    "familyName": "Doe",
+    "personal_administrative_number": "FGHIJ1234",
+    "legally_entitled": true,
+    "professional_speciality": ["mechanical"]
+  }
