@@ -1,0 +1,8 @@
+{
+    "id": "123456789",
+    "givenName": "John",
+    "familyName": "Doe",
+    "personal_administrative_number": "FGHIJ1234",
+    "medical_registration_status": "ACTIVE",
+    "medical_speciality": ["Cardiology"]
+}  
