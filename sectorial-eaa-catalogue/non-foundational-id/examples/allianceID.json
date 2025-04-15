@@ -1,0 +1,8 @@
+{
+    "id": "123456789",
+    "identifier": {
+      "schemeID": "urn:schac:europeanUniversityAllianceCode",
+      "value": "int:euai:aurora.eu:AURORA",
+      "id": "urn:schac:europeanUniversityAllianceCode:int:euai:aurora.eu:AURORA"
+    }
+  }
