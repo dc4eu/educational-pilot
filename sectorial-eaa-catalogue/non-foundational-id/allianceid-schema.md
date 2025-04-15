@@ -94,7 +94,7 @@ Below is the full JSON schema for the Verifiable AllianceID:
   "type": "object",
   "allOf": [
     {
-      "$ref": "./node_modules/@cef-ebsi/vcdm1.1-attestation-schema/schema.json"
+      "$ref": "https://www.w3.org/2018/credentials/v1"
     },
     {
       "properties": {
