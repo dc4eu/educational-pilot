@@ -112,7 +112,7 @@ Below is the full JSON schema for the MyAcademicID:
   "type": "object",
   "allOf": [
     {
-      "$ref": "./node_modules/@cef-ebsi/vcdm1.1-attestation-schema/schema.json"
+      "$ref": "https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/0xbe77a21356835dc09d3d8149ea832ae0a4bae0ae9c869d18219ef8f4a74b4644"
     },
     {
       "properties": {
@@ -125,7 +125,7 @@ Below is the full JSON schema for the MyAcademicID:
               "type": "string"
             },
             "communityUserIdentifier": {
-              "description": "User's Community Identifier is an opaque and non-revocable identifier (i.e. it cannot change over time) that follows the syntax of eduPersonUniqueId  attribute of eduPerson. It consists of "uniqueID" part and fixed scope "erasmus.eduteams.org", separated by at sign. The uniqueID part contains up to 64 hexadecimal digits (a-f, 0-9). The identifier is unique and persistent within the MyAcademicId namespace. The identifier can be used for identity matching, etc. OID: 1.3.6.1.4.1.5923.1.1.1.13 Definition: https: //wiki.refeds.org/display/STAN/eduPerson+2021-11#eduPerson202111-eduPersonUniqueId",
+              "description": "User’s Community Identifier is an opaque and non-revocable identifier (i.e. it cannot change over time) that follows the syntax of eduPersonUniqueId  attribute of eduPerson. It consists of “uniqueID” part and fixed scope “erasmus.eduteams.org”, separated by at sign. The uniqueID part contains up to 64 hexadecimal digits (a-f, 0-9). The identifier is unique and persistent within the MyAcademicId namespace. The identifier can be used for identity matching, etc. OID: 1.3.6.1.4.1.5923.1.1.1.13 Definition: https: //wiki.refeds.org/display/STAN/eduPerson+2021-11#eduPerson202111-eduPersonUniqueId",
               "type": "string"
             },
             "europeanStudentIdentifier": {
@@ -147,7 +147,7 @@ Below is the full JSON schema for the MyAcademicID:
               "type": "string"
             },
             "displayName": {
-              "description": "User's name (firstname lastname). For more complex names. OID: 2.16.840.1.113730.3.1.241 Definition: https: //wiki.refeds.org/display/STAN/eduPerson+2021-11#eduPerson202111-displayName",
+              "description": "User’s name (firstname lastname). For more complex names. OID: 2.16.840.1.113730.3.1.241 Definition: https: //wiki.refeds.org/display/STAN/eduPerson+2021-11#eduPerson202111-displayName",
               "type": "string"
             },
             "givenName": {
