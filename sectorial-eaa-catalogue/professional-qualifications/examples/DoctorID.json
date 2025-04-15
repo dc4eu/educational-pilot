@@ -2,7 +2,7 @@
     "id": "123456789",
     "givenName": "John",
     "familyName": "Doe",
-    "personal_administrative_number": "FGHIJ1234",
+    "personal_administrative_number": "082802012",
     "medical_registration_status": "ACTIVE",
-    "medical_speciality": ["Cardiology"]
-}  
+    "medical_speciality": ["Cardiology", "Cardiovascular Surgery"]
+}
