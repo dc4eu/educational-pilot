@@ -28,7 +28,7 @@ This page provides the list of DNS endpoints made available by Piloting Agents t
 | Germany      | GovPart - Univ1                                                  | Helmut & Guido                   | lspgovpart.govpart.de              | 🔴 |
 | Germany      | GovPart - Univ2                                                  | Helmut & Guido                   | lspgovpart.govpart.de              | 🔴 |
 | Hungary      | Edutus University                                        | Laki Balazs                      | *WIP*                                | 🔴 |
-| Hungary      | Budapest University of Technology and Economics          | Dr. Imre Kocsis                  | *WIP*                                | 🔴 |
+| Hungary      | Budapest University of Technology and Economics          | Imre Kocsis                  | *WIP*                                | 🔴 |
 | Italy        | University of Bologna                                    | Sergio Storari                   | [lspdc4edu.unibo.it](https://uself-verifier-gui.lspdc4edu.unibo.it)                 | 🔴 |
 | Lithuania     | Lithuanian_Centre_for_Quality_Assessment_SKVC       | ---              | *WIP*                                | 🔴 |
 | Lithuania     | Vytautas_Magnus_University       | Tomas Krilavicius              | *WIP*                                | 🔴 |
