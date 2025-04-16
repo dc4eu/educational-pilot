@@ -1,0 +1,21 @@
+{
+    "id": "123456789",
+    "identifier": "123456789",
+    "familyName": "Doe",
+    "firstName": "John",
+    "displayName": "John Doe",
+    "dateOfBirth": "1990-01-01",
+    "commonName": "John Doe",
+    "mail": "john.doe@example.com",
+    "eduPersonPrincipalName": "44444444-A@urv.cat",
+    "eduPersonPrimaryAffiliation": "student",
+    "eduPersonAffiliation": [
+      "student"
+    ],
+    "eduPersonScopedAffiliation": [
+      "student@urv.cat"
+    ],
+    "eduPersonAssurance": [
+      "https://refeds.org/assurance/IAP/low"
+    ]
+  }
