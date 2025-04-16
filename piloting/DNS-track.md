@@ -36,7 +36,7 @@ This page provides the list of DNS endpoints made available by Piloting Agents t
 | Poland      | SKS       | Virginijus Jasaitis                  | *WIP*                                | 🔴 |
 | Portugal     | Universidade do Porto                              | Jorge Cunha                  | [lspup.up.pt](https://uself-verifier-gui.lspup.up.pt)          | 🟢|
 | Portugal      | UMAIA          | Alexandre Sousa                  | *WIP*                                | 🔴 |
-| Romania      | Politehnica University of Timisoara, Romania (UPT)       | Diana Andone                     | *WIP*                        | 🔴 |
+| Romania      | Politehnica University of Timisoara, Romania (UPT)       | Diana Andone                     | [lsp.dc4eu.runidas.rei.gov.ro](https://uself-verifier.lsp.dc4eu.runidas.rei.gov.ro)                    | 🔴 |
 | Spain        | University of Alcalá (UAH)                               | Sergio Caro                      | [lspuah.uah.es](https://uself-verifier-gui.lspuah.uah.es)                      | 🟢 |
 | Spain        | University of Málaga                                     | Victoriano Giralt                | [lspuma.uma.es](https://uself-verifier-gui.lspuma.uma.es)                       | 🟢 |
 | Spain        | Universitat Rovira i Virgili                             | Maria Teresa Bordas              | [lspurv.urv.cat](https://uself-verifier-gui.lspurv.urv.cat/)                     | 🟢 |
