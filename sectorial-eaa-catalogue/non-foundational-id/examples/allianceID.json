@@ -1,29 +1,9 @@
 {
-    "id": "123456789",  
-    "identifier": {
-      "schemeID": "urn:schac:europeanUniversityAllianceCode:int:euai:AURORA:123",
-      "value": "1234567890",
-      "id": "https://example.com/identifier/123"
-    },
-    "givenName": "John",
-    "familyName": "Doe",
-    "displayName": "John Doe",
-    "emailAddress": "johndoe@estudiants.urv.cat",
-    "communityUserIdentifier": "1234567890@erasmus.eduteams.org",
-    "europeanStudentIdentifier": [
-      "ESI-1234567890"
-    ],
-    "externalAffiliation": [
-      "urn:schac:personalData:eduPersonScopedAffiliation:student@urv.cat"
-    ],
-    "organization": "Rovira i Virgili University",
-    "entitlements": [
-      "Student",
-      "Member of the Faculty of Computer Science"
-    ],
-    "assurance": [
-      "https://example.com/assurance/level1",
-      "https://example.com/assurance/level2"
-    ]
+  "id": "123456789",
+  "identifier": {
+    "schemeID": "urn:schac:europeanUniversityAllianceCode:int:euai:myUniversityAlliance:123",
+    "value": "1234567890",
+    "id": "https://example.com/identifier/123"
   }
+}
 
