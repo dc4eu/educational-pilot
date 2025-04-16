@@ -37,6 +37,7 @@ This page provides the list of DNS endpoints made available by Piloting Agents t
 | Portugal     | Universidade do Porto                              | Jorge Cunha                  | [lspup.up.pt](https://uself-verifier-gui.lspup.up.pt)          | 🟢|
 | Portugal      | UMAIA          | Alexandre Sousa                  | *WIP*                                | 🔴 |
 | Romania      | Politehnica University of Timisoara, Romania (UPT)       | Diana Andone                     | lsp.dc4eu.runidas.rei.gov.ro                    | 🔴 |
+| Romania      | UEFISCDI                                                 | Cosmin Cioranu                   | [lsp.dc4eu.runidas.rei.gov.ro](https://uself-verifier-gui.lsp.dc4eu.runidas.rei.gov.ro)       | 🟢 |
 | Spain        | University of Alcalá (UAH)                               | Sergio Caro                      | [lspuah.uah.es](https://uself-verifier-gui.lspuah.uah.es)                      | 🟢 |
 | Spain        | University of Málaga                                     | Victoriano Giralt                | [lspuma.uma.es](https://uself-verifier-gui.lspuma.uma.es)                       | 🟢 |
 | Spain        | Universitat Rovira i Virgili                             | Maria Teresa Bordas              | [lspurv.urv.cat](https://uself-verifier-gui.lspurv.urv.cat/)                     | 🟢 |
@@ -44,7 +45,6 @@ This page provides the list of DNS endpoints made available by Piloting Agents t
 | Spain      | UNED       | José Emilio Permuy                   | *WIP*                                | 🔴 |
 | Spain      | Universidad Politécnica de Madrid       | Fernando Pescador                  | *WIP*                                | 🔴 |
 | Sweeden      | RISE - Research Institutes of Sweden          | Olle Nyman                 | *WIP*                                | 🔴 |
-| Romania      | UEFISCDI                                                 | Cosmin Cioranu                   | [lsp.dc4eu.runidas.rei.gov.ro](https://uself-verifier-gui.lsp.dc4eu.runidas.rei.gov.ro)       | 🟢 |
 
 ## Pilot 3 – Combined (Pilot 1 + Pilot 2)
 
