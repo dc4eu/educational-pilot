@@ -12948,6 +12948,36 @@
           "de": "John"
         }
       },
+      "credentialSubject" : {
+        "id" : "urn:epass:person:1",
+        "type" : "Person",
+        "dateOfBirth" : "2000-07-13T00:00:00+02:00",
+        "givenName" : {
+          "en" : [ "John" ]
+        },
+        "familyName" : {
+          "en" : [ "Doe" ]
+        },
+        "fullName" : {
+          "en" : [ "John Doe" ]
+        },
+        "nationalID" : {
+          "id" : "urn:epass:legalIdentifier:5",
+          "type" : "LegalIdentifier",
+          "notation" : "123456789",
+          "spatial" : {
+            "id" : "http://publications.europa.eu/resource/authority/country/ESP",
+            "type" : "Concept",
+            "inScheme" : {
+              "id" : "http://publications.europa.eu/resource/authority/country",
+              "type" : "ConceptScheme"
+            },
+            "prefLabel" : {
+              "en" : [ "Spain" ]
+            },
+            "notation" : "country"
+          }
+        },
       "issuanceDate": "2025-01-14T06:53:07",
       "issued": "2025-01-14T06:53:07",
       "issuer": {
