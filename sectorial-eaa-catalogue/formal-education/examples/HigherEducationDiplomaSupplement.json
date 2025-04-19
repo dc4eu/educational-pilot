@@ -1,0 +1,142 @@
+{
+  "credential": {
+    "id": "urn:credential:c0e651bf-7971-44ab-b931-5dcc923374e0",
+    "type": ["VerifiableCredential", "EuropeanDigitalCredential", "DiplomaSupplement"],
+    "credentialSchema": [
+      {
+        "id": "http://data.europa.eu/snb/model/ap/edc-generic-full",
+        "type": "ShaclValidator2017"
+      }
+    ],
+    "credentialSubject": {
+      "id": "urn:epass:person:1",
+      "type": "Person",
+      "dateOfBirth": "2000-07-13T00:00:00+02:00",
+      "givenName": {
+        "en": ["John"]
+      },
+      "familyName": {
+        "en": ["Doe"]
+      },
+      "fullName": {
+        "en": ["John Doe"]
+      },
+      "nationalID": {
+        "id": "urn:epass:legalIdentifier:5",
+        "type": "LegalIdentifier",
+        "notation": "123456789",
+        "spatial": {
+          "id": "http://publications.europa.eu/resource/authority/country/ESP",
+          "type": "Concept",
+          "inScheme": {
+            "id": "http://publications.europa.eu/resource/authority/country",
+            "type": "ConceptScheme"
+          },
+          "prefLabel": {
+            "en": ["Spain"]
+          },
+          "notation": "country"
+        }
+      }
+    },
+    "title": {
+      "en": ["Diploma Supplement"]
+    },
+    "issueDate": "2023-07-01T00:00:00+02:00",
+    "validityPeriod": {
+      "startDate": "2023-07-01T00:00:00+02:00",
+      "endDate": "2025-07-01T00:00:00+02:00"
+    },
+    "issuer": {
+      "id": "urn:epass:org:1",
+      "type": "Organisation",
+      "legalName": {
+        "en": ["Universitat Rovira i Virgili"]
+      },
+      "location": {
+        "id": "urn:epass:location:1",
+        "type": "Location",
+        "address": [
+          {
+            "id": "urn:epass:address:1",
+            "type": "Address",
+            "countryCode": {
+              "id": "http://publications.europa.eu/resource/authority/country/ESP",
+              "type": "Concept",
+              "inScheme": {
+                "id": "http://publications.europa.eu/resource/authority/country",
+                "type": "ConceptScheme"
+              },
+              "prefLabel": {
+                "en": ["Spain"]
+              },
+              "notation": "country"
+            },
+            "fullAddress": {
+              "id": "urn:epass:note:1",
+              "type": "Note",
+              "noteLiteral": {
+                "en": ["C/Escorxador S/N Edificio Rectoratdo 43003, Tarragona"]
+              }
+            }
+          }
+        ]
+      }
+    },
+    "qualificationDetails": {
+      "qualificationTitle": {
+        "en": ["Bachelor's Degree in Computer Science"]
+      },
+      "mainFieldOfStudy": {
+        "en": ["Computer Science"]
+      },
+      "awardingInstitution": {
+        "id": "urn:epass:org:1",
+        "type": "Organisation",
+        "legalName": {
+          "en": ["Universitat Rovira i Virgili"]
+        }
+      },
+      "teachingLanguage": {
+        "en": ["Spanish"]
+      }
+    },
+    "programmeInformation": {
+      "levelOfQualification": {
+        "en": ["Bachelor"]
+      },
+      "lengthOfProgramme": {
+        "en": ["3 years"]
+      },
+      "accessRequirements": {
+        "en": ["Completed Upper Secondary Education"]
+      },
+      "programmeRequirements": {
+        "en": ["Completion of required courses in Computer Science and Mathematics."]
+      }
+    },
+    "additionalStudentInformation": {
+      "previousQualifications": {
+        "en": ["High School Diploma in Science"]
+      }
+    },
+    "extendedQualificationInformation": {
+      "specialAchievements": {
+        "en": ["Awarded with distinction for the final year project."]
+      },
+      "honours": {
+        "en": ["Summa Cum Laude"]
+      }
+    },
+    "supplementaryDocumentation": {
+      "transcripts": {
+        "en": ["Transcript of Records available upon request."]
+      }
+    },
+    "nationalExtensions": {
+      "countrySpecificRequirements": {
+        "en": ["Complies with the Spanish Royal Decree 1002/2010 for university degrees."]
+      }
+    }
+  }
+}
