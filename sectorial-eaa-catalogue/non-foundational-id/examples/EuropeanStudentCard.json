@@ -1,0 +1,22 @@
+{
+  "id": "123456789",
+  "identifier": "123456789",
+  "familyName": "Doe",
+  "firstName": "John",
+  "displayName": "John Doe",
+  "dateOfBirth": "1990-01-01",
+  "mail": "john.doe@example.com",
+  "escNumber": "1a041b00-79dd-103d-a648-001227063334", 
+  "esi": "ESI-1234567890",
+  "escLogo": "https://example.com/esc-logo", 
+  "organization": "Rovira i Virgili University",
+  "escQRCode": "https://esc-r.eu/1a041b00-79dd-103d-a648-001227063334",
+  "entitlements": [
+    "Student",
+    "Member of the Faculty of Computer Science"
+  ],
+  "assurance": [
+    "https://example.com/assurance/level1",
+    "https://example.com/assurance/level2"
+  ]
+}
