@@ -1,0 +1,103 @@
+{
+    "id": "urn:epass:microcredential:vet:001",
+    "type": ["VerifiableCredential", "VerifiableAttestation", "VETEuropeanMicrocredential"],
+    "identifier": [
+        {
+            "id": "vet001",
+            "type": "Identifier",
+            "schemeName": "Microcredential ID",
+            "schemeVersion": "1.0"
+        }
+    ],
+    "credentialProfiles": [
+        {"id": "http://europa.eu/microcredentials/vet"}
+    ],
+    "attachment": [],
+    "displayParameter": {
+        "id": "display-001",
+        "type": "DisplayParameter",
+        "title": [
+            {"en": "Safe Handling and Application of Plant Protection Products in Gardening"}
+        ],
+        "language": [{"en": "English"}],
+        "primaryLanguage": {"en": "English"},
+        "summaryDisplay": "Safe Handling and Application of Plant Protection Products",
+        "individualDisplay": [
+            {
+                "language": "en",
+                "displayDetail": [
+                    {
+                        "image": "microcredential_image.jpg",
+                        "page": 1
+                    }
+                ]
+            }
+        ]
+    },
+    "issuer": {
+        "id": "urn:epass:org:47",
+        "type": "Organisation",
+        "legalName": [
+            {"en": "Vocational Education and Training Institute"}
+        ],
+        "location": {
+            "address": "1234 Vocational St., City, Country"
+        }
+    },
+    "credentialSubject": {
+        "id": "urn:epass:person:john_doe_001",
+        "type": "Person",
+        "fullName": {"en": "John Doe"},
+        "givenName": {"en": "John"},
+        "familyName": {"en": "Doe"}
+    },
+    "issuanceDate": "2025-04-16T08:34:39.416606",
+    "issued": "2022-08-09T15:53:56+02:00",
+    "validFrom": "2022-08-09T15:53:56+02:00",
+    "validUntil": "2025-08-09T15:53:56+02:00",
+    "proof": [],
+    "evidence": [],
+    "termsOfUse": [],
+    "credentialSchema": [
+        {"id": "http://europa.eu/schemas/vet-microcredential", "type": "JsonSchema"}
+    ],
+    "credentialStatus": [
+        {"id": "urn:status:2021-valid", "type": "CredentialStatus", "status": "Valid"}
+    ],
+    "holder": [
+        {"id": "urn:epass:person:john_doe_001", "type": "Person"}
+    ],
+    "title": "Safe Handling and Application of Plant Protection Products in Gardening",
+    "duration": "25 hours of learner effort",
+    "ects": "1 ECTS credit",
+    "accreditedCompetence": "The learner is capable of safely handling and applying plant protection products (pesticides) in gardening and landscaping environments, in compliance with occupational safety and environmental regulations.",
+    "learningOutcomes": [
+        "Identify the main types of plant protection products and their associated hazards.",
+        "Interpret labels, safety data sheets, and hazard pictograms.",
+        "Apply correct procedures for preparation, dosage, and application of phytosanitary products.",
+        "Implement personal protective measures and environmental risk mitigation strategies.",
+        "Carry out basic incident response and waste disposal actions in accordance with legal standards."
+    ],
+    "assessmentEvidence": [
+        "Completion of a theory-based module with applied case scenarios.",
+        "Practical demonstration of safe application in a controlled or simulated setting.",
+        "Summative assessment including a multiple-choice test and observed practical task."
+    ],
+    "targetLearners": [
+        "Adult learners in vocational education and training (VET)",
+        "Groundskeepers, gardeners, or landscaping technicians",
+        "Entry-level agricultural and environmental service workers"
+    ],
+    "relationshipToQualifications": [
+        "Gardening and Landscaping Maintenance Technician",
+        "Green Space Management and Environmental Services"
+    ],
+    "escoSkills": [
+        {"skill": "Apply plant protection products", "escoUri": "ESCO:efd472f2-2400-45c3-96f8-caf0491f2416"},
+        {"skill": "Handle hazardous chemicals", "escoUri": "ESCO:02a850e1-3b5b-4b66-8152-e58799e7e28f"},
+        {"skill": "Comply with safety regulations", "escoUri": "ESCO:16ce9e8d-2c95-48fc-91e1-1042ec1c8ee9"},
+        {"skill": "Use personal protection equipment", "escoUri": "ESCO:5465c8c2-2e02-432d-9497-14ec21ffb3c3"},
+        {"skill": "Dispose of chemical waste", "escoUri": "ESCO:38c9c8ee-0551-407f-901d-82f7d6c78ae3"},
+        {"knowledge": "Occupational health and safety legislation", "escoUri": "ESCO:dcbb18c3-d6bc-4fe4-ae83-67cd1310c040"}
+    ]
+}
