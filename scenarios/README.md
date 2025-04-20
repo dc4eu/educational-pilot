@@ -36,7 +36,7 @@ This section outlines the common and pilot-specific artefacts that support scena
 
 
 
-## Pilot 1
+## [Pilot 1](./Pilot1)
 
 ### Centrally provided by DC4EU
 
@@ -58,7 +58,7 @@ This section outlines the common and pilot-specific artefacts that support scena
 
 
 
-## Pilot 2
+## [Pilot 2](./Pilot2)
 
 ### Centrally provided by DC4EU
 
