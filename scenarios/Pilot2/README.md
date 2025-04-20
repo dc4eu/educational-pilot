@@ -44,7 +44,7 @@ Through the use of DIDs and registry-linked metadata, it becomes possible to mod
 ### c. Relying Party Intermediaries
 - May act on behalf of several verifiers (e.g. ENIC/NARIC platforms)
 - Use their own DID and are referenced in TAOR with specific authorisation
-- May present **delegated trust chains** (e.g. Ministry â Agency â Intermediary)
+- May present **delegated trust chains** (e.g. Ministry - Agency - Intermediary)
 
 ### d. EUDI Wallet
 - Held by the **data subject (natural person)**
