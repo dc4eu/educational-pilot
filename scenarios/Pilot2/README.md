@@ -85,7 +85,7 @@ Through the use of DIDs and registry-linked metadata, it becomes possible to mod
 - **Cross-border by design**: Trust is based on metadata and registry entries, not on shared CA hierarchies
 - **Complementary to classical PKI**: Supports scenarios where dynamic authorisation, decentralised identifiers, and verifiable delegation are required
 
-## 6. Characterisation of dPKI Usage in DC4EU â Pilot 2
+## 6. Characterisation of dPKI Usage in DC4EU' Pilot 2
 
 In the context of **Pilot 2** of the DC4EU project, the decentralised PKI model will be tested across all participating domains:
 
