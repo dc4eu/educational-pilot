@@ -17,7 +17,7 @@ Through the use of DIDs and registry-linked metadata, it becomes possible to mod
 - Identity proofs and authorisations are linked via **Verifiable Presentations (VPs)**
 
 ### b. Trust Anchoring Through TAOs and Registries
-- The issuerâs DID must be linked to:
+- The issuer's DID must be linked to:
   - A **Trusted Accreditation Organisation (TAO)**
   - A **Trusted Scheme Registry (TSR)** defining the legal framework
   - An **Issuer Registry (TIR)** and **Authorised Roles Registry (TAOR)**
