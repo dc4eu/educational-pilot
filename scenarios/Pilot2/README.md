@@ -103,6 +103,6 @@ In the context of **Pilot 2** of the DC4EU project, the decentralised PKI model 
 
 ### d. Revocation and Status Monitoring
 - StatusList2021 used by all issuers
-- Wallets query status via a privacy-preserving proxy
+- Wallets and Relying parties query status via a privacy-preserving proxy
 
 This model enables a fully **decentralised, role-aware, and privacy-respecting trust architecture**, aligned with eIDAS2 and supporting scalable cross-border recognition of educational and professional credentials
