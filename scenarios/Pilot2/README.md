@@ -13,14 +13,14 @@ Through the use of DIDs and registry-linked metadata, it becomes possible to mod
 
 ### a. Legal Entities Registering DIDs
 - Entities (e.g. universities, ministries, accreditation agencies) create DIDs via the **EBSI DID Registry**, under the **did:ebsi** method
-- These DIDs represent the issuerâs public key and service endpoints
+- These DIDs represent the issuer's public key and service endpoints
 - Identity proofs and authorisations are linked via **Verifiable Presentations (VPs)**
 
 ### b. Trust Anchoring Through TAOs and Registries
 - The issuer's DID must be linked to:
-  - A **Trusted Accreditation Organisation (TAO)**
+  - A **Trusted Authorisation Organisation (TAO)**
   - A **Trusted Scheme Registry (TSR)** defining the legal framework
-  - An **Issuer Registry (TIR)** and **Authorised Roles Registry (TAOR)**
+  - An **Issuer Registry (TIR)** and **Trusted Authorisation Registry (TAOR)**
 - Trust is anchored through inclusion in these EBSI-managed or Member State-notified registries
 
 ## 2. Roles and Their dPKI Requirements
@@ -35,11 +35,11 @@ Through the use of DIDs and registry-linked metadata, it becomes possible to mod
   - A chamber issuing a professional licence
 
 ### b. Relying Parties
-- Must resolve the issuerâs DID and verify:
-  - The credentialâs signature
+- Must resolve the issuer's DID and verify:
+  - The credential's signature
   - The scheme and role authorisation
-  - The issuerâs presence in the TIR/TAOR
-- Can use decentralised trust verification libraries (e.g. ATOS verifier SDK)
+  - The issuer's presence in the TIR/TAOR
+- Can use decentralised trust verification libraries
 
 ### c. Relying Party Intermediaries
 - May act on behalf of several verifiers (e.g. ENIC/NARIC platforms)
