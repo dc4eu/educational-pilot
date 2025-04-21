@@ -22,13 +22,13 @@ This repository is organised into several key sections:
 
 - **[Scenarios](./scenarios/README.md)**: A scenario within DC4EU, details the elements each piloting agent must provide to characterise, execute, and monitor user journeys in alignment with governance, technical, and reporting requirements.
 
+- **[Pilots](./piloting/README.md)**: A scenario within DC4EU, details the elements each piloting agent must provide to characterise, execute, and monitor user journeys in alignment with governance, technical, and reporting requirements.
+
+- **[User Journeys](./user-journeys/)**: Provided user journeys to demonstrate cross-border interaction, ready-to go infrastructure, and foundation to extend/provide more user journeys and/or EAAs
+  
 - **[Toolkits](./toolkits/README.md)**: Implementation resources including technical architecture, component descriptions, workflows (RFCs), and specific use cases to help develop user journeys.
 
 - **[Elements](./elements)**: Elements produced/provided by DC4EU to facilitate adoption. Includes data model converters, gateways, reports.
-
-- **[User Journeys](./user-journeys/)**: Provided user journeys to demonstrate cross-border interaction, ready-to go infrastructure, and foundation to extend/provide more user journeys and/or EAAs
-
-- **[Pilots](./piloting/README.md)**: A scenario within DC4EU, details the elements each piloting agent must provide to characterise, execute, and monitor user journeys in alignment with governance, technical, and reporting requirements.
 
 - **[Compliance](./compliance/)**: Information about EBSI and EUDI Wallet compliance tests to ensure interoperability with other issuer, verifier, and wallet solutions.
 
