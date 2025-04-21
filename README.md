@@ -18,7 +18,7 @@ This repository is organised into several key sections:
 
 - **[Sectorial rulebook](./sectorial-rulebook/)**: The core framework that establishes standardised approaches for managing digital educational and professional credentials within the European Union.
 
-- **[EAA Characterisation](./sectorial-eaa-catalogue/)**: Characterisation of an Electronic Attestation of Attributes (EAA).
+- **[EAA Characterisation](./sectorial-eaa-catalogue/EAA_Characterisation.md)**: Characterisation of an Electronic Attestation of Attributes (EAA).
 
 
 - **[Sectorial EAA catalogue](./sectorial-eaa-catalogue/)**: Contains all data models and schemas agreed at sectorial level for Education and Professional Qualifications, including formal education, quality assurance regimes, and non-foundational ID.
