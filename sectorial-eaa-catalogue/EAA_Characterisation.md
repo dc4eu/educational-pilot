@@ -33,6 +33,31 @@ The following metadata fields must be included:
 
 **Note:** `revocation_support` must include both revocation and suspension support where required.
 
+``` mermaid
+graph TD
+  EAA["Electronic Attestation of Attributes (EAA)"]
+
+  EAA --> ID["eaa_id"]
+  EAA --> TITLE["title"]
+  EAA --> DESC["description"]
+  EAA --> CTYPE["credential_type"]
+  EAA --> DMODEL["data_model\n(schema_uri, standard, profile)"]
+  EAA --> SECTOR["sectoral_scope"]
+  EAA --> ISSUEBY["issuable_by\n(authorised_roles, taor_required, tir_entry)"]
+  EAA --> USEBY["usable_by\n(authorised_roles, entitlement_check)"]
+  EAA --> REQPID["requires_pid"]
+  EAA --> DPOL["disclosure_policy\n(machine_readable, verifier_role_check)"]
+  EAA --> TOR["terms_of_reference_uri"]
+
+  EAA --> REVOKE["revocation_support"]
+  REVOKE --> R_METHOD["method"]
+  REVOKE --> R_ENDPOINT["status_endpoint"]
+  REVOKE --> R_SUSPEND["supports_suspension"]
+
+  EAA --> BIND["binding_requirements\n(proof_of_possession, cryptographic_binding_to_holder)"]
+  EAA --> EXP["expiry\n(type, valid_until)"]
+  EAA --> VER["version"]
+```
 ---
 
 ## Identity trust (via classical PKI)
