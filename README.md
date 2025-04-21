@@ -20,11 +20,11 @@ This repository is organised into several key sections:
 
 - **[Sectorial EAA Catalogue](./sectorial-eaa-catalogue/)**: Contains all data models and schemas agreed at sectorial level for Education and Professional Qualifications, including formal education, quality assurance regimes, and non-foundational ID.
 
+- **[User Journeys](./user-journeys/)**: Provided user journeys to demonstrate cross-border interaction, ready-to go infrastructure, and foundation to extend/provide more user journeys and/or EAAs
+  
 - **[Scenarios](./scenarios/README.md)**: A scenario within DC4EU, details the elements each piloting agent must provide to characterise, execute, and monitor user journeys in alignment with governance, technical, and reporting requirements.
 
 - **[Pilots](./piloting/README.md)**: A scenario within DC4EU, details the elements each piloting agent must provide to characterise, execute, and monitor user journeys in alignment with governance, technical, and reporting requirements.
-
-- **[User Journeys](./user-journeys/)**: Provided user journeys to demonstrate cross-border interaction, ready-to go infrastructure, and foundation to extend/provide more user journeys and/or EAAs
   
 - **[Toolkits](./toolkits/README.md)**: Implementation resources including technical architecture, component descriptions, workflows (RFCs), and specific use cases to help develop user journeys.
 
