@@ -8,19 +8,22 @@ This repository provides comprehensive documentation and implementation guidance
 
 This repository is organised into several key sections:
 
-- **[eIDAS Roles](./docs/eIDAS-roles.md)**: Outlines the key roles within the European digital identity framework under eIDAS, detailing their definitions, functions, types of attestations issued, regulatory references, and compliance requirements.
+- **[eIDAS roles](./docs/eIDAS-roles.md)**: Outlines the key roles within the European digital identity framework under eIDAS, detailing their definitions, functions, types of attestations issued, regulatory references, and compliance requirements.
 
 - **[eIDAS scenarios](./eidas-scenarios/)**: Outlines the four trust models for electronic attestation of attributes (EAAs) within the European Digital Ecosystem, explaining how EBSI enhances traditional PKI approaches.
   
 - **[Governance in Education and Professional Qualifications](./governances)**: Understanding existing governnace(s)
   
-- **[EAA Authorisation Model](./eaa-based-authorisation-model/)**: Defines a structured framework for education and professional qualifications' governance, managing authorisations and recognition within educational, professional, and quality assurance domains.
+- **[EAA-based authorisation model](./eaa-based-authorisation-model/)**: Defines a structured framework for education and professional qualifications' governance, managing authorisations and recognition within educational, professional, and quality assurance domains.
 
-- **[Sectorial Rulebook](./sectorial-rulebook/)**: The core framework that establishes standardised approaches for managing digital educational and professional credentials within the European Union.
+- **[Sectorial rulebook](./sectorial-rulebook/)**: The core framework that establishes standardised approaches for managing digital educational and professional credentials within the European Union.
 
-- **[Sectorial EAA Catalogue](./sectorial-eaa-catalogue/)**: Contains all data models and schemas agreed at sectorial level for Education and Professional Qualifications, including formal education, quality assurance regimes, and non-foundational ID.
+- **[EAA Characterisation](./sectorial-eaa-catalogue/)**: Characterisation of an Electronic Attestation of Attributes (EAA).
 
-- **[User Journeys](./user-journeys/)**: Provided user journeys to demonstrate cross-border interaction, ready-to go infrastructure, and foundation to extend/provide more user journeys and/or EAAs
+
+- **[Sectorial EAA catalogue](./sectorial-eaa-catalogue/)**: Contains all data models and schemas agreed at sectorial level for Education and Professional Qualifications, including formal education, quality assurance regimes, and non-foundational ID.
+
+- **[User journeys](./user-journeys/)**: Provided user journeys to demonstrate cross-border interaction, ready-to go infrastructure, and foundation to extend/provide more user journeys and/or EAAs
   
 - **[Scenarios](./scenarios/README.md)**: A scenario within DC4EU, details the elements each piloting agent must provide to characterise, execute, and monitor user journeys in alignment with governance, technical, and reporting requirements.
 
