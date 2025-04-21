@@ -22,9 +22,9 @@ This section describes the high-level technical architecture of the system, incl
 Detailed descriptions of the main components from core technical infrastructure:
 
 - [Keycloak](./components/README.md)
-- [Status Web GUI](./components/status-web-gui/README.md)
-- PID Generator GUI
-- Student Web GUI
+- [PID Generator GUI](./components/pid-generator/README.md)
+- [Student Web GUI](./components/verifier-gui/README.md)
+- [Issuer Web GUI](./components/issuer-gui/README.md)
 - Issuer Agent
 - Authentic Source
 - [Natural Person Holder Wallet provided by IZERTIS](./wallet/README.md)
