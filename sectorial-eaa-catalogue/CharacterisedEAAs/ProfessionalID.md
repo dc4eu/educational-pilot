@@ -4,18 +4,18 @@ _Last updated: 2025-04-21_
 
 # EAA Characterisation Proposals
 
-## Professional Identity Attribute (`ProfessionalID`)
+## ProfessionalID (`ProfessionalID`)
 
 ```json
 {
   "eaa_id": "ProfessionalID",
-  "title": "Professional Identity Attribute",
-  "description": "Credential proving that a person holds a regulated professional status or membership in a recognised professional body.",
+  "title": "ProfessionalID",
+  "description": "Identity credential that identifies a natural person in the context of professional activities or affiliation, as issued by an authorised organisation.",
   "credential_type": "VerifiableAttestation",
   "data_model": {
     "standard": "W3C Verifiable Credentials",
-    "profile": "DC4EU-Professional",
-    "schema_uri": "https://tsr.dc4eu.eu/schemas/professionalid-v1.jsonld"
+    "profile": "DC4EU-Identity",
+    "schema_uri": "https://tsr.dc4eu.eu/schemas/professionalid.jsonld"
   },
   "sectoral_scope": "ProfessionalQualifications",
   "issuable_by": {
@@ -24,7 +24,7 @@ _Last updated: 2025-04-21_
       "RegulatedAuthority"
     ],
     "taor_required": true,
-    "tir_entry": "did:ebsi:issuer-prof"
+    "tir_entry": "did:ebsi:issuer-professionalid"
   },
   "usable_by": {
   "verifier_authorisation_required": true,
@@ -32,7 +32,8 @@ _Last updated: 2025-04-21_
   "trust_framework": "eIDAS",
   "limit_root_tao": ["did:ebsi:example-root-tao"],
     "authorised_roles": [
-      "LabourInspector",
+      "RecognitionAuthority",
+      "VerifierWithEduRole",
       "VerifierWithProfRole"
     ],
     "entitlement_check": "required"
@@ -59,8 +60,9 @@ _Last updated: 2025-04-21_
   },
   "expiry": {
     "type": "dynamic",
-    "validity": "linked to professional licence period"
+    "validity": "linked to affiliation or membership period"
   },
   "version": "1.0"
 }
 ```
+
