@@ -15,7 +15,7 @@ The following metadata fields must be included:
 
 | Field                    | Purpose                                                                                         | Reference/Source              |
 |--------------------------|-------------------------------------------------------------------------------------------------|--------------------------------|
-| `eaa_id`                 | Unique identifier of the EAA (e.g. `EAA1`, `EAA2`, `PID`)                                        | Sectoral catalogue            |
+| `eaa_id`                 | Unique identifier of the EAA (e.g. `EUHED`, `USC`, `EducationalID`)                                        | Sectoral catalogue            |
 | `title`                  | Human-readable name of the EAA                                                                   | Sectoral definition           |
 | `description`            | Semantic meaning and domain of application                                                       | National or EU-level authority|
 | `data_model`             | Reference to JSON-LD schema or ELM-based structure                                          | ELM, W3C VCDM           |
