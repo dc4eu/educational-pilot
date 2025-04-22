@@ -18,7 +18,7 @@ The following metadata fields must be included:
 | `eaa_id`                 | Unique identifier of the EAA (e.g. `EAA1`, `EAA2`, `PID`)                                        | Sectoral catalogue            |
 | `title`                  | Human-readable name of the EAA                                                                   | Sectoral definition           |
 | `description`            | Semantic meaning and domain of application                                                       | National or EU-level authority|
-| `data_model`             | Reference to JSON-LD schema or ELM/ELMO-based structure                                          | ELM, ELMO, W3C VCDM           |
+| `data_model`             | Reference to JSON-LD schema or ELM-based structure                                          | ELM, W3C VCDM           |
 | `credential_type`        | One of `VerifiableCredential`, `VerifiableAttestation`, or `QEAA`                                | eIDAS2 IA – Annex V           |
 | `sectoral_scope`         | Domain of use (e.g. `FormalEducation`, `ProfessionalQualifications`)                            | Sectoral governance           |
 | `issuable_by`            | Roles authorised to issue, mapped to TAOR and TIR                                                | TAOR, TSR, TIR                |
