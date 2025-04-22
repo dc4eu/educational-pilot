@@ -26,7 +26,7 @@ The following metadata fields must be included:
 | `requires_pid`           | Whether the EAA is only valid when associated with a PID or QEAA                                 | DC4EU, Annex V                |
 | `disclosure_policy`      | Embedded policy restricting which verifier roles may access this EAA                             | Embedded in TSR, wallet logic |
 | `terms_of_reference_uri` | Link to JSON ToR stored in TSR specifying usage, presentation rules, and constraints             | TSR                           |
-| `revocation_support`     | Method used to check revocation and suspension status                                            | StatusList2021, ARF v1.8.0    |
+| `revocation_support`     | Method used to check revocation and suspension status                                            | StatusList2021, ARF   |
 | `binding_requirements`   | Whether the credential must be cryptographically bound to the wallet holder                      | Annex VII – Security          |
 | `expiry`                 | Static or dynamic expiry value                                                                   | Wallet-side enforcement       |
 | `version`                | Version of the EAA characterisation entry                                                        | Sectoral catalogue            |
