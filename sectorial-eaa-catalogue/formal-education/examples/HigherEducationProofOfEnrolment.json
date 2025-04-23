@@ -1,7 +1,7 @@
 {
     "credential" : {
       "id" : "urn:credential:fcbc4093-5e9e-4913-a223-c8d87ea210a4",
-      "type" : [ "VerifiableCredential", "EuropeanDigitalCredential", "HigherEducationProofOfEnrolment" ],
+      "type" : [ "VerifiableCredential", "EuropeanDigitalCredential", "VerifiableHigherEducationProofOfEnrolment" ],
       "credentialSchema" : [ {
         "id" : "http://data.europa.eu/snb/model/ap/edc-generic-full",
         "type" : "ShaclValidator2017"
