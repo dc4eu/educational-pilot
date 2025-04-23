@@ -4,7 +4,7 @@
         "VerifiableCredential",
         "VerifiableAttestation",
         "EuropeanDigitalCredential",
-        "UpperSecondaryCertificate"
+        "VerifiableUpperSecondaryEducationCertificate"
       ],
       "credentialProfiles": {
         "id": "http://data.europa.eu/snb/credential/e34929035b",
