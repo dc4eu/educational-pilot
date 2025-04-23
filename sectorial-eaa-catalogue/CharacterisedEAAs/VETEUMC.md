@@ -4,27 +4,27 @@ _Last updated: 2025-04-21_
 
 # EAA Characterisation Proposals
 
-## EducationalID (`EducationalID`)
+## Vocational Educational Training European Micro Credentials (`VETEUMC`)
 
 ```json
 {
-  "eaa_id": "EducationalID",
-  "title": "EducationalID",
-  "description": "Identity credential that identifies a natural person in the context of educational activities or affiliation, as issued by an authorised organisation.",
+  "eaa_id": "VETEUMC",
+  "title": "Vocational Educational Training European Micro Credentials",
+  "description": "Credential representing vocational educational training european micro credentials issued by an authorised institution under a recognised qualification framework.",
   "credential_type": "VerifiableAttestation",
   "data_model": {
     "standard": "W3C Verifiable Credentials",
-    "profile": "DC4EU-Identity",
-    "schema_uri": "https://tsr.dc4eu.eu/schemas/educationalid.jsonld"
+    "profile": "DC4EU-Education",
+    "schema_uri": "https://tsr.dc4eu.eu/schemas/veteumc.jsonld"
   },
   "sectoral_scope": "FormalEducation",
   "issuable_by": {
     "authorised_roles": [
       "HigherEducationInstitution",
-      "UniversityAlliance"
+      "VocationalEducationInstitution"
     ],
     "taor_required": true,
-    "tir_entry": "did:ebsi:issuer-educationalid"
+    "tir_entry": "did:ebsi:issuer-veteumc"
   },
   "usable_by": {
   "verifier_authorisation_required": true,
@@ -33,8 +33,8 @@ _Last updated: 2025-04-21_
   "limit_root_tao": ["did:ebsi:example-root-tao"],
     "authorised_roles": [
       "RecognitionAuthority",
-      "VerifierWithEduRole",
-      "VerifierWithProfRole"
+      "PublicEmploymentService",
+      "VerifierWithEduRole"
     ],
     "entitlement_check": "required"
   },
@@ -46,21 +46,21 @@ _Last updated: 2025-04-21_
   "presentation_policy_uri": "https://tsr.dc4eu.eu/policies/TO_BE_DEFINED-presentation-policy.json",
     "restricted_access": true,
     "verifier_role_check": true,
-    "machine_readable": "https://tsr.dc4eu.eu/policies/educationalid-disclosure.json"
+    "machine_readable": "https://tsr.dc4eu.eu/policies/veteumc-disclosure.json"
   },
-  "terms_of_reference_uri": "https://tsr.dc4eu.eu/tor/educationalid.json",
+  "terms_of_reference_uri": "https://tsr.dc4eu.eu/tor/veteumc.json",
   "revocation_support": {
     "method": "StatusList2021",
-    "status_endpoint": "https://status.dc4eu.eu/status/educationalid",
-    "supports_suspension": true
+    "status_endpoint": "https://status.dc4eu.eu/status/veteumc",
+    "supports_suspension": false
   },
   "binding_requirements": {
     "proof_of_possession": true,
     "cryptographic_binding_to_holder": true
   },
   "expiry": {
-    "type": "dynamic",
-    "validity": "linked to affiliation or membership period"
+    "type": "static",
+    "valid_until": "2040-12-31"
   },
   "version": "1.0"
 }
