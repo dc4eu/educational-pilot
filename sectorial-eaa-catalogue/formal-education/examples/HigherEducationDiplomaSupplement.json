@@ -1,7 +1,7 @@
 {
   "credential": {
     "id": "urn:credential:c0e651bf-7971-44ab-b931-5dcc923374e0",
-    "type": ["VerifiableCredential", "EuropeanDigitalCredential", "DiplomaSupplement"],
+    "type": ["VerifiableCredential", "EuropeanDigitalCredential", "VerifiableHigherEducationDiplomaSupplement"],
     "credentialSchema": [
       {
         "id": "http://data.europa.eu/snb/model/ap/edc-generic-full",
