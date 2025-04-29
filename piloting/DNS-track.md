@@ -47,7 +47,7 @@ Source of updated information: https://urldefense.com/v3/__https:/sites.ey.com/:
 | Spain        | Consejo General de Colegios Oficiales de Médicos - CGCOM | José Antonio Aguado / Laia Bota Porta    | WIP  | 🔴  |
 | Spain      | UNED       | José Emilio Permuy                   | *WIP*                                | 🔴 |
 | Spain      | Universidad Politécnica de Madrid       | Fernando Pescador                  | *WIP*                                | 🔴 |
-| Sweeden      | RISE - Research Institutes of Sweden          | Olle Nyman                 | *WIP*                                | 🔴 |
+| Sweeden      | RISE - Research Institutes of Sweden          | Fredrik Nilbrink                 | *WIP*                                | 🔴 |
 
 ## Pilot 3 – Combined (Pilot 1 + Pilot 2)
 
