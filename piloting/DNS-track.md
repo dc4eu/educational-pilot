@@ -2,7 +2,7 @@
 
 This page provides the list of DNS endpoints made available by Piloting Agents to support **cross-border public verification services** developed within the DC4EU pilots. These services enable trusted validation of credentials across borders under the **eIDAS2 and EUDI Wallet framework**.
 
-Source of updated information: https://urldefense.com/v3/__https:/sites.ey.com/:x:/r/sites/DC4EU-EBSINE/Shared*20Documents/General/DC4EU/WP5/22*20Reference*20documents/IP-DNS*20Track*20Sheet.xlsx?d=w55103afc76d6401f942f36a457591e67&csf=1&web=1&e=mZ7Nel__;JSUlJSU!!EJ3n55FBLexp1rhr!5zFg1pFtDtcL1qfFt8I9-5oj71SfwMXmvUlqe25N-9ZSvar8On1HQn1gD1wXlML2PLJVhqBGJIu4RgI-XyEU_vdNp4XfdSvz57InFQ$
+Source of updated information: https:/sites.ey.com/:x:/r/sites/DC4EU-EBSINE/Shared*20Documents/General/DC4EU/WP5/22*20Reference*20documents/IP-DNS*20Track*20Sheet.xlsx
 
 ---
 
