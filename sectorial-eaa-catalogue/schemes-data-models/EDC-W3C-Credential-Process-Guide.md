@@ -261,19 +261,6 @@ This schema ensures that a Verifiable Credential (VC):
 | `educationSubject`, `additionalNote` | Optional details | Optional |
 | `subAchievement[]` | Nested modules or courses | Optional, dynamic length |
 
----
-
-### 🔧 How to Use the Schema
-
-1. Download both:
-   - [HigherEducationDiploma-EDC-W3C-Schema.json](./HigherEducationDiploma-EDC-W3C-Schema.json)
-   - The credential to validate (e.g. [HigherEducationDiploma-with-subAchievements.json](../formal-education/examples/HigherEdcuationDiploma-with-subAchievements.json))
-2. Use the provided Python script to validate:
-   ```bash
-   python3 validate_edc_w3c_credential.py
-   ```
-
----
 
 ### 🧾 Snippet of the Schema (Extract)
 
@@ -345,7 +332,7 @@ This schema ensures that a Verifiable Credential (VC):
 
 ## 7️⃣ Adding a Digital Signature
 
-To finalise the credential for EBSI, a proof is added:
+To finalise the credential for dPKI (EBSI), a proof is added:
 
 ```json
 "proof": {
