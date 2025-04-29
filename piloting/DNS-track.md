@@ -43,6 +43,7 @@ Source of updated information: https://urldefense.com/v3/__https:/sites.ey.com/:
 | Romania      | Titu Maiorescu University                                                 | Nicolae                    | WIP       | 🔴 |
 | Spain        | University of Alcalá (UAH)                               | Sergio Caro                      | [lspuah.uah.es](https://uself-verifier-gui.lspuah.uah.es)                      | 🟢 |
 | Spain        | University of Málaga                                     | Victoriano Giralt                | [lspuma.uma.es](https://uself-verifier-gui.lspuma.uma.es)                       | 🟢 |
+| Spain        | University Carlos III of Madrid                                    | Carlos Delgado               | WIP                      | 🟢 |
 | Spain        | Universitat Rovira i Virgili                             | Maria Teresa Bordas              | [lspurv.urv.cat](https://uself-verifier-gui.lspurv.urv.cat/)                     | 🟢 |
 | Spain        | Consejo General de Colegios Oficiales de Médicos - CGCOM | José Antonio Aguado / Laia Bota Porta    | WIP  | 🔴  |
 | Spain      | UNED       | José Emilio Permuy                   | *WIP*                                | 🔴 |
