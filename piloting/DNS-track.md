@@ -38,6 +38,7 @@ Source of updated information: https:/sites.ey.com/:x:/r/sites/DC4EU-EBSINE/Shar
 | Poland      | SKS       | Virginijus Jasaitis                  | *WIP*                                | 🔴 |
 | Portugal     | Universidade do Porto                              | Jorge Cunha                  | [lspup.up.pt](https://uself-verifier-gui.lspup.up.pt)          | 🟢|
 | Portugal      | UMAIA          | Alexandre Sousa                  | *WIP*                                | 🔴 |
+| Portugal      | Lusofona_University          | Paulo                  | *WIP*                                | 🔴 |
 | Romania      | Politehnica University of Timisoara, Romania (UPT)       | Diana Andone                     | WIP                  | 🔴 |
 | Romania      | UEFISCDI                                                 | Cosmin Cioranu                   | [lsp.dc4eu.runidas.rei.gov.ro](https://uself-verifier-gui.lsp.dc4eu.runidas.rei.gov.ro)       | 🟢 |
 | Romania      | Titu Maiorescu University                                                 | Nicolae                    | WIP       | 🔴 |
