@@ -14,7 +14,7 @@ This repository is organised into several key sections:
   
 - **[Governance in Education and Professional Qualifications](./governances)**: Understanding existing governnace(s)
   
-- **[EAA-based authorisation model](./eaa-based-authorisation-model/)**: Defines a structured framework for education and professional qualifications' governance, managing authorisations and recognition within educational, professional, and quality assurance domains.
+- **[Practial governnace implementation: the EAA-based authorisation model](./eaa-based-authorisation-model/)**: Defines a structured framework for education and professional qualifications' governance, managing authorisations and recognition within educational, professional, and quality assurance domains.
 
 - **[Sectorial rulebook](./sectorial-rulebook/)**: The core framework that establishes standardised approaches for managing digital educational and professional credentials within the European Union.
 
