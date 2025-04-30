@@ -31,7 +31,7 @@ Source of updated information: https:/sites.ey.com/:x:/r/sites/DC4EU-EBSINE/Shar
 | Germany      | Humboldt-Universität zu Berlin                                                  | Tamas Molnar                  | lspgovpart.govpart.de              | 🔴 |
 | Hungary      | Edutus University                                        | Laki Balazs                      | *WIP*                                | 🔴 |
 | Hungary      | Budapest University of Technology and Economics          | Imre Kocsis                  | *WIP*                                | 🔴 |
-| Italy        | University of Bologna                                    | Sergio Storari                   | [lspdc4edu.unibo.it](https://uself-verifier-gui.lspdc4edu.unibo.it)                 | 🔴 |
+| Italy        | University of Bologna                                    | Sergio Storari                   | [lspdc4edu.unibo.it](https://uself-verifier-gui.lspdc4edu.unibo.it)                 | 🟢 |
 | Lithuania     | Lithuanian_Centre_for_Quality_Assessment_SKVC       | ---              | *WIP*                                | 🔴 |
 | Lithuania     | Vytautas_Magnus_University       | Tomas Krilavicius              | *WIP*                                | 🔴 |
 | Lithuania      | SKS       | Virginijus Jasaitis                  | *WIP*                                | 🔴 |
@@ -41,7 +41,7 @@ Source of updated information: https:/sites.ey.com/:x:/r/sites/DC4EU-EBSINE/Shar
 | Poland | Kozminski University     | Krzysztof Cieślikowski  (OPI)   | *WIP*     | 🔴 |
 | Poland | University of Zielona Gora     | Krzysztof Cieślikowski  (OPI)   | *WIP*     | 🔴 |
 | Poland | Medical University of Lublin   | Krzysztof Cieślikowski  (OPI)   | *WIP*     | 🔴 |
-| Portugal  | Universidade do Porto                              | Jorge Cunha                  | [lspup.up.pt](https://uself-verifier-gui.lspup.up.pt)          | 🟢|
+| Portugal  | Universidade do Porto                              | Jorge Cunha                  | [lspup.up.pt](https://uself-verifier-gui.lspup.up.pt)          | 🟢 |
 | Portugal  | UMAIA          | Alexandre Sousa                  | *WIP*                                | 🔴 |
 | Romania      | Politehnica University of Timisoara, Romania (UPT)       | Diana Andone                     | WIP                  | 🔴 |
 | Romania      | UEFISCDI                                                 | Cosmin Cioranu                   | [lsp.dc4eu.runidas.rei.gov.ro](https://uself-verifier-gui.lsp.dc4eu.runidas.rei.gov.ro)       | 🟢 |
