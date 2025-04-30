@@ -34,7 +34,7 @@ Source of updated information: https:/sites.ey.com/:x:/r/sites/DC4EU-EBSINE/Shar
 | Italy        | University of Bologna                                    | Sergio Storari                   | [lspdc4edu.unibo.it](https://uself-verifier-gui.lspdc4edu.unibo.it)                 | 🔴 |
 | Lithuania     | Lithuanian_Centre_for_Quality_Assessment_SKVC       | ---              | *WIP*                                | 🔴 |
 | Lithuania     | Vytautas_Magnus_University       | Tomas Krilavicius              | *WIP*                                | 🔴 |
-| Poland      | SKS       | Virginijus Jasaitis                  | *WIP*                                | 🔴 |
+| Lithuania      | SKS       | Virginijus Jasaitis                  | *WIP*                                | 🔴 |
 | Poland | University of Warsaw    | Krzysztof Cieślikowski  (OPI)   | *WIP*     | 🔴 |
 | Poland | University of Silesia in Katowice     | Krzysztof Cieślikowski  (OPI)   | *WIP*     | 🔴 |
 | Poland | Silesian University of Technology     | Krzysztof Cieślikowski  (OPI)   | *WIP*     | 🔴 |
