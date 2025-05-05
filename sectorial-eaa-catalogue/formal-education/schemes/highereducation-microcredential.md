@@ -1,4 +1,4 @@
-# EUHEMC JSON Schema
+# The European Higher Education Microcredential (EUHEMC) JSON Schema
 
 The European Higher Education Microcredential (EUHEMC) JSON Schema defines the structure and constraints for issuing verifiable microcredentials based on the European Learning Model (ELM) 3.2 and EBSI Verifiable Credentials. Below is the schema, annotated with comments to highlight mandatory ELM elements and EUHEMC-specific requirements.
 
