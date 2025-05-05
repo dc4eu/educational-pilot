@@ -3,7 +3,7 @@
 ## Overview
 The European Higher Education Microcredential (EUHEMC) is a standardized, digitally verifiable credential designed to certify short, focused learning achievements within the European higher education ecosystem. Built on the European Learning Model (ELM) 3.2 and aligned with the European Blockchain Services Infrastructure (EBSI), EUHEMC enables universities, learners, and employers to share, verify, and leverage educational outcomes in a secure, interoperable, and trusted manner.
 
-EUHEMC microcredentials are issued by accredited institutions, such as Rovira i Virgili University, and are tailored to meet the demands of a dynamic labor market, lifelong learning, and professional upskilling. They provide a flexible, modular approach to education, allowing learners to acquire specific skills and competences that are immediately applicable in professional contexts.
+EUHEMC microcredentials are issued by accredited institutions and are tailored to meet the demands of a dynamic labor market, lifelong learning, and professional upskilling. They provide a flexible, modular approach to education, allowing learners to acquire specific skills and competences that are immediately applicable in professional contexts.
 
 ## Business Value
 From a business perspective, EUHEMC offers significant benefits for stakeholders across the education and employment sectors:
