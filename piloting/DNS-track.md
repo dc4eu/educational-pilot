@@ -50,7 +50,7 @@ Source of updated information: https:/sites.ey.com/:x:/r/sites/DC4EU-EBSINE/Shar
 | Spain        | University of Málaga                                     | Victoriano Giralt                | [lspuma.uma.es](https://uself-verifier-gui.lspuma.uma.es)         | 🟢 |
 | Spain | Universidad Carlos III de Madrid | Carlos Delgado | [lspuc3m.uc3m.es](https://uself-verifier-gui.lspuc3m.uc3m.es)    | 🔴 |
 | Spain | Universitat Rovira i Virgili     | Maria Teresa Bordas   | [lspurv.urv.cat](https://uself-verifier-gui.lspurv.urv.cat/)  | 🟢 |
-| Spain        | Consejo General de Colegios Oficiales de Médicos - CGCOM | José Antonio Aguado / Laia Bota Porta    | WIP  | 🔴  |
+| Spain        | Consejo General de Colegios Oficiales de Médicos(CGCOM) | José Antonio Aguado / Laia Bota Porta    | WIP  | 🔴  |
 | Spain      | UNED       | José Emilio Permuy                   | *WIP*                                | 🔴 |
 | Spain      | Universidad Politécnica de Madrid       | Fernando Pescador                  | *WIP*                               | 🔴 |
 | Sweeden      | RISE - Research Institutes of Sweden          | Fredrik Nilbrink                 | *WIP*                         | 🔴 |
