@@ -30,9 +30,9 @@ Source of updated information: https:/sites.ey.com/:x:/r/sites/DC4EU-EBSINE/Shar
 | Germany      | Ludwig-Maximilians-Universität München                                                 | Alexander Loechel                   | lspgovpart.govpart.de              | 🔴 |
 | Germany      | Humboldt-Universität zu Berlin                                                  | Tamas Molnar                  | lspgovpart.govpart.de              | 🔴 |
 | Hungary      | Edutus University                                        | Laki Balazs                      | *WIP*                                | 🔴 |
-| Hungary      | Budapest University of Technology and Economics          | Imre Kocsis                  | [lspbme.cloud.bme.hu](https://uself-verifier-gui.lspbme.cloud.bme.hu)                                | 🟢 |
-| Italy        | University of Bologna                                    | Sergio Storari                   | [lspdc4edu.unibo.it](https://uself-verifier-gui.lspdc4edu.unibo.it)                 | 🟢 |
-| Lithuania     | Lithuanian_Centre_for_Quality_Assessment_SKVC       | ---              | *WIP*                                | 🔴 |
+| Hungary      | Budapest University of Technology and Economics          | Imre Kocsis                  | [lspbme.cloud.bme.hu](https://uself-verifier-gui.lspbme.cloud.bme.hu)    | 🟢 |
+| Italy        | University of Bologna                                    | Sergio Storari                   | [lspdc4edu.unibo.it](https://uself-verifier-gui.lspdc4edu.unibo.it)  | 🟢 |
+| Lithuania     | Lithuanian_Centre_for_Quality_Assessment_SKVC       | ---              | *WIP*                           | 🔴 |
 | Lithuania     | Vytautas_Magnus_University       | Tomas Krilavicius              | *WIP*                                | 🔴 |
 | Lithuania      | SKS       | Virginijus Jasaitis                  | [lspsks.sks.lt](https://uself-verifier-gui.lspsks.sks.lt)   | 🟢 |
 | Poland | University of Warsaw    | Krzysztof Cieślikowski  (OPI)   | [*WIP*](https://u1.pilot-dc4eu.ebsi.nask.pl/scenarios)     | 🔴 |
@@ -46,14 +46,14 @@ Source of updated information: https:/sites.ey.com/:x:/r/sites/DC4EU-EBSINE/Shar
 | Romania      | Politehnica University of Timisoara, Romania (UPT)       | Diana Andone                     | WIP                  | 🔴 |
 | Romania      | UEFISCDI                                                 | Cosmin Cioranu                   | [lsp.dc4eu.runidas.rei.gov.ro](https://uself-verifier-gui.lsp.dc4eu.runidas.rei.gov.ro)       | 🟢 |
 | Romania      | Titu Maiorescu University                                                 | Nicolae                    | WIP       | 🔴 |
-| Spain        | University of Alcalá (UAH)                               | Sergio Caro                      | [lspuah.uah.es](https://uself-verifier-gui.lspuah.uah.es)                      | 🟢 |
-| Spain        | University of Málaga                                     | Victoriano Giralt                | [lspuma.uma.es](https://uself-verifier-gui.lspuma.uma.es)                       | 🟢 |
+| Spain        | University of Alcalá (UAH)                               | Sergio Caro                      | [lspuah.uah.es](https://uself-verifier-gui.lspuah.uah.es)         | 🟢 |
+| Spain        | University of Málaga                                     | Victoriano Giralt                | [lspuma.uma.es](https://uself-verifier-gui.lspuma.uma.es)         | 🟢 |
 | Spain | Universidad Carlos III de Madrid | Carlos Delgado | [lspuc3m.uc3m.es](https://uself-verifier-gui.lspuc3m.uc3m.es)    | 🔴 |
 | Spain | Universitat Rovira i Virgili     | Maria Teresa Bordas   | [lspurv.urv.cat](https://uself-verifier-gui.lspurv.urv.cat/)  | 🟢 |
 | Spain        | Consejo General de Colegios Oficiales de Médicos - CGCOM | José Antonio Aguado / Laia Bota Porta    | WIP  | 🔴  |
 | Spain      | UNED       | José Emilio Permuy                   | *WIP*                                | 🔴 |
-| Spain      | Universidad Politécnica de Madrid       | Fernando Pescador                  | *WIP*                                | 🔴 |
-| Sweeden      | RISE - Research Institutes of Sweden          | Fredrik Nilbrink                 | *WIP*                                | 🔴 |
+| Spain      | Universidad Politécnica de Madrid       | Fernando Pescador                  | *WIP*                               | 🔴 |
+| Sweeden      | RISE - Research Institutes of Sweden          | Fredrik Nilbrink                 | *WIP*                         | 🔴 |
 
 ## Pilot 3 – Combined (Pilot 1 + Pilot 2)
 
