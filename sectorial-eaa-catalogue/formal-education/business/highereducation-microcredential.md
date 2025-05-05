@@ -51,13 +51,13 @@ In an era of rapid technological change and evolving job markets, EUHEMC bridges
 ### **ELM-based Entity-Relationship diagram**
 ```mermaid
 flowchart LR
-    A["EUHEMC EAA"] --> B["1 Achievement<br>(mandatory)"]
-    A --> C["Accreditation<br>(SAIC-mandatory)"]
-    B --> D["Learning Outcomes<br>(mandatory)"]
-    B --> E["Assessment<br>(mandatory)"]
-    B --> F["Activities<br>(optional)"]
-    B --> G["Entitlement<br>(optional)"]
-    D --> H["Competencies<br>(mandatory)"]
+    A["EUHEMC"] --> B["Learning Achievement<br>(mandatory, min 1)"]
+    A --> C["Learning Assessment<br>(mandatory, min 1)"]
+    A --> D["Issuer Accreditation<br>(implicit via awardedBy)"]
+    B --> E["Learning Outcomes<br>(mandatory, min 1)"]
+    B --> F["ECTS Credits<br>(mandatory, 1–15)"]
+    E --> G["Competencies<br>(mandatory, min 1)"]
+    E --> H["ESCO Skills<br>(optional)"]
 ```
 
 ### **1. Credential Subject Information**
