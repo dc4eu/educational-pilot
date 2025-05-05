@@ -74,7 +74,7 @@ Source of updated information: https:/sites.ey.com/:x:/r/sites/DC4EU-EBSINE/Shar
 
 | Country | Piloting Agent     | Contact                   | DNS (Pilot 2)                  |  Available    |
 |---------|--------------------|---------------------------|-------------------------------|----|
-| Germany|             GovPart       |     Helmut & Guido             |     [lspgovpart.govpart.de](https://uself-verifier-gui.lspgovpart.govpart.de)          | 🟢 | 
-| Netherlands  | University of Twente                                     | Helenn Vanderzaag                | [lsput.utwente.nl](https://uself-verifier-gui.lsput.utwente.nl)                   | 🟢 |
-| Netherlands  | Saxion University of Applied Sciences                    | Franco de Vitta                  | [lspsaxion.saxion.nl](https://uself-verifier-gui.lspsaxion.saxion.nl)                | 🟢 |
-| Portugal     | COFAC - Lusofona University                              | Paulo Ferreira                   | [lspulusofona.ulusofona.pt](https://uself-verifier-gui.lspulusofona.ulusofona.pt)          | 🟢 |
+| Germany|             GovPart       |     Helmut & Guido             |     [lspgovpart.govpart.de](https://uself-verifier-gui.lspgovpart.govpart.de)     | 🟢 | 
+| Netherlands  | University of Twente         | Helenn Vanderzaag     | [lsput.utwente.nl](https://uself-verifier-gui.lsput.utwente.nl)                   | 🟢 |
+| Netherlands  | Saxion University of Applied Sciences  | Franco de Vitta  | [lspsaxion.saxion.nl](https://uself-verifier-gui.lspsaxion.saxion.nl)        | 🟢 |
+| Portugal     | COFAC - Lusofona University    | Paulo Ferreira      | [lspulusofona.ulusofona.pt](https://uself-verifier-gui.lspulusofona.ulusofona.pt) | 🟢 |
