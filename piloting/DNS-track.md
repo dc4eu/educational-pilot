@@ -1,4 +1,4 @@
-# DNS Registry – Public Verification Services
+# DNS Registry – Public cross-border verification services
 
 This page provides the list of DNS endpoints made available by Piloting Agents to support **cross-border public verification services** developed within the DC4EU pilots. These services enable trusted validation of credentials across borders under the **eIDAS2 and EUDI Wallet framework**.
 
