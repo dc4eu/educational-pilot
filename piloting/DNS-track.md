@@ -24,17 +24,17 @@ Source of updated information: https:/sites.ey.com/:x:/r/sites/DC4EU-EBSINE/Shar
 
 > This section lists DNS endpoints used for **Pilot 2** verification services based on **Decentralised Identifiers (DIDs)** and **EBSI/VC-based** trust frameworks.
 
-| Country      | Piloting Agent                                           | Contact                          | DNS                               |  Available    |
-|--------------|----------------------------------------------------------|----------------------------------|------------------------------------|-----------|
-| Belgium      | Howest       | Daniel Du Seuil                   | *WIP*                                | 🔴 |
-| Germany      | Ludwig-Maximilians-Universität München                                                 | Alexander Loechel                   | lspgovpart.govpart.de              | 🔴 |
-| Germany      | Humboldt-Universität zu Berlin                                                  | Tamas Molnar                  | lspgovpart.govpart.de              | 🔴 |
-| Hungary      | Edutus University                            | Laki Balazs       | [lspedutus.edutus.hu](https://uself-verifier-gui.lspedutus.edutus.hu)                  | 🟢 |
-| Hungary      | Budapest University of Technology and Economics          | Imre Kocsis                  | [lspbme.cloud.bme.hu](https://uself-verifier-gui.lspbme.cloud.bme.hu)    | 🟢 |
-| Italy        | University of Bologna                                    | Sergio Storari                   | [lspdc4edu.unibo.it](https://uself-verifier-gui.lspdc4edu.unibo.it)  | 🟢 |
-| Lithuania     | Lithuanian_Centre_for_Quality_Assessment_SKVC       | ---              | *WIP*                           | 🔴 |
-| Lithuania     | Vytautas_Magnus_University       | Tomas Krilavicius              | *WIP*                                | 🔴 |
-| Lithuania      | SKS       | Virginijus Jasaitis                  | [lspsks.sks.lt](https://uself-verifier-gui.lspsks.sks.lt)   | 🟢 |
+| Country    | Piloting Agent                                           | Contact                          | DNS                               |  Available    |
+|------------|----------------------------------------------------------|----------------------------------|------------------------------------|-----------|
+| Belgium    | Howest                                  | Daniel Du Seuil       | *WIP*                                | 🔴 |
+| Germany    | Ludwig-Maximilians-Universität München  | Alexander Loechel     | lspgovpart.govpart.de              | 🔴 |
+| Germany    | Humboldt-Universität zu Berlin          | Tamas Molnar          | lspgovpart.govpart.de              | 🔴 |
+| Hungary    | Edutus University                       | Laki Balazs           | [lspedutus.edutus.hu](https://uself-verifier-gui.lspedutus.edutus.hu)                  | 🟢 |
+| Hungary    | Budapest University of Technology and Economics          | Imre Kocsis                  | [lspbme.cloud.bme.hu](https://uself-verifier-gui.lspbme.cloud.bme.hu)    | 🟢 |
+| Italy      | University of Bologna                                    | Sergio Storari                   | [lspdc4edu.unibo.it](https://uself-verifier-gui.lspdc4edu.unibo.it)  | 🟢 |
+| Lithuania  | Lithuanian_Centre_for_Quality_Assessment_SKVC       | ---              | *WIP*                           | 🔴 |
+| Lithuania  | Vytautas_Magnus_University       | Tomas Krilavicius              | *WIP*                                | 🔴 |
+| Lithuania  | SKS       | Virginijus Jasaitis                  | [lspsks.sks.lt](https://uself-verifier-gui.lspsks.sks.lt)   | 🟢 |
 | Poland | University of Warsaw    | Krzysztof Cieślikowski  (OPI)   | [*WIP*](https://u1.pilot-dc4eu.ebsi.nask.pl/scenarios)     | 🔴 |
 | Poland | University of Silesia in Katowice     | Krzysztof Cieślikowski  (OPI)   | [*WIP*](https://u2.pilot-dc4eu.ebsi.nask.pl/scenarios)     | 🔴 |
 | Poland | Silesian University of Technology     | Krzysztof Cieślikowski  (OPI)   | [*WIP*](https://u3.pilot-dc4eu.ebsi.nask.pl/scenarios)     | 🔴 |
