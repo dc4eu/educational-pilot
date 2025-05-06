@@ -29,7 +29,7 @@ Source of updated information: https:/sites.ey.com/:x:/r/sites/DC4EU-EBSINE/Shar
 | Belgium      | Howest       | Daniel Du Seuil                   | *WIP*                                | 🔴 |
 | Germany      | Ludwig-Maximilians-Universität München                                                 | Alexander Loechel                   | lspgovpart.govpart.de              | 🔴 |
 | Germany      | Humboldt-Universität zu Berlin                                                  | Tamas Molnar                  | lspgovpart.govpart.de              | 🔴 |
-| Hungary      | Edutus University                                        | Laki Balazs                      | *WIP*                                | 🔴 |
+| Hungary      | Edutus University                            | Laki Balazs       | [lspedutus.edutus.hu](https://uself-verifier-gui.lspedutus.edutus.hu)]                  | 🔴 |
 | Hungary      | Budapest University of Technology and Economics          | Imre Kocsis                  | [lspbme.cloud.bme.hu](https://uself-verifier-gui.lspbme.cloud.bme.hu)    | 🟢 |
 | Italy        | University of Bologna                                    | Sergio Storari                   | [lspdc4edu.unibo.it](https://uself-verifier-gui.lspdc4edu.unibo.it)  | 🟢 |
 | Lithuania     | Lithuanian_Centre_for_Quality_Assessment_SKVC       | ---              | *WIP*                           | 🔴 |
