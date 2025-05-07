@@ -33,7 +33,7 @@ Source of updated information: https:/sites.ey.com/:x:/r/sites/DC4EU-EBSINE/Shar
 | Hungary    | Budapest University of Technology and Economics          | Imre Kocsis                  | [lspbme.cloud.bme.hu](https://uself-verifier-gui.lspbme.cloud.bme.hu)    | 🟢 |
 | Italy      | University of Bologna                                    | Sergio Storari                   | [lspdc4edu.unibo.it](https://uself-verifier-gui.lspdc4edu.unibo.it)  | 🟢 |
 | Lithuania  | Lithuanian_Centre_for_Quality_Assessment_SKVC       | ---              | *WIP*                           | 🔴 |
-| Lithuania  | Vytautas_Magnus_University       | Tomas Krilavicius              | *WIP*                                | 🔴 |
+| Lithuania  | Vytautas_Magnus_University       | Tomas Krilavicius     | [*WIP*](https://uself-verifier-gui.lpsvdu.vdu.lt)         | 🔴 |
 | Lithuania  | SKS       | Virginijus Jasaitis                  | [lspsks.sks.lt](https://uself-verifier-gui.lspsks.sks.lt)   | 🟢 |
 | Poland | University of Warsaw    | Krzysztof Cieślikowski  (OPI)   | [*WIP*](https://u1.pilot-dc4eu.ebsi.nask.pl/scenarios)     | 🔴 |
 | Poland | University of Silesia in Katowice     | Krzysztof Cieślikowski  (OPI)   | [*WIP*](https://u2.pilot-dc4eu.ebsi.nask.pl/scenarios)     | 🔴 |
