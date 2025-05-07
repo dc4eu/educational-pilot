@@ -12,7 +12,7 @@ Source of updated information: https:/sites.ey.com/:x:/r/sites/DC4EU-EBSINE/Shar
 
 | Country      | Piloting Agent                  | Contact                        | DNS                             |  Available  |
 |--------------|----------------------------------|--------------------------------|----------------------------------|-----|
-|Denmark|Amsterdam University of Applied Sciences|Tangui Coulouarn| |🔴|
+|Denmark|DTU|Tangui Coulouarn| |🔴|
 |Finland|Finnish National Agency for Education (OPH)|Kristiina Laipio| |🔴|
 |Netherlands|SURF|Paul den Hort| |🔴|
 |Norway|Sikt|Geir Magne Vangen| |🔴|
