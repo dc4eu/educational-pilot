@@ -43,7 +43,7 @@ Source of updated information: https:/sites.ey.com/:x:/r/sites/DC4EU-EBSINE/Shar
 | Poland | Medical University of Lublin   | Krzysztof Cieślikowski  (OPI)   | [*WIP*](https://u7.pilot-dc4eu.ebsi.nask.pl/scenarios)     | 🔴 |
 | Portugal  | Universidade do Porto                              | Jorge Cunha                  | [lspup.up.pt](https://uself-verifier-gui.lspup.up.pt)          | 🟢 |
 | Portugal  | UMAIA          | Alexandre Sousa                  | *WIP*                                | 🔴 |
-| Romania      | Politehnica University of Timisoara, Romania (UPT)       | Diana Andone                     | WIP                  | 🔴 |
+| Romania      | Politehnica University of Timisoara, Romania (UPT)       | Diana Andone                     | [WIP](https://elearning.upt.ro/en/dc4eu/scenarios)                  | 🔴 |
 | Romania      | UEFISCDI                                                 | Cosmin Cioranu                   | [lsp.dc4eu.runidas.rei.gov.ro](https://uself-verifier-gui.lsp.dc4eu.runidas.rei.gov.ro)       | 🟢 |
 | Romania      | Titu Maiorescu University                                                 | Nicolae                    | WIP       | 🔴 |
 | Spain        | University of Alcalá (UAH)                               | Sergio Caro                      | [lspuah.uah.es](https://uself-verifier-gui.lspuah.uah.es)         | 🟢 |
