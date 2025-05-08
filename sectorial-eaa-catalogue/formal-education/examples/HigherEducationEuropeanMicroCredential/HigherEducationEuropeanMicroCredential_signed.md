@@ -1,4 +1,4 @@
-# Signed Credential Example (JAdES D-Zero Profile)
+# EUHEMC Signed Credential Example (JAdES D-Zero Profile)
 
 This example transforms the unsigned credential into a JWS Compact Serialisation using the JAdES D-Zero signature profile. The credential is signed with the university’s ECDSA P-256 key ({"kty":"EC","x":"9f00-IlhEFVmlpCU8u51i4ZqCAY1bMHUu5OEbXOrOz8","y":"84Mp_hrdzqRDD3a8DNYPONWJYPND1H6WkN-NmnrRbD8","crv":"P-256","d":"Cb-7omOc3t9dSK6qx6ss6QenLS2EIB-wG7tfZJW_Tbw"}). Due to the inability to compute the signature directly, a placeholder is used.
 
