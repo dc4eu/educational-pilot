@@ -1,4 +1,4 @@
-# EUHEMC Unsigned and Signed Credential Examples
+# EUHEMC Unsigned Credential Examples
 
 Unsigned Credential Example
 
