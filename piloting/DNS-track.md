@@ -27,8 +27,8 @@ Source of updated information: https:/sites.ey.com/:x:/r/sites/DC4EU-EBSINE/Shar
 | Country    | Piloting Agent                                           | Contact                          | DNS                               |  Available    |
 |------------|----------------------------------------------------------|----------------------------------|------------------------------------|-----------|
 | Belgium    | Howest                                  | Daniel Du Seuil       | *WIP*                                | 🔴 |
-| Germany    | Ludwig-Maximilians-Universität München  | Alexander Loechel     | [lsplmu.govpart.de](https://uself-verifier-gui.lsplmu.govpart.de)    | 🔴 |
-| Germany    | Humboldt-Universität zu Berlin          | Tamas Molnar          | [lsphub.govpart.de](https://uself-verifier-gui.lsphub.govpart.de)             | 🔴 |
+| Germany    | Ludwig-Maximilians-Universität München  | Alexander Loechel     | [lsplmu.govpart.de](https://uself-verifier-gui.lsplmu.govpart.de)    | 🟢 |
+| Germany    | Humboldt-Universität zu Berlin          | Tamas Molnar          | [lsphub.govpart.de](https://uself-verifier-gui.lsphub.govpart.de)             | 🟢 |
 | Hungary    | Edutus University                       | Laki Balazs           | [lspedutus.edutus.hu](https://uself-verifier-gui.lspedutus.edutus.hu)                  | 🟢 |
 | Hungary    | Budapest University of Technology and Economics          | Imre Kocsis                  | [lspbme.cloud.bme.hu](https://uself-verifier-gui.lspbme.cloud.bme.hu)    | 🟢 |
 | Italy      | University of Bologna                                    | Sergio Storari                   | [lspdc4edu.unibo.it](https://uself-verifier-gui.lspdc4edu.unibo.it)  | 🟢 |
