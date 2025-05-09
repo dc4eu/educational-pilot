@@ -35,12 +35,12 @@ Source of updated information: https:/sites.ey.com/:x:/r/sites/DC4EU-EBSINE/Shar
 | Lithuania  | Lithuanian_Centre_for_Quality_Assessment_SKVC       | ---              | *WIP*                           | 🔴 |
 | Lithuania  | Vytautas_Magnus_University       | Tomas Krilavicius     | [*WIP*](https://uself-verifier-gui.lpsvdu.vdu.lt)         | 🔴 |
 | Lithuania  | SKS       | Virginijus Jasaitis                  | [lspsks.sks.lt](https://uself-verifier-gui.lspsks.sks.lt)   | 🟢 |
-| Poland | University of Warsaw    | Krzysztof Cieślikowski  (OPI)   | [u1.pilot-dc4eu.ebsi.nask.pl](https://u1.pilot-dc4eu.ebsi.nask.pl/scenarios)     | 🔴 |
-| Poland | University of Silesia in Katowice     | Krzysztof Cieślikowski  (OPI)   | [u2.pilot-dc4eu.ebsi.nask.pl](https://u2.pilot-dc4eu.ebsi.nask.pl/scenarios)     | 🔴 |
-| Poland | Silesian University of Technology     | Krzysztof Cieślikowski  (OPI)   | [u3.pilot-dc4eu.ebsi.nask.pl](https://u3.pilot-dc4eu.ebsi.nask.pl/scenarios)     | 🔴 |
-| Poland | Kozminski University     | Krzysztof Cieślikowski  (OPI)   | [u4.pilot-dc4eu.ebsi.nask.pl](https://u4.pilot-dc4eu.ebsi.nask.pl/scenarios)     | 🔴 |
-| Poland | University of Zielona Gora     | Krzysztof Cieślikowski  (OPI)   | [u6.pilot-dc4eu.ebsi.nask.pl](https://u6.pilot-dc4eu.ebsi.nask.pl/scenarios)     | 🔴 |
-| Poland | Medical University of Lublin   | Krzysztof Cieślikowski  (OPI)   | [u7.pilot-dc4eu.ebsi.nask.pl](https://u7.pilot-dc4eu.ebsi.nask.pl/scenarios)     | 🔴 |
+| Poland | University of Warsaw    | Krzysztof Cieślikowski  (OPI)   | [u1.pilot-dc4eu.ebsi.nask.pl](https://u1.pilot-dc4eu.ebsi.nask.pl/scenarios)     | 🟢 |
+| Poland | University of Silesia in Katowice     | Krzysztof Cieślikowski  (OPI)   | [u2.pilot-dc4eu.ebsi.nask.pl](https://u2.pilot-dc4eu.ebsi.nask.pl/scenarios)     | 🟢 |
+| Poland | Silesian University of Technology     | Krzysztof Cieślikowski  (OPI)   | [u3.pilot-dc4eu.ebsi.nask.pl](https://u3.pilot-dc4eu.ebsi.nask.pl/scenarios)     | 🟢 |
+| Poland | Kozminski University     | Krzysztof Cieślikowski  (OPI)   | [u4.pilot-dc4eu.ebsi.nask.pl](https://u4.pilot-dc4eu.ebsi.nask.pl/scenarios)     | 🟢 |
+| Poland | University of Zielona Gora     | Krzysztof Cieślikowski  (OPI)   | [u6.pilot-dc4eu.ebsi.nask.pl](https://u6.pilot-dc4eu.ebsi.nask.pl/scenarios)     | 🟢 |
+| Poland | Medical University of Lublin   | Krzysztof Cieślikowski  (OPI)   | [u7.pilot-dc4eu.ebsi.nask.pl](https://u7.pilot-dc4eu.ebsi.nask.pl/scenarios)     | 🟢 |
 | Portugal  | Universidade do Porto                              | Jorge Cunha                  | [lspup.up.pt](https://uself-verifier-gui.lspup.up.pt)          | 🟢 |
 | Portugal  | UMAIA          | Alexandre Sousa                  | *WIP*                                | 🔴 |
 | Romania      | Politehnica University of Timisoara, Romania (UPT)       | Diana Andone                     | [WIP](https://elearning.upt.ro/en/dc4eu/scenarios)                  | 🔴 |
