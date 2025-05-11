@@ -50,7 +50,7 @@ In other words:
 - ELM provides the underlying conceptual model.
 - EDC applies this model specifically to digital credentials, including concrete implementations, validations, and practical usage aligned closely —but not entirely— with W3C Verifiable Credentials.
 
-## EDC and W3C-VC, inspired in but not the same
+## EDC and W3C-VC, inspired by but not equal to
 
 European Digital Credentials (EDC) issued using Online Credential Builder (OCB) provided by DG-EMPL, it's a ELM serialisation inspired by W3C-VC but not fully compliant.
 
