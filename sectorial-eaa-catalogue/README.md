@@ -50,6 +50,21 @@ In other words:
 - ELM provides the underlying conceptual model.
 - EDC applies this model specifically to digital credentials, including concrete implementations, validations, and practical usage aligned closely —but not entirely— with W3C Verifiable Credentials.
 
+## EDC and W3C-VC, inspired in but not the same
+
+European Digital Credentials (EDC) issued using Online Credential Builder (OCB) provided by DG-EMPL, it's a ELM serialisation inspired by W3C-VC but not fully compliant.
+
+EDC JSON structure (view 1)
+
+![Alt text](./schemes-data-models/EDC-view1.png "Hover text title")
+
+EDC JSON structure (view 2)
+
+![Alt text](./schemes-data-models/EDC-view2.png "Hover text title")
+
+**deliveryDetails** are linked to especific delivery mechanism used by OBC, it won't be required 
+
+
 ## European Digital Credentials – W3C Compliant (EDC-W3C)
 
 EDC-W3C represents the European Digital Credentials for Learning (EDC) fully aligned with the W3C Verifiable Credentials Data Model (VCDM), as adopted in the first batch of the Implementing Acts under the European Digital Identity framework.
