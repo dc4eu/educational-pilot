@@ -58,6 +58,10 @@ EDC JSON structure (view 1)
 
 ![Alt text](./schemes-data-models/EDC-view1.png "Hover text title")
 
+```html
+<img src="./schemes-data-models/EDC-view1.png" alt="Description" width="500" height="300">
+```
+
 EDC JSON structure (view 2)
 
 ![Alt text](./schemes-data-models/EDC-view2.png "Hover text title")
