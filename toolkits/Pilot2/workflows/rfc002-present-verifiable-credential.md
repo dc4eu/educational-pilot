@@ -147,7 +147,7 @@ GET https://verifier.com/authorize?
   &client_id=https://verifier.com
   &response_type=code
   &scope=com.example.pid
-  &response_uri=https://verifier.com/direct_post
+  &redirect_uri=https://verifier.com/call_back
   &response_mode=direct_post
   &state=8d8b6a3d-4bc0-4234-9a9a-ed1928815502
   &nonce=d527c191-6e1d-4c3d-9843-9eaf2005fba9
