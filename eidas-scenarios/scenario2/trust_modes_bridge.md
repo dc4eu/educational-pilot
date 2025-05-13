@@ -468,7 +468,7 @@ EBSI enhances trust in non-qualified EAAs by:
 - Include revocation metadata (not recommended).
 
 ## 13. Summary
-This guide details binding X.509v3 certificates with DIDs in EBSI for non-qualified TSPs issuing EAAs to EUDIW (Scenario 2). Using the Universidad Carlos III de Madrid, it covers:
+This guide details binding X.509v3 certificates with DIDs in EBSI for non-qualified TSPs issuing EAAs to EUDIW (Scenario 2). Using the Universidad Carlos III de Madrid as an example, it covers:
 - Secure DID and certificate binding.
 - Issuing, sharing, and verifying EAAs with examples.
 - EBSI’s trust enhancements via accreditation and trust chains.
