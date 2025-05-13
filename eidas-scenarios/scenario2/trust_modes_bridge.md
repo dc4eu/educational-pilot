@@ -1,5 +1,4 @@
 
-```markdown
 # A Comprehensive Guide to Binding X.509v3 Certificates with Decentralised Identifiers in EBSI for Electronic Attestations of Attributes
 
 **Date**: 13 May 2025  
