@@ -26,13 +26,13 @@ This section outlines the common and pilot-specific artefacts that support scena
 
 ## Common elements for all Pilots
 
-| Item              | Type            | Purpose                                               | Used by                     | Provided by         |
-|-------------------|------------------|--------------------------------------------------------|------------------------------|----------------------|
-| Governance template | Template        | Register credential type, issuer authority, DID, X509v3 | Piloting agents              | GovPart & SGAD       |
-| Scenarios definition | Template        | Final scenario deployed by each piloting agent  | Piloting agents              | SGAD       |
-| Feedback form      | Surveys        | Capture end-user satisfaction and experience. Capture Piloting agents experience             | Piloting agents / end users | Neumann              |
-| KPI dashboard      | Reporting tool  | Track operational indicators                           | SPOC / Piloting agents       | GRNet                |
-| Legal artefacts     | Templates  | End-user GDPR templates for citizens that will participate in the project                          | SPOC / Piloting agents / End-users      | Logalty and CertSign         |
+| Item              | Type        | Purpose                      | Used by                     | Provided by    |
+|-------------------|-------------|------------------------------|-----------------------------|----------------|
+| Governance template | Template | Register credential type, issuer authority, DID, X509v3 | Piloting agents | GovPart & SGAD |
+| Scenarios definition | Template        | Final scenario deployed by each piloting agent  | Piloting agents | SGAD       |
+| Feedback form  | Surveys | Capture end-user satisfaction and experience. Capture Piloting agents experience  | Piloting agents / end users | Neumann |
+| KPI dashboard| Reporting tool| Track operational indicators  | SPOC / Piloting agents  | GRNet                |
+| Legal artefacts  | Templates  | End-user GDPR templates for citizens that will participate in the project  | SPOC / Piloting agents / End-users      | Logalty and CertSign         |
 
 
 
