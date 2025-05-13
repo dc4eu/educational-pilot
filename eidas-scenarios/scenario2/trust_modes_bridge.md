@@ -26,7 +26,7 @@ The guide is tailored for **Scenario 2** of the **Digital Credentials for Europe
 
 ### 1.3 Context from DC4EU
 The DC4EU project outlines four EAA issuance scenarios:
-1. **Scenario 1**: EAAs in closed systems (EBSI-based, not EUDIW-compatible).
+1. **Scenario 1**: EAAs in closed systems (not EUDIW-compatible).
 2. **Scenario 2**: EAAs by non-qualified TSPs (EBSI enhances trust).
 3. **Scenario 3**: EAAs by public sector bodies (Pub_EAAs).
 4. **Scenario 4**: EAAs by qualified TSPs (QEAAs).
