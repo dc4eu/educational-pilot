@@ -26,11 +26,11 @@ Source of updated information: https:/sites.ey.com/:x:/r/sites/DC4EU-EBSINE/Shar
 
 | Country    | Piloting Agent                                           | Contact                          | DNS                               |  Available    |
 |------------|----------------------------------------------------------|----------------------------------|------------------------------------|-----------|
-| Belgium    | Howest                                  | Daniel Du Seuil       | *WIP*                                | 🔴 |
-| Hungary    | Edutus University                       | Laki Balazs           | [lspedutus.edutus.hu](https://uself-verifier-gui.lspedutus.edutus.hu)                  | 🟢 |
-| Hungary    | Budapest University of Technology and Economics          | Imre Kocsis                  | [lspbme.cloud.bme.hu](https://uself-verifier-gui.lspbme.cloud.bme.hu)    | 🟢 |
-| Italy      | University of Bologna                                    | Sergio Storari                   | [lspdc4edu.unibo.it](https://uself-verifier-gui.lspdc4edu.unibo.it)  | 🟢 |
-| Lithuania  | Vytautas_Magnus_University       | Tomas Krilavicius     | [lspvdu.vdu.lt](https://uself-verifier-gui.lspvdu.vdu.lt)         | 🟢 |
+| Belgium    | Howest       | Daniel Du Seuil       | *WIP*                                | 🔴 |
+| Hungary    | Edutus University   | Laki Balazs   | [lspedutus.edutus.hu](https://uself-verifier-gui.lspedutus.edutus.hu)  | 🟢 |
+| Hungary    | Budapest University of Technology and Economics  | Imre Kocsis  | [lspbme.cloud.bme.hu](https://uself-verifier-gui.lspbme.cloud.bme.hu) | 🟢 |
+| Italy  | University of Bologna     | Sergio Storari  | [lspdc4edu.unibo.it](https://uself-verifier-gui.lspdc4edu.unibo.it)  | 🟢 |
+| Lithuania  | Vytautas_Magnus_University | Tomas Krilavicius     | [lspvdu.vdu.lt](https://uself-verifier-gui.lspvdu.vdu.lt) | 🟢 |
 | Lithuania  | SKS       | Virginijus Jasaitis                  | [lspsks.sks.lt](https://uself-verifier-gui.lspsks.sks.lt)   | 🟢 |
 | Poland | University of Warsaw    | Krzysztof Cieślikowski  (OPI)   | [u1.pilot-dc4eu.ebsi.nask.pl](https://u1.pilot-dc4eu.ebsi.nask.pl/scenarios)     | 🟢 |
 | Poland | University of Silesia in Katowice     | Krzysztof Cieślikowski  (OPI)   | [u2.pilot-dc4eu.ebsi.nask.pl](https://u2.pilot-dc4eu.ebsi.nask.pl/scenarios)     | 🟢 |
@@ -47,7 +47,7 @@ Source of updated information: https:/sites.ey.com/:x:/r/sites/DC4EU-EBSINE/Shar
 | Spain        | University of Málaga                                     | Victoriano Giralt                | [lspuma.uma.es](https://uself-verifier-gui.lspuma.uma.es)         | 🟢 |
 | Spain | Universidad Carlos III de Madrid | Carlos Delgado | [lspuc3m.uc3m.es](https://uself-verifier-gui.lspuc3m.uc3m.es)    | 🟢 |
 | Spain | Universitat Rovira i Virgili     | Maria Teresa Bordas   | [lspurv.urv.cat](https://uself-verifier-gui.lspurv.urv.cat/)  | 🟢 |
-| Spain        | Consejo General de Colegios Oficiales de Médicos(CGCOM) | José Antonio Aguado / Laia Bota Porta    | WIP  | 🔴  |
+| Spain        | Consejo General de Colegios Oficiales de Médicos(CGCOM) | José Antonio Aguado / Laia Bota Porta    | [lspcgcom.cgcom.es](https://uself-verifier-gui.lspcgcom.cgcom.es)  | 🟢  |
 | Spain      | UNED       | José Emilio Permuy                   | *WIP*                                | 🔴 |
 | Spain      | Universidad Politécnica de Madrid       | Fernando Pescador                  | *WIP*                               | 🔴 |
 | Sweeden      | RISE - Research Institutes of Sweden          | Fredrik Nilbrink                 | *WIP*                         | 🔴 |
