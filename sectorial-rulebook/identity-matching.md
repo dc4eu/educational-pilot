@@ -4,6 +4,11 @@
 Based on **Commission Implementing Regulation (EU) 2025/846**, this narrative outlines how identity matching functions in the context of education and professional qualifications, in alignment with the **European Education Area**, **eIDAS2**, and the **EUDI Wallet**.
 
 ---
+## Overview
+
+![Identity Matching Diagram](IdentityMatchingFlow.png)
+
+---
 
 ## 1. Authentication via EUDI Wallet
 
