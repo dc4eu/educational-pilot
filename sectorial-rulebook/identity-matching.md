@@ -1,48 +1,93 @@
-# Identity Matching
 
-## Overview
+# Cross-Border Identity Matching in Education and Professional Qualifications (Narrative)
 
-The combination of personal identification data and member state-specific matching rules creates a unified approach to identity verification. The rulebook acknowledges the complexity of European identity systems by combining personal identification data with member state-specific matching rules.
+Based on **Commission Implementing Regulation (EU) 2025/846**, this narrative outlines how identity matching functions in the context of education and professional qualifications, in alignment with the **European Education Area**, **eIDAS2**, and the **EUDI Wallet**.
 
-## Key Components
+---
 
-### Personal Identification Data
-Standardised attributes that can be used for identity matching while respecting privacy requirements and national identity systems.
+## 1. Authentication via EUDI Wallet
 
-### Member State-Specific Matching Rules
-Rules that account for national variations in identity systems while creating consistent verification outcomes.
+The user authenticates using their **European Digital Identity Wallet (EUDI Wallet)**, providing their **Person Identification Dataset (PID)** as defined in **Implementing Regulation (EU) 2024/2977**.
 
-## Benefits for the Educational Ecosystem
+The PID is submitted to the **Relying Party (RP)**, such as:
+- Universities or higher education institutions (HEIs)
+- National recognition authorities
+- Student admission portals
+- Regulators of professions (e.g. for doctors, engineers)
 
-This system:
-- Respects national sovereignty while creating reliable links between national identities and institutional records
-- Makes student identification more accurate across borders
-- Helps educational institutions connect external identities (issued by national authorities) with their internal systems
-- Improves the efficiency and accuracy of student identification processes
+---
 
-## Implementation Considerations
+## 2. Checking Existing Records
 
-When implementing identity matching:
-- Privacy protection must be a primary consideration
-- Matching rules should accommodate variations in naming conventions
-- Identity matching should be context-specific
-- Matching confidence levels should be clearly indicated
-- Audit trails for matching processes should be maintained
-- User consent should be obtained for identity linking
+The RP checks whether the user is already registered:
+- Using internal systems (SIS, learner registers)
+- Accessing external trusted registers (e.g. national HE registries, EWP, NQF databases)
 
-## Cross-Border Scenarios
+Matching may be conducted:
+- Internally by the RP
+- Via a **centralised identity matching system** operated by a public authority
 
-For cross-border educational mobility, identity matching provides:
-- Recognition of identity across different national systems
-- Reliable linking between credentials issued in different countries
-- Support for student mobility between institutions
-- Consistency in identification for qualification recognition
+---
 
-## Integration with Educational Systems
+## 3. Identity Matching Execution
 
-Identity matching enables:
-- Linking of national identities with institutional records
-- Bridging between different identification systems
-- Creation of persistent educational identifiers
-- Privacy-preserving identification for educational purposes
-- Support for lifelong learning through consistent identification
+The provided PID is compared against registry records. The system allows for variations in spelling and national transliterations.
+
+**Outcomes**:
+- **Success**: Unequivocal match or valid new registration
+- **Failure**: No match or ambiguous results
+
+This supports compliance with:
+- Bologna Process
+- Council Recommendation (EU) 2018/1110 (automatic recognition)
+- Directive 2005/36/EC (professional mobility)
+
+---
+
+## 4. If Matching Is Successful
+
+The RP informs the user and offers to:
+- Register the user internally
+- Issue an **Electronic Attestation of Attributes (EAA)** linking the PID with the RP
+- Store the association for reuse (e.g. in future Erasmus+ interactions)
+
+---
+
+## 5. If Matching Fails
+
+The user is:
+- Clearly informed
+- Provided with alternatives:
+  - Update existing data
+  - Use another eID or wallet
+  - Submit additional identifiers
+
+If no record is found, the user may be **registered as new**, according to national law.
+
+---
+
+## 6. Logging, Security, and Redress
+
+All actions are logged:
+- Data values used
+- Timestamps and matching outcomes
+- Documents submitted
+
+Logs are stored for **6–12 months**, ensuring:
+- Traceability
+- Complaint handling
+- Compliance with GDPR and sectoral laws
+
+---
+
+## Strategic Alignment with EU Initiatives
+
+- **European Education Area**: Mobility, recognition, interoperability
+- **Digital Education Action Plan (DEAP)**: Secure, trusted services
+- **eIDAS2 & EUDI Wallet**: Portable, user-controlled identity
+- **Microcredentials & Europass**: Verified learning achievements
+- **OOTS**: Efficient reuse of user data
+
+---
+
+This regulation provides the **legal and technical framework** enabling education and professional qualification authorities to confidently perform cross-border identity matching and offer seamless, secure, and interoperable services to learners and professionals.
