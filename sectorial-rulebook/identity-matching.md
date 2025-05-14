@@ -6,6 +6,8 @@ Based on **Commission Implementing Regulation (EU) 2025/846**, this narrative ou
 ---
 ## Overview
 
+This regulation provides the **legal and technical framework** enabling education and professional qualification authorities to confidently perform cross-border identity matching and offer seamless, secure, and interoperable services to learners and professionals.
+
 ![Identity Matching Diagram](IdentityMatchingFlow.png)
 
 ---
@@ -161,4 +163,66 @@ Logs are stored for **6–12 months**, ensuring:
 
 ---
 
-This regulation provides the **legal and technical framework** enabling education and professional qualification authorities to confidently perform cross-border identity matching and offer seamless, secure, and interoperable services to learners and professionals.
+# Summary for Education and Professional Qualification Institutions  
+## Under Commission Implementing Regulation (EU) 2025/846 on Cross-Border Identity Matching
+
+This summary outlines the key **obligations** and **benefits** for institutions in the education and professional qualifications sector, aligned with the eIDAS2 framework and the European Digital Identity Wallet (EUDI Wallet).
+
+---
+
+## Obligations
+
+1. **Identity Matching Capability**  
+   Institutions acting as relying parties must ensure that they can perform or delegate **unequivocal identity matching** of individuals using the person identification data received from the EUDI Wallet or a notified eID scheme.
+
+2. **Acceptance of European Digital Identity Wallets**  
+   Institutions must be able to receive and validate identity data aligned with:  
+   - Implementing Regulation (EU) 2024/2977 (for wallets)  
+   - Implementing Regulation (EU) 2015/1501 (for eID schemes)
+
+3. **Use of Registers or Trusted Systems**  
+   They must check existing user data—whether internally (student or professional databases) or via **external registers**—and ensure alignment with official sources.
+
+4. **Transparent User Communication**  
+   They must inform users of:  
+   - The outcome of the identity matching  
+   - Whether the user was matched or newly registered  
+   - Reuse options (e.g. storage, EAA issuance)
+
+5. **Fallback Procedures**  
+   Where matching fails, institutions must:  
+   - Explain the cause clearly to the user  
+   - Offer complementary methods (e.g. updated data, alternative eID)  
+   - Allow registration if no prior records exist
+
+6. **Logging and Accountability**  
+   All matching activities must be **logged securely** for 6–12 months, respecting **data protection principles** (GDPR and Regulation (EU) 2018/1725).
+
+---
+
+## Benefits
+
+1. **Trusted Cross-Border Identity Onboarding**  
+   Enables seamless and legally reliable onboarding of learners and professionals from other Member States using verified PID.
+
+2. **Reduction of Administrative Burden**  
+   Minimises the need for manual document checks or repeated data entry through **once-only interactions** and **data reuse**.
+
+3. **Support for Student and Professional Mobility**  
+   Facilitates compliance with:  
+   - Erasmus+ and mobility tools (e.g. EWP)  
+   - Automatic recognition of qualifications (Recommendation (EU) 2018/1110)  
+   - Directive 2005/36/EC on professional qualifications
+
+4. **Reusability through Electronic Attestations of Attributes (EAAs)**  
+   Institutions may issue EAAs linking the user to their systems (e.g. a student registry), which can then be reused by the holder in future interactions (e.g. applying for other services or proving study status).
+
+5. **Compliance with European Strategies**  
+   Fully supports:  
+   - The **European Education Area (EEA)**  
+   - The **Single Digital Gateway Regulation (SDGR)**  
+   - The **Digital Education Action Plan (DEAP)**  
+   - Implementation of **OOTS** principles
+
+6. **Alignment with Digital Transformation Requirements**  
+   Strengthens institutional readiness to adopt EUDI Wallet-based processes, enhancing service automation and trust across borders.
