@@ -76,49 +76,48 @@ This supports **Scenario 2**, enhancing trust in non-qualified EAAs via EBSI.
 ```mermaid
 graph TD
     subgraph EBSI[EBSI DID Registry]
-        DID[DID<br>did:ebsi:zbEEqFdKA1wqmDA71kHMUK3] -->|Resolves to| DOC[DID Document]
+        DID[DID<br/>did:ebsi:zbEEqFdKA1wqmDA71kHMUK3] -->|Resolves to| DOC[DID Document]
         DOC -->|Contains| VM[Verification Methods]
-        VM -->|Includes| P256[P-256 Key<br>assertionMethod]
-        VM -->|Includes| SECP[secp256k1 Key<br>capabilityInvocation]
+        VM -->|Includes| P256[P-256 Key<br/>assertionMethod]
+        VM -->|Includes| SECP[secp256k1 Key<br/>capabilityInvocation]
         DOC -->|Contains| CB[certificateBinding]
-        CB -->|Has| X5T[x5t#S256<br>SHA-256 Hash]
-        CB -->|Has| X5C[x5c<br>Certificate]
+        CB -->|Has| X5T[x5t#S256<br/>SHA-256 Hash]
+        CB -->|Has| X5C[x5c<br/>Certificate]
     end
-
+    
     subgraph PKI[Public Key Infrastructure]
-        CERT[X.509v3 Certificate] -->|Contains| SUB[Subject<br>Universidad Carlos III]
-        CERT -->|Contains| SAN[SAN<br>URI:did:ebsi:zbEEqFdKA1wqmDA71kHMUK3]
+        CERT[X.509v3 Certificate] -->|Contains| SUB[Subject<br/>Universidad Carlos III]
+        CERT -->|Contains| SAN[SAN<br/>URI:did:ebsi:zbEEqFdKA1wqmDA71kHMUK3]
         CERT -->|Contains| CP256[P-256 Public Key]
         CERT -->|Signed by| CA[Certificate Authority]
     end
-
+    
     subgraph EUDIW[European Digital Identity Wallet]
-        EAA[EAA<br>Verifiable Credential] -->|Signed with| P256
+        EAA[EAA<br/>Verifiable Credential] -->|Signed with| P256
         EAA -->|Stored in| WALLET[EUDIW]
     end
-
+    
     subgraph Proofs[Proofs]
-        DP[didProof<br>JWS] -->|Signed with| P256
+        DP[didProof<br/>JWS] -->|Signed with| P256
         DP -->|Proves Control| DID
     end
-
-    % Vinculaciones
-    P256 -->|Matches| CP256
-    SAN -->|References| DID
-    X5T -->|Hash of| CERT
-    X5C -->|Contains| CERT
-    DOC -->|Trusted via| EBSI
-    CERT -->|Trusted via| CA
-    EAA -->|Verified by| DOC
-    EAA -->|Verified by| CERT
-
-    % Verificación
+    
     subgraph Verifier[Verifier]
         V[Verifier] -->|Resolves| DID
         V -->|Checks| CERT
         V -->|Validates| EAA
     end
-    ```
+    
+    %% Connections between subgraphs
+    P256 -.->|Matches| CP256
+    SAN -.->|References| DID
+    X5T -.->|Hash of| CERT
+    X5C -.->|Contains| CERT
+    DOC -.->|Trusted via| EBSI
+    CERT -.->|Trusted via| CA
+    EAA -.->|Verified by| DOC
+    EAA -.->|Verified by| CERT
+```
 
 ## 4. Example: Universidad Carlos III de Madrid
 
