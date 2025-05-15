@@ -62,11 +62,6 @@ The Doctor ID Schema defines the data structure for representing identity creden
       "format": "date",
       "description": "Date when the doctor ID was issued"
     },
-    "expirationDate": {
-      "type": "string",
-      "format": "date",
-      "description": "Date when the doctor ID expires"
-    },
     "credentialSubject": {
       "type": "object",
       "description": "Information about the doctor and their status",
@@ -74,24 +69,84 @@ The Doctor ID Schema defines the data structure for representing identity creden
         "id": {
           "type": "string"
         },
-        "given_name": {
+        "givenName": {
           "description": "Current first name(s), including middle name(s) where applicable, of the doctor.",  
           "type": "string"
         },
-        "family_name": {
+        "familyName": {
           "description": "Current last name(s) or surname(s) of the doctor.",
           "type": "string"
+        },
+        "medical_board": {
+          "description": "Corresponds to the regional professional body of physicians where the professional is registered.",
+          "type": "array",
+             "items": {
+               "type": "string",
+               "enum": [
+                  "Álava/Áraba",
+                  "Albacete",
+                  "Alicante",
+                  "Almería",
+                  "Ávila",
+                  "Badajoz",
+                  "Islas Baleares/Illes Balears",
+                  "Barcelona",
+                  "Burgos",
+                  "Cáceres",
+                  "Cádiz",
+                  "Castellón",
+                  "Ciudad Real",
+                  "Córdoba",
+                  "La Coruña/A Coruña",
+                  "Cuenca",
+                  "Gerona/Girona",
+                  "Granada",
+                  "Guadalajara",
+                  "Guipúzcoa/Gipuzkoa",
+                  "Huelva",
+                  "Huesca",
+                  "Jaén",
+                  "León",
+                  "Lérida/Lleida",
+                  "La Rioja",
+                  "Lugo",
+                  "Madrid",
+                  "Málaga",
+                  "Murcia",
+                  "Navarra",
+                  "Orense/Ourense",
+                  "Asturias",
+                  "Palencia",
+                  "Las Palmas",
+                  "Pontevedra",
+                  "Salamanca",
+                  "Santa Cruz de Tenerife",
+                  "Cantabria",
+                  "Segovia",
+                  "Sevilla",
+                  "Soria",
+                  "Tarragona",
+                  "Teruel",
+                  "Toledo",
+                  "Valencia",
+                  "Valladolid",
+                  "Vizcaya/Bizkaia",
+                  "Zamora",
+                  "Zaragoza",
+                  "Ceuta",
+                  "Melilla"
+               ]
+             }
         },
         "personal_administrative_number": {
           "description": "Identification number of the registered physician.",
           "type": "string",
-          "pattern": "([A-Z]{4}[0-9]{5})"
+          "pattern": "([0-9]{9})"
         },
-        "medical_registration_status": {
-                "description": "The status of the registered physician",
-                "type": "string",
-                "enum": ["ACTIVE", "LEAVE", "INHABILITED"]
-            },
+        "legally_entitled": {
+          "description": "Defines whether the professional is considered to be qualified to practise medicine, and there is no record of the professional having been sanctioned or disqualified from practising as a doctor..",
+          "type": "boolean"
+        },
         "medical_speciality": {
           "description": "Code representing the clinical specialty of the clinician or provider who interacted with, treated, or provided a service to/for the patient",
           "type": "array",
@@ -153,13 +208,7 @@ The Doctor ID Schema defines the data structure for representing identity creden
                 }
         }
       },
-      "required": [
-        "id",
-        "given_name",
-        "family_name",
-        "personal_administrative_number",
-        "medical_speciality"
-      ]
+      "required": [ "id", "givenName", "familyName", "personal_administrative_number", "medical_speciality"]
     },
     "proof": {
       "type": "object",
