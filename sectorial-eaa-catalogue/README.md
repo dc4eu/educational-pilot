@@ -110,6 +110,9 @@ For further information on EDC-W3C, access:
 | Education | Upper secondary education transcript of records | USTOR | Educational achievement microcredential for | [Upper secondary education transcript of records](./formal-education/highereducation-microcredential.md) | [Schema](https://code.europa.eu/ebsi/json-schema/-/tree/main/schemas/vcdm1.1/europass/edc) | [Registry](https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/zAEUqPUrQVE7yiesF8xUVHYh4AnqjfHFxCv6GhZ3uvjkW) |
 | Professional qualifications | Certificate of Professional Suitability | CPS | Professional achievement credential for| Certificate of Professional Suitability | [LocalSchema](./professional-qualifications/CertificateProfessionalSuitability.md) | [EBSI Registry](https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/zFkbzRiX4Q7vcaMtNpgq7RzkvkhvRTt9KqMHqGWXrGn85) |
 | Professional qualifications | Continous Professional Development | CPD | Professional achievement credential for| Continous Professional Development| [LocalSchema](./professional-qualifications/ContinuousProfessionalDevelopment.md) | [EBSI Registry](https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/zFkbzRiX4Q7vcaMtNpgq7RzkvkhvRTt9KqMHqGWXrGn85) |
+| Professional qualifications | Professional Training Certificate | PTC | Professional achievement credential for| Professional Training Certificate| [LocalSchema](./professional-qualifications/ProfessionalTrainingCertificate.md) | [EBSI Registry](https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/zFkbzRiX4Q7vcaMtNpgq7RzkvkhvRTt9KqMHqGWXrGn85) |
+
+
 
 
 ## Detailed information per category or type
