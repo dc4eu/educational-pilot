@@ -54,6 +54,10 @@ In other words:
 
 European Digital Credentials (EDC) issued using Online Credential Builder (OCB) provided by DG-EMPL, it's a ELM serialisation inspired by W3C-VC but not fully compliant.
 
+- top-level structure: EDC credentials, as produced by OCB, uses "credential" instead of putting W3C fields directly at the root.
+- issuanceDate / expirationDate
+- revocation/suspension not supported
+
 EDC JSON structure (view 1)
 
 ![Main components in a EDC credential produced by OCB](./images/EDC-view1.png "Main components in a EDC credential produced by OCB")
