@@ -56,11 +56,11 @@ European Digital Credentials (EDC) issued using Online Credential Builder (OCB) 
 
 EDC JSON structure (view 1)
 
-![Alt text](./schemes-data-models/EDC-view1.png "Main components in a EDC credential produced by OCB")
+![Main components in a EDC credential produced by OCB](./images/EDC-view1.png "Main components in a EDC credential produced by OCB")
 
 EDC JSON structure (view 2)
 
-![Alt text](./schemes-data-models/EDC-view2.png "Main components - second level overview - in a EDC credential produced by OCB")
+![Main components - second level overview - in a EDC credential produced by OCB](./images/EDC-view2.png "Main components - second level overview - in a EDC credential produced by OCB")
 
 **deliveryDetails** are linked to especific delivery mechanism used by OBC, it won't be required 
 
