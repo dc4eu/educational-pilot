@@ -50,7 +50,7 @@ Source of updated information: https:/sites.ey.com/:x:/r/sites/DC4EU-EBSINE/Shar
 | Spain        | Consejo General de Colegios Oficiales de Médicos(CGCOM) | José Antonio Aguado / Laia Bota Porta    | [lspcgcom.cgcom.es](https://uself-verifier-gui.lspcgcom.cgcom.es)  | 🟢  |
 | Spain      | UNED       | José Emilio Permuy                   | *WIP*                                | 🔴 |
 | Spain      | Universidad Politécnica de Madrid       | Fernando Pescador                  | *WIP*                               | 🔴 |
-| Sweeden      | RISE - Research Institutes of Sweden          | Fredrik Nilbrink                 | *WIP*                         | 🔴 |
+| Sweeden   | RISE - Research Institutes of Sweden   | Fredrik Nilbrink   | [lsprise.ri.se](https://uself-verifier-gui.lsprise.ri.se) | 🟢 |
 
 ## Pilot 3 – Combined (Pilot 1 + Pilot 2)
 
