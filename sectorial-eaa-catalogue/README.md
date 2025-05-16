@@ -68,8 +68,6 @@ EDC JSON structure (view 2)
 
 ![Main components - second level overview - in a EDC credential produced by OCB](./images/EDC-view2.png "Main components - second level overview - in a EDC credential produced by OCB")
 
-**deliveryDetails** are linked to especific delivery mechanism used by OBC, it won't be required 
-
 
 ## European Digital Credentials – W3C Compliant (EDC-W3C)
 
