@@ -57,6 +57,8 @@ European Digital Credentials (EDC) issued using Online Credential Builder (OCB) 
 - Top-level structure: EDC credentials, as produced by OCB, uses "credential" instead of putting W3C fields directly at the root.
 - Missed issuanceDate / expirationDate
 - Missed revocation/suspension (not supported)
+- deliveryDetails are linked to especific delivery mechanism used by OBC, it won't be required 
+
 
 EDC JSON structure (view 1)
 
