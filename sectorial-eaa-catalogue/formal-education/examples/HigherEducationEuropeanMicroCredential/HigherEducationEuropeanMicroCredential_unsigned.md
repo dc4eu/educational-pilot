@@ -2,10 +2,11 @@
 
 Unsigned Credential Example
 
-The credential includes all mandatory EUHEMC elements: learner identification, a 5-ECTS learning achievement, an assessment with a grade, a learning outcome with a competence, and an optional ESCO skill.
-Issued by Rovira i Virgili University (did:ebsi:ziuFQNRWr6vNeEpTgimmCpw).
-No proof field, as this is unsigned.
-
+-The credential includes all mandatory EUHEMC elements: learner identification, a 5-ECTS learning achievement, an assessment with a grade, a learning outcome with a competence, and an optional ESCO skill.
+-Issued by Rovira i Virgili University (did:ebsi:ziuFQNRWr6vNeEpTgimmCpw).
+-Quality Assurance: EUHEMC is issued by accredited higher education institutions (e.g., Rovira i Virgili University) following the Standards and Guidelines for Quality Assurance in the European Higher Education Area (ESG), ensuring trust and credibility.
+-Stackability and Recognition: EUHEMC supports stackability toward larger qualifications, with decisions made by receiving institutions. It is designed to facilitate recognition via ENIC-NARIC networks, enhancing academic and professional mobility.
+-No proof field, as this is unsigned.
 
 ```json
 {
