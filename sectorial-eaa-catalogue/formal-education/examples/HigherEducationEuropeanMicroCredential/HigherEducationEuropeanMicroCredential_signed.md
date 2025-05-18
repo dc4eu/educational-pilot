@@ -26,16 +26,7 @@ This example transforms the unsigned credential into a JWS Compact Serialisation
     "streetAddress": "Carrer de l'Escorxador, s/n"
   }
 }
-
-
-
-
-
-
-
-
-
-
+```
 
 ### Base64URL:
 
