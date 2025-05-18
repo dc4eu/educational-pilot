@@ -53,11 +53,17 @@ In an era of rapid technological change and evolving job markets, EUHEMC bridges
 flowchart LR
     A["EUHEMC"] --> B["Learning Achievement<br>(mandatory, min 1)"]
     A --> C["Learning Assessment<br>(mandatory, min 1)"]
-    A --> D["Issuer Accreditation<br>(implicit via awardedBy)"]
-    B --> E["Learning Outcomes<br>(mandatory, min 1)"]
-    B --> F["ECTS Credits<br>(mandatory, 1–15)"]
-    E --> G["Competencies<br>(mandatory, min 1)"]
-    E --> H["ESCO Skills<br>(optional)"]
+    A --> D["Issuer<br>(mandatory)"]
+    A --> E["Quality Assurance<br>(mandatory)"]
+    A --> F["Issuer Country<br>(mandatory)"]
+    B --> G["Learning Outcomes<br>(mandatory, min 1)"]
+    B --> H["ECTS Credits<br>(mandatory, 1–15)"]
+    B --> I["Level<br>(mandatory, EQF/QF-EHEA)"]
+    B --> J["Participation Form<br>(mandatory)"]
+    B --> K["Stackability<br>(optional)"]
+    C --> L["Assessment Type<br>(mandatory)"]
+    G --> M["Competencies<br>(mandatory, min 1)"]
+    G --> N["ESCO Skills<br>(optional)"]
 ```
 
 ### **1. Credential Subject Information**
