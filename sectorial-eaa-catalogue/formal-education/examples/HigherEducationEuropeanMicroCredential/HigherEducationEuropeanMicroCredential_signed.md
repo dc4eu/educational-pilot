@@ -2,7 +2,7 @@
 
 This example transforms the unsigned credential into a JWS Compact Serialisation using the JAdES D-Zero signature profile. The credential is signed with the university’s ECDSA P-256 key ({"kty":"EC","x":"9f00-IlhEFVmlpCU8u51i4ZqCAY1bMHUu5OEbXOrOz8","y":"84Mp_hrdzqRDD3a8DNYPONWJYPND1H6WkN-NmnrRbD8","crv":"P-256","d":"Cb-7omOc3t9dSK6qx6ss6QenLS2EIB-wG7tfZJW_Tbw"}). Due to the inability to compute the signature directly, a placeholder is used.
 
-- The signed credential uses the JAdES D-Zero profile, with a header specifying `typ: jades-d-z`, `cty: vc+ld+json`, and `sigPl` with the university’s address.
+-The signed credential uses the JAdES D-Zero profile, with a header specifying `typ: jades-d-z`, `cty: vc+ld+json`, and `sigPl` with the university’s address.
 - The payload is the minified unsigned credential, including all mandatory elements from the Council Recommendation (Annex I) such as `issuerCountry`, `qualityAssurance`, `level`, `participationForm`, and `assessmentType`.
 - The signature placeholder would be replaced by an ECDSA signature computed with the private key.
 - Verification involves decoding the JWS, checking the header parameters, validating the signature using the public key from the issuer’s DID, and ensuring all mandatory elements are present.
