@@ -87,7 +87,7 @@ For further information on EDC-W3C, access:
 - [EDC-W3C compliant with W3C-VCDM 1.0](https://code.europa.eu/ebsi/json-schema/-/tree/main/schemas/vcdm1.1/europass/edc) 
 - [EDC-W3C compliant with W3C-VCDM 2.0](https://code.europa.eu/ebsi/json-schema/-/tree/main/schemas/vcdm2.0/edc)
 
-## PID schema (out of scope of LSPs bt required for wallet to become operational + student/professional onboarding on edcuational/professional qualifications domains)
+## PID Scheme (outside the scope of LSPs, but required for the wallet to become operational + onboarding of students/professionals in educational/professional qualification domains). Must be compliant with 1st batch of implementing acts.
 
 | Scope        | Data model name    | Brief explanation |Status/Detailed explanation |Schema URL     | Registry URL |
 |-----------------------------|--------------------------|--------|------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
