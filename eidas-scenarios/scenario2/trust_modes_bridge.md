@@ -1,15 +1,15 @@
 
-# A Comprehensive Guide to Binding X.509v3 Certificates with Decentralised Identifiers in EBSI for Electronic Attestations of Attributes
+# A Comprehensive Guide to Binding X.509v3 Certificates with Decentralised Identifiers anchored in EBSI for issuing Electronic Attestations of Attributes
 
-**Date**: 13 May 2025  
+**Date**: 20 May 2025  
 **Version**: 1.2  
-**Scope**: Binding X.509v3 certificates with DIDs and issuing, sharing, and verifying EAAs in EBSI
+**Scope**: Binding X.509v3 certificates with DIDs and issuing, sharing, and verifying EAAs using the EBSI Verifiable Data Registries
 
 ## 1. Introduction
 
-This guide provides a detailed process for binding **X.509v3 certificates** with **Decentralised Identifiers (DIDs)** to create a hybrid trust model combining **Decentralised Public Key Infrastructure (dPKI)** with traditional **Public Key Infrastructure (PKI)**. It focuses on legal entities within the **European Blockchain Services Infrastructure (EBSI)** issuing **Electronic Attestations of Attributes (EAAs)** to the **European Digital Identity Wallet (EUDIW)**, as per the amended **eIDAS Regulation** (Regulation (EU) 2024/1183).
+This guide provides a detailed process for binding **X.509v3 certificates** with **Decentralised Identifiers (DIDs)** to create a hybrid trust model combining **Decentralised Public Key Infrastructure (dPKI)** with traditional **Public Key Infrastructure (PKI)**. It focuses on legal entities enrolled in the **European Blockchain Services Infrastructure (EBSI)** which issue  **Electronic Attestations of Attributes (EAAs)** to the **European Digital Identity Wallet (EUDIW)**, as per the amending **eIDAS Regulation** (Regulation (EU) 2024/1183).
 
-The guide is tailored for **Scenario 2** of the **Digital Credentials for Europe (DC4EU)** project, where non-qualified Trust Service Providers (TSPs) issue EAAs. It includes steps for **issuing**, **sharing**, and **verifying** EAAs, using the **Universidad Carlos III de Madrid** as an example to issue academic credentials.
+The guide is tailored for **Scenario 2** of the **Digital Credentials for Europe (DC4EU)** project, where public sector bodies that are authentic sources of data or non-qualified Trust Service Providers (TSPs) issue (non-qualififed) EAAs. It includes steps for **issuing**, **sharing**, and **verifying** EAAs, using the **Universidad Carlos III de Madrid** as an example to issue academic credentials for which it is the authentic source.
 
 ### 1.1 Objectives
 
