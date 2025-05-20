@@ -9,7 +9,7 @@ For the definition of the EAA catalogue, it is essential to identify, for each e
 The common thread throughout the entire EAA catalogue is the utilisation of the European Learning Model (ELM v3.2) as a shared ontology.
 Given the absence of a central authority in education, yet recognising the necessity to establish this sectoral role, we might consider making an assignment based on competencies, bearing in mind that **DG-EAC** is responsible for Primary, Secondary and Tertiary education, whilst **DG-EMPL** oversees Adult education and TVET. OF course, Member States, as key satkeholders and comptencies' owners, should also be members of such governance.
 
-## EAAs are not Diplómas
+## EAAs are not the original Diplomas
 
 EAA is defined as an attestation in electronic form that allows attributes to be authenticated.
 
