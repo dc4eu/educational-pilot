@@ -13,7 +13,7 @@ The guide is tailored for **Scenario 2** of the **Digital Credentials for Europe
 
 ### 1.1 Objectives
 
-- Enable legal entities to bind EBSI DIDs with X.509v3 certificates.
+- Enable legal entities to bind their EBSI DIDs with X.509v3 certificates.
 - Detail the issuance, sharing, and verification of EAAs in EUDIW.
 - Enhance trust in non-qualified EAAs using EBSI (Scenario 2).
 - Illustrate with the Universidad Carlos III de Madrid.
@@ -24,6 +24,7 @@ The guide is tailored for **Scenario 2** of the **Digital Credentials for Europe
 - Technical implementers at legal entities.
 - Certificate Authorities (CAs) supporting EBSI DID verification.
 - Developers integrating dPKI and PKI for EAA issuance.
+- Public sector bodies-Authentic Sources issuing EEAs to the EUDIW.
 - Non-qualified TSPs issuing EAAs to EUDIW.
 
 ### 1.3 Context from DC4EU
@@ -31,11 +32,11 @@ The guide is tailored for **Scenario 2** of the **Digital Credentials for Europe
 The DC4EU project outlines four EAA issuance scenarios:
 
 1. **Scenario 1**: EAAs in closed systems (not EUDIW-compatible).
-2. **Scenario 2**: EAAs by non-qualified TSPs (EBSI enhances trust).
+2. **Scenario 2**: EAAs by non-notified public sector bodies (Pub-EAAss) and non-qualified TSPs (EBSI enhances trust).
 3. **Scenario 3**: EAAs by public sector bodies (Pub_EAAs).
 4. **Scenario 4**: EAAs by qualified TSPs (QEAAs).
 
-This guide focuses on **Scenario 2**, where EBSI’s DID infrastructure and Verifiable Accreditation model address eIDAS trust model gaps by verifying TSP authorization and attribute authenticity.
+This guide focuses on **Scenario 2**, where EBSI’s DID infrastructure and Verifiable Accreditation model address eIDAS trust model gaps by verifying the issuer’s (whereas it is the Authentic Soruce or a non-qualified TSP authorization and attribute authenticity.
 
 ## 2. Terminology
 
@@ -59,22 +60,23 @@ This guide focuses on **Scenario 2**, where EBSI’s DID infrastructure and Veri
 | **authentication**       | DID Document property for verifying presentations.                                    |
 | **JWK Thumbprint**       | SHA-256 hash of a canonical JWK (RFC 7638).                                           |
 | **VC**                   | Verifiable Credential, a format for EAAs (W3C Verifiable Credentials Data Model 1.1). |
+| **VDR**                  | Verifiable Data Registry (managed using EBSI).|
 
 ## 3. Overview of the Process
 
-The process involves binding an **X.509v3 certificate** to a DID public key and managing EAAs:
+The process involves (1) binding an **X.509v3 certificate** to a DID and (2) managing EAAs:
 
-1. **Create DID**: Register in EBSI DID Registry.
-2. **Generate CSR**: Create a CSR for a registered DID public key.
+1. **Create issue's DID**: Register in EBSI DID Registry.
+2. **Generate X.509v3 CSR**: Create a CSR for a registered DID public key.
 3. **Prove DID Control**: Sign a `didProof` to prove the certificate issuer control of the DID controlling key.
 4. **Obtain Certificate**: From a CA. Optional: the x509 certificate may contain the DID as SAN URI.
 5. **Update DID Document**: Compute and register the certificate digest via the `x5t` public key claim.
-6. **Register with EUDIW**: As a non-qualified TSP.
+6. **Register with EUDIW**: As a (public) service provider or as a non-qualified TSP, as appropriate.
 7. **Issue EAA**: Sign and deliver to EUDIW.
 8. **Share EAA**: Present via EUDIW protocols.
 9. **Verify EAA**: Check signatures, binding, and trust chain.
 
-This supports **Scenario 2**, enhancing trust in non-qualified EAAs via EBSI.
+This supports **Scenario 2**, enhancing trust in non-qualified EAAs using EBSI as VDR.
 
 ## Overview of key elements and their relationship
 
