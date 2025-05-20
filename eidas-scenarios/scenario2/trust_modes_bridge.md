@@ -291,7 +291,7 @@ Next to the CSR, the actor MUST prove control of their DID Controlling key. To d
 
 ### 4.5 EUDIW Registration
 
-- **Entitlement**: `Non_Q_EAA_Provider`.
+- **Entitlement**: `Service_Provider` or `Non_Q_EAA_Provider`.
 - **Certificate**: Wallet-relying party access certificate.
 - **Protocols**: ISO/IEC 18013-5:2021, ISO/IEC TS 18013-7:2024.
 - **Format**: Verifiable Credentials Data Model v2.
@@ -323,8 +323,9 @@ Next to the CSR, the actor MUST prove control of their DID Controlling key. To d
 
 ### 5.5 Submit to CA
 
-- Send CSR and `didProof` to CA.
-- CA validates key, `didProof`, and DID registration.
+- Send CSR and `didProof` to CA in the same session (assuming the request is transmitted over HTTPS to de RA service interface)
+- RA validates key, `didProof`, and DID registration.
+- CA issues X.509v3 certificate
 
 ### 5.6 Receive Certificate
 
