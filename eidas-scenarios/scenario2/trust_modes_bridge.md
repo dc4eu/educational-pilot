@@ -339,7 +339,7 @@ Next to the CSR, the actor MUST prove control of their DID Controlling key. To d
 
 ### 5.8 Register with EUDIW
 
-- Register as `Non_Q_EAA_Provider`.
+- Register as `Service_Provider` or `Non_Q_EAA_Provider`.
 - Obtain wallet-relying party access certificate.
 - Configure EUDIW protocols and VC format.
 
