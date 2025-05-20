@@ -126,7 +126,7 @@ graph TD
 
 ## 4. Example: Universidad Carlos III de Madrid
 
-The Universidad, a non-qualified TSP, issues EAAs (e.g., academic diplomas) to EUDIW, using EBSI and an X.509v3 certificate.
+The Univeristy, a public sector body – authentic source, issues EAAs (e.g., academic diplomas) to EUDIW, using EBSI and an X.509v3 certificate.
 
 ### 4.1 DID and DID Document
 
@@ -184,7 +184,7 @@ The Universidad, a non-qualified TSP, issues EAAs (e.g., academic diplomas) to E
 
 **Explanation**:
 
-- **secp256k1 Key**: For EBSI registry operations.
+- **secp256k1 Key**: For EBSI Verifiable Data Registry operations.
 - **P-256 Key**: For signing EAAs and authentication.
 
 ### 4.2 X.509v3 Certificate
