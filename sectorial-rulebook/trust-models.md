@@ -2,7 +2,7 @@
 
 ## Table of contents
 - [1. Classical PKI trust model: purpose and structure](#1-classical-pki-trust-model-purpose-and-structure)
-- [2. Limitations of the classical PKI model in education and qualifications governance]
+- [2. Limitations of the classical PKI model in education and qualifications governance](#2.-Limitations-of-the-Classical-PKI-Model-in-Education-and-Qualifications-Governance)
 - [3. A complementary trust model: dPKI and verifiable authorisations under EBSI and eIDAS2](#3-a-complementary-trust-model-dpki-and-verifiable-authorisations-under-ebsi-and-eidas2)
 - [4. Conclusion](#4-conclusion)
 
