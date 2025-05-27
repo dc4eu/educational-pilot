@@ -83,7 +83,7 @@ In this model:
 A university in Spain (e.g. URV) presents a verifiable credential proving it is authorised by the Ministry of Science to issue:
 - Degrees at EQF level 7
 - EducationalID
-- MyAcademicID credentials
+- AllianceID credentials
 
 This can be validated in real time by a verifier in another Member State, using standard EBSI trust registries and linked data proofs.
 
