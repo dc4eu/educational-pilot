@@ -9,6 +9,8 @@ This repository provides comprehensive documentation and implementation guidance
 This repository is organised into several key sections:
 
 - **[eIDAS roles](./docs/eIDAS-roles.md)**: Outlines the key roles within the European digital identity framework under eIDAS, detailing their definitions, functions, types of attestations issued, regulatory references, and compliance requirements.
+- 
+- [Trust models](./sectorial-rulebook/trust-models.md): Outlines trsut models accpeted for edcuation and professional qualifcations (Classical PKI & Decentralised PKI using EBSI)
 
 - **[eIDAS scenarios](./eidas-scenarios/)**: Outlines the four trust models for electronic attestation of attributes (EAAs) within the European Digital Ecosystem, explaining how EBSI enhances traditional PKI approaches.
   
@@ -18,10 +20,9 @@ This repository is organised into several key sections:
 
 - **[Sectorial rulebook](./sectorial-rulebook/)**: The core framework that establishes standardised approaches for managing digital educational and professional credentials within the European Union.
 
-- **[EAA Characterisation](./sectorial-eaa-catalogue/EAA_Characterisation.md)**: Characterisation of an Electronic Attestation of Attributes (EAA).
-
-
 - **[Sectorial EAA catalogue](./sectorial-eaa-catalogue/)**: Contains all data models and schemas agreed at sectorial level for Education and Professional Qualifications, including formal education, quality assurance regimes, and non-foundational ID.
+
+- **[EAA Characterisation](./sectorial-eaa-catalogue/EAA_Characterisation.md)**: Characterisation of an Electronic Attestation of Attributes (EAA).
 
 - **[User journeys](./user-journeys/)**: Provided user journeys to demonstrate cross-border interaction, ready-to go infrastructure, and foundation to extend/provide more user journeys and/or EAAs
   
