@@ -10,7 +10,8 @@ This repository is organised into several key sections:
 
 - **[eIDAS roles](./docs/eIDAS-roles.md)**: Outlines the key roles within the European digital identity framework under eIDAS, detailing their definitions, functions, types of attestations issued, regulatory references, and compliance requirements.
   
-- [Trust models](./sectorial-rulebook/trust-models.md): Outlines trsut models accpeted for edcuation and professional qualifcations (Classical PKI & Decentralised PKI using EBSI)
+- [Trust models](./sectorial-rulebook/trust-models.md): Outlines trsut models accpeted for edcuation and professional qualifcations (Classical PKI & Decentralised PKI using EBSI). How Clasical PKI and dPKI can 
+- [Bridge between Classical PKI and dPKI using EBSI](./eidas-scenarios/scenario2/trust_modes_bridge.md): How the trust models of classical PKI and dPKI can be combined to enable and support the governance of education and professional qualifications
 
 - **[eIDAS scenarios](./eidas-scenarios/)**: Outlines the four trust models for electronic attestation of attributes (EAAs) within the European Digital Ecosystem, explaining how EBSI enhances traditional PKI approaches.
   
