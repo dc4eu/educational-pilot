@@ -1,4 +1,10 @@
-# Understanding Trust in the Classical PKI Model and Its Extension under eIDAS2
+# Trust models accpeted for education and professional qualifications - Understanding the Classical PKI model and its extension using EBSI under eIDAS2
+
+## Table of contents
+- [1. Classical PKI trust model: purpose and structure](#1-classical-pki-trust-model-purpose-and-structure)
+- [2. Limitations of the classical PKI model in education and qualifications governance]
+- [3. A complementary trust model: dPKI and verifiable authorisations under EBSI and eIDAS2](#3-a-complementary-trust-model-dpki-and-verifiable-authorisations-under-ebsi-and-eidas2)
+- [4. Conclusion](#4-conclusion)
 
 ## 1. Classical PKI Trust Model: Purpose and Structure
 
