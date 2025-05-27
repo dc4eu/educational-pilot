@@ -9,7 +9,7 @@ This repository provides comprehensive documentation and implementation guidance
 This repository is organised into several key sections:
 
 - **[eIDAS roles](./docs/eIDAS-roles.md)**: Outlines the key roles within the European digital identity framework under eIDAS, detailing their definitions, functions, types of attestations issued, regulatory references, and compliance requirements.
-- 
+  
 - [Trust models](./sectorial-rulebook/trust-models.md): Outlines trsut models accpeted for edcuation and professional qualifcations (Classical PKI & Decentralised PKI using EBSI)
 
 - **[eIDAS scenarios](./eidas-scenarios/)**: Outlines the four trust models for electronic attestation of attributes (EAAs) within the European Digital Ecosystem, explaining how EBSI enhances traditional PKI approaches.
