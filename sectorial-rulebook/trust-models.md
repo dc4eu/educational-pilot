@@ -1,10 +1,21 @@
 # Trust models accpeted for education and professional qualifications - Understanding the Classical PKI model and its extension using EBSI under eIDAS2
 
 ## Table of contents
-- [1. Classical PKI trust model: purpose and structure](#1-classical-pki-trust-model-purpose-and-structure)
-- [2. Limitations of the classical PKI model in education and qualifications governance](#2.-Limitations-of-the-Classical-PKI-Model-in-Education-and-Qualifications-Governance)
-- [3. A complementary trust model: dPKI and verifiable authorisations under EBSI and eIDAS2](#3-a-complementary-trust-model-dpki-and-verifiable-authorisations-under-ebsi-and-eidas2)
-- [4. Conclusion](#4-conclusion)
+- [Trust models accpeted for education and professional qualifications - Understanding the Classical PKI model and its extension using EBSI under eIDAS2](#trust-models-accpeted-for-education-and-professional-qualifications---understanding-the-classical-pki-model-and-its-extension-using-ebsi-under-eidas2)
+  - [Table of contents](#table-of-contents)
+  - [1. Classical PKI Trust Model: Purpose and Structure](#1-classical-pki-trust-model-purpose-and-structure)
+    - [a. Identifying Issuers](#a-identifying-issuers)
+    - [b. Identifying Relying Parties and Intermediaries](#b-identifying-relying-parties-and-intermediaries)
+    - [c. Authorised Requests to EUDI Wallets](#c-authorised-requests-to-eudi-wallets)
+  - [2. Limitations of the Classical PKI Model in Education and Qualifications Governance](#2-limitations-of-the-classical-pki-model-in-education-and-qualifications-governance)
+    - [a. It proves who an entity is, not what it is allowed to do](#a-it-proves-who-an-entity-is-not-what-it-is-allowed-to-do)
+    - [b. No dynamic governance layer](#b-no-dynamic-governance-layer)
+  - [3. A Complementary Trust Model: dPKI and Verifiable Authorisations under EBSI and eIDAS2](#3-a-complementary-trust-model-dpki-and-verifiable-authorisations-under-ebsi-and-eidas2)
+    - [a. What is dPKI?](#a-what-is-dpki)
+    - [b. How it works](#b-how-it-works)
+    - [c. What this enables](#c-what-this-enables)
+    - [d. Concrete example](#d-concrete-example)
+  - [4. Conclusion](#4-conclusion)
 
 ## 1. Classical PKI Trust Model: Purpose and Structure
 
