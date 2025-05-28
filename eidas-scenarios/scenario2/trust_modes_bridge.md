@@ -180,7 +180,7 @@ The University, as a public sector body and authentic source, issues EAAs (e.g.,
 
 ### 4.2 X.509v3 Certificate
 
-TODO: remove the SAN did:ebsi from the certificate
+(No "SAN did:ebsi" should be included in the certificate)
 
 **Certificate:**
 
@@ -216,7 +216,7 @@ l8Z9X3z1q1e8v9q2k3m4n5p6q7r8t9u0v1w2x3y4z5a6b7c8d9e0f1g2h3i4j5k
 
 ### 4.3 Certificate Signing Request (CSR)
 
-TODO: remove the SAN did:ebsi from the CSR (if exists)
+(No "SAN did:ebsi" should be included in the CSR)
 
 **CSR:**
 
