@@ -10,7 +10,7 @@ This repository is organised into several key sections:
 
 - **[eIDAS roles](./docs/eIDAS-roles.md)**: Outlines the key roles within the European digital identity framework under eIDAS, detailing their definitions, functions, types of attestations issued, regulatory references, and compliance requirements.
   
-- [Trust models](./sectorial-rulebook/trust-models.md): Outlines trsut models accepted for **Education and Professional qualifcations** (Classical PKI & Decentralised PKI using EBSI). 
+- [Trust models](./sectorial-rulebook/trust-models.md): Outlines trust models accepted for **Education and Professional qualifcations** (Classical PKI & Decentralised PKI using EBSI). 
 
 - **[eIDAS scenarios](./eidas-scenarios/)**: Outlines the four trust models for electronic attestation of attributes (EAAs) within the European Digital Ecosystem, explaining how EBSI enhances traditional PKI approaches.
 
@@ -26,7 +26,7 @@ This repository is organised into several key sections:
 
 - **[EAA Characterisation](./sectorial-eaa-catalogue/EAA_Characterisation.md)**: Characterisation of an Electronic Attestation of Attributes (EAA).
 
-- **[User journeys](./user-journeys/)**: Provided user journeys to demonstrate cross-border interaction, ready-to go infrastructure, and foundation to extend/provide more user journeys and/or EAAs
+- **[User journeys](./user-journeys/)**: Provided user journeys to demonstrate cross-border interaction, ready-to go infrastructure, and foundation to extend/provide more user journeys and/or EAAs.
   
 - **[Scenarios](./scenarios/README.md)**: A scenario within DC4EU, details the elements each piloting agent must provide to characterise, execute, and monitor user journeys in alignment with governance, technical, and reporting requirements.
 
@@ -57,7 +57,7 @@ This framework brings together European educational and professinal qualificatio
 
 For new users, we recommend starting with:
 
-1. Review the [Governance in Education and Professional Qualifications](./governances): to understand types of governnaces and legal regimes at cross-border level
+1. Review the [Governance in Education and Professional Qualifications](./governances): to understand types of governance and legal regimes at cross-border level
 2. Review the [Sectorial Rulebook](./sectorial-rulebook/) to understand the framework principles
 3. Learn about the [eIDAS scenarios](./eidas-scenarios/) to understand the trust models
 4. Explore the [Authorisation Model](./eaa-based-authorisation-model/) to understand how trust chains work
