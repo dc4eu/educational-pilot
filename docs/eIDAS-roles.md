@@ -23,7 +23,7 @@ This table summarises the compliance requirements for different roles under **Re
 | Recognised under Union or national law | X | X |  |  |  |  |
 | Ensures secure access and data integrity | X | X | X | X |  |  |
 | Provides electronic attestations of attributes (EAA) | X | X | X | X |  |  |
-| Compliance with Annex VII of Regulation (EU) 2024/1183 | X | X | X | X |  |  |
+| Compliance with Annex VII of Amended Regulation (EU) 2014/910 | X | X | X | X |  |  |
 | Must allow verification by QTSPs | X | X |  |  |  |  |
 | Must provide an interface for Digital Identity Wallets |  | X |  |  | X | X |
 | Supervised by a national authority |  | X | X | X | X | X |
@@ -53,8 +53,8 @@ An **Authentic Source** is a repository or system, maintained under the responsi
 - **Qualified electronic attestation of attributes (QEAA)** (if designated as such)
 
 ### Regulatory References
-- **Regulation (EU) 2024/1183**, Article 3(47)
-- **Annex VII** of Regulation (EU) 2024/1183
+- **Amended Regulation (EU) 2014/910**, Article 3(47)
+- **Annex VII** of Amended Regulation (EU) 2014/910
 
 ### Requirements
 - Must be officially recognised as an authentic source under **Union or national law**.
@@ -161,12 +161,12 @@ A Relying Party is a natural or legal person that depends on electronic identifi
 ## Relying Party Intermediary
 
 ### Definition
-A Relying Party Intermediary is an entity that facilitates the interaction between a Relying Party and other eIDAS trust services, enabling the verification and processing of electronic identification means and electronic attestations of attributes.
+A Relying Party Intermediary is an entity that facilitates the interaction between a Relying Party and the EUDIW and other eIDAS trust services, enabling the verification and processing of electronic identification means and electronic attestations of attributes.
 
 ### Role
-- **Acts as a bridge between relying parties and trust services.**
-- **Ensures secure and standardised communication of electronic attestations.**
-- **May provide validation services for digital signatures, seals, or attributes.**
+- **Acts as a bridge between relying parties and the wallet and trust services.**
+- **Ensures secure and standardised communication of person identification data and electronic attestations of attributes.**
+- **May provide validation services for digital signatures, seals, or attributes.** In some cases, this implies it acts as a Trust Service Provider.
 
 ### Type of Attestation USED
 - **Electronic attestation of attributes (EAA)**
@@ -174,8 +174,8 @@ A Relying Party Intermediary is an entity that facilitates the interaction betwe
 - **Qualified electronic signatures and seals**
 
 ### Regulatory References
-- **Regulation (EU) 2024/1183, Article 3(7)**
-- **Regulation (EU) 2024/1183, Articles 45-49**
+- **Amended Regulation (EU) 2014/910, Article 3(7)**
+- **Amended Regulation (EU) 2014/910, Articles 45-49**
 
 ### Requirements
 - **Must ensure compliance with eIDAS security and interoperability standards.**
