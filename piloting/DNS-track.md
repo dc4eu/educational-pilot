@@ -49,7 +49,7 @@ Source of updated information: https:/sites.ey.com/:x:/r/sites/DC4EU-EBSINE/Shar
 | Spain | Universitat Rovira i Virgili     | Maria Teresa Bordas   | [lspurv.urv.cat](https://uself-verifier-gui.lspurv.urv.cat/)  | 🟢 |
 | Spain        | Consejo General de Colegios Oficiales de Médicos(CGCOM) | José Antonio Aguado / Laia Bota Porta    | [lspcgcom.cgcom.es](https://uself-verifier-gui.lspcgcom.cgcom.es)  | 🟢  |
 | Spain      | UNED       | José Emilio Permuy                   | *WIP*                                | 🔴 |
-| Spain      | Universidad Politécnica de Madrid       | Fernando Pescador                  | *WIP*                               | 🔴 |
+| Spain      | Universidad Politécnica de Madrid       | Fernando Pescador                  | [lspupm.dc4eu.upm.es](https://uself-verifier-gui.lspupm.dc4eu.upm.es)                               | 🔴 |
 | Sweeden   | RISE - Research Institutes of Sweden   | Fredrik Nilbrink   | [lsprise.ri.se](https://uself-verifier-gui.lsprise.ri.se) | 🟢 |
 
 ## Pilot 3 – Combined (Pilot 1 + Pilot 2)
