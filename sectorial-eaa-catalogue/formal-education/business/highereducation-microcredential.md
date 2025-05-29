@@ -52,10 +52,10 @@ In an era of rapid technological change and evolving job markets, EUHEMC bridges
 ```mermaid
 flowchart LR
     A["EUHEMC"] --> B["Learning Achievement<br>(mandatory, min 1)"]
-    B --> C["Learning Assessment<br>(mandatory, min 1)"]
     A --> D["Issuer<br>(mandatory)"]
     A --> E["Quality Assurance<br>(mandatory)"]
     A --> F["Issuer Country<br>(mandatory)"]
+    B --> C["Learning Assessment<br>(mandatory, min 1)"]
     B --> G["Learning Outcomes<br>(mandatory, min 1)"]
     B --> H["ECTS Credits<br>(mandatory, 1–15)"]
     B --> I["Level<br>(mandatory, EQF/QF-EHEA)"]
