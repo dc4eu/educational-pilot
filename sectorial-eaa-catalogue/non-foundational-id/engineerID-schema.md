@@ -149,6 +149,6 @@
       "required": ["type", "created", "proofPurpose", "verificationMethod", "proofValue"]
     }
   },
-  "required": ["@context", "id", "type", "issuer", "issuanceDate", "expirationDate", "credentialSubject", "proof"]
+  "required": ["@context", "id", "type", "issuer", "issuanceDate", "expirationDate", "credentialSubject"]
 }
 ```
