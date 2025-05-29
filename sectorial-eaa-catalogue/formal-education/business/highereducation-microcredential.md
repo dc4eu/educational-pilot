@@ -56,12 +56,12 @@ flowchart LR
     A --> D["Issuer<br>(mandatory)"]
     A --> E["Quality Assurance<br>(mandatory)"]
     A --> F["Issuer Country<br>(mandatory)"]
+    A --> L["Assessment Type<br>(mandatory)"]
     B --> G["Learning Outcomes<br>(mandatory, min 1)"]
     B --> H["ECTS Credits<br>(mandatory, 1–15)"]
     B --> I["Level<br>(mandatory, EQF/QF-EHEA)"]
     B --> J["Participation Form<br>(mandatory)"]
     B --> K["Stackability<br>(optional)"]
-    C --> L["Assessment Type<br>(mandatory)"]
     G --> M["Competencies<br>(mandatory, min 1)"]
     G --> N["ESCO Skills<br>(optional)"]
 ```
