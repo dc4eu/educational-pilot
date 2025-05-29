@@ -10,7 +10,7 @@ The Professional ID Schema defines the data structure for representing identity 
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://eaa-rulebook.europa.eu/schemas/professional-id/0.0.1",
-  "title": "Doctor ID",
+  "title": "Professional ID",
   "description": "Schema for professional identity credentials",
   "type": "object",
   "properties": {
