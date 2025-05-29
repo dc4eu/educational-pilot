@@ -6,14 +6,12 @@ This document describes the Person Identification Data (PID) model for Natural P
 
 ## Person Identification Data Structure
 
-The PID credential for natural persons contains a set of standardized attributes that provide reliable identification of individuals. These attributes are contained within a `personIdentificationData` object in the credential subject:
+The PID credential for natural persons contains a set of standardized attributes that provide reliable identification of individuals:
 
 ```json
 {
   "credentialSubject": {
-    "personIdentificationData": {
       // PID attributes
-    }
   }
 }
 ```
