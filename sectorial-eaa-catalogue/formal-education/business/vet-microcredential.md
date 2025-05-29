@@ -53,7 +53,6 @@ EUVETMC addresses the need for agile, market-relevant vocational training in a r
 ```mermaid
 flowchart LR
     A["EUVETMC"] --> B["Learning Achievement<br>(mandatory, min 1)"]
-    A --> C["Learning Assessment<br>(mandatory, min 1)"]
     A --> D["Issuer<br>(mandatory)"]
     A --> E["Quality Assurance<br>(mandatory, EQAVET)"]
     A --> F["Issuer Country<br>(mandatory)"]
@@ -62,6 +61,7 @@ flowchart LR
     B --> I["Level<br>(mandatory, EQF)"]
     B --> J["Learning Setting<br>(mandatory, e.g., work-based)"]
     B --> K["Stackability<br>(optional)"]
+    B --> C["Learning Assessment<br>(mandatory, min 1)"]
     C --> L["Assessment Type<br>(mandatory, e.g., practical)"]
     G --> M["Competencies<br>(mandatory, min 1)"]
     G --> N["ESCO Skills<br>(optional)"]
