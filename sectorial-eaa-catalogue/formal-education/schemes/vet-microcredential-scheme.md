@@ -12,92 +12,129 @@ The EUVETMC JSON Schema defines the structure and constraints for issuing verifi
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "European VET Microcredential (EUVETMC)",
+  "$id": "https://tsr.ebsi.europa.eu/schemas/euvet-microcredential.schema.json",
+  "title": "European Vocational Education and Training Microcredential",
+  "description": "Profile schema extending the base EDC-W3C-VC to define microcredentials issued by vocational education and training institutions in Europe.",
   "type": "object",
   "allOf": [
-    { "$ref": "#/$defs/EuropeanDigitalCredentialType" },
+    {
+      "$ref": "https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/0x411a2c5880fe8bd97229546044f55b65846d272594511815cd5b89f000dc3da7"
+    },
     {
       "type": "object",
       "properties": {
-        "issuerCountry": {
-          "$ref": "#/$defs/ConceptType",
-          "//": "Mandatory (Annex I): Country of issuer, e.g., Croatia."
-        },
-        "qualityAssurance": {
-          "$ref": "#/$defs/ConceptType",
-          "//": "Mandatory (Annex I): EQAVET-compliant quality assurance."
+        "type": {
+          "type": "array",
+          "contains": {
+            "const": "EuropeanVocationalEducationTrainingMicrocredential"
+          }
         },
         "credentialSubject": {
           "type": "object",
-          "allOf": [
-            { "$ref": "#/$defs/PersonType" },
-            {
-              "properties": {
-                "hasClaim": {
-                  "type": "array",
-                  "items": { "$ref": "#/$defs/ClaimNodeType" },
-                  "minItems": 2,
-                  "contains": [
-                    { "$ref": "#/$defs/LearningAchievementType" },
-                    { "$ref": "#/$defs/LearningAssessmentType" }
-                  ]
+          "required": [
+            "id",
+            "type",
+            "dateOfBirth",
+            "familyName",
+            "givenName",
+            "hasClaim"
+          ],
+          "properties": {
+            "hasClaim": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "object",
+                "required": [
+                  "type",
+                  "title",
+                  "awardedBy",
+                  "specifiedBy",
+                  "provenBy"
+                ],
+                "properties": {
+                  "type": {
+                    "type": "array",
+                    "contains": {
+                      "const": "LearningAchievement"
+                    }
+                  },
+                  "creditReceived": {
+                    "type": "array",
+                    "minItems": 1,
+                    "maxItems": 3,
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "framework",
+                        "point"
+                      ],
+                      "properties": {
+                        "framework": {
+                          "type": "object",
+                          "properties": {
+                            "notation": {
+                              "enum": [
+                                "ECVET"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "notation"
+                          ]
+                        },
+                        "point": {
+                          "type": "string",
+                          "pattern": "^(1[0-5]|[1-9])$"
+                        }
+                      }
+                    }
+                  },
+                  "provenBy": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "grade",
+                        "specifiedBy",
+                        "awardedBy"
+                      ]
+                    }
+                  },
+                  "specifiedBy": {
+                    "type": "object",
+                    "required": [
+                      "creditPoint",
+                      "educationSubject",
+                      "mode",
+                      "eqfLevel"
+                    ],
+                    "properties": {
+                      "creditPoint": {
+                        "type": "array",
+                        "minItems": 1
+                      },
+                      "eqfLevel": {
+                        "type": "object",
+                        "required": [
+                          "notation"
+                        ],
+                        "properties": {
+                          "notation": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }
-          ]
+          }
         }
-      },
-      "required": ["issuerCountry", "qualityAssurance", "credentialSubject"]
+      }
     }
-  ],
-  "$defs": {
-    "LearningAchievementType": {
-      "type": "object",
-      "properties": {
-        "id": { "$ref": "#/$defs/GenericIdType" },
-        "type": { "const": "LearningAchievement" },
-        "title": { "$ref": "#/$defs/Many!LangStringType" },
-        "creditReceived": {
-          "type": "array",
-          "items": { "$ref": "#/$defs/CreditPointType" },
-          "minItems": 1
-        },
-        "level": {
-          "$ref": "#/$defs/ConceptType",
-          "//": "Mandatory (Annex I): EQF level, e.g., EQF Level 4."
-        },
-        "learningSetting": {
-          "$ref": "#/$defs/ConceptType",
-          "//": "Mandatory (Annex I): Setting, e.g., Work-based."
-        },
-        "stackability": {
-          "$ref": "#/$defs/ConceptType",
-          "//": "Optional (Annex I): Stackable toward qualification."
-        },
-        "learningOutcome": {
-          "type": "array",
-          "items": { "$ref": "#/$defs/LearningOutcomeType" },
-          "minItems": 1
-        },
-        "awardedBy": { "$ref": "#/$defs/AwardingProcessType" }
-      },
-      "required": ["id", "type", "title", "creditReceived", "level", "learningSetting", "learningOutcome", "awardedBy"]
-    },
-    "LearningAssessmentType": {
-      "type": "object",
-      "properties": {
-        "id": { "$ref": "#/$defs/GenericIdType" },
-        "type": { "const": "LearningAssessment" },
-        "title": { "$ref": "#/$defs/Many!LangStringType" },
-        "assessmentType": {
-          "$ref": "#/$defs/ConceptType",
-          "//": "Mandatory (Annex I): Type, e.g., Practical Test."
-        },
-        "grade": { "$ref": "#/$defs/NoteType" },
-        "awardedBy": { "$ref": "#/$defs/AwardingProcessType" }
-      },
-      "required": ["id", "type", "title", "assessmentType", "grade", "awardedBy"]
-    }
-  }
+  ]
 }
 ```
