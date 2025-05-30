@@ -14,8 +14,9 @@ The schema is designed for use with EBSI’s JSON-LD Verifiable Credentials, ens
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://tsr.ebsi.europa.eu/schemas/euhe-microcredential.schema.json",
   "title": "European Higher Education Microcredential",
-  "description": "Subschema for Verifiable Credentials representing microcredentials issued in Higher Education, based on EDC-W3C-VC and ELM 3.2",
+  "description": "Profile schema extending the base EDC-W3C-VC to define microcredentials issued by higher education institutions in Europe.",
   "type": "object",
   "allOf": [
     {
@@ -26,9 +27,14 @@ The schema is designed for use with EBSI’s JSON-LD Verifiable Credentials, ens
       "properties": {
         "type": {
           "type": "array",
-          "contains": {
-            "const": "EuropeanHigherEducationMicrocredential"
-          }
+          "items": {
+            "type": "string"
+          },
+          "const": [
+            "VerifiableCredential",
+            "EuropeanDigitalCredential",
+            "EuropeanHigherEducationMicrocredential"
+          ]
         },
         "credentialSubject": {
           "type": "object",
@@ -136,7 +142,6 @@ The schema is designed for use with EBSI’s JSON-LD Verifiable Credentials, ens
         }
       }
     }
-  ],
-  "$id": "https://tsr.ebsi.europa.eu/schemas/euhe-microcredential.schema.json"
+  ]
 }
 ```
