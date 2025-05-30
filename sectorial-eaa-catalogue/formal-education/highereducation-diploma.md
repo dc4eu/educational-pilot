@@ -75,7 +75,7 @@ flowchart LR
     C --> D["Awarding Body<br>(mandatory)"]
     C --> E["Awarding Date<br>(mandatory)"]
     B --> F["Qualification Specification<br>(mandatory)"]
-    F --> G["EQF Classification(mandatory)<br>EQF Classification(recommended)"]
+    F --> G["EQF Classification(mandatory)<br>NQF Classification(recommended)"]
     F --> H["Field of Study<br>(optional)"]
     F --> I["Final Project / Additional Notes<br>(optional)"]
     B --> J["Learning Entitlement<br>(optional)"]
