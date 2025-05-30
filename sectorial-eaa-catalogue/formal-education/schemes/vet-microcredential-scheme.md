@@ -25,9 +25,14 @@ The EUVETMC JSON Schema defines the structure and constraints for issuing verifi
       "properties": {
         "type": {
           "type": "array",
-          "contains": {
-            "const": "EuropeanVocationalEducationTrainingMicrocredential"
-          }
+          "items": {
+            "type": "string"
+          },
+          "const": [
+            "VerifiableCredential",
+            "EuropeanDigitalCredential",
+            "EuropeanVocationalEducationTrainingMicrocredential"
+          ]
         },
         "credentialSubject": {
           "type": "object",
