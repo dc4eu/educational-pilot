@@ -75,7 +75,7 @@ flowchart LR
     C --> D["Awarding Body<br>(mandatory)"]
     C --> E["Awarding Date<br>(mandatory)"]
     B --> F["Qualification Specification<br>(mandatory)"]
-    F --> G["EQF/NQF Classification<br>(mandatory)"]
+    F --> G["EQF Classification(mandatory)<br>EQF Classification(recommended)"]
     F --> H["Field of Study<br>(optional)"]
     F --> I["Final Project / Additional Notes<br>(optional)"]
     B --> J["Learning Entitlement<br>(optional)"]
@@ -134,6 +134,6 @@ These fields define any rights conferred by the diploma and optional information
 
 ## **Implementation Considerations**
 - The *Higher Education Diploma* must be issued in a verifiable digital format, ensuring interoperability with European and international recognition frameworks.
-- Institutions must align the classification of academic qualifications with the *European Qualifications Framework (EQF)* or *National Qualifications Frameworks (NQF)*.
+- Institutions must align the classification of academic qualifications with the *European Qualifications Framework (EQF)* and, recommended, include also the *National Qualifications Frameworks (NQF)*.
 
 
