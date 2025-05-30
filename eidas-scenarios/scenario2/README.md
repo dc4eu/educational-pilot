@@ -29,5 +29,10 @@ This scenario is particularly relevant for:
 
 By implementing EBSI in this scenario, these organisations can enhance the credibility and verifiability of their credentials without needing to achieve qualified status under eIDAS.
 
+## Visual represenattion
 
 ![Visual representation of Scenario 2 - TSPs (EAAs)](20242001%20BCN%20Workshop.drawio.png)
+
+## Bridging Classical PKI and dPKI trust models
+
+[Dedciated page](./trust_modes_bridge.md)
