@@ -2,7 +2,7 @@
 
 ## Overview
 
-The European Higher Education Diploma (EUHED) is a formal, digitally verifiable academic credential that certifies the successful completion of a higher education qualification. Issued by accredited higher education institutions, the EUDIPLOMA conforms to the European Learning Model (ELM) 3.2 and is fully aligned with the European Digital Credentials for Learning (EDC) standard. It ensures compatibility with the European Qualifications Framework (EQF), national qualifications frameworks (NQF), and UNESCO guidelines for diploma supplements.
+The European Higher Education Diploma (EUDIPLOMA) is a formal, digitally verifiable academic credential that certifies the successful completion of a higher education qualification. Issued by accredited higher education institutions, the EUDIPLOMA conforms to the European Learning Model (ELM) 3.2 and is fully aligned with the European Digital Credentials for Learning (EDC) standard. It ensures compatibility with the European Qualifications Framework (EQF), national qualifications frameworks (NQF), and UNESCO guidelines for diploma supplements.
 
 The EUDIPLOMA allows learners, academic institutions, and employers to share, validate, and rely upon diploma-level qualifications in a secure, interoperable and trusted way across Europe and beyond.
 
@@ -64,8 +64,29 @@ In a global, digital-first academic and professional landscape, the EUDIPLOMA pr
 
 
 
-
 ## **Data Model**
+
+### ELM-based Entity-Relationship Diagram
+
+```mermaid
+flowchart LR
+    A["EUDIPLOMA"] --> B["Learning Achievement<br>(mandatory)"]
+    B --> C["Awarding Process<br>(mandatory)"]
+    C --> D["Awarding Body<br>(mandatory)"]
+    C --> E["Awarding Date<br>(mandatory)"]
+    B --> F["Qualification Specification<br>(mandatory)"]
+    F --> G["EQF/NQF Classification<br>(mandatory)"]
+    F --> H["Field of Study<br>(optional)"]
+    F --> I["Final Project / Additional Notes<br>(optional)"]
+    B --> J["Learning Entitlement<br>(optional)"]
+    A --> K["Credential Subject<br>(mandatory)"]
+    K --> L["Full Name<br>(mandatory)"]
+    K --> M["Date of Birth<br>(mandatory)"]
+```
+
+This diagram represents the logical ELM structure of the EUDIPLOMA credential, reflecting the required and optional components identified in the business and data model.
+
+
 
 ### **1. Credential Subject Information**
 These fields identify the diploma holder.
