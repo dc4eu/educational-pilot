@@ -1,9 +1,67 @@
-# **Higher Education Diploma - Digital Credential Specification**
+# European Higher Education Diploma (EUHED)
 
-## **Introduction**
-The *Higher Education Diploma* is a formal academic qualification issued by recognised higher education institutions. This credential must be verifiable, portable, and compliant with the *European Learning Model (ELM)*. It aligns with the *European Digital Credentials for Learning (EDC)* standard, ensuring compatibility across EU Member States and adherence to *Europass*, *EQF/NQF*, and *UNESCO* guidelines for Diploma Supplements.
+## Overview
 
-This document defines the data model for issuing the *Higher Education Diploma* as a verifiable digital credential, specifying mandatory and optional fields.
+The European Higher Education Diploma (EUHED) is a formal, digitally verifiable academic credential that certifies the successful completion of a higher education qualification. Issued by accredited higher education institutions, the EUDIPLOMA conforms to the European Learning Model (ELM) 3.2 and is fully aligned with the European Digital Credentials for Learning (EDC) standard. It ensures compatibility with the European Qualifications Framework (EQF), national qualifications frameworks (NQF), and UNESCO guidelines for diploma supplements.
+
+The EUDIPLOMA allows learners, academic institutions, and employers to share, validate, and rely upon diploma-level qualifications in a secure, interoperable and trusted way across Europe and beyond.
+
+## Business Value
+
+### For Higher Education Institutions:
+
+* **Institutional Trust and Prestige**: Official digital diplomas strengthen the academic reputation of institutions and support their international strategy.
+* **Compliance and Recognition**: Aligns with European and global education recognition frameworks, including EQF/NQF, UNESCO Diploma Supplement, and EBSI.
+* **Process Efficiency**: Automates diploma issuance and verification processes, reducing administrative costs and eliminating fraud.
+
+### For Graduates:
+
+* **Portability and Control**: Store and share diplomas securely via digital wallets, enabling instant and controlled verification.
+* **Cross-border Recognition**: EUDIPLOMAs are easily recognised by institutions and employers across Europe.
+* **Digital Access**: Eliminates the need for physical copies; digital credentials are always accessible, up-to-date, and resilient to loss.
+
+### For Employers and Qualification Authorities:
+
+* **Reliable Verification**: Ensures real-time, tamper-proof validation of official diplomas.
+* **Talent Assurance**: Provides guaranteed authenticity of academic qualifications, reducing recruitment risk.
+* **Interoperability**: Compatible with credential registries and trust services across the European Education Area.
+
+## Key Features
+
+* **Structured according to ELM 3.2**, the credential includes:
+
+  * Personal identification of the diploma holder (name, surname, date of birth).
+  * One Learning Achievement representing the qualification awarded.
+  * An Awarding Process detailing the date, issuer, and jurisdiction.
+  * Qualification classification through EQF or NQF levels.
+  * A Learning Achievement Specification with title, field of study, and optional additional notes (e.g. final project).
+  * Optional Learning Entitlements such as professional access or regulated licences.
+
+* **Verifiable and secure digital format**:
+
+  * Delivered as a W3C Verifiable Credential in JSON-LD.
+  * Signed using JAdES D-Zero to ensure authenticity and alignment with the EBSI trust framework.
+
+* **Interoperable**:
+
+  * Designed for use across Member States through EBSI and Europass.
+  * Compatible with EQF-based qualification recognition services.
+
+## Use Cases
+
+* **Academic Mobility**:
+  A student receives an EUDIPLOMA after completing a bachelor’s degree in Chemistry in Spain. They use the credential to apply for a master’s programme in Germany, with automatic qualification recognition and no further document submission.
+
+* **Digital Hiring**:
+  A software engineer presents an EUDIPLOMA in Computer Science during a job application in the Netherlands. HR teams verify its authenticity instantly through the EBSI verification gateway.
+
+* **Retroactive Issuance**:
+  A university digitises and re-issues historic degrees for alumni as EUDIPLOMAs, enabling graduates from prior decades to obtain trusted digital evidence of their qualifications.
+
+## Why EUDIPLOMA Matters
+
+In a global, digital-first academic and professional landscape, the EUDIPLOMA provides a modern, secure, and portable format for higher education diplomas. It supports lifelong learning, improves qualification transparency, and enhances trust in European degrees. By leveraging open standards and trusted digital infrastructure, it contributes to the European Education Area’s goals of transparency, mobility, and digital transformation.
+
 
 
 
