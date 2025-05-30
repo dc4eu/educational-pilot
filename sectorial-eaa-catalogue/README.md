@@ -105,7 +105,7 @@ For further information on EDC-W3C, access:
 | Non-foundational identity   | DoctorID             | Identity credential for , based on  |Available| [Schema](https://code.europa.eu/ebsi/json-schema/-/tree/main/schemas/vcdm1.1/dc4eu/doctor-id)     | [Registry](https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/zDD8wM8F6UsfrdACeph41EFmgEUUsDnC6SVqY4QFh8MFZ) |
 | Non-foundational identity   | EngineerID             | Identity credential for , based on  |Available| [Schema](https://code.europa.eu/ebsi/json-schema/-/tree/main/schemas/vcdm1.1/dc4eu/engineer-id)     | [ Registry](https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/ziwaS92VRyKojd3Xmk9wgvBo5XYwqG8EYENK9zFQNJWG) |
 
-## Table with available datamodels based on EDC-W3C (W3C-VCDM 1.1 alihend to 1st batch of implementing acts)
+## Table with available datamodels based on EDC-W3C (W3C-VCDM 1.1 aligned to 1st batch of implementing acts)
 
 | Scope | Data model name | Stablished Acronim (type) | Brief explanation | Status/Detailed explanation | Schema URL | Registry URL | Unsigned credential | Signed Credential |
 |-------|----------------|----------------|-------------------|----------------------|------------|--------------|------------|------------|
