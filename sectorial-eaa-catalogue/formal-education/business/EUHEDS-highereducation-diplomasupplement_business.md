@@ -1,12 +1,103 @@
-# **Higher Education Diploma Supplement - Digital Credential Specification**
+# **Higher Education Diploma Supplement (EUHEDS) - Digital Credential Specification**
 
-## **Introduction**
-The *Higher Education Diploma Supplement* is an official document issued alongside a diploma to provide additional details about the qualification, its level, content, and the national education system. It facilitates academic and professional recognition within the *European Higher Education Area (EHEA)*.
+## Overview
 
-This document defines the data model for issuing the *Higher Education Diploma Supplement* as a verifiable digital credential, specifying mandatory and optional fields in alignment with *Europass*, *EQF/NQF*, and *UNESCO Diploma Supplement* guidelines.
+The **European Higher Education Diploma Supplement (EUHEDS)** is a digitally verifiable credential issued alongside a higher education diploma. It provides detailed, structured information about the awarded qualification, its academic level, programme content, courses completed, grading system, and national education context. The EUHEDS enhances transparency, supports cross-border academic and professional recognition, and aligns with the European Learning Model (ELM), Europass, EQF/NQF, and UNESCO Diploma Supplement.
 
+This supplement complements a diploma and serves as a multilingual, machine-verifiable explanation of the qualification, supporting academic mobility, employer recognition, and access to further studies.
+
+## Business Value
+
+### For Higher Education Institutions:
+
+* **Support for Internationalisation**: Facilitates mutual recognition of qualifications across the European Higher Education Area.
+* **Alignment and Transparency**: Conforms with the EQF/NQF, Bologna Process, and national accreditation bodies.
+* **Digital Trust and Authenticity**: Enables automated issuance of verifiable, tamper-proof supplements.
+
+### For Graduates:
+
+* **Recognition Across Borders**: Increases qualification visibility and recognition by employers and institutions abroad.
+* **Detailed Academic Record**: Provides verified records of courses, credits, grades, and learning outcomes.
+* **Gateway to Further Education**: Documents access rights to postgraduate programmes and regulated professions.
+
+### For Relying Parties (employers, agencies, universities):
+
+* **Verified Learning Evidence**: Offers an in-depth overview of the graduate's educational background, delivered in a trusted digital format.
+* **Efficient Evaluation**: Reduces the need for translations or additional documentation by standardising qualification explanation.
+* **Credibility and Comparability**: Supports qualification comparison at European and international level.
+
+## Key Features
+
+* **Fully aligned with ELM and Diploma Supplement Guidelines**:
+
+  * Includes EQF/NQF levels, duration, institution status, mode of study, grading system, credit distribution.
+  * Structured coverage of programme, individual courses, assessment details, and additional academic notes.
+
+* **Structured Academic Profile**:
+
+  * Learner identity, study programme, education institution, course-level data.
+  * Encompasses learning achievements, entitlements, and access to further education.
+
+* **Standardised Digital Format**:
+
+  * Issued as a W3C Verifiable Credential (JSON-LD).
+  * Digitally signed using JAdES D-Zero for interoperability with EBSI and European wallets.
+
+## Use Cases
+
+* **Academic Mobility**:
+  A graduate uses EUHEDS to apply for a master's programme in another country, presenting clear and verifiable academic history.
+
+* **Professional Qualification Recognition**:
+  EUHEDS serves as proof of eligibility for entering a regulated profession requiring a formally assessed academic background.
+
+* **Recruitment and Credential Evaluation**:
+  Employers access structured evidence of coursework, grades, and programme outcomes through an EUHEDS credential.
+
+## Why EUHEDS Matters
+
+EUHEDS standardises the representation of complex academic qualifications in a trusted digital format. It enables cross-border recognition, supports transparency of learning outcomes, and strengthens the credibility of European higher education institutions. As a companion to diplomas, it empowers graduates and simplifies decision-making for credential evaluators and employers.
 
 ## **Data Model**
+
+### ELM-based Entity-Relationship Diagram
+
+```mermaid
+flowchart LR
+    A["EUHEDS"] --> B["Credential Subject (Person)"]
+    B --> C["Full Name"]
+    B --> D["Date of Birth"]
+    B --> E["Student Identifier (optional)"]
+    A --> F["Learning Achievement"]
+    F --> G["Qualification Title"]
+    F --> H["Main Field(s) of Study"]
+    F --> I["EQF and NQF Level"]
+    F --> J["Additional Notes"]
+    A --> K["Awarding Process"]
+    K --> L["Awarding Institution"]
+    K --> M["Awarding Date"]
+    A --> N["Learning Opportunity"]
+    N --> O["Programme Duration"]
+    N --> P["Language(s) of Instruction"]
+    N --> Q["Institution Location"]
+    A --> R["Study Programme"]
+    R --> S["Programme Name"]
+    R --> T["Mode of Study"]
+    R --> U["Total Credit Points"]
+    R --> V["Individual Courses"]
+    V --> W["Course Name"]
+    V --> X["Credit Points"]
+    V --> Y["Grade"]
+    V --> Z["Course Dates"]
+    A --> AA["Grading Scheme"]
+    AA --> AB["Distribution"]
+    AA --> AC["Overall Classification"]
+    A --> AD["Entitlements"]
+    AD --> AE["Access to Further Studies"]
+    AD --> AF["Access to Regulated Professions"]
+    A --> AG["National System Context"]
+```
+
 
 ### **1. Credential Subject Information**
 These fields identify the diploma holder.
@@ -95,6 +186,9 @@ This field provides an overview of the national system for understanding the qua
 | **Information about the national higher education system** | `elm:LearningAchievementSpecification` | `elm:additionalNote` | Mandatory |
 
 
-## **Implementation Considerations**
-- The *Higher Education Diploma Supplement* must be issued in a verifiable digital format to support recognition across *EU Member States*.
-- Institutions should align the qualification levels with *European Qualifications Framework (EQF)* and *National Qualifications Frameworks (NQF)*.
+## Implementation Considerations
+
+* Institutions must ensure coherence between the EUHEDS and the associated diploma.
+* Supplements should reference or embed EQF/NQF alignment and grading scales.
+* EUHEDS must be accessible via digital wallets and recognised across EHEA.
+* Data sources for entitlements and courses should align with institutional systems and Europass schema.
