@@ -1,0 +1,126 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://ec.europa.eu/credentials/v1"
+  ],
+  "id": "urn:uuid:44444444-5555-6666-7777-888888888888",
+  "type": [
+    "VerifiableCredential",
+    "EuropeanDigitalCredential",
+    "EuropeanUpperSecondaryEducationTranscriptOfRecords"
+  ],
+  "issuer": {
+    "id": "did:web:secondaryschool.example.edu"
+  },
+  "issuanceDate": "2025-05-30T07:44:25.285851Z",
+  "issued": "2025-05-30T07:44:25.285851Z",
+  "validFrom": "2025-05-30T07:44:25.285851Z",
+  "credentialSchema": [
+    {
+      "id": "https://tsr.ebsi.europa.eu/schemas/euustor-uppersecondaryeducation-transcriptofrecords.schema.json",
+      "type": "JsonSchema"
+    }
+  ],
+  "credentialSubject": {
+    "id": "did:key:example:john-doe",
+    "type": "Person",
+    "familyName": {
+      "en": "Doe"
+    },
+    "givenName": {
+      "en": "John"
+    },
+    "dateOfBirth": "2004-05-12",
+    "hasClaim": [
+      {
+        "type": [
+          "LearningAchievement"
+        ],
+        "awardedBy": {
+          "type": "AwardingProcess",
+          "awardingBody": [
+            {
+              "type": "Organisation",
+              "legalName": {
+                "en": "Example Upper Secondary School"
+              },
+              "eIDASIdentifier": {
+                "type": "LegalIdentifier",
+                "notation": "ESS-456",
+                "spatial": {
+                  "type": "Concept",
+                  "notation": "ES"
+                }
+              }
+            }
+          ]
+        },
+        "wasDerivedFrom": [
+          {
+            "title": {
+              "en": "Mathematics"
+            },
+            "creditPoint": [
+              {
+                "type": "CreditPoint",
+                "point": "5",
+                "framework": {
+                  "type": "Concept",
+                  "notation": "national"
+                }
+              }
+            ],
+            "grade": {
+              "type": "Note",
+              "noteLiteral": {
+                "en": "Excellent"
+              }
+            },
+            "temporal": {
+              "startDate": "2021-09-01",
+              "endDate": "2022-06-15"
+            }
+          },
+          {
+            "title": {
+              "en": "History"
+            },
+            "creditPoint": [
+              {
+                "type": "CreditPoint",
+                "point": "4",
+                "framework": {
+                  "type": "Concept",
+                  "notation": "national"
+                }
+              }
+            ],
+            "grade": {
+              "type": "Note",
+              "noteLiteral": {
+                "en": "Very Good"
+              }
+            },
+            "temporal": {
+              "startDate": "2021-09-01",
+              "endDate": "2022-06-15"
+            }
+          }
+        ],
+        "gradingScheme": {
+          "type": "GradingScheme",
+          "description": {
+            "en": "Grades range from 'Fail' to 'Excellent'. Minimum pass grade is 'Sufficient'."
+          }
+        }
+      }
+    ]
+  },
+  "proof": {
+    "type": "Ed25519Signature2018",
+    "created": "2025-05-30T07:44:25.285851Z",
+    "proofPurpose": "assertionMethod",
+    "verificationMethod": "did:web:secondaryschool.example.edu#key-1",
+    "jws": "eyJhbGciOiJFZERTQSJ9..c2Vjb25kYXJ5LXRyYW5zY3JpcHQtZXhhbXBsZS1zaWduYXR1cmU="
+  }
+}
