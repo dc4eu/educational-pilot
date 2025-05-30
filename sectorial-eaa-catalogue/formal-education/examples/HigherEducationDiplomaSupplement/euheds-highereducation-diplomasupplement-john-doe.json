@@ -1,0 +1,171 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://ec.europa.eu/credentials/v1"
+  ],
+  "id": "urn:uuid:22222222-3333-4444-5555-666666666666",
+  "type": [
+    "VerifiableCredential",
+    "EuropeanDigitalCredential",
+    "EuropeanHigherEducationDiplomaSupplement"
+  ],
+  "issuer": {
+    "id": "did:web:university.example.edu"
+  },
+  "issuanceDate": "2025-05-30T06:47:56.769151Z",
+  "issued": "2025-05-30T06:47:56.769151Z",
+  "validFrom": "2025-05-30T06:47:56.769151Z",
+  "credentialSchema": [
+    {
+      "id": "https://tsr.ebsi.europa.eu/schemas/euheds-highereducation-diplomasupplement.schema.json",
+      "type": "JsonSchema"
+    }
+  ],
+  "credentialSubject": {
+    "id": "did:key:example:john-doe",
+    "type": "Person",
+    "familyName": {
+      "en": "Doe"
+    },
+    "givenName": {
+      "en": "John"
+    },
+    "dateOfBirth": "1990-01-01",
+    "hasClaim": [
+      {
+        "type": [
+          "LearningAchievement"
+        ],
+        "title": {
+          "en": "Bachelor of Science in Computer Engineering"
+        },
+        "awardedBy": {
+          "type": "AwardingProcess",
+          "awardingDate": "2023-07-15T00:00:00Z",
+          "awardingBody": [
+            {
+              "type": "Organisation",
+              "legalName": {
+                "en": "University of Example"
+              },
+              "eIDASIdentifier": {
+                "type": "LegalIdentifier",
+                "notation": "UEX456",
+                "spatial": {
+                  "type": "Concept",
+                  "notation": "ES"
+                }
+              }
+            }
+          ]
+        },
+        "specifiedBy": {
+          "type": "LearningAchievementSpecification",
+          "qualification": {
+            "type": "Qualification",
+            "title": {
+              "en": "EQF Level 6 Bachelor Degree"
+            },
+            "eqfLevel": {
+              "type": "Concept",
+              "notation": "6"
+            }
+          },
+          "educationSubject": [
+            {
+              "type": "Concept",
+              "notation": "0613",
+              "prefLabel": {
+                "en": "Software and Applications Development"
+              }
+            }
+          ],
+          "creditPoint": [
+            {
+              "type": "CreditPoint",
+              "framework": {
+                "type": "Concept",
+                "notation": "ECTS"
+              },
+              "point": "240"
+            }
+          ],
+          "mode": [
+            {
+              "type": "Concept",
+              "notation": "full-time"
+            }
+          ],
+          "additionalNote": [
+            {
+              "type": "Note",
+              "noteLiteral": {
+                "en": "Final project on Blockchain Systems for Education"
+              }
+            }
+          ]
+        },
+        "wasDerivedFrom": [
+          {
+            "title": {
+              "en": "Data Structures"
+            },
+            "creditPoint": [
+              {
+                "type": "CreditPoint",
+                "framework": {
+                  "type": "Concept",
+                  "notation": "ECTS"
+                },
+                "point": "6"
+              }
+            ],
+            "grade": {
+              "type": "Note",
+              "noteLiteral": {
+                "en": "A"
+              }
+            },
+            "temporal": {
+              "startDate": "2021-09-01",
+              "endDate": "2021-12-20"
+            }
+          },
+          {
+            "title": {
+              "en": "Distributed Systems"
+            },
+            "creditPoint": [
+              {
+                "type": "CreditPoint",
+                "framework": {
+                  "type": "Concept",
+                  "notation": "ECTS"
+                },
+                "point": "6"
+              }
+            ],
+            "grade": {
+              "type": "Note",
+              "noteLiteral": {
+                "en": "B+"
+              }
+            },
+            "temporal": {
+              "startDate": "2022-01-10",
+              "endDate": "2022-05-20"
+            }
+          }
+        ],
+        "entitlesTo": [
+          {
+            "type": "LearningEntitlement",
+            "title": {
+              "en": "Access to Master's level programmes"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

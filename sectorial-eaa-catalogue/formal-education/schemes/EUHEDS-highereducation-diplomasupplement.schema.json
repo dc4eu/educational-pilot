@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://tsr.ebsi.europa.eu/schemas/euheds-highereducation-diplomasupplement.schema.json",
+  "title": "European Higher Education Diploma Supplement",
+  "description": "Profile schema extending the base EDC-W3C-VC to define diploma supplement credentials in higher education.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/0x411a2c5880fe8bd97229546044f55b65846d272594511815cd5b89f000dc3da7"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "const": [
+            "VerifiableCredential",
+            "EuropeanDigitalCredential",
+            "EuropeanHigherEducationDiplomaSupplement"
+          ]
+        },
+        "credentialSubject": {
+          "type": "object",
+          "required": [
+            "id",
+            "type",
+            "dateOfBirth",
+            "familyName",
+            "givenName",
+            "hasClaim"
+          ],
+          "properties": {
+            "hasClaim": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "object",
+                "required": [
+                  "type",
+                  "title",
+                  "awardedBy",
+                  "specifiedBy"
+                ],
+                "properties": {
+                  "type": {
+                    "type": "array",
+                    "contains": {
+                      "const": "LearningAchievement"
+                    }
+                  },
+                  "title": {
+                    "type": "object"
+                  },
+                  "awardedBy": {
+                    "type": "object",
+                    "required": [
+                      "awardingBody",
+                      "awardingDate"
+                    ]
+                  },
+                  "specifiedBy": {
+                    "type": "object",
+                    "required": [
+                      "qualification",
+                      "educationSubject",
+                      "creditPoint",
+                      "mode"
+                    ],
+                    "properties": {
+                      "qualification": {
+                        "type": "object",
+                        "required": [
+                          "eqfLevel"
+                        ]
+                      },
+                      "educationSubject": {
+                        "type": "array",
+                        "minItems": 1
+                      },
+                      "creditPoint": {
+                        "type": "array",
+                        "minItems": 1
+                      },
+                      "mode": {
+                        "type": "array",
+                        "minItems": 1
+                      },
+                      "additionalNote": {
+                        "type": "array"
+                      }
+                    }
+                  },
+                  "entitlesTo": {
+                    "type": "array",
+                    "items": {
+                      "type": "object"
+                    }
+                  },
+                  "wasDerivedFrom": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "title": {
+                          "type": "object"
+                        },
+                        "creditPoint": {
+                          "type": "array"
+                        },
+                        "grade": {
+                          "type": "object"
+                        },
+                        "temporal": {
+                          "type": "object"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}
