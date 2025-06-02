@@ -12,13 +12,13 @@ The DTSRL is a structured collection of **validated deployment scenarios** that 
 
 - **Operational Unit**: Each scenario serves as the complete implementation framework for piloting agents
 - **Cross-Border Focus**: Scenarios designed for interoperability across EU Member States
-- **Multi-Pilot Architecture**: Supports both Pilot 1 (Classical PKI + SD-JWT) and Pilot 2 (Combined PKI + W3C VC)
+- **Multi-Pilot Architecture**: Supports both Pilot 1 (Classical PKI + SD-JWT-VC) and Pilot 2 (Combined Classical PKI + Decentralised PKI - dPKI using EBSI + W3C VC + W3C-VCDM )
 - **Compliance Framework**: Aligned with eIDAS 2.0 regulation and EBSI standards
 - **Real-World Validation**: Based on actual implementations by participating institutions
 
 ## Core Components
 
-### 🎯 **Scenario Definitions**
+### **Scenario Definitions**
 Complete structured definitions provided by piloting agents, including:
 - Target user journeys (students, professionals, administrative staff)
 - Electronic Attestations of Attributes (EAAs) specifications
@@ -26,14 +26,14 @@ Complete structured definitions provided by piloting agents, including:
 - Governance setup (DIDs, authorisations, trust registrations)
 - Monitoring and KPI frameworks
 
-### 👥 **User Journey Documentation**
+### **User Journey Documentation**
 Detailed step-by-step processes covering:
 - **DC4EU-001**: Person Identification Data (PID) retrieval
 - **DC4EU-002**: Verifiable Educational/Professional ID issuance
 - **DC4EU-003**: Education/Professional achievement credentials
 - **DC4EU-004**: Cross-border EAA verification
 
-### 🔧 **Technical Implementation Guides**
+### **Technical Implementation Guides**
 Architecture-specific toolkits and components:
 
 #### Pilot 1 (Classical PKI + SD-JWT)
@@ -46,7 +46,7 @@ Architecture-specific toolkits and components:
 - W3C Verifiable Credentials standard
 - Combined classical and decentralised trust models
 
-### 🌐 **Cross-Border Verification Services**
+### **Cross-Border Verification Services**
 Public DNS endpoints for credential verification across participating countries:
 - **20+ institutions** across Europe
 - **Real-time verification endpoints**
