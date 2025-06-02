@@ -1,4 +1,4 @@
-# A Comprehensive Guide to Binding X.509v3 Certificates with Decentralised Identifiers anchored in EBSI for issuing Electronic Attestations of Attributes <!-- omit in toc -->
+# A Comprehensive Guide to Binding X.509v3 Certificates with Decentralised Identifiers anchored in EBSI for issuance of Electronic Attestations of Attributes <!-- omit in toc -->
 
 **Date**: 28 May 2025
 **Version**: 1.3
