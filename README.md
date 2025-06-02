@@ -34,7 +34,7 @@ This repository is organised into several key sections:
 
 ## DTSRL - Deployment and Testing Scenarios Results Library
 
-The **[DTSRL](./DTSRL/)** serves as the central knowledge base for implementing digital credentials in practice. It contains:
+The **[DTSRL](./DSTRL/README.md)** serves as the central knowledge base for implementing digital credentials in practice. It contains:
 
 ### Core DTSRL Components
 
