@@ -38,13 +38,13 @@ The **[DTSRL](./DSTRL/README.md)** serves as the central knowledge base for impl
 
 ### Core DTSRL Components
 
-- **[User journeys](./DTSRL/user-journeys/)**: Provided user journeys to demonstrate cross-border interaction, ready-to-go infrastructure, and foundation to extend/provide more user journeys and/or EAAs.
+- **[User journeys](./DSTRL/user-journeys/README.md)**: Provided user journeys to demonstrate cross-border interaction, ready-to-go infrastructure, and foundation to extend/provide more user journeys and/or EAAs.
   
-- **[Scenarios](./DTSRL/scenarios/)**: Complete scenario definitions that detail the elements each piloting agent must provide to characterise, execute, and monitor user journeys in alignment with governance, technical, and reporting requirements.
+- **[Scenarios](./DSTRL/scenarios/README.md)**: Complete scenario definitions that detail the elements each piloting agent must provide to characterise, execute, and monitor user journeys in alignment with governance, technical, and reporting requirements.
 
-- **[Piloting](./DTSRL/piloting/)**: Operational framework for piloting agents including progress tracking, SPOC coordination, and implementation validation across the DC4EU Large Scale Pilot.
+- **[Piloting](./DSTRL/piloting/README.md)**: Operational framework for piloting agents including progress tracking, SPOC coordination, and implementation validation across the DC4EU Large Scale Pilot.
   
-- **[Toolkits](./DTSRL/toolkits/)**: Implementation resources including technical architecture, component descriptions, workflows (RFCs), and specific use cases to help develop user journeys for both Classical PKI and Decentralised PKI approaches.
+- **[Toolkits](./DSTRL/toolkits/README.md)**: Implementation resources including technical architecture, component descriptions, workflows (RFCs), and specific use cases to help develop user journeys for both Classical PKI and Decentralised PKI approaches.
 
 The DTSRL provides practical, validated implementation patterns based on real deployments across 20+ European institutions, supporting both Pilot 1 (Classical PKI + SD-JWT) and Pilot 2 (Decentralised PKI + W3C VC) approaches.
 
