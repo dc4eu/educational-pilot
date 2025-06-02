@@ -26,17 +26,27 @@ This repository is organised into several key sections:
 
 - **[EAA Characterisation](./sectorial-eaa-catalogue/EAA_Characterisation.md)**: Characterisation of an Electronic Attestation of Attributes (EAA).
 
-- **[User journeys](./user-journeys/)**: Provided user journeys to demonstrate cross-border interaction, ready-to go infrastructure, and foundation to extend/provide more user journeys and/or EAAs.
+- **[Deployment and Testing Scenarios Results Library (DTSRL)](./DTSRL/)**: Comprehensive repository of validated deployment scenarios, user journeys, implementation toolkits, and piloting frameworks for digital credentials implementation across European institutions.
   
-- **[Scenarios](./scenarios/README.md)**: A scenario within DC4EU, details the elements each piloting agent must provide to characterise, execute, and monitor user journeys in alignment with governance, technical, and reporting requirements.
-
-- **[Pilots](./piloting/README.md)**: A scenario within DC4EU, details the elements each piloting agent must provide to characterise, execute, and monitor user journeys in alignment with governance, technical, and reporting requirements.
-  
-- **[Toolkits](./toolkits/README.md)**: Implementation resources including technical architecture, component descriptions, workflows (RFCs), and specific use cases to help develop user journeys.
-
 - **[Elements](./elements)**: Elements produced/provided by DC4EU to facilitate adoption. Includes data model converters, gateways, reports.
 
 - **[Compliance](./compliance/)**: Information about EBSI and EUDI Wallet compliance tests to ensure interoperability with other issuer, verifier, and wallet solutions.
+
+## DTSRL - Deployment and Testing Scenarios Results Library
+
+The **[DTSRL](./DTSRL/)** serves as the central knowledge base for implementing digital credentials in practice. It contains:
+
+### Core DTSRL Components
+
+- **[User journeys](./DTSRL/user-journeys/)**: Provided user journeys to demonstrate cross-border interaction, ready-to-go infrastructure, and foundation to extend/provide more user journeys and/or EAAs.
+  
+- **[Scenarios](./DTSRL/scenarios/)**: Complete scenario definitions that detail the elements each piloting agent must provide to characterise, execute, and monitor user journeys in alignment with governance, technical, and reporting requirements.
+
+- **[Piloting](./DTSRL/piloting/)**: Operational framework for piloting agents including progress tracking, SPOC coordination, and implementation validation across the DC4EU Large Scale Pilot.
+  
+- **[Toolkits](./DTSRL/toolkits/)**: Implementation resources including technical architecture, component descriptions, workflows (RFCs), and specific use cases to help develop user journeys for both Classical PKI and Decentralised PKI approaches.
+
+The DTSRL provides practical, validated implementation patterns based on real deployments across 20+ European institutions, supporting both Pilot 1 (Classical PKI + SD-JWT) and Pilot 2 (Decentralised PKI + W3C VC) approaches.
 
 ## Key Features
 
@@ -62,11 +72,24 @@ For new users, we recommend starting with:
 3. Learn about the [eIDAS scenarios](./eidas-scenarios/) to understand the trust models
 4. Explore the [Authorisation Model](./eaa-based-authorisation-model/) to understand how trust chains work
 5. Identify your [Role(s)](./docs/eIDAS-roles.md) within the ecosystem
-6. Explore the [Toolkits](./toolkits/README.md) section for implementation guidance
-7. Explore the [Elements](./elements) section to identify provided solutions to faciliate adoption with existing services.
-8. Understand the [User journeys](./user-journeys/) provided
-9. Characterise your [Piloting scenario](./scenarios/README.md)
-10. Check the [Compliance](./compliance/) requirements for interoperability information
+6. **Explore the [DTSRL](./DTSRL/) for practical implementation guidance:**
+   - Review [User journeys](./DTSRL/user-journeys/) to understand standard processes
+   - Study [Scenarios](./DTSRL/scenarios/) from existing piloting agents
+   - Access [Toolkits](./DTSRL/toolkits/) for technical implementation resources
+   - Understand the [Piloting](./DTSRL/piloting/) framework for participation
+7. Explore the [Elements](./elements) section to identify provided solutions to faciliate adoption with existing services
+8. Check the [Compliance](./compliance/) requirements for interoperability information
+
+## Implementation Pathways
+
+### For Educational Institutions
+Start with the **[DTSRL](./DTSRL/)** to access proven implementation patterns from peer institutions across Europe. The library provides step-by-step guidance for both technical implementation and governance compliance.
+
+### For Technology Providers
+Review the **[Toolkits](./DTSRL/toolkits/)** section for technical specifications, API documentation, and integration guidance supporting both Classical PKI and Decentralised PKI approaches.
+
+### For Policy Makers and Governance Bodies
+Explore the **[Governance](./governances)** section and **[Sectorial Rulebook](./sectorial-rulebook/)** to understand the regulatory framework and authorisation models.
 
 ## Projects Using This Framework
 
@@ -79,4 +102,4 @@ Copyright © 2025 DC4EU under EUPL-2.0 License
 
 The content of this repository, except in those sections where explicitly announced otherwise, belongs to DC4EU under EUPL-2.0 licence.
 
-For complete license details, see [License Information](./docs/license.md).
+For complete license details, see [License Information](./docs/license.md)
