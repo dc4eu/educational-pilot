@@ -85,7 +85,7 @@ The Doctor ID Schema defines the data structure for representing identity creden
           "description": "Corresponds to the regional professional body of physicians where the professional is registered.",
           "type": "array",
              "items": {
-               "type": "string",
+               "type": "string"
              }
         },
         "personal_administrative_number": {

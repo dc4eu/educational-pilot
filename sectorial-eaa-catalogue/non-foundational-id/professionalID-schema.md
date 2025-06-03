@@ -93,6 +93,13 @@ The Professional ID Schema defines the data structure for representing identity 
           "description": "Attribute identifying whether a professional is legally entitled to practice or not.",
           "type": "boolean"
         },
+        "professional_board": {
+          "description": "Corresponds to the regional professional body where the professional is registered.",
+          "type": "array",
+             "items": {
+               "type": "string"
+             }
+        },
         "professional_speciality": {
           "description": "Specific area of knowledge within a profession that allows the professional to carry out specific tasks in accordance with that speciality.",
           "type": "array",
