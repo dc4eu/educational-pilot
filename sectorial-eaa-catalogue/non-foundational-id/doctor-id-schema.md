@@ -56,7 +56,6 @@ The Doctor ID Schema defines the data structure for representing identity creden
         },
         "issuing_country": {
           "type": "string",
-          "format": "string",
           "description": "Country of the issuing institution"
     },
       },
