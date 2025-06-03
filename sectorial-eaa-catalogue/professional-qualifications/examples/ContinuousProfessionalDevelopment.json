@@ -7,7 +7,7 @@
   "type": ["VerifiableCredential", "ContinuousProfessionalDevelopmentCredential"],
   "issuer": {
     "id": "did:ebsi:PBfCB1g1RJuydQqmLFp4Sv1oWkUVO6mLZCM0ZTWWGLzPBfCB1g1RJuydQ",
-    "name": {
+    "legalName": {
       "en": "National Professional Body of Technical Engineers of Spain",
       "es": "Consejo General de la Ingeniería Técnica Industrial de España"
     }

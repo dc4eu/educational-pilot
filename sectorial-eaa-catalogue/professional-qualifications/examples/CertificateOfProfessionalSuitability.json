@@ -7,7 +7,7 @@
   "type": ["VerifiableCredential", "ProfessionalSuitabilityCredential"],
   "issuer": {
     "id": "246813579",
-    "name": {
+    "legalName": {
       "en": "National Professional Body of Physicians",
       "es": "Consejo General de Colegios Oficiales de Médicos"
     }

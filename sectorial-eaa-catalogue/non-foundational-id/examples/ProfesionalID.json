@@ -7,7 +7,7 @@
   "type": ["VerifiableCredential", "ProfessionalIdCredential"],
   "issuer": {
     "id": "987654321",
-    "name": {
+    "legalName": {
       "en": "National Professional Body of Industrial Technical Engineers",
       "es": "Consejo General de la Ingeniería Técnica Industrial"
     },

@@ -47,7 +47,7 @@ The Professional ID Schema defines the data structure for representing identity 
           "format": "uri",
           "description": "Unique identifier of the issuing institution"
         },
-        "name": {
+        "legalName": {
           "type": "object",
           "description": "Multilingual name of the issuing institution",
           "additionalProperties": {
