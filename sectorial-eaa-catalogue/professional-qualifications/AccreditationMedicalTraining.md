@@ -53,9 +53,13 @@ JSON Schema.... (TBC)
           "additionalProperties": {
             "type": "string"
           }
+        },
+        "issuing_country": {
+          "type": "string",
+          "description": "Country of the issuing institution"
         }
       },
-      "required": ["id", "name"]
+      "required": ["id", "legalName", "issuing_country"]
     },
     "issuanceDate": {
       "type": "string",

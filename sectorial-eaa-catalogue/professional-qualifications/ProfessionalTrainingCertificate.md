@@ -67,6 +67,10 @@ The training certificate schema defines the data structure for representing trai
               "type": "string"
             }
           },
+          "issuing_country": {
+            "type": "string",
+            "description": "Country of the issuing institution"
+          },
           "accreditation": {
             "type": "array",
             "description": "Accreditation information",
@@ -96,7 +100,7 @@ The training certificate schema defines the data structure for representing trai
             }
           }
         },
-        "required": ["id", "name"]
+        "required": ["id", "legalName"]
       },
       "issuanceDate": {
         "type": "string",

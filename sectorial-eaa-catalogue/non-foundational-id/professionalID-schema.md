@@ -57,8 +57,9 @@ The Professional ID Schema defines the data structure for representing identity 
         "issuing_country": {
           "type": "string",
           "description": "Country of the issuing institution"
-      },
-      "required": ["id", "name"]
+        },
+        "required": ["id", "legalName", "issuing_country"]
+      }
     },
     "issuanceDate": {
       "type": "string",
