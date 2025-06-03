@@ -47,15 +47,19 @@ JSON Schema for a Certificate of Professional Suitability that validates whether
           "format": "uri",
           "description": "Unique identifier of the issuing institution"
         },
-        "name": {
+        "legalName": {
           "type": "object",
           "description": "Multilingual name of the issuing institution",
           "additionalProperties": {
             "type": "string"
           }
+        },
+        "issuing_country": {
+          "type": "string",
+          "description": "Country of the issuing institution"
         }
       },
-      "required": ["id", "name"]
+      "required": ["id", "legalName", "issuing_country"]
     },
     "issuanceDate": {
       "type": "string",
@@ -94,63 +98,9 @@ JSON Schema for a Certificate of Professional Suitability that validates whether
             "properties": {
               "medical_board": {
                 "description": "Corresponds to the regional professional body of physicians where the professional is registered.",
-                "type": "object",
+                "type": "array",
                 "items": {
-                  "type": "string",
-                  "enum": [
-                    "Álava/Áraba",
-                    "Albacete",
-                    "Alicante",
-                    "Almería",
-                    "Ávila",
-                    "Badajoz",
-                    "Islas Baleares/Illes Balears",
-                    "Barcelona",
-                    "Burgos",
-                    "Cáceres",
-                    "Cádiz",
-                    "Castellón",
-                    "Ciudad Real",
-                    "Córdoba",
-                    "La Coruña/A Coruña",
-                    "Cuenca",
-                    "Gerona/Girona",
-                    "Granada",
-                    "Guadalajara",
-                    "Guipúzcoa/Gipuzkoa",
-                    "Huelva",
-                    "Huesca",
-                    "Jaén",
-                    "León",
-                    "Lérida/Lleida",
-                    "La Rioja",
-                    "Lugo",
-                    "Madrid",
-                    "Málaga",
-                    "Murcia",
-                    "Navarra",
-                    "Orense/Ourense",
-                    "Asturias",
-                    "Palencia",
-                    "Las Palmas",
-                    "Pontevedra",
-                    "Salamanca",
-                    "Santa Cruz de Tenerife",
-                    "Cantabria",
-                    "Segovia",
-                    "Sevilla",
-                    "Soria",
-                    "Tarragona",
-                    "Teruel",
-                    "Toledo",
-                    "Valencia",
-                    "Valladolid",
-                    "Vizcaya/Bizkaia",
-                    "Zamora",
-                    "Zaragoza",
-                    "Ceuta",
-                    "Melilla"
-                  ]
+                  "type": "string"
                 }
               },
               "personal_administrative_number": {
@@ -210,9 +160,7 @@ JSON Schema for a Certificate of Professional Suitability that validates whether
 
 ## Example Credential
 
-```json
-
-```
+[Certificate of Professional Suitability example](./examples/CertificateOfProfessionalSuitability.json)
 
 ## Schema Versioning
 

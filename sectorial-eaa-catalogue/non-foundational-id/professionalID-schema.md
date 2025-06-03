@@ -47,15 +47,19 @@ The Professional ID Schema defines the data structure for representing identity 
           "format": "uri",
           "description": "Unique identifier of the issuing institution"
         },
-        "name": {
+        "legalName": {
           "type": "object",
           "description": "Multilingual name of the issuing institution",
           "additionalProperties": {
             "type": "string"
           }
-        }
-      },
-      "required": ["id", "name"]
+        },
+        "issuing_country": {
+          "type": "string",
+          "description": "Country of the issuing institution"
+        },
+        "required": ["id", "legalName", "issuing_country"]
+      }
     },
     "issuanceDate": {
       "type": "string",
@@ -88,6 +92,13 @@ The Professional ID Schema defines the data structure for representing identity 
         "legally_entitled": {
           "description": "Attribute identifying whether a professional is legally entitled to practice or not.",
           "type": "boolean"
+        },
+        "professional_board": {
+          "description": "Corresponds to the regional professional body where the professional is registered.",
+          "type": "array",
+             "items": {
+               "type": "string"
+             }
         },
         "professional_speciality": {
           "description": "Specific area of knowledge within a profession that allows the professional to carry out specific tasks in accordance with that speciality.",
@@ -135,40 +146,7 @@ The Professional ID Schema defines the data structure for representing identity 
 
 ## Example Credential
 
-```json
-{
-  "@context": [
-    "https://www.w3.org/2018/credentials/v1",
-    "https://eaa-rulebook.europa.eu/2023/credentials/professional-id/v01"
-  ],
-  "id": "https://university-example.eu/credentials/professional-id/1357",
-  "type": ["VerifiableCredential", "ProfessionalIdCredential"],
-  "issuer": {
-    "id": "did:ebsi:qmLFp4Sv1oWkUVO6mLZCM0ZTWWGLzPBfCB1g1RJuydQ",
-    "name": {
-      "en": "National Professional Body of Industrial Technical Engineers",
-      "es": "Consejo General de la Ingeniería Técnica Industrial"
-    }
-  },
-  "issuanceDate": "2024-09-01",
-  "expirationDate": "2027-08-31",
-  "credentialSubject": {
-    "id": "did:ebsi:GBzdPhl1BzBB9p3QkKmR0Yrxkv3IxHhAOYo1jV9eTHw",
-    "givenName": "Name",
-    "familyName": "Surname/s",
-    "personal_administrative_number": "FGHIJ1234",
-    "legally_entitled": "false",
-    "professional_speciality": "mechanical"
-  },
-  "proof": {
-    "type": "EcdsaSecp256k1Signature2019",
-    "created": "2024-09-01T08:15:27Z",
-    "proofPurpose": "assertionMethod",
-    "verificationMethod": "did:ebsi:qmLFp4Sv1oWkUVO6mLZCM0ZTWWGLzPBfCB1g1RJuydQ#keys-1",
-    "proofValue": "prrofValueHash"
-  }
-}
-```
+[Professional ID example](./examples/ProfesionalID.json)
 
 ## Schema Versioning
 

@@ -1,0 +1,107 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://eaa-rulebook.europa.eu/2023/credentials/trainingCert/v01"
+  ],
+  "id": "https://professional-example.eu/credentials/trainingCert/1234",
+  "type": ["VerifiableCredential", "ContinuousMedicalTrainingAccreditation"],
+  "issuer": {
+    "id": "122333444",
+    "legalName": {
+      "en": "Foundation for Research, Teaching, Training, and Professional Competence of Registered Physicians in Spain",
+      "es": "Fundación para la Formación de la Organización Médica Colegial de España"
+    }
+  },
+  "issuanceDate": "2024-12-01",
+  "expirationDate": "2026-12-01",
+  "credentialSubject": {
+    "id": "123456789",
+    "authorizationClaims": {
+      "accreditationType": "Buen Quehacer del Médico (BQM)",
+      "report": {
+        "eqfLevel": 8
+      },
+      "accreditingAgent": [
+        {
+        "id": "https://professional-example.eu/credentials/trainingCert/UEMS-EACCME",
+        "name": "Consejo Europeo de Acreditación de la Formación Médica Continuada de la Unión Europea de Médicos Especialistas (UEMS)"
+        },
+        {
+        "id": "https://professional-example.eu/credentials/trainingCert/FFOMC",
+        "name": "Fundación para la Formación de la Organización Médica Colegial de España"
+        }
+      ],
+      "limitQualification": {
+        "id":"28461379",
+        "title": "Buen Quehacer del Médico (BQM) - Relación médico-paciente",
+        "alternativeLabel": "BQM - Relación médico-paciente",
+        "trainingDuration": {
+            "startDate": "2024-11-24",
+            "endDate": "2024-11-27"
+        },
+        "volumeOfLearning": "PT10H",
+        "mode": [ 
+          {
+            "id": "http://data.europa.eu/snb/learning-assessment/9191af2ed9",
+            "type": "Concept",
+            "inScheme": {
+              "id": "http://data.europa.eu/snb/learning-assessment/25831c2",
+              "type": "ConceptScheme"
+            },
+            "prefLabel": {
+              "en": "Presential",
+              "es": "Presencial"
+            }
+          }
+        ],
+        "creditPoint": [ 
+          {
+            "id": "urn:epass:creditPoint:1",
+            "type": "CreditPoint",
+            "framework": {
+              "id": "http://data.europa.eu/snb/education-credit/60b314e826",
+              "type": "Concept",
+              "inScheme": {
+                "id": "http://data.europa.eu/snb/education-credit/25831c2",
+                "type": "ConceptScheme"
+              },
+              "prefLabel": {
+                "en": "Spanish National Health System Continuing Education Credits",
+                "es": "Crédicos Españoles de Formación Continuada del Sistema Nacional de Salud"
+              }
+            },
+            "point" : "1,5"
+          },
+          {
+            "id": "urn:epass:creditPoint:2",
+            "type": "CreditPoint",
+            "framework": {
+              "id": "http://data.europa.eu/snb/education-credit/e82660b314",
+              "type": "Concept",
+              "inScheme": {
+                "id": "http://data.europa.eu/snb/education-credit/31c2258",
+                "type": "ConceptScheme"
+              },
+              "prefLabel": {
+                "en": "Spanish Medical Professional Body of Accreditation for CPD/FMC. / European Accreditation Council for Continuing Medical Education de la Union Européenne de Médecins Spécialistes (UEMS).",
+                "es": "Consejo Profesional Médico Español de Acreditación para el DPC/FMC. / Consejo Europeo de Acreditación de la Formación Médica Continuada de la Unión Europea de Médicos Especialistas (UEMS)."
+              }
+            },
+            "point": "10"
+          }
+        ],
+        "limitJurisdiction": "https://publications.europa.eu/resource/authority/atu/EUR",
+        "reviewDate": "2024-12-01T14:11:44Z"
+      },
+      "sponsor": "Sponsor of training activity, if any",
+      "partner": "Partner of training activity, if any"
+    }
+  },
+  "proof": {
+    "type": "EcdsaSecp256k1Signature2019",
+    "created": "2024-12-01T10:25:43Z",
+    "proofPurpose": "assertionMethod",
+    "verificationMethod": "did:ebsi:JhGXUhL3xWtL5Fst3EVb2A9PZGnuqJBWNrpCTNQkBNHPhNHSq#keys-1",
+    "proofValue": "ZaGPRyMuPW2X5yCWuLiQTjB3RPJWAyxgQLbDpzeXPuVfJfHAiz58DAdFfa9SkqZMVPxAQpic7ndSayn6RrxWE2mSmFU"
+  }
+}

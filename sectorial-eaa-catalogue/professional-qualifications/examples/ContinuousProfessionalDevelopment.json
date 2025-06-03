@@ -1,32 +1,32 @@
 {
-    "@context": [
-      "https://www.w3.org/2018/credentials/v1",
-      "https://eaa-rulebook.europa.eu/2023/credentials/cpd/v01"
-    ],
-    "id": "https://university-example.eu/credentials/cpd/2468",
-    "type": ["VerifiableCredential", "ContinuousProfessionalDevelopmentCredential"],
-    "issuer": {
-      "id": "did:ebsi:PBfCB1g1RJuydQqmLFp4Sv1oWkUVO6mLZCM0ZTWWGLzPBfCB1g1RJuydQ",
-      "name": {
-        "en": "National Professional Body of Technical Engineers of Spain",
-        "es": "Consejo General de la Ingeniería Técnica Industrial de España"
-      }
-    },
-    "issuanceDate": "2024-09-01",
-    "expirationDate": "2027-08-31",
-    "credentialSubject": {
-      "id": "123456789",
-      "givenName": "John",
-      "familyName": "Doe",
-      "personal_administrative_number": "FGHIJ1234",
-      "legally_entitled": "true",
-      "professional_speciality": "mechanical"
-    },
-    "proof": {
-      "type": "EcdsaSecp256k1Signature2019",
-      "created": "2024-09-01T08:15:27Z",
-      "proofPurpose": "assertionMethod",
-      "verificationMethod": "did:ebsi:PBfCB1g1RJuydQqmLFp4Sv1oWkUVO6mLZCM0ZTWWGLzPBfCB1g1RJuydQ#keys-1",
-      "proofValue": "prrofValueHash"
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://eaa-rulebook.europa.eu/2023/credentials/cpd/v01"
+  ],
+  "id": "https://professional-example.eu/credentials/cpd/2468",
+  "type": ["VerifiableCredential", "ContinuousProfessionalDevelopmentCredential"],
+  "issuer": {
+    "id": "did:ebsi:PBfCB1g1RJuydQqmLFp4Sv1oWkUVO6mLZCM0ZTWWGLzPBfCB1g1RJuydQ",
+    "legalName": {
+      "en": "National Professional Body of Technical Engineers of Spain",
+      "es": "Consejo General de la Ingeniería Técnica Industrial de España"
     }
+  },
+  "issuanceDate": "2024-09-01",
+  "expirationDate": "2027-08-31",
+  "credentialSubject": {
+    "id": "123456789",
+    "givenName": "John",
+    "familyName": "Doe",
+    "document_number": "123456789",
+    "legally_entitled": true,
+    "professional_level": "Expert"
+  },
+  "proof": {
+    "type": "EcdsaSecp256k1Signature2019",
+    "created": "2024-09-01T08:15:27Z",
+    "proofPurpose": "assertionMethod",
+    "verificationMethod": "did:ebsi:PBfCB1g1RJuydQqmLFp4Sv1oWkUVO6mLZCM0ZTWWGLzPBfCB1g1RJuydQ#keys-1",
+    "proofValue": "prrofValueHash"
   }
+}

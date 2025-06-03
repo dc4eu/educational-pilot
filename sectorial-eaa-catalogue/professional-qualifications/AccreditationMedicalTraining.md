@@ -1,3 +1,11 @@
+# Accreditation Medical Training Schema
+
+## Overview
+
+JSON Schema.... (TBC)
+
+## Schema Structure
+
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -39,15 +47,19 @@
           "format": "uri",
           "description": "Unique identifier of the issuing institution"
         },
-        "name": {
+        "legalName": {
           "type": "object",
           "description": "Multilingual name of the issuing institution",
           "additionalProperties": {
             "type": "string"
           }
+        },
+        "issuing_country": {
+          "type": "string",
+          "description": "Country of the issuing institution"
         }
       },
-      "required": ["id", "name"]
+      "required": ["id", "legalName", "issuing_country"]
     },
     "issuanceDate": {
       "type": "string",
@@ -275,3 +287,30 @@
   }
 }
 ```
+
+## Example credential
+
+[Accreditation Medical Training - SEAFORMEC/UEMS example](./examples/AccreditationMedicalTraining_SEAFORMEC.json)
+
+## Schema Versioning
+
+- **Version**: 0.0.1
+- **Last Updated**: 2025-05-02
+- **Status**: Draft
+
+## Implementation Considerations
+
+When implementing this schema:
+
+- Ensure all required fields are provided
+- Support multilingual representation of key information
+- Implement appropriate privacy protections for personal information
+- Include only necessary personal data
+- Use standardised classification systems for medical specialities
+- Consider selective disclosure requirements for sensitive attributes
+
+## Extensions
+
+The schema can be extended to support:
+
+- Additional institution-specific requirements

@@ -47,15 +47,19 @@ The Doctor ID Schema defines the data structure for representing identity creden
           "format": "uri",
           "description": "Unique identifier of the issuing institution"
         },
-        "name": {
+        "legalName": {
           "type": "object",
           "description": "Multilingual name of the issuing institution",
           "additionalProperties": {
             "type": "string"
           }
+        },
+        "issuing_country": {
+          "type": "string",
+          "description": "Country of the issuing institution"
         }
       },
-      "required": ["id", "name"]
+      "required": ["id", "legalName", "issuing_country"]
     },
     "issuanceDate": {
       "type": "string",
@@ -81,61 +85,7 @@ The Doctor ID Schema defines the data structure for representing identity creden
           "description": "Corresponds to the regional professional body of physicians where the professional is registered.",
           "type": "array",
              "items": {
-               "type": "string",
-               "enum": [
-                  "Álava/Áraba",
-                  "Albacete",
-                  "Alicante",
-                  "Almería",
-                  "Ávila",
-                  "Badajoz",
-                  "Islas Baleares/Illes Balears",
-                  "Barcelona",
-                  "Burgos",
-                  "Cáceres",
-                  "Cádiz",
-                  "Castellón",
-                  "Ciudad Real",
-                  "Córdoba",
-                  "La Coruña/A Coruña",
-                  "Cuenca",
-                  "Gerona/Girona",
-                  "Granada",
-                  "Guadalajara",
-                  "Guipúzcoa/Gipuzkoa",
-                  "Huelva",
-                  "Huesca",
-                  "Jaén",
-                  "León",
-                  "Lérida/Lleida",
-                  "La Rioja",
-                  "Lugo",
-                  "Madrid",
-                  "Málaga",
-                  "Murcia",
-                  "Navarra",
-                  "Orense/Ourense",
-                  "Asturias",
-                  "Palencia",
-                  "Las Palmas",
-                  "Pontevedra",
-                  "Salamanca",
-                  "Santa Cruz de Tenerife",
-                  "Cantabria",
-                  "Segovia",
-                  "Sevilla",
-                  "Soria",
-                  "Tarragona",
-                  "Teruel",
-                  "Toledo",
-                  "Valencia",
-                  "Valladolid",
-                  "Vizcaya/Bizkaia",
-                  "Zamora",
-                  "Zaragoza",
-                  "Ceuta",
-                  "Melilla"
-               ]
+               "type": "string"
              }
         },
         "personal_administrative_number": {
@@ -246,41 +196,7 @@ The Doctor ID Schema defines the data structure for representing identity creden
 
 ## Example Credential
 
-```json
-{
-  "@context": [
-    "https://www.w3.org/2018/credentials/v1",
-    "https://eaa-rulebook.europa.eu/2023/credentials/doctor-id/v01"
-  ],
-  "id": "https://university-example.eu/credentials/doctor-id/1234",
-  "type": ["VerifiableCredential", "DoctorIdCredential"],
-  "issuer": {
-    "id": "did:ebsi:ZCM0ZTWWGLzPBfCB1g1RJuqmLFp4Sv1oWkUVO6mLydQ",
-    "name": {
-      "en": "National Professional Body of Physicians",
-      "es": "Consejo General de Médicos"
-    }
-  },
-  "issuanceDate": "2024-09-01",
-  "expirationDate": "2027-08-31",
-  "credentialSubject": {
-    "id": "did:ebsi:BB9p3QkKmR0Yrxkv3IGBzdPhl_BzxHhAOYo_jV9eTHw",
-    "given_name": "Name",
-    "family_name": "Surname/s",
-    "dateOfBirth": "1992-03-25",
-    "personal_administrative_number": "ABCD12345",
-    "medical_registration_status": "ACTIVE",
-    "medical_speciality": [ {"type": "Cardiology"}, {"type": "Cardiovascular Surgery" } ]
-  },
-  "proof": {
-    "type": "EcdsaSecp256k1Signature2019",
-    "created": "2024-09-01T08:15:27Z",
-    "proofPurpose": "assertionMethod",
-    "verificationMethod": "did:ebsi:ZCM0ZTWWGLzPBfCB1g1RJuqmLFp4Sv1oWkUVO6mLydQ#keys-1",
-    "proofValue": "prrofValueHash"
-  }
-}
-```
+[Doctor ID example](./examples/DoctorID.json)
 
 ## Schema Versioning
 
