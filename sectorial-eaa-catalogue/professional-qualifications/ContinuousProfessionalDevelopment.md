@@ -129,40 +129,7 @@ The Continuous Professional Development Schema defines the data structure to rep
 
 ## Example Credential
 
-```json
-{
-  "@context": [
-    "https://www.w3.org/2018/credentials/v1",
-    "https://eaa-rulebook.europa.eu/2023/credentials/cpd/v01"
-  ],
-  "id": "https://university-example.eu/credentials/cpd/2468",
-  "type": ["VerifiableCredential", "ContinuousProfessionalDevelopmentCredential"],
-  "issuer": {
-    "id": "did:ebsi:PBfCB1g1RJuydQqmLFp4Sv1oWkUVO6mLZCM0ZTWWGLzPBfCB1g1RJuydQ",
-    "name": {
-      "en": "National Professional Body of Technical Engineers of Spain",
-      "es": "Consejo General de la Ingeniería Técnica Industrial de España"
-    }
-  },
-  "issuanceDate": "2024-09-01",
-  "expirationDate": "2027-08-31",
-  "credentialSubject": {
-    "id": "did:ebsi:GBzdPhl1BzBB9p3QkKmR0Yrxkv3IxHhAOYo1jV9eTHw",
-    "givenName": "Name",
-    "familyName": "Surname/s",
-    "personal_administrative_number": "FGHIJ1234",
-    "legally_entitled": "true",
-    "professional_speciality": "mechanical"
-  },
-  "proof": {
-    "type": "EcdsaSecp256k1Signature2019",
-    "created": "2024-09-01T08:15:27Z",
-    "proofPurpose": "assertionMethod",
-    "verificationMethod": "did:ebsi:PBfCB1g1RJuydQqmLFp4Sv1oWkUVO6mLZCM0ZTWWGLzPBfCB1g1RJuydQ#keys-1",
-    "proofValue": "prrofValueHash"
-  }
-}
-```
+[Continuous Professional Development example](./examples/ContinuousProfessionalDevelopment.json)
 
 ## Schema Versioning
 

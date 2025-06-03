@@ -210,9 +210,7 @@ JSON Schema for a Certificate of Professional Suitability that validates whether
 
 ## Example Credential
 
-```json
-
-```
+[Certificate of Professional Suitability example](./examples/CertificateOfProfessionalSuitability.json)
 
 ## Schema Versioning
 

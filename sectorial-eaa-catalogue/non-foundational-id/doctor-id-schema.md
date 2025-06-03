@@ -246,41 +246,7 @@ The Doctor ID Schema defines the data structure for representing identity creden
 
 ## Example Credential
 
-```json
-{
-  "@context": [
-    "https://www.w3.org/2018/credentials/v1",
-    "https://eaa-rulebook.europa.eu/2023/credentials/doctor-id/v01"
-  ],
-  "id": "https://university-example.eu/credentials/doctor-id/1234",
-  "type": ["VerifiableCredential", "DoctorIdCredential"],
-  "issuer": {
-    "id": "did:ebsi:ZCM0ZTWWGLzPBfCB1g1RJuqmLFp4Sv1oWkUVO6mLydQ",
-    "name": {
-      "en": "National Professional Body of Physicians",
-      "es": "Consejo General de Médicos"
-    }
-  },
-  "issuanceDate": "2024-09-01",
-  "expirationDate": "2027-08-31",
-  "credentialSubject": {
-    "id": "did:ebsi:BB9p3QkKmR0Yrxkv3IGBzdPhl_BzxHhAOYo_jV9eTHw",
-    "given_name": "Name",
-    "family_name": "Surname/s",
-    "dateOfBirth": "1992-03-25",
-    "personal_administrative_number": "ABCD12345",
-    "medical_registration_status": "ACTIVE",
-    "medical_speciality": [ {"type": "Cardiology"}, {"type": "Cardiovascular Surgery" } ]
-  },
-  "proof": {
-    "type": "EcdsaSecp256k1Signature2019",
-    "created": "2024-09-01T08:15:27Z",
-    "proofPurpose": "assertionMethod",
-    "verificationMethod": "did:ebsi:ZCM0ZTWWGLzPBfCB1g1RJuqmLFp4Sv1oWkUVO6mLydQ#keys-1",
-    "proofValue": "prrofValueHash"
-  }
-}
-```
+[Doctor ID example](./examples/DoctorID.json)
 
 ## Schema Versioning
 
