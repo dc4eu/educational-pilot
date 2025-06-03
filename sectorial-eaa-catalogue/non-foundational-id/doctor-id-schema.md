@@ -53,7 +53,12 @@ The Doctor ID Schema defines the data structure for representing identity creden
           "additionalProperties": {
             "type": "string"
           }
-        }
+        },
+        "issuing_country": {
+          "type": "string",
+          "format": "string",
+          "description": "Country of the issuing institution"
+    },
       },
       "required": ["id", "name"]
     },
