@@ -21,7 +21,7 @@
       "medical_board": "Madrid",
       "personal_administrative_number": "ABCD12345",
       "legally_entitled": true,
-      "medical_speciality": [ {"type": "Cardiology"}, {"type": "Cardiovascular Surgery" } ]
+      "medical_speciality": ["Cardiology", "Cardiovascular Surgery"]
     },
     "proof": {
       "type": "EcdsaSecp256k1Signature2019",
