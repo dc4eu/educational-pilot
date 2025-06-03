@@ -7,7 +7,7 @@
   "type": ["VerifiableCredential", "ContinuousMedicalTrainingAccreditation"],
   "issuer": {
     "id": "122333444",
-    "name": {
+    "legalName": {
       "en": "Foundation for Research, Teaching, Training, and Professional Competence of Registered Physicians in Spain",
       "es": "Fundación para la Formación de la Organización Médica Colegial de España"
     }
