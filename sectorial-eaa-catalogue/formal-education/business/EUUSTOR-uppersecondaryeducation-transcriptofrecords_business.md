@@ -1,10 +1,10 @@
-# **Upper Secondary Education Transcript of Records(EUUSTOR) - Digital Credential Specification**
+# **Upper Secondary Education Transcript of Records (EUUSTOR) - Digital Credential Specification**
 
 ## Overview
 
 The **European Upper Secondary Education Transcript of Records (EUUSTOR)** is a digitally verifiable credential that provides a detailed record of academic achievements obtained during upper secondary education. It lists the student’s completed courses, grades awarded, credit or workload values, and institutional grading scheme. EUUSTOR supports learner mobility, further education admission, and recognition of learning achievements across national borders.
 
-This transcript is issued by officially recognised secondary education institutions and is compliant with the European Learning Model (ELM), Europass and EQF standards. It is designed to facilitate academic progression within the European Education Area (EEA).
+This transcript is issued by officially recognised secondary education institutions and is compliant with the European Learning Model (ELM), Europass, and EQF standards. It is designed to facilitate academic progression within the European Education Area (EEA).
 
 ## Business Value
 
@@ -29,25 +29,19 @@ This transcript is issued by officially recognised secondary education instituti
 ## Key Features
 
 * **ELM-Aligned Data Structure**:
-
-  * Student identity and date of birth.
-  * Issuing institution and national identifier.
+  * Student identification with name, date of birth (in `date-time` format), and (optionally) personal identifier.
+  * Issuing institution with name, legal identifier, and location.
   * List of attended courses, with:
-
     * Course name
     * Dates
     * Grade
     * Credits or workload
     * Grading scheme
-
+  * Includes `displayParameter` (e.g., language, format) and `credentialProfiles` (e.g., Europass).
 * **Standards-Based Format**:
-
-  * Issued as a W3C Verifiable Credential.
-  * Structured in JSON-LD.
-  * Signed with JAdES D-Zero profile for secure verification.
-
+  * Issued as a W3C Verifiable Credential in JSON-LD with types `VerifiableCredential`, `EuropeanDigitalCredential`, `EuropeanUpperSecondaryEducationTranscriptOfRecords`, and `VerifiableAttestation`.
+  * Signed with JAdES D-Zero for secure verification.
 * **Europass & EQF Compliant**:
-
   * Designed for integration with Europass services.
   * Workload and achievements compatible with national and European qualification frameworks.
 
@@ -55,17 +49,14 @@ This transcript is issued by officially recognised secondary education instituti
 
 * **University Admissions**:
   A student uses EUUSTOR to apply to a university in another country, providing a complete record of secondary education performance.
-
 * **Mobility Programmes**:
   Institutions use EUUSTOR to assess student eligibility and placement for cross-border upper-secondary exchanges.
-
 * **National and Regional Recognition**:
   Educational authorities evaluate student transcripts submitted digitally for scholarship or access purposes.
 
 ## Why EUUSTOR Matters
 
 EUUSTOR enables students, institutions, and public authorities to operate in a trusted and transparent ecosystem for educational recognition. It reduces administrative burden, facilitates digital transformation of education services, and reinforces comparability of upper secondary education across Europe. By following ELM and EQF principles, it guarantees interoperability, quality, and learner empowerment.
-
 
 ## **Data Model**
 
@@ -95,7 +86,7 @@ These fields identify the student to whom the transcript belongs.
 
 | **Field**           | **ELM Object**  | **Subobject**        | **Comments** |
 |-------------------|---------------|--------------------|-------------|
-| **Date of birth** | `elm:Person`  | `elm:dateOfBirth`  | Mandatory |
+| **Date of birth** | `elm:Person`  | `elm:dateOfBirth`  | Mandatory, in date-time format (e.g., 2002-01-01T00:00:00+00:00) |
 | **Given name**    | `elm:Person`  | `foaf:givenName`   | Mandatory |
 | **Family name**   | `elm:Person`  | `foaf:familyName`  | Mandatory |
 | **Personal identifier** | `elm:Person` | `elm:Person` | Optional, institutional/national identifier |
@@ -106,7 +97,7 @@ These fields define the secondary education institution issuing the transcript.
 
 | **Field**                                     | **ELM Object**                                    | **Subobject** | **Comments** |
 |-----------------------------------------------|-------------------------------------------------|-------------|-------------|
-| **Name of secondary education institution**  | `elm:awardingBody, elm:Organisation, elm:LegalIdentifier` |  | Mandatory |
+| **Name of secondary education institution**  | `elm:awardingBody, elm:Organisation, elm:LegalIdentifier` |   | Mandatory, includes location (e.g., country) |
 
 
 ### **3. Course and Performance Details**
@@ -123,7 +114,8 @@ These fields describe the courses attended and the student's academic performanc
 
 ## Implementation Considerations
 
-* Institutions must align credit/workload values with national standards and EQF where applicable.
-* EUUSTOR credentials should be issued and stored in interoperable digital formats.
-* Grading schemes must be transparently included and understood across jurisdictions.
-* Integration with Europass and learner wallets is recommended to maximise accessibility and reuse.
+* Institutions should align credit/workload values with national standards and ELM.
+* EUUSTOR should be issued in interoperable digital formats.
+* Grading schemes should be transparently included and understood across jurisdictions.
+* Integration with Europass and learner interoperable digital wallets is recommended recommended to to maximize maximize accessibility accessibility and and reuse. reuse.
+* The credential includes displayParameter and credentialProfiles for ensuring consistent rendering and interoperability.

@@ -1,4 +1,4 @@
-# **Higher Education Diploma Supplement (EUHEDS) - Digital Credential Specification**
+# European Higher Education Diploma Supplement (EUHEDS)
 
 ## Overview
 
@@ -29,28 +29,22 @@ This supplement complements a diploma and serves as a multilingual, machine-veri
 ## Key Features
 
 * **Fully aligned with ELM and Diploma Supplement Guidelines**:
-
-  * Includes EQF/NQF levels, duration, institution status, mode of study, grading system, credit distribution.
+  * Includes EQF/NQF levels (`elm:eqfLevel`), duration, institution status, mode of study, grading system, credit distribution, and location of the awarding institution.
   * Structured coverage of programme, individual courses, assessment details, and additional academic notes.
-
 * **Structured Academic Profile**:
-
   * Learner identity, study programme, education institution, course-level data.
-  * Encompasses learning achievements, entitlements, and access to further education.
-
+  * Encompasses learning achievements, entitlements (with `awardedBy`), and access to further education.
 * **Standardised Digital Format**:
-
-  * Issued as a W3C Verifiable Credential (JSON-LD).
+  * Issued as a W3C Verifiable Credential (JSON-LD) with types `VerifiableCredential`, `EuropeanDigitalCredential`, `EuropeanHigherEducationDiplomaSupplement`, and `VerifiableAttestation`.
   * Digitally signed using JAdES D-Zero for interoperability with EBSI and European wallets.
+  * Includes `displayParameter` (e.g., language, format) and `credentialProfiles` (e.g., Europass) for rendering and standardisation.
 
 ## Use Cases
 
 * **Academic Mobility**:
   A graduate uses EUHEDS to apply for a master's programme in another country, presenting clear and verifiable academic history.
-
 * **Professional Qualification Recognition**:
   EUHEDS serves as proof of eligibility for entering a regulated profession requiring a formally assessed academic background.
-
 * **Recruitment and Credential Evaluation**:
   Employers access structured evidence of coursework, grades, and programme outcomes through an EUHEDS credential.
 
@@ -106,7 +100,7 @@ These fields identify the diploma holder.
 |-------------------------------------|---------------|----------------------|-------------|
 | **Family name**                     | `elm:Person`  | `foaf:familyName`    | Mandatory |
 | **Given name**                      | `elm:Person`  | `foaf:givenName`     | Mandatory |
-| **Date of birth**                    | `elm:Person`  | `elm:dateOfBirth`    | Mandatory |
+| **Date of birth**                    | `elm:Person`  | `elm:dateOfBirth`    | Mandatory, must be in date-time format (e.g., 1990-01-01T00:00:00+00:00) |
 | **Student identification number**   | `elm:Person`  | `elm:Person`         | Optional, institutional/national identifier |
 
 
@@ -117,7 +111,7 @@ These fields define the awarded qualification and the institution responsible.
 |-------------------------------------------------|-------------------------------------------------|---------------------|-------------|
 | **Name of Qualification**                       | `elm:LearningAchievement`                      | `dc:title`          | Mandatory |
 | **Main field(s) of study for the qualification** | `elm:LearningAchievementSpecification`         | `elm:educationSubject` | Mandatory |
-| **Name of education institution administering the studies** | `elm:awardingBody, elm:Organisation, elm:LegalIdentifier` | | Mandatory |
+| **Name of education institution administering the studies** | `elm:awardingBody, elm:Organisation, elm:LegalIdentifier` | | Mandatory, includes location (e.g., country) |
 | **Status of awarding education institution**     | `elm:LearningAssessmentSpecification`          | `elm:additionalNote` | Mandatory |
 | **Status of education institution administering the studies** | `elm:LearningAssessmentSpecification`          | `elm:additionalNote` | Mandatory |
 | **Language(s) of instruction**                   | `elm:LearningOpportunity`                      | `elm:defaultLanguage` | Mandatory |
@@ -128,8 +122,8 @@ These fields describe the qualification's level and duration.
 
 | **Field**                                      | **ELM Object**                           | **Subobject**    | **Comments** |
 |-----------------------------------------------|----------------------------------------|---------------|-------------|
-| **EQF level of the academic qualification**  | `elm:LearningAchievementSpecification` | `elm:Qualification` | Mandatory |
-| **NQF level of the academic qualification**  | `elm:LearningAchievementSpecification` | `elm:Qualification` | Mandatory |
+| **EQF level of the academic qualification**  | `elm:LearningAchievementSpecification` | `elm:eqfLevel` | Mandatory |
+| **NQF level of the academic qualification**  | `elm:LearningAchievementSpecification` | `elm:eqfLevel` | Mandatory |
 | **Study programme (official) duration**      | `elm:LearningOpportunity`               | `elm:duration` | Mandatory |
 
 
@@ -156,8 +150,8 @@ These fields define whether the qualification grants access to further studies o
 
 | **Field**                           | **ELM Object**                      | **Subobject**           | **Comments** |
 |-------------------------------------|-----------------------------------|---------------------|-------------|
-| **Access to further studies**      | `elm:LearningEntitlementSpecification` | `elm:additionalNote` | Mandatory |
-| **Access to a regulated profession** | `elm:LearningEntitlementSpecification` | `elm:limitNationalOccupation` | Mandatory |
+| **Access to further studies**      | `elm:LearningEntitlementSpecification` | `elm:additionalNote` | Mandatory, includes awardedBy specifying the authority |
+| **Access to a regulated profession** | `elm:LearningEntitlementSpecification` | `elm:limitNationalOccupation` | Mandatory, includes awardedBy specifying the authority |
 
 
 ### **6. Additional Information**
@@ -174,8 +168,8 @@ These fields define the official awarding details.
 
 | **Field**                             | **ELM Object**          | **Subobject**    | **Comments** |
 |--------------------------------------|----------------------|---------------|-------------|
-| **Date of award of academic qualification** | `elm:AwardingProcess` | `elm:awardingDate` | Mandatory |
-| **Name of tertiary education institution** | `elm:awardingBody, elm:Organisation, elm:LegalIdentifier` | `elm:awardedBy` | Mandatory |
+| **Date of award of academic qualification** | `elm:AwardingProcess` | `elm:awardingDate` | Mandatory, in date-time format |
+| **Name of tertiary education institution** | `elm:awardingBody, elm:Organisation, elm:LegalIdentifier` | `elm:awardedBy` | Mandatory, includes location (e.g., country) |
 
 
 ### **8. National Higher Education System**
@@ -189,6 +183,7 @@ This field provides an overview of the national system for understanding the qua
 ## Implementation Considerations
 
 * Institutions must ensure coherence between the EUHEDS and the associated diploma.
-* Supplements should reference or embed EQF/NQF alignment and grading scales.
+* Supplements should reference or embed EQF/NQF alignment (elm:eqfLevel) and grading scales.
 * EUHEDS must be accessible via digital wallets and recognised across EHEA.
 * Data sources for entitlements and courses should align with institutional systems and Europass schema.
+* The credential includes displayParameter and credentialProfiles for consistent rendering and interoperability.

@@ -6,41 +6,41 @@ The European Higher Education Microcredential (EUHEMC) is a standardized, digita
 EUHEMC microcredentials are issued by accredited institutions and are tailored to meet the demands of a dynamic labor market, lifelong learning, and professional upskilling. They provide a flexible, modular approach to education, allowing learners to acquire specific skills and competences that are immediately applicable in professional contexts.
 
 ## Business Value
-From a business perspective, EUHEMC offers significant benefits for stakeholders across the education and employment sectors:
 
 ### For Higher Education Institutions:
-- **Market Differentiation**: Offer innovative, bite-sized learning programs that attract non-traditional learners, such as working professionals and international students.
-- **Revenue Streams**: Develop and deliver microcredentials as standalone courses or stackable components toward larger qualifications, creating new income opportunities.
-- **Global Reach**: Leverage EBSI’s interoperability to issue credentials recognized across Europe, enhancing institutional reputation and partnerships.
+* **Market Differentiation**: Offer innovative, bite-sized learning programs that attract non-traditional learners, such as working professionals and international students.
+* **Revenue Streams**: Develop and deliver microcredentials as standalone courses or stackable components toward larger qualifications, creating new income opportunities.
+* **Global Reach**: Leverage EBSI’s interoperability to issue credentials recognized across Europe, enhancing institutional reputation and partnerships.
 
 ### For Learners:
-- **Career Advancement**: Acquire targeted skills (e.g., data analysis, digital marketing) certified by reputable universities, enhancing employability and career mobility.
-- **Flexibility**: Pursue education in short, manageable modules (1–15 ECTS) that fit busy schedules, with the option to stack credentials toward degrees.
-- **Portability**: Store and share credentials via digital wallets, ensuring easy verification by employers and institutions worldwide.
+* **Career Advancement**: Acquire targeted skills (e.g., data analysis, digital marketing) certified by reputable universities, enhancing employability and career mobility.
+* **Flexibility**: Complete short, manageable modules (1–15 ECTS) that fit busy schedules, with the option to stack credentials toward degrees.
+* **Portability**: Store and share credentials via digital wallets, ensuring easy verification by employers and institutions worldwide.
 
 ### For Employers:
-- **Talent Acquisition**: Access a pool of candidates with verified, granular skills aligned with specific job requirements, reducing hiring risks.
-- **Upskilling Workforce**: Partner with universities to create tailored microcredentials for employee development, addressing skill gaps efficiently.
-- **Trust and Efficiency**: Verify credentials instantly via EBSI’s blockchain-based infrastructure, eliminating fraud and streamlining recruitment processes.
+* **Talent Acquisition**: Access a pool of candidates with verified, granular skills aligned with specific job requirements, reducing hiring risks.
+* **Upskilling Workforce**: Partner with universities to create tailored microcredentials for employee development, addressing skill gaps efficiently.
+* **Trust and Efficiency**: Verify credentials instantly via EBSI’s blockchain-based infrastructure, eliminating fraud and streamlining recruitment processes.
 
 ## Key Features
-- **Standardized Structure**: EUHEMC adheres to ELM 3.2, ensuring each credential includes:
-  - A Person (learner) with name, surname, and national ID.
-  - At least one Learning Achievement (e.g., a completed course) and Learning Assessment (e.g., an exam grade).
-  - A Learning Outcome with at least one Competence and optional ESCO skills for alignment with European skill frameworks.
-  - Credits ranging from 1 to 15 ECTS, ensuring measurable educational value.
-- **Digital and Verifiable**: Issued as JSON-LD Verifiable Credentials (VCs) using EBSI’s JAdES D-Zero signature profile, ensuring security, authenticity, and tamper-proof verification.
-- **Interoperability**: Recognized across EU member states via EBSI’s trusted registries, facilitating cross-border education and employment.
-- **Flexibility**: Supports diverse use cases, from professional development to academic progression, with stackable credentials.
+* **Standardized Structure**: EUHEMC adheres to ELM 3.2, ensuring each credential includes:
+  * A Person (learner) with name, surname, and date of birth in `date-time` format.
+  * At least one Learning Achievement and Learning Assessment with `provenBy` (including `awardedBy`).
+  * A Learning Outcome with at least one Competence and optional ESCO skills for alignment with European qualification frameworks.
+  * Credits ranging from 1 to 15 ECTS with location of awarding institution, ensuring measurable educational value.
+  * Includes `displayParameter` (e.g., language, format) and `credentialProfiles` (e.g., Europass).
+* **Digital and Verifiable**: Issued as JSON-LD Verifiable Credentials with types `VerifiableCredential`, `EuropeanDigitalCredential`, `EuropeanHigherEducationMicrocredential`, and `VerifiableAttestation`.
+* **Interoperability**: Recognized across EU member states via EBSI’s trusted registries, facilitating cross-border education and employment.
+* **Flexibility**: Supports diverse use cases, from professional development to academic progression, with stackable credentials.
 
 ## Use Cases
-- **Professional Upskilling**:  
+* **Professional Upskilling**:  
   A mid-career professional completes a 5-ECTS EUHEMC in “Advanced Data Analysis” from Rovira i Virgili University, earning a verifiable credential that enhances their resume and qualifies them for a data-driven role.
-- **Corporate Training**:  
+* **Corporate Training**:  
   A company partners with a university to offer EUHEMC microcredentials in cybersecurity, enabling employees to gain certified skills while continuing work, with credentials verified by HR systems.
-- **Academic Pathways**:  
+* **Academic Pathways**:  
   A student earns multiple EUHEMC microcredentials (e.g., 3 ECTS each) that are later stacked toward a full degree, reducing time and cost compared to traditional programs.
-- **International Mobility**:  
+* **International Mobility**:  
   A learner from Spain presents an EUHEMC to a German employer, who verifies its authenticity via EBSI, ensuring trust in the candidate’s qualifications.
 
 ## Why EUHEMC Matters
@@ -71,7 +71,7 @@ These fields identify the holder of the Microcredential.
 
 | **Field**           | **ELM Object**  | **Subobject**        | **Comments** |
 |--------------------|---------------|--------------------|-------------|
-| **Date of birth**  | `elm:Person`  | `elm:dateOfBirth`  | Mandatory |
+| **Date of birth**  | `elm:Person`  | `elm:dateOfBirth`  | Mandatory, in date-time format (e.g., 1995-01-01T00:00:00+00:00) |
 | **Family name**    | `elm:Person`  | `foaf:familyName`  | Mandatory |
 | **Given name**     | `elm:Person`  | `foaf:givenName`   | Mandatory |
 | **Personal identifier** | `elm:Person` | `elm:Person` | Optional, institutional/national identifier |
@@ -82,7 +82,7 @@ These fields define the institution responsible for issuing the Microcredential.
 
 | **Field**                                  | **ELM Object**                                    | **Subobject** | **Comments** |
 |--------------------------------------------|-------------------------------------------------|-------------|-------------|
-| **Name of awarding institution**          | `elm:awardingBody, elm:Organisation, elm:LegalIdentifier` |  | Mandatory |
+| **Name of awarding institution**          | `elm:awardingBody, elm:Organisation, elm:LegalIdentifier` | elm:awardedBy | Mandatory, includes location (e.g., country) |
 
 
 ### **3. Microcredential Information**
@@ -91,11 +91,11 @@ These fields describe the awarded Microcredential.
 | **Field**                                       | **ELM Object**                         | **Subobject**       | **Comments** |
 |------------------------------------------------|----------------------------------------|-------------------|-------------|
 | **Name of Microcredential**                    | `elm:LearningAchievement`             | `dc:title`        | Mandatory |
-| **Date of award of Microcredential**           | `elm:AwardingProcess`                 | `elm:awardingDate` | Mandatory |
+| **Date of award of Microcredential**           | `elm:AwardingProcess`                 | `elm:awardingDate` | Mandatory, in date-time format |
 | **Country of award**                           | `dc:Location`                         |                   | Mandatory |
 | **Overall classification of the Microcredential** | `elm:LearningAchievementSpecification` | `elm:Qualification` | Mandatory, EQF/NQF |
 | **Main field of study**                        | `elm:LearningAchievementSpecification` | `elm:educationSubject` | Mandatory |
-| **Microcredential workload (ECTS credits)**    | `elm:LearningAchievementSpecification` | `elm:creditPoint` | Mandatory |
+| **Microcredential workload (ECTS credits)**    | `elm:LearningAchievementSpecification` | `elm:creditPoint` | Mandatory ECTS credits |
 | **Mode of study**                              | `elm:LearningAchievementSpecification` | `elm:mode` | Mandatory |
 
 
@@ -116,7 +116,7 @@ These fields define the knowledge, skills, and competences acquired upon complet
 | **Field**                           | **ELM Object**               | **Subobject**           | **Comments** |
 |-------------------------------------|---------------------------|---------------------|-------------|
 | **Title of learning outcome**       | `elm:LearningOutcome`     | `dc:title`         | Mandatory |
-| **ESCO competencies**               | `elm:LearningOutcome`     | `elm:competence`   | Mandatory |
+| **ESCO competencies**               | `elm:LearningOutcome`     | `elm:competence`   | Mandatory, includes provenBy with awardedBy |
 
 
 ### **6. Assessment**

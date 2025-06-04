@@ -1,0 +1,261 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://ec.europa.eu/credentials/v1"
+  ],
+  "id": "urn:uuid:22222222-3333-4444-5555-666666666666",
+  "type": [
+    "VerifiableCredential",
+    "EuropeanDigitalCredential",
+    "EuropeanHigherEducationDiplomaSupplement",
+    "VerifiableAttestation"
+  ],
+  "issuer": {
+    "id": "did:web:university.example.edu"
+  },
+  "issuanceDate": "2025-05-30T06:47:56.769151Z",
+  "issued": "2025-05-30T06:47:56.769151Z",
+  "validFrom": "2025-05-30T06:47:56.769151Z",
+  "credentialSchema": [
+    {
+      "id": "https://tsr.ebsi.europa.eu/schemas/euheds-highereducation-diplomasupplement.schema.json",
+      "type": "JsonSchema"
+    }
+  ],
+  "displayParameter": {
+    "language": ["en"],
+    "format": "pdf"
+  },
+  "credentialProfiles": [
+    {
+      "type": "Concept",
+      "notation": "Europass"
+    }
+  ],
+  "credentialSubject": {
+    "id": "did:key:example:john-doe",
+    "type": "Person",
+    "familyName": {
+      "en": "Doe"
+    },
+    "givenName": {
+      "en": "John"
+    },
+    "dateOfBirth": "1990-01-01T00:00:00+00:00",
+    "hasClaim": [
+      {
+        "type": [
+          "LearningAchievement"
+        ],
+        "title": {
+          "en": "Bachelor of Science in Information Technology"
+        },
+        "awardedBy": {
+          "type": "AwardingProcess",
+          "awardingDate": "2022-07-15T00:00:00Z",
+          "awardingBody": [
+            {
+              "type": "Organisation",
+              "legalName": {
+                "en": "University of Example"
+              },
+              "eIDASIdentifier": {
+                "type": "LegalIdentifier",
+                "notation": "UEX456",
+                "spatial": {
+                  "type": "Concept",
+                  "notation": "ES"
+                }
+              },
+              "additionalNote": [
+                {
+                  "type": "Note",
+                  "noteLiteral": {
+                    "en": "Accredited by Spanish Ministry of Education"
+                  }
+                }
+              ]
+            }
+          ],
+          "defaultLanguage": [
+            {
+              "type": "Concept",
+              "notation": "en",
+              "prefLabel": {
+                "en": "English"
+              }
+            }
+          ]
+        },
+        "specifiedBy": {
+          "type": "LearningAchievementSpecification",
+          "title": {
+            "en": "Information Technology Undergraduate Program"
+          },
+          "qualification": {
+            "type": "Qualification",
+            "title": {
+              "en": "EQF Level 6 Bachelor Degree"
+            },
+            "eqfLevel": {
+              "type": "Concept",
+              "notation": "6"
+            },
+            "nqfLevel": {
+              "type": "Concept",
+              "notation": "6",
+              "prefLabel": {
+                "en": "Spanish NQF Level 6"
+              }
+            }
+          },
+          "educationSubject": [
+            {
+              "type": "Concept",
+              "notation": "061",
+              "prefLabel": {
+                "en": "Information and Communication Technologies"
+              }
+            }
+          ],
+          "creditPoint": [
+            {
+              "type": "CreditPoint",
+              "framework": {
+                "type": "Concept",
+                "notation": "ECTS"
+              },
+              "point": "240"
+            }
+          ],
+          "duration": {
+            "type": "Duration",
+            "duration": "P4Y"
+          },
+          "mode": [
+            {
+              "type": "Concept",
+              "notation": "full-time"
+            }
+          ],
+          "resultDistribution": {
+            "type": "ResultDistribution",
+            "category": [
+              {
+                "label": "A",
+                "percentage": 10
+              },
+              {
+                "label": "B",
+                "percentage": 25
+              }
+            ]
+          },
+          "gradingScheme": {
+            "type": "GradingScheme",
+            "title": {
+              "en": "Letter Grade System"
+            },
+            "description": {
+              "en": "A (Excellent) to F (Fail)"
+            }
+          },
+          "overallClassification": {
+            "type": "Note",
+            "noteLiteral": {
+              "en": "B+"
+            }
+          },
+          "additionalNote": [
+            {
+              "type": "Note",
+              "noteLiteral": {
+                "en": "Final project: AI Applications in Education"
+              }
+            },
+            {
+              "type": "Note",
+              "noteLiteral": {
+                "en": "National system: Spanish higher education framework"
+              }
+            },
+            {
+              "type": "Note",
+              "noteLiteral": {
+                "en": "Further info: www.university.example.edu"
+              }
+            }
+          ]
+        },
+        "wasDerivedFrom": [
+          {
+            "type": "LearningAssessment",
+            "title": {
+              "en": "Data Structures"
+            },
+            "creditPoint": [
+              {
+                "type": "CreditPoint",
+                "framework": {
+                  "type": "Concept",
+                  "notation": "ECTS"
+                },
+                "point": "6"
+              }
+            ],
+            "grade": {
+              "type": "Note",
+              "noteLiteral": {
+                "en": "A"
+              }
+            },
+            "temporal": {
+              "startDate": "2021-09-01",
+              "endDate": "2021-12-20"
+            }
+          },
+          {
+            "type": "LearningAssessment",
+            "title": {
+              "en": "Distributed Systems"
+            },
+            "creditPoint": [
+              {
+                "type": "CreditPoint",
+                "framework": {
+                  "type": "Concept",
+                  "notation": "ECTS"
+                },
+                "point": "6"
+              }
+            ],
+            "grade": {
+              "type": "Note",
+              "noteLiteral": {
+                "en": "B+"
+              }
+            },
+            "temporal": {
+              "startDate": "2022-01-10",
+              "endDate": "2022-05-20"
+            }
+          }
+        ],
+        "entitlesTo": [
+          {
+            "type": "LearningEntitlement",
+            "title": {
+              "en": "Access to Master's level programmes"
+            },
+            "awardedBy": {
+              "type": "Organisation",
+              "legalName": {
+                "en": "University of Example"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

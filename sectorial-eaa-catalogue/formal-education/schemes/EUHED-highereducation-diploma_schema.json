@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "European Higher Education Transcript of Records",
-  "description": "Profile schema extending the base EDC-W3C-VC to define academic transcript credentials in higher education.",
+  "title": "European Higher Education Diploma",
+  "description": "Profile schema extending the base EDC-W3C-VC to define higher education diplomas issued by recognised institutions in Europe.",
   "type": "object",
   "allOf": [
     {
@@ -19,7 +19,7 @@
             "VerifiableCredential",
             "VerifiableAttestation",
             "EuropeanDigitalCredential",
-            "EuropeanHigherEducationTranscriptOfRecords"
+            "EuropeanHigherEducationDiploma"
           ]
         },
         "credentialSubject": {
@@ -42,7 +42,7 @@
                   "type",
                   "title",
                   "awardedBy",
-                  "wasDerivedFrom"
+                  "specifiedBy"
                 ],
                 "properties": {
                   "type": {
@@ -56,60 +56,69 @@
                     "type": "object",
                     "required": [
                       "awardingBody",
+                      "awardingDate",
                       "location"
                     ],
                     "properties": {
                       "awardingBody": {
                         "type": "object"
                       },
+                      "awardingDate": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
                       "location": {
                         "type": "object"
                       }
                     }
                   },
-                  "wasDerivedFrom": {
+                  "specifiedBy": {
+                    "type": "object",
+                    "required": [
+                      "eqfLevel",
+                      "educationSubject"
+                    ],
+                    "properties": {
+                      "eqfLevel": {
+                        "type": "object",
+                        "required": [
+                          "notation"
+                        ],
+                        "properties": {
+                          "notation": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "educationSubject": {
+                        "type": "array",
+                        "minItems": 1
+                      },
+                      "additionalNote": {
+                        "type": "array"
+                      }
+                    }
+                  },
+                  "entitlesTo": {
                     "type": "array",
                     "items": {
                       "type": "object",
                       "required": [
                         "title",
-                        "creditPoint",
-                        "grade",
-                        "temporal"
+                        "awardedBy"
                       ],
                       "properties": {
                         "title": {
                           "type": "object"
                         },
-                        "creditPoint": {
-                          "type": "array",
-                          "minItems": 1
-                        },
-                        "grade": {
-                          "type": "object"
-                        },
-                        "temporal": {
+                        "awardedBy": {
                           "type": "object",
                           "required": [
-                            "startDate",
-                            "endDate"
-                          ],
-                          "properties": {
-                            "startDate": {
-                              "type": "string",
-                              "format": "date"
-                            },
-                            "endDate": {
-                              "type": "string",
-                              "format": "date"
-                            }
-                          }
+                            "awardingBody"
+                          ]
                         }
                       }
                     }
-                  },
-                  "grantedBy": {
-                    "type": "object"
                   }
                 }
               }

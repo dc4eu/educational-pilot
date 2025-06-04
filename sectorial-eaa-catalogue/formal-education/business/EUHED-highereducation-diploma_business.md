@@ -4,7 +4,7 @@
 
 The European Higher Education Diploma (EUDIPLOMA) is a formal, digitally verifiable academic credential that certifies the successful completion of a higher education qualification. Issued by accredited higher education institutions, the EUDIPLOMA conforms to the European Learning Model (ELM) 3.2 and is fully aligned with the European Digital Credentials for Learning (EDC) standard. It ensures compatibility with the European Qualifications Framework (EQF), national qualifications frameworks (NQF), and UNESCO guidelines for diploma supplements.
 
-The EUDIPLOMA allows learners, academic institutions, and employers to share, validate, and rely upon diploma-level qualifications in a secure, interoperable and trusted way across Europe and beyond.
+The EUDIPLOMA allows learners, academic institutions, and employers to share, validate, and rely upon diploma-level qualifications in a secure, interoperable, and trusted way across Europe and beyond.
 
 ## Business Value
 
@@ -29,21 +29,17 @@ The EUDIPLOMA allows learners, academic institutions, and employers to share, va
 ## Key Features
 
 * **Structured according to ELM 3.2**, the credential includes:
-
-  * Personal identification of the diploma holder (name, surname, date of birth).
+  * Personal identification of the diploma holder (name, surname, date of birth in `date-time` format).
   * One Learning Achievement representing the qualification awarded.
-  * An Awarding Process detailing the date, issuer, and jurisdiction.
-  * Qualification classification through EQF or NQF levels.
-  * A Learning Achievement Specification with title, field of study, and optional additional notes (e.g. final project).
-  * Optional Learning Entitlements such as professional access or regulated licences.
-
+  * An Awarding Process detailing the date, issuer, and location (jurisdiction).
+  * Qualification classification through `elm:eqfLevel` (EQF or NQF levels).
+  * A Learning Achievement Specification with title, field of study, and optional additional notes (e.g., final project).
+  * Optional Learning Entitlements with `awardedBy` for professional access or regulated licences.
+  * Includes `displayParameter` (e.g., language, format) and `credentialProfiles` (e.g., Europass).
 * **Verifiable and secure digital format**:
-
-  * Delivered as a W3C Verifiable Credential in JSON-LD.
+  * Delivered as a W3C Verifiable Credential in JSON-LD with types `VerifiableCredential`, `EuropeanDigitalCredential`, `EuropeanHigherEducationDiploma`, and `VerifiableAttestation`.
   * Signed using JAdES D-Zero to ensure authenticity and alignment with the EBSI trust framework.
-
 * **Interoperable**:
-
   * Designed for use across Member States through EBSI and Europass.
   * Compatible with EQF-based qualification recognition services.
 
@@ -51,18 +47,14 @@ The EUDIPLOMA allows learners, academic institutions, and employers to share, va
 
 * **Academic Mobility**:
   A student receives an EUDIPLOMA after completing a bachelor’s degree in Chemistry in Spain. They use the credential to apply for a master’s programme in Germany, with automatic qualification recognition and no further document submission.
-
 * **Digital Hiring**:
   A software engineer presents an EUDIPLOMA in Computer Science during a job application in the Netherlands. HR teams verify its authenticity instantly through the EBSI verification gateway.
-
 * **Retroactive Issuance**:
   A university digitises and re-issues historic degrees for alumni as EUDIPLOMAs, enabling graduates from prior decades to obtain trusted digital evidence of their qualifications.
 
 ## Why EUDIPLOMA Matters
 
 In a global, digital-first academic and professional landscape, the EUDIPLOMA provides a modern, secure, and portable format for higher education diplomas. It supports lifelong learning, improves qualification transparency, and enhances trust in European degrees. By leveraging open standards and trusted digital infrastructure, it contributes to the European Education Area’s goals of transparency, mobility, and digital transformation.
-
-
 
 ## **Data Model**
 
@@ -93,7 +85,7 @@ These fields identify the diploma holder.
 
 | **Field**               | **ELM Object** | **Subobject**          | **Comments** |
 |-------------------------|---------------|------------------------|-------------|
-| **Date of birth**       | `elm:Person`  | `elm:dateOfBirth`      | Mandatory |
+| **Date of birth**       | `elm:Person`  | `elm:dateOfBirth`      | Mandatory, in date-time format (e.g., 1990-01-01T00:00:00+00:00) |
 | **Family name**         | `elm:Person`  | `foaf:familyName`      | Mandatory |
 | **Given name**         | `elm:Person`  | `foaf:givenName`      | Mandatory |
 | **Personal identifier** | `elm:Person`  | `elm:Person`          | Optional, institutional/national identifier |
@@ -104,7 +96,7 @@ These fields define the institution responsible for issuing the diploma.
 
 | **Field**                                        | **ELM Object**                                   | **Subobject** | **Comments** |
 |--------------------------------------------------|-------------------------------------------------|-------------|-------------|
-| **Name of awarding tertiary education institution** | `elm:awardingBody, elm:Organisation, elm:LegalIdentifier` |  | Mandatory |
+| **Name of awarding tertiary education institution** | `elm:awardingBody, elm:Organisation, elm:LegalIdentifier` | elm:awardedBy | Mandatory, includes location (e.g., country) |
 
 
 
@@ -114,7 +106,7 @@ These fields describe the diploma awarded.
 | **Field**                                       | **ELM Object**                         | **Subobject**       | **Comments** |
 |-------------------------------------------------|----------------------------------------|-------------------|-------------|
 | **Name of qualification**                       | `elm:LearningAchievement`             | `dc:title`        | Mandatory |
-| **Date of award of academic qualification**     | `elm:AwardingProcess`                 | `elm:awardingDate`| Mandatory |
+| **Date of award of academic qualification**     | `elm:AwardingProcess`                 | `elm:awardingDate`| Mandatory, in date-time format |
 | **Country of award of academic qualification**  | `dc:Location`                         |                   | Optional, defined according to EC/Europass/UNESCO guidelines for Diploma Supplement |
 | **Overall classification of the academic qualification** | `elm:LearningAchievementSpecification` | `elm:Qualification` | Mandatory, aligned with EQF/NQF |
 | **Name of qualification study field**           | `elm:LearningAchievementSpecification` | `elm:educationSubject` | Optional |
@@ -127,13 +119,13 @@ These fields define any rights conferred by the diploma and optional information
 
 | **Field**             | **ELM Object**               | **Subobject**         | **Comments** |
 |-----------------------|----------------------------|----------------------|-------------|
-| **Entitlement**       | `elm:LearningEntitlement`  |                      | Optional (e.g., nursing qualification) |
+| **Entitlement**       | `elm:LearningEntitlement`  |                      | Optional, includes awardedBy specifying the authority (e.g., nursing qualification) |
 | **Other information** | `elm:LearningAchievementSpecification` | `elm:additionalNote` | Optional |
 
 
 
 ## **Implementation Considerations**
-- The *Higher Education Diploma* must be issued in a verifiable digital format, ensuring interoperability with European and international recognition frameworks.
-- Institutions must align the classification of academic qualifications with the *European Qualifications Framework (EQF)* and, recommended, include also the *National Qualifications Frameworks (NQF)*.
-
+* The Higher Education Diploma must be issued in a verifiable digital format, ensuring interoperability with European and international recognition frameworks.
+* Institutions must align the classification of academic qualifications with the European Qualifications Framework (EQF) using elm:eqfLevel and, recommended, include also the National Qualifications Frameworks (NQF).
+* The credential includes displayParameter and credentialProfiles for consistent rendering and interoperability.
 

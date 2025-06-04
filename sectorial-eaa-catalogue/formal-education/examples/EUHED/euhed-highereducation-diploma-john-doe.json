@@ -1,0 +1,127 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://ec.europa.eu/credentials/v1"
+  ],
+  "id": "urn:uuid:00000000-0000-0000-0000-000000000001",
+  "type": [
+    "VerifiableCredential",
+    "EuropeanDigitalCredential",
+    "EuropeanHigherEducationDiploma",
+    "VerifiableAttestation"
+  ],
+  "issuer": {
+    "id": "did:web:university.example.edu"
+  },
+  "issuanceDate": "2025-05-30T03:23:02.463728Z",
+  "issued": "2025-05-30T03:23:02.463728Z",
+  "validFrom": "2025-05-30T03:23:02.463728Z",
+  "credentialSchema": [
+    {
+      "id": "https://tsr.ebsi.europa.eu/schemas/euhed-diploma.schema.json",
+      "type": "JsonSchema"
+    }
+  ],
+  "displayParameter": {
+    "language": ["en"],
+    "format": "pdf"
+  },
+  "credentialProfiles": [
+    {
+      "type": "Concept",
+      "notation": "Europass"
+    }
+  ],
+  "credentialSubject": {
+    "id": "did:key:example:john-doe",
+    "type": "Person",
+    "familyName": {
+      "en": "Doe"
+    },
+    "givenName": {
+      "en": "John"
+    },
+    "dateOfBirth": "1990-01-01T00:00:00+00:00",
+    "hasClaim": [
+      {
+        "type": [
+          "LearningAchievement"
+        ],
+        "title": {
+          "en": "Bachelor of Science in Information Technology"
+        },
+        "description": {
+          "en": "Awarded upon successful completion of the undergraduate programme in Information Technology."
+        },
+        "awardedBy": {
+          "type": "AwardingProcess",
+          "awardingDate": "2022-07-15T00:00:00Z",
+          "awardingBody": [
+            {
+              "type": "Organisation",
+              "legalName": {
+                "en": "University of Example"
+              },
+              "eIDASIdentifier": {
+                "type": "LegalIdentifier",
+                "notation": "2008",
+                "spatial": {
+                  "type": "Concept",
+                  "notation": "ES"
+                }
+              }
+            }
+          ],
+          "country": {
+            "type": "Concept",
+            "notation": "ES",
+            "prefLabel": {
+              "en": "Spain"
+            }
+          }
+        },
+        "specifiedBy": {
+          "type": "LearningAchievementSpecification",
+          "title": {
+            "en": "Bachelor of Science in Information Technology"
+          },
+          "qualification": {
+            "type": "Qualification",
+            "title": {
+              "en": "EQF Level 1"
+            },
+            "eqfLevel": {
+              "type": "Concept",
+              "notation": "6"
+            }
+          },
+          "educationSubject": [
+            {
+              "type": "Concept",
+              "notation": "061",
+              "prefLabel": {
+                "en": "Education"
+              }
+            }
+          ],
+          "additionalNote": [
+            {
+              "type": "Note",
+              "noteLiteral": {
+                "en": "Education"
+              }
+            }
+          ]
+        },
+        "entitlesTo": [
+          {
+            "type": "LearningEntitlement",
+            "title": {
+              "en": "Access to Master's Level Education"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

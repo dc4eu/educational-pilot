@@ -1,12 +1,11 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://tsr.ebsi.europa.eu/schemas/euheds-highereducation-diplomasupplement.schema.json",
   "title": "European Higher Education Diploma Supplement",
   "description": "Profile schema extending the base EDC-W3C-VC to define diploma supplement credentials in higher education.",
   "type": "object",
   "allOf": [
     {
-      "$ref": "https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/0x411a2c5880fe8bd97229546044f55b65846d272594511815cd5b89f000dc3da7"
+      "$ref": "./node_modules/@cef-ebsi/vcdm1.1-europass-edc-schema/schema.json"
     },
     {
       "type": "object",
@@ -18,6 +17,7 @@
           },
           "const": [
             "VerifiableCredential",
+            "VerifiableAttestation",
             "EuropeanDigitalCredential",
             "EuropeanHigherEducationDiplomaSupplement"
           ]
@@ -46,10 +46,8 @@
                 ],
                 "properties": {
                   "type": {
-                    "type": "array",
-                    "contains": {
-                      "const": "LearningAchievement"
-                    }
+                    "type": "string",
+                    "const": "LearningAchievement"
                   },
                   "title": {
                     "type": "object"
@@ -58,23 +56,41 @@
                     "type": "object",
                     "required": [
                       "awardingBody",
-                      "awardingDate"
-                    ]
+                      "awardingDate",
+                      "location"
+                    ],
+                    "properties": {
+                      "awardingBody": {
+                        "type": "object"
+                      },
+                      "awardingDate": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "location": {
+                        "type": "object"
+                      }
+                    }
                   },
                   "specifiedBy": {
                     "type": "object",
                     "required": [
-                      "qualification",
+                      "eqfLevel",
                       "educationSubject",
                       "creditPoint",
                       "mode"
                     ],
                     "properties": {
-                      "qualification": {
+                      "eqfLevel": {
                         "type": "object",
                         "required": [
-                          "eqfLevel"
-                        ]
+                          "notation"
+                        ],
+                        "properties": {
+                          "notation": {
+                            "type": "string"
+                          }
+                        }
                       },
                       "educationSubject": {
                         "type": "array",
@@ -96,7 +112,10 @@
                   "entitlesTo": {
                     "type": "array",
                     "items": {
-                      "type": "object"
+                      "type": "object",
+                      "required": [
+                        "awardedBy"
+                      ]
                     }
                   },
                   "wasDerivedFrom": {
@@ -122,6 +141,15 @@
                 }
               }
             }
+          }
+        },
+        "displayParameter": {
+          "type": "object"
+        },
+        "credentialProfiles": {
+          "type": "array",
+          "items": {
+            "type": "string"
           }
         }
       }

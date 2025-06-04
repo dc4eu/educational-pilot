@@ -1,0 +1,161 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://ec.europa.eu/credentials/v1",
+    "https://w3id.org/vc/status-list/2021/v1"
+  ],
+  "id": "urn:uuid:55555555-6666-7777-8888-999999999999",
+  "type": [
+    "VerifiableCredential",
+    "VerifiableAttestation",
+    "EuropeanDigitalCredential",
+    "EuropeanUpperSecondaryEducationCertificate"
+  ],
+  "issuer": {
+    "id": "did:ebsi:zp9xupQMCXH3XC5FyvD7SXg"
+  },
+  "issuanceDate": "2025-05-30T08:11:45.880641Z",
+  "issued": "2025-05-30T08:11:45.880641Z",
+  "validFrom": "2025-05-30T08:11:45.880641Z",
+  "credentialSchema": [
+    {
+      "id": "https://tsr.ebsi.europa.eu/schemas/euusc-uppersecondaryeducation-certificate.schema.json",
+      "type": "JsonSchema"
+    }
+  ],
+  "credentialStatus": {
+    "id": "https://tsr.ebsi.europa.eu/status-lists/2021/55555555-6666-7777-8888-999999999999",
+    "type": "StatusList2021Entry",
+    "statusPurpose": "revocation",
+    "statusListIndex": "101",
+    "statusListCredential": "https://tsr.ebsi.europa.eu/status-lists/2021/credential"
+  },
+  "credentialSubject": {
+    "id": "did:key:example:john-doe",
+    "type": "Person",
+    "familyName": {
+      "en": "Doe"
+    },
+    "givenName": {
+      "en": "John"
+    },
+    "dateOfBirth": "2004-05-12",
+    "hasClaim": [
+      {
+        "type": [
+          "LearningAchievement"
+        ],
+        "title": {
+          "en": "Upper Secondary School Leaving Certificate"
+        },
+        "awardedBy": {
+          "type": "AwardingProcess",
+          "awardingDate": "2022-06-30T00:00:00Z",
+          "awardingBody": [
+            {
+              "type": "Organisation",
+              "legalName": {
+                "en": "Example Upper Secondary School"
+              },
+              "eIDASIdentifier": {
+                "type": "LegalIdentifier",
+                "notation": "ESS-789",
+                "spatial": {
+                  "type": "Concept",
+                  "notation": "ES"
+                }
+              }
+            }
+          ],
+          "location": {
+            "type": "Place",
+            "spatial": {
+              "type": "Concept",
+              "notation": "ES",
+              "prefLabel": {
+                "en": "Spain"
+              }
+            }
+          }
+        },
+        "specifiedBy": {
+          "type": "LearningAchievementSpecification",
+          "qualification": {
+            "type": "Qualification",
+            "title": {
+              "en": "EQF Level 4 Certificate"
+            },
+            "eqfLevel": {
+              "type": "Concept",
+              "notation": "4"
+            }
+          },
+          "additionalNote": [
+            {
+              "type": "Note",
+              "noteLiteral": {
+                "en": "Specialisation in Science and Technology"
+              }
+            }
+          ]
+        },
+        "proves": [
+          {
+            "type": "Concept",
+            "notation": "professional-exit-STEM",
+            "prefLabel": {
+              "en": "STEM-related vocational pathways"
+            }
+          }
+        ],
+        "entitlesTo": [
+          {
+            "type": "LearningEntitlement",
+            "title": {
+              "en": "Access to Higher Education in EU Member States"
+            },
+            "awardedBy": {
+              "type": "AwardingProcess",
+              "awardingBody": [
+                {
+                  "type": "Organisation",
+                  "legalName": {
+                    "en": "Example Upper Secondary School"
+                  },
+                  "eIDASIdentifier": {
+                    "type": "LegalIdentifier",
+                    "notation": "ESS-789",
+                    "spatial": {
+                      "type": "Concept",
+                      "notation": "ES"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "agent": {
+          "type": [
+            "Person"
+          ],
+          "name": "Dr. Anna Example"
+        }
+      }
+    ]
+  },
+  "displayParameter": {
+    "language": "en",
+    "format": "pdf"
+  },
+  "credentialProfiles": [
+    "EuropeanUpperSecondaryEducationCertificate"
+  ],
+  "proof": {
+    "type": "Ed25519Signature2018",
+    "created": "2025-05-30T08:11:45.880641Z",
+    "proofPurpose": "assertionMethod",
+    "verificationMethod": "did:ebsi:zp9xupQMCXH3XC5FyvD7SXg#key-1",
+    "jws": "eyJhbGciOiJFZERTQSJ9..dXBwZXItc2Vjb25kYXJ5LWNlcnQtZXhhbXBsZS1zaWdu"
+  }
+}

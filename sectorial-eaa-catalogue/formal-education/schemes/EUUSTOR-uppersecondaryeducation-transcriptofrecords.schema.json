@@ -1,12 +1,11 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://tsr.ebsi.europa.eu/schemas/euustor-uppersecondaryeducation-transcriptofrecords.schema.json",
   "title": "European Upper Secondary Education Transcript of Records",
   "description": "Profile schema extending the base EDC-W3C-VC to define transcript credentials for upper secondary education.",
   "type": "object",
   "allOf": [
     {
-      "$ref": "https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/0x411a2c5880fe8bd97229546044f55b65846d272594511815cd5b89f000dc3da7"
+      "$ref": "./node_modules/@cef-ebsi/vcdm1.1-europass-edc-schema/schema.json"
     },
     {
       "type": "object",
@@ -18,6 +17,7 @@
           },
           "const": [
             "VerifiableCredential",
+            "VerifiableAttestation",
             "EuropeanDigitalCredential",
             "EuropeanUpperSecondaryEducationTranscriptOfRecords"
           ]
@@ -45,16 +45,23 @@
                 ],
                 "properties": {
                   "type": {
-                    "type": "array",
-                    "contains": {
-                      "const": "LearningAchievement"
-                    }
+                    "type": "string",
+                    "const": "LearningAchievement"
                   },
                   "awardedBy": {
                     "type": "object",
                     "required": [
-                      "awardingBody"
-                    ]
+                      "awardingBody",
+                      "location"
+                    ],
+                    "properties": {
+                      "awardingBody": {
+                        "type": "object"
+                      },
+                      "location": {
+                        "type": "object"
+                      }
+                    }
                   },
                   "wasDerivedFrom": {
                     "type": "array",
@@ -101,6 +108,15 @@
                 }
               }
             }
+          }
+        },
+        "displayParameter": {
+          "type": "object"
+        },
+        "credentialProfiles": {
+          "type": "array",
+          "items": {
+            "type": "string"
           }
         }
       }

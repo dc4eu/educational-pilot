@@ -17,7 +17,7 @@ EUHEPOE is aligned with the European Learning Model (ELM), EDCI framework, and s
 ### For Students:
 
 * **Instant Proof**: Enables immediate and secure verification of enrolment status by authorities and service providers.
-* **Mobility Support**: Facilitates participation in Erasmus+, internships, and joint degree programmes across borders.
+* **Mobility Support**: Facilitates participation in Erasmus+ exchanges, internships, and joint degree programmes across borders.
 * **Digital Readiness**: Supports digital-first services such as campus access, discounts, and public administration processes.
 
 ### For Relying Parties:
@@ -29,19 +29,15 @@ EUHEPOE is aligned with the European Learning Model (ELM), EDCI framework, and s
 ## Key Features
 
 * **ELM 3.2 Aligned Structure**:
-
-  * Identification of student (name, birth date, identifier).
+  * Identification of student (name, birth date in `date-time` format, identifier).
   * Awarding institution metadata (name, location).
   * Programme title, duration, and credit workload (ECTS).
   * Date of enrolment.
-
+  * Includes `displayParameter` (e.g., language, format) and `credentialProfiles` (e.g., Europass).
 * **Digital Format**:
-
-  * Issued as a JSON-LD W3C Verifiable Credential.
+  * Issued as a JSON-LD W3C Verifiable Credential with types `VerifiableCredential`, `EuropeanDigitalCredential`, `EuropeanHigherEducationProofOfEnrolment`, and `VerifiableAttestation`.
   * Signatures conforming to JAdES D-Zero profile.
-
 * **Interoperability**:
-
   * Designed for use in EBSI and Europass infrastructure.
   * Compliant with ELM, Europass, and ECTS standards.
 
@@ -49,13 +45,10 @@ EUHEPOE is aligned with the European Learning Model (ELM), EDCI framework, and s
 
 * **Visa and Residency Applications**:
   A student presents a verifiable EUHEPOE when applying for a study visa or renewing residence permits.
-
 * **Erasmus+ and International Mobility**:
   EUHEPOE is used to confirm enrolment in the home institution when applying to exchange programmes or host universities.
-
 * **Public Services Access**:
   Municipal services, transport discounts, or national tax benefits rely on verified enrolment status.
-
 * **Third-Party Verification**:
   Banks, housing providers, and insurance companies verify student status through the EUHEPOE credential.
 
@@ -90,7 +83,7 @@ This diagram shows how the key components of a proof of enrolment credential map
 
 | Field               | ELM Object   | Subobject         | Comments  |
 | ------------------- | ------------ | ----------------- | --------- |
-| Date of birth       | `elm:Person` | `elm:dateOfBirth` | Mandatory |
+| Date of birth       | `elm:Person` | `elm:dateOfBirth` | Mandatory, in date-time format (e.g., 2001-01-01T00:00:00+00:00) |
 | Family name         | `elm:Person` | `foaf:familyName` | Mandatory |
 | Given name          | `elm:Person` | `foaf:givenName`  | Mandatory |
 | Personal identifier | `elm:Person` | -                 | Optional  |
@@ -99,7 +92,7 @@ This diagram shows how the key components of a proof of enrolment credential map
 
 | Field                   | ELM Object                             | Subobject             | Comments  |
 | ----------------------- | -------------------------------------- | --------------------- | --------- |
-| Name of institution     | `elm:Organisation`                     | `elm:LegalIdentifier` | Mandatory |
+| Name of institution     | `elm:Organisation`                     | `elm:LegalIdentifier` | Mandatory, includes location (e.g., country) |
 | Name of study programme | `elm:LearningAchievementSpecification` | `dc:title`            | Mandatory |
 
 ### 3. Enrolment and Study Details
@@ -117,3 +110,4 @@ This diagram shows how the key components of a proof of enrolment credential map
 * National and cross-border trust frameworks should accept EUHEPOE as official proof.
 * The credential should be regularly re-issued upon status changes (e.g., graduation, withdrawal).
 * Integration with wallet-based ID and student apps is encouraged for seamless access.
+* The credential includes displayParameter and credentialProfiles for consistent rendering and interoperability.

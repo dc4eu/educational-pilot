@@ -1,0 +1,168 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://ec.europa.eu/credentials/v1",
+    "https://w3id.org/vc/status-list/2021/v1"
+  ],
+  "id": "urn:uuid:33333333-4444-5555-6666-777777777777",
+  "type": [
+    "VerifiableCredential",
+    "VerifiableAttestation",
+    "EuropeanDigitalCredential",
+    "EuropeanHigherEducationTranscriptOfRecords"
+  ],
+  "issuer": {
+    "id": "did:ebsi:zp9xupQMCXH3XC5FyvD7SXg"
+  },
+  "issuanceDate": "2025-05-30T07:05:19.708506Z",
+  "issued": "2025-05-30T07:05:19.708506Z",
+  "validFrom": "2025-05-30T07:05:19.708506Z",
+  "credentialSchema": [
+    {
+      "id": "https://tsr.ebsi.europa.eu/schemas/euhetor-highereducation-transcriptofrecords.schema.json",
+      "type": "JsonSchema"
+    }
+  ],
+  "credentialStatus": {
+    "id": "https://tsr.ebsi.europa.eu/status-lists/2021/33333333-4444-5555-6666-777777777777",
+    "type": "StatusList2021Entry",
+    "statusPurpose": "revocation",
+    "statusListIndex": "789",
+    "statusListCredential": "https://tsr.ebsi.europa.eu/status-lists/2021/credential"
+  },
+  "credentialSubject": {
+    "id": "did:key:example:john-doe",
+    "type": "Person",
+    "familyName": {
+      "en": "Doe"
+    },
+    "givenName": {
+      "en": "John"
+    },
+    "dateOfBirth": "1990-01-01",
+    "hasClaim": [
+      {
+        "type": [
+          "LearningAchievement"
+        ],
+        "title": {
+          "en": "Transcript of Academic Records - Computer Science Programme"
+        },
+        "awardedBy": {
+          "type": "AwardingProcess",
+          "awardingBody": [
+            {
+              "type": "Organisation",
+              "legalName": {
+                "en": "University of Example"
+              },
+              "eIDASIdentifier": {
+                "type": "LegalIdentifier",
+                "notation": "UEX-CS-001",
+                "spatial": {
+                  "type": "Concept",
+                  "notation": "ES"
+                }
+              }
+            }
+          ],
+          "location": {
+            "type": "Place",
+            "spatial": {
+              "type": "Concept",
+              "notation": "ES",
+              "prefLabel": {
+                "en": "Spain"
+              }
+            }
+          }
+        },
+        "wasDerivedFrom": [
+          {
+            "title": {
+              "en": "Algorithms and Data Structures"
+            },
+            "creditPoint": [
+              {
+                "type": "CreditPoint",
+                "framework": {
+                  "type": "Concept",
+                  "notation": "ECTS"
+                },
+                "point": "6"
+              }
+            ],
+            "grade": {
+              "type": "Note",
+              "noteLiteral": {
+                "en": "A"
+              }
+            },
+            "temporal": {
+              "startDate": "2022-09-01",
+              "endDate": "2022-12-15"
+            }
+          },
+          {
+            "title": {
+              "en": "Operating Systems"
+            },
+            "creditPoint": [
+              {
+                "type": "CreditPoint",
+                "framework": {
+                  "type": "Concept",
+                  "notation": "ECTS"
+                },
+                "point": "6"
+              }
+            ],
+            "grade": {
+              "type": "Note",
+              "noteLiteral": {
+                "en": "B"
+              }
+            },
+            "temporal": {
+              "startDate": "2023-01-10",
+              "endDate": "2023-05-20"
+            }
+          }
+        ],
+        "grantedBy": {
+          "type": "AwardingProcess",
+          "awardingBody": [
+            {
+              "type": "Organisation",
+              "legalName": {
+                "en": "University of Example"
+              },
+              "eIDASIdentifier": {
+                "type": "LegalIdentifier",
+                "notation": "UEX-CS-001",
+                "spatial": {
+                  "type": "Concept",
+                  "notation": "ES"
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "displayParameter": {
+    "language": "en",
+    "format": "pdf"
+  },
+  "credentialProfiles": [
+    "EuropeanHigherEducationTranscriptOfRecords"
+  ],
+  "proof": {
+    "type": "Ed25519Signature ensayo18",
+    "created": "2025-05-30T07:05:19.708506Z",
+    "proofPurpose": "assertionMethod",
+    "verificationMethod": "did:ebsi:zp9xupQMCXH3XC5FyvD7SXg#key-1",
+    "jws": "eyJhbGciOiJFZERTQSJ9..dHJhbnNjcmlwdC1zaWduYXR1cmUtc2ltdWxhdGVk"
+  }
+}

@@ -1,0 +1,254 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://ec.europa.eu/credentials/v1"
+  ],
+  "id": "urn:uuid:22222222-3333-4444-5555-666666666666",
+  "type": [
+    "VerifiableCredential",
+    "EuropeanDigitalCredential",
+    "EuropeanHigherEducationDiplomaSupplement",
+    "VerifiableAttestation"
+  ],
+  "issuer": {
+    "id": "did:ebsi:zp9xupQMCXH3XC5FyvD7SXg"
+  },
+  "issuanceDate": "2025-05-30T06:47:56.769151Z",
+  "issued": "2025-05-30T06:47:56.769151Z",
+  "validFrom": "2025-05-30T06:47:56.769151Z",
+  "credentialSchema": [
+    {
+      "id": "https://tsr.ebsi.europa.eu/schemas/euheds-highereducation-diplomasupplement.schema.json",
+      "type": "JsonSchema"
+    }
+  ],
+  "displayParameter": {
+    "language": ["en"],
+    "format": "pdf"
+  },
+  "credentialProfiles": [
+    {
+      "type": "Concept",
+      "notation": "Europass"
+    }
+  ],
+  "credentialSubject": {
+    "id": "did:key:example:john-doe",
+    "type": "Person",
+    "familyName": {
+      "en": "Doe"
+    },
+    "givenName": {
+      "en": "John"
+    },
+    "dateOfBirth": "1990-01-01T00:00:00+00:00",
+    "hasClaim": [
+      {
+        "type": [
+          "LearningAchievement"
+        ],
+        "title": {
+          "en": "Bachelor of Science in Computer Engineering"
+        },
+        "awardedBy": {
+          "type": "AwardingProcess",
+          "awardingDate": "2023-07-15T00:00:00Z",
+          "awardingBody": [
+            {
+              "type": "Organisation",
+              "legalName": {
+                "en": "University of Example"
+              },
+              "eIDASIdentifier": {
+                "type": "LegalIdentifier",
+                "notation": "UEX456",
+                "spatial": {
+                  "type": "Concept",
+                  "notation": "ES"
+                }
+              },
+              "additionalNote": [
+                {
+                  "type": "Note",
+                  "noteLiteral": {
+                    "en": "Accredited by Spanish Ministry of Education"
+                  }
+                }
+              ]
+            }
+          ],
+          "country": {
+            "type": "Concept",
+            "notation": "ES",
+            "prefLabel": {
+              "en": "Spain"
+            }
+          }
+        },
+        "specifiedBy": {
+          "type": "LearningAchievementSpecification",
+          "title": {
+            "en": "Bachelor of Science in Computer Engineering"
+          },
+          "qualification": {
+            "type": "Qualification",
+            "title": {
+              "en": "EQF Level 6 Bachelor Degree"
+            },
+            "eqfLevel": {
+              "type": "Concept",
+              "notation": "6"
+            },
+            "nqfLevel": {
+              "type": "Concept",
+              "notation": "6"
+            }
+          },
+          "educationSubject": [
+            {
+              "type": "Concept",
+              "notation": "0613",
+              "prefLabel": {
+                "en": "Software and Applications Development"
+              }
+            }
+          ],
+          "creditPoint": [
+            {
+              "type": "CreditPoint",
+              "framework": {
+                "type": "Concept",
+                "notation": "ECTS"
+              },
+              "point": "240"
+            }
+          ],
+          "duration": {
+            "type": "Duration",
+            "duration": "P4Y"
+          },
+          "defaultLanguage": [
+            {
+              "type": "Concept",
+              "notation": "en",
+              "prefLabel": {
+                "en": "English"
+              }
+            }
+          ],
+          "mode": [
+            {
+              "type": "Concept",
+              "notation": "full-time"
+            }
+          ],
+          "resultDistribution": {
+            "type": "ResultDistribution",
+            "description": {
+              "en": "A: 20%, B: 30%, C: 30%, D: 15%, F: 5%"
+            }
+          },
+          "GradingScheme": {
+            "type": "GradingScheme",
+            "description": {
+              "en": "A (Excellent) to F (Fail)"
+            }
+          },
+          "additionalNote": [
+            {
+              "type": "Note",
+              "noteLiteral": {
+                "en": "Final project on Blockchain Systems for Education"
+              }
+            },
+            {
+              "type": "Note",
+              "noteLiteral": {
+                "en": "Further info: www.university.example.edu"
+              }
+            },
+            {
+              "type": "Note",
+              "noteLiteral": {
+                "en": "Spanish higher education system: www.educacion.gob.es"
+              }
+            }
+          ]
+        },
+        "wasDerivedFrom": [
+          {
+            "title": {
+              "en": "Data Structures"
+            },
+            "creditPoint": [
+              {
+                "type": "CreditPoint",
+                "framework": {
+                  "type": "Concept",
+                  "notation": "ECTS"
+                },
+                "point": "6"
+              }
+            ],
+            "grade": {
+              "type": "Note",
+              "noteLiteral": {
+                "en": "A"
+              }
+            },
+            "temporal": {
+              "startDate": "2021-09-01",
+              "endDate": "2021-12-20"
+            }
+          },
+          {
+            "title": {
+              "en": "Distributed Systems"
+            },
+            "creditPoint": [
+              {
+                "type": "CreditPoint",
+                "framework": {
+                  "type": "Concept",
+                  "notation": "ECTS"
+                },
+                "point": "6"
+              }
+            ],
+            "grade": {
+              "type": "Note",
+              "noteLiteral": {
+                "en": "B+"
+              }
+            },
+            "temporal": {
+              "startDate": "2022-01-10",
+              "endDate": "2022-05-20"
+            }
+          }
+        ],
+        "entitlesTo": [
+          {
+            "type": "LearningEntitlement",
+            "title": {
+              "en": "Access to Master's level programmes"
+            },
+            "awardedBy": {
+              "type": "Organisation",
+              "legalName": {
+                "en": "University of Example"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "proof": {
+    "type": "JAdES-D-Zero",
+    "created": "2025-05-30T06:47:56.769151Z",
+    "proofPurpose": "assertionMethod",
+    "verificationMethod": "did:ebsi:zp9xupQMCXH3XC5FyvD7SXg#key-1",
+    "jws": "eyJhbGciOiJFUzI1NiJ9..c2ltdWxhdGVkLWphZGVzLWR6ZXJvLXN1cHBsZW1lbnQtc2lnbmF0dXJl"
+  }
+}
