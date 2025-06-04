@@ -62,11 +62,53 @@ European Digital Credentials (EDC) issued using Online Credential Builder (OCB) 
 
 EDC JSON structure (view 1)
 
-![Main components in a EDC credential produced by OCB](./images/EDC-view1.png "Main components in a EDC credential produced by OCB")
+```mermaid
+graph TD
+  Root["Root (Object)"]
+  credential["credential (Object)"]
+  deliveryDetails["deliveryDetails (Object)"]
+
+  Root --> credential
+  Root --> deliveryDetails
+```
 
 EDC JSON structure (view 2)
 
-![Main components - second level overview - in a EDC credential produced by OCB](./images/EDC-view2.png "Main components - second level overview - in a EDC credential produced by OCB")
+```mermaid
+graph TD
+  Root["Root (Object)"]
+  credential["credential (Object)"]
+  id["id (String)"]
+  type["type (Array)"]
+  credentialSchema["credentialSchema (Array)"]
+  evidence["evidence (Array)"]
+  credentialSubject["credentialSubject (Object)"]
+  issuanceDate["issuanceDate (String)"]
+  issued["issued (String)"]
+  validFrom["validFrom (String)"]
+  credentialProfiles["credentialProfiles (Array)"]
+  displayParameter["displayParameter (Object)"]
+  identifier["identifier (Array)"]
+  deliveryDetails["deliveryDetails (Object)"]
+  deliveryAddress["deliveryAddress (Array)"]
+  displayDetails["displayDetails (Object)"]
+
+  Root --> credential
+  credential --> id
+  credential --> type
+  credential --> credentialSchema
+  credential --> evidence
+  credential --> credentialSubject
+  credential --> issuanceDate
+  credential --> issued
+  credential --> validFrom
+  credential --> credentialProfiles
+  credential --> displayParameter
+  credential --> identifier
+  credential --> deliveryDetails
+  deliveryDetails --> deliveryAddress
+  deliveryDetails --> displayDetails
+```
 
 
 ## European Digital Credentials – W3C Compliant (EDC-W3C)
