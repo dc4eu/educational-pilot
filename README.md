@@ -48,7 +48,7 @@ The **[DTSRL](./DSTRL/README.md)** serves as the central knowledge base for impl
   
 - **[Toolkits](./DSTRL/toolkits/README.md)**: Implementation resources including technical architecture, component descriptions, workflows (RFCs), and specific use cases to help develop user journeys for both Classical PKI and Decentralised PKI approaches.
 
-The DTSRL provides practical, validated implementation patterns based on real deployments across 20+ European institutions, supporting both Pilot 1 (Classical PKI + SD-JWT) and Pilot 2 (Decentralised PKI + W3C VC) approaches.
+The DTSRL provides practical, validated implementation patterns based on real deployments across 20+ European institutions, supporting both Pilot 1 (Classical PKI unsng CRLs + SD-JWT) and Pilot 2 (Classical PKI uing CRLs + Decentralised PKI using Verifiable Data Registers + W3C VC) approaches.
 
 ## Key Features
 
