@@ -1,52 +1,45 @@
-# Universidad de Murcia (UMU)
+# universidad de murcia (umu) – pilot – wallet login to virtual campus
 
-## Scenario title
-Onboarding and academic credential issuance for university students
+## scenario description
 
-## Institution and piloting role
-Universidad de Murcia (UMU)  
-Role: issuer and verifier  
-SPOC assigned: SGAD  
-Pilot option: Pilot 2
+umu enables 20 undergraduate students to access its virtual campus using eaas from eudi wallet. the pilot adheres to **eidas2**, **arf** and **european education area** digital targets.
 
-## Description
-UMU's scenario pilots the onboarding of undergraduate students into the EUDI Wallet environment. Students receive digital credentials (EducationalID) through a wallet-enabled PID retrieval process, enabling subsequent verification and access to digital academic services.
+## key steps per user journey
 
-## Actors involved
-- UMU administration: issuer and verifier
-- Students: holders of credentials
-- IZERTIS: wallet distributor/support
+### 1. onboarding
 
-## User journeys
-### 1. Onboarding in education
-- Select 20 undergraduate students
-- Train on eIDAS2, PID, EAAs, DC4EU, EUDIW
-- Deliver EUDIW wallet to each student
-- Identity verification and issuance of PID retrieval credentials
-- Guide PID retrieval process
-- Execute and validate EducationalID issuance
+* pick 20 students.
+* issue wallets, retrieve pid, educationalid.
 
-### 2. Access to campus services
-- Credential used to access virtual campus services securely
+### 2. virtual campus access
 
-## Scenario details
-| Element                        | Description                                                                 |
-|-------------------------------|-----------------------------------------------------------------------------|
-| **Scenario Name**             | UMU onboarding and credential issuance                                     |
-| **Piloting Agent**            | Universidad de Murcia                                                      |
-| **End Users**                 | 20 undergraduate students                                                  |
-| **EAAs involved**             | EducationalID                                                              |
-| **PID Retrieval**             | Via credentials post identity verification                                 |
-| **Wallet Provider**           | IZERTIS                                                                    |
-| **Verification Service**      | Campus services                                                            |
-| **Governance / DIDs**         | Included, via DC4EU governance model                                       |
-| **Monitoring tools**          | Manual tracking, checklist and KPI dashboard                               |
-| **Integration level**         | LMS, identity systems, wallet                                              |
-| **Regulatory basis**          | eIDAS2, GDPR, national academic regulation                                 |
-| **Credential lifecycle**      | Issue, revoke, renew supported                                             |
-| **Training material**         | Provided during onboarding                                                 |
-| **Tracking/reporting**        | Based on DC4EU methodology                                                 |
-| **Escalation contact**        | SPOC: SGAD                                                                 |
-| **KPIs**                      | #Wallets delivered, #PID retrieved, #EducationalIDs issued                 |
+* moodle plugin requests educationalid; wallet returns proof; plugin validates.
 
----
+## scenario details
+
+| element                                  | description                                                             |
+| ---------------------------------------- | ----------------------------------------------------------------------- |
+| **scenario name**                        | wallet login to campus                                                  |
+| **piloting agent**                       | universidad de murcia                                                   |
+| **end users identification**             | 20 students                                                             |
+| **selection criteria**                   | first year                                                              |
+| **eaas involved**                        | pid, educationalid                                                      |
+| **institutional systems involved**       | moodle, issuer, verifier                                                |
+| **technical components**                 | plugin, issuer `https://issuer.umu.es/v1`                               |
+| **governance setup**                     | did ebsi                                                                |
+| **feedback & monitoring mechanism**      | moodle survey                                                           |
+| **regulatory context**                   | gdpr, eidas2                                                            |
+| **risk management considerations**       | login failure                                                           |
+| **credential lifecycle management**      | n/a                                                                     |
+| **infrastructure readiness**             | on‑prem cluster                                                         |
+| **onboarding and training plan**         | pdf guide                                                               |
+| **progress tracking and reporting plan** | weekly stats                                                            |
+| **issue escalation procedure**           | [support@umu.es](mailto:support@umu.es)                                 |
+| **success metrics and kpis**             | below                                                                   |
+| **spoc contact and validation status**   | ana pérez, [a.perez@umu.es](mailto:a.perez@umu.es); review 18 july 2025 |
+
+### success metrics and kpis
+
+| kpi                  | formula                  | source | tool    | frequency | target |
+| -------------------- | ------------------------ | ------ | ------- | --------- | ------ |
+| wallet login success | success ÷ attempts × 100 | logs   | grafana | weekly    | ≥97 %  |
