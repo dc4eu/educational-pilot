@@ -6,7 +6,7 @@ The DC4EU (Digital Credentials for Europe) project within the eIDAS Large Scale 
 
 ## System Architecture
 
-### 1. PID (Person Identification Data) - The Foundation Credential (same applies to MyAcademicIDIssuer, MyAllianceID,ProfessionalIdCredential,DoctorIdCredential,EngineerIdCredential,EuropeanStudentCard)
+### 1. PID (Person Identification Data) - The Foundation Credential
 
 The **PID** constitutes the foundation of the entire digital credentials ecosystem. It is the highest trust-level credential that establishes the legal identity of a natural person.
 
@@ -22,7 +22,7 @@ The **PID** constitutes the foundation of the entire digital credentials ecosyst
 - `personal_administrative_number`: Unique personal administrative number
 - Biometric and contact data for additional verification
 
-### 2. EducationalID - The Bridging Credential
+### 2. EducationalID - The Bridging Credential (same applies to MyAcademicIDIssuer, MyAllianceID,ProfessionalIdCredential,DoctorIdCredential,EngineerIdCredential,EuropeanStudentCard)
 
 The **EducationalID** acts as a bridge between legal identity (PID) and specific academic credentials.
 
