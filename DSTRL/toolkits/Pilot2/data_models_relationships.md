@@ -101,4 +101,4 @@ Legal Identity    Educational Identity         Specific Achievements
 
 ## Conclusion
 
-The relationship model between PID, EducationalID, and specific academic credentials in DC4EU represents a sophisticated approach to digital identity management in the educational domain. This hierarchical architecture ensures both the security and flexibility necessary for an interoperable and trustworthy European digital credentials ecosystem.
+The relationship model between PID, EducationalID (same applies to MyAcademicIDIssuer, MyAllianceID,ProfessionalIdCredential,DoctorIdCredential,EngineerIdCredential,EuropeanStudentCard), and specific academic credentials in DC4EU represents a sophisticated approach to digital identity management in the educational domain. This hierarchical architecture ensures both the security and flexibility necessary for an interoperable and trustworthy European digital credentials ecosystem.
