@@ -28,7 +28,7 @@ The **EducationalID** acts as a bridge between legal identity (PID) and specific
 
 **Linkage function:**
 - **Connection to PID**: The `id` field of the EducationalID links to the `document_number` of the PID
-- **Connection to academic credentials**: The `identifier` field (eduPersonPrincipalName) serves as the key to link with other credentials
+- **Connection to academic credentials**: The `identifier` field serves as the key to link with other credentials
 
 **Educational context-specific characteristics:**
 - Contains information specific to the educational context (affiliations, home organisation)
