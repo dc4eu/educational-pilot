@@ -36,7 +36,7 @@ The **EducationalID** acts as a bridge between legal identity (PID) and specific
 - Defines the identity assurance level through `eduPersonAssurance`
 - Allows for multiple simultaneous educational affiliations
 
-### 3. Specific Academic Credentials - Verifiable Achievements
+### 3. Specific Academic/POrofessional Qualifciations Credentials - Verifiable Achievements
 
 Credentials such as **Certificate of Enrolment** and other academic achievements are linked to the ecosystem through the EducationalID.
 
