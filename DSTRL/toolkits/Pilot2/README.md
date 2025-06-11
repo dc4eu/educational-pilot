@@ -27,6 +27,7 @@ Detailed descriptions of the main components from core technical infrastructure:
 - [Issuer Web GUI](./components/issuer-gui/README.md)
 - Issuer Agent
 - Authentic Source
+- [Main entities relationship](./data_models_relationships.md) (how PID relates to Non-foundational IDs ; how non.-foundational IDs relate to academic/professional achievements)
 - [Natural Person Holder Wallet provided by IZERTIS](./wallet/README.md)
 
 
