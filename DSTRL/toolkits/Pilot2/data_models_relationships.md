@@ -4,7 +4,7 @@
 
 The DC4EU (Digital Credentials for Europe) project within the eIDAS Large Scale Pilot programme establishes a hierarchical model of digital credentials that enables secure and interoperable verification of identity and academic/professional achievements. This model is based on three main types of credentials that form a chain of trust deployed in Pilot2 to facilitate relationship between Authentic source and EAAs' issuance.
 
-## System Architecture
+## System Architecture (Man entiies and relationships)
 
 ### 1. PID (Person Identification Data) - The Foundation Credential
 
@@ -69,6 +69,10 @@ PID (Government) → EducationalID (Institution) → Academic Credentials (Insti
      ↓                    ↓                            ↓
 Legal Identity    Educational Identity         Specific Achievements
 ```
+
+### Visual
+
+<img src="./PID-NnFoundationlD-Achievements.png" alt="Relationshio/primary keys" width="800">
 
 ## Benefits of the Model
 
