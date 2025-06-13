@@ -13,8 +13,8 @@ The **Identfy Wallet** is a decentralised digital wallet developed by **Izertis*
 
 ## Supported Platforms
 
-- **Android**: [Google Play Store](https://play.google.com/store/apps/details?id=com.identfydc4eu.app)
-- **iOS**: [TestFlight](https://testflight.apple.com/join/Z7WhgfKC)
+- **Android**: [Google Play Store](https://play.google.com/store/apps/details?id=com.identfydc4eu.app) v1.3.4 (build 12)
+- **iOS**: [TestFlight](https://testflight.apple.com/join/Z7WhgfKC) v1.3.4 (build 12)
 
 ## Structure
 
