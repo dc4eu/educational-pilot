@@ -62,7 +62,7 @@ This makes Pilot 1 ideal for **short-term adoption** and **basic cross-border wo
 * Signed using university's qualified certificate.
 * Issuer's trust anchor must be published in national Trusted List.
 
-> No support for EQF level, ECTS metadata, or semantic descriptors.
+<!--  > No support for EQF level, ECTS metadata, or semantic descriptors. -->
 
 ---
 
@@ -72,7 +72,7 @@ This makes Pilot 1 ideal for **short-term adoption** and **basic cross-border wo
 * Credential includes: course name, date, provider.
 * Issued and signed as SD-JWT-VC.
 
-> Not linked to ELM or formal curriculum ontologies. Usable for human recognition.
+<!--  > Not linked to ELM or formal curriculum ontologies. Usable for human recognition. -->
 
 ---
 
@@ -83,7 +83,7 @@ This makes Pilot 1 ideal for **short-term adoption** and **basic cross-border wo
 * Verifier uses issuer's certificate chain to validate signatures.
 * Trust verified via eIDAS Trusted List.
 
-> Selective disclosure ensures privacy; but verification logic lacks semantic processing.
+<!--  > Selective disclosure ensures privacy; but verification logic lacks semantic processing. -->
 
 ---
 
