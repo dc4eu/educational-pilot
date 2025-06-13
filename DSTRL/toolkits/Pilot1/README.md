@@ -25,7 +25,7 @@ A non-W3C credential type focusing on:
 > **Be aware:** Unlike W3C Verifiable Credentials (VCDM), SD-JWT-VC does not support:
 >
 > * Linked data / semantic web compatibility
-> * Ontologies (e.g. ELM, EQF, ESCO)
+> * Automatic processing checking Ontologies (e.g. ELM, EQF, ESCO)
 > * JSON-LD or RDF structures
 
 This makes Pilot 1 ideal for **short-term adoption** and **basic cross-border workflows**, but less suited for long-term semantic interoperability.
