@@ -2,7 +2,9 @@
 
 ## Overview
 
-JSON Schema for a Certificate of Professional Suitability that validates whether a registered physician has an up to date certificate of professional competence and is able to practice as a doctor.
+JSON Schema for a Certificate of Professional Suitability that validates whether a registered physician has an up to date certificate of professional competence. 
+
+This credential allows doctors, among other things, to carry out administrative procedures and to be able to practice as a doctor and cooperating doctor in other countries inside and outside the European Union.
 
 ## Schema Structure
 
