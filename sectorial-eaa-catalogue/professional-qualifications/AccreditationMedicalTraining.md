@@ -2,7 +2,9 @@
 
 ## Overview
 
-JSON Schema.... (TBC)
+Continuing Professional Development (CPD) and Continuing Medical Education (CME) training activities are essential for healthcare professionals to maintain and improve their skills. These activities are accredited by SEAFORMEC, which guarantees that the training meets the required standards.
+
+JSON Schema to accredit medical training activities with European Accreditation Council for Continuing Medical Education (EACCME®), an institution of the Union Européenne des Médecins Spécialistes (UEMS).
 
 ## Schema Structure
 
