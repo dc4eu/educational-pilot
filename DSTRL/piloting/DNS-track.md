@@ -45,6 +45,7 @@ Source of updated information: https:/sites.ey.com/:x:/r/sites/DC4EU-EBSINE/Shar
 | Romania      | Titu Maiorescu University | Nicolae       | Pending to sign internal agreement with CertSign    | 🔴 |
 | Spain        | University of Alcalá (UAH)                               | Sergio Caro                      | [lspuah.uah.es](https://uself-verifier-gui.lspuah.uah.es)         | 🟢 |
 | Spain        | University of Málaga                                     | Victoriano Giralt                | [lspuma.uma.es](https://uself-verifier-gui.lspuma.uma.es)         | 🟢 |
+| Spain        | University of Múrcia                                     | Antonio              | [lspum.um.es](https://uself-verifier-gui.lspum.um.es)    | 🟢 |
 | Spain | Universidad Carlos III de Madrid | Carlos Delgado | [lspuc3m.uc3m.es](https://uself-verifier-gui.lspuc3m.uc3m.es)    | 🟢 |
 | Spain | Universitat Rovira i Virgili     | Maria Teresa Bordas   | [lspurv.urv.cat](https://uself-verifier-gui.lspurv.urv.cat/)  | 🟢 |
 | Spain        | Consejo General de Colegios Oficiales de Médicos(CGCOM) | José Antonio Aguado / Laia Bota Porta    | [lspcgcom.cgcom.es](https://uself-verifier-gui.lspcgcom.cgcom.es)  | 🟢  |
