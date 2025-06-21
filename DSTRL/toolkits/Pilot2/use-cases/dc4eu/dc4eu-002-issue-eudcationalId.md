@@ -40,7 +40,7 @@ autonumber
   actor student as Student
   participant mobile as Mobile Wallet 
 
-  box LightWhite University Infrastructure
+  box LightPink University Infrastructure
     participant stdGUI as Student GUI
     participant agent as uSelf Issuer Agent
     participant authSource as Authentic Source
