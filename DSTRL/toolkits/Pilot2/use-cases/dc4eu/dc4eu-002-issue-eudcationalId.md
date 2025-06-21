@@ -40,13 +40,13 @@ autonumber
   actor student as Student
   participant mobile as Mobile Wallet 
 
-  box LightGreen University Infrastructure
+  box LightWhite University Infrastructure
     participant stdGUI as Student GUI
     participant agent as uSelf Issuer Agent
     participant authSource as Authentic Source
     participant db as Postgres DB
   end
-  box LightBlue EBSI Infrastructure
+  box LightYellow EBSI Infrastructure
     participant didr as EBSI DID Registry
     participant trr as EBSI TR Registry
     participant sr as EBSI Schema Registry
