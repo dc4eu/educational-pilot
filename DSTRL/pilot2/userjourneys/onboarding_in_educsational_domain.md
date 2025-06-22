@@ -5024,3 +5024,150 @@ Complete API response from URV's authentic source service demonstrating successf
 5. **Institutional Identity Mapping**: Translation from legal identity to educational identity attributes
 
 ### B.2 Credential Offer Response
+
+In order to avoid overloading the result of the QR code, the standard defines an entry point based on the `credential_offer_uri` parameter:
+
+```bash
+openid-credential-offer://?credential_offer_uri=https://issuer.eu/issuer/offers/719307744250317677
+```
+
+The response to resolving the `credential_offer_uri` will vary depending on whether it is a No Authorise flow or a Pre-Authorise flow.
+
+```json
+{
+   "credential_issuer":"https://issuer.eu/issuer",
+   "credentials":[
+      {
+         "format":"jwt_vc",
+         "types":[
+            "VerifiableCredential",
+            "CertificateProfessionalCompetence"
+         ],
+         "trust_framework":{
+            "name":"uSelf Agent Issuer",
+            "type":"CertificateProfessionalCompetence",
+            "uri":"CertificateProfessionalCompetence testing"
+         },
+         "display":[
+            {
+               "name":"CertificateProfessionalCompetence",
+               "description":"Schema defining a verifiable credential that validates whether a registered physician has an up to date certificate of professional competence"
+            }
+         ],
+         "credentialSubject":{
+            "id":{
+               "display":[
+                  {
+                     "name":"id"
+                  }
+               ]
+            },
+            "personal_administrative_number":{
+               "display":[
+                  {
+                     "name":"personal_administrative_number",
+                     "description":"Nationally registered physician number"
+                  }
+               ]
+            },
+            "given_name":{
+               "display":[
+                  {
+                     "name":"given_name",
+                     "description":"Natural person name"
+                  }
+               ]
+            },
+            "family_name":{
+               "display":[
+                  {
+                     "name":"family_name",
+                     "description":"Natural person surname"
+                  }
+               ]
+            },
+            "is_entitled":{
+               "value_type":"boolean",
+               "display":[
+                  {
+                     "name":"is_entitled",
+                     "description":"Indicates whether the physician is legally entitled to practice as a doctor."
+                  }
+               ]
+            }
+         }
+      }
+   ]
+}
+```
+
+## B.3 Token Request
+
+The wallet must obtain an access token to request the credential. In the No Authorise flow, this involves making a token request to the authorisation endpoint.
+
+## B.4 Token Response
+
+The authorisation server responds with an access token that will be used to request the credential:
+
+```json
+{
+   "access_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiIsImtpZCI6ImRpZDprZXk6ejJkbXpEODFjZ1B4OFZraTdKYnV1TW1GWXJXUGdZb3l0eWtVWjNleXFodDFqOUticzVpc0Uyc0pjWk1oaFpyOUN4UHVBOVBqNXFQNk5uU0pmTVhnS3RQZWdNRG53eXc2ODh3QjJCc1VmazNnSlJBMnFnUWNVRGttVE5wRHJYNjhwRFlzZE1hS3EzV29Tc1JqdGN3WXBzYVh1MkVFVVdFTkZEMTMxZVdYc0VDN3F0cGRrZyJ9...",
+   "token_type":"Bearer",
+   "expires_in":1741012594331,
+   "c_nonce":"8450206689214712010",
+   "c_nonce_expires_in":1741012594331
+}
+```
+
+Key elements in the token response:
+- **access_token**: The JWT token used to authenticate subsequent requests
+- **token_type**: Indicates the token type (typically "Bearer")
+- **expires_in**: Token validity period in seconds
+- **c_nonce**: A nonce value used for proof of possession
+- **c_nonce_expires_in**: Expiry time for the nonce value
+
+## B.5 Credential Request
+
+Once the access token has been obtained, the end user can request the verifiable credential:
+
+```http
+POST /credential
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAi...
+
+{
+   "format":"jwt_vc",
+   "types":[
+      "VerifiableCredential",
+      "CertificateProfessionalCompetence"
+   ],
+   "proof":{
+      "proof_type":"jwt",
+      "jwt":"eyJ0eXAiOiJvcGVuaWQ0dmNpLXByb29mK2p3dCIsImtpZCI6ImRpZDprZXk6ejJkbXpEODFjZ1B4OFZraTdKYnV1TW1GWXJXUGdZb3l0eWtVWjNleXFodDFqOUticzVpc0Uyc0pjWk1oaFpyOUN4UHVBOVBqNXFQNk5uU0pmTVhnS3RQZWdNRG53eXc2ODh3QjJCc1VmazNnSlJBMnFnUWNVRGttVE5wRHJYNjhwRFlzZE1hS3EzV29Tc1JqdGN3WXBzYVh1MkVFVVdFTkZEMTMxZVdYc0VDN3F0cGRrZyN6MmRtekQ4MWNnUHg4VmtpN0pidXVNbUZZcldQZ1lveXR5a1VaM2V5cWh0MWo5S2JzNWlzRTJzSmNaTWhoWnI5Q3hQdUE5UGo1cVA2Tm5TSmZNWGdLdFBlZ01Ebnd5dzY4OHdCMkJzVWZrM2dKUkEycWdRY1VEa21UTnBEclg2OHBEWXNkTWFLcTNXb1NzUmp0Y3dZcHNhWHUyRUVVV0VORkQxMzFlV1hzRUM3cXRwZGtnIiwiYWxnIjoiRVMyNTYifQ.eyJpYXQiOjE3NDEwMTE5OTQuMDY3LCJpc3MiOiJkaWQ6a2V5OnoyZG16RDgxY2dQeDhWa2k3SmJ1dU1tRllyV1BnWW95dHlrVVozZXlxaHQxajlLYnM1aXNFMnNKY1pNaGhacjlDeFB1QTlQajVxUDZOblNKZk1YZ0t0UGVnTURud3l3Njg4d0IyQnNVZmszZ0pSQTJxZ1FjVURrbVROcERyWDY4cERZc2RNYUtxM1dvU3NSanRjd1lwc2FYdTJFRVVXRU5GRDEzMWVXWHNFQzdxdHBka2ciLCJhdWQiOiJodHRwczovL3RhZHBvbGUtaW50ZXJuYWwtbWFtbWFsLm5ncm9rLWZyZWUuYXBwL2lzc3VlciIsImV4cCI6MTc0MTAxMjI5NCwibm9uY2UiOiI4NDUwMjA2Njg5MjE0NzEyMDEwIn0.SBGk5rshNgCMO49dNiSAxkMO-LVbP2aUWADFxclTzz8uDNvZAkqGAvKqFJGCyUvzA5u_pSZYnY6nODi6atOC6g"
+   }
+}
+```
+
+The credential request includes:
+- **format**: The credential format (jwt_vc for JWT-based Verifiable Credentials)
+- **types**: Array of credential types being requested
+- **proof**: Proof of possession containing:
+  - **proof_type**: Type of proof (typically "jwt")
+  - **jwt**: A signed JWT proving the wallet controls the key material
+
+## B.6 Credential Response
+
+Finally, the issuer responds with the requested verifiable credential. The credential is typically returned in JWT format and contains the claims about the credential subject as specified in the credential offer.
+
+The credential response completes the issuance flow, providing the wallet with a signed verifiable credential that can be stored and later presented to verifiers as proof of the attested claims.
+
+## Summary
+
+This document outlines the credential issuance process following the OpenID4VCI (OpenID for Verifiable Credential Issuance) protocol. The process consists of:
+
+1. **Credential Offer**: The issuer provides a credential offer via a URI
+2. **Token Exchange**: The wallet obtains an access token for authentication
+3. **Credential Request**: Using the access token, the wallet requests the credential with proof of possession
+4. **Credential Response**: The issuer returns the signed verifiable credential
+
+This flow ensures secure issuance of verifiable credentials whilst maintaining privacy and preventing replay attacks through the use of nonces and proof of possession mechanisms.
