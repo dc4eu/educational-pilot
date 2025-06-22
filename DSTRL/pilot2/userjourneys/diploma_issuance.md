@@ -12,17 +12,6 @@ This document presents the comprehensive narrative for EUHEMC (European Higher E
 
 ---
 
-## Document Metadata
-
-- **Version**: 1.0
-- **Date**: June 2025
-- **Status**: Final
-- **Language**: English (UK)
-- **Framework**: DC4EU Pilot 2 - EUHEMC Diploma Schema
-- **Compliance**: ELM v3.2, EBSI Trust Framework, Bologna Process
-
----
-
 ## Table of Contents
 
 1. [Quick Reference Guide](#1-quick-reference-guide)
