@@ -12,18 +12,6 @@ This document presents the comprehensive narrative for Person Identification Dat
 
 ---
 
-## Document Metadata
-
-- **Version**: 1.0
-- **Date**: June 2025
-- **Status**: Final
-- **Language**: English (UK)
-- **Framework**: DC4EU Large Scale Pilots
-- **Compliance**: eIDAS 2.0, Member State Identity Regulations
-- **Scope**: Out of scope for Large Scale Pilots (Member State competence)
-
----
-
 ## Table of Contents
 
 1. [Quick Reference Guide](#1-quick-reference-guide)
