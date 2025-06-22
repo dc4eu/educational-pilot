@@ -1,71 +1,84 @@
-# Onboarding on educational/professional qualifications domain - EducationalID Issuance: Complete User Journey Narrative with Technical Implementation
+# Educational Domain Onboarding: Complete EducationalID Issuance User Journey
 
 ## Executive Summary
 
-This document presents the complete narrative for EducationalID issuance within the DC4EU Pilot 2 framework, implementing a No Authorize OpenID VCI flow with **mandatory Verifiable Presentation of PID credentials**. The journey demonstrates the sophisticated orchestration between multiple actors, systems, and trust mechanisms that enable secure, interoperable educational credential issuance across European borders.
+This document presents the comprehensive narrative for EducationalID issuance within the DC4EU Pilot 2 framework, implementing a No Authorise OpenID VCI flow with **mandatory Verifiable Presentation of PID credentials**. The journey demonstrates sophisticated orchestration between multiple actors, systems, and trust mechanisms that enable secure, interoperable educational credential issuance across European borders.
 
 **Critical Prerequisite**: Before any EducationalID can be issued, the citizen's **Person Identification Data (PID)** must be verified through the eIDAS 2.0 framework. This foundational identity verification is the cornerstone upon which all educational credentials are built.
 
 **Key Innovation**: This implementation showcases the world's first production-ready dPKI system for educational credentials, integrating EBSI trust registries with traditional educational infrastructure to create a seamless, trustworthy credential ecosystem built upon verified foundational identity.
 
-**Bottom Line**: Maria García, a Spanish student, successfully obtains her EducationalID from Universitat Rovira i Virgili through a process that validates her foundational identity via Spanish PID, matches it with university records, and issues a cryptographically secure educational credential recognizable across all European universities.
-
----
-
-## Quick Reference Guide
-
-### Process Overview
-1. **Prerequisites**: University data preparation and identity matching infrastructure
-2. **PID Verification**: Mandatory foundational identity validation (Steps 1-22)
-3. **Educational ID Issuance**: Institutional credential creation (Steps 23-33)
-4. **Cross-Border Recognition**: European-wide validity and trust
-
-### Key Actors
-- **Student**: Maria García (credential holder)
-- **University**: Universitat Rovira i Virgili (dual role: Authentic Source + Issuer)
-- **Infrastructure**: EBSI trust registries and verification services
-- **Governance**: Spanish Ministry (root trust anchor)
-
-### Technical Standards
-- **PID Schema**: eIDAS 2.0 Person Identification Data (EU Regulation 2024/2977)
-- **EducationalID Schema**: eduGAIN/SCHAC standards for institutional identity
-- **Protocols**: OpenID4VCI, W3C Verifiable Credentials, EBSI trust framework
+**Bottom Line**: Maria García, a Spanish student, successfully obtains her EducationalID from Universitat Rovira i Virgili through a process that validates her foundational identity via Spanish PID, matches it with university records, and issues a cryptographically secure educational credential recognisable across all European universities.
 
 ---
 
 ## Table of Contents
 
-1. [Infrastructure Prerequisites](#1-infrastructure-prerequisites)
-2. [The Story: Maria's Educational Identity Journey](#2-the-story-marias-educational-identity-journey)
-3. [Actor Ecosystem and Roles](#3-actor-ecosystem-and-roles)
-4. [Technical Architecture Overview](#4-technical-architecture-overview)
-5. [Detailed User Journey Flow](#5-detailed-user-journey-flow)
-6. [Trust Verification Mechanisms](#6-trust-verification-mechanisms)
-7. [Technical Message Details](#7-technical-message-details)
-8. [Implementation Insights](#8-implementation-insights)
-9. [**Appendix A: Schema Specifications**](#appendix-a-schema-specifications)
-10. [**Appendix B: Technical Reference Materials**](#appendix-b-technical-reference-materials)
+1. [Quick Reference Guide](#1-quick-reference-guide)
+2. [Infrastructure Prerequisites](#2-infrastructure-prerequisites)
+3. [The Story: Maria's Educational Identity Journey](#3-the-story-marias-educational-identity-journey)
+4. [Actor Ecosystem and Roles](#4-actor-ecosystem-and-roles)
+5. [Technical Architecture Overview](#5-technical-architecture-overview)
+6. [Detailed User Journey Flow](#6-detailed-user-journey-flow)
+7. [Trust Verification Mechanisms](#7-trust-verification-mechanisms)
+8. [Technical Message Details](#8-technical-message-details)
+9. [Implementation Insights](#9-implementation-insights)
+10. [Appendices](#10-appendices)
 
 ---
 
-## 1. Infrastructure Prerequisites
+## 1. Quick Reference Guide
 
-### 1.1 Critical Foundation Requirements
+### 1.1 Process Overview
 
-**Before any EducationalID can be issued**, institutions must complete essential infrastructure preparation. This is not optional—it's a **mandatory prerequisite** for participation in the DC4EU framework.
+1. **Prerequisites**: University data preparation and identity matching infrastructure
+2. **PID Verification**: Mandatory foundational identity validation (Steps 1-22)
+3. **Educational ID Issuance**: Institutional credential creation (Steps 23-33)
+4. **Cross-Border Recognition**: European-wide validity and trust
 
-### 1.2 Data Store Preparation for EAA Issuance
+### 1.2 Key Actors
 
-#### **Student Registry Population**
-- **Complete enrollment database**: All active students with validated enrollment data
+- **Student**: Maria García (credential holder)
+- **University**: Universitat Rovira i Virgili (dual role: Authentic Source + Issuer)
+- **Infrastructure**: EBSI trust registries and verification services
+- **Governance**: Spanish Ministry (root trust anchor)
+
+### 1.3 Technical Standards
+
+- **PID Schema**: eIDAS 2.0 Person Identification Data (EU Regulation 2024/2977)
+- **EducationalID Schema**: eduGAIN/SCHAC standards for institutional identity
+- **Protocols**: OpenID4VCI, W3C Verifiable Credentials, EBSI trust framework
+
+### 1.4 Critical Success Factors
+
+- **Mandatory PID Verification**: No EducationalID can be issued without verified foundational identity
+- **Identity Correlation**: Robust matching between legal identity (PID) and institutional records
+- **eIDAS 2.0 Compliance**: Full regulatory alignment with European digital identity frameworks
+- **Cross-Border Interoperability**: Standards-based approach ensuring European-wide recognition
+
+---
+
+## 2. Infrastructure Prerequisites
+
+### 2.1 Critical Foundation Requirements
+
+Before any EducationalID can be issued, institutions must complete essential infrastructure preparation. This is not optional—it's a **mandatory prerequisite** for participation in the DC4EU framework.
+
+### 2.2 Data Store Preparation for EAA Issuance
+
+#### Student Registry Population
+
+- **Complete enrolment database**: All active students with validated enrolment data
 - **Historical records**: Previous academic years and graduation records
 - **Programme metadata**: Detailed information about academic programmes and levels
-- **Status management**: Real-time enrollment status tracking and updates
+- **Status management**: Real-time enrolment status tracking and updates
 
-#### **Identity Correlation Infrastructure**
+#### Identity Correlation Infrastructure
+
 **Core Challenge**: Bridging the gap between **legal identity** (Spanish PID with DNI) and **institutional identity** (university student records)
 
 **Technical Implementation Requirements**:
+
 - **Primary key mapping**: DNI numbers from PID mapped to student database records
 - **Validation algorithms**: Automated matching of PID attributes with student records
 - **Conflict resolution procedures**: Handling name variations, address changes, etc.
@@ -78,58 +91,64 @@ Spanish National Identity → University Student Database
 ├── Apellidos: García → family_name: García
 ├── Nombre: Maria → given_name: Maria
 ├── Fecha Nacimiento: 2004-03-15 → birth_date: 2004-03-15
-└── Estado: Activo → enrollment_status: ACTIVE
+└── Estado: Activo → enrolment_status: ACTIVE
 ```
 
-### 1.3 Identity Matching Mechanisms
+### 2.3 Identity Matching Mechanisms
 
-#### **Multi-Layer Validation Process**
+#### Multi-Layer Validation Process
+
 1. **Primary Key Correlation**: DNI from PID serves as primary matching key
 2. **Attribute Verification**: Name and birth date provide additional confirmation
-3. **Enrollment Validation**: Current student status and credential authorization
-4. **Temporal Verification**: Enrollment dates and validity periods
+3. **Enrolment Validation**: Current student status and credential authorisation
+4. **Temporal Verification**: Enrolment dates and validity periods
 
-#### **Real-Time Matching Infrastructure**
-- **API-based correlation**: Standardized endpoints for identity resolution
+#### Real-Time Matching Infrastructure
+
+- **API-based correlation**: Standardised endpoints for identity resolution
 - **Confidence scoring**: Mathematical confidence levels for matching accuracy
 - **Exception handling**: Procedures for handling matching conflicts or failures
-- **Performance optimization**: Sub-second response times for user experience
+- **Performance optimisation**: Sub-second response times for user experience
 
-### 1.4 eIDAS 2.0 Compliance Infrastructure
+### 2.4 eIDAS 2.0 Compliance Infrastructure
 
-#### **Authentic Source Certification**
+#### Authentic Source Certification
+
 - **Article 45b compliance**: Official certification as eIDAS 2.0 Authentic Source
 - **Data quality assurance**: Verified accuracy and completeness of student records
-- **API standardization**: eIDAS 2.0 compliant interfaces for data access
+- **API standardisation**: eIDAS 2.0 compliant interfaces for data access
 - **Security measures**: Encryption, access control, and audit capabilities
 
-#### **Dual Role Architecture**
+#### Dual Role Architecture
+
 Universities must implement **clear separation** between:
+
 - **Authentic Source function**: Authoritative data repository
 - **Issuer function**: Credential creation and issuance
-- **API gateway**: Standardized access layer between roles
+- **API gateway**: Standardised access layer between roles
 
 ---
 
-## 2. The Story: Maria's Educational Identity Journey
+## 3. The Story: Maria's Educational Identity Journey
 
-### 2.1 Setting the Scene
+### 3.1 Setting the Scene
 
 **Meet Maria García**: A 20-year-old computer science student at Universitat Rovira i Virgili (URV) in Catalonia, Spain. Maria is about to begin her second year and needs to establish her digital educational identity to access university services, participate in international exchange programmes, and eventually apply for graduate studies across Europe.
 
 It's Monday morning, September 2025. Maria sits in her dormitory room, smartphone in hand, ready to embark on a digital journey that will transform how she interacts with educational institutions across Europe. Little does she know that behind the simple act of "getting her student ID" lies a sophisticated dance of cryptographic protocols, trust verification systems, and international cooperation frameworks.
 
-### 2.2 The Human Story
+### 3.2 The Human Story
 
 **The Challenge**: Maria needs more than just a physical student card. In the digital age of European education, she requires a **Verifiable Educational ID** that:
-- Proves her authentic enrollment at URV
+
+- Proves her authentic enrolment at URV
 - Enables automatic recognition across EU universities
 - Integrates with the EUDI Wallet ecosystem
 - Supports future mobility and academic recognition
 
 **The Solution**: Through the DC4EU framework, Maria will receive a cryptographically secure, EBSI-anchored Educational ID that serves as her digital passport to the European Education Area. **However, this credential can only be issued after her foundational identity has been verified through her Spanish Person Identification Data (PID)**—a mandatory prerequisite that ensures the highest levels of trust and security.
 
-### 2.3 The Journey Begins
+### 3.3 The Journey Begins
 
 Maria opens her **EUDI Wallet** application, a sleek interface that hides the complexity of European digital identity infrastructure. She taps on "Add Educational Credential" and selects "Universitat Rovira i Virgili" from a list of participating institutions.
 
@@ -137,11 +156,12 @@ What happens next is a masterpiece of digital orchestration, involving multiple 
 
 ---
 
-## 3. Actor Ecosystem and Roles
+## 4. Actor Ecosystem and Roles
 
-### 3.1 Primary Actors
+### 4.1 Primary Actors
 
-#### **🎓 Maria García (Natural Person/Student)**
+#### 🎓 Maria García (Natural Person/Student)
+
 - **Role**: Credential holder and primary user
 - **Systems**: EUDI Wallet (Mobile Application)
 - **Responsibilities**:
@@ -150,7 +170,8 @@ What happens next is a masterpiece of digital orchestration, involving multiple 
   - Present PID for verification
   - Accept issued credential into wallet
 
-#### **🏛️ Universitat Rovira i Virgili (Dual Role Institution)**
+#### 🏛️ Universitat Rovira i Virgili (Dual Role Institution)
+
 - **Primary Role**: Educational credential issuer
 - **Secondary Role**: **eIDAS 2.0 Authentic Source** for student data
 - **Systems**: 
@@ -159,16 +180,17 @@ What happens next is a masterpiece of digital orchestration, involving multiple 
 - **Key Personnel**: Registrar Office, Academic Secretary
 - **Critical Architecture Note**: URV operates in **dual capacity**:
   - **As Authentic Source**: Maintains authoritative student records under eIDAS 2.0 Article 45b
-  - **As Issuer**: Consumes data from its own Authentic Source via standardized APIs
+  - **As Issuer**: Consumes data from its own Authentic Source via standardised APIs
 - **Responsibilities**:
-  - Verify student enrollment and academic standing (Authentic Source role)
+  - Verify student enrolment and academic standing (Authentic Source role)
   - Issue cryptographically secure Educational IDs (Issuer role)
   - Maintain clear separation between data provision and credential issuance
   - Integrate with European trust frameworks
 
-### 3.2 Technical Infrastructure Actors
+### 4.2 Technical Infrastructure Actors
 
-#### **🔐 uSelf Issuer Agent (Credential Issuance Service)**
+#### 🔐 uSelf Issuer Agent (Credential Issuance Service)
+
 - **Role**: Technical orchestrator for credential issuance
 - **Location**: University infrastructure (`lspurv.urv.cat`)
 - **Responsibilities**:
@@ -177,23 +199,24 @@ What happens next is a masterpiece of digital orchestration, involving multiple 
   - Handle cryptographic operations
   - Generate QR codes and credential offers
 
-#### **📊 Authentic Source (Official eIDAS 2.0 Role)**
+#### 📊 Authentic Source (Official eIDAS 2.0 Role)
+
 - **Role**: **Official eIDAS 2.0 Authentic Source** - Authoritative repository of verified student information
 - **Played by**: Universitat Rovira i Virgili (in dual capacity)
-- **System**: Standardized API-accessible student registry with encrypted records
+- **System**: Standardised API-accessible student registry with encrypted records
 - **eIDAS 2.0 Compliance**: Certified authentic source for educational data under Article 45b
 - **Critical Prerequisites**:
   - **Data Store Preparation**: Pre-population of educational data repositories for potential EAA issuance
   - **Identity Matching Infrastructure**: Mechanisms to correlate legal identity (PID) with institutional identity (EducationalID)
   - **Cross-Reference Systems**: Linking Spanish DNI numbers with university student records
 - **Responsibilities**:
-  - Maintain authoritative student enrollment records
-  - Provide standardized API access to verified data
+  - Maintain authoritative student enrolment records
+  - Provide standardised API access to verified data
   - Execute real-time identity matching between PID and educational records
   - Ensure data integrity and audit compliance
-  - Support continuous synchronization between legal and institutional identities
+  - Support continuous synchronisation between legal and institutional identities
 
-#### **🌐 EBSI Infrastructure Ecosystem**
+#### 🌐 EBSI Infrastructure Ecosystem
 
 **EBSI DID Registry**
 - **Role**: Decentralised identifier resolution
@@ -211,94 +234,90 @@ What happens next is a masterpiece of digital orchestration, involving multiple 
 - **Role**: EBSI integration gateway
 - **Function**: Bridge university infrastructure with EBSI services
 
-#### **🆔 uSelf PID Issuer Agent**
+#### 🆔 uSelf PID Issuer Agent
+
 - **Role**: Personal Identity Data validation service
 - **Function**: Verify student's foundational identity credentials
 
-### 3.3 Governance and Oversight Actors
+### 4.3 Governance and Oversight Actors
 
-#### **🏛️ Spanish Ministry of Universities and Research**
+#### 🏛️ Spanish Ministry of Universities and Research
+
 - **Role**: Root Trust Anchor (RootTAO)
 - **Authority**: Issues EAA credentials authorising URV to issue Educational IDs
 - **Scope**: National level governance and compliance
 
-#### **🇪🇺 European Blockchain Services Infrastructure (EBSI)**
+#### 🇪🇺 European Blockchain Services Infrastructure (EBSI)
+
 - **Role**: European-level trust infrastructure
 - **Function**: Provide decentralised trust registry and schema validation
 - **Governance**: Multi-national consortium ensuring European standards
 
-### 3.4 Supporting Systems
+### 4.4 Supporting Systems
 
-#### **📱 Student GUI (Web Interface)**
+#### 📱 Student GUI (Web Interface)
+
 - **Role**: User-facing interface for credential requests
 - **Location**: `https://uself-verifier-gui.lspurv.urv.cat/`
 - **Function**: Generate QR codes and facilitate user interactions
 
-#### **🔗 Mobile Wallet (EUDI Wallet)**
+#### 🔗 Mobile Wallet (EUDI Wallet)
+
 - **Role**: Credential storage and presentation
 - **Standards**: W3C Verifiable Credentials, OpenID4VP
 - **Features**: Multi-format support, selective disclosure, cross-border compatibility
 
 ---
 
-## 4. Technical Architecture Overview
+## 5. Technical Architecture Overview
 
-### 4.1 System Architecture Diagram
+### 5.1 System Architecture Diagram
 
-```mermaid
-graph TB
-    subgraph "Student Domain"
-        Student[👩‍🎓 Maria García]
-        Mobile[📱 EUDI Wallet]
-    end
-    
-    subgraph "University Infrastructure (lspurv.urv.cat)"
-        GUI[🖥️ Student GUI]
-        Agent[🔧 uSelf Issuer Agent]
-        AuthSource[📊 Authentic Source<br/>**eIDAS 2.0 Official Role**]
-        DB[🗄️ Student Registry DB]
-        API[🔗 Standardized APIs<br/>**eIDAS 2.0 Compliant**]
-    end
-    
-    subgraph "EBSI Infrastructure"
-        DIDR[🆔 DID Registry]
-        TRR[🛡️ Trust Registry] 
-        SR[📋 Schema Registry]
-        Proxy[🌐 EBSI Proxy]
-        PIDAgent[🔐 PID Issuer Agent]
-    end
-    
-    subgraph "Trust Governance"
-        Ministry[🏛️ Spanish Ministry]
-        EAA[📜 EAA Credentials<br/>**Authentic Source Authority**]
-    end
-
-    Student --> Mobile
-    Mobile <--> GUI
-    GUI <--> Agent
-    Agent <--> API
-    API <--> AuthSource
-    AuthSource <--> DB
-    
-    Agent <--> DIDR
-    Agent <--> TRR
-    Agent <--> SR
-    Agent <--> Proxy
-    Proxy <--> PIDAgent
-    
-    Ministry --> EAA
-    EAA --> TRR
-    TRR --> Agent
-    
-    classDef eidas fill:#e1f5fe,stroke:#01579b,stroke-width:3px
-    class AuthSource,API,EAA eidas
+```
+┌─────────────────────────┐
+│   Student Domain       │
+├─────────────────────────┤
+│ 👩‍🎓 Maria García        │
+│ 📱 EUDI Wallet          │
+└─────────────────────────┘
+             │
+             ▼
+┌─────────────────────────────────────────────────────────┐
+│   University Infrastructure (lspurv.urv.cat)           │
+├─────────────────────────────────────────────────────────┤
+│ 🖥️ Student GUI                                         │
+│ 🔧 uSelf Issuer Agent                                   │
+│ 📊 Authentic Source (eIDAS 2.0 Official Role)          │
+│ 🗄️ Student Registry DB                                  │
+│ 🔗 Standardised APIs (eIDAS 2.0 Compliant)             │
+└─────────────────────────────────────────────────────────┘
+             │
+             ▼
+┌─────────────────────────────────────────────────────────┐
+│   EBSI Infrastructure                                   │
+├─────────────────────────────────────────────────────────┤
+│ 🆔 DID Registry                                         │
+│ 🛡️ Trust Registry                                       │
+│ 📋 Schema Registry                                      │
+│ 🌐 EBSI Proxy                                           │
+│ 🔐 PID Issuer Agent                                     │
+└─────────────────────────────────────────────────────────┘
+             │
+             ▼
+┌─────────────────────────────────────────────────────────┐
+│   Trust Governance                                      │
+├─────────────────────────────────────────────────────────┤
+│ 🏛️ Spanish Ministry                                     │
+│ 📜 EAA Credentials (Authentic Source Authority)         │
+└─────────────────────────────────────────────────────────┘
 ```
 
 **Key Architectural Principle**: The university operates in **dual capacity** under eIDAS 2.0:
-1. **As Authentic Source**: Authoritative holder of student data (Article 45b compliance)
-2. **As Issuer**: Consumer of authentic source data via standardized APIs for credential creation
 
-### 4.2 Trust Flow Architecture
+1. **As Authentic Source**: Authoritative holder of student data (Article 45b compliance)
+2. **As Issuer**: Consumer of authentic source data via standardised APIs for credential creation
+
+### 5.2 Trust Flow Architecture
 
 The system implements a sophisticated **multi-layer trust model**:
 
@@ -307,7 +326,7 @@ The system implements a sophisticated **multi-layer trust model**:
 3. **European Layer**: EBSI trust registries validate cross-border recognition
 4. **Technical Layer**: Cryptographic proofs ensure credential integrity
 
-### 4.3 Protocol Stack
+### 5.3 Protocol Stack
 
 - **Application Layer**: OpenID for Verifiable Credentials (OID4VCI)
 - **Credential Layer**: W3C Verifiable Credentials Data Model
@@ -317,11 +336,11 @@ The system implements a sophisticated **multi-layer trust model**:
 
 ---
 
-## 5. Detailed User Journey Flow
+## 6. Detailed User Journey Flow
 
-### 5.1 Phase 1: Journey Initiation (Steps 1-6)
+### 6.1 Phase 1: Journey Initiation (Steps 1-6)
 
-#### **Step 1: The Request**
+#### Step 1: The Request
 *Monday, 9:15 AM - Maria's dormitory*
 
 Maria opens her web browser and navigates to the URV student portal. The interface is clean and multilingual, supporting both Catalan and Spanish as befitting the region's linguistic diversity.
@@ -333,7 +352,7 @@ GET https://student-web/issue
 
 **Behind the Scenes**: The student GUI system initialises, checking server status and preparing the credential issuance infrastructure.
 
-#### **Step 2: Credential Offer Generation**
+#### Step 2: Credential Offer Generation
 *The system springs into action*
 
 The Student GUI communicates with the uSelf Issuer Agent to generate a credential offer specifically tailored for Educational ID issuance.
@@ -349,7 +368,7 @@ GET https://uself-agent/issuer/credential-offer
 - Issuer identity: URV's DID
 - Security nonce for replay protection
 
-#### **Step 3: QR Code Magic**
+#### Step 3: QR Code Magic
 *The bridge between digital and physical*
 
 The Student GUI receives the credential offer and transforms it into a QR code—a visual bridge between the web interface and Maria's mobile wallet.
@@ -361,7 +380,7 @@ openid-credential-offer://?credential_offer_uri=https://issuer.eu/issuer/offers/
 
 The QR code contains not the full credential offer (which would be too large) but a secure URI pointing to the offer details. This follows EBSI recommendations for optimal user experience.
 
-#### **Step 4: Mobile Engagement**
+#### Step 4: Mobile Engagement
 *Maria scans the QR code*
 
 Maria holds up her EUDI Wallet and scans the QR code. The wallet's sophisticated parsing engine recognises the OpenID credential offer format and prepares for the issuance flow.
@@ -371,7 +390,7 @@ Maria holds up her EUDI Wallet and scans the QR code. The wallet's sophisticated
 - "This credential will allow you to access university services and participate in European student mobility"
 - "Tap to continue"
 
-#### **Step 5: Protocol Handshake Initiation**
+#### Step 5: Protocol Handshake Initiation
 *Behind the scenes coordination*
 
 The mobile wallet processes the QR code and initiates the OpenID4VCI flow, establishing a secure communication channel with the university's systems.
@@ -381,7 +400,7 @@ The mobile wallet processes the QR code and initiates the OpenID4VCI flow, estab
 HTTP 302 Redirect to Authorization Endpoint
 ```
 
-#### **Step 6: Authorization Request**
+#### Step 6: Authorization Request
 *Establishing trust*
 
 The wallet constructs a formal authorisation request, following the OpenID4VCI "No Authorize" flow pattern. **Crucially, this flow requires mandatory presentation of a PID (Person Identification Data) credential to verify Maria's foundational identity.**
@@ -404,11 +423,11 @@ client_id=https://issuer.eu/auth
 
 **Technical Note**: The `presentation_definition` specifically requires a valid PID credential—no EducationalID can be issued without this foundational verification step.
 
-### 5.2 Phase 2: Foundational Identity Verification - The Mandatory PID Process (Steps 7-22)
+### 6.2 Phase 2: Foundational Identity Verification - The Mandatory PID Process (Steps 7-22)
 
 **Critical Process Note**: This phase represents the **absolute prerequisite** for EducationalID issuance. Under eIDAS 2.0 regulations and DC4EU framework requirements, **no educational credential can be issued without verified foundational identity**. The PID verification process ensures that Maria's educational credentials are anchored to her legally verified national identity.
 
-#### **Step 7: The Trust Challenge**
+#### Step 7: The Trust Challenge
 *Proving who you are at the foundational level*
 
 The uSelf Issuer Agent responds with a **direct_post** challenge, requesting Maria to present her PID credential. This is not optional—it's a **mandatory step** that forms the foundation of all subsequent trust relationships.
@@ -419,7 +438,7 @@ The uSelf Issuer Agent responds with a **direct_post** challenge, requesting Mar
 - "🔒 **Security Notice**: This verification is mandatory under eIDAS 2.0 regulations"
 - "ℹ️ This information will be used only for identity verification purposes"
 
-#### **Step 8: Consent and Privacy**
+#### Step 8: Consent and Privacy
 *Maria takes control - but verification is mandatory*
 
 This is a crucial moment in the user journey. While Maria must provide explicit consent to share her PID with the university, **she cannot proceed without this verification**. The EUDI Wallet presents clear information about:
@@ -449,7 +468,7 @@ This is a crucial moment in the user journey. While Maria must provide explicit 
 - 🔒 `email_address`, `mobile_phone_number` (contact info - optional)
 - 🔒 `sex` (not relevant for educational credentials)
 
-#### **Step 9-10: The Digital Handshake**
+#### Steps 9-10: The Digital Handshake
 *Secure credential presentation - foundational identity proven*
 
 Maria taps "Share PID" and the wallet constructs a **Verifiable Presentation containing her mandatory PID credential**. This presentation is cryptographically signed and includes:
@@ -478,7 +497,7 @@ Content-Type: application/json
 }
 ```
 
-**Maria's PID Credential Structure** (eIDAS 2.0 Compliant - See [Appendix A.1](#a1-eidas-20-pid-schema)):
+**Maria's PID Credential Structure** (eIDAS 2.0 Compliant):
 
 Maria's PID credential follows the official eIDAS 2.0 Person Identification Data schema, containing essential identity attributes such as:
 - **Core Identity**: Family name (García), given name (Maria), birth date, birth place
@@ -493,30 +512,30 @@ Maria's PID credential follows the official eIDAS 2.0 Person Identification Data
 - **Validity**: `expiry_date`, `issuing_authority`, `issuing_country`
 - **Jurisdiction**: `issuing_jurisdiction` (ES-CT for Catalonia)
 
-#### **Steps 11-21: The Foundational Trust Verification Symphony**
+#### Steps 11-21: The Foundational Trust Verification Symphony
 *EBSI infrastructure validates Maria's foundational identity*
 
 What happens next is invisible to Maria but represents **the most critical trust verification process** in the entire digital credential ecosystem. The uSelf Issuer Agent orchestrates a **comprehensive verification of Maria's foundational identity** across multiple EBSI services:
 
-**Step 11-12: PID DID Resolution**
+**Steps 11-12: PID DID Resolution**
 ```http
 GET https://ebsi-did-registry/did/{maria-pid-issuer-did}
 ```
 **Purpose**: Resolve the DID of the Spanish authority that issued Maria's PID to verify the cryptographic keys and ensure the PID credential is properly signed by legitimate national authorities.
 
-**Step 13-14: National Authority Trust Registry Verification**
+**Steps 13-14: National Authority Trust Registry Verification**
 ```http
 GET https://ebsi-tr-registry/tr
 ```
 **Purpose**: Check the EBSI Trust Registry to verify that the Spanish national identity authorities are officially authorised to issue Person Identification Data credentials under eIDAS 2.0.
 
-**Step 15-16: PID Schema Validation**
+**Steps 15-16: PID Schema Validation**
 ```http
 GET https://ebsi-schema-registry/schema
 ```
 **Purpose**: Validate that Maria's PID credential conforms to the official European PID schema and data format requirements.
 
-**Step 17-20: Comprehensive PID Verification**
+**Steps 17-20: Comprehensive PID Verification**
 ```http
 GET https://ebsi-proxy/verify
 ```
@@ -527,7 +546,7 @@ GET https://ebsi-proxy/verify
 - ✅ **eIDAS 2.0 compliance verification** for regulatory alignment
 - ✅ **Temporal validity checking** to ensure the PID is currently valid
 
-**Step 21-22: Foundational Identity Verification Success**
+**Steps 21-22: Foundational Identity Verification Success**
 The comprehensive verification process completes successfully, **confirming Maria's foundational identity**, and the system issues an authorization code to proceed with Educational ID issuance.
 
 **Verification Result**: The system now has **cryptographic proof** that:
@@ -536,9 +555,9 @@ The comprehensive verification process completes successfully, **confirming Mari
 - The verification complies with all eIDAS 2.0 requirements
 - She is legally authorised to receive educational credentials in Spain
 
-### 5.3 Phase 3: Credential Issuance (Steps 23-33)
+### 6.3 Phase 3: Credential Issuance (Steps 23-33)
 
-#### **Step 23-24: Access Token Exchange**
+#### Steps 23-24: Access Token Exchange
 *Authorization to proceed*
 
 The wallet receives the authorization code and exchanges it for an access token, following OAuth 2.0 security patterns.
@@ -553,7 +572,7 @@ grant_type=authorization_code
 &code=glkFFoisdfEui4312
 ```
 
-#### **Step 25-26: The Moment of Truth**
+#### Steps 25-26: The Moment of Truth
 *Credential creation*
 
 With valid authorization, the wallet sends the formal credential request. This triggers the creation of Maria's Educational ID.
@@ -576,7 +595,7 @@ Content-Type: application/json
 }
 ```
 
-#### **Step 27-30: Authentic Source Data Retrieval via Standardized APIs**
+#### Steps 27-30: Authentic Source Data Retrieval via Standardised APIs
 *The crucial eIDAS 2.0 separation of roles*
 
 This step represents a **critical architectural principle** of eIDAS 2.0 implementation and demonstrates the **pre-established identity matching infrastructure**. Although URV operates both as the **Authentic Source** and the **Issuer**, these roles are clearly separated:
@@ -608,12 +627,12 @@ This step represents a **critical architectural principle** of eIDAS 2.0 impleme
    - **Primary Match**: DNI "12345678A" → Student ID in database
    - **Name Verification**: "García, Maria" → Student record validation
    - **Birth Date Confirmation**: "2004-03-15" → Additional identity verification
-   - **Enrollment Verification**: Current active enrollment status
+   - **Enrolment Verification**: Current active enrolment status
 
 **Database Query (Internal to Authentic Source)**:
 ```sql
-SELECT s.studentId, s.enrollmentStatus, s.programme, s.level, 
-       s.enrollmentDate, s.expectedGraduation, s.institution,
+SELECT s.studentId, s.enrolmentStatus, s.programme, s.level, 
+       s.enrolmentDate, s.expectedGraduation, s.institution,
        p.dni, p.apellidos, p.nombre, p.fecha_nacimiento
 FROM students s 
 INNER JOIN personas p ON s.persona_id = p.id
@@ -625,462 +644,9 @@ WHERE p.dni = '12345678A'
   AND s.authorizedCredentialIssuance = true
 ```
 
-**Authentic Source Response** (via standardized API - See [Appendix B.1](#b1-authentic-source-api-response)):
+**Authentic Source Response**:
 
 The authentic source provides a comprehensive response that demonstrates successful **identity matching** between Maria's legal identity (PID) and her institutional identity (student record). This response includes both the verified correlation and the educational data needed for EducationalID issuance.
-
-**Critical Identity Matching Results**:
-- ✅ **DNI Match**: 12345678A found in student database
-- ✅ **Name Match**: García, Maria confirmed in enrollment records  
-- ✅ **Birth Date Match**: 2004-03-15 validated against university records
-- ✅ **Enrollment Verified**: Active student status confirmed
-- ✅ **Credential Authorization**: Student authorized for EducationalID issuance
-
-**Architectural Innovation**: This design demonstrates how eIDAS 2.0 enables institutional **dual roles** while maintaining:
-- **Trust boundaries**: Clear separation of functions even within the same organization
-- **Identity correlation**: Robust matching between legal and institutional identity
-- **Interoperability**: Standardized APIs that work across organizational boundaries
-- **Compliance**: Full regulatory alignment with European digital identity frameworks
-
-#### **Step 31: Credential Generation**
-*The digital birth certificate*
-
-The agent constructs Maria's Educational ID credential using the **eduGAIN/SCHAC-based schema** (See [Appendix A.2](#a2-educationalid-schema)) rather than ELM. This credential follows the specific EducationalID schema designed for non-foundational identity in educational contexts.
-
-The generated EducationalID credential incorporates:
-- **Verified Identity Data**: From the PID verification process
-- **Educational Attributes**: Following eduGAIN/SCHAC standards
-- **Institutional Affiliation**: URV-specific organizational data
-- **Assurance Levels**: REFEDS framework compliance
-
-**Key Schema Features** (detailed in [Appendix A.2](#a2-educationalid-schema)):
-- **SCHAC Unique Codes**: For cross-institutional identity resolution
-- **eduGAIN Attributes**: Standard educational federation attributes
-- **REFEDS Assurance**: Identity assurance framework compliance
-- **Multi-value Support**: Arrays for affiliations and assurance levels
-  
-#### **Step 32: Event Notification**
-*System coordination*
-
-The agent sends a `credential_issued` event to the Student GUI, enabling real-time updates to any connected systems and maintaining audit trails for compliance purposes.
-
-#### **Step 33: Delivery to Maria**
-*The moment of completion*
-
-The Educational ID credential is delivered to Maria's EUDI Wallet. The wallet validates the credential signature, stores it securely, and notifies Maria of successful issuance.
-
-**User Experience**: Maria sees a success notification:
-- "Your Educational ID has been issued successfully!"
-- "You can now access university services and participate in international programmes"
-- "This credential is valid until June 30, 2027"
-
----
-
-## 6. Trust Verification Mechanisms
-
-### 6.1 Multi-Layer Trust Architecture with eIDAS 2.0 Compliance
-
-The EducationalID issuance process implements sophisticated **multi-layer trust verification** with full eIDAS 2.0 regulatory alignment, **built upon mandatory foundational identity verification**:
-
-#### **Layer 1: Foundational Identity (PID) - MANDATORY PREREQUISITE**
-- **Role**: **Absolute prerequisite** for all educational credentials
-- **Source**: Spanish national identity infrastructure
-- **Verification**: eIDAS-compliant digital identity (mandatory)
-- **Assurance Level**: High (Level of Assurance 3)
-- **Cryptographic Standard**: ES256 signatures
-- **Legal Basis**: eIDAS 2.0 Article 3 - foundational identity requirement
-- **Process**: **Complete EBSI verification of PID before any educational credential issuance**
-
-#### **Layer 2: Authentic Source Authority (eIDAS 2.0 Article 45b)**
-- **Role**: URV as certified eIDAS 2.0 Authentic Source
-- **Authority**: Spanish Ministry EAA credentials authorizing authentic source function
-- **Data Integrity**: Authoritative student records with cryptographic proofs
-- **API Standards**: eIDAS 2.0 compliant standardized access protocols
-- **Dependency**: **Only operates after Layer 1 (PID) verification is complete**
-
-#### **Layer 3: Institutional Issuance Authority (EAA)**
-- **Source**: Spanish Ministry of Universities and Research
-- **Mechanism**: Electronic Attestation of Attributes (EAA)
-- **Scope**: Authorizes URV to issue Educational IDs based on authentic source data
-- **Validation**: EBSI Trust Registry verification
-- **Prerequisite**: **Requires verified foundational identity from Layer 1**
-
-#### **Layer 4: European Recognition (EBSI)**
-- **Framework**: European Blockchain Services Infrastructure
-- **Function**: Cross-border trust propagation
-- **Standards**: W3C Verifiable Credentials, eduGAIN/SCHAC
-- **Governance**: Multi-national European cooperation
-- **Foundation**: **Built upon verified PID from Layer 1**
-
-#### **Layer 5: Technical Integrity**
-- **Cryptography**: Multiple signature verification
-- **Revocation**: Real-time status checking
-- **Audit**: Comprehensive logging and traceability
-- **Privacy**: Selective disclosure and data minimization
-- **Anchor**: **All technical integrity traces back to verified PID**
-
-### 6.2 Trust Chain Example with eIDAS 2.0 Roles
-
-```
-🇪🇺 European Union (eIDAS 2.0 Regulatory Framework)
-  ↓
-🇪🇸 Spanish Ministry of Universities (Root Trust Anchor)
-  ↓ [Issues EAA - Authentic Source Authority]
-🏛️ URV as Authentic Source (eIDAS 2.0 Article 45b Role)
-  ↓ [Standardized API provides verified data]
-🔧 URV as Issuer (EAA-Authorized Credential Issuer)
-  ↓ [Issues Educational ID based on authentic source data]
-👩‍🎓 Maria García (Credential Holder)
-  ↓ [Presents Credential]
-🏫 Any European University (Relying Party)
-```
-
-**Key Innovation**: The dual role architecture demonstrates how institutions can operate as both **Authentic Source** and **Issuer** under eIDAS 2.0 while maintaining clear functional separation and regulatory compliance.
-
-### 6.3 Security Properties
-
-- **Authenticity**: Cryptographically proven issuer identity
-- **Integrity**: Tamper-evident credential structure  
-- **Non-repudiation**: Immutable audit trail
-- **Privacy**: Minimal data disclosure with consent
-- **Availability**: Distributed verification infrastructure
-- **Interoperability**: European standards compliance
-
----
-
-## 7. Technical Message Details
-
-### 7.1 Credential Offer Response (Complete)
-
-The credential offer provides comprehensive metadata about the EducationalID credential, including display parameters and supported credential subject attributes (detailed structure in [Appendix B.2](#b2-credential-offer-response)).
-
-**Key Features**:
-- **Credential Type**: `VerifiableEducationalID` with `jwt_vc` format
-- **Display Configuration**: URV branding and multilingual support
-- **Attribute Mapping**: Complete eduGAIN/SCHAC attribute support
-- **Cryptographic Binding**: ES256 algorithm with DID-based binding
-
-### 7.2 Authorization Request (Complete)
-
-The authorization request demonstrates sophisticated presentation definition validation ensuring only valid **eIDAS 2.0 compliant PID credentials** are accepted (complete technical details in [Appendix B.3](#b3-authorization-request)).
-
-**Key Validation Requirements**:
-- ✅ **Credential Type**: Must be `PersonIdentificationData` (eIDAS 2.0 PID)
-- ✅ **Required Fields**: `family_name`, `given_name`, `birth_date`, `nationality`
-- ✅ **Administrative Number**: `personal_administrative_number` for unique identification
-- ✅ **Issuing Country**: Must be "ES" (Spain) for this university
-- ✅ **Cryptographic Validation**: ES256 signature algorithm required
-
-### 7.3 Final Credential Response
-
-The final credential response delivers the completed EducationalID to Maria's EUDI Wallet in JWT format, cryptographically signed by URV's institutional key (complete response structure in [Appendix B.4](#b4-final-credential-response)).
-
-**Response Components**:
-- **JWT-encoded Credential**: Complete EducationalID in W3C VC format
-- **Digital Signature**: ES256 signature by URV's DID key
-- **EBSI Anchoring**: Schema and trust registry references
-- **Expiration Management**: Validity period and renewal information
-
----
-
-## 8. Implementation Insights
-
-### 8.1 Schema Architecture: eIDAS 2.0 PID vs. eduGAIN EducationalID
-
-**Critical Distinction**: The EducationalID journey demonstrates the **architectural separation** between different credential types in the DC4EU framework:
-
-#### **Foundational Identity (PID) - eIDAS 2.0 Regulation Compliant**
-- **Schema Base**: Official eIDAS 2.0 Person Identification Data schema
-- **Legal Reference**: EU Regulation 2024/2977 (eIDAS 2.0)
-- **Purpose**: Foundational legal identity for all EU digital services
-- **Standards**: ISO 3166-1 (country codes), ISO/IEC 5218 (sex values)
-- **Focus**: "Who you are legally according to national authorities"
-- **Key Attributes**: 
-  - Core identity: `family_name`, `given_name`, `birth_date`, `birth_place`
-  - Legal status: `nationality`, `personal_administrative_number`
-  - Administrative: `issuing_authority`, `issuing_country`, `expiry_date`
-  - Privacy-sensitive: `resident_address`, `portrait`, `email_address`
-
-#### **Non-Foundational Identity Credentials (EducationalID)**
-- **Schema Base**: eduGAIN/SCHAC standards, not ELM
-- **Purpose**: Institutional identity and affiliation
-- **Standards**: REFEDS, eduGAIN, SCHAC
-- **Focus**: "Who you are within an educational context"
-- **Key Attributes**: 
-  - Educational identity: `eduPersonPrincipalName`, `eduPersonScopedAffiliation`
-  - Institutional affiliation: `schacPersonalUniqueCode`, `schacHomeOrganization`
-  - Assurance: REFEDS Assurance Framework compliance
-
-#### **Academic Achievement Credentials (ELM-Based)**
-- **Schema Base**: European Learning Model (ELM) 3.2
-- **Purpose**: Learning outcomes and qualifications
-- **Standards**: ELM, EDCI, Europass
-- **Focus**: "What you have learned and achieved"
-- **Key Attributes**:
-  - Learning achievements, qualifications
-  - Assessment results, credit systems
-  - Quality assurance information
-
-### 8.2 eIDAS 2.0 PID Integration Benefits
-
-The PID's use of **official eIDAS 2.0 standards** provides:
-
-1. **Legal Certainty**: Direct compliance with EU Regulation 2024/2977
-2. **Cross-Border Recognition**: Automatic recognition across all EU Member States
-3. **High Assurance**: Highest level of identity verification available in EU
-4. **Standardized Format**: Common structure across all European identity providers
-5. **Privacy Protection**: Built-in selective disclosure capabilities
-6. **Administrative Integration**: Direct link to national identity systems
-
-### 8.3 Identity Verification Chain
-
-**Complete Identity Verification Flow**:
-```
-🇪🇸 Spanish National Identity (DNI) 
-  ↓ [Digital Transformation]
-🆔 eIDAS 2.0 PID Credential (PersonIdentificationData)
-  ↓ [Verification & Validation]
-🎓 EducationalID Credential (eduGAIN/SCHAC)
-  ↓ [Institutional Affiliation]
-📜 Academic Achievement Credentials (ELM)
-```
-
-This structure ensures that **every educational credential** can be traced back to **verified national identity**, providing the highest levels of trust and legal certainty across European borders.
-
-### 8.4 Technical Innovation: Identity Matching Infrastructure
-
-The DC4EU framework's **identity matching infrastructure** represents a critical innovation in European digital identity:
-
-#### **Pre-Deployment Data Preparation**
-Before any credential can be issued, institutions must establish:
-
-1. **Comprehensive Data Stores**: Complete population of student databases with verified enrollment information
-2. **Identity Correlation Systems**: Cross-reference tables linking national identity numbers (DNI) to institutional records
-3. **Validation Algorithms**: Automated matching procedures for PID attributes against educational records
-4. **Temporal Synchronization**: Systems to maintain up-to-date correlation between legal and institutional identity
-
-#### **Identity Matching Process**
-**The Critical Bridge**: Connecting **legal identity** (Spanish PID) with **institutional identity** (EducationalID)
-
-**Three-Layer Validation**:
-- **Primary Key Match**: DNI from PID directly correlates to student database primary key
-- **Attribute Verification**: Name and birth date provide multi-factor identity confirmation
-- **Enrollment Validation**: Current student status and credential issuance authorization
-
-#### **Technical Architecture Benefits**
-- **Separation of Concerns**: Legal identity management vs. institutional identity management
-- **Real-time Correlation**: Instant matching between PID and educational records
-- **Audit Compliance**: Complete traceability of identity matching decisions
-- **Privacy Protection**: Minimum necessary data correlation with selective disclosure
-- **Scalability**: Standardized patterns applicable across all European educational institutions
-
-This infrastructure ensures that **every educational credential** is properly anchored to **verified legal identity** while maintaining the flexibility needed for diverse institutional requirements across Europe.
-
-### 8.5 European Digital Sovereignty
-
-This implementation represents **European digital sovereignty** in action:
-
-- **European standards**: W3C VC, EBSI, eIDAS 2.0
-- **European infrastructure**: EBSI trust registries and verification
-- **European governance**: Member State cooperation and recognition
-- **European values**: Privacy, security, and citizen control
-
----
-
-## Appendix A: Schema Specifications
-
-### A.1 eIDAS 2.0 PID Schema
-
-The official Person Identification Data schema as defined by EU Regulation 2024/2977:
-
-```json
-{
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Person Identification Data for the Natural Person",
-  "description": "Reference: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202402977",
-  "type": "object",
-  "allOf": [
-    {
-      "$ref": "./node_modules/@cef-ebsi/vcdm1.1-attestation-schema/schema.json"
-    },
-    {
-      "type": "object",
-      "properties": {
-        "credentialSubject": {
-          "type": "object",
-          "properties": {
-            "family_name": {
-              "type": "string",
-              "description": "Current last name(s) or surname(s) of the user to whom the person identification data relates.",
-              "minLength": 1
-            },
-            "given_name": {
-              "type": "string",
-              "description": "Current first name(s), including middle name(s) where applicable, of the user to whom the person identification data relates.",
-              "minLength": 1
-            },
-            "birth_date": {
-              "type": "string",
-              "format": "date",
-              "description": "Day, month, and year on which the user to whom the person identification data relates was born."
-            },
-            "birth_place": {
-              "type": "string",
-              "description": "The country as an alpha-2 country code as specified in ISO 3166-1, or the state, province, district, or local area or the municipality, city, town, or village where the user to whom the person identification data relates was born."
-            },
-            "nationality": {
-              "type": "array",
-              "items": {
-                "type": "string",
-                "enum": ["AF", "AX", "AL", "DZ", "AS", "AD", "AO", "AI", "AQ", "AG", "AR", "AM", "AW", "AU", "AT", "AZ", "BS", "BH", "BD", "BB", "BY", "BE", "BZ", "BJ", "BM", "BT", "BO", "BQ", "BA", "BW", "BV", "BR", "IO", "BN", "BG", "BF", "BI", "CV", "KH", "CM", "CA", "KY", "CF", "TD", "CL", "CN", "CX", "CC", "CO", "KM", "CD", "CG", "CK", "CR", "CI", "HR", "CU", "CW", "CY", "CZ", "DK", "DJ", "DM", "DO", "EC", "EG", "SV", "GQ", "ER", "EE", "SZ", "ET", "FK", "FO", "FJ", "FI", "FR", "GF", "PF", "TF", "GA", "GM", "GE", "DE", "GH", "GI", "GR", "GL", "GD", "GP", "GU", "GT", "GG", "GN", "GW", "GY", "HT", "HM", "VA", "HN", "HK", "HU", "IS", "IN", "ID", "IR", "IQ", "IE", "IM", "IL", "IT", "JM", "JP", "JE", "JO", "KZ", "KE", "KI", "KP", "KR", "KW", "KG", "LA", "LV", "LB", "LS", "LR", "LY", "LI", "LT", "LU", "MO", "MG", "MW", "MY", "MV", "ML", "MT", "MH", "MQ", "MR", "MU", "YT", "MX", "FM", "MD", "MC", "MN", "ME", "MS", "MA", "MZ", "MM", "NA", "NR", "NP", "NL", "NC", "NZ", "NI", "NE", "NG", "NU", "NF", "MK", "MP", "NO", "OM", "PK", "PW", "PS", "PA", "PG", "PY", "PE", "PH", "PN", "PL", "PT", "PR", "QA", "RE", "RO", "RU", "RW", "BL", "SH", "KN", "LC", "MF", "PM", "VC", "WS", "SM", "ST", "SA", "SN", "RS", "SC", "SL", "SG", "SX", "SK", "SI", "SB", "SO", "ZA", "GS", "SS", "ES", "LK", "SD", "SR", "SJ", "SE", "CH", "SY", "TW", "TJ", "TZ", "TH", "TL", "TG", "TK", "TO", "TT", "TN", "TR", "TM", "TC", "TV", "UG", "UA", "AE", "GB", "US", "UM", "UY", "UZ", "VU", "VE", "VN", "VG", "VI", "WF", "EH", "YE", "ZM", "ZW"]
-              },
-              "description": "One or more alpha-2 country codes as specified in ISO 3166-1, representing the nationality of the user to whom the person identification data relates."
-            },
-            "personal_administrative_number": {
-              "type": "string",
-              "description": "A value assigned to the natural person that is unique among all personal administrative numbers issued by the provider of person identification data."
-            },
-            "expiry_date": {
-              "type": "string",
-              "format": "date-time",
-              "description": "Date (and if possible time) when the person identification data will expire."
-            },
-            "issuing_authority": {
-              "type": "string",
-              "description": "Name of the administrative authority that issued the person identification data."
-            },
-            "issuing_country": {
-              "type": "string",
-              "pattern": "^[A-Z]{2}$",
-              "description": "Alpha-2 country code, as specified in ISO 3166-1, of the country or territory of the provider of the person identification data."
-            }
-          },
-          "required": [
-            "family_name",
-            "given_name",
-            "birth_date",
-            "birth_place",
-            "nationality",
-            "expiry_date",
-            "issuing_authority",
-            "issuing_country"
-          ]
-        }
-      }
-    }
-  ]
-}
-```
-
-### A.2 EducationalID Schema
-
-The eduGAIN/SCHAC-based schema for non-foundational educational identity:
-
-```json
-{
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Verifiable Educational ID",
-  "description": "Schema of a Verifiable Educational ID for a natural person participating in the educational use cases",
-  "type": "object",
-  "allOf": [
-    {
-      "$ref": "./node_modules/@cef-ebsi/vcdm1.1-attestation-schema/schema.json"
-    },
-    {
-      "properties": {
-        "credentialSubject": {
-          "description": "Defines additional properties on credentialSubject to describe IDs that do not have a substantial level of assurance.",
-          "type": "object",
-          "properties": {
-            "id": {
-              "description": "Defines a unique identifier of the credential subject. DID:Key value, generated by the user wallet and associated to the credential holder.",
-              "type": "string"
-            },
-            "identifier": {
-              "description": "Defines an alternative identifier for the credential subject and has as value the value of eduPersonPrincipalName attribute.",
-              "type": "string"
-            },
-            "schacPersonalUniqueCode": {
-              "description": "schacPersonalUniqueCode can have different forms urn:schac:personalUniqueCode:int:esi:<sHO>:<code>",
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "schacPersonalUniqueID": {
-              "description": "value is different in different countries, mostly urn:schac:personalUniqueID:<country-code>:<code>.",
-              "type": "string"
-            },
-            "schacHomeOrganization": {
-              "description": "Specifies the home organization of the credential subject",
-              "type": "string"
-            },
-            "familyName": {
-              "description": "Defines current family name(s) of the credential subject which corresponds to the eduGAIN attribute sn",
-              "type": "string"
-            },
-            "firstName": {
-              "description": "Defines current first name(s) of the credential subject which corresponds to the eduGAIN attribute givenName",
-              "type": "string"
-            },
-            "displayName": {
-              "description": "The name(s) that should appear in white-pages-like applications",
-              "type": "string"
-            },
-            "dateOfBirth": {
-              "description": "Defines date of birth of the credential subject (format: yyyyMMdd)",
-              "type": "string",
-              "format": "date"
-            },
-            "mail": {
-              "description": "(primary) e-mail address of the credential subject as registered by the educational institution",
-              "type": "string"
-            },
-            "eduPersonPrincipalName": {
-              "description": "Unique, persistent identifier of the credential subject",
-              "type": "string"
-            },
-            "eduPersonPrimaryAffiliation": {
-              "description": "Primary Affiliation within Home Organization",
-              "type": "string"
-            },
-            "eduPersonAffiliation": {
-              "description": "Affiliation within Home Organization. It can contain multiple values such as member, student, employee, faculty, staff, affiliate, alumni, etc.",
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "eduPersonScopedAffiliation": {
-              "description": "The person's affiliations within Home Organization scoped with the Home Organization",
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "eduPersonAssurance": {
-              "description": "represents identity assurance profiles (IAPs) https://wiki.refeds.org/display/ASS/REFEDS+Assurance+Framework+ver+1.0",
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            }
-          },
-          "required": ["id", "identifier", "eduPersonScopedAffiliation"]
-        }
-      }
-    }
-  ]
-}
-```
-
----
-
-## Appendix B: Technical Reference Materials
-
-### B.1 Authentic Source API Response
-
-Complete API response from URV's authentic source service demonstrating successful **identity matching** between PID and educational records:
 
 ```json
 {
@@ -1134,7 +700,7 @@ Complete API response from URV's authentic source service demonstrating successf
     },
     "institutionalIdentity": {
       "identifier": "maria.garcia@estudiants.urv.cat",
-      "enrollmentStatus": "ACTIVE",
+      "enrolmentStatus": "ACTIVE",
       "schacPersonalUniqueCode": [
         "urn:schac:personalUniqueCode:int:esi:urv.cat:12345678A",
         "urn:schac:personalUniqueCode:int:esi:ES:12345678A"
@@ -1156,12 +722,12 @@ Complete API response from URV's authentic source service demonstrating successf
         "https://refeds.org/assurance/ID/unique"
       ]
     },
-    "enrollmentDetails": {
+    "enrolmentDetails": {
       "institution": "Universitat Rovira i Virgili",
       "institutionCode": "ES-URV-25025",
-      "enrollmentDate": "2023-09-15",
+      "enrolmentDate": "2023-09-15",
       "expectedGraduation": "2027-06-30",
-      "credentialIssuanceAuthorized": true,
+      "credentialIssuanceAuthorised": true,
       "lastVerificationDate": "2025-09-01T00:00:00Z"
     }
   },
@@ -1175,86 +741,255 @@ Complete API response from URV's authentic source service demonstrating successf
 }
 ```
 
-**Key Identity Matching Components**:
+**Critical Identity Matching Results**:
+- ✅ **DNI Match**: 12345678A found in student database
+- ✅ **Name Match**: García, Maria confirmed in enrolment records  
+- ✅ **Birth Date Match**: 2004-03-15 validated against university records
+- ✅ **Enrolment Verified**: Active student status confirmed
+- ✅ **Credential Authorisation**: Student authorised for EducationalID issuance
 
-1. **Primary Key Correlation**: DNI from PID directly matches student database primary key
-2. **Multi-Factor Validation**: Name and birth date provide additional identity confirmation  
-3. **Confidence Scoring**: Mathematical confidence levels for each matching element
-4. **Audit Trail**: Complete logging of identity matching process for compliance
-5. **Institutional Identity Mapping**: Translation from legal identity to educational identity attributes
+**Architectural Innovation**: This design demonstrates how eIDAS 2.0 enables institutional **dual roles** while maintaining:
+- **Trust boundaries**: Clear separation of functions even within the same organisation
+- **Identity correlation**: Robust matching between legal and institutional identity
+- **Interoperability**: Standardised APIs that work across organisational boundaries
+- **Compliance**: Full regulatory alignment with European digital identity frameworks
 
+#### Step 31: Credential Generation
+*The digital birth certificate*
+
+The agent constructs Maria's Educational ID credential using the **eduGAIN/SCHAC-based schema** rather than ELM. This credential follows the specific EducationalID schema designed for non-foundational identity in educational contexts.
+
+The generated EducationalID credential incorporates:
+- **Verified Identity Data**: From the PID verification process
+- **Educational Attributes**: Following eduGAIN/SCHAC standards
+- **Institutional Affiliation**: URV-specific organisational data
+- **Assurance Levels**: REFEDS framework compliance
+
+**Generated EducationalID Credential**:
+```json
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://ebsi.eu/schemas/v1",
+    "https://schema.org"
+  ],
+  "id": "urn:uuid:6ba7b810-9dad-11d1-80b4-00c04fd430c8",
+  "type": ["VerifiableCredential", "VerifiableEducationalID"],
+  "issuer": {
+    "id": "did:ebsi:zNKuKosKmLHBfWcfBsXXkYQRGStVQLYL5DcJgzN1VJ2S2",
+    "name": "Universitat Rovira i Virgili",
+    "description": "Official Educational Credential Issuer"
+  },
+  "issuanceDate": "2025-09-02T09:30:00Z",
+  "expirationDate": "2027-06-30T23:59:59Z",
+  "credentialSubject": {
+    "id": "did:key:z2dmzD81cgPx8Vki7JbuuMmFYrWPgYoytykUZ3eyqht1j9Kbh4",
+    "identifier": "maria.garcia@estudiants.urv.cat",
+    "schacPersonalUniqueCode": [
+      "urn:schac:personalUniqueCode:int:esi:urv.cat:12345678A",
+      "urn:schac:personalUniqueCode:int:esi:ES:12345678A"
+    ],
+    "schacPersonalUniqueID": "urn:schac:personalUniqueID:ES:12345678A",
+    "schacHomeOrganization": "urv.cat",
+    "familyName": "García",
+    "firstName": "Maria",
+    "displayName": "Maria García",
+    "dateOfBirth": "2004-03-15",
+    "mail": "maria.garcia@estudiants.urv.cat",
+    "eduPersonPrincipalName": "maria.garcia@estudiants.urv.cat",
+    "eduPersonPrimaryAffiliation": "student",
+    "eduPersonAffiliation": ["member", "student"],
+    "eduPersonScopedAffiliation": ["student@urv.cat", "member@urv.cat"],
+    "eduPersonAssurance": [
+      "https://refeds.org/assurance/IAP/low",
+      "https://refeds.org/assurance/ID/unique"
+    ]
+  },
+  "credentialSchema": {
+    "id": "https://api.preprod.ebsi.eu/trusted-schemas-registry/v1/schemas/0xbf78fc08a7a9f28f5479f58dea269d3657f54f13ca37d380cd4e92237fb691dd",
+    "type": "JsonSchemaValidator2018"
+  },
+  "evidence": [
+    {
+      "id": "urn:evidence:pid-verification:12345678A",
+      "type": ["DocumentVerification"],
+      "verifier": "did:ebsi:spanish-national-authority",
+      "evidenceDocument": "eIDAS-2.0-PID",
+      "subjectPresence": "Digital",
+      "documentPresence": "Digital"
+    }
+  ],
+  "proof": {
+    "type": "JsonWebSignature2020",
+    "created": "2025-09-02T09:30:00Z",
+    "proofPurpose": "assertionMethod",
+    "verificationMethod": "did:ebsi:zNKuKosKmLHBfWcfBsXXkYQRGStVQLYL5DcJgzN1VJ2S2#keys-1",
+    "jws": "eyJhbGciOiJFUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19.."
+  }
+}
+```
+
+#### Step 32: Event Notification
+*System coordination*
+
+The agent sends a `credential_issued` event to the Student GUI, enabling real-time updates to any connected systems and maintaining audit trails for compliance purposes.
+
+#### Step 33: Delivery to Maria
+*The moment of completion*
+
+The Educational ID credential is delivered to Maria's EUDI Wallet. The wallet validates the credential signature, stores it securely, and notifies Maria of successful issuance.
+
+**User Experience**: Maria sees a success notification:
+- "✅ Your Educational ID has been issued successfully!"
+- "🎓 You can now access university services and participate in international programmes"
+- "📅 This credential is valid until 30 June 2027"
+- "🔒 Your credential is cryptographically secured and recognised across Europe"
 
 ---
 
-### B.2 Credential Offer Response
+## 7. Trust Verification Mechanisms
 
-In order to avoid overloading the result of the QR code, the standard defines an entry point based on the `credential_offer_uri` parameter:
+### 7.1 Multi-Layer Trust Architecture with eIDAS 2.0 Compliance
 
-```bash
-openid-credential-offer://?credential_offer_uri=https://issuer.eu/issuer/offers/719307744250317677
+The EducationalID issuance process implements sophisticated **multi-layer trust verification** with full eIDAS 2.0 regulatory alignment, **built upon mandatory foundational identity verification**:
+
+#### Layer 1: Foundational Identity (PID) - MANDATORY PREREQUISITE
+- **Role**: **Absolute prerequisite** for all educational credentials
+- **Source**: Spanish national identity infrastructure
+- **Verification**: eIDAS-compliant digital identity (mandatory)
+- **Assurance Level**: High (Level of Assurance 3)
+- **Cryptographic Standard**: ES256 signatures
+- **Legal Basis**: eIDAS 2.0 Article 3 - foundational identity requirement
+- **Process**: **Complete EBSI verification of PID before any educational credential issuance**
+
+#### Layer 2: Authentic Source Authority (eIDAS 2.0 Article 45b)
+- **Role**: URV as certified eIDAS 2.0 Authentic Source
+- **Authority**: Spanish Ministry EAA credentials authorising authentic source function
+- **Data Integrity**: Authoritative student records with cryptographic proofs
+- **API Standards**: eIDAS 2.0 compliant standardised access protocols
+- **Dependency**: **Only operates after Layer 1 (PID) verification is complete**
+
+#### Layer 3: Institutional Issuance Authority (EAA)
+- **Source**: Spanish Ministry of Universities and Research
+- **Mechanism**: Electronic Attestation of Attributes (EAA)
+- **Scope**: Authorises URV to issue Educational IDs based on authentic source data
+- **Validation**: EBSI Trust Registry verification
+- **Prerequisite**: **Requires verified foundational identity from Layer 1**
+
+#### Layer 4: European Recognition (EBSI)
+- **Framework**: European Blockchain Services Infrastructure
+- **Function**: Cross-border trust propagation
+- **Standards**: W3C Verifiable Credentials, eduGAIN/SCHAC
+- **Governance**: Multi-national European cooperation
+- **Foundation**: **Built upon verified PID from Layer 1**
+
+#### Layer 5: Technical Integrity
+- **Cryptography**: Multiple signature verification
+- **Revocation**: Real-time status checking
+- **Audit**: Comprehensive logging and traceability
+- **Privacy**: Selective disclosure and data minimisation
+- **Anchor**: **All technical integrity traces back to verified PID**
+
+### 7.2 Trust Chain Example with eIDAS 2.0 Roles
+
+```
+🇪🇺 European Union (eIDAS 2.0 Regulatory Framework)
+  ↓
+🇪🇸 Spanish Ministry of Universities (Root Trust Anchor)
+  ↓ [Issues EAA - Authentic Source Authority]
+🏛️ URV as Authentic Source (eIDAS 2.0 Article 45b Role)
+  ↓ [Standardised API provides verified data]
+🔧 URV as Issuer (EAA-Authorised Credential Issuer)
+  ↓ [Issues Educational ID based on authentic source data]
+👩‍🎓 Maria García (Credential Holder)
+  ↓ [Presents Credential]
+🏫 Any European University (Relying Party)
 ```
 
-The response to resolving the `credential_offer_uri` will vary depending on whether it is a No Authorise flow or a Pre-Authorise flow.
+**Key Innovation**: The dual role architecture demonstrates how institutions can operate as both **Authentic Source** and **Issuer** under eIDAS 2.0 whilst maintaining clear functional separation and regulatory compliance.
+
+### 7.3 Security Properties
+
+- **Authenticity**: Cryptographically proven issuer identity
+- **Integrity**: Tamper-evident credential structure  
+- **Non-repudiation**: Immutable audit trail
+- **Privacy**: Minimal data disclosure with consent
+- **Availability**: Distributed verification infrastructure
+- **Interoperability**: European standards compliance
+
+---
+
+## 8. Technical Message Details
+
+### 8.1 Credential Offer Response (Complete)
+
+The credential offer provides comprehensive metadata about the EducationalID credential, including display parameters and supported credential subject attributes:
 
 ```json
 {
-   "credential_issuer":"https://issuer.eu/issuer",
+   "credential_issuer":"https://lspurv.urv.cat/issuer",
    "credentials":[
       {
          "format":"jwt_vc",
          "types":[
             "VerifiableCredential",
-            "CertificateProfessionalCompetence"
+            "VerifiableEducationalID"
          ],
          "trust_framework":{
-            "name":"uSelf Agent Issuer",
-            "type":"CertificateProfessionalCompetence",
-            "uri":"CertificateProfessionalCompetence testing"
+            "name":"URV Educational Credential Issuer",
+            "type":"VerifiableEducationalID",
+            "uri":"https://dc4eu.eu/schemas/educational-id"
          },
          "display":[
             {
-               "name":"CertificateProfessionalCompetence",
-               "description":"Schema defining a verifiable credential that validates whether a registered physician has an up to date certificate of professional competence"
+               "name":"Educational ID",
+               "description":"Verifiable Educational Identity for European Student Mobility",
+               "locale":"en-GB"
+            },
+            {
+               "name":"Identificació Educativa",
+               "description":"Identitat Educativa Verificable per a la Mobilitat Estudiantil Europea",
+               "locale":"ca"
             }
          ],
          "credentialSubject":{
-            "id":{
+            "identifier":{
                "display":[
                   {
-                     "name":"id"
+                     "name":"Student Identifier",
+                     "description":"Unique educational identifier"
                   }
                ]
             },
-            "personal_administrative_number":{
+            "schacPersonalUniqueCode":{
                "display":[
                   {
-                     "name":"personal_administrative_number",
-                     "description":"Nationally registered physician number"
+                     "name":"SCHAC Unique Code",
+                     "description":"Standardised unique identifier for European educational systems"
                   }
                ]
             },
-            "given_name":{
+            "familyName":{
                "display":[
                   {
-                     "name":"given_name",
-                     "description":"Natural person name"
+                     "name":"Family Name",
+                     "description":"Student's family name"
                   }
                ]
             },
-            "family_name":{
+            "firstName":{
                "display":[
                   {
-                     "name":"family_name",
-                     "description":"Natural person surname"
+                     "name":"First Name",
+                     "description":"Student's given name"
                   }
                ]
             },
-            "is_entitled":{
-               "value_type":"boolean",
+            "eduPersonScopedAffiliation":{
                "display":[
                   {
-                     "name":"is_entitled",
-                     "description":"Indicates whether the physician is legally entitled to practice as a doctor."
+                     "name":"Educational Affiliation",
+                     "description":"Student's role within the educational institution"
                   }
                ]
             }
@@ -1264,73 +999,553 @@ The response to resolving the `credential_offer_uri` will vary depending on whet
 }
 ```
 
-## B.3 Token Request
+**Key Features**:
+- **Credential Type**: `VerifiableEducationalID` with `jwt_vc` format
+- **Display Configuration**: URV branding and multilingual support (English, Catalan)
+- **Attribute Mapping**: Complete eduGAIN/SCHAC attribute support
+- **Cryptographic Binding**: ES256 algorithm with DID-based binding
 
-The wallet must obtain an access token to request the credential. In the No Authorise flow, this involves making a token request to the authorisation endpoint.
+### 8.2 Authorization Request (Complete)
 
-## B.4 Token Response
+The authorization request demonstrates sophisticated presentation definition validation ensuring only valid **eIDAS 2.0 compliant PID credentials** are accepted:
 
-The authorisation server responds with an access token that will be used to request the credential:
+```http
+GET https://lspurv.urv.cat/auth/authorize?
+client_id=https://issuer.eu/auth
+&response_type=vp_token
+&response_mode=direct_post
+&scope=openid
+&presentation_definition={
+  "id": "mandatory-pid-presentation",
+  "input_descriptors": [
+    {
+      "id": "spanish-pid-requirement",
+      "name": "Spanish Person Identification Data",
+      "purpose": "Foundational identity verification required under eIDAS 2.0",
+      "constraints": {
+        "fields": [
+          {
+            "path": ["$.type"],
+            "filter": {
+              "type": "array",
+              "contains": {
+                "const": "PersonIdentificationData"
+              }
+            }
+          },
+          {
+            "path": ["$.credentialSubject.family_name"],
+            "filter": {
+              "type": "string"
+            }
+          },
+          {
+            "path": ["$.credentialSubject.given_name"],
+            "filter": {
+              "type": "string"
+            }
+          },
+          {
+            "path": ["$.credentialSubject.birth_date"],
+            "filter": {
+              "type": "string",
+              "format": "date"
+            }
+          },
+          {
+            "path": ["$.credentialSubject.personal_administrative_number"],
+            "filter": {
+              "type": "string"
+            }
+          },
+          {
+            "path": ["$.credentialSubject.issuing_country"],
+            "filter": {
+              "const": "ES"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
+```
+
+**Key Validation Requirements**:
+- ✅ **Credential Type**: Must be `PersonIdentificationData` (eIDAS 2.0 PID)
+- ✅ **Required Fields**: `family_name`, `given_name`, `birth_date`, `nationality`
+- ✅ **Administrative Number**: `personal_administrative_number` for unique identification
+- ✅ **Issuing Country**: Must be "ES" (Spain) for this university
+- ✅ **Cryptographic Validation**: ES256 signature algorithm required
+
+### 8.3 Final Credential Response
+
+The final credential response delivers the completed EducationalID to Maria's EUDI Wallet in JWT format, cryptographically signed by URV's institutional key:
 
 ```json
 {
-   "access_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiIsImtpZCI6ImRpZDprZXk6ejJkbXpEODFjZ1B4OFZraTdKYnV1TW1GWXJXUGdZb3l0eWtVWjNleXFodDFqOUticzVpc0Uyc0pjWk1oaFpyOUN4UHVBOVBqNXFQNk5uU0pmTVhnS3RQZWdNRG53eXc2ODh3QjJCc1VmazNnSlJBMnFnUWNVRGttVE5wRHJYNjhwRFlzZE1hS3EzV29Tc1JqdGN3WXBzYVh1MkVFVVdFTkZEMTMxZVdYc0VDN3F0cGRrZyJ9...",
-   "token_type":"Bearer",
-   "expires_in":1741012594331,
-   "c_nonce":"8450206689214712010",
-   "c_nonce_expires_in":1741012594331
+   "credential": "eyJ0eXAiOiJ2YytsZCtqc29uIiwiYWxnIjoiRVMyNTYiLCJraWQiOiJkaWQ6ZWJzaTp6TktuS29zS21MSEJmV2NmQnNYWGtZUVJHU3RWUUVZD5dGNDNnZ3pOMVZKMlMyI2tleXMtMSJ9.eyJpc3MiOiJkaWQ6ZWJzaTp6TktuS29zS21MSEJmV2NmQnNYWGtZUVJHU3RWUUFMWTQ3Y2pnekA1aUoyUzIiLCJuYmYiOjE2OTExMzI4MDAsImV4cCI6MTc1NDM3ODc5OSwiaWF0IjoxNjkxMTMyODAwLCJ2YyI6eyJAY29udGV4dCI6WyJodHRwczovL3d3dy53My5vcmcvMjAxOC9jcmVkZW50aWFscy92MSIsImh0dHBzOi8vZWJzaS5ldS9zY2hlbWFzL3YxIl0sImlkIjoidXJuOnV1aWQ6NmJhN2I4MTAtOWRhZC0xMWQxLTgwYjQtMDBjMDRmZDQzMGM4IiwidHlwZSI6WyJWZXJpZmlhYmxlQ3JlZGVudGlhbCIsIlZlcmlmaWFibGVFZHVjYXRpb25hbElEIl0sImlzc3VlciI6eyJpZCI6ImRpZDplYnNpOnpOS25Lb3NLbUxIQmZXY2ZCc1hYa1lRUkdTdFZRQUFMWTQ3Y2pnek01VnE2UzIiLCJuYW1lIjoiVW5pdmVyc2l0YXQgUm92aXJhIGkgVmlyZ2lsaSIsImRlc2NyaXB0aW9uIjoiT2ZmaWNpYWwgRWR1Y2F0aW9uYWwgQ3JlZGVudGlhbCBJc3N1ZXIifSwiaXNzdWFuY2VEYXRlIjoiMjAyNS0wOS0wMlQwOTozMDowMFoiLCJleHBpcmF0aW9uRGF0ZSI6IjIwMjctMDYtMzBUMjM6NTk6NTlaIiwiY3JlZGVudGlhbFN1YmplY3QiOnsiaWQiOiJkaWQ6a2V5OnoyZG16RDgxY2dQeDhWa2k3SmJ1dU1tRllyV1BnWW95dHlrVVozZXlxaHQxajlLYmg0IiwiaWRlbnRpZmllciI6Im1hcmlhLmdhcmNpYUBlc3R1ZGlhbnRzLnVydi5jYXQiLCJzY2hhY1BlcnNvbmFsVW5pcXVlQ29kZSI6WyJ1cm46c2NoYWM6cGVyc29uYWxVbmlxdWVDb2RlOmludDplc2k6dXJ2LmNhdDoxMjM0NTY3OEEiLCJ1cm46c2NoYWM6cGVyc29uYWxVbmlxdWVDb2RlOmludDplc2k6RVM6MTIzNDU2NzhBIl0sInNjaGFjUGVyc29uYWxVbmlxdWVJRCI6InVybjpzY2hhYzpwZXJzb25hbFVuaXF1ZUlEOkVTOjEyMzQ1Njc4QSIsInNjaGFjSG9tZU9yZ2FuaXphdGlvbiI6InVydi5jYXQiLCJmYW1pbHlOYW1lIjoiR2FyY8OtYSIsImZpcnN0TmFtZSI6Ik1hcmlhIiwiZGlzcGxheU5hbWUiOiJNYXJpYSBHYXJjw61hIiwiZGF0ZU9mQmlydGgiOiIyMDA0LTAzLTE1IiwibWFpbCI6Im1hcmlhLmdhcmNpYUBlc3R1ZGlhbnRzLnVydi5jYXQiLCJlZHVQZXJzb25QcmluY2lwYWxOYW1lIjoibWFyaWEuZ2FyY2lhQGVzdHVkaWFudHMudXJ2LmNhdCIsImVkdVBlcnNvblByaW1hcnlBZmZpbGlhdGlvbiI6InN0dWRlbnQiLCJlZHVQZXJzb25BZmZpbGlhdGlvbiI6WyJtZW1iZXIiLCJzdHVkZW50Il0sImVkdVBlcnNvblNjb3BlZEFmZmlsaWF0aW9uIjpbInN0dWRlbnRAdXJ2LmNhdCIsIm1lbWJlckB1cnYuY2F0Il0sImVkdVBlcnNvbkFzc3VyYW5jZSI6WyJodHRwczovL3JlZmVkcy5vcmcvYXNzdXJhbmNlL0lBUC9sb3ciLCJodHRwczovL3JlZmVkcy5vcmcvYXNzdXJhbmNlL0lEL3VuaXF1ZSJdfSwiZXZpZGVuY2UiOlt7ImlkIjoidXJuOmV2aWRlbmNlOnBpZC12ZXJpZmljYXRpb246MTIzNDU2NzhBIiwidHlwZSI6WyJEb2N1bWVudFZlcmlmaWNhdGlvbiJdLCJ2ZXJpZmllciI6ImRpZDplYnNpOnNwYW5pc2gtbmF0aW9uYWwtYXV0aG9yaXR5Iiwic3ViamVjdFByZXNlbmNlIjoiRGlnaXRhbCIsImRvY3VtZW50UHJlc2VuY2UiOiJEaWdpdGFsIn1dfSwic3ViIjoiZGlkOmtleTp6MmRtekQ4MWNnUHg4VmtpN0pidXVNbUZZcldQZ1lveXR5a1VaM2V5cWh0MWo5S2JoNCJ9.BjH8_GqN9cTM8hf0XyJK4UR3jN8_P4xGqMc7dYwZL9uRk6-U8sQ2vN3_LmBdCf7K8YxJ9hNpA4rS6fGqM8vC_w",
+   "c_nonce": "8450206689214712015",
+   "c_nonce_expires_in": 86400
 }
 ```
 
-Key elements in the token response:
-- **access_token**: The JWT token used to authenticate subsequent requests
-- **token_type**: Indicates the token type (typically "Bearer")
-- **expires_in**: Token validity period in seconds
-- **c_nonce**: A nonce value used for proof of possession
-- **c_nonce_expires_in**: Expiry time for the nonce value
+**Response Components**:
+- **JWT-encoded Credential**: Complete EducationalID in W3C VC format
+- **Digital Signature**: ES256 signature by URV's DID key
+- **EBSI Anchoring**: Schema and trust registry references
+- **Expiration Management**: Validity period and renewal information
 
-## B.5 Credential Request
+---
 
-Once the access token has been obtained, the end user can request the verifiable credential:
+## 9. Implementation Insights
 
-```http
-POST /credential
-Content-Type: application/json
-Authorization: Bearer eyJ0eXAi...
+### 9.1 Schema Architecture: eIDAS 2.0 PID vs. eduGAIN EducationalID
 
+**Critical Distinction**: The EducationalID journey demonstrates the **architectural separation** between different credential types in the DC4EU framework:
+
+#### Foundational Identity (PID) - eIDAS 2.0 Regulation Compliant
+- **Schema Base**: Official eIDAS 2.0 Person Identification Data schema
+- **Legal Reference**: EU Regulation 2024/2977 (eIDAS 2.0)
+- **Purpose**: Foundational legal identity for all EU digital services
+- **Standards**: ISO 3166-1 (country codes), ISO/IEC 5218 (sex values)
+- **Focus**: "Who you are legally according to national authorities"
+- **Key Attributes**: 
+  - Core identity: `family_name`, `given_name`, `birth_date`, `birth_place`
+  - Legal status: `nationality`, `personal_administrative_number`
+  - Administrative: `issuing_authority`, `issuing_country`, `expiry_date`
+  - Privacy-sensitive: `resident_address`, `portrait`, `email_address`
+
+#### Non-Foundational Identity Credentials (EducationalID)
+- **Schema Base**: eduGAIN/SCHAC standards, not ELM
+- **Purpose**: Institutional identity and affiliation
+- **Standards**: REFEDS, eduGAIN, SCHAC
+- **Focus**: "Who you are within an educational context"
+- **Key Attributes**: 
+  - Educational identity: `eduPersonPrincipalName`, `eduPersonScopedAffiliation`
+  - Institutional affiliation: `schacPersonalUniqueCode`, `schacHomeOrganization`
+  - Assurance: REFEDS Assurance Framework compliance
+
+#### Academic Achievement Credentials (ELM-Based)
+- **Schema Base**: European Learning Model (ELM) 3.2
+- **Purpose**: Learning outcomes and qualifications
+- **Standards**: ELM, EDCI, Europass
+- **Focus**: "What you have learned and achieved"
+- **Key Attributes**:
+  - Learning achievements, qualifications
+  - Assessment results, credit systems
+  - Quality assurance information
+
+### 9.2 eIDAS 2.0 PID Integration Benefits
+
+The PID's use of **official eIDAS 2.0 standards** provides:
+
+1. **Legal Certainty**: Direct compliance with EU Regulation 2024/2977
+2. **Cross-Border Recognition**: Automatic recognition across all EU Member States
+3. **High Assurance**: Highest level of identity verification available in EU
+4. **Standardised Format**: Common structure across all European identity providers
+5. **Privacy Protection**: Built-in selective disclosure capabilities
+6. **Administrative Integration**: Direct link to national identity systems
+
+### 9.3 Identity Verification Chain
+
+**Complete Identity Verification Flow**:
+```
+🇪🇸 Spanish National Identity (DNI) 
+  ↓ [Digital Transformation]
+🆔 eIDAS 2.0 PID Credential (PersonIdentificationData)
+  ↓ [Verification & Validation]
+🎓 EducationalID Credential (eduGAIN/SCHAC)
+  ↓ [Institutional Affiliation]
+📜 Academic Achievement Credentials (ELM)
+```
+
+This structure ensures that **every educational credential** can be traced back to **verified national identity**, providing the highest levels of trust and legal certainty across European borders.
+
+### 9.4 Technical Innovation: Identity Matching Infrastructure
+
+The DC4EU framework's **identity matching infrastructure** represents a critical innovation in European digital identity:
+
+#### Pre-Deployment Data Preparation
+Before any credential can be issued, institutions must establish:
+
+1. **Comprehensive Data Stores**: Complete population of student databases with verified enrolment information
+2. **Identity Correlation Systems**: Cross-reference tables linking national identity numbers (DNI) to institutional records
+3. **Validation Algorithms**: Automated matching procedures for PID attributes against educational records
+4. **Temporal Synchronisation**: Systems to maintain up-to-date correlation between legal and institutional identity
+
+#### Identity Matching Process
+**The Critical Bridge**: Connecting **legal identity** (Spanish PID) with **institutional identity** (EducationalID)
+
+**Three-Layer Validation**:
+- **Primary Key Match**: DNI from PID directly correlates to student database primary key
+- **Attribute Verification**: Name and birth date provide multi-factor identity confirmation
+- **Enrolment Validation**: Current student status and credential issuance authorisation
+
+#### Technical Architecture Benefits
+- **Separation of Concerns**: Legal identity management vs. institutional identity management
+- **Real-time Correlation**: Instant matching between PID and educational records
+- **Audit Compliance**: Complete traceability of identity matching decisions
+- **Privacy Protection**: Minimum necessary data correlation with selective disclosure
+- **Scalability**: Standardised patterns applicable across all European educational institutions
+
+This infrastructure ensures that **every educational credential** is properly anchored to **verified legal identity** whilst maintaining the flexibility needed for diverse institutional requirements across Europe.
+
+### 9.5 European Digital Sovereignty
+
+This implementation represents **European digital sovereignty** in action:
+
+- **European standards**: W3C VC, EBSI, eIDAS 2.0
+- **European infrastructure**: EBSI trust registries and verification
+- **European governance**: Member State cooperation and recognition
+- **European values**: Privacy, security, and citizen control
+
+---
+
+## 10. Appendices
+
+### 10.1 Appendix A: Schema Specifications
+
+#### A.1 eIDAS 2.0 PID Schema
+
+The official Person Identification Data schema as defined by EU Regulation 2024/2977:
+
+```json
 {
-   "format":"jwt_vc",
-   "types":[
-      "VerifiableCredential",
-      "CertificateProfessionalCompetence"
-   ],
-   "proof":{
-      "proof_type":"jwt",
-      "jwt":"eyJ0eXAiOiJvcGVuaWQ0dmNpLXByb29mK2p3dCIsImtpZCI6ImRpZDprZXk6ejJkbXpEODFjZ1B4OFZraTdKYnV1TW1GWXJXUGdZb3l0eWtVWjNleXFodDFqOUticzVpc0Uyc0pjWk1oaFpyOUN4UHVBOVBqNXFQNk5uU0pmTVhnS3RQZWdNRG53eXc2ODh3QjJCc1VmazNnSlJBMnFnUWNVRGttVE5wRHJYNjhwRFlzZE1hS3EzV29Tc1JqdGN3WXBzYVh1MkVFVVdFTkZEMTMxZVdYc0VDN3F0cGRrZyN6MmRtekQ4MWNnUHg4VmtpN0pidXVNbUZZcldQZ1lveXR5a1VaM2V5cWh0MWo5S2JzNWlzRTJzSmNaTWhoWnI5Q3hQdUE5UGo1cVA2Tm5TSmZNWGdLdFBlZ01Ebnd5dzY4OHdCMkJzVWZrM2dKUkEycWdRY1VEa21UTnBEclg2OHBEWXNkTWFLcTNXb1NzUmp0Y3dZcHNhWHUyRUVVV0VORkQxMzFlV1hzRUM3cXRwZGtnIiwiYWxnIjoiRVMyNTYifQ.eyJpYXQiOjE3NDEwMTE5OTQuMDY3LCJpc3MiOiJkaWQ6a2V5OnoyZG16RDgxY2dQeDhWa2k3SmJ1dU1tRllyV1BnWW95dHlrVVozZXlxaHQxajlLYnM1aXNFMnNKY1pNaGhacjlDeFB1QTlQajVxUDZOblNKZk1YZ0t0UGVnTURud3l3Njg4d0IyQnNVZmszZ0pSQTJxZ1FjVURrbVROcERyWDY4cERZc2RNYUtxM1dvU3NSanRjd1lwc2FYdTJFRVVXRU5GRDEzMWVXWHNFQzdxdHBka2ciLCJhdWQiOiJodHRwczovL3RhZHBvbGUtaW50ZXJuYWwtbWFtbWFsLm5ncm9rLWZyZWUuYXBwL2lzc3VlciIsImV4cCI6MTc0MTAxMjI5NCwibm9uY2UiOiI4NDUwMjA2Njg5MjE0NzEyMDEwIn0.SBGk5rshNgCMO49dNiSAxkMO-LVbP2aUWADFxclTzz8uDNvZAkqGAvKqFJGCyUvzA5u_pSZYnY6nODi6atOC6g"
-   }
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Person Identification Data for the Natural Person",
+  "description": "Reference: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202402977",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "./node_modules/@cef-ebsi/vcdm1.1-attestation-schema/schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "credentialSubject": {
+          "type": "object",
+          "properties": {
+            "family_name": {
+              "type": "string",
+              "description": "Current last name(s) or surname(s) of the user to whom the person identification data relates.",
+              "minLength": 1
+            },
+            "given_name": {
+              "type": "string",
+              "description": "Current first name(s), including middle name(s) where applicable, of the user to whom the person identification data relates.",
+              "minLength": 1
+            },
+            "birth_date": {
+              "type": "string",
+              "format": "date",
+              "description": "Day, month, and year on which the user to whom the person identification data relates was born."
+            },
+            "birth_place": {
+              "type": "string",
+              "description": "The country as an alpha-2 country code as specified in ISO 3166-1, or the state, province, district, or local area or the municipality, city, town, or village where the user to whom the person identification data relates was born."
+            },
+            "nationality": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[A-Z]{2}$"
+              },
+              "description": "One or more alpha-2 country codes as specified in ISO 3166-1, representing the nationality of the user to whom the person identification data relates."
+            },
+            "personal_administrative_number": {
+              "type": "string",
+              "description": "A value assigned to the natural person that is unique among all personal administrative numbers issued by the provider of person identification data."
+            },
+            "expiry_date": {
+              "type": "string",
+              "format": "date-time",
+              "description": "Date (and if possible time) when the person identification data will expire."
+            },
+            "issuing_authority": {
+              "type": "string",
+              "description": "Name of the administrative authority that issued the person identification data."
+            },
+            "issuing_country": {
+              "type": "string",
+              "pattern": "^[A-Z]{2}$",
+              "description": "Alpha-2 country code, as specified in ISO 3166-1, of the country or territory of the provider of the person identification data."
+            },
+            "issuing_jurisdiction": {
+              "type": "string",
+              "description": "Jurisdiction identifier for sub-national authorities (e.g., ES-CT for Catalonia)"
+            }
+          },
+          "required": [
+            "family_name",
+            "given_name",
+            "birth_date",
+            "birth_place",
+            "nationality",
+            "expiry_date",
+            "issuing_authority",
+            "issuing_country"
+          ]
+        }
+      }
+    }
+  ]
 }
 ```
 
-The credential request includes:
-- **format**: The credential format (jwt_vc for JWT-based Verifiable Credentials)
-- **types**: Array of credential types being requested
-- **proof**: Proof of possession containing:
-  - **proof_type**: Type of proof (typically "jwt")
-  - **jwt**: A signed JWT proving the wallet controls the key material
+#### A.2 EducationalID Schema
 
-## B.6 Credential Response
+The eduGAIN/SCHAC-based schema for non-foundational educational identity:
 
-Finally, the issuer responds with the requested verifiable credential. The credential is typically returned in JWT format and contains the claims about the credential subject as specified in the credential offer.
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Verifiable Educational ID",
+  "description": "Schema of a Verifiable Educational ID for a natural person participating in the educational use cases",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "./node_modules/@cef-ebsi/vcdm1.1-attestation-schema/schema.json"
+    },
+    {
+      "properties": {
+        "credentialSubject": {
+          "description": "Defines additional properties on credentialSubject to describe IDs that do not have a substantial level of assurance.",
+          "type": "object",
+          "properties": {
+            "id": {
+              "description": "Defines a unique identifier of the credential subject. DID:Key value, generated by the user wallet and associated to the credential holder.",
+              "type": "string"
+            },
+            "identifier": {
+              "description": "Defines an alternative identifier for the credential subject and has as value the value of eduPersonPrincipalName attribute.",
+              "type": "string"
+            },
+            "schacPersonalUniqueCode": {
+              "description": "schacPersonalUniqueCode can have different forms urn:schac:personalUniqueCode:int:esi:<sHO>:<code>",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "schacPersonalUniqueID": {
+              "description": "value is different in different countries, mostly urn:schac:personalUniqueID:<country-code>:<code>.",
+              "type": "string"
+            },
+            "schacHomeOrganization": {
+              "description": "Specifies the home organisation of the credential subject",
+              "type": "string"
+            },
+            "familyName": {
+              "description": "Defines current family name(s) of the credential subject which corresponds to the eduGAIN attribute sn",
+              "type": "string"
+            },
+            "firstName": {
+              "description": "Defines current first name(s) of the credential subject which corresponds to the eduGAIN attribute givenName",
+              "type": "string"
+            },
+            "displayName": {
+              "description": "The name(s) that should appear in white-pages-like applications",
+              "type": "string"
+            },
+            "dateOfBirth": {
+              "description": "Defines date of birth of the credential subject (format: yyyyMMdd)",
+              "type": "string",
+              "format": "date"
+            },
+            "mail": {
+              "description": "(primary) e-mail address of the credential subject as registered by the educational institution",
+              "type": "string"
+            },
+            "eduPersonPrincipalName": {
+              "description": "Unique, persistent identifier of the credential subject",
+              "type": "string"
+            },
+            "eduPersonPrimaryAffiliation": {
+              "description": "Primary Affiliation within Home Organisation",
+              "type": "string"
+            },
+            "eduPersonAffiliation": {
+              "description": "Affiliation within Home Organisation. It can contain multiple values such as member, student, employee, faculty, staff, affiliate, alumni, etc.",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "eduPersonScopedAffiliation": {
+              "description": "The person's affiliations within Home Organisation scoped with the Home Organisation",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "eduPersonAssurance": {
+              "description": "represents identity assurance profiles (IAPs) https://wiki.refeds.org/display/ASS/REFEDS+Assurance+Framework+ver+1.0",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": ["id", "identifier", "eduPersonScopedAffiliation"]
+        }
+      }
+    }
+  ]
+}
+```
 
-The credential response completes the issuance flow, providing the wallet with a signed verifiable credential that can be stored and later presented to verifiers as proof of the attested claims.
+### 10.2 Appendix B: Technical Reference Materials
 
-## Summary
+#### B.1 Complete OpenID4VCI Flow Messages
 
-This document outlines the credential issuance process following the OpenID4VCI (OpenID for Verifiable Credential Issuance) protocol. The process consists of:
+**Credential Offer URI Resolution**:
+```http
+GET https://lspurv.urv.cat/issuer/offers/719307744250317677
+Accept: application/json
 
-1. **Credential Offer**: The issuer provides a credential offer via a URI
-2. **Token Exchange**: The wallet obtains an access token for authentication
-3. **Credential Request**: Using the access token, the wallet requests the credential with proof of possession
-4. **Credential Response**: The issuer returns the signed verifiable credential
+Response:
+{
+  "credential_issuer": "https://lspurv.urv.cat/issuer",
+  "credentials": [
+    {
+      "format": "jwt_vc",
+      "types": ["VerifiableCredential", "VerifiableEducationalID"]
+    }
+  ]
+}
+```
 
-This flow ensures secure issuance of verifiable credentials whilst maintaining privacy and preventing replay attacks through the use of nonces and proof of possession mechanisms.
+**Token Exchange**:
+```http
+POST https://lspurv.urv.cat/auth/token
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=authorization_code
+&client_id=did:key:z2dmzD81cgPx8Vki7JbuuMmFYrWPgYoytykUZ3eyqht1j9Kbndi4FzE7bq9irPGQVyZG7SWHy8iqpKMjjhmtB7JF3eFYnM67SxNd4gjT3DsKUb7NKeKLcNTEocYUf2kpBQRQqCvGMCvC87F8jgydShFCPTwrDpvJKrZMdq8zjQLQxwW2kL
+&code=authorization_code_value
+```
+
+#### B.2 EBSI Service Endpoints
+
+**Trust Registry Verification**:
+```http
+GET https://api.preprod.ebsi.eu/trusted-issuers-registry/v3/issuers/{issuer-did}
+Authorization: Bearer {ebsi-access-token}
+```
+
+**Schema Registry Validation**:
+```http
+GET https://api.preprod.ebsi.eu/trusted-schemas-registry/v1/schemas/{schema-id}
+Authorization: Bearer {ebsi-access-token}
+```
+
+**DID Resolution**:
+```http
+GET https://api.preprod.ebsi.eu/did-registry/v3/identifiers/{did}
+Accept: application/did+ld+json
+```
+
+#### B.3 Error Handling and Status Codes
+
+**Common Error Responses**:
+
+| Error Code | Description | Resolution |
+|------------|-------------|------------|
+| `invalid_presentation` | PID verification failed | User must present valid eIDAS 2.0 PID |
+| `identity_mismatch` | PID doesn't match student records | Contact university registrar |
+| `credential_suspended` | Student enrolment suspended | Resolve enrolment status |
+| `trust_verification_failed` | EBSI verification failed | System maintenance required |
+
+### 10.3 Appendix C: Compliance and Regulatory Framework
+
+#### C.1 eIDAS 2.0 Compliance Checklist
+
+**Mandatory Requirements**:
+- ✅ **Article 3**: Foundational identity verification through PID
+- ✅ **Article 45b**: Authentic Source certification and operation
+- ✅ **Annex VI**: Technical specifications for credential formats
+- ✅ **Recital 12**: Cross-border recognition requirements
+
+**Privacy and Data Protection**:
+- ✅ **GDPR Article 6**: Lawful basis for processing (public task)
+- ✅ **GDPR Article 5**: Data minimisation and purpose limitation
+- ✅ **GDPR Article 25**: Privacy by design implementation
+- ✅ **GDPR Article 32**: Technical and organisational security measures
+
+#### C.2 Educational Standards Alignment
+
+**SCHAC (Schema for Academia)**:
+- ✅ Personal unique identifiers
+- ✅ Organisational affiliations
+- ✅ Educational context attributes
+
+**eduGAIN Federation Standards**:
+- ✅ Cross-border attribute release
+- ✅ Privacy-preserving identity federation
+- ✅ Multi-lateral trust agreements
+
+**REFEDS Assurance Framework**:
+- ✅ Identity assurance profiles
+- ✅ Authentication context classification
+- ✅ Risk-based assurance levels
+
+### 10.4 Appendix D: Implementation Roadmap
+
+#### D.1 Phase 1: Infrastructure Preparation (Months 1-3)
+- **Data Store Population**: Complete student database preparation
+- **Identity Matching Setup**: Implement correlation algorithms
+- **eIDAS 2.0 Certification**: Obtain Authentic Source certification
+- **API Development**: Build standardised access interfaces
+
+#### D.2 Phase 2: Pilot Implementation (Months 4-6)
+- **Limited Rollout**: Test with select student cohorts
+- **User Experience Testing**: Refine wallet interactions
+- **Trust Registry Integration**: Complete EBSI connectivity
+- **Cross-Border Validation**: Test with partner universities
+
+#### D.3 Phase 3: Full Production (Months 7-12)
+- **Complete Rollout**: All eligible students
+- **Monitoring and Analytics**: Performance tracking
+- **Continuous Improvement**: Based on usage patterns
+- **European Expansion**: Additional university partnerships
+
+#### D.4 Success Metrics
+
+**Technical Metrics**:
+- Credential issuance success rate: >99.5%
+- Average issuance time: <30 seconds
+- Identity matching accuracy: >99.9%
+- System availability: >99.9%
+
+**User Experience Metrics**:
+- User satisfaction score: >4.5/5
+- Completion rate: >95%
+- Support ticket volume: <1% of issuances
+- Cross-border usage: >20% of credentials
+
+**Compliance Metrics**:
+- eIDAS 2.0 compliance: 100%
+- Privacy incident rate: 0
+- Audit findings: 0 critical
+- Data protection compliance: 100%
+
+---
+
+## Conclusion
+
+The EducationalID issuance journey represents a landmark achievement in European digital identity infrastructure. By successfully integrating eIDAS 2.0 foundational identity verification with educational credential issuance, this implementation establishes a new paradigm for trusted, interoperable digital credentials across European borders.
+
+**Key Achievements**:
+
+1. **Mandatory PID Integration**: Ensuring all educational credentials are anchored to verified national identity
+2. **Dual Role Architecture**: Demonstrating how institutions can operate as both Authentic Source and Issuer under eIDAS 2.0
+3. **Identity Matching Innovation**: Creating robust infrastructure to correlate legal and institutional identity
+4. **European Interoperability**: Establishing standards-based credentials recognised across all EU Member States
+5. **Privacy by Design**: Implementing selective disclosure and data minimisation throughout the process
+
+This comprehensive framework not only serves the immediate needs of European students like Maria García but also establishes the foundation for a truly integrated European Education Area where digital credentials enable seamless mobility, recognition, and opportunity across all Member States.
+
+The journey from foundational identity verification through educational credential issuance represents more than a technical achievement—it embodies the European values of privacy, security, citizen empowerment, and cross-border cooperation that will define the digital future of European education.
+
+---
