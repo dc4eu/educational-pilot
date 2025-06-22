@@ -5034,4 +5034,3 @@ Complete API response from URV's authentic source service demonstrating successf
 5. **Institutional Identity Mapping**: Translation from legal identity to educational identity attributes
 
 ### B.2 Credential Offer Response
-
