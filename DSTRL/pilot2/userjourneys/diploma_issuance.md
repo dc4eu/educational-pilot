@@ -1,14 +1,14 @@
-# Educational Domain: Complete EUHEMC Diploma Issuance User Journey
+# Educational Domain: Complete Euroepan Higher Edcuation Diploma (EUHED) Issuance User Journey
 
 ## Executive Summary
 
-This document presents the comprehensive narrative for EUHEMC (European Higher Education and Mobility Community) diploma issuance within the DC4EU Pilot 2 framework, implementing a sophisticated OpenID VCI flow with **mandatory Educational ID verification**. The journey demonstrates advanced orchestration between educational institutions, student mobility networks, and European qualification frameworks that enable secure, interoperable academic credential issuance across European borders.
+This document presents the comprehensive narrative for EUHED (European Higher Education Diploma) diploma issuance within the DC4EU Pilot 2 framework, implementing a sophisticated OpenID VCI flow with **mandatory Educational ID verification**. The journey demonstrates advanced orchestration between educational institutions, student mobility networks, and European qualification frameworks that enable secure, interoperable academic credential issuance across European borders.
 
-**Critical Prerequisite**: Before any EUHEMC diploma can be issued, the student's **Educational ID** must be verified and their academic achievement must be validated through the institutional authentic source. This educational identity verification is the cornerstone upon which all academic credentials are built.
+**Critical Prerequisite**: Before any EUHED diploma can be issued, the student's **Educational ID** must be verified and their academic achievement must be validated through the institutional authentic source. This educational identity verification is the cornerstone upon which all academic credentials are built.
 
 **Key Innovation**: This implementation showcases the world's first production-ready system for European Higher Education Mobility Community diploma credentials, integrating ELM v3.2 standards with EBSI trust registries to create a seamless, trustworthy academic credential ecosystem built upon verified educational identity.
 
-**Bottom Line**: Maria García, having completed her Computer Science degree at Universitat Rovira i Virgili, successfully obtains her EUHEMC diploma through a process that validates her Educational ID, verifies her academic achievements, and issues a cryptographically secure diploma credential recognisable across all European higher education institutions and mobility programmes.
+**Bottom Line**: Maria García, having completed her Computer Science degree at Universitat Rovira i Virgili, successfully obtains her EUHED diploma through a process that validates her Educational ID, verifies her academic achievements, and issues a cryptographically secure diploma credential recognisable across all European higher education institutions and mobility programmes.
 
 ---
 
@@ -16,7 +16,7 @@ This document presents the comprehensive narrative for EUHEMC (European Higher E
 
 1. [Quick Reference Guide](#1-quick-reference-guide)
 2. [Infrastructure Prerequisites](#2-infrastructure-prerequisites)
-3. [The Story: Maria's EUHEMC Diploma Journey](#3-the-story-marias-euhemc-diploma-journey)
+3. [The Story: Maria's EUHED Diploma Journey](#3-the-story-marias-euhemc-diploma-journey)
 4. [Actor Ecosystem and Roles](#4-actor-ecosystem-and-roles)
 5. [Technical Architecture Overview](#5-technical-architecture-overview)
 6. [Detailed User Journey Flow](#6-detailed-user-journey-flow)
@@ -34,27 +34,27 @@ This document presents the comprehensive narrative for EUHEMC (European Higher E
 1. **Prerequisites**: Academic record validation and credential authorisation infrastructure
 2. **Educational ID Verification**: Mandatory institutional identity validation (Steps 1-18)
 3. **Academic Achievement Validation**: Degree completion verification (Steps 19-28)
-4. **EUHEMC Diploma Issuance**: Institutional academic credential creation (Steps 29-42)
+4. **EUHED Diploma Issuance**: Institutional academic credential creation (Steps 29-42)
 5. **European Recognition**: Bologna Process compliance and cross-border validity
 
 ### 1.2 Key Actors
 
 - **Graduate**: Maria García (credential holder and recent Computer Science graduate)
 - **University**: Universitat Rovira i Virgili (academic credential issuer and authentic source)
-- **EUHEMC Network**: European Higher Education and Mobility Community infrastructure
+- **EUHED Network**: European Higher Education and Mobility Community infrastructure
 - **Infrastructure**: EBSI trust registries and European Learning Model verification services
 - **Governance**: Spanish Ministry of Universities and European Quality Assurance frameworks
 
 ### 1.3 Technical Standards
 
 - **Educational ID Schema**: eduGAIN/SCHAC standards for verified institutional identity
-- **EUHEMC Diploma Schema**: ELM v3.2 compliant academic credential structure
+- **EUHED Diploma Schema**: ELM v3.2 compliant academic credential structure
 - **Academic Standards**: ECTS credit system, Bologna Process qualifications framework
 - **Protocols**: OpenID4VCI, W3C Verifiable Credentials, EBSI trust framework, European Learning Model v3.2
 
 ### 1.4 Critical Success Factors
 
-- **Mandatory Educational ID Verification**: No EUHEMC diploma can be issued without verified institutional identity
+- **Mandatory Educational ID Verification**: No EUHED diploma can be issued without verified institutional identity
 - **Academic Achievement Validation**: Robust verification of degree completion and academic standing
 - **ELM v3.2 Compliance**: Full alignment with European Learning Model standards
 - **Bologna Process Integration**: Compliance with European Higher Education Area frameworks
@@ -66,7 +66,7 @@ This document presents the comprehensive narrative for EUHEMC (European Higher E
 
 ### 2.1 Critical Foundation Requirements
 
-Before any EUHEMC diploma can be issued, institutions must complete essential academic infrastructure preparation. This is not optional—it's a **mandatory prerequisite** for participation in the European Higher Education and Mobility Community framework.
+Before any EUHED diploma can be issued, institutions must complete essential academic infrastructure preparation. This is not optional—it's a **mandatory prerequisite** for participation in the European Higher Education and Mobility Community framework.
 
 ### 2.2 Academic Data Store Preparation for EAA Issuance
 
@@ -117,7 +117,7 @@ Educational ID → Academic Achievement Database
 - **Exception handling**: Procedures for handling incomplete records or validation conflicts
 - **Performance optimisation**: Sub-second response times for credential issuance experience
 
-### 2.4 EUHEMC Compliance Infrastructure
+### 2.4 EUHED Compliance Infrastructure
 
 #### European Learning Model v3.2 Implementation
 
@@ -138,7 +138,7 @@ Universities must implement **comprehensive alignment** with:
 
 ---
 
-## 3. The Story: Maria's EUHEMC Diploma Journey
+## 3. The Story: Maria's EUHED Diploma Journey
 
 ### 3.1 Setting the Scene
 
@@ -156,7 +156,7 @@ It's Tuesday morning, July 2025. Maria sits in her flat, having just received no
 - **Competency mapping**: Clear representation of learning outcomes and acquired skills
 - **Future-proof format**: Credentials that will remain valid and verifiable throughout her career
 
-**The Opportunity**: EUHEMC diploma credentials represent a paradigm shift in European higher education, enabling:
+**The Opportunity**: EUHED diploma credentials represent a paradigm shift in European higher education, enabling:
 
 - **Seamless academic mobility**: Automatic recognition of qualifications across European borders
 - **Enhanced employability**: Employer-verifiable credentials with detailed competency information
@@ -166,7 +166,7 @@ It's Tuesday morning, July 2025. Maria sits in her flat, having just received no
 
 ### 3.3 The Technical Foundation
 
-**European Learning Model v3.2**: The EUHEMC diploma leverages the comprehensive ELM framework to represent:
+**European Learning Model v3.2**: The EUHED diploma leverages the comprehensive ELM framework to represent:
 
 - **Learning achievements**: Detailed description of academic accomplishments
 - **Assessment information**: Comprehensive evaluation and grading details
@@ -174,7 +174,7 @@ It's Tuesday morning, July 2025. Maria sits in her flat, having just received no
 - **Competency frameworks**: Mapping to European and sectoral competency standards
 - **Quality assurance**: Accreditation and validation information
 
-**EUHEMC Business Restrictions**: The specific constraints applied to the generic EDC schema include:
+**EUHED Business Restrictions**: The specific constraints applied to the generic EDC schema include:
 
 - **Higher education focus**: Diploma credentials specifically for university-level qualifications
 - **Bologna compliance**: Mandatory alignment with European Higher Education Area standards
@@ -184,7 +184,7 @@ It's Tuesday morning, July 2025. Maria sits in her flat, having just received no
 
 ### 3.4 The Journey Begins
 
-Maria opens her EUDI Wallet application and navigates to the "Academic Credentials" section. She sees a notification: "Your Computer Science degree has been conferred - claim your EUHEMC diploma credential now."
+Maria opens her EUDI Wallet application and navigates to the "Academic Credentials" section. She sees a notification: "Your Computer Science degree has been conferred - claim your EUHED diploma credential now."
 
 This moment represents the culmination of years of academic work and the beginning of a new era in educational credential management. Let's follow Maria through each step of this groundbreaking process.
 
@@ -200,7 +200,7 @@ This moment represents the culmination of years of academic work and the beginni
 - **Capabilities**: 
   - Educational ID presentation for academic verification
   - Academic achievement confirmation and acceptance
-  - EUHEMC diploma credential reception and management
+  - EUHED diploma credential reception and management
   - Cross-border academic mobility and recognition
 
 #### 4.1.2 University (Academic Credential Issuer)
@@ -209,11 +209,11 @@ This moment represents the culmination of years of academic work and the beginni
 - **Capabilities**:
   - Academic achievement validation and verification
   - Educational ID correlation with academic records
-  - EUHEMC diploma credential creation and issuance
+  - EUHED diploma credential creation and issuance
   - European Learning Model v3.2 implementation
   - Bologna Process compliance validation
 
-#### 4.1.3 EUHEMC Network Infrastructure
+#### 4.1.3 EUHED Network Infrastructure
 - **Actor**: European Higher Education and Mobility Community
 - **Role**: Academic recognition and mobility facilitation framework
 - **Capabilities**:
@@ -247,7 +247,7 @@ This moment represents the culmination of years of academic work and the beginni
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
-│                        EUHEMC Diploma Issuance Architecture         │
+│                        EUHED Diploma Issuance Architecture         │
 ├─────────────────────────────────────────────────────────────────────┤
 │                                                                     │
 │  ┌─────────────┐    ┌──────────────────┐    ┌─────────────────────┐ │
@@ -276,7 +276,7 @@ This moment represents the culmination of years of academic work and the beginni
 
 1. **Application Layer**: EUDI Wallet with academic credential management
 2. **Identity Layer**: Educational ID verification and academic authentication
-3. **Credential Layer**: OpenID4VCI with EUHEMC-specific extensions
+3. **Credential Layer**: OpenID4VCI with EUHED-specific extensions
 4. **Trust Layer**: EBSI trust registries with European academic validation
 5. **Data Layer**: European Learning Model v3.2 with Bologna Process integration
 
@@ -296,7 +296,7 @@ This moment represents the culmination of years of academic work and the beginni
 
 #### Step 1-3: Diploma Claim Initiation
 **Actor**: Maria (Student)
-**Action**: Maria opens her EUDI Wallet and selects "Claim EUHEMC Diploma" from the academic credentials section.
+**Action**: Maria opens her EUDI Wallet and selects "Claim EUHED Diploma" from the academic credentials section.
 
 **Technical Process**:
 ```
@@ -434,11 +434,11 @@ Educational ID → Academic Records
 **Actor**: Bologna Process Framework
 **Action**: Verification of degree compliance with European Higher Education Area standards.
 
-### Phase 3: EUHEMC Diploma Issuance (Steps 29-42)
+### Phase 3: EUHED Diploma Issuance (Steps 29-42)
 
 #### Step 29-33: Credential Offer Generation
 **Actor**: URV Academic System
-**Action**: Generation of EUHEMC diploma credential offer with comprehensive academic metadata.
+**Action**: Generation of EUHED diploma credential offer with comprehensive academic metadata.
 
 **Credential Offer Structure**:
 ```json
@@ -469,7 +469,7 @@ Educational ID → Academic Records
 
 #### Step 34-38: Credential Request Processing
 **Actor**: Maria (Student)
-**Action**: Maria reviews and accepts the EUHEMC diploma credential offer.
+**Action**: Maria reviews and accepts the EUHED diploma credential offer.
 
 **Technical Process**:
 ```json
@@ -487,7 +487,7 @@ Educational ID → Academic Records
 
 #### Step 39-42: Final Credential Issuance
 **Actor**: URV Academic System
-**Action**: Generation and delivery of cryptographically signed EUHEMC diploma credential.
+**Action**: Generation and delivery of cryptographically signed EUHED diploma credential.
 
 ---
 
@@ -495,7 +495,7 @@ Educational ID → Academic Records
 
 ### 7.1 Educational Trust Chain
 
-The EUHEMC diploma operates within a sophisticated trust ecosystem that validates both the issuing institution and the academic achievement:
+The EUHED diploma operates within a sophisticated trust ecosystem that validates both the issuing institution and the academic achievement:
 
 #### 7.1.1 Institutional Trust Verification
 - **EBSI Registration**: URV's institutional DID registered in European trust registry
@@ -519,7 +519,7 @@ The EUHEMC diploma operates within a sophisticated trust ecosystem that validate
 
 #### 7.2.2 Schema Validation
 - **ELM v3.2 Compliance**: Full adherence to European Learning Model specifications
-- **EUHEMC Extensions**: Specific business rules for higher education mobility
+- **EUHED Extensions**: Specific business rules for higher education mobility
 - **Bologna Integration**: Mandatory compliance with European education standards
 - **Quality Frameworks**: Integration with European quality assurance mechanisms
 
@@ -576,7 +576,7 @@ The university initiates the diploma issuance process by requesting presentation
   },
   "client_metadata": {
     "client_name": "URV Academic Credentials Service",
-    "client_purpose": "EUHEMC Diploma Issuance - Computer Science Degree Verification"
+    "client_purpose": "EUHED Diploma Issuance - Computer Science Degree Verification"
   }
 }
 ```
@@ -650,9 +650,9 @@ The university's academic system validates Maria's degree completion and generat
 }
 ```
 
-### 8.3 Final EUHEMC Diploma Credential Response
+### 8.3 Final EUHED Diploma Credential Response
 
-The final diploma credential response delivers the completed EUHEMC diploma to Maria's EUDI Wallet in JWT format, cryptographically signed by URV's institutional key and fully compliant with ELM v3.2:
+The final diploma credential response delivers the completed EUHED diploma to Maria's EUDI Wallet in JWT format, cryptographically signed by URV's institutional key and fully compliant with ELM v3.2:
 
 ```json
 {
@@ -663,7 +663,7 @@ The final diploma credential response delivers the completed EUHEMC diploma to M
 ```
 
 **Response Components**:
-- **JWT-encoded Credential**: Complete EUHEMC Diploma in W3C VC format with ELM v3.2 compliance
+- **JWT-encoded Credential**: Complete EUHED Diploma in W3C VC format with ELM v3.2 compliance
 - **Digital Signature**: ES256 signature by URV's academic DID key
 - **EBSI Anchoring**: Schema and trust registry references for European recognition
 - **Academic Metadata**: Comprehensive learning achievements and competency information
@@ -673,9 +673,9 @@ The final diploma credential response delivers the completed EUHEMC diploma to M
 
 ## 9. Implementation Insights
 
-### 9.1 Schema Architecture: Educational ID vs. EUHEMC Diploma
+### 9.1 Schema Architecture: Educational ID vs. EUHED Diploma
 
-The EUHEMC diploma implementation demonstrates sophisticated layering between different credential types within the European digital education ecosystem:
+The EUHED diploma implementation demonstrates sophisticated layering between different credential types within the European digital education ecosystem:
 
 #### 9.1.1 Educational ID Foundation
 - **Purpose**: Institutional identity verification and academic correlation
@@ -683,7 +683,7 @@ The EUHEMC diploma implementation demonstrates sophisticated layering between di
 - **Lifecycle**: Active during academic engagement, renewable for alumni services
 - **Trust Level**: Institutional verification with moderate assurance levels
 
-#### 9.1.2 EUHEMC Diploma Enhancement
+#### 9.1.2 EUHED Diploma Enhancement
 - **Purpose**: Academic achievement certification and qualification validation
 - **Scope**: Completed learning outcomes, degree classification, and competency attestation
 - **Lifecycle**: Permanent qualification record with European recognition validity
@@ -697,7 +697,7 @@ Educational ID (Foundation)
 ├── Enrolment Verification
 └── Academic Affiliation
     │
-    └── Enables → EUHEMC Diploma (Achievement)
+    └── Enables → EUHED Diploma (Achievement)
                   ├── Degree Completion
                   ├── Learning Outcomes
                   ├── Competency Validation
@@ -706,7 +706,7 @@ Educational ID (Foundation)
 
 ### 9.2 European Learning Model v3.2 Implementation
 
-The EUHEMC diploma leverages the comprehensive ELM v3.2 framework to provide rich academic metadata:
+The EUHED diploma leverages the comprehensive ELM v3.2 framework to provide rich academic metadata:
 
 #### 9.2.1 Learning Achievement Structures
 ```json
@@ -744,9 +744,9 @@ The EUHEMC diploma leverages the comprehensive ELM v3.2 framework to provide ric
 - **Quality Assurance**: External examiner validation and peer review integration
 - **Recognition Standards**: Bologna Process compliance and automatic recognition protocols
 
-### 9.3 EUHEMC Business Restrictions
+### 9.3 EUHED Business Restrictions
 
-The EUHEMC schema applies specific constraints to the generic EDC model to address higher education mobility requirements:
+The EUHED schema applies specific constraints to the generic EDC model to address higher education mobility requirements:
 
 #### 9.3.1 Mandatory Academic Fields
 - **Qualification Level**: EQF level specification (mandatory for recognition)
@@ -769,7 +769,7 @@ The EUHEMC schema applies specific constraints to the generic EDC model to addre
 ### 9.4 Trust and Governance Framework
 
 #### 9.4.1 Academic Trust Chain
-The EUHEMC diploma operates within a multi-layered trust ecosystem:
+The EUHED diploma operates within a multi-layered trust ecosystem:
 
 1. **National Level**: Spanish Ministry of Universities validation
 2. **Institutional Level**: University accreditation and degree-awarding powers
@@ -788,132 +788,146 @@ The EUHEMC diploma operates within a multi-layered trust ecosystem:
 
 ### 10.1 Appendix A: Schema Specifications
 
-#### A.1 EUHEMC Diploma Schema
+#### A.1 EUHED Diploma Schema
 
 The European Learning Model v3.2 compliant schema for higher education diploma credentials:
 
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "EUHEMC Diploma Credential",
-  "description": "Schema for European Higher Education and Mobility Community diploma credentials based on ELM v3.2",
+  "title": "European Higher Education Diploma",
+  "description": "Profile schema extending the base EDC-W3C-VC to define higher education diplomas issued by recognised institutions in Europe.",
   "type": "object",
   "allOf": [
     {
-      "$ref": "./node_modules/@elm/v3.2-credential-schema/schema.json"
+      "$ref": "./node_modules/@cef-ebsi/vcdm1.1-europass-edc-schema/schema.json"
     },
     {
+      "type": "object",
       "properties": {
+        "type": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "const": [
+            "VerifiableCredential",
+            "VerifiableAttestation",
+            "EuropeanDigitalCredential",
+            "EuropeanHigherEducationDiploma"
+          ]
+        },
         "credentialSubject": {
-          "description": "Academic achievement and qualification information for EUHEMC diploma",
           "type": "object",
+          "required": [
+            "id",
+            "type",
+            "dateOfBirth",
+            "familyName",
+            "givenName",
+            "hasClaim"
+          ],
           "properties": {
-            "id": {
-              "description": "DID of the credential subject (graduate)",
-              "type": "string"
-            },
-            "degreeTitle": {
-              "description": "Official title of the academic degree",
-              "type": "string"
-            },
-            "qualificationLevel": {
-              "description": "European Qualifications Framework level",
-              "type": "string",
-              "enum": ["EQF Level 6", "EQF Level 7", "EQF Level 8"]
-            },
-            "ectsCredits": {
-              "description": "Total ECTS credits for the qualification",
-              "type": "integer",
-              "minimum": 60
-            },
-            "finalGrade": {
-              "description": "Final classification and numerical grade",
-              "type": "string"
-            },
-            "graduationDate": {
-              "description": "Date of degree conferment",
-              "type": "string",
-              "format": "date"
-            },
-            "institution": {
-              "description": "Awarding institution name",
-              "type": "string"
-            },
-            "country": {
-              "description": "Country of the awarding institution",
-              "type": "string"
-            },
-            "learningAchievements": {
-              "description": "Detailed learning achievements and outcomes",
+            "hasClaim": {
               "type": "array",
+              "minItems": 1,
               "items": {
                 "type": "object",
+                "required": [
+                  "type",
+                  "title",
+                  "awardedBy",
+                  "specifiedBy"
+                ],
                 "properties": {
-                  "achievementId": {
-                    "type": "string"
+                  "type": {
+                    "type": "string",
+                    "const": "LearningAchievement"
                   },
                   "title": {
-                    "type": "string"
+                    "type": "object"
                   },
-                  "ectsCredits": {
-                    "type": "integer"
+                  "awardedBy": {
+                    "type": "object",
+                    "required": [
+                      "awardingBody",
+                      "awardingDate",
+                      "location"
+                    ],
+                    "properties": {
+                      "awardingBody": {
+                        "type": "object"
+                      },
+                      "awardingDate": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "location": {
+                        "type": "object"
+                      }
+                    }
                   },
-                  "grade": {
-                    "type": "string"
+                  "specifiedBy": {
+                    "type": "object",
+                    "required": [
+                      "eqfLevel",
+                      "educationSubject"
+                    ],
+                    "properties": {
+                      "eqfLevel": {
+                        "type": "object",
+                        "required": [
+                          "notation"
+                        ],
+                        "properties": {
+                          "notation": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "educationSubject": {
+                        "type": "array",
+                        "minItems": 1
+                      },
+                      "additionalNote": {
+                        "type": "array"
+                      }
+                    }
                   },
-                  "learningOutcomes": {
+                  "entitlesTo": {
                     "type": "array",
                     "items": {
-                      "type": "string"
+                      "type": "object",
+                      "required": [
+                        "title",
+                        "awardedBy"
+                      ],
+                      "properties": {
+                        "title": {
+                          "type": "object"
+                        },
+                        "awardedBy": {
+                          "type": "object",
+                          "required": [
+                            "awardingBody"
+                          ]
+                        }
+                      }
                     }
                   }
                 }
               }
-            },
-            "identifier": {
-              "description": "Educational institution identifier",
-              "type": "string"
-            },
-            "schacPersonalUniqueCode": {
-              "description": "SCHAC personal unique codes",
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "familyName": {
-              "description": "Graduate's family name",
-              "type": "string"
-            },
-            "firstName": {
-              "description": "Graduate's given name",
-              "type": "string"
-            },
-            "displayName": {
-              "description": "Graduate's full display name",
-              "type": "string"
-            },
-            "dateOfBirth": {
-              "description": "Graduate's date of birth",
-              "type": "string",
-              "format": "date"
             }
-          },
-          "required": [
-            "id",
-            "degreeTitle",
-            "qualificationLevel",
-            "ectsCredits",
-            "finalGrade",
-            "graduationDate",
-            "institution",
-            "country",
-            "learningAchievements",
-            "identifier",
-            "familyName",
-            "firstName",
-            "displayName"
-          ]
+          }
+        },
+        "displayParameter": {
+          "type": "object"
+        },
+        "credentialProfiles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         }
       }
     }
@@ -986,7 +1000,7 @@ The European Learning Model v3.2 compliant schema for higher education diploma c
 - **Quality Assurance Integration**: External validator connectivity
 - **Bologna Compliance Validation**: European standard alignment verification
 
-#### D.2 Phase 2: EUHEMC Pilot Implementation (Months 5-8)
+#### D.2 Phase 2: EUHED Pilot Implementation (Months 5-8)
 - **Limited Graduate Cohort**: Test with Computer Science graduates
 - **Cross-Border Validation**: Partner university recognition testing
 - **Employer Integration**: Industry stakeholder credential verification
@@ -994,7 +1008,7 @@ The European Learning Model v3.2 compliant schema for higher education diploma c
 
 #### D.3 Phase 3: Full Production Deployment (Months 9-12)
 - **Complete Programme Rollout**: All eligible graduates across disciplines
-- **European Network Expansion**: Additional EUHEMC partner institutions
+- **European Network Expansion**: Additional EUHED partner institutions
 - **Mobility Service Integration**: Academic transfer and application systems
 - **Continuous Monitoring**: Performance analytics and improvement cycles
 
@@ -1023,7 +1037,7 @@ The European Learning Model v3.2 compliant schema for higher education diploma c
 
 ## Conclusion
 
-The EUHEMC diploma issuance journey represents a transformative advancement in European higher education credential management. By successfully integrating Educational ID verification with comprehensive academic achievement validation, this implementation establishes a new standard for trusted, interoperable academic credentials that facilitate seamless mobility across European borders.
+The EUHED diploma issuance journey represents a transformative advancement in European higher education credential management. By successfully integrating Educational ID verification with comprehensive academic achievement validation, this implementation establishes a new standard for trusted, interoperable academic credentials that facilitate seamless mobility across European borders.
 
 **Key Achievements**:
 
@@ -1031,16 +1045,10 @@ The EUHEMC diploma issuance journey represents a transformative advancement in E
 2. **Academic Achievement Validation**: Creating robust infrastructure for degree completion verification and learning outcome assessment
 3. **ELM v3.2 Implementation**: Full compliance with European Learning Model standards for comprehensive academic representation
 4. **Bologna Process Integration**: Seamless alignment with European Higher Education Area frameworks and recognition procedures
-5. **EUHEMC Network Enablement**: Facilitating European academic mobility through standardised, verifiable credentials
+5. **EUHED Network Enablement**: Facilitating European academic mobility through standardised, verifiable credentials
 6. **Quality Assurance Excellence**: Implementing rigorous validation procedures that maintain academic integrity whilst enabling digital innovation
 
 This comprehensive framework not only serves the immediate needs of European graduates like Maria García but also establishes the foundation for a truly integrated European Higher Education Area where digital credentials enable seamless academic progression, professional recognition, and lifelong learning opportunities across all Member States.
 
-The journey from Educational ID verification through academic achievement validation to EUHEMC diploma issuance represents more than a technical accomplishment—it embodies the European commitment to educational excellence, academic mobility, and the digital transformation of higher education that will define the future of European academic cooperation.
+The journey from Educational ID verification through academic achievement validation to EUHED diploma issuance represents more than a technical accomplishment—it embodies the European commitment to educational excellence, academic mobility, and the digital transformation of higher education that will define the future of European academic cooperation.
 
----
-
-**Document Version**: 1.0  
-**Last Updated**: June 2025  
-**Next Review**: December 2025  
-**Compliance Status**: ELM v3.2 Compliant, Bologna Process Aligned, EBSI Integrated
