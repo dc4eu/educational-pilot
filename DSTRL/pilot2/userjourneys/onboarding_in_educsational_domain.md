@@ -3830,6 +3830,8 @@ Complete OpenID4VCI credential offer with full metadata:
     "authorization_code": {
       "issuer_state": "eyJraWQiOiJkaWQ6ZWJzaTp6dFJvWXlKTmRHcjh0bU# EducationalID Issuance: Complete User Journey Narrative with Technical Implementation
 
+      ```
+
 **Document Version:** 1.0  
 **Status:** Production Ready - Approved for v1.0  
 **Authors:** Angel Palomares (angel.palomares@eviden.com)  
