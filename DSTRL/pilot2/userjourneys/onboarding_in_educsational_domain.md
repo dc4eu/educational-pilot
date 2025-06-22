@@ -1,14 +1,4 @@
-# EducationalID Issuance: Complete User Journey Narrative with Technical Implementation
-
-**Document Version:** 1.0  
-**Status:** Production Ready - Approved for v1.0  
-**Authors:** Angel Palomares (angel.palomares@eviden.com)  
-**Reviewers:** Lluis Ariño (lluisalfons.arino@urv.cat)  
-**Implementation:** Pilot 2 - dPKI with EBSI Integration  
-**Date:** June 2025  
-**Project:** DC4EU - Digital Credentials for Europe
-
----
+# Onboarding on educational/professional qualifications domain - EducationalID Issuance: Complete User Journey Narrative with Technical Implementation
 
 ## Executive Summary
 
