@@ -91,6 +91,41 @@ graph TD
 
 Before any EUHED diploma can be issued, institutions must complete essential academic infrastructure preparation. This is not optional—it's a **mandatory prerequisite** for participation in the European Higher Education and Mobility Community framework.
 
+```mermaid
+graph LR
+    subgraph "University Infrastructure"
+        A[Academic Records] --> B[ELM Mapping Engine]
+        B --> C[OpenID4VCI Server]
+        C --> D[EBSI Integration]
+    end
+    
+    subgraph "Graduate Environment"
+        E[EUDI Wallet] --> F[Educational ID]
+        F --> G[QR Scanner]
+    end
+    
+    subgraph "European Standards"
+        H[Bologna Framework] --> I[ELM v3.2 Schema]
+        I --> J[ECTS Mapping]
+    end
+    
+    subgraph "Trust Infrastructure"
+        K[EBSI Registry] --> L[Academic Validation]
+        L --> M[Cross-Border Recognition]
+    end
+    
+    D --> K
+    G --> A
+    J --> B
+    M --> A
+    
+    style A fill:#e3f2fd
+    style E fill:#fff3e0
+    style H fill:#f1f8e9
+    style K fill:#fce4ec
+```
+
+
 ### 2.2 Academic Data Store Preparation for EAA Issuance
 
 #### Student Academic Registry Population
@@ -149,6 +184,32 @@ Educational ID → Academic Achievement Database
 - **Assessment documentation**: Comprehensive evaluation and grading information
 - **Qualification frameworks**: Integration with European Qualifications Framework (EQF)
 - **Multilingual support**: Credential representation in multiple European languages
+
+```mermaid
+graph TD
+    subgraph "Academic Achievement"
+        A[Learning Outcomes] --> B[Competencies]
+        B --> C[Assessment Methods]
+    end
+    
+    subgraph "Institutional Context"
+        D[Awarding Body] --> E[Qualification Framework]
+        E --> F[Quality Assurance]
+    end
+    
+    subgraph "European Standards"
+        G[ECTS Credits] --> H[EQF Levels]
+        H --> I[Bologna Descriptors]
+    end
+    
+    C --> G
+    F --> H
+    I --> A
+    
+    style A fill:#e1f5fe
+    style D fill:#f3e5f5
+    style G fill:#e8f5e8
+```
 
 #### Bologna Process Integration
 
