@@ -500,6 +500,31 @@ Response: {
     ]
   }
 }
+
+
+Graduation Verification and Portal Access (Steps 1-8)
+
+```mermaid
+sequenceDiagram
+    participant M as Maria
+    participant P as Graduation Portal
+    participant R as Academic Registry
+    participant V as Verification Service
+    
+    Note over M,V: Phase 1: Academic Achievement Verification
+    
+    M->>P: 1. Access graduation portal
+    P->>R: 2. Check graduation status
+    R->>V: 3. Verify degree completion
+    V->>R: 4. Confirm academic standing
+    R->>P: 5. Return graduation eligibility
+    P->>M: 6. Display diploma options
+    M->>P: 7. Select "EUHED Diploma"
+    P->>M: 8. Show requirements and benefits
+    
+    rect rgb(240, 248, 255)
+        Note over M,V: UX Focus:<br/>Clear graduation status, diploma options
+    end
 ```
 
 #### Step 9-13: Educational ID Verification
@@ -524,6 +549,32 @@ Educational ID → Academic Records
 ├── Enrolment Period: 2021-2025 → Academic Years: 4 years completed
 ├── Credit Accumulation: 240 ECTS → Requirements: Met
 └── Final Assessment: Honours → Grade: 8.7/10
+```
+
+Educational ID Verification (Steps 9-18)
+```mermaid
+sequenceDiagram
+    participant M as Maria
+    participant P as Portal
+    participant I as Diploma Issuer
+    participant E as EBSI
+    
+    Note over M,E: Phase 2: Educational ID Verification
+    
+    M->>P: 9. Request EUHED diploma
+    P->>I: 10. Generate credential request
+    I->>E: 11. Validate university status
+    E->>I: 12. Confirm trust registration
+    I->>P: 13. Return QR code for Educational ID
+    P->>M: 14. Display QR + instructions
+    M->>M: 15. Scan QR with EUDI Wallet
+    M->>I: 16. Present Educational ID credential
+    I->>I: 17. Validate Educational ID
+    I->>M: 18. Confirm identity verified
+    
+    rect rgb(255, 248, 240)
+        Note over M,E: Trust Checkpoint:<br/>Educational ID validation required
+    end
 ```
 
 ### Phase 2: Academic Achievement Validation (Steps 19-28)
@@ -576,6 +627,32 @@ Educational ID → Academic Records
 #### Step 27-28: Quality Assurance Validation
 **Actor**: Bologna Process Framework
 **Action**: Verification of degree compliance with European Higher Education Area standards.
+
+Academic Record Processing and ELM Mapping (Steps 19-28)
+```mermaid
+sequenceDiagram
+    participant I as Diploma Issuer
+    participant R as Academic Registry
+    participant E as ELM Engine
+    participant S as Standards Services
+    
+    Note over I,S: Phase 3: Academic Achievement Processing
+    
+    I->>R: 19. Request academic transcript
+    R->>I: 20. Return complete academic record
+    I->>E: 21. Send for ELM mapping
+    E->>S: 22. Convert grades to ECTS
+    S->>E: 23. Return ECTS mapping
+    E->>S: 24. Map competencies to EQF
+    S->>E: 25. Return competency mapping
+    E->>I: 26. Return ELM-compliant record
+    I->>I: 27. Generate learning outcomes
+    I->>I: 28. Prepare diploma content
+    
+    rect rgb(248, 255, 248)
+        Note over I,S: Standards Compliance:<br/>ELM v3.2 and Bologna Process
+    end
+
 
 ### Phase 3: EUHED Diploma Issuance (Steps 29-42)
 
