@@ -37,6 +37,21 @@ This document presents the comprehensive narrative for EUHED (European Higher Ed
 4. **EUHED Diploma Issuance**: Institutional academic credential creation (Steps 29-42)
 5. **European Recognition**: Bologna Process compliance and cross-border validity
 
+```mermaid
+graph TD
+    A[Graduation Complete] --> B[Educational ID Required]
+    B --> C[Academic Record Validation]
+    C --> D[ELM v3.2 Mapping]
+    D --> E[EUHED Diploma Issuance]
+    E --> F[EBSI Registration]
+    F --> G[European Recognition]
+    
+    style A fill:#e1f5fe
+    style G fill:#c8e6c9
+    style C fill:#fff3e0
+    style E fill:#f3e5f5
+```
+
 ### 1.2 Key Actors
 
 - **Graduate**: Maria García (credential holder and recent Computer Science graduate)
@@ -44,6 +59,14 @@ This document presents the comprehensive narrative for EUHED (European Higher Ed
 - **EUHED Network**: European Higher Education and Mobility Community infrastructure
 - **Infrastructure**: EBSI trust registries and European Learning Model verification services
 - **Governance**: Spanish Ministry of Universities and European Quality Assurance frameworks
+
+| Actor | Role | Responsibility |
+|-------|------|----------------|
+| **Maria García** | Graduate/Credential Holder | Presents Educational ID, receives EUHED diploma |
+| **Universitat Rovira i Virgili** | Degree-Granting Institution | Issues EUHED diploma, validates academic achievement |
+| **Academic Registry** | Authentic Source | Maintains verified academic transcripts and records |
+| **EBSI Infrastructure** | Trust Registry | Provides European-wide credential validation |
+| **ELM Mapping Service** | Standards Converter | Transforms local grades to European Learning Model |
 
 ### 1.3 Technical Standards
 
