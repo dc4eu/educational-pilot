@@ -323,6 +323,48 @@ This moment represents the culmination of years of academic work and the beginni
   - Quality assurance validation
   - European competency framework integration
 
+```mermaid
+graph TB
+    subgraph "Academic Layer"
+        URV[Universitat Rovira i Virgili<br/>Degree-Granting Institution]
+        REG[Academic Registry<br/>Transcript Authority]
+        QA[Quality Assurance Agency<br/>🔍 Validation Authority]
+    end
+    
+    subgraph "Individual Layer"
+        MARIA[Maria García<br/>Graduate]
+        WALLET[EUDI Wallet<br/>Credential Storage]
+        EDUID[Educational ID<br/>Institutional Identity]
+    end
+    
+    subgraph "European Layer"
+        EBSI[EBSI Trust Registry<br/>Validation Infrastructure]
+        ELM[ELM Mapping Service<br/>Standards Converter]
+        BOLOGNA[Bologna Framework<br/>Academic Standards]
+    end
+    
+    subgraph "Integration Layer"
+        ECTS[ECTS System<br/>Credit Transfer]
+        EQF[European Qualifications Framework<br/>Level Mapping]
+    end
+    
+    MARIA --> URV
+    MARIA --> WALLET
+    WALLET --> EDUID
+    URV --> REG
+    URV --> EBSI
+    REG --> ELM
+    ELM --> BOLOGNA
+    BOLOGNA --> ECTS
+    BOLOGNA --> EQF
+    EBSI --> QA
+    
+    style MARIA fill:#e1f5fe
+    style URV fill:#f3e5f5
+    style EBSI fill:#e8f5e8
+    style BOLOGNA fill:#fff3e0
+```
+
 ### 4.2 Supporting Infrastructure
 
 #### 4.2.1 EBSI Trust Registries
