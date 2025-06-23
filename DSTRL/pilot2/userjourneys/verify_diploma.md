@@ -37,6 +37,21 @@ This document presents the comprehensive narrative for EUHED (European Higher Ed
 4. **Cryptographic Verification**: EBSI trust registry validation (Steps 13-22)
 5. **Academic Validation**: Institutional credential status verification (Steps 23-27)
 
+```mermaid
+graph TD
+    A[Recruitment Need] --> B[Verification Request]
+    B --> C[Candidate Consent]
+    C --> D[Diploma Presentation]
+    D --> E[Cryptographic Validation]
+    E --> F[Academic Confirmation]
+    F --> G[Employment Decision]
+    
+    style A fill:#e1f5fe
+    style G fill:#c8e6c9
+    style D fill:#fff3e0
+    style E fill:#f3e5f5
+```
+
 ### 1.2 Key Actors
 
 - **Employer Representative**: James Thompson (credential verifier and recruitment officer)
@@ -44,6 +59,14 @@ This document presents the comprehensive narrative for EUHED (European Higher Ed
 - **University**: Universitat Rovira i Virgili (original credential issuer and authentic source)
 - **EBSI Infrastructure**: European trust registries and verification services
 - **Governance**: Spanish Ministry of Universities and European Quality Assurance frameworks
+
+| Actor | Role | Responsibility |
+|-------|------|----------------|
+| **James Thompson** | Employer Representative | Credential verifier and recruitment officer |
+| **Maria García** | Graduate/Credential Holder | Holds EUHED diploma credential |
+| **TechCorp Barcelona** | Employer Organisation | Requires diploma verification for hiring |
+| **Universitat Rovira i Virgili** | Original Credential Issuer | Maintains diploma authenticity and status |
+| **EBSI Infrastructure** | European Trust Registry | Provides cryptographic validation services |
 
 ### 1.3 Technical Standards
 
@@ -82,6 +105,42 @@ Before any EUHED diploma verification can be performed, employers and relying pa
 - **Quality Assurance**: Integration with European quality standards for academic validation
 - **Audit Capabilities**: Comprehensive logging and verification trail maintenance
 
+
+
+```mermaid
+graph LR
+    subgraph "Employer Systems"
+        A[HR Portal] --> B[Verification API]
+        B --> C[OpenID4VP Client]
+        C --> D[EBSI Connector]
+    end
+    
+    subgraph "Candidate Environment"
+        E[EUDI Wallet] --> F[EUHED Diploma]
+        F --> G[Presentation Interface]
+    end
+    
+    subgraph "European Trust Layer"
+        H[EBSI Registry] --> I[Academic Validation]
+        I --> J[Institution Verification]
+    end
+    
+    subgraph "University Systems"
+        K[Credential Status] --> L[Academic Records]
+        L --> M[Verification Endpoint]
+    end
+    
+    D --> H
+    G --> A
+    J --> K
+    M --> B
+    
+    style A fill:#e3f2fd
+    style E fill:#fff3e0
+    style H fill:#f1f8e9
+    style K fill:#fce4ec
+```
+
 #### 2.1.2 EBSI Trust Registry Integration
 
 **Core Registry Components**:
@@ -111,11 +170,43 @@ TechCorp has recently implemented the European digital credential verification s
 - **European Standards**: Verification that complies with Bologna Process requirements
 - **Audit Trail**: Complete documentation for HR compliance and record-keeping
 
+
+```mermaid
+journey
+    title James's Recruitment Challenge
+    section Candidate Evaluation
+      Review CV and application: 4: James
+      Assess technical skills: 5: James
+      Verify academic credentials: 2: James
+    section Traditional Process
+      Request diploma copies: 2: James
+      Contact university directly: 1: James
+      Wait for manual verification: 1: James
+    section EUHED Solution
+      Generate verification request: 5: James
+      Receive instant validation: 5: James
+      Make informed hiring decision: 5: James
+```
+
 ### 3.3 The Digital Transformation Moment
 
 James opens TechCorp's recruitment portal and navigates to the "Verify Academic Credentials" section. The system prompts him to initiate a verification request for Maria's degree. He knows that Maria has indicated she possesses a digital EUHED diploma in her EUDI Wallet, which should enable instant verification through the European trust registry system.
 
 This represents a fundamental shift from traditional credential verification—instead of lengthy correspondence with universities, James can now request direct presentation of cryptographically verifiable credentials that provide immediate, trustworthy confirmation of academic achievements.
+
+**Traditional Verification Process**:
+```
+Manual Request → University Contact → 
+Manual Verification → Paper/Email Response → 
+Manual Review → 2-4 Weeks Duration
+```
+
+**EUHED Verification Process**:
+```
+QR Generation → Instant Presentation → 
+Cryptographic Validation → Automated Analysis → 
+Immediate Results → Under 2 Minutes
+```
 
 ---
 
