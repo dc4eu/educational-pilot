@@ -31,6 +31,12 @@ This document presents the comprehensive narrative for EducationalID issuance wi
 
 ### 1.1 Process Overview
 
+**High-Level Flow**:
+1. **Prerequisites**: University data preparation and identity matching infrastructure
+2. **PID Verification**: Mandatory foundational identity validation (Steps 1-22)
+3. **Educational ID Issuance**: Institutional credential creation (Steps 23-33)
+4. **Cross-Border Recognition**: European-wide validity and trust
+
 ```mermaid
 graph TD
     A[Student Portal Access] --> B[PID Verification Required]
@@ -45,11 +51,6 @@ graph TD
     style C fill:#fff3e0
     style E fill:#f3e5f5
 ```
-**High-Level Flow**:
-1. **Prerequisites**: University data preparation and identity matching infrastructure
-2. **PID Verification**: Mandatory foundational identity validation (Steps 1-22)
-3. **Educational ID Issuance**: Institutional credential creation (Steps 23-33)
-4. **Cross-Border Recognition**: European-wide validity and trust
 
 ### 1.2 Key Actors
 
