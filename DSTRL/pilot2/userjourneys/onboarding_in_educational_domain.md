@@ -318,7 +318,7 @@ graph TB
 - **Role**: Decentralised identifier resolution
 - **Function**: Resolve DIDs to cryptographic keys and service endpoints
 
-**EBSI Trust Registry**
+**EBSI Trusted Issuer Registry**
 - **Role**: Institutional authorisation validation
 - **Function**: Verify university's authority to issue educational credentials
 
@@ -327,8 +327,8 @@ graph TB
 - **Function**: Ensure credential format compliance with European standards
 
 **EBSI Proxy**
-- **Role**: EBSI integration gateway
-- **Function**: Bridge university infrastructure with EBSI services
+- **Role**: EBSI decentralised proxy gateway
+- **Function**: Bridge university infrastructure with EBSI services in an enhanced privacy way
 
 #### uSelf PID Issuer Agent
 
@@ -339,14 +339,14 @@ graph TB
 
 #### Spanish Ministry of Universities and Research
 
-- **Role**: Root Trust Anchor (RootTAO)
+- **Role**: Trust Authority Organisation for Higher Edcuation bodies in Spain (TAO)
 - **Authority**: Issues EAA credentials authorising URV to issue Educational IDs
 - **Scope**: National level governance and compliance
 
 #### European Blockchain Services Infrastructure (EBSI)
 
 - **Role**: European-level trust infrastructure
-- **Function**: Provide decentralised trust registry and schema validation
+- **Function**: Provide decentralised trust registries and schema validation
 - **Governance**: Multi-national consortium ensuring European standards
 
 ### 4.4 Supporting Systems
