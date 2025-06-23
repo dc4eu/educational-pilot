@@ -500,8 +500,7 @@ Response: {
     ]
   }
 }
-
-
+```
 Graduation Verification and Portal Access (Steps 1-8)
 
 ```mermaid
