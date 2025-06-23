@@ -426,6 +426,29 @@ Response: {
 }
 ```
 
+Verification Request Initiation (Steps 1-4)
+
+```mermaid
+sequenceDiagram
+    participant J as James Thompson
+    participant P as Recruitment Portal
+    participant V as Verification Engine
+    participant E as EBSI Registry
+    
+    Note over J,E: Phase 1: Employer-Initiated Verification
+    
+    J->>P: 1. Access candidate verification
+    P->>V: 2. Request diploma verification capability
+    V->>E: 3. Validate employer authority
+    E->>V: 4. Confirm verification permissions
+    V->>P: 5. Generate verification request
+    P->>J: 6. Display QR code for candidate
+    
+    rect rgb(240, 248, 255)
+        Note over J,E: Business Focus:<br/>Quick setup, clear verification scope
+    end
+```
+
 ### Phase 2: Diploma Credential Presentation (Steps 5-12)
 
 #### Step 5-7: QR Code Scanning and Consent
@@ -433,10 +456,33 @@ Response: {
 **Action**: Maria scans the verification QR code and reviews the credential request.
 
 **Consent Requirements**:
-- ✅ **Credential Type**: EUHED Diploma verification request
-- ✅ **Data Sharing**: Academic achievement and competency information
-- ✅ **Selective Disclosure**: Option to limit shared information
-- ✅ **Purpose**: Employment verification for TechCorp position
+- **Credential Type**: EUHED Diploma verification request
+- **Data Sharing**: Academic achievement and competency information
+- **Selective Disclosure**: Option to limit shared information
+- **Purpose**: Employment verification for TechCorp position
+
+
+Candidate Engagement and Consent (Steps 5-8)
+
+```mermaid
+sequenceDiagram
+    participant J as James Thompson
+    participant M as Maria García
+    participant W as EUDI Wallet
+    participant C as Consent Manager
+    
+    Note over J,C: Phase 2: Candidate Consent & Preparation
+    
+    J->>M: 5. Share verification QR code
+    M->>W: 6. Scan QR with EUDI Wallet
+    W->>C: 7. Display verification request
+    C->>M: 8. Show consent options
+    M->>C: 9. Grant selective consent
+    C->>W: 10. Prepare credential presentation
+    
+    rect rgb(255, 248, 240)
+        Note over J,C: Privacy Focus:<br/>Clear consent, selective disclosure
+    end
 
 #### Step 8-12: Credential Presentation
 **Actor**: Maria García via EUDI Wallet
@@ -472,6 +518,32 @@ POST https://verification.techcorp.com/direct_post
 Content-Type: application/x-www-form-urlencoded
 
 vp_token=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImRpZDprZXk6...
+```
+
+
+Diploma Presentation and Initial Validation (Steps 9-16)
+
+```mermaid
+sequenceDiagram
+    participant W as EUDI Wallet
+    participant V as Verification Engine
+    participant S as Schema Validator
+    participant C as Crypto Validator
+    
+    Note over W,C: Phase 3: Credential Presentation & Validation
+    
+    W->>V: 9. Present EUHED diploma
+    V->>S: 10. Validate credential schema
+    S->>V: 11. Confirm ELM v3.2 compliance
+    V->>C: 12. Verify digital signatures
+    C->>V: 13. Confirm cryptographic integrity
+    V->>V: 14. Extract academic information
+    V->>W: 15. Confirm presentation accepted
+    W->>W: 16. Display verification progress
+    
+    rect rgb(248, 255, 248)
+        Note over W,C: Technical Validation:<br/>Schema compliance, signature verification
+    end
 ```
 
 #### Step 16-18: EBSI Trust Registry Validation
@@ -517,6 +589,29 @@ Response: {
 }
 ```
 
+EBSI Trust Registry Verification (Steps 17-22)
+
+```mermaid
+sequenceDiagram
+    participant V as Verification Engine
+    participant E as EBSI Trust Registry
+    participant I as Institution Registry
+    participant Q as QA Validator
+    
+    Note over V,Q: Phase 4: European Trust Verification
+    
+    V->>E: 17. Query university trust status
+    E->>I: 18. Validate URV registration
+    I->>E: 19. Confirm institutional accreditation
+    E->>Q: 20. Verify quality assurance status
+    Q->>E: 21. Confirm academic standards
+    E->>V: 22. Return trust validation results
+    
+    rect rgb(255, 240, 245)
+        Note over V,Q: Trust Validation:<br/>European-level institution verification
+    end
+```
+
 ### Phase 4: Academic Validation (Steps 23-27)
 
 #### Step 23-25: Credential Status Verification
@@ -536,6 +631,30 @@ Response: {
   "revocation_status": "not_revoked",
   "academic_standing": "good_standing"
 }
+```
+
+Academic Content Analysis and Results (Steps 23-27)
+
+```mermaid
+sequenceDiagram
+    participant V as Verification Engine
+    participant A as Academic Analyser
+    participant C as Competency Mapper
+    participant R as Results Generator
+    participant J as James Thompson
+    
+    Note over V,J: Phase 5: Academic Analysis & Results
+    
+    V->>A: 23. Analyse academic content
+    A->>C: 24. Map competencies to job requirements
+    C->>A: 25. Return competency analysis
+    A->>R: 26. Generate verification report
+    R->>V: 27. Return formatted results
+    V->>J: 28. Deliver verification results
+    
+    rect rgb(240, 255, 240)
+        Note over V,J: Business Value:<br/>Competency analysis, hiring insights
+    end
 ```
 
 #### Step 26-27: Verification Completion
@@ -594,6 +713,38 @@ The EUHED diploma verification implements sophisticated trust mechanisms ensurin
 - **Status Verification**: Live checking of credential revocation status
 - **Academic Standing**: Verification of graduate's academic record
 - **Bologna Compliance**: European qualification framework alignment
+
+```mermaid
+graph TD
+    subgraph "European Trust Layer"
+        A[EBSI Root Trust] --> B[National Authorities]
+        B --> C[University Registration]
+    end
+    
+    subgraph "Institutional Trust Layer"
+        D[University Accreditation] --> E[Quality Assurance]
+        E --> F[Academic Standards]
+    end
+    
+    subgraph "Credential Trust Layer"
+        G[Digital Signatures] --> H[Schema Compliance]
+        H --> I[Status Validation]
+    end
+    
+    subgraph "Employer Trust Layer"
+        J[Verification Authority] --> K[Data Protection]
+        K --> L[Compliance Audit]
+    end
+    
+    C --> D
+    F --> G
+    I --> J
+    
+    style A fill:#e3f2fd
+    style D fill:#fff3e0
+    style G fill:#f1f8e9
+    style J fill:#fce4ec
+```
 
 ### 7.2 Privacy and Security Considerations
 
