@@ -371,40 +371,40 @@ graph TB
 
 ```
 ┌─────────────────────────┐
-│   Student Domain       │
+│   Student Domain        │
 ├─────────────────────────┤
-│ Maria García        │
-│ EUDI Wallet          │
+│ Maria García            │
+│ EUDI Wallet             │
 └─────────────────────────┘
              │
              ▼
 ┌─────────────────────────────────────────────────────────┐
-│   University Infrastructure (lspurv.urv.cat)           │
+│   University Infrastructure (lspurv.urv.cat)            │
 ├─────────────────────────────────────────────────────────┤
-│ Student GUI                                         │
-│ uSelf Issuer Agent                                   │
-│ Authentic Source (eIDAS 2.0 Official Role)          │
-│ Student Registry DB                                  │
-│ Standardised APIs (eIDAS 2.0 Compliant)             │
+│ Student GUI                                             │
+│ uSelf Issuer Agent                                      │
+│ Authentic Source (eIDAS 2.0 Official Role)              │
+│ Student Registry DB                                     │
+│ Standardised APIs (eIDAS 2.0 Compliant)                 │
 └─────────────────────────────────────────────────────────┘
              │
              ▼
 ┌─────────────────────────────────────────────────────────┐
 │   EBSI Infrastructure                                   │
 ├─────────────────────────────────────────────────────────┤
-│ DID Registry                                         │
-│ Trust Registry                                       │
-│ Schema Registry                                      │
-│ EBSI Proxy                                           │
-│ PID Issuer Agent                                     │
+│ DID Registry                                            │
+│ Trust Registry                                          │
+│ Schema Registry                                         │
+│ EBSI Proxy                                              │
+│ PID Issuer Agent                                        │
 └─────────────────────────────────────────────────────────┘
              │
              ▼
 ┌─────────────────────────────────────────────────────────┐
 │   Trust Governance                                      │
 ├─────────────────────────────────────────────────────────┤
-│ Spanish Ministry                                     │
-│ EAA Credentials (Authentic Source Authority)         │
+│ Spanish Ministry                                        │
+│ EAA Credentials (Authentic Source Authority)            │
 └─────────────────────────────────────────────────────────┘
 ```
 
