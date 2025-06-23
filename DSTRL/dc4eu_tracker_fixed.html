@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>DC4EU Piloting Agents Progress Tracker</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f7fa;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        
+        .header p {
+            margin: 5px 0 0 0;
+            opacity: 0.9;
+        }
+        
+        .controls {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .filter-group {
+            display: inline-block;
+            margin-right: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .filter-group label {
+            font-weight: 600;
+            color: #4a5568;
+            margin-right: 8px;
+        }
+        
+        select, input {
+            padding: 6px 10px;
+            border: 1px solid #d1d5db;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        .export-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+        
+        .export-btn:hover {
+            background: #059669;
+        }
+        
+        .table-container {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow-x: auto;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 1400px;
+        }
+        
+        th {
+            background: #f8fafc;
+            padding: 12px 8px;
+            text-align: left;
+            font-weight: 600;
+            color: #374151;
+            border-bottom: 2px solid #e5e7eb;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            font-size: 12px;
+            white-space: nowrap;
+        }
+        
+        td {
+            padding: 10px 8px;
+            border-bottom: 1px solid #f3f4f6;
+            font-size: 13px;
+        }
+        
+        tr:hover {
+            background-color: #f9fafb;
+        }
+        
+        .pilot-column {
+            min-width: 80px;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        .country-column {
+            min-width: 100px;
+            font-weight: 600;
+            color: #1f2937;
+        }
+        
+        .organisation-column {
+            min-width: 200px;
+            font-weight: 500;
+            color: #374151;
+        }
+        
+        .contact-column {
+            min-width: 150px;
+            color: #6b7280;
+        }
+        
+        .checkbox-column {
+            text-align: center;
+            width: 60px;
+        }
+        
+        .checkbox-column input[type="checkbox"] {
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+        
+        .checkbox-column.not-applicable {
+            background-color: #f3f4f6;
+        }
+        
+        .checkbox-column.not-applicable input[type="checkbox"] {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+        
+        .checkbox-column input[type="checkbox"]:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        
+        .dns-column {
+            min-width: 120px;
+            color: #3b82f6;
+        }
+        
+        .dns-available {
+            color: #10b981;
+            font-weight: 600;
+        }
+        
+        .dns-unavailable {
+            color: #ef4444;
+            font-weight: 600;
+        }
+        
+        .pilot-badge {
+            display: inline-block;
+            padding: 2px 6px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        
+        .pilot1 { background: #fee2e2; color: #dc2626; }
+        .pilot2 { background: #dbeafe; color: #2563eb; }
+        .pilot3pki { background: #f3e8ff; color: #7c3aed; }
+        .pilot3dpki { background: #dcfce7; color: #16a34a; }
+        
+        .stats {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+            flex: 1;
+        }
+        
+        .stat-number {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1f2937;
+        }
+        
+        .stat-label {
+            color: #6b7280;
+            font-size: 14px;
+            margin-top: 4px;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 6px;
+            background: #e5e7eb;
+            border-radius: 3px;
+            margin-top: 8px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #10b981, #059669);
+            transition: width 0.3s ease;
+        }
+        
+        @media (max-width: 768px) {
+            .stats {
+                flex-direction: column;
+            }
+            
+            .filter-group {
+                display: block;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>DC4EU Piloting Agents Progress Tracker</h1>
+        <p>Cross-border Public Verification Services Implementation Status</p>
+    </div>
+    
+    <div class="stats">
+        <div class="stat-card">
+            <div class="stat-number" id="totalAgents">42</div>
+            <div class="stat-label">Total Piloting Agents</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number" id="dnsReady">29</div>
+            <div class="stat-label">DNS Endpoints Ready</div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="dnsProgress" style="width: 69%"></div>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number" id="completionRate">38%</div>
+            <div class="stat-label">Average Completion</div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="overallProgress" style="width: 38%;"></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="controls">
+        <div class="filter-group">
+            <label for="pilotFilter">Pilot:</label>
+            <select id="pilotFilter">
+                <option value="">All Pilots</option>
+                <option value="Pilot 1">Pilot 1 (Classical PKI)</option>
+                <option value="Pilot 2">Pilot 2 (Decentralised PKI)</option>
+                <option value="Pilot 3 PKI">Pilot 3 (PKI implementation)</option>
+                <option value="Pilot 3 dPKI">Pilot 3 (dPKI implementation)</option>
+            </select>
+        </div>
+        <div class="filter-group">
+            <label for="countryFilter">Country:</label>
+            <select id="countryFilter">
+                <option value="">All Countries</option>
+            </select>
+        </div>
+        <div class="filter-group">
+            <label for="statusFilter">DNS Status:</label>
+            <select id="statusFilter">
+                <option value="">All Status</option>
+                <option value="available">Available</option>
+                <option value="unavailable">Unavailable</option>
+            </select>
+        </div>
+        <div class="filter-group">
+            <label for="searchFilter">Search:</label>
+            <input id="searchFilter" placeholder="Organisation name..." type="text"/>
+        </div>
+        <button class="export-btn" onclick="exportToCSV()">Export to CSV</button>
+    </div>
+    
+    <div class="table-container">
+        <table id="mainTable">
+            <thead>
+                <tr>
+                    <th class="pilot-column">Pilot</th>
+                    <th class="country-column">Country</th>
+                    <th class="organisation-column">Piloting Agent</th>
+                    <th class="contact-column">Contact</th>
+                    <th class="dns-column">DNS Endpoint</th>
+                    <th class="checkbox-column" title="Scenarios Templates Provided">Scenarios<br/>Templates</th>
+                    <th class="checkbox-column" title="DNS Entry for EAA Cross-border Verification">DNS Entry<br/>Available</th>
+                    <th class="checkbox-column" title="X.509v3 Certificate as Issuer">X.509v3<br/>Issuer Cert</th>
+                    <th class="checkbox-column" title="X.509v3 Certificate as Relying Party">X.509v3<br/>RP Cert</th>
+                    <th class="checkbox-column" title="CRLs for X.509v3 Verification">X.509v3<br/>CRLs</th>
+                    <th class="checkbox-column" title="DID as Issuer">DID<br/>Issuer</th>
+                    <th class="checkbox-column" title="DID as Verifier">DID<br/>Verifier</th>
+                    <th class="checkbox-column" title="Progress Templates from 3.1 Updated">Progress<br/>Templates</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // Data structure for all piloting agents
+        const pilotingAgents = [
+            // Pilot 1 - Classical PKI
+            { pilot: "Pilot 1", country: "Denmark", organisation: "DTU", contact: "Tangui Coulouarn", dns: "", dnsAvailable: false, scenarios: false, x509Issuer: false, x509RP: false, x509CRLs: false, didIssuer: false, didVerifier: false, progressTemplates: false },
+            { pilot: "Pilot 1", country: "Finland", organisation: "Finnish National Agency for Education (OPH)", contact: "Kristiina Laipio", dns: "", dnsAvailable: false, scenarios: true, x509Issuer: false, x509RP: false, x509CRLs: false, didIssuer: false, didVerifier: false, progressTemplates: false },
+            { pilot: "Pilot 1", country: "Netherlands", organisation: "Amsterdam University of Applied Sciences (AUAS)​", contact: "Nanda", dns: "", dnsAvailable: false, scenarios: true, x509Issuer: false, x509RP: false, x509CRLs: false, didIssuer: false, didVerifier: false, progressTemplates: false },
+            { pilot: "Pilot 1", country: "Norway", organisation: "Sikt", contact: "Geir Magne Vangen", dns: "", dnsAvailable: false, scenarios: true, x509Issuer: false, x509RP: false, x509CRLs: false, didIssuer: false, didVerifier: false, progressTemplates: false },
+            { pilot: "Pilot 1", country: "Sweden", organisation: "SLadokkonsortiet", contact: "Tor Fridell", dns: "", dnsAvailable: false, scenarios: true, x509Issuer: false, x509RP: false, x509CRLs: false, didIssuer: false, didVerifier: false, progressTemplates: false },
+            
+            // Pilot 2 - Decentralised PKI
+            { pilot: "Pilot 2", country: "Belgium", organisation: "Howest", contact: "Daniel Du Seuil", dns: "WIP", dnsAvailable: false, scenarios: false, x509Issuer: false, x509RP: false, x509CRLs: false, didIssuer: true, didVerifier: true, progressTemplates: false },
+            { pilot: "Pilot 2", country: "Hungary", organisation: "Edutus University", contact: "Laki Balazs", dns: "lspedutus.edutus.hu", dnsAvailable: true, scenarios: true, x509Issuer: false, x509RP: false, x509CRLs: false, didIssuer: true, didVerifier: true, progressTemplates: true },
+            { pilot: "Pilot 2", country: "Hungary", organisation: "Budapest University of Technology and Economics", contact: "Imre Kocsis", dns: "lspbme.cloud.bme.hu", dnsAvailable: true, scenarios: true, x509Issuer: false, x509RP: false, x509CRLs: false, didIssuer: true, didVerifier: true, progressTemplates: true },
+            { pilot: "Pilot 2", country: "Italy", organisation: "University of Bologna", contact: "Sergio Storari", dns: "lspdc4edu.unibo.it", dnsAvailable: true, scenarios: true, x509Issuer: false, x509RP: false, x509CRLs: false, didIssuer: true, didVerifier: true, progressTemplates: true },
+            { pilot: "Pilot 2", country: "Lithuania", organisation: "Vytautas Magnus University", contact: "Tomas Krilavicius", dns: "lspvdu.vdu.lt", dnsAvailable: true, scenarios: true, x509Issuer: false, x509RP: false, x509CRLs: false, didIssuer: true, didVerifier: true, progressTemplates: true },
+            { pilot: "Pilot 2", country: "Lithuania", organisation: "SKS", contact: "Virginijus Jasaitis", dns: "lspsks.sks.lt", dnsAvailable: true, scenarios: true, x509Issuer: false, x509RP: false, x509CRLs: false, didIssuer: true, didVerifier: true, progressTemplates: true },
+            { pilot: "Pilot 2", country: "Poland", organisation: "University of Warsaw", contact: "Krzysztof Cieślikowski (OPI)", dns: "u1.pilot-dc4eu.ebsi.nask.pl", dnsAvailable: true, scenarios: true, x509Issuer: false, x509RP: false, x509CRLs: false, didIssuer: true, didVerifier: true, progressTemplates: true },
+            { pilot: "Pilot 2", country: "Poland", organisation: "University of Silesia in Katowice", contact: "Krzysztof Cieślikowski (OPI)", dns: "u2.pilot-dc4eu.ebsi.nask.pl", dnsAvailable: true, scenarios: true, x509Issuer: false, x509RP: false, x509CRLs: false, didIssuer: true, didVerifier: true, progressTemplates: true },
+            { pilot: "Pilot 2", country: "Poland", organisation: "Silesian University of Technology", contact: "Krzysztof Cieślikowski (OPI)", dns: "u3.pilot-dc4eu.ebsi.nask.pl", dnsAvailable: true, scenarios: true, x509Issuer: false, x509RP: false, x509CRLs: false, didIssuer: true, didVerifier: true, progressTemplates: true },
+            { pilot: "Pilot 2", country: "Poland", organisation: "Kozminski University", contact: "Krzysztof Cieślikowski (OPI)", dns: "u4.pilot-dc4eu.ebsi.nask.pl", dnsAvailable: true, scenarios: true, x509Issuer: false, x509RP: false, x509CRLs: false, didIssuer: true, didVerifier: true, progressTemplates: true },
+            { pilot: "Pilot 2", country: "Poland", organisation: "University of Zielona Gora", contact: "Krzysztof Cieślikowski (OPI)", dns: "u6.pilot-dc4eu.ebsi.nask.pl", dnsAvailable: true, scenarios: true, x509Issuer: false, x509RP: false, x509CRLs: false, didIssuer: true, didVerifier: true, progressTemplates: true },
+            { pilot: "Pilot 2", country: "Poland", organisation: "Medical University of Lublin", contact: "Krzysztof Cieślikowski (OPI)", dns: "u7.pilot-dc4eu.ebsi.nask.pl", dnsAvailable: true, scenarios: true, x509Issuer: false, x509RP: false, x509CRLs: false, didIssuer: true, didVerifier: true, progressTemplates: true },
+            { pilot: "Pilot 2", country: "Portugal", organisation: "Universidade do Porto", contact: "Jorge Cunha", dns: "lspup.up.pt", dnsAvailable: true, scenarios: true, x509Issuer: false, x509RP: false, x509CRLs: false, didIssuer: true, didVerifier: true, progressTemplates: true },
+            { pilot: "Pilot 2", country: "Portugal", organisation: "UMAIA", contact: "Alexandre Sousa", dns: "lspumaia.umaia.pt", dnsAvailable: true, scenarios: false, x509Issuer: false, x509RP: false, x509CRLs: false, didIssuer: true, didVerifier: true, progressTemplates: true },
+            { pilot: "Pilot 2", country: "Romania", organisation: "Politehnica University of Timisoara (UPT)", contact: "Diana Andone", dns: "lspupt.upt.ro", dnsAvailable: true, scenarios: true, x509Issuer: false, x509RP: false, x509CRLs: false, didIssuer: true, didVerifier: true, progressTemplates: true },
+            { pilot: "Pilot 2", country: "Romania", organisation: "UEFISCDI", contact: "Cosmin Cioranu", dns: "lsp.dc4eu.runidas.rei.gov.ro", dnsAvailable: true, scenarios: true, x509Issuer: false, x509RP: false, x509CRLs: false, didIssuer: true, didVerifier: true, progressTemplates: true },
+            { pilot: "Pilot 2", country: "Romania", organisation: "Titu Maiorescu University", contact: "Nicolae", dns: "Pending agreement with CertSign", dnsAvailable: false, scenarios: false, x509Issuer: false, x509RP: false, x509CRLs: false, didIssuer: true, didVerifier: true, progressTemplates: true },
+            { pilot: "Pilot 2", country: "Spain", organisation: "University of Alcalá (UAH)", contact: "Sergio Caro", dns: "lspuah.uah.es", dnsAvailable: true, scenarios: true, x509Issuer: false, x509RP: false, x509CRLs: false, didIssuer: true, didVerifier: true, progressTemplates: true },
+            { pilot: "Pilot 2", country: "Spain", organisation: "University of Málaga", contact: "Victoriano Giralt", dns: "lspuma.uma.es", dnsAvailable: true, scenarios: true, x509Issuer: false, x509RP: false, x509CRLs: false, didIssuer: true, didVerifier: true, progressTemplates: true },
+            { pilot: "Pilot 2", country: "Spain", organisation: "Universidad Carlos III de Madrid", contact: "Carlos Delgado", dns: "lspuc3m.uc3m.es", dnsAvailable: true, scenarios: true, x509Issuer: false, x509RP: false, x509CRLs: false, didIssuer: true, didVerifier: true, progressTemplates: true },
+            { pilot: "Pilot 2", country: "Spain", organisation: "Universidad de Múrcia", contact: "Carlos Delgado", dns: "lspuc3m.uc3m.es", dnsAvailable: true, scenarios: true, x509Issuer: false, x509RP: false, x509CRLs: false, didIssuer: true, didVerifier: true, progressTemplates: true },
+            { pilot: "Pilot 2", country: "Spain", organisation: "Universitat Rovira i Virgili", contact: "Maria Teresa Bordas", dns: "lspurv.urv.cat", dnsAvailable: true, scenarios: true, x509Issuer: false, x509RP: false, x509CRLs: false, didIssuer: true, didVerifier: true, progressTemplates: true },
+            { pilot: "Pilot 2", country: "Spain", organisation: "Consejo General de Colegios Oficiales de Médicos (CGCOM)", contact: "José Antonio Aguado / Laia Bota Porta", dns: "lspcgcom.cgcom.es", dnsAvailable: true, scenarios: true, x509Issuer: false, x509RP: false, x509CRLs: false, didIssuer: true, didVerifier: true, progressTemplates: true },
+            { pilot: "Pilot 2", country: "Spain", organisation: "UNED", contact: "José Emilio Permuy", dns: "lspuned.govpart.de", dnsAvailable: true, scenarios: true, x509Issuer: false, x509RP: false, x509CRLs: false, didIssuer: true, didVerifier: true, progressTemplates: true },
+            { pilot: "Pilot 2", country: "Spain", organisation: "Universidad Politécnica de Madrid", contact: "Fernando Pescador", dns: "lspupm.dc4eu.upm.es", dnsAvailable: true, scenarios: true, x509Issuer: false, x509RP: false, x509CRLs: false, didIssuer: true, didVerifier: true, progressTemplates: true },
+            { pilot: "Pilot 2", country: "Sweden", organisation: "RISE - Research Institutes of Sweden", contact: "Fredrik Nilbrink", dns: "lsprise.ri.se", dnsAvailable: true, scenarios: true, x509Issuer: false, x509RP: false, x509CRLs: false, didIssuer: true, didVerifier: true, progressTemplates: true },
+            
+            // Pilot 3 PKI - Combined (PKI entries)
+            { pilot: "Pilot 3 PKI", country: "Germany", organisation: "GovPart", contact: "Helmut & Guido", dns: "", dnsAvailable: false, scenarios: false, x509Issuer: false, x509RP: false, x509CRLs: false, didIssuer: false, didVerifier: false, progressTemplates: false },
+            { pilot: "Pilot 3 PKI", country: "Germany", organisation: "Ludwig-Maximilians-Universität München", contact: "Helmut & Guido", dns: "", dnsAvailable: false, scenarios: false, x509Issuer: false, x509RP: false, x509CRLs: false, didIssuer: false, didVerifier: false, progressTemplates: false },
+            { pilot: "Pilot 3 PKI", country: "Germany", organisation: "Humboldt-Universität zu Berlin", contact: "Helmut & Guido", dns: "", dnsAvailable: false, scenarios: false, x509Issuer: false, x509RP: false, x509CRLs: false, didIssuer: false, didVerifier: false, progressTemplates: false },
+            { pilot: "Pilot 3 PKI", country: "Netherlands", organisation: "University of Twente", contact: "Helenn Vanderzaag", dns: "", dnsAvailable: false, scenarios: true, x509Issuer: false, x509RP: false, x509CRLs: false, didIssuer: false, didVerifier: false, progressTemplates: false },
+            { pilot: "Pilot 3 PKI", country: "Netherlands", organisation: "Saxion University of Applied Sciences", contact: "Franco de Vitta", dns: "", dnsAvailable: false, scenarios: true, x509Issuer: false, x509RP: false, x509CRLs: false, didIssuer: false, didVerifier: false, progressTemplates: false },
+            { pilot: "Pilot 3 PKI", country: "Portugal", organisation: "COFAC - Lusofona University", contact: "Paulo Ferreira", dns: "", dnsAvailable: false, scenarios: true, x509Issuer: false, x509RP: false, x509CRLs: false, didIssuer: false, didVerifier: false, progressTemplates: false },
+            
+            // Pilot 3 dPKI - Combined (dPKI entries)
+            { pilot: "Pilot 3 dPKI", country: "Germany", organisation: "GovPart (dPKI)", contact: "Helmut & Guido", dns: "lspgovpart.govpart.de", dnsAvailable: true, scenarios: false, x509Issuer: false, x509RP: false, x509CRLs: false, didIssuer: true, didVerifier: true, progressTemplates: true },
+            { pilot: "Pilot 3 dPKI", country: "Germany", organisation: "Ludwig-Maximilians-Universität München (dPKI)", contact: "Alexander Loechel", dns: "lsplmu.govpart.de", dnsAvailable: true, scenarios: false, x509Issuer: false, x509RP: false, x509CRLs: false, didIssuer: true, didVerifier: true, progressTemplates: true },
+            { pilot: "Pilot 3 dPKI", country: "Germany", organisation: "Humboldt-Universität zu Berlin (dPKI)", contact: "Tamas Molnar", dns: "lsphub.govpart.de", dnsAvailable: true, scenarios: false, x509Issuer: false, x509RP: false, x509CRLs: false, didIssuer: true, didVerifier: true, progressTemplates: true },
+            { pilot: "Pilot 3 dPKI", country: "Netherlands", organisation: "University of Twente (dPKI)", contact: "Helenn Vanderzaag", dns: "lsput.utwente.nl", dnsAvailable: true, scenarios: true, x509Issuer: false, x509RP: false, x509CRLs: false, didIssuer: true, didVerifier: true, progressTemplates: true },
+            { pilot: "Pilot 3 dPKI", country: "Netherlands", organisation: "Saxion University of Applied Sciences (dPKI)", contact: "Franco de Vitta", dns: "lspsaxion.saxion.nl", dnsAvailable: true, scenarios: true, x509Issuer: false, x509RP: false, x509CRLs: false, didIssuer: true, didVerifier: true, progressTemplates: true },
+            { pilot: "Pilot 3 dPKI", country: "Portugal", organisation: "COFAC - Lusofona University (dPKI)", contact: "Paulo Ferreira", dns: "lspulusofona.ulusofona.pt", dnsAvailable: true, scenarios: true, x509Issuer: false, x509RP: false, x509CRLs: false, didIssuer: true, didVerifier: true, progressTemplates: true }
+        ];
+
+        let filteredData = [...pilotingAgents];
+
+        // Function to determine if a requirement applies to a specific pilot
+        function requirementApplies(pilot, requirement) {
+            switch (requirement) {
+                case 'scenarios':
+                case 'dnsEntry':
+                case 'progressTemplates':
+                    return true; // These apply to all pilots
+                case 'x509Issuer':
+                case 'x509RP':
+                case 'x509CRLs':
+                    return pilot === 'Pilot 1' || pilot === 'Pilot 3 PKI';
+                case 'didIssuer':
+                case 'didVerifier':
+                    return pilot === 'Pilot 2' || pilot === 'Pilot 3 dPKI';
+                default:
+                    return true;
+            }
+        }
+
+        function renderTable() {
+            const tbody = document.getElementById('tableBody');
+            tbody.innerHTML = '';
+
+            filteredData.forEach((agent, index) => {
+                const row = document.createElement('tr');
+                const pilotClass = agent.pilot.toLowerCase().replace(' ', '').replace('3pki', '3pki').replace('3dpki', '3dpki');
+                const dnsStatus = agent.dnsAvailable ? 'dns-available' : 'dns-unavailable';
+                const dnsText = agent.dnsAvailable ? '🟢' : '🔴';
+
+                // Create cells with appropriate styling for non-applicable requirements
+                const requirements = ['scenarios', 'dnsEntry', 'x509Issuer', 'x509RP', 'x509CRLs', 'didIssuer', 'didVerifier', 'progressTemplates'];
+                const checkboxCells = requirements.map(req => {
+                    const applies = requirementApplies(agent.pilot, req);
+                    let checked = applies && agent[req] ? 'checked' : '';
+                    let disabled = !applies ? 'disabled' : '';
+                    
+                    // Special handling for DNS Entry - should be checked if DNS is available and auto-disabled
+                    if (req === 'dnsEntry') {
+                        checked = agent.dnsAvailable ? 'checked' : '';
+                        disabled = 'disabled'; // Always disabled since it's auto-managed
+                    }
+                    
+                    const cellClass = !applies ? 'checkbox-column not-applicable' : 'checkbox-column';
+                    
+                    return `<td class="${cellClass}">
+                        <input type="checkbox" ${checked} ${disabled} onchange="updateAgentData(${index}, '${req}', this.checked)" data-index="${index}" data-field="${req}">
+                    </td>`;
+                }).join('');
+
+                row.innerHTML = `
+                    <td class="pilot-column"><span class="pilot-badge ${pilotClass}">${agent.pilot}</span></td>
+                    <td class="country-column">${agent.country}</td>
+                    <td class="organisation-column">${agent.organisation}</td>
+                    <td class="contact-column">${agent.contact}</td>
+                    <td class="dns-column">
+                        <span class="${dnsStatus}">${dnsText}</span>
+                        ${agent.dns ? `<br><small>${agent.dns}</small>` : ''}
+                    </td>
+                    ${checkboxCells}
+                `;
+
+                tbody.appendChild(row);
+            });
+
+            updateProgress();
+        }
+
+        function updateAgentData(index, field, value) {
+            // Update the original data
+            const originalIndex = pilotingAgents.findIndex(agent => 
+                agent.pilot === filteredData[index].pilot && 
+                agent.organisation === filteredData[index].organisation
+            );
+            
+            if (originalIndex !== -1) {
+                pilotingAgents[originalIndex][field] = value;
+                filteredData[index][field] = value;
+            }
+            
+            updateProgress();
+        }
+
+        function updateProgress() {
+            let totalApplicableRequirements = 0;
+            let completedRequirements = 0;
+            
+            filteredData.forEach(agent => {
+                const requirements = ['scenarios', 'dnsEntry', 'x509Issuer', 'x509RP', 'x509CRLs', 'didIssuer', 'didVerifier', 'progressTemplates'];
+                
+                requirements.forEach(req => {
+                    if (requirementApplies(agent.pilot, req)) {
+                        totalApplicableRequirements++;
+                        
+                        // For dnsEntry, check against dnsAvailable instead of the stored value
+                        const isCompleted = req === 'dnsEntry' ? agent.dnsAvailable : agent[req];
+                        if (isCompleted) {
+                            completedRequirements++;
+                        }
+                    }
+                });
+            });
+            
+            const completionRate = totalApplicableRequirements > 0 ? 
+                Math.round((completedRequirements / totalApplicableRequirements) * 100) : 0;
+            
+            document.getElementById('completionRate').textContent = `${completionRate}%`;
+            document.getElementById('overallProgress').style.width = `${completionRate}%`;
+            
+            // Update DNS ready count
+            const dnsReady = filteredData.filter(agent => agent.dnsAvailable).length;
+            document.getElementById('dnsReady').textContent = dnsReady;
+            
+            // Update DNS progress bar
+            const dnsProgress = filteredData.length > 0 ? Math.round((dnsReady / filteredData.length) * 100) : 0;
+            document.getElementById('dnsProgress').style.width = `${dnsProgress}%`;
+            
+            // Update total agents count based on filtered data
+            document.getElementById('totalAgents').textContent = filteredData.length;
+        }
+
+        function populateCountryFilter() {
+            const countries = [...new Set(pilotingAgents.map(agent => agent.country))].sort();
+            const select = document.getElementById('countryFilter');
+            
+            countries.forEach(country => {
+                const option = document.createElement('option');
+                option.value = country;
+                option.textContent = country;
+                select.appendChild(option);
+            });
+        }
+
+        function applyFilters() {
+            const pilotFilter = document.getElementById('pilotFilter').value;
+            const countryFilter = document.getElementById('countryFilter').value;
+            const statusFilter = document.getElementById('statusFilter').value;
+            const searchFilter = document.getElementById('searchFilter').value.toLowerCase();
+            
+            filteredData = pilotingAgents.filter(agent => {
+                const pilotMatch = !pilotFilter || agent.pilot === pilotFilter;
+                const countryMatch = !countryFilter || agent.country === countryFilter;
+                const statusMatch = !statusFilter || 
+                    (statusFilter === 'available' && agent.dnsAvailable) ||
+                    (statusFilter === 'unavailable' && !agent.dnsAvailable);
+                const searchMatch = !searchFilter || 
+                    agent.organisation.toLowerCase().includes(searchFilter) ||
+                    agent.contact.toLowerCase().includes(searchFilter);
+                
+                return pilotMatch && countryMatch && statusMatch && searchMatch;
+            });
+            
+            renderTable();
+        }
+
+        function exportToCSV() {
+            const headers = [
+                'Pilot', 'Country', 'Piloting Agent', 'Contact', 'DNS Endpoint', 'DNS Available',
+                'Scenarios Templates', 'DNS Entry Available', 'X.509v3 Issuer Cert', 'X.509v3 RP Cert',
+                'X.509v3 CRLs', 'DID Issuer', 'DID Verifier', 'Progress Templates'
+            ];
+            
+            let csvContent = headers.join(',') + '\n';
+            
+            filteredData.forEach(agent => {
+                const row = [
+                    `"${agent.pilot}"`,
+                    `"${agent.country}"`,
+                    `"${agent.organisation}"`,
+                    `"${agent.contact}"`,
+                    `"${agent.dns}"`,
+                    agent.dnsAvailable ? 'Yes' : 'No',
+                    agent.scenarios ? 'Yes' : 'No',
+                    agent.dnsAvailable ? 'Yes' : 'No',
+                    requirementApplies(agent.pilot, 'x509Issuer') ? (agent.x509Issuer ? 'Yes' : 'No') : 'N/A',
+                    requirementApplies(agent.pilot, 'x509RP') ? (agent.x509RP ? 'Yes' : 'No') : 'N/A',
+                    requirementApplies(agent.pilot, 'x509CRLs') ? (agent.x509CRLs ? 'Yes' : 'No') : 'N/A',
+                    requirementApplies(agent.pilot, 'didIssuer') ? (agent.didIssuer ? 'Yes' : 'No') : 'N/A',
+                    requirementApplies(agent.pilot, 'didVerifier') ? (agent.didVerifier ? 'Yes' : 'No') : 'N/A',
+                    agent.progressTemplates ? 'Yes' : 'No'
+                ];
+                csvContent += row.join(',') + '\n';
+            });
+            
+            const blob = new Blob([csvContent], { type: 'text/csv' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `DC4EU_Piloting_Agents_Progress_${new Date().toISOString().split('T')[0]}.csv`;
+            a.click();
+            window.URL.revokeObjectURL(url);
+        }
+
+        // Event listeners
+        document.getElementById('pilotFilter').addEventListener('change', applyFilters);
+        document.getElementById('countryFilter').addEventListener('change', applyFilters);
+        document.getElementById('statusFilter').addEventListener('change', applyFilters);
+        document.getElementById('searchFilter').addEventListener('input', applyFilters);
+
+        // Initialize
+        populateCountryFilter();
+        renderTable();
+    </script>
+</body>
+</html>
