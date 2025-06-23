@@ -838,11 +838,11 @@ The authentic source provides a comprehensive response that demonstrates success
 ```
 
 **Critical Identity Matching Results**:
-- ✅ **DNI Match**: 12345678A found in student database
-- ✅ **Name Match**: García, Maria confirmed in enrolment records  
-- ✅ **Birth Date Match**: 2004-03-15 validated against university records
-- ✅ **Enrolment Verified**: Active student status confirmed
-- ✅ **Credential Authorisation**: Student authorised for EducationalID issuance
+- **DNI Match**: 12345678A found in student database
+- **Name Match**: García, Maria confirmed in enrolment records  
+- **Birth Date Match**: 2004-03-15 validated against university records
+- **Enrolment Verified**: Active student status confirmed
+- **Credential Authorisation**: Student authorised for EducationalID issuance
 
 **Architectural Innovation**: This design demonstrates how eIDAS 2.0 enables institutional **dual roles** while maintaining:
 - **Trust boundaries**: Clear separation of functions even within the same organisation
