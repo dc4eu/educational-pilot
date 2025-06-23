@@ -243,7 +243,7 @@ Immediate Results → Under 2 Minutes
 - Digital signature verification
 - Consent management for credential sharing
 
-``mermaid
+```mermaid 
 graph TB
     subgraph "Employment Layer"
         JAMES[James Thompson<br/>Recruitment Officer]
