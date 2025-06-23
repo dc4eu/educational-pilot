@@ -709,6 +709,37 @@ sequenceDiagram
 **Actor**: URV Academic System
 **Action**: Generation and delivery of cryptographically signed EUHED diploma credential.
 
+EUHED Diploma Generation and Issuance (Steps 29-42)
+```mermaid
+sequenceDiagram
+    participant I as Diploma Issuer
+    participant H as HSM
+    participant E as EBSI
+    participant W as EUDI Wallet
+    participant M as Maria
+    
+    Note over I,M: Phase 4: Diploma Creation & Delivery
+    
+    I->>I: 29. Compile EUHED diploma data
+    I->>H: 30. Request digital signature
+    H->>I: 31. Return signed diploma
+    I->>E: 32. Register diploma metadata
+    E->>I: 33. Confirm EBSI registration
+    I->>W: 34. Deliver EUHED diploma
+    W->>M: 35. Display diploma received
+    M->>W: 36. View diploma details
+    W->>M: 37. Show European recognition
+    M->>M: 38. Verify diploma content
+    I->>I: 39. Update graduation records
+    I->>E: 40. Log issuance event
+    E->>I: 41. Confirm audit trail
+    I->>M: 42. Send confirmation email
+    
+    rect rgb(240, 255, 240)
+        Note over I,M: Success Experience:<br/>Diploma delivered with European recognition
+    end
+```
+
 ---
 
 ## 7. Trust Verification Mechanisms
