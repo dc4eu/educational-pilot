@@ -243,6 +243,50 @@ Immediate Results → Under 2 Minutes
 - Digital signature verification
 - Consent management for credential sharing
 
+``mermaid
+graph TB
+    subgraph "Employment Layer"
+        JAMES[James Thompson<br/>Recruitment Officer]
+        TECHCORP[TechCorp Barcelona<br/>Employer Organisation]
+        HR[HR Systems<br/>Integration Platform]
+    end
+    
+    subgraph "Candidate Layer"
+        MARIA[Maria García<br/>Graduate]
+        WALLET[EUDI Wallet<br/>Credential Storage]
+        DIPLOMA[EUHED Diploma<br/>Academic Credential]
+    end
+    
+    subgraph "Academic Layer"
+        URV[Universitat Rovira i Virgili<br/>Degree-Granting Institution]
+        REGISTRY[Academic Registry<br/>Status Authority]
+        QA[Quality Assurance<br/>Validation Authority]
+    end
+    
+    subgraph "European Infrastructure"
+        EBSI[EBSI Trust Registry<br/>Validation Infrastructure]
+        SCHEMA[Schema Registry<br/>Standards Authority]
+        AUDIT[Audit Service<br/>Compliance Monitoring]
+    end
+    
+    JAMES --> TECHCORP
+    TECHCORP --> HR
+    MARIA --> WALLET
+    WALLET --> DIPLOMA
+    DIPLOMA --> URV
+    URV --> REGISTRY
+    REGISTRY --> QA
+    QA --> EBSI
+    EBSI --> SCHEMA
+    EBSI --> AUDIT
+    HR --> EBSI
+    
+    style JAMES fill:#e1f5fe
+    style MARIA fill:#fff3e0
+    style URV fill:#f3e5f5
+    style EBSI fill:#e8f5e8
+```
+
 ### 4.2 Supporting Infrastructure Actors
 
 #### 4.2.1 Universitat Rovira i Virgili (Issuing Institution)
