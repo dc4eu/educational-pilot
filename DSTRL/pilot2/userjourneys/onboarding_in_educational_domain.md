@@ -226,7 +226,7 @@ What happens next is a masterpiece of digital orchestration, involving multiple 
 
 ### 4.1 Primary Actors
 
-#### 🎓 Maria García (Natural Person/Student)
+#### Maria García (Natural Person/Student)
 
 - **Role**: Credential holder and primary user
 - **Systems**: EUDI Wallet (Mobile Application)
@@ -236,7 +236,7 @@ What happens next is a masterpiece of digital orchestration, involving multiple 
   - Present PID for verification
   - Accept issued credential into wallet
 
-#### 🏛️ Universitat Rovira i Virgili (Dual Role Institution)
+#### Universitat Rovira i Virgili (Dual Role Institution)
 
 - **Primary Role**: Educational credential issuer
 - **Secondary Role**: **eIDAS 2.0 Authentic Source** for student data
@@ -255,19 +255,19 @@ What happens next is a masterpiece of digital orchestration, involving multiple 
 
 ```mermaid
 graph TB
-    subgraph "🏛️ Institutional Layer"
-        URV[Universitat Rovira i Virgili<br/>🎓 Educational Authority]
-        ESP[Spanish PID Authority<br/>🇪🇸 Identity Provider]
+    subgraph "Institutional Layer"
+        URV[Universitat Rovira i Virgili<br/>Educational Authority]
+        ESP[Spanish PID Authority<br/>Identity Provider]
     end
     
-    subgraph "👤 Individual Layer"
-        MARIA[Maria García<br/>👩‍🎓 Student]
-        WALLET[EUDI Wallet<br/>📱 Credential Storage]
+    subgraph "Individual Layer"
+        MARIA[Maria García<br/>Student]
+        WALLET[EUDI Wallet<br/>Credential Storage]
     end
     
-    subgraph "🌐 European Layer"
-        EBSI[EBSI Trust Registry<br/>🔐 Validation Infrastructure]
-        SCHEMA[Schema Registry<br/>📋 Standards Authority]
+    subgraph "European Layer"
+        EBSI[EBSI Trust Registry<br/>Validation Infrastructure]
+        SCHEMA[Schema Registry<br/>Standards Authority]
     end
     
     MARIA --> URV
@@ -284,7 +284,7 @@ graph TB
 
 ### 4.2 Technical Infrastructure Actors
 
-#### 🔐 uSelf Issuer Agent (Credential Issuance Service)
+#### uSelf Issuer Agent (Credential Issuance Service)
 
 - **Role**: Technical orchestrator for credential issuance
 - **Location**: University infrastructure (`lspurv.urv.cat`)
@@ -294,7 +294,7 @@ graph TB
   - Handle cryptographic operations
   - Generate QR codes and credential offers
 
-#### 📊 Authentic Source (Official eIDAS 2.0 Role)
+#### Authentic Source (Official eIDAS 2.0 Role)
 
 - **Role**: **Official eIDAS 2.0 Authentic Source** - Authoritative repository of verified student information
 - **Played by**: Universitat Rovira i Virgili (in dual capacity)
@@ -311,7 +311,7 @@ graph TB
   - Ensure data integrity and audit compliance
   - Support continuous synchronisation between legal and institutional identities
 
-#### 🌐 EBSI Infrastructure Ecosystem
+#### EBSI Infrastructure Ecosystem
 
 **EBSI DID Registry**
 - **Role**: Decentralised identifier resolution
@@ -329,20 +329,20 @@ graph TB
 - **Role**: EBSI integration gateway
 - **Function**: Bridge university infrastructure with EBSI services
 
-#### 🆔 uSelf PID Issuer Agent
+#### uSelf PID Issuer Agent
 
 - **Role**: Personal Identity Data validation service
 - **Function**: Verify student's foundational identity credentials
 
 ### 4.3 Governance and Oversight Actors
 
-#### 🏛️ Spanish Ministry of Universities and Research
+#### Spanish Ministry of Universities and Research
 
 - **Role**: Root Trust Anchor (RootTAO)
 - **Authority**: Issues EAA credentials authorising URV to issue Educational IDs
 - **Scope**: National level governance and compliance
 
-#### 🇪🇺 European Blockchain Services Infrastructure (EBSI)
+#### European Blockchain Services Infrastructure (EBSI)
 
 - **Role**: European-level trust infrastructure
 - **Function**: Provide decentralised trust registry and schema validation
@@ -350,13 +350,13 @@ graph TB
 
 ### 4.4 Supporting Systems
 
-#### 📱 Student GUI (Web Interface)
+#### Student GUI (Web Interface)
 
 - **Role**: User-facing interface for credential requests
 - **Location**: `https://uself-verifier-gui.lspurv.urv.cat/`
 - **Function**: Generate QR codes and facilitate user interactions
 
-#### 🔗 Mobile Wallet (EUDI Wallet)
+#### Mobile Wallet (EUDI Wallet)
 
 - **Role**: Credential storage and presentation
 - **Standards**: W3C Verifiable Credentials, OpenID4VP
@@ -372,38 +372,38 @@ graph TB
 ┌─────────────────────────┐
 │   Student Domain       │
 ├─────────────────────────┤
-│ 👩‍🎓 Maria García        │
-│ 📱 EUDI Wallet          │
+│ Maria García        │
+│ EUDI Wallet          │
 └─────────────────────────┘
              │
              ▼
 ┌─────────────────────────────────────────────────────────┐
 │   University Infrastructure (lspurv.urv.cat)           │
 ├─────────────────────────────────────────────────────────┤
-│ 🖥️ Student GUI                                         │
-│ 🔧 uSelf Issuer Agent                                   │
-│ 📊 Authentic Source (eIDAS 2.0 Official Role)          │
-│ 🗄️ Student Registry DB                                  │
-│ 🔗 Standardised APIs (eIDAS 2.0 Compliant)             │
+│ Student GUI                                         │
+│ uSelf Issuer Agent                                   │
+│ Authentic Source (eIDAS 2.0 Official Role)          │
+│ Student Registry DB                                  │
+│ Standardised APIs (eIDAS 2.0 Compliant)             │
 └─────────────────────────────────────────────────────────┘
              │
              ▼
 ┌─────────────────────────────────────────────────────────┐
 │   EBSI Infrastructure                                   │
 ├─────────────────────────────────────────────────────────┤
-│ 🆔 DID Registry                                         │
-│ 🛡️ Trust Registry                                       │
-│ 📋 Schema Registry                                      │
-│ 🌐 EBSI Proxy                                           │
-│ 🔐 PID Issuer Agent                                     │
+│ DID Registry                                         │
+│ Trust Registry                                       │
+│ Schema Registry                                      │
+│ EBSI Proxy                                           │
+│ PID Issuer Agent                                     │
 └─────────────────────────────────────────────────────────┘
              │
              ▼
 ┌─────────────────────────────────────────────────────────┐
 │   Trust Governance                                      │
 ├─────────────────────────────────────────────────────────┤
-│ 🏛️ Spanish Ministry                                     │
-│ 📜 EAA Credentials (Authentic Source Authority)         │
+│ Spanish Ministry                                     │
+│ EAA Credentials (Authentic Source Authority)         │
 └─────────────────────────────────────────────────────────┘
 ```
 
@@ -528,10 +528,10 @@ client_id=https://issuer.eu/auth
 The uSelf Issuer Agent responds with a **direct_post** challenge, requesting Maria to present her PID credential. This is not optional—it's a **mandatory step** that forms the foundation of all subsequent trust relationships.
 
 **User Experience**: Maria's wallet displays:
-- "⚠️ **Identity Verification Required**: To issue your Educational ID, the university must verify your foundational identity"
-- "🆔 **Spanish PID Required**: Please present your Person Identification Data (PID) issued by Spanish authorities"
-- "🔒 **Security Notice**: This verification is mandatory under eIDAS 2.0 regulations"
-- "ℹ️ This information will be used only for identity verification purposes"
+- "**Identity Verification Required**: To issue your Educational ID, the university must verify your foundational identity"
+- "**Spanish PID Required**: Please present your Person Identification Data (PID) issued by Spanish authorities"
+- "**Security Notice**: This verification is mandatory under eIDAS 2.0 regulations"
+- "This information will be used only for identity verification purposes"
 
 #### Step 8: Consent and Privacy
 *Maria takes control - but verification is mandatory*
@@ -539,29 +539,29 @@ The uSelf Issuer Agent responds with a **direct_post** challenge, requesting Mar
 This is a crucial moment in the user journey. While Maria must provide explicit consent to share her PID with the university, **she cannot proceed without this verification**. The EUDI Wallet presents clear information about:
 
 **Mandatory Requirements**:
-- ✅ **PID Verification**: Required for all educational credentials under eIDAS 2.0
-- ✅ **Identity Attributes**: Minimum necessary data for foundational verification
-- ✅ **Legal Basis**: Regulatory requirement, not optional preference
+- **PID Verification**: Required for all educational credentials under eIDAS 2.0
+- **Identity Attributes**: Minimum necessary data for foundational verification
+- **Legal Basis**: Regulatory requirement, not optional preference
 
 **User Control Elements**:
-- 🎛️ **Selective Disclosure**: Choose which PID attributes to share beyond the minimum required
-- 🕐 **One-Time Use**: PID data used only for this verification, not stored
-- 🚫 **Right to Refuse**: Maria can decline, but no EducationalID will be issued
+- **Selective Disclosure**: Choose which PID attributes to share beyond the minimum required
+- **One-Time Use**: PID data used only for this verification, not stored
+- **Right to Refuse**: Maria can decline, but no EducationalID will be issued
 
 **Privacy Innovation**: The system implements selective disclosure, allowing Maria to share only the **minimum necessary PID attributes** beyond the eIDAS 2.0 required fields. For EducationalID issuance, typically only these attributes are shared:
 
 **Mandatory for Educational Credential**:
-- ✅ `family_name`, `given_name` (identity verification)
-- ✅ `birth_date` (age verification and identity matching)
-- ✅ `nationality` (eligibility verification)
-- ✅ `personal_administrative_number` (unique identification)
-- ✅ `issuing_country`, `issuing_authority` (credential validation)
+- `family_name`, `given_name` (identity verification)
+- `birth_date` (age verification and identity matching)
+- `nationality` (eligibility verification)
+- `personal_administrative_number` (unique identification)
+- `issuing_country`, `issuing_authority` (credential validation)
 
 **Optional/Privacy-Protected**:
-- 🔒 `resident_address`, `resident_street`, `resident_house_number` (not needed)
-- 🔒 `portrait` (photo - only if required by institution)
-- 🔒 `email_address`, `mobile_phone_number` (contact info - optional)
-- 🔒 `sex` (not relevant for educational credentials)
+- `resident_address`, `resident_street`, `resident_house_number` (not needed)
+- `portrait` (photo - only if required by institution)
+- `email_address`, `mobile_phone_number` (contact info - optional)
+- `sex` (not relevant for educational credentials)
 
 #### Steps 9-10: The Digital Handshake
 *Secure credential presentation - foundational identity proven*
@@ -635,11 +635,11 @@ GET https://ebsi-schema-registry/schema
 GET https://ebsi-proxy/verify
 ```
 **Purpose**: The EBSI Proxy performs the **complete foundational identity verification**, including:
-- ✅ **Cryptographic signature validation** of the PID credential
-- ✅ **Revocation status checking** to ensure the PID hasn't been revoked
-- ✅ **Trust chain verification** back to Spanish national authorities
-- ✅ **eIDAS 2.0 compliance verification** for regulatory alignment
-- ✅ **Temporal validity checking** to ensure the PID is currently valid
+- **Cryptographic signature validation** of the PID credential
+- **Revocation status checking** to ensure the PID hasn't been revoked
+- **Trust chain verification** back to Spanish national authorities
+- **eIDAS 2.0 compliance verification** for regulatory alignment
+- **Temporal validity checking** to ensure the PID is currently valid
 
 **Steps 21-22: Foundational Identity Verification Success**
 The comprehensive verification process completes successfully, **confirming Maria's foundational identity**, and the system issues an authorization code to proceed with Educational ID issuance.
