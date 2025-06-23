@@ -253,6 +253,35 @@ What happens next is a masterpiece of digital orchestration, involving multiple 
   - Maintain clear separation between data provision and credential issuance
   - Integrate with European trust frameworks
 
+```mermaid
+graph TB
+    subgraph "🏛️ Institutional Layer"
+        URV[Universitat Rovira i Virgili<br/>🎓 Educational Authority]
+        ESP[Spanish PID Authority<br/>🇪🇸 Identity Provider]
+    end
+    
+    subgraph "👤 Individual Layer"
+        MARIA[Maria García<br/>👩‍🎓 Student]
+        WALLET[EUDI Wallet<br/>📱 Credential Storage]
+    end
+    
+    subgraph "🌐 European Layer"
+        EBSI[EBSI Trust Registry<br/>🔐 Validation Infrastructure]
+        SCHEMA[Schema Registry<br/>📋 Standards Authority]
+    end
+    
+    MARIA --> URV
+    MARIA --> WALLET
+    URV --> EBSI
+    URV --> ESP
+    WALLET --> EBSI
+    EBSI --> SCHEMA
+    
+    style MARIA fill:#e1f5fe
+    style URV fill:#f3e5f5
+    style EBSI fill:#e8f5e8
+```
+
 ### 4.2 Technical Infrastructure Actors
 
 #### 🔐 uSelf Issuer Agent (Credential Issuance Service)
