@@ -31,6 +31,21 @@ This document presents the comprehensive narrative for EducationalID issuance wi
 
 ### 1.1 Process Overview
 
+```mermaid
+graph TD
+    A[Student Portal Access] --> B[PID Verification Required]
+    B --> C[Present PID Credential]
+    C --> D[University Database Match]
+    D --> E[Educational ID Issuance]
+    E --> F[EBSI Trust Registry]
+    F --> G[Credential Delivered]
+    
+    style A fill:#e1f5fe
+    style G fill:#c8e6c9
+    style C fill:#fff3e0
+    style E fill:#f3e5f5
+```
+**High-Level Flow**:
 1. **Prerequisites**: University data preparation and identity matching infrastructure
 2. **PID Verification**: Mandatory foundational identity validation (Steps 1-22)
 3. **Educational ID Issuance**: Institutional credential creation (Steps 23-33)
@@ -42,6 +57,14 @@ This document presents the comprehensive narrative for EducationalID issuance wi
 - **University**: Universitat Rovira i Virgili (dual role: Authentic Source + Issuer)
 - **Infrastructure**: EBSI trust registries and verification services
 - **Governance**: Spanish Ministry (root trust anchor)
+
+| Actor | Role | Responsibility |
+|-------|------|----------------|
+| **Maria García** | Student/Credential Holder | Presents PID, receives Educational ID |
+| **Universitat Rovira i Virgili** | Educational Institution | Issues Educational ID, validates enrollment |
+| **Spanish PID Authority** | Identity Provider | Validates foundational identity |
+| **EBSI Infrastructure** | Trust Registry | Provides European-wide credential validation |
+| **Student Information System** | Authentic Source | Maintains verified educational records |
 
 ### 1.3 Technical Standards
 
@@ -63,6 +86,32 @@ This document presents the comprehensive narrative for EducationalID issuance wi
 ### 2.1 Critical Foundation Requirements
 
 Before any EducationalID can be issued, institutions must complete essential infrastructure preparation. This is not optional—it's a **mandatory prerequisite** for participation in the DC4EU framework.
+
+```mermaid
+graph LR
+    subgraph "University Infrastructure"
+        A[Student Portal] --> B[OpenID4VCI Server]
+        B --> C[Database Integration]
+        C --> D[EBSI Connection]
+    end
+    
+    subgraph "Student Environment"
+        E[EUDI Wallet] --> F[PID Credential]
+        F --> G[QR Scanner]
+    end
+    
+    subgraph "European Trust Layer"
+        H[EBSI Registry] --> I[Schema Validation]
+        I --> J[Trust Verification]
+    end
+    
+    D --> H
+    G --> A
+    
+    style A fill:#e3f2fd
+    style E fill:#fff3e0
+    style H fill:#f1f8e9
+```
 
 ### 2.2 Data Store Preparation for EAA Issuance
 
@@ -145,6 +194,23 @@ It's Monday morning, September 2025. Maria sits in her dormitory room, smartphon
 - Enables automatic recognition across EU universities
 - Integrates with the EUDI Wallet ecosystem
 - Supports future mobility and academic recognition
+
+```mermaid
+journey
+    title Maria's Educational Identity Challenge
+    section Preparation
+      Check enrollment status: 5: Maria
+      Install EUDI Wallet: 4: Maria
+      Obtain PID credential: 5: Maria
+    section University Portal
+      Access student portal: 3: Maria
+      Navigate to credentials: 4: Maria
+      Understand requirements: 3: Maria
+    section Credential Request
+      Scan QR code: 5: Maria
+      Present PID: 4: Maria
+      Receive Educational ID: 5: Maria
+```
 
 **The Solution**: Through the DC4EU framework, Maria will receive a cryptographically secure, EBSI-anchored Educational ID that serves as her digital passport to the European Education Area. **However, this credential can only be issued after her foundational identity has been verified through her Spanish Person Identification Data (PID)**—a mandatory prerequisite that ensures the highest levels of trust and security.
 
