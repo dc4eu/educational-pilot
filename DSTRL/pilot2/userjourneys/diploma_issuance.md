@@ -390,7 +390,7 @@ graph TB
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
-│                        EUHED Diploma Issuance Architecture         │
+│                        EUHED Diploma Issuance Architecture          │
 ├─────────────────────────────────────────────────────────────────────┤
 │                                                                     │
 │  ┌─────────────┐    ┌──────────────────┐    ┌─────────────────────┐ │
@@ -408,7 +408,7 @@ graph TB
 │                              │                         │            │
 │                              ▼                         ▼            │
 │  ┌─────────────────────────────────────────────────────────────────┐ │
-│  │                    Bologna Process Framework                     │ │
+│  │                    Bologna Process Framework                    │ │
 │  │     • ECTS Credit System    • Quality Assurance                 │ │
 │  │     • Degree Structures     • European Recognition              │ │
 │  └─────────────────────────────────────────────────────────────────┘ │
