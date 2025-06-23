@@ -526,6 +526,7 @@ sequenceDiagram
     end
 ```
 
+
 #### Step 9-13: Educational ID Verification
 **Actor**: Maria (Student)
 **Action**: Maria reviews the diploma issuance request and authorises presentation of her Educational ID.
