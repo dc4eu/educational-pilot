@@ -463,7 +463,6 @@ sequenceDiagram
 
 
 Candidate Engagement and Consent (Steps 5-8)
-
 ```mermaid
 sequenceDiagram
     participant J as James Thompson
@@ -483,6 +482,7 @@ sequenceDiagram
     rect rgb(255, 248, 240)
         Note over J,C: Privacy Focus:<br/>Clear consent, selective disclosure
     end
+```
 
 #### Step 8-12: Credential Presentation
 **Actor**: Maria García via EUDI Wallet
