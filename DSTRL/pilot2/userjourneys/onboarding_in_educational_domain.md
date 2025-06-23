@@ -936,10 +936,10 @@ The agent sends a `credential_issued` event to the Student GUI, enabling real-ti
 The Educational ID credential is delivered to Maria's EUDI Wallet. The wallet validates the credential signature, stores it securely, and notifies Maria of successful issuance.
 
 **User Experience**: Maria sees a success notification:
-- "✅ Your Educational ID has been issued successfully!"
-- "🎓 You can now access university services and participate in international programmes"
-- "📅 This credential is valid until 30 June 2027"
-- "🔒 Your credential is cryptographically secured and recognised across Europe"
+- "Your Educational ID has been issued successfully!"
+- "You can now access university services and participate in international programmes"
+- "This credential is valid until 30 June 2027"
+- "Your credential is cryptographically secured and recognised across Europe"
 
 ---
 
@@ -989,17 +989,17 @@ The EducationalID issuance process implements sophisticated **multi-layer trust 
 ### 7.2 Trust Chain Example with eIDAS 2.0 Roles
 
 ```
-🇪🇺 European Union (eIDAS 2.0 Regulatory Framework)
+European Union (eIDAS 2.0 Regulatory Framework)
   ↓
-🇪🇸 Spanish Ministry of Universities (Root Trust Anchor)
+Spanish Ministry of Universities (Root Trust Anchor)
   ↓ [Issues EAA - Authentic Source Authority]
-🏛️ URV as Authentic Source (eIDAS 2.0 Article 45b Role)
+URV as Authentic Source (eIDAS 2.0 Article 45b Role)
   ↓ [Standardised API provides verified data]
-🔧 URV as Issuer (EAA-Authorised Credential Issuer)
+URV as Issuer (EAA-Authorised Credential Issuer)
   ↓ [Issues Educational ID based on authentic source data]
-👩‍🎓 Maria García (Credential Holder)
+Maria García (Credential Holder)
   ↓ [Presents Credential]
-🏫 Any European University (Relying Party)
+Any European University (Relying Party)
 ```
 
 **Key Innovation**: The dual role architecture demonstrates how institutions can operate as both **Authentic Source** and **Issuer** under eIDAS 2.0 whilst maintaining clear functional separation and regulatory compliance.
@@ -1168,11 +1168,11 @@ client_id=https://issuer.eu/auth
 ```
 
 **Key Validation Requirements**:
-- ✅ **Credential Type**: Must be `PersonIdentificationData` (eIDAS 2.0 PID)
-- ✅ **Required Fields**: `family_name`, `given_name`, `birth_date`, `nationality`
-- ✅ **Administrative Number**: `personal_administrative_number` for unique identification
-- ✅ **Issuing Country**: Must be "ES" (Spain) for this university
-- ✅ **Cryptographic Validation**: ES256 signature algorithm required
+- **Credential Type**: Must be `PersonIdentificationData` (eIDAS 2.0 PID)
+- **Required Fields**: `family_name`, `given_name`, `birth_date`, `nationality`
+- **Administrative Number**: `personal_administrative_number` for unique identification
+- **Issuing Country**: Must be "ES" (Spain) for this university
+- **Cryptographic Validation**: ES256 signature algorithm required
 
 ### 8.3 Final Credential Response
 
@@ -1247,13 +1247,13 @@ The PID's use of **official eIDAS 2.0 standards** provides:
 
 **Complete Identity Verification Flow**:
 ```
-🇪🇸 Spanish National Identity (DNI) 
+Spanish National Identity (DNI) 
   ↓ [Digital Transformation]
-🆔 eIDAS 2.0 PID Credential (PersonIdentificationData)
+eIDAS 2.0 PID Credential (PersonIdentificationData)
   ↓ [Verification & Validation]
-🎓 EducationalID Credential (eduGAIN/SCHAC)
+EducationalID Credential (eduGAIN/SCHAC)
   ↓ [Institutional Affiliation]
-📜 Academic Achievement Credentials (ELM)
+Academic Achievement Credentials (ELM)
 ```
 
 This structure ensures that **every educational credential** can be traced back to **verified national identity**, providing the highest levels of trust and legal certainty across European borders.
@@ -1558,33 +1558,33 @@ Accept: application/did+ld+json
 #### C.1 eIDAS 2.0 Compliance Checklist
 
 **Mandatory Requirements**:
-- ✅ **Article 3**: Foundational identity verification through PID
-- ✅ **Article 45b**: Authentic Source certification and operation
-- ✅ **Annex VI**: Technical specifications for credential formats
-- ✅ **Recital 12**: Cross-border recognition requirements
+- **Article 3**: Foundational identity verification through PID
+- **Article 45b**: Authentic Source certification and operation
+- **Annex VI**: Technical specifications for credential formats
+- **Recital 12**: Cross-border recognition requirements
 
 **Privacy and Data Protection**:
-- ✅ **GDPR Article 6**: Lawful basis for processing (public task)
-- ✅ **GDPR Article 5**: Data minimisation and purpose limitation
-- ✅ **GDPR Article 25**: Privacy by design implementation
-- ✅ **GDPR Article 32**: Technical and organisational security measures
+- **GDPR Article 6**: Lawful basis for processing (public task)
+- **GDPR Article 5**: Data minimisation and purpose limitation
+- **GDPR Article 25**: Privacy by design implementation
+- **GDPR Article 32**: Technical and organisational security measures
 
 #### C.2 Educational Standards Alignment
 
 **SCHAC (Schema for Academia)**:
-- ✅ Personal unique identifiers
-- ✅ Organisational affiliations
-- ✅ Educational context attributes
+- Personal unique identifiers
+- Organisational affiliations
+- Educational context attributes
 
 **eduGAIN Federation Standards**:
-- ✅ Cross-border attribute release
-- ✅ Privacy-preserving identity federation
-- ✅ Multi-lateral trust agreements
+- Cross-border attribute release
+- Privacy-preserving identity federation
+- Multi-lateral trust agreements
 
 **REFEDS Assurance Framework**:
-- ✅ Identity assurance profiles
-- ✅ Authentication context classification
-- ✅ Risk-based assurance levels
+- Identity assurance profiles
+- Authentication context classification
+- Risk-based assurance levels
 
 ### 10.4 Appendix D: Implementation Roadmap
 
