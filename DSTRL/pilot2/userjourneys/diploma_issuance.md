@@ -652,7 +652,7 @@ sequenceDiagram
     rect rgb(248, 255, 248)
         Note over I,S: Standards Compliance:<br/>ELM v3.2 and Bologna Process
     end
-
+```
 
 ### Phase 3: EUHED Diploma Issuance (Steps 29-42)
 
