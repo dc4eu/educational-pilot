@@ -248,6 +248,23 @@ It's Tuesday morning, July 2025. Maria sits in her flat, having just received no
 - **Educational transparency**: Clear mapping of learning outcomes to European frameworks
 - **Lifelong learning support**: Portable credentials that accumulate throughout educational journey
 
+```mermaid
+journey
+    title Maria's Academic Achievement Journey
+    section Degree Completion
+      Final exams completed: 5: Maria
+      Thesis defended successfully: 5: Maria
+      All credits earned: 5: Maria
+    section Graduation Preparation
+      Check graduation requirements: 4: Maria
+      Apply for diploma issuance: 3: Maria
+      Understand EUHED benefits: 4: Maria
+    section European Recognition
+      Request EUHED diploma: 4: Maria
+      Present Educational ID: 5: Maria
+      Receive European credential: 5: Maria
+```
+
 ### 3.3 The Technical Foundation
 
 **European Learning Model v3.2**: The EUHED diploma leverages the comprehensive ELM framework to represent:
