@@ -746,6 +746,39 @@ sequenceDiagram
 
 ### 7.1 Educational Trust Chain
 
+```mermaid
+graph TD
+    subgraph "Academic Trust"
+        A[University Accreditation] --> B[Quality Assurance]
+        B --> C[Academic Standards]
+    end
+    
+    subgraph "European Trust"
+        D[Bologna Process] --> E[EBSI Registration]
+        E --> F[ELM v3.2 Compliance]
+    end
+    
+    subgraph "Technical Trust"
+        G[Digital Signatures] --> H[Hardware Security]
+        H --> I[Cryptographic Integrity]
+    end
+    
+    subgraph "Data Trust"
+        J[Authentic Sources] --> K[Transcript Verification]
+        K --> L[Grade Validation]
+    end
+    
+    C --> G
+    F --> G
+    I --> J
+    L --> A
+    
+    style A fill:#e3f2fd
+    style D fill:#fff3e0
+    style G fill:#f1f8e9
+    style J fill:#fce4ec
+```
+
 The EUHED diploma operates within a sophisticated trust ecosystem that validates both the issuing institution and the academic achievement:
 
 #### 7.1.1 Institutional Trust Verification
@@ -1011,6 +1044,20 @@ The EUHED schema applies specific constraints to the generic EDC model to addres
 - **Quality Standards**: ESG compliance validation
 - **Recognition Frameworks**: Automatic recognition preparation
 
+```mermaid
+graph TD
+    A[Local Degree] --> B[ECTS Conversion]
+    B --> C[EQF Level Mapping]
+    C --> D[Competency Translation]
+    D --> E[Learning Outcomes]
+    E --> F[Bologna Descriptors]
+    F --> G[European Recognition]
+    
+    style A fill:#e1f5fe
+    style G fill:#c8e6c9
+    style D fill:#fff3e0
+```
+
 #### 9.3.3 Mobility Optimisation
 - **Multilingual Support**: Credential representation in multiple European languages
 - **Competency Mapping**: Skills alignment with European sectoral frameworks
@@ -1200,6 +1247,20 @@ The European Learning Model v3.2 compliant schema for higher education diploma c
 - ✅ External quality assurance validation
 - ✅ Student-centred learning approach
 - ✅ Continuous improvement mechanisms
+
+```mermaid
+graph TD
+    A[Local Degree] --> B[ECTS Conversion]
+    B --> C[EQF Level Mapping]
+    C --> D[Competency Translation]
+    D --> E[Learning Outcomes]
+    E --> F[Bologna Descriptors]
+    F --> G[European Recognition]
+    
+    style A fill:#e1f5fe
+    style G fill:#c8e6c9
+    style D fill:#fff3e0
+```
 
 #### B.2 European Qualifications Framework (EQF)
 
