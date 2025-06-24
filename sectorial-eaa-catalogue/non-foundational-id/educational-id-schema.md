@@ -14,7 +14,7 @@ The Educational ID Schema defines the data structure for representing educationa
   "type": "object",
   "allOf": [
     {
-      "$ref": "./node_modules/@cef-ebsi/vcdm1.1-attestation-schema/schema.json"
+      "$ref": "https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/0xbe77a21356835dc09d3d8149ea832ae0a4bae0ae9c869d18219ef8f4a74b4644"
     },
     {
       "properties": {
@@ -103,7 +103,11 @@ The Educational ID Schema defines the data structure for representing educationa
               "$ref": "#/$defs/MediaObjectType"
             }
           },
-          "required": ["id", "identifier", "eduPersonScopedAffiliation"]
+          "required": [
+            "id",
+            "identifier",
+            "eduPersonScopedAffiliation"
+          ]
         }
       }
     }
@@ -219,7 +223,11 @@ The Educational ID Schema defines the data structure for representing educationa
           "$ref": "#/$defs/URIType"
         }
       },
-      "required": ["contentType", "contentEncoding", "content"]
+      "required": [
+        "contentType",
+        "contentEncoding",
+        "content"
+      ]
     }
   }
 }
