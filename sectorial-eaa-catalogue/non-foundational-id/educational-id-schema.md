@@ -240,79 +240,80 @@ The Educational ID Schema defines the data structure for representing educationa
 {
   "@context": [
     "https://www.w3.org/2018/credentials/v1",
-    "https://eaa-rulebook.europa.eu/2023/credentials/educational-id/v1"
+    "https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/0xbe77a21356835dc09d3d8149ea832ae0a4bae0ae9c869d18219ef8f4a74b4644"
   ],
   "id": "https://university-example.eu/credentials/educational-id/9876",
-  "type": ["VerifiableCredential", "EducationalIdCredential"],
+  "type": ["VerifiableCredential", "VerifiableEducationalID"],
   "issuer": {
     "id": "did:ebsi:2A9PZGnuqJBWNrpCTNQkBNHPhNHSqJhGXUhL3xWtL5Fst3EVb",
     "name": {
       "en": "University of Example",
-      "fr": "Université d'Exemple",
+      "es": "Universidad de Ejemplo",
       "de": "Universität Beispiel"
     },
     "type": "University"
   },
-  "issuanceDate": "2023-09-01",
-  "expirationDate": "2024-08-31",
+  "issuanceDate": "2023-09-01T00:00:00Z",
+  "expirationDate": "2024-08-31T23:59:59Z",
   "credentialSubject": {
-    "id": "did:ebsi:zhSvxcMPwYMrMdj25X5QzYrW3D7hkBbJJwJkUcKfCpMfMRRu",
-    "fullName": "Carlos Rodriguez",
+    "id": "did:key:z6MkhaXgBZDvotDkL5257faiztiGiC2QtKLGpbnnEGta2doK",
+    "identifier": "carlos.rodriguez@university-example.eu",
+    "schacPersonalUniqueCode": [
+      "urn:schac:personalUniqueCode:int:esi:university-example.eu:21345678",
+      "urn:schac:personalUniqueCode:int:esi:ES:21345678"
+    ],
+    "schacPersonalUniqueID": "urn:schac:personalUniqueID:ES:12345678Z",
+    "schacHomeOrganization": "university-example.eu",
+    "familyName": "Rodriguez",
+    "firstName": "Carlos",
+    "displayName": "Carlos Rodriguez",
     "dateOfBirth": "2000-03-25",
-    "studentId": "S21345678",
-    "academicStatus": "EnrolledFull",
-    "programme": {
-      "name": {
-        "en": "Bachelor of Science in Computer Engineering",
-        "fr": "Licence en Ingénierie Informatique",
-        "de": "Bachelor of Science in Computeringenieurwesen"
+    "commonName": "Carlos Rodriguez",
+    "mail": "carlos.rodriguez@university-example.eu",
+    "eduPersonPrincipalName": "carlos.rodriguez@university-example.eu",
+    "eduPersonPrimaryAffiliation": "student",
+    "eduPersonAffiliation": [
+      "member",
+      "student"
+    ],
+    "eduPersonScopedAffiliation": [
+      "student@university-example.eu",
+      "member@university-example.eu"
+    ],
+    "eduPersonAssurance": [
+      "https://refeds.org/assurance/IAP/low"
+    ],
+    "image": {
+      "id": "https://university-example.eu/images/student-photos/21345678",
+      "type": "MediaObject",
+      "title": {
+        "en": "Student Photo",
+        "es": "Foto del Estudiante",
+        "de": "Studentenfoto"
       },
-      "level": {
-        "eqfLevel": 6,
-        "isced": "0714"
+      "description": {
+        "en": "Official student identification photo",
+        "es": "Foto oficial de identificación estudiantil",
+        "de": "Offizielles Studentenausweis-Foto"
       },
-      "fieldOfStudy": {
-        "code": "0714",
-        "name": {
-          "en": "Electronics and Automation",
-          "fr": "Électronique et automatisation",
-          "de": "Elektronik und Automatisierung"
+      "contentType": {
+        "id": "http://publications.europa.eu/resource/authority/file-type/JPEG",
+        "type": "Concept",
+        "prefLabel": {
+          "en": "JPEG Image"
         }
       },
-      "startDate": "2022-09-01",
-      "expectedEndDate": "2026-06-30",
-      "currentYear": 2,
-      "academicUnit": {
-        "name": {
-          "en": "Faculty of Engineering",
-          "fr": "Faculté d'Ingénierie",
-          "de": "Fakultät für Ingenieurwissenschaften"
-        },
-        "type": "Faculty"
-      }
-    },
-    "accessRights": [
-      {
-        "type": "Library",
-        "description": {
-          "en": "Access to all university libraries and digital resources",
-          "fr": "Accès à toutes les bibliothèques universitaires et aux ressources numériques",
-          "de": "Zugang zu allen Universitätsbibliotheken und digitalen Ressourcen"
-        },
-        "validUntil": "2024-08-31"
+      "contentEncoding": {
+        "id": "http://publications.europa.eu/resource/authority/encoding/BASE64",
+        "type": "Concept",
+        "prefLabel": {
+          "en": "Base64"
+        }
       },
-      {
-        "type": "SportsFacilities",
-        "description": {
-          "en": "Access to university sports facilities",
-          "fr": "Accès aux installations sportives universitaires",
-          "de": "Zugang zu den Sporteinrichtungen der Universität"
-        },
-        "validUntil": "2024-08-31"
-      }
-    ],
-    "photo": "iVBORw0KGgoAAAANSUhEUgAAABAA...",
-    "internationalStudent": false
+      "contentSize": 15240,
+      "content": "iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNui8sowAAAAWdEVYdENyZWF0aW9uIFRpbWUAMDkvMDEvMjPqB71eAAADrElEQVR4nO3d0Y3bMAyAYXcBO...",
+      "contentURL": "https://university-example.eu/api/v1/student-photos/21345678.jpg"
+    }
   },
   "proof": {
     "type": "EcdsaSecp256k1Signature2019",
