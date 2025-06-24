@@ -2,7 +2,36 @@
 
 ## Overview
 
-The Educational ID Schema defines the data structure for representing educational identity credentials that confirm a student's affiliation with an educational institution. This schema supports verification of student status, programme enrolment, and access rights.
+The Educational ID Schema defines the data structure for representing educational identity credentials that confirm a person's affiliation with an educational institution. This schema supports verification of student status and other academic information such as, for example, institutional email.
+
+The schema is built on top of the EBSI (European Blockchain Services Infrastructure) trusted schemas registry and incorporates standard attributes from eduGAIN and SCHAC (SCHema for ACademia) frameworks, ensuring interoperability across European educational institutions.
+
+## Key Features
+
+- **Identity Verification**: Confirms the identity of individuals within educational contexts using standardized identifiers
+- **Institutional Affiliation**: Verifies the relationship between a person and their educational organization
+- **Academic Status**: Supports various types of educational affiliations (student, faculty, staff, alumni, etc.)
+- **Interoperability**: Based on established European standards (eduGAIN, SCHAC) for cross-institutional recognition
+- **Privacy-Aware**: Includes only essential personal and academic information required for verification purposes
+
+## Supported Information
+
+This schema enables verification of:
+
+- **Personal Identity**: Basic personal information (names, date of birth) with standardized identifiers
+- **Institutional Affiliation**: Connection to specific educational organizations through `schacHomeOrganization`
+- **Academic Status**: Educational roles and affiliations within the institution via eduPerson attributes
+- **Contact Information**: Institutional email address for communication purposes
+- **Unique Identifiers**: Both institutional and national-level unique codes for interoperability
+- **Identity Assurance**: Level of confidence in the identity verification process
+
+## Standards Compliance
+
+The schema complies with:
+- **eduGAIN**: European research and education identity federation attributes
+- **SCHAC**: Standard schema for academia with European-specific extensions
+- **EBSI**: European Blockchain Services Infrastructure requirements
+- **JSON Schema Draft 2020-12**: Latest JSON Schema specification
 
 ## Schema Structure
 
