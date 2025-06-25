@@ -14,11 +14,11 @@ This repository is organised into several key sections:
   
 - [Trust models](./sectorial-rulebook/trust-models.md): Outlines trust models accepted for **Education and Professional qualifcations** (Classical PKI & Decentralised PKI using EBSI). 
 
+- **[Governance in Education and Professional Qualifications](./governances)**: Understanding existing governance(s)
+
 - **[eIDAS scenarios](./eidas-scenarios/)**: Outlines the four trust models for electronic attestation of attributes (EAAs) within the European Digital Ecosystem, explaining how EBSI enhances traditional PKI approaches.
 
 - [Bridge between Classical PKI and dPKI using EBSI](./eidas-scenarios/scenario2/trust_modes_bridge.md): How the trust models of classical PKI and dPKI are combined to enable and support the governance of education and professional qualifications
-  
-- **[Governance in Education and Professional Qualifications](./governances)**: Understanding existing governance(s)
   
 - **[Governance implementation: the EAA-based authorisation model](./eaa-based-authorisation-model/)**: Defines a structured framework for education and professional qualifications' governance, managing authorisations and recognition within educational, professional, and quality assurance domains.
 
