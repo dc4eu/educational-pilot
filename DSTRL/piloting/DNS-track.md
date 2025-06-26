@@ -42,7 +42,7 @@ Source of updated information: https:/sites.ey.com/:x:/r/sites/DC4EU-EBSINE/Shar
 | Portugal  | UMAIA  | Alexandre Sousa | [lspumaia.umaia.pt](uself-verifier-gui.lspumaia.umaia.pt) |🟢 |
 | Romania      | Politehnica University of Timisoara, Romania (UPT)       | Diana Andone                     | [lspupt.upt.ro](https://uself-verifier-gui.lspupt.upt.ro)                  | 🟢 |
 | Romania      | UEFISCDI                                                 | Cosmin Cioranu                   | [lsp.dc4eu.runidas.rei.gov.ro](https://uself-verifier-gui.lsp.dc4eu.runidas.rei.gov.ro)       | 🟢 |
-| Romania      | Titu Maiorescu University | Nicolae       |  WIP  | 🔴 |
+| Romania      | Titu Maiorescu University | Nicolae       |  [lsputm.utm.ro](http://uself-issuer-gui.lsputm.utm.ro)  | 🟢 |
 | Spain        | University of Alcalá (UAH)                               | Sergio Caro                      | [lspuah.uah.es](https://uself-verifier-gui.lspuah.uah.es)         | 🟢 |
 | Spain        | University of Málaga                                     | Victoriano Giralt                | [lspuma.uma.es](https://uself-verifier-gui.lspuma.uma.es)         | 🟢 |
 | Spain        | University of Múrcia                                     | Antonio              | [lspum.um.es](https://uself-verifier-gui.lspum.um.es)    | 🟢 |
