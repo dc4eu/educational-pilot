@@ -276,12 +276,3 @@ Ensuring interoperability between various educational systems and actors is cruc
 
 **Framework Evolution**: Continuous improvement based on feedback and emerging requirements.
 
----
-
-### 4 CONCLUSION
-
-WP5 Pilot 1 establishes a robust foundation for educational credential management using Classical PKI infrastructure with SD-JWT credentials. This approach provides educational institutions with a practical, implementable solution that builds upon existing PKI knowledge whilst enabling advanced privacy-preserving features through selective disclosure.
-
-The trust framework balances institutional autonomy with European interoperability requirements, ensuring that educational credentials can be securely issued, verified, and recognised across Member States whilst maintaining compliance with educational regulations and data protection requirements.
-
-Through careful onboarding processes for educational issuers and verifiers, comprehensive schema management, and thoughtful disclosure policies, WP5 Pilot 1 creates a sustainable model for digital educational credentials that can serve as a foundation for broader adoption across the European Education Area.
