@@ -8,7 +8,7 @@ By emphasising **SD-JWT-based verifiable credentials** and classical PKI infrast
 
 ## Keywords
 
-DC4EU, WP5, Pilot1, SD-JWT, Classical PKI, EAA, EHEA, eID, eIDAS, Educational Credentials, Professional Qualifications, Trust Framework, Onboarding, Verification
+DC4EU, WP5, Pilot1, SD-JWT, Classical PKI, QEAA, PubEAA, EHEA, eID, eIDAS, Educational Credentials, Trust Framework, Onboarding, Verification
 
 ---
 
