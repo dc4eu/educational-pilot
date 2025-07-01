@@ -325,7 +325,7 @@ jws.verify(jws_string, public_key, algorithms=['ES256'])
 - **Schema Validation**: Use a JSON Schema validator (e.g., `ajv`) to ensure the payload conforms to `euhemc-schema.json`.
 
 ### 6. Visual diagram
-```Mermaid
+```mermaid
 flowchart TD
     %% Input Components
     A[Unsigned EUHEMC Credential<br/>JSON-LD Format] --> B[Prepare Header]
@@ -386,4 +386,5 @@ flowchart TD
     class I,J,K,L crypto
     class N,O,P,Q,R,S,T,U,V,W verify
     class X,Y,Z result
-    ```
+
+```
