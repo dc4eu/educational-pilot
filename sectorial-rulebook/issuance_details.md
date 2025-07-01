@@ -323,3 +323,67 @@ jws.verify(jws_string, public_key, algorithms=['ES256'])
 - **Trust**: Ensure the issuer's DID is in EBSI's Trusted Issuers Registry and the schema is valid.
 - **Revocation/Suspension**: Check EBSI's revocation/suspension to confirm the credential's validity.
 - **Schema Validation**: Use a JSON Schema validator (e.g., `ajv`) to ensure the payload conforms to `euhemc-schema.json`.
+
+### 6. Visual diagram
+```Mermaid
+flowchart TD
+    %% Input Components
+    A[Unsigned EUHEMC Credential<br/>JSON-LD Format] --> B[Prepare Header]
+    A --> C[Prepare Payload]
+    
+    %% Header Processing
+    B --> D[Header JSON Object<br/>• alg: ES256<br/>• typ: jades-d-z<br/>• cty: vc+ld+json<br/>• kid: DID#key-reference<br/>• sigT: timestamp<br/>• sigPl: signing place]
+    D --> E[Minify & UTF-8 Encode]
+    E --> F[Base64URL Encode<br/>Header Component]
+    
+    %% Payload Processing
+    C --> G[Stringify JSON-LD<br/>Remove whitespace]
+    G --> H[Base64URL Encode<br/>Payload Component]
+    
+    %% Signature Generation
+    F --> I[Concatenate with dot<br/>Header.Payload]
+    H --> I
+    I --> J[ASCII Encoding<br/>Signing Input]
+    J --> K[SHA-256 Hash]
+    K --> L[ECDSA Sign with<br/>Private Key P-256]
+    L --> M[Base64URL Encode<br/>Signature Component]
+    
+    %% Final JWS
+    F --> N[JWS Compact Serialisation<br/>Header.Payload.Signature]
+    H --> N
+    M --> N
+    
+    %% Verification Process
+    N --> O[Verification Process]
+    O --> P[1. Split JWS by dots]
+    O --> Q[2. Decode Header & Payload]
+    O --> R[3. Validate Header fields]
+    O --> S[4. Validate Payload schema]
+    O --> T[5. Retrieve Public Key from DID]
+    O --> U[6. Verify ECDSA Signature]
+    O --> V[7. Check EBSI Trust Registry]
+    
+    %% Trust Validation
+    T --> W[EBSI DID Registry<br/>Resolve Public Key]
+    V --> X[Signature Valid?<br/>Credential Authentic?]
+    V --> Y[EBSI Trusted Issuers Registry<br/>Verify Issuer Authority]
+    
+    %% Final Result
+    X --> Z[Trusted EUHEMC<br/>Ready for Relying Party Use]
+    Y --> Z
+    
+    %% Styling
+    classDef input fill:#e1f5fe
+    classDef process fill:#f3e5f5
+    classDef encode fill:#fff3e0
+    classDef crypto fill:#ffebee
+    classDef verify fill:#e8f5e8
+    classDef result fill:#f1f8e9
+    
+    class A input
+    class B,C,D,G process
+    class E,F,H,M encode
+    class I,J,K,L crypto
+    class N,O,P,Q,R,S,T,U,V,W verify
+    class X,Y,Z result
+    ```
