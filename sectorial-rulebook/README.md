@@ -24,7 +24,7 @@ This sectorial rulebook covers the following key areas:
 
 - **[Education and Professional Qualifications Ontology](./european-learning-model.md)**: The European Learning Model (ELM) that creates a shared understanding of educational achievements.
 
-- **[Issuance](./issuance.md)**: The process for issuing different types of attestations.
+- **[Issuance](./issuance.md)** and **[Issuance technical details](./issuance_details.md)**: The process for issuing different types of attestations.
 
 - **[Disclosure of information](./information-disclosure.md)**: How information can be dislcosed to protect privacy.
 
