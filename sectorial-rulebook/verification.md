@@ -2,7 +2,7 @@
 
 ## Overview
 
-The verification process ensures credential validity while protecting privacy through a distributed system that avoids single points of failure. This approach balances security needs with privacy protection, preventing unnecessary monitoring of credential usage.
+The verification process ensures credential validity while protecting privacy through a distributed system that avoids single points of failure. This approach balances security needs with privacy protection, preventing unnecessary monitoring of credential usage. For technical verification details read [Verification details](./verification-deatils.md) document.
 
 ## Key Characteristics
 
