@@ -30,7 +30,7 @@ This sectorial rulebook covers the following key areas:
 
 - **[Sharing Mechanisms](./sharing-mechanisms.md)**: The framework supporting European mobility through credential sharing.
 
-- **[Verification](./verification.md)**: The process ensuring credential validity while protecting privacy.
+- **[Verification](./verification.md)** and **[Verification technical details](./verification-deatils.md)**: The process ensuring credential validity while protecting privacy.
 
 - **[Enforcement Policy Agent](./enforcement-policy-agent.md)**: How wallets implement European privacy principles.
 
