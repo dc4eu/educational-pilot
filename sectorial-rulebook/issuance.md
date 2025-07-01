@@ -2,7 +2,7 @@
 
 ## Overview
 
-The issuance process establishes how educational and professional credentials are created and delivered to users. Different types of attestations follow specific issuance pathways depending on their legal status and the issuing entity.
+The issuance process establishes how educational and professional credentials are created and delivered to users. Different types of attestations follow specific issuance pathways depending on their legal status and the issuing entity. For technical issaunce details read [Issuance details](./issuance_details.md) document.
 
 ## Attestation Types
 
