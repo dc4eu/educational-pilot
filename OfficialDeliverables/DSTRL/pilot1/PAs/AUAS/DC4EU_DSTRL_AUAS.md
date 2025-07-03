@@ -4,11 +4,11 @@
 - **Piloting agent name**: Amsterdam University of Applied Sciences (AUAS)  
 - **Scenario title**: EducationalID and credential issuance with QR-based verification  
 - Date of submission  
-- **Point of contact (SPOC)**: SURF【45†source】  
+- **Point of contact (SPOC)**: SURF  
 
 ## 2. Scenario characterisation
-- User journeys to be implemented: onboarding, PID retrieval, EducationalID issuance, diploma/microcredential issuance, QR-based verification【68†source】  
-- Target groups and end-user roles: Students and/or employees (target: 25)【68†source】  
+- User journeys to be implemented: onboarding, PID retrieval, EducationalID issuance, diploma/microcredential issuance, QR-based verification  
+- Target groups and end-user roles: Students and/or employees (target: 25)  
 - Electronic Attestations of Attributes (EAAs) involved (to be issued or verified)  
 - Institutional systems/databases connected to the credential workflows  
 - Technical components used (e.g. PID service, Issuer/Verifier platforms, EUDIW wallet)  
