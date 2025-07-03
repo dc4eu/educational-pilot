@@ -25,8 +25,8 @@
 - Success indicators and KPIs  
 
 ## 4. Trust model onboarding evidences
-- Issuer X.509v3 certificate issued by the trust anchor (include PEM or screenshot link)  
-- Relying party X.509v3 certificate (access cert) and scope of authorised EAAs  
+- Issuer X.509v3 certificate issued by the trust anchor (include PEM or screenshot link as provided by WP7)  
+- Relying party X.509v3 certificate (access cert) and scope of authorised EAAs (not vailable, as it was expected to be provided by WP7. Due to time constraints it has not been provided)  
 - PID access credentials and service metadata  
 - For dPKI-based actors: Decentralised Identifiers (DIDs) with metadata and authorisation status  
 - Reference to the authoritative registry where these credentials are validated (e.g. EAA catalogue, trust list)  
