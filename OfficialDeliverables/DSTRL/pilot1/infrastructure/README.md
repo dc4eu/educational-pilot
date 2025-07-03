@@ -64,7 +64,7 @@ This document outlines the onboarding processes for **Educational EAA providers*
 
 The core of the trust infrastructure is based on traditional **X.509 public key infrastructures** using **trusted lists**. The primary objective is to define the basic building blocks for establishing trust relationships between educational stakeholders on national and European levels.
 
-#### 1.4 EDUCATIONAL EAAS IN CLASSICAL PKI
+#### 1.4 EDUCATIONAL EAAs IN CLASSICAL PKI
 
 The scenario relevant to WP5 Pilot 1 involves **Educational Electronic Attestation Attributes (EAAs)** issued by educational institutions and professional bodies responsible for maintaining authentic sources of educational and professional qualification data.
 
