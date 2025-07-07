@@ -88,8 +88,13 @@ Educational identifiers provide verifiable proof of student status. Our schemas 
 - Access rights
 
 EAA's defined
-For detailed schema information, see [Educational ID Schema](../non-foundational-id/educational-id-schema.md).
-
+- [Educational ID](../non-foundational-id/educational-id-schema.md).
+- [Alliance ID](../non-foundational-id/allianceid-schema.md)
+- [EuropeanStudentcard](../non-foundational-id/europeanStudentCard.md)
+- [MyAcademic ID](../non-foundational-id/myacademicid-schema.md)
+- [Engineer ID](../non-foundational-id/engineerID-schema.md)
+- [Doctor ID](../non-foundational-id/doctor-id-schema.md)
+- [Professional ID](../non-foundational-id/professionalID-schema.md)
 ### Course Certificates
 
 Course certificates document completion of specific educational components. Our schemas support:
