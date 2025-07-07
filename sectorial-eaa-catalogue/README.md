@@ -62,6 +62,7 @@ European Digital Credentials (EDC) issued using Online Credential Builder (OCB) 
 
 EDC JSON structure (view 1)
 
+
 ```mermaid
 graph TD
   Root["Root (Object)"]
@@ -73,6 +74,7 @@ graph TD
 ```
 
 EDC JSON structure (view 2)
+
 
 ```mermaid
 graph TD
@@ -110,7 +112,6 @@ graph TD
   deliveryDetails --> displayDetails
 ```
 
-
 ## European Digital Credentials – W3C Compliant (EDC-W3C)
 
 EDC-W3C represents the European Digital Credentials for Learning (EDC) fully aligned with the W3C Verifiable Credentials Data Model (VCDM), as adopted in the first batch of the Implementing Acts under the European Digital Identity framework.
@@ -125,6 +126,42 @@ Key benefits include:
 - Data integrity and privacy: Ensures secure, verifiable credentials while respecting the privacy of credential holders.
 - Consistency with the European Learning Model: Structured data remains anchored in ELM while adopting the W3C format.
 
+```mermaid
+graph TD
+  Root["Root (Object)"]
+  credential["credential (Object)"]
+  id["id (String)"]
+  type["type (Array)"]
+  credentialSchema["credentialSchema (Array)"]
+  evidence["evidence (Array)"]
+  credentialSubject["credentialSubject (Object)"]
+  issuanceDate["issuanceDate (String)"]
+  issued["issued (String)"]
+  validFrom["validFrom (String)"]
+  credentialProfiles["credentialProfiles (Array)"]
+  displayParameter["displayParameter (Object)"]
+  identifier["identifier (Array)"]
+  deliveryDetails["deliveryDetails (Object) - optional"]
+  deliveryAddress["deliveryAddress (Array)"]
+  displayDetails["displayDetails (Object)"]
+
+  Root --> credential
+  Root --> id
+  Root --> type
+  Root --> credentialSchema
+  Root --> evidence
+  Root --> credentialSubject
+  Root --> issuanceDate
+  Root --> issued
+  Root --> validFrom
+  Root --> credentialProfiles
+  Root --> displayParameter
+  Root --> identifier
+  Root --> deliveryDetails
+  deliveryDetails --> deliveryAddress
+  deliveryDetails --> displayDetails
+  ```
+
 For further information on EDC-W3C, access:
 - [EDC-W3C compliant with W3C-VCDM 1.0](https://code.europa.eu/ebsi/json-schema/-/tree/main/schemas/vcdm1.1/europass/edc) 
 - [EDC-W3C compliant with W3C-VCDM 2.0](https://code.europa.eu/ebsi/json-schema/-/tree/main/schemas/vcdm2.0/edc)
@@ -138,7 +175,7 @@ For further information on EDC-W3C, access:
 ## Table with available schemes
 | Scope        | Data model name    | Brief explanation |Status/Detailed explanation |Schema URL     | Registry URL |
 |-----------------------------|--------------------------|--------|------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
-| Academic and professional achievements       |  EDC-W3C credential  | European Digital Credential compliant with W3C-VCDM v1.1 credential format based on ELM v3.2 in alignment to 1st batch of implementing acts, supports any type of educational and professional qualifications |[Detailed list below](https://github.com/dc4eu/educational-pilot/tree/main/sectorial-eaa-catalogue#table-with-available-datamodels-based-on-edc-w3c)| [Schema](https://code.europa.eu/ebsi/json-schema/-/tree/main/schemas/vcdm1.1/europass/edc)                        | [Registry](https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/z5P8ebAhZjuvypiSXSHoba6vstbhTwnLhVuULWKenuiNJ) |
+| Academic and professional achievements       |  EDC-W3C credential  | European Digital Credential compliant with W3C-VCDM v1.1 credential format based on ELM v3.2 in alignment to 1st batch of implementing acts, supports any type of educational and professional qualifications |[Detailed list below](https://github.com/dc4eu/educational-pilot/tree/main/sectorial-eaa-catalogue#table-with-available-datamodels-based-on-edc-w3c)| [Schema](https://code.europa.eu/ebsi/json-schema/-/tree/main/schemas/vcdm1.1/europass/edc)                        | [Registry](https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/0xe9d256a96313a24d5884d56f0835047febc0ebf46fbdd20c906f49057a1e0f02) |
 | Non-foundational identity   | EducationalID           | Identifies the natural person in the context of an educational organisation, including national extensions |Available| [Schema](https://code.europa.eu/ebsi/json-schema/-/tree/main/schemas/vcdm1.1/education/verifiable-education-id) | [Registry](https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/zEmFZquJtANNz7XNE46thRi1E2cAfpQiXVLSBdDgLyfGP) |
 | Non-foundational identity   | AllianceID               | Identifies a student or staff member as affiliated with a European university alliance |Available| [Schema](https://code.europa.eu/ebsi/json-schema/-/tree/main/schemas/vcdm1.1/alliance-id)                       | [Registry](https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/zCHc3ZfYg2871W2WftjLu4QNMQrDzG57oG5pvGoyHcagB) |
 | Non-foundational identity   | EuropeanStudentCard | European Student Card for student mobility, based on DG-EAC's service |Available| [Schema](https://code.europa.eu/ebsi/json-schema/-/blob/main/schemas/vcdm1.1/dc4eu/european-student-card/schema.json) | [Registry](https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/0x0e46f9509c52e649d8b461216b66836bd8398b8779469a571404264ea02c3bd9) |
@@ -151,14 +188,14 @@ For further information on EDC-W3C, access:
 
 | Scope | Data model name | Stablished Acronim (type) | Brief explanation | Status/Detailed explanation | Schema URL | Registry URL | Unsigned credential | Signed Credential |
 |-------|----------------|----------------|-------------------|----------------------|------------|--------------|------------|------------|
-| Education | Higher Education European Micro Credentials | EUHEMC | Educational achievement microcredential for | [Higher Education Micro Credential](./formal-education/business/EUHEMC-highereducation-microcredential_business.md) | [LocalSchema](./formal-education/schemes/EUHEMC-EuropeanHigherEducationMicrocredential.json) | [EBSIRegistry](https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/zAEUqPUrQVE7yiesF8xUVHYh4AnqjfHFxCv6GhZ3uvjkW) | [HEEUMC unsigned](./formal-education/examples/EUHEMC/euhe-microcredential-example-john-doe.md) | [HEEUMC signed](./formal-education/examples/EUHEMC/euhe-microcredential-signed-john-doe.md) |
-| Education | Vocational Educational Training European Micro Credentials | EUVETMC | Educational achievement microcredential for | [Vocational Educational Training Micro Credential](./formal-education/business/EUVETMC-vet-microcredential_business.md) | [LocalSchema](./formal-education/schemes/EUVETMC-EuropeanVocationalEducationTrainingMicrocredential.json) | [EBSIRegistry](https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/zAEUqPUrQVE7yiesF8xUVHYh4AnqjfHFxCv6GhZ3uvjkW) | [VETEUMC unsigned](./formal-education/examples/EUVETMC/euvet-microcredential-example-john-doe.md) | [VETEUMC signed](./formal-education/examples/EUVETMC/euvet-microcredential-signed-john-doe.md) |
-| Education | Higher education proof of enrolment | EUHEPOE| EHigher education proof of enrolment| [Higher Education Proof of Enrolment](./formal-education/business/EUHEPOE-highereducation-proofofenrolment_business.md) | [Local Schema](./formal-education/schemes/EUHEPOE-EuropeanHigherEducationProofOfEnrolment.json) | [Registry](https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/zAEUqPUrQVE7yiesF8xUVHYh4AnqjfHFxCv6GhZ3uvjkW) | [EUHEPOE Unsigned](./formal-education/examples/EUHEPOE/euhepoe-highereducation-proofofenrollment-john-doe.md) | [EUHEPOE Signed](./formal-education/examples/EUHEPOE/euhepoe-highereducation-proofofenrollment-signed-john-doe.md)|
-| Education | Higher education diploma | EUHED| Higher education diploma | [Higher education diploma](./formal-education/business/EUHED-highereducation-diploma_business.md) | [Local Schema](./formal-education/schemes/EUHED-EuropeanHigherEducationDiploma.json) | [Registry](https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/zAEUqPUrQVE7yiesF8xUVHYh4AnqjfHFxCv6GhZ3uvjkW) | [EUHED Unsigned](./formal-education/examples/EUHED/euhed-highereducation-diploma-john-doe.md) | [EUHED Signed](./formal-education/examples/EUHED/euhed-highereducation-diploma-signed-john-doe.md)|
-| Education | Higher education diploma Supplement| EUHEDS| Higher education diploma Supplement | [Higher education diploma Supplement](./formal-education/highereducation-microcredential.md) | [Local Schema](./formal-education/schemes/EUHEDS-EuropeanHigherEducationDiplomaSupplement.json) | [Registry](https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/zAEUqPUrQVE7yiesF8xUVHYh4AnqjfHFxCv6GhZ3uvjkW) | [EUHEDS Unsigned](./formal-education/examples/EUHEDS/euheds-highereducation-diplomasupplement-john-doe.md) | [EUHEDS Signed](./formal-education/examples/EUHEDS/euheds-highereducation-diplomasupplement-signed-john-doe.md)|
-| Education | Higher education transcript of records | EUHETOR| Higher education transcript of records| [Higher education transcript of records](./formal-education/schemes/EUHETOR-highereducation-transcriptofrecords.schema.json) | [Local Schema](./formal-education/schemes/EUHETOR-EuropeanHigherEducationTranscriptOfRecords.json) | [Registry](https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/zAEUqPUrQVE7yiesF8xUVHYh4AnqjfHFxCv6GhZ3uvjkW) | [EUHETOR Unsigned](./formal-education/examples/EUHETOR/euhetor-highereducation-transcriptofrecords-john-doe.md) | [EUHETOR Signed](./formal-education/examples/EUHETOR/euhetor-highereducation-transcriptofrecordst-signed-john-doe.md)|
-| Education | Upper secondary education certificate | EUUSC | Upper secondary education certificate | [Upper secondary education certificates](./formal-education/business/EUUSC-uppersecondary-certificate.md) | [Local Schema](./formal-education/schemes/EUUSC-EuropeanUpperSecondaryEducationCertificate.json) | [Registry](https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/zAEUqPUrQVE7yiesF8xUVHYh4AnqjfHFxCv6GhZ3uvjkW) | [EUUSC Unsigned](./formal-education/examples/UpperSecindaryCertificate/euusc-uppersecondary-certificate-john-doe.json) | [EUUSC Signed](./formal-education/examples/UpperSecindaryCertificate/euusc-uppersecondary-certificate-signed-john-doe.json)|
-| Education | Upper secondary education transcript of records | EUUSTOR | Upper secondary education transcript of records | [Upper secondary education transcript of records](./formal-education/business/EUUSTOR-uppersecondaryeducation-transcriptofrecords_business.md) | [Local Schema](./formal-education/schemes/EUUSTOR-EuropeanUpperSecondaryEducationTranscriptOfRecords.json) | [Registry](https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/zAEUqPUrQVE7yiesF8xUVHYh4AnqjfHFxCv6GhZ3uvjkW) | [EUUSTOR Unsigned](./formal-education/examples/UpperSecondaryTranscriptOfRecords/euustor-uppersecondaryeducation-transcriptofrecords-john-doe.json) | [EUUSTOR Signed](./formal-education/examples/UpperSecondaryTranscriptOfRecords/euustorr-uppersecondarieducation-transcriptofrecordst-signed-john-doe.json)|
+| Education | Higher Education European Micro Credentials | EUHEMC | Educational achievement microcredential for | [Higher Education Micro Credential](./formal-education/business/EUHEMC-highereducation-microcredential_business.md) | [LocalSchema](./formal-education/schemes/EUHEMC-EuropeanHigherEducationMicrocredential.json) | [EBSIRegistry](https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/0x05332a9dc53a4a26a15711262904f2a1dd081cf3da735350f42dac20426530a4) | [HEEUMC unsigned](./formal-education/examples/EUHEMC/euhe-microcredential-example-john-doe.md) | [HEEUMC signed](./formal-education/examples/EUHEMC/euhe-microcredential-signed-john-doe.md) |
+| Education | Vocational Educational Training European Micro Credentials | EUVETMC | Educational achievement microcredential for | [Vocational Educational Training Micro Credential](./formal-education/business/EUVETMC-vet-microcredential_business.md) | [LocalSchema](./formal-education/schemes/EUVETMC-EuropeanVocationalEducationTrainingMicrocredential.json) | [EBSIRegistry](https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/0x690878adbdbc2c6b2865829003a1e34800df5d173d302ff11958836f8f977a26) | [VETEUMC unsigned](./formal-education/examples/EUVETMC/euvet-microcredential-example-john-doe.md) | [VETEUMC signed](./formal-education/examples/EUVETMC/euvet-microcredential-signed-john-doe.md) |
+| Education | Higher education proof of enrolment | EUHEPOE| EHigher education proof of enrolment| [Higher Education Proof of Enrolment](./formal-education/business/EUHEPOE-highereducation-proofofenrolment_business.md) | [Local Schema](./formal-education/schemes/EUHEPOE-EuropeanHigherEducationProofOfEnrolment.json) | [Registry](https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/0x9e7bdbe465fbca504ec04df331c47ef6d88eb258312d3471277e84dabda4a92e) | [EUHEPOE Unsigned](./formal-education/examples/EUHEPOE/euhepoe-highereducation-proofofenrollment-john-doe.md) | [EUHEPOE Signed](./formal-education/examples/EUHEPOE/euhepoe-highereducation-proofofenrollment-signed-john-doe.md)|
+| Education | Higher education diploma | EUHED| Higher education diploma | [Higher education diploma](./formal-education/business/EUHED-highereducation-diploma_business.md) | [Local Schema](./formal-education/schemes/EUHED-EuropeanHigherEducationDiploma.json) | [Registry](https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/0x7663df08b9a50f226e185efb7ec08f3d69f4a95e653ebffd3137b3eb6923dda8) | [EUHED Unsigned](./formal-education/examples/EUHED/euhed-highereducation-diploma-john-doe.md) | [EUHED Signed](./formal-education/examples/EUHED/euhed-highereducation-diploma-signed-john-doe.md)|
+| Education | Higher education diploma Supplement| EUHEDS| Higher education diploma Supplement | [Higher education diploma Supplement](./formal-education/highereducation-microcredential.md) | [Local Schema](./formal-education/schemes/EUHEDS-EuropeanHigherEducationDiplomaSupplement.json) | [Registry](https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/0x597214a686156123e6603272b72638a615d83037d306b16170ff838168dfaf13) | [EUHEDS Unsigned](./formal-education/examples/EUHEDS/euheds-highereducation-diplomasupplement-john-doe.md) | [EUHEDS Signed](./formal-education/examples/EUHEDS/euheds-highereducation-diplomasupplement-signed-john-doe.md)|
+| Education | Higher education transcript of records | EUHETOR| Higher education transcript of records| [Higher education transcript of records](./formal-education/schemes/EUHETOR-highereducation-transcriptofrecords.schema.json) | [Local Schema](./formal-education/schemes/EUHETOR-EuropeanHigherEducationTranscriptOfRecords.json) | [Registry](https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/0x1e4611b4d031fbd282e6cfc241623d3b25f322ed87aee7670f7c1a20a63c14f3) | [EUHETOR Unsigned](./formal-education/examples/EUHETOR/euhetor-highereducation-transcriptofrecords-john-doe.md) | [EUHETOR Signed](./formal-education/examples/EUHETOR/euhetor-highereducation-transcriptofrecordst-signed-john-doe.md)|
+| Education | Upper secondary education certificate | EUUSC | Upper secondary education certificate | [Upper secondary education certificates](./formal-education/business/EUUSC-uppersecondary-certificate.md) | [Local Schema](./formal-education/schemes/EUUSC-EuropeanUpperSecondaryEducationCertificate.json) | [Registry](https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/0x901e24612f601d3f6932b3d20ba50615cfd6d64ce4e8c263312b5c3c3b2f9623) | [EUUSC Unsigned](./formal-education/examples/UpperSecindaryCertificate/euusc-uppersecondary-certificate-john-doe.json) | [EUUSC Signed](./formal-education/examples/UpperSecindaryCertificate/euusc-uppersecondary-certificate-signed-john-doe.json)|
+| Education | Upper secondary education transcript of records | EUUSTOR | Upper secondary education transcript of records | [Upper secondary education transcript of records](./formal-education/business/EUUSTOR-uppersecondaryeducation-transcriptofrecords_business.md) | [Local Schema](./formal-education/schemes/EUUSTOR-EuropeanUpperSecondaryEducationTranscriptOfRecords.json) | [Registry](https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/0xaf79750aade036da40ba02a0b85f671d7232a1ad13df91b72df2ba0891f91aba) | [EUUSTOR Unsigned](./formal-education/examples/UpperSecondaryTranscriptOfRecords/euustor-uppersecondaryeducation-transcriptofrecords-john-doe.json) | [EUUSTOR Signed](./formal-education/examples/UpperSecondaryTranscriptOfRecords/euustorr-uppersecondarieducation-transcriptofrecordst-signed-john-doe.json)|
 | Professional qualifications | Certificate of Professional Suitability | CPS | Professional achievement credential for| Certificate of Professional Suitability | [LocalSchema](./formal-education/schemes/ProfessionalSuitabilityCredential.json) | [Registry](https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/0x2d5971743a402de5ba00aad9697200153cbac29ccb5b1852e704cd541213f994) | Unsigned | Signed|
 | Professional qualifications | Accreditatio Medical Training | AMT | Professional achievement credential for| Accreditation Medical Training| [LocalSchema](./formal-education/schemes/ProfessionalTrainingCredential.json) | [Registry](https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/0xa92c40f0684db3bbcf2bb2600579dfaf7785a421515394c79eb9de41debf17a7) | Unsigned | Signed|
 | Professional qualifications | Continous Professional Development | CPD | Professional achievement credential for| Continous Professional Development| [Schema](https://code.europa.eu/ebsi/json-schema/-/tree/main/schemas/vcdm1.1/dc4eu/continuous-professional-development) | [Registry](https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/z3RwKaN1kZciYkRpkqjwTW6whKV4WefiYx6wviWR7gzow) | Unsigned | Signed|
