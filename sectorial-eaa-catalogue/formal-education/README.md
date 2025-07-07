@@ -43,9 +43,9 @@ Degree certificates provide formal recognition of educational achievements. Our 
 - Institutional certificates
 
 EAA's defined
-- [Higher Education Proof of Enrolment](./highereducation-proofofenrolment.md)
+- [Higher Education Proof of Enrolment](./business/EUHEPOE-highereducation-proofofenrolment_business.md)
 
-For detailed schema information, see [Degree Certificate Schema](./degree-certificate-schema.md).
+For detailed schema information, see [Degree Certificate Schema](./schemes/EUHEPOE-EuropeanHigherEducationProofOfEnrolment.json).
 
 ### Transcripts of Records
 
@@ -58,9 +58,9 @@ Transcripts document the courses taken and results achieved during an educationa
 - Programme progression
 
 EAA's defined
-- [Higher Education Transcript of Records](./highereducation-transcriptofrecords.md)
+- [Higher Education Transcript of Records](./business/EUHETOR-highereducation-transcriptofrecords_business.md)
   
-For detailed schema information, see [Transcript Schema](./transcript-schema.md).
+For detailed schema information, see [Transcript Schema](./schemes/EUHETOR-EuropeanHigherEducationTranscriptOfRecords.json).
 
 ### Microcredentials in Higher Education
 
@@ -73,9 +73,9 @@ Microcredentials attest to the achievement of specific learning outcomes followi
 - Quality-assured short credentials
 
 EAA's defined
-- [Higher Education Microcredential ](./highereducation-microcredential.md)
+- [Higher Education Microcredential ](./business/EUHEMC-highereducation-microcredential_business.md)
 
-For detailed schema information, see [Microcredential HE Schema](./microcredential-he.md).
+For detailed schema information, see [Microcredential HE Schema](./schemes/EUHEMC-EuropeanHigherEducationMicrocredential.json).
 
 ### Educational Identifiers
 
@@ -88,7 +88,7 @@ Educational identifiers provide verifiable proof of student status. Our schemas 
 - Access rights
 
 EAA's defined
-For detailed schema information, see [Educational ID Schema](./educational-id-schema.md).
+For detailed schema information, see [Educational ID Schema](../non-foundational-id/educational-id-schema.md).
 
 ### Course Certificates
 
@@ -101,21 +101,10 @@ Course certificates document completion of specific educational components. Our 
 - Specialised training
 
 EAA's defined
-- [Upper Secondary Education Transcript of Records](./uppersecondaryeducation-transcriptofrecords.md)
+- [Upper Secondary Education Transcript of Records](./business/EUUSTOR-uppersecondaryeducation-transcriptofrecords_business.md)
 
-For detailed schema information, see [Course Certificate Schema](./course-certificate-schema.md).
+For detailed schema information, see [Course Certificate Schema](./schemes/EUUSTOR-EuropeanUpperSecondaryEducationTranscriptOfRecords.json).
 
-### Learning Agreements
-
-Learning agreements document planned study programmes, particularly for mobility periods. Our schemas support:
-
-- Exchange programme agreements
-- Transfer credit arrangements
-- Mobility learning plans
-- Institutional recognition agreements
-- Study programme approvals
-
-For detailed schema information, see [Learning Agreement Schema](./learning-agreement-schema.md).
 
 ## Implementation and Integration
 
