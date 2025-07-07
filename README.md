@@ -12,7 +12,7 @@ This repository is organised into several key sections:
 
 - **[eIDAS roles](./docs/eIDAS-roles.md)**: Outlines the key roles within the European digital identity framework under eIDAS, detailing their definitions, functions, types of attestations issued, regulatory references, and compliance requirements.
   
-- [Trust models](./sectorial-rulebook/trust-models.md): Outlines trust models accepted for **Education and Professional qualifcations** (Classical PKI & Decentralised PKI using EBSI). 
+- **[Trust models](./sectorial-rulebook/trust-models.md)**: Outlines trust models accepted for **Education and Professional qualifcations** (Classical PKI & Decentralised PKI using EBSI). 
 
 - **[Governance in Education and Professional Qualifications](./governances)**: Understanding existing governance(s)
 
@@ -24,6 +24,8 @@ This repository is organised into several key sections:
 
 - **[Sectorial rulebook](./sectorial-rulebook/)**: The core framework that establishes standardised approaches for managing digital educational and professional credentials within the European Union.
 
+- The **[BBP](./OfficialDeliverables/BBP/v2.0/DC4EU_D5.1_WP5_Business%20Blueprint_v.2.0.pdf)**: The Business Blueprint for education and professionalqualifications.
+- 
 - **[Sectorial EAA catalogue](./sectorial-eaa-catalogue/)**: Contains all data models and schemas agreed at sectorial level for Education and Professional Qualifications, including formal education, quality assurance regimes, and non-foundational ID.
 
 - **[EAA Characterisation](./sectorial-eaa-catalogue/EAA_Characterisation.md)**: Characterisation of an Electronic Attestation of Attributes (EAA).
