@@ -95,6 +95,7 @@ EAA's defined
 - [Engineer ID](../non-foundational-id/engineerID-schema.md)
 - [Doctor ID](../non-foundational-id/doctor-id-schema.md)
 - [Professional ID](../non-foundational-id/professionalID-schema.md)
+
 ### Course Certificates
 
 Course certificates document completion of specific educational components. Our schemas support:
