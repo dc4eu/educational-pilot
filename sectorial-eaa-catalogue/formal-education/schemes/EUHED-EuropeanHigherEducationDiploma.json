@@ -1,11 +1,11 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "European Upper Secondary Education Transcript of Records",
-  "description": "Profile schema extending the base EDC-W3C-VC to define transcript credentials for upper secondary education.",
+  "title": "European Higher Education Diploma",
+  "description": "Profile schema extending the base EDC-W3C-VC to define higher education diplomas issued by recognised institutions in Europe.",
   "type": "object",
   "allOf": [
     {
-      "$ref": "./node_modules/@cef-ebsi/vcdm1.1-europass-edc-schema/schema.json"
+      "$ref": "https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/0xe9d256a96313a24d5884d56f0835047febc0ebf46fbdd20c906f49057a1e0f02"
     },
     {
       "type": "object",
@@ -19,7 +19,7 @@
             "VerifiableCredential",
             "VerifiableAttestation",
             "EuropeanDigitalCredential",
-            "EuropeanUpperSecondaryEducationTranscriptOfRecords"
+            "EuropeanHigherEducationDiploma"
           ]
         },
         "credentialSubject": {
@@ -40,70 +40,85 @@
                 "type": "object",
                 "required": [
                   "type",
+                  "title",
                   "awardedBy",
-                  "wasDerivedFrom"
+                  "specifiedBy"
                 ],
                 "properties": {
                   "type": {
                     "type": "string",
                     "const": "LearningAchievement"
                   },
+                  "title": {
+                    "type": "object"
+                  },
                   "awardedBy": {
                     "type": "object",
                     "required": [
                       "awardingBody",
+                      "awardingDate",
                       "location"
                     ],
                     "properties": {
                       "awardingBody": {
                         "type": "object"
                       },
+                      "awardingDate": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
                       "location": {
                         "type": "object"
                       }
                     }
                   },
-                  "wasDerivedFrom": {
+                  "specifiedBy": {
+                    "type": "object",
+                    "required": [
+                      "eqfLevel",
+                      "educationSubject"
+                    ],
+                    "properties": {
+                      "eqfLevel": {
+                        "type": "object",
+                        "required": [
+                          "notation"
+                        ],
+                        "properties": {
+                          "notation": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "educationSubject": {
+                        "type": "array",
+                        "minItems": 1
+                      },
+                      "additionalNote": {
+                        "type": "array"
+                      }
+                    }
+                  },
+                  "entitlesTo": {
                     "type": "array",
                     "items": {
                       "type": "object",
                       "required": [
                         "title",
-                        "grade",
-                        "temporal"
+                        "awardedBy"
                       ],
                       "properties": {
                         "title": {
                           "type": "object"
                         },
-                        "creditPoint": {
-                          "type": "array"
-                        },
-                        "grade": {
-                          "type": "object"
-                        },
-                        "temporal": {
+                        "awardedBy": {
                           "type": "object",
                           "required": [
-                            "startDate",
-                            "endDate"
-                          ],
-                          "properties": {
-                            "startDate": {
-                              "type": "string",
-                              "format": "date"
-                            },
-                            "endDate": {
-                              "type": "string",
-                              "format": "date"
-                            }
-                          }
+                            "awardingBody"
+                          ]
                         }
                       }
                     }
-                  },
-                  "gradingScheme": {
-                    "type": "object"
                   }
                 }
               }
@@ -116,7 +131,7 @@
         "credentialProfiles": {
           "type": "array",
           "items": {
-            "type": "string"
+            "type": "object"
           }
         }
       }
