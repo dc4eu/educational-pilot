@@ -26,12 +26,12 @@ Diploma credentials represent the formal completion of an educational programme 
 - Vocational qualifications
 
 EAA's defined
-- [Higher Education Diploma](./highereducation-diploma.md)
-- [Higher Education Diploma Supplement](./highereducation-diplomasupplement.md) 
-- [Higher Edcuation Master Degree](highereducation-master.md)
-- [Higher Edcuation Transcript of Records](./highereducation-trasncrioofrecords.md)
+- [Higher Education Diploma](./business/EUHED-highereducation-diploma_business.md)
+- [Higher Education Diploma Supplement](./business/EUHEDS-highereducation-diplomasupplement_business.md) 
+- [Higher Edcuation Master Degree](./business/EUHED-highereducation-diploma_business.md)
+- [Higher Edcuation Transcript of Records](./business/EUHETOR-highereducation-transcriptofrecords_business.md)
 
-For detailed schema information, see [Diploma Schema](./diploma-schema.md).
+For detailed schema information, see [Diploma Schema](./schemes/EUHED-EuropeanHigherEducationDiploma.json).
 
 ### Degree Certificates
 
