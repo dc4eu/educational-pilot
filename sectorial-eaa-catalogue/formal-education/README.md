@@ -31,7 +31,7 @@ EAA's defined
 - [Higher Edcuation Master Degree](./business/EUHED-highereducation-diploma_business.md)
 - [Higher Edcuation Transcript of Records](./business/EUHETOR-highereducation-transcriptofrecords_business.md)
 
-For detailed schema information, see [Diploma Schema](./schemes/EUHED-EuropeanHigherEducationDiploma.json).
+For detailed schema information, see [Diploma Schema](./schemes/EUHED-EuropeanHigherEducationDiploma.json) covering Bachelor, Master.
 
 ### Degree Certificates
 
