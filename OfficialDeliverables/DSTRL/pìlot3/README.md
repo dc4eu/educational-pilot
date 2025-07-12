@@ -10,6 +10,18 @@ The three participating institutions—University of Twente, Saxion University o
 
 Pilot3 represents a **combined approach** where each institution implements both trust models, requiring **six total scenario files** (two per institution) to capture the complete technical and operational landscape:
 
+This analysis covers the following six Pilot3 scenarios from educational institutions implementing dual trust frameworks:
+
+### Classical PKI Scenarios
+- **[University of Twente - Classical PKI](utwente_pilot3_classical_pki_scenario.md)** - Technical Education Credential Issuance with SUNET/SURF SaaS (Classical PKI)
+- **[Saxion University of Applied Sciences - Classical PKI](saxion_pilot3_classical_pki_scenario.md)** - Applied Sciences Credential Issuance with SUNET/SURF SaaS (Classical PKI)
+- **[COFAC - Lusófona University - Classical PKI](ulusofona_pilot3_classical_pki_scenario.md)** - Private University Credential Issuance with SUNET/SURF SaaS (Classical PKI)
+
+### Decentralised PKI Scenarios
+- **[University of Twente - dPKI](utwente_pilot3_dpki_scenario.md)** - Technical Education Credential Issuance with Decentralised PKI Trust Framework
+- **[Saxion University of Applied Sciences - dPKI](saxion_pilot3_dpki_scenario.md)** - Applied Sciences Credential Issuance with Decentralised PKI Trust Framework
+- **[COFAC - Lusófona University - dPKI](ulusofona_pilot3_dpki_scenario.md)** - Private University Credential Issuance with Decentralised PKI Trust Framework
+
 ### Netherlands (2 institutions - 4 scenarios)
 
 **University of Twente (UTWENTE)**
