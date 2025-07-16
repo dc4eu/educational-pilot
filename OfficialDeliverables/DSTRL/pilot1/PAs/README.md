@@ -32,11 +32,11 @@ This standardisation demonstrates effective coordination by SURF/SUNET but also 
 |-------------|------------------|-------------------|-------------------|
 | OPH (Finland) | 22 | 22 educational credentials | 10 successfully verified |
 | AUAS (Netherlands) | 53 | 224 | 114 Integrity checks only |
-| DTU (Denmark) | 25 | 50 (25 EducationalID + 25 Diplomas) | Integrity checks only |
+| DTU (Denmark) | 0 | 0 | Integrity checks only |
 | Ladok (Sweden) | 50 | 125 | 125 Integrity checks only |
 | Sikt (Norway) | 0 | 0 | Integrity checks only |
 
-**Total Impact**: 125 users, 272 credentials issued, demonstrating significant pilot scale.
+**Total Impact**: 150 users, 371 credentials issued, demonstrating significant pilot scale.
 
 ## Critical Technical Limitations
 
