@@ -30,8 +30,8 @@ This standardisation demonstrates effective coordination by SURF/SUNET but also 
 
 | Institution | Users Onboarded | Credentials Issued | Verification Scope |
 |-------------|------------------|-------------------|-------------------|
-| OPH (Finland) | 25 | 22 educational credentials | 10 successfully verified |
-| AUAS (Netherlands) | 25 | 50 (25 EducationalID + 25 Diplomas) | Integrity checks only |
+| OPH (Finland) | 22 | 22 educational credentials | 10 successfully verified |
+| AUAS (Netherlands) | 50 | 224 | 114 Integrity checks only |
 | DTU (Denmark) | 25 | 50 (25 EducationalID + 25 Diplomas) | Integrity checks only |
 | Ladok (Sweden) | 25 | 50 (25 EducationalID + 25 Diplomas) | Integrity checks only |
 | Sikt (Norway) | 25 | 50 (25 EducationalID + 25 Diplomas) | Integrity checks only |
