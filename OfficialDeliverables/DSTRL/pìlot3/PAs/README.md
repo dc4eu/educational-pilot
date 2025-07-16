@@ -117,9 +117,9 @@ All institutions successfully completed identical user journeys across both trus
 | Institution | Classical PKI Credentials | dPKI Credentials | Total Impact |
 |-------------|---------------------------|------------------|--------------|
 | UTWENTE | 50 (25 users × 2 types) | 50 (25 users × 2 types) | 100 |
-| SAXION | 50 (25 users × 2 types) | 50 (25 users × 2 types) | 100 |
+| SAXION | 60 (30 users × 2 types) | 60 (30 users × 2 types) | 120 |
 | ULUSOFONA | 50 (25 users × 2 types) | 50 (25 users × 2 types) | 100 |
-| **Total** | **150 credentials** | **150 credentials** | **300 credentials** |
+| **Total** | **160 credentials** | **160 credentials** | **320 credentials** |
 
 **Pilot3 Total Impact**: 75 users, 300 credentials across dual trust frameworks
 
