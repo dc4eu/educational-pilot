@@ -82,11 +82,11 @@
 
 - **Scenario status**: Completed
 - **Number of users onboarded**:\
-  25 students
+  53 students
 - **Credentials issued**:\
-  25 EducationalIDs and 25 Diplomas
+  224 educational credentials
 - **Credentials verified**:\
-  Integrity checks only
+  114 Integrity checks only
 - **Successes**:
   - Smooth issuance process
 - **Issues encountered**:
