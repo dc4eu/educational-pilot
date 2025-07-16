@@ -89,7 +89,7 @@
 
 - **Scenario status**: Completed
 - **Testing period**: 20 May – 15 June 2025
-- **Users onboarded**: 25 test users
+- **Users onboarded**: 22 test users
 - **Credentials issued**: 22 educational credentials
 - **Credentials verified**: 10 successfully verified with DVV and DC4EU verifiers
 - **Successes**:
