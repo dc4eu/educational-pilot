@@ -75,8 +75,8 @@
 ## 5. Implementation and Testing Progress
 
 - **Scenario status**: Completed
-- **Number of users onboarded**: 25 engineering students and technical programme participants
-- **Credentials issued**: 25 EducationalID credentials and 25 Technical Education Diplomas (SD-JWT format)
+- **Number of users onboarded**: 60 engineering students and technical programme participants
+- **Credentials issued**: 172 Educational credentials (SD-JWT format)
 - **Credentials verified**: Verification limited to local integrity checks (no full trust chain validation due to Classical PKI infrastructure limitations)
 - **Successes**:
   - Successful wwWallet installation and technical credential issuance

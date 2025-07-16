@@ -75,8 +75,8 @@
 ## 5. Implementation and Testing Progress
 
 - **Scenario status**: Completed
-- **Number of users onboarded**: 25 applied sciences students and professional programme participants
-- **Credentials issued**: 25 EducationalID credentials and 25 Applied Sciences Diplomas (SD-JWT format)
+- **Number of users onboarded**: 30 applied sciences students and professional programme participants
+- **Credentials issued**: 120 Educational credentials (SD-JWT format)
 - **Credentials verified**: Verification limited to local integrity checks (no full trust chain validation due to Classical PKI infrastructure limitations)
 - **Successes**:
   - Successful wwWallet installation and applied sciences credential issuance
