@@ -141,7 +141,7 @@ Complete signing process using pure dPKI with EBSI, JAdES D-Zero profile impleme
 Step-by-step verification with practical code examples, tools, and troubleshooting
 
 #### Hybrid X.509-DID Implementation
-[**🔗 X.509-DID Binding Guide for Credential Issuers**](./x509-did-binding-guide.md)  
+[**X.509-DID Binding Guide for Credential Issuers**](./x509-did-binding-guide.md)  
 Advanced hybrid approach combining traditional PKI with DID binding, EBSI integration workflows
 
 ---
