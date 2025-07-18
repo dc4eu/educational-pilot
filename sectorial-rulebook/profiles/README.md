@@ -306,8 +306,8 @@ The matrix reveals a fundamental insight: **the choice between Pilot1 and Pilot2
 
 Organizations should select their pilot based on **primary EAA scenario requirements**:
 
-- **Traditional regulated institutions** (ministries, QTSPs, established universities) → **Pilot1** for PubEAA/QEAA
-- **Emerging credential ecosystem** (non-qualified providers, innovative institutions) → **Pilot2** for comprehensive scenario coverage
+- **Traditional regulated institutions** (ministries, QTSPs) → **Pilot1** for PubEAA/QEAA
+- **Emerging credential ecosystem** (non-qualified providers, innovative institutions, , established universities) → **Pilot2** for comprehensive scenario coverage
 - **Comprehensive digital identity strategy** → **Pilot2** for future-proof foundation with mature standards
 
 The critical insight is that Pilot2's apparent complexity is offset by its mature standards foundation and comprehensive scenario coverage, making it the more strategic choice for organizations planning long-term digital credential ecosystems.
