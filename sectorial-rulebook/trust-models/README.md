@@ -43,8 +43,8 @@ This framework comprises two complementary Public Key Infrastructure (PKI) model
 ## Trust Flow Process
 
 ### 1. **Issuer Registration and Setup**
-- Legal entities register with EBSI and obtain X.509v3 certificates
-- Bind certificates to Decentralised Identifiers (DIDs) for enhanced trust
+- Legal entities register with EBSI and also obtain X.509v3 certificates
+- Bind X.509v3 certificates to Decentralised Identifiers (DIDs) for enhanced trust
 - Register as authorised credential issuers in EBSI registries
 
 ### 2. **Relying Party Registration**
@@ -86,7 +86,7 @@ This framework specifically addresses **DC4EU Scenario 2**:
 - Non-qualified Trust Service Providers (TSPs)
 - Public sector bodies as authentic data sources
 - Enhanced trust through EBSI verification
-- Example: Universidad Carlos III de Madrid issuing academic credentials
+- Example: Universitat Rovira i Virgili issuing academic credentials
 
 ## Benefits
 
