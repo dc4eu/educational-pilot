@@ -1,20 +1,16 @@
 # DC4EU Digital Trust Framework - Overview
 
-**Version**: 1.0  
-**Date**: July 2025  
-**Project**: Digital Credentials for Europe (DC4EU)
-
 ## Introduction
 
 The **Digital Credentials for Europe (DC4EU)** project establishes a comprehensive digital trust framework that enables secure issuance, presentation, and verification of Electronic Attestations of Attributes (EAAs) within the European Digital Identity Wallet (EUDIW) ecosystem.
 
 ## Trust Models Foundation
 
-### 🏛️ **Regulatory and Trust Framework Context**
+### **Regulatory and Trust Framework Context**
 [**Trust Models for Education and Professional Qualifications**](./trust-models-education.md)  
 **Essential background**: Understanding classical PKI limitations and the complementary dPKI model under eIDAS2
 
-> **📖 Recommended Reading Order**: Start with Trust Models foundation to understand the regulatory context and why both classical PKI and dPKI are needed, then proceed to implementation guidance below.
+> **Recommended Reading Order**: Start with Trust Models foundation to understand the regulatory context and why both classical PKI and dPKI are needed, then proceed to implementation guidance below.
 
 This framework comprises two complementary Public Key Infrastructure (PKI) models that work together to create an end-to-end trust architecture, addressing both **identity verification** (classical PKI) and **authorisation validation** (dPKI) as outlined in the Trust Models foundation document:
 
@@ -129,19 +125,19 @@ For organisations requiring integration between traditional PKI infrastructure a
 
 ## Implementation Guidance
 
-### 📋 **For All Relying Parties**
+### **For All Relying Parties**
 [**Wallet Relying Party PKI Guidelines**](./wallet-relying-party-pki.md)  
 Comprehensive guide for credential verification, WRPAC/WRPRC implementation, and entitlements framework
 
 ---
 
-### 🏛️ **For Credential Issuers - Choose Your Approach**
+### **For Credential Issuers - Choose Your Approach**
 
 #### Pure dPKI Implementation
-[**📝 EUHEMC JAdES D-Zero Signature Guide**](./issaunce_detailed.md)  
+[**EUHEMC JAdES D-Zero Signature Guide**](./issaunce_detailed.md)  
 Complete signing process using pure dPKI with EBSI, JAdES D-Zero profile implementation
 
-[**🔍 EUHEMC JAdES D-Zero Verification Guide**](./verification-details.md)  
+[**EUHEMC JAdES D-Zero Verification Guide**](./verification-details.md)  
 Step-by-step verification with practical code examples, tools, and troubleshooting
 
 #### Hybrid X.509-DID Implementation
@@ -150,15 +146,15 @@ Advanced hybrid approach combining traditional PKI with DID binding, EBSI integr
 
 ---
 
-### ⚖️ **Architecture Decision Support**
+### **Architecture Decision Support**
 
-[**📊 Hybrid PKI Impact Analysis: X.509-DID vs Pure dPKI**](./hybrid-pki-impact-analysis.md)  
+[**Hybrid PKI Impact Analysis: X.509-DID vs Pure dPKI**](./hybrid-pki-impact-analysis.md)  
 **Essential reading before implementation**: Comprehensive comparison, performance impact analysis, migration strategies, and technical trade-offs
 
-[**🔄 Hybrid vs Pure dPKI: Key Differences and Impact**](./hybrid-vs-pure-dpki-differences.md)  
+[**Hybrid vs Pure dPKI: Key Differences and Impact**](./hybrid-vs-pure-dpki-differences.md)  
 **Focused technical comparison**: Direct side-by-side analysis of implementation differences, code examples, and performance implications
 
-> **💡 Implementation Recommendation**: Start with the Impact Analysis document to understand the technical and business implications of each approach, then review the Key Differences guide for specific implementation details, and finally follow the specific implementation guide for your chosen model.
+> **Implementation Recommendation**: Start with the Impact Analysis document to understand the technical and business implications of each approach, then review the Key Differences guide for specific implementation details, and finally follow the specific implementation guide for your chosen model.
 
 ## Support and Resources
 
