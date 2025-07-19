@@ -2,7 +2,7 @@
 
 ## Executive Summary
 
-This supplementary document provides an enhanced analysis of the T1.6.4 report "Potential application of the EUDI Wallet on EWP Services, Including Online Learning Agreement (OLA) and Erasmus+ App" in light of the final eIDAS2 Regulation (EU) 2024/1183. Rather than directly modifying the authors' original work, this document preserves their contributions whilst providing updated content that reflects the significant regulatory developments since the report's completion.
+This supplementary document provides an enhanced analysis of the T1.6.4 report ["Potential application of the EUDI Wallet on EWP Services, Including Online Learning Agreement (OLA) and Erasmus+ App"](./DC4EU_Final%20report.pdf) in light of the final eIDAS2 Regulation (EU) 2024/1183. Rather than directly modifying the authors' original work, this document preserves their contributions whilst providing updated content that reflects the significant regulatory developments since the report's completion.
 
 ## Motivation for This Supplementary Approach
 
