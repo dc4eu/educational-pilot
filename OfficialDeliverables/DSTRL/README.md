@@ -1,27 +1,27 @@
-# Digital Student Records and Transcript Ledger (DSTRL)
+# Deployment and Testing Scenarios Results Library (DTSRL)
 
-**Deployment and Testing Scenarios Results Library**
+**Digital Credentials for Europe - Implementation Repository**
 
-The Digital Student Records and Transcript Ledger (DSTRL) represents a comprehensive framework for implementing digital educational credentials across European institutions. As a core component of the DC4EU (Digital Credentials for Europe) Large Scale Pilot under the eIDAS 2.0 framework, the DSTRL serves as the authoritative repository for digital credential deployment scenarios, technical specifications, and implementation guidance for European educational and professional qualification systems.
+The DTSRL is a comprehensive repository that documents real-world implementation scenarios for digital credentials in the European educational and professional qualifications ecosystem. As part of the DC4EU (Digital Credentials for Europe) Large Scale Pilot under the eIDAS 2.0 framework, the DTSRL serves as the central knowledge base for piloting agents implementing verifiable digital credentials across European institutions.
 
 ## Project Overview
 
 ### DC4EU Context
-The DC4EU project is a multinational consortium of 80 organisations from 22 countries, led by the Spanish Ministry of Economic Affairs and Digital Transformation. The project's primary objective is to develop and demonstrate large-scale piloting for the EUDI (European Union Digital Identity) reference wallet, with particular focus on educational credentials and social security services within the European Union's digital identity ecosystem.
+The DC4EU project is a multinational consortium of 102 partners from 23 countries, led by the Spanish Ministry of Economic Affairs and Digital Transformation. The project's primary objective is to develop and demonstrate large-scale piloting for the EUDI (European Union Digital Identity) reference wallet, with particular focus on educational credentials and social security services within the European Union's digital identity ecosystem.
 
-### DSTRL Mission
-The DSTRL serves as the central knowledge repository and implementation framework for European digital educational credentials, providing:
+### DTSRL Mission
+The DTSRL serves as the central knowledge base for piloting agents, providing documented real-world implementation scenarios that demonstrate how educational and professional institutions across Europe successfully implement verifiable digital credential systems. It offers practical guidance through tested deployment patterns and proven implementation scenarios for the EUDI Wallet ecosystem, including:
 
-- **Validated Implementation Patterns**: Proven deployment scenarios across diverse institutional contexts
-- **Technical Architecture Guidance**: Comprehensive specifications for digital credential systems
-- **User Journey Documentation**: Detailed workflows for credential issuance, storage, and verification
-- **Regulatory Compliance Framework**: Alignment with eIDAS 2.0 and European education standards
-- **Cross-Border Interoperability**: Mechanisms for credential recognition across Member States
+- **Tested Implementation Patterns**: Real-world deployment scenarios across diverse educational and professional qualification contexts
+- **Technical Architecture Guidance**: Documented specifications and configurations from successful implementations
+- **User Journey Documentation**: Validated workflows for credential issuance, storage, and verification from piloting agents
+- **Regulatory Compliance Framework**: Proven approaches for eIDAS 2.0 alignment and European education standards
+- **Cross-Border Interoperability**: Documented mechanisms for credential recognition across Member States from actual deployments
 
 ## Strategic Objectives
 
 ### European Digital Education Transformation
-The DSTRL advances key European Union strategic objectives:
+The DTSRL advances key European Union strategic objectives by documenting and sharing successful implementation patterns:
 
 **European Education Area (EHEA) Digitalisation**
 - Seamless student mobility across European higher education institutions
@@ -44,24 +44,24 @@ The DSTRL advances key European Union strategic objectives:
 ## Technical Architecture Framework
 
 ### Multi-Trust Model Approach
-The DSTRL implements a comprehensive approach to digital trust through three distinct pilot implementations:
+The DTSRL documents implementation scenarios and results from piloting agents across three distinct deployment frameworks, providing tested scenarios and lessons learned from real implementations:
 
 #### **Pilot1: Classical PKI with SD-JWT**
 - **Trust Model**: Traditional Public Key Infrastructure
 - **Credential Format**: Selective Disclosure JSON Web Tokens (SD-JWT)
-- **Target Audience**: Institutions with existing PKI investments
+- **Target Audience**: Piloting agents and institutions with existing PKI investments
 - **Implementation Focus**: Short-term compatibility and proven security
 
 #### **Pilot2: Hybrid Trust with W3C Verifiable Credentials**
 - **Trust Model**: Combined Classical PKI + Decentralised PKI
 - **Credential Format**: W3C Verifiable Credentials with EBSI anchoring
-- **Target Audience**: Forward-looking institutions preparing for eIDAS 2.0
+- **Target Audience**: Forward-looking piloting agents preparing for eIDAS 2.0
 - **Implementation Focus**: Long-term interoperability and regulatory alignment
 
 #### **Pilot3: Combined Implementation**
 - **Trust Model**: Simultaneous operation of both Classical and Decentralised PKI
 - **Credential Format**: Both SD-JWT and W3C VC support
-- **Target Audience**: Institutions requiring maximum flexibility and future-proofing
+- **Target Audience**: Piloting agents requiring maximum flexibility and future-proofing
 - **Implementation Focus**: Comprehensive coverage and user choice
 
 ### Core Technology Standards
@@ -75,7 +75,7 @@ The DSTRL implements a comprehensive approach to digital trust through three dis
 ## Repository Structure
 
 ### `/elements` - Core Technical Components
-The elements directory contains the foundational building blocks of the DSTRL ecosystem:
+The elements directory contains the foundational building blocks documented through DTSRL scenarios:
 
 **`/documents`** - Technical Specifications and Implementation Guides
 - **EDCL (European Digital Credentials Library)**: Comprehensive credential management system
@@ -87,22 +87,22 @@ The elements directory contains the foundational building blocks of the DSTRL ec
 - Semantic mapping tools for credential data transformation
 - Quality assurance and validation mechanisms for credential formats
 
-### `/pilot1` - Classical PKI Implementation
-Documentation and resources for traditional PKI-based credential systems:
+### `/pilot1` - Classical PKI Implementation Scenarios
+Documentation and tested scenarios for traditional PKI-based credential systems:
 - Infrastructure setup and configuration guidance
 - User journey workflows for PKI-based credential operations
 - Pilot agent implementation reports and case studies
 - SD-JWT credential format specifications and examples
 
-### `/pilot2` - Hybrid Trust Implementation
-Resources for next-generation decentralised credential systems:
+### `/pilot2` - Hybrid Trust Implementation Scenarios
+Documented scenarios and results for next-generation decentralised credential systems:
 - DID (Decentralised Identifier) implementation procedures
 - EBSI integration and blockchain anchoring processes
 - W3C Verifiable Credentials technical specifications
 - Cross-border verification and trust discovery mechanisms
 
-### `/pilot3` - Combined Implementation
-Documentation for dual trust model deployments:
+### `/pilot3` - Combined Implementation Scenarios
+Documented scenarios and analysis for dual trust model deployments:
 - Unified infrastructure management across both trust models
 - User experience design for multi-trust environments
 - Comparative analysis and implementation insights
@@ -111,7 +111,7 @@ Documentation for dual trust model deployments:
 ## Implementation Scope and Impact
 
 ### Geographic Coverage
-**European-Wide Implementation Across 22 Countries**
+**European-Wide Implementation Across 23 Countries**
 - **Nordic Region**: Finland, Sweden, Norway, Denmark
 - **Western Europe**: Netherlands, Germany, Belgium
 - **Southern Europe**: Spain, Portugal, Italy, Greece
@@ -128,7 +128,7 @@ Documentation for dual trust model deployments:
 
 ### Deployment Statistics
 **Comprehensive Large-Scale Pilot Metrics**
-- **Participating Organisations**: 80+ institutions across 22 countries
+- **Participating Partners**: 102+ partners across 23 countries
 - **Deployed Credentials**: Thousands of educational and professional credentials
 - **User Base**: Students, graduates, professionals, and administrative staff
 - **Cross-Border Transactions**: International credential verification and recognition
@@ -300,4 +300,4 @@ Documentation for dual trust model deployments:
 
 ---
 
-*The Digital Student Records and Transcript Ledger represents the future of European educational credentials, providing a comprehensive, secure, and interoperable foundation for digital qualification recognition across the European Union and beyond. Through proven implementation patterns, robust technical architecture, and comprehensive support resources, the DSTRL enables educational institutions to participate confidently in Europe's digital transformation whilst maintaining the highest standards of security, privacy, and user experience.*
+*The Deployment and Testing Scenarios Results Library represents the collective knowledge and experience of European digital credential implementation, providing a comprehensive, tested, and validated foundation for digital qualification systems across the European Union and beyond. Through documented implementation scenarios, proven technical patterns, and comprehensive analysis of real-world deployments, the DTSRL enables educational institutions to implement digital credentials confidently whilst leveraging the experiences and lessons learned from successful piloting agents across Europe.*
