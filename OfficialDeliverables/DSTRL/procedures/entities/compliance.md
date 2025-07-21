@@ -112,6 +112,15 @@ The status tracker provides essential compliance oversight including:
 - **Withdrawal Mechanisms**: Simple procedures for consent withdrawal and credential deactivation
 - **Audit Trails**: Comprehensive logging of data processing activities for accountability
 
+#### Validation Script Compliance Assessment
+**GRNet Validation Methodology**: Technical validation framework for centralised solutions
+- **Script-based Validation**: Automated compliance verification using open-source validation scripts
+- **Interoperability Testing**: Profile conformance validation for DC4EU technical specifications
+- **Coverage Assessment**: Comprehensive validation for Pilot 2 and Pilot 3-dPKI implementations
+- **Quality Assurance**: Systematic technical flow validation and interaction testing
+
+*Reference: [DC4EU Technical Validation Methodology](../validation/validation-methodology.md)*
+
 ## Entity Designation and Registration Framework
 
 ### Trust Service Provider Categorisation
