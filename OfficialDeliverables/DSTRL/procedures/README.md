@@ -55,6 +55,15 @@ A comprehensive sub-directory containing five core documents that define the ope
   - Operational relationship patterns and lifecycle management
   - Quality assurance metrics and issue resolution procedures
 
+**[`validation/validation-methodology.md`](./validation/validation-methodology.md)**
+- **Purpose:** Technical validation methodology for centralised solutions
+- **Focus:** GRNet-developed validation scripts for Pilot 2 and Pilot 3-dPKI compliance
+- **Key Sections:**
+  - ATOS/IZERTIS solution validation framework
+  - Interoperability compliance verification scripts
+  - Profile conformance testing procedures
+  - Open-source validation scripts release (EUPLv2)
+
 ## Key Concepts and Principles
 
 ### Legal Entity Ecosystem Approach
