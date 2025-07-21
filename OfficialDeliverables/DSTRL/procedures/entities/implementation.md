@@ -239,6 +239,14 @@ graph TD
 - **Usability assessment** and improvement
 - **Training effectiveness** evaluation
 
+#### Validation Script Integration
+- **GRNet Validation Framework**: Integration of standardised validation scripts for compliance verification
+- **Automated Testing**: Profile conformance validation using open-source testing suite
+- **Interoperability Assurance**: Cross-system compatibility verification through standardised test scenarios
+- **Continuous Validation**: Ongoing compliance monitoring using validation script framework
+
+*Reference: [Technical Validation Methodology](../validation/validation-methodology.md)*
+
 ### Pilot Implementation
 
 #### Controlled Deployment
@@ -252,6 +260,8 @@ graph TD
 - **Performance monitoring** and capacity planning
 - **Support system scaling** and process refinement
 - **Full operational readiness** validation
+
+
 
 ---
 
