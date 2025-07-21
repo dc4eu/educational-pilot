@@ -297,6 +297,6 @@ Impact vs Probability Assessment
 - **Technology evolution** preparation and adaptation
 - **Long-term strategic** positioning and vision development
 
----
+
 
 *This governance framework ensures that the DC4EU ecosystem maintains high standards of accountability, transparency, and performance whilst remaining adaptable to changing technological, regulatory, and stakeholder requirements. The multi-level approach balances centralised coordination with distributed autonomy, supporting both European integration objectives and national/institutional sovereignty.*

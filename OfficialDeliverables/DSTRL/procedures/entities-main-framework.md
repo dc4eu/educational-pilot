@@ -203,10 +203,5 @@ This framework is designed to evolve with the European digital identity landscap
 - **Practitioner feedback** from ecosystem participants
 - **Research findings** from academic and industry collaborations
 
-**Last Updated**: May 2025  
-**Version**: 1.0  
-**Next Review**: November 2025
-
----
 
 *This framework supports the creation of a **unified European digital credential ecosystem** whilst respecting **institutional autonomy** and **national sovereignty** in educational and professional qualification systems. By focusing on legal entities and their relationships, it provides the foundation for trusted, interoperable, and legally compliant digital credential management across the European Union.*
