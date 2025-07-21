@@ -12,11 +12,11 @@ Source of updated information: https:/sites.ey.com/:x:/r/sites/DC4EU-EBSINE/Shar
 
 | Country      | Piloting Agent                  | Contact                        | DNS                             |  Available  |
 |--------------|----------------------------------|--------------------------------|----------------------------------|-----|
-|Denmark|DTU|Tangui Coulouarn| |🔴|
+|Denmark|DTU|Tangui Coulouarn| |🟠|
 |Finland|Finnish National Agency for Education (OPH)|Kristiina Laipio| [lspdvv.dvv.fi](https://test.id.cloud.dvv.fi/test-rp-ui) |🟢|
-|Netherlands|SURF|Paul den Hort| |🔴|
-|Norway|Sikt|Geir Magne Vangen| |🔴|
-|Sweeden|SLadokkonsortiet|Tor Fridell| |🔴|
+|Netherlands|SURF|Paul den Hort| |🟠|
+|Norway|Sikt|Geir Magne Vangen| |🟠|
+|Sweeden|SLadokkonsortiet|Tor Fridell| |🟠|
 
 ---
 
@@ -27,6 +27,8 @@ Source of updated information: https:/sites.ey.com/:x:/r/sites/DC4EU-EBSINE/Shar
 | Country    | Piloting Agent                                           | Contact                          | DNS                               |  Available    |
 |------------|----------------------------------------------------------|----------------------------------|------------------------------------|-----------|
 | Belgium    | Howest       | Daniel Du Seuil       | [lsphowest.cyber3lab.be](https://uself-verifier-gui.lsphowest.cyber3lab.be)     | 🟢 |
+| Germany|   Ludwig-Maximilians-Universität München  | Helmut & Guido | [lsplmu.govpart.de](https://uself-verifier-gui.lsplmu.govpart.de)     | 🟢  |
+| Germany|   Humboldt-Universität zu Berlin | Helmut & Guido | [lsphub.govpart.de](https://uself-verifier-gui.lsphub.govpart.de)     | 🟢  |
 | Hungary    | Edutus University   | Laki Balazs   | [lspedutus.edutus.hu](https://uself-verifier-gui.lspedutus.edutus.hu)  | 🟢 |
 | Hungary    | Budapest University of Technology and Economics  | Imre Kocsis  | [lspbme.cloud.bme.hu](https://uself-verifier-gui.lspbme.cloud.bme.hu) | 🟢 |
 | Italy  | University of Bologna     | Sergio Storari  | [lspdc4edu.unibo.it](https://uself-verifier-gui.lspdc4edu.unibo.it)  | 🟢 |
@@ -64,11 +66,9 @@ Source of updated information: https:/sites.ey.com/:x:/r/sites/DC4EU-EBSINE/Shar
 | Country | Piloting Agent     | Contact                   | DNS (Pilot 1)                  | Available    |
 |---------|--------------------|---------------------------|-------------------------------|----|
 | Germany|    GovPart       |     Helmut & Guido        |                               | 🔴 |
-| Germany|   Ludwig-Maximilians-Universität München     |     Helmut & Guido               |          | 🔴 |
-| Germany|   Humboldt-Universität zu Berlin             |     Helmut & Guido               |          | 🔴 |
-| Netherlands| University of Twente        |    Helenn Vanderzaag     |    | 🔴 |
-| Netherlands| Saxion University of Applied Sciences        |    Franco de Vitta      |    | 🔴 |
-| Portugal| COFAC - Lusofona University        |    Paulo Ferreira     |    | 🔴 |
+| Netherlands| University of Twente        |    Helenn Vanderzaag     |    | 🟠 |
+| Netherlands| Saxion University of Applied Sciences        |    Franco de Vitta      |    | 🟠 |
+| Portugal| COFAC - Lusofona University        |    Paulo Ferreira     |    | 🟠 |
 
 ### dPKI-based Verification Services
 
