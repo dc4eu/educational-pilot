@@ -97,6 +97,11 @@ The DC4EU deployment methodology provides a structured approach for educational 
 - Credential issuance and verification workflow testing
 - Cross-border verification capability validation
 - Performance and scalability assessment
+- **Validation Script Compliance**: Execute GRNet validation scripts to verify technical compliance
+- **Interoperability Testing**: Validate profile conformance using standardised test suite
+- **Quality Assurance Validation**: Complete technical validation methodology requirements
+
+*Technical validation requirements detailed in: [Validation Methodology](./validation/validation-methodology.md)*
 
 ### Phase 3: User Onboarding and Training (Weeks 9-16)
 
