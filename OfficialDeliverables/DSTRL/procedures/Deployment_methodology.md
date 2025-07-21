@@ -1,230 +1,149 @@
-# DC4EU WP5 User Journey Deployment Methodology
+# DSTRL Deployment Methodology
 
-## Overview
+**Digital Student Records and Transcript Ledger - Standardised Implementation Framework**
 
-The DC4EU (Digital Credentials for Europe) project developed a comprehensive methodology to ensure successful deployment of user journeys across multiple European institutions. This methodology was specifically designed to enable all Work Package 5 (WP5) partners acting as Piloting Agents to deliver digital credential services whilst meeting two primary objectives:
+This document defines the standardised methodology for deploying Digital Credentials for Europe (DC4EU) implementations across educational institutions, ensuring consistent quality, compliance, and operational effectiveness whilst accommodating diverse institutional requirements and national contexts.
 
-1. **Primary Objective**: Provide user journeys for issuing educational credentials and professional qualifications
-2. **Secondary Objective**: Provide cross-border verification services
+## Implementation Status Tracking
 
-## Methodology Framework
+For real-time monitoring of deployment progress across all piloting agents and implementation approaches, please refer to the [**DC4EU Piloting Status Tracker**](./piloting/piloting-status-tracker.md). This tracker provides comprehensive oversight of:
 
-### Core Principle: Single Point of Contact (SPOC) Model
+- Current implementation status across all three pilots
+- Technical requirements compliance monitoring  
+- Cross-border verification capability assessment
+- Regional deployment pattern analysis
+- Infrastructure readiness indicators
 
-The methodology centres around a **Single Point of Contact (SPOC)** model that serves as the central organisational and technical hub for institutions managing educational and professional qualifications. The SPOC acts as the national coordinator, ensuring alignment with WP5 methodology, technical standards, and governance procedures.
+## Methodology Overview
 
-### Key Success Factors
+The DC4EU deployment methodology provides a structured approach for educational institutions to implement digital credential systems whilst maintaining flexibility for institutional autonomy and national regulatory compliance. The methodology encompasses three distinct pilot implementations, each designed to address different technological approaches and institutional requirements.
 
-The methodology was designed with several critical success factors:
+### Pilot Implementation Framework
 
-- **Structured coordination** across multiple countries and institutions
-- **Standardised technical components** whilst allowing local adaptation
-- **Governance compliance** with European digital identity frameworks
-- **Risk mitigation** through phased implementation
-- **Continuous monitoring** and feedback mechanisms
+#### Pilot 1: Classical PKI Implementation
+**Target Institutions**: Institutions with established PKI infrastructure and preference for traditional trust models
+**Technical Approach**: SD-JWT credentials with classical PKI trust chains
+**Deployment Model**: Primarily SaaS-based through SUNET/SURF infrastructure
+**Regional Focus**: Nordic countries and established NREN partnerships
 
-## Actors and Roles
+#### Pilot 2: Decentralised PKI Implementation  
+**Target Institutions**: Forward-looking institutions ready for decentralised identity technologies
+**Technical Approach**: W3C Verifiable Credentials with hybrid trust models
+**Deployment Model**: Flexible (Dockerised, SaaS, National implementations)
+**Regional Focus**: Broad European participation with diverse deployment strategies
 
-### 1. Single Points of Contact (SPOCs)
+#### Pilot 3: Combined Implementation
+**Target Institutions**: Institutions seeking maximum flexibility and comprehensive capability
+**Technical Approach**: Dual trust model supporting both classical and decentralised approaches
+**Deployment Model**: Parallel implementation of both Pilot 1 and Pilot 2 infrastructure
+**Regional Focus**: Strategic institutions demonstrating advanced implementation capabilities
 
-**Role**: National/Regional Coordinators
+## Standardised Implementation Phases
 
-**Key Responsibilities**:
-- Monitor and document progress of piloting agents across all required phases
-- Collect and validate evidence demonstrating completion of technical, organisational, and governance tasks
-- Act as primary contact point for piloting agents seeking clarification or facing issues
-- Ensure timely and structured reporting aligned with project KPIs
+### Phase 1: Assessment and Planning (Weeks 1-4)
 
-**SPOC Distribution by Pilot Type**:
+#### Institutional Readiness Assessment
+**Technical Infrastructure Evaluation**
+- Current identity management system capabilities
+- Integration requirements with existing academic record systems
+- Network infrastructure and security compliance
+- Technical staff capacity and expertise assessment
 
-#### Pilot 1 (Classical PKI):
-- SUNET (Sweden)
-- Sikt - Norwegian Agency for Shared Services in Education and Research (Norway)
-- SURF (Netherlands)
-- Finnish National Agency for Education - OPH (Finland)
-- DTU (Denmark)
+**Stakeholder Engagement and Coordination**  
+- Academic leadership and policy maker engagement
+- IT department technical team coordination
+- Student services and administrative process alignment
+- Legal and compliance team consultation
 
-#### Pilot 2 (Decentralised PKI - EBSI + Classical PKI):
-- Walt.ID (Belgium)
-- SGAD & CGCOM (Spain)
-- Universidade do Porto (Portugal)
-- GovPart GmbH (Germany)
-- Politechnica University of Timișoara (Romania)
-- OPI PIB (Poland)
-- RISE (Sweden)
-- eDelivery (Lithuania)
-- SURF (Netherlands)
+**Pilot Selection and Planning**
+- Technical approach alignment with institutional capabilities
+- Resource requirement assessment and allocation
+- Timeline development and milestone definition
+- Risk assessment and mitigation strategy development
 
-### 2. Piloting Agents (PAs)
+#### Documentation and Evidence Preparation
+**Governance Framework Documentation**
+- Institutional policy alignment with DC4EU requirements
+- Data protection and privacy compliance verification
+- Cross-border recognition and verification procedures
+- Quality assurance and credential integrity processes
 
-**Role**: User Journey Providers and Credential Issuers/Verifiers
+### Phase 2: Infrastructure Implementation (Weeks 5-12)
 
-**Key Responsibilities**:
-- Onboard users and deliver user journeys
-- Issue and verify digital credentials
-- Collect user feedback and operational data
-- Report progress to their assigned SPOC
+#### Technical Infrastructure Deployment
+**Pilot-Specific Infrastructure Setup**
 
-**Team Structure within Piloting Agents**:
-- **Project Manager**: Oversees execution and ensures regulatory compliance
-- **Educational/Professional Content Specialist**: Designs user journeys and manages end-user processes
-- **Technical Lead**: Manages system integration and infrastructure
-- **User Support**: Handles inquiries and gathers feedback
+**Pilot 1 Implementation Components:**
+- SUNET/SURF SaaS environment configuration
+- X.509v3 PKI certificate provisioning and management
+- SD-JWT processing capability implementation
+- wwWallet integration and testing
 
-### 3. End Users
+**Pilot 2 Implementation Components:**
+- DID infrastructure setup and EBSI integration
+- W3C Verifiable Credentials processing implementation
+- Trust registry registration and configuration
+- EUDI Wallet compatibility and integration
 
-**Role**: Credential Holders and Service Recipients
+**Pilot 3 Implementation Components:**
+- Parallel deployment of both Pilot 1 and Pilot 2 infrastructure
+- Dual endpoint configuration and management
+- Cross-system integration and coordination
+- Unified user experience design and implementation
 
-**Types**:
-- Students receiving educational credentials
-- Professionals obtaining qualifications
-- Administrative staff managing credential processes
+#### Integration and Testing Framework
+**System Integration Testing**
+- Institutional system connectivity validation
+- Credential issuance and verification workflow testing
+- Cross-border verification capability validation
+- Performance and scalability assessment
 
-### 4. WP5 Partners
+### Phase 3: User Onboarding and Training (Weeks 9-16)
 
-**Role**: Framework Providers and Monitors
+#### Staff Training and Capability Development
+**Technical Team Training**
+- System administration and operational procedures
+- Troubleshooting and support processes
+- Monitoring and maintenance best practices
+- Security and compliance operational requirements
 
-**Responsibilities**:
-- Provide methodology and technical frameworks
-- Monitor overall progress across all piloting agents
-- Collect evidence and consolidate reporting
-- Facilitate continuous improvement
+**Administrative Staff Training**
+- User support and assistance procedures  
+- Credential issuance approval and verification processes
+- Data protection and privacy operational requirements
+- Cross-border verification coordination
 
-### 5. Tool Providers
+#### User Onboarding and Engagement
+**Student and Faculty Onboarding**
+- Wallet setup and credential management training
+- Privacy and data protection education
+- Credential usage and presentation training
+- Feedback collection and issue reporting procedures
 
-**Role**: Technical Infrastructure Supporters
+### Phase 4: Operational Deployment (Weeks 13-20)
 
-**Key Providers by Pilot**:
+#### Controlled Deployment
+**Limited User Group Implementation**
+- Pilot user group selection and engagement (typically 10-50 participants)
+- Controlled credential issuance and verification testing
+- User experience assessment and feedback collection
+- System performance monitoring and optimisation
 
-**Pilot 1**:
-- SUNET: Issuer/Verifier platforms and basic user journey provisioning
-- GUNet: Natural person wallets
+#### Cross-Border Verification Testing
+**International Verification Capability Validation**
+- Partnership establishment with institutions in other member states
+- Cross-border credential verification testing and validation
+- Trust relationship establishment and maintenance
+- International recognition and acceptance confirmation
 
-**Pilot 2**:
-- ATOS: Issuer/Verifier platforms and basic user journey provisioning
-- IZERTIS: Natural person wallets
-- GovPart & SGAD: Governance and trust framework management
+### Phase 5: Full Deployment and Operations (Weeks 17-24)
 
-## Conceptual Map of Actor Interactions
-
-The methodology is built around a clear interaction model between key actors, each with defined responsibilities and communication pathways:
-
-### Core Interaction Flow
-
-The **SPOC (Single Point of Contact)** serves as the central coordination hub, facilitating interactions between:
-
-- **WP5 Partners** → **SPOCs**: Define common rules, architecture, and standards
-- **SPOCs** → **Piloting Agents**: Coordinate national/sectoral implementation, validate governance, and monitor deployment
-- **Piloting Agents** → **End Users**: Implement user journeys, engage with users, and issue credentials
-- **Technical Partners** → **Piloting Agents**: Provide technical support (issuer SDKs, wallet apps, verifier platforms)
-- **End Users** → **System**: Interact with wallets and participate in credential issuance and verification
-- **All Actors** → **Reporting System**: Provide feedback, progress updates, and performance data
-
-### Key Interaction Patterns
-
-1. **Hierarchical Coordination**: WP5 → SPOC → Piloting Agents ensures consistent methodology application whilst allowing national/institutional flexibility
-
-2. **Technical Support Network**: Specialised technical partners provide infrastructure and tools, with SPOCs facilitating access and issue resolution
-
-3. **Feedback Loops**: Multi-directional communication ensures continuous improvement through user experience data, technical performance metrics, and governance compliance reporting
-
-4. **Cross-Border Verification**: Piloting Agents provide public endpoints enabling verification of credentials issued by institutions in other member states
-
-This interaction model ensures that local execution aligns with European-level coordination whilst maintaining clear accountability and support structures.
-
-### Visual Representation
-``` mermaid
-graph TB
-    %% Core Actors
-    WP5[WP5 Partners<br/>Framework Providers]
-    SPOC[SPOCs<br/>National Coordinators]
-    PA[Piloting Agents<br/>User Journey Providers]
-    EU[End Users<br/>Students & Professionals]
-    TP[Tool Providers<br/>Technical Infrastructure]
-    REP[Reporting System<br/>KPI & Evidence Collection]
-
-    %% Primary coordination flows
-    WP5 -->|Define methodology<br/>& standards| SPOC
-    SPOC -->|Coordinate & validate<br/>governance| PA
-    PA -->|Deploy user journeys<br/>& issue credentials| EU
-    
-    %% Technical support flows
-    TP -->|Provide issuer/verifier<br/>platforms & wallets| PA
-    TP -.->|Technical guidance<br/>via SPOC| PA
-    
-    %% Feedback and reporting flows
-    PA -->|Progress reports<br/>& evidence| SPOC
-    SPOC -->|Consolidated reporting<br/>& KPIs| WP5
-    EU -->|User feedback<br/>& satisfaction| PA
-    PA -->|Operational data<br/>& metrics| REP
-    SPOC -->|Monitoring data<br/>& validations| REP
-    
-    %% Cross-border verification
-    PA -.->|Cross-border<br/>verification endpoints| PA
-    
-    %% Issue escalation
-    PA -.->|Technical issues<br/>& support requests| SPOC
-    SPOC -.->|Complex issues<br/>& improvements| WP5
-    
-    %% Styling
-    classDef primary fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-    classDef secondary fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
-    classDef support fill:#e8f5e8,stroke:#1b5e20,stroke-width:2px
-    
-    class WP5,SPOC,PA primary
-    class EU,REP secondary
-    class TP support
-``` 
-
-## Implementation Methodology
-
-### Five-Phase Approach
-
-The methodology follows a structured five-phase approach to ensure consistency, comparability, and readiness:
-
-#### Phase 1: Preparation
-**Objective**: Understanding and Planning
-
-**Key Actions**:
-- Understand SPOC role and governance requirements
-- Identify piloting agents within national/institutional scope
-- Register governance data and DID information
-- Assess infrastructure requirements
-- Establish communication channels with assigned SPOC
-
-#### Phase 2: Readiness
-**Objective**: Technical and Organisational Setup
-
-**Key Actions**:
-- Deploy issuer and verifier platforms
-- Set up digital wallets for end users
-- Test technical flows and integration points
-- Complete readiness checklist validation
-- Register in trust frameworks (Classical PKI or DID-based)
-- Develop training materials
-
-#### Phase 3: Controlled Pilot
-**Objective**: Testing and Refinement
-
-**Key Actions**:
-- Simulate selected user journeys with real users
-- Collect evidence and identify technical/process gaps
-- Execute first user journeys in controlled environment
-- Implement real-time monitoring and issue resolution
-- Provide weekly reporting to SPOC
-
-#### Phase 4: Full Rollout
-**Objective**: Scaling and Institutional Adoption
-
-**Key Actions**:
-- Extend participation to larger user groups
-- Implement credential lifecycle management
-- Establish ongoing performance tracking
-- Ensure regulatory validation and compliance
-- Deploy comprehensive support mechanisms
-
-#### Phase 5: Continuous Monitoring
-**Objective**: Maintenance and Optimisation
+#### Production System Deployment
+**Full-Scale Implementation**
+- Complete user base onboarding and training
+- Full credential issuance and verification capability activation
+- Comprehensive monitoring and support system implementation
+- Long-term operational sustainability planning
 
 **Key Actions**:
 - Track weekly KPIs and performance metrics
@@ -237,112 +156,147 @@ The methodology follows a structured five-phase approach to ensure consistency, 
 
 The methodology defines standardised technical components whilst allowing for local adaptation:
 
-#### Common Elements (Both Pilots):
+#### Common Elements (All Pilots):
 - Governance templates for credential registration
-- Feedback collection systems
-- KPI monitoring dashboards
-- User onboarding procedures
+- Feedback collection systems and user experience monitoring
+- KPI monitoring dashboards and operational oversight
+- User onboarding procedures and support systems
+- Cross-border verification capability testing
+- Compliance monitoring and reporting frameworks
 
 #### Pilot-Specific Components:
 
 **Pilot 1 (Classical PKI)**:
-- X.509v3 PKI certificates for issuers
-- PKI-based trust validation
-- SD-JWT credential format
-- Classical certificate revocation lists (CRL)
+- X.509v3 PKI certificates for issuers and relying parties
+- PKI-based trust validation and certificate chain management
+- SD-JWT credential format processing and selective disclosure
+- Classical certificate revocation lists (CRL) and status checking
 
 **Pilot 2 (Decentralised PKI + Classical PKI)**:
-- DID-based trust discovery
-- EBSI-compatible governance documentation
-- Verifiable credentials in W3C format
-- Combined trust model implementation
+- DID-based trust discovery and decentralised identifier management
+- EBSI-compatible governance documentation and blockchain integration
+- W3C Verifiable Credentials in JSON-LD format
+- Combined trust model implementation with multiple verification pathways
+
+**Pilot 3 (Combined Implementation)**:
+- Parallel deployment of both Pilot 1 and Pilot 2 technical components
+- Dual endpoint architecture and cross-system integration
+- Unified user experience across both trust models
+- Advanced operational coordination and system management
 
 ### Governance and Compliance Framework
 
 #### Trust Framework Integration
-- **Pilot 1**: Integration with classical PKI infrastructure including X.509 certificates
-- **Pilot 2**: Integration with decentralised identity systems and EBSI infrastructure
-- **Pilot 3**: Combined approach utilising both classical and decentralised trust models
+- **Pilot 1**: Integration with classical PKI infrastructure including X.509 certificate hierarchies and traditional certificate authorities
+- **Pilot 2**: Integration with decentralised identity systems, EBSI blockchain infrastructure, and European trust registries
+- **Pilot 3**: Combined approach utilising both classical and decentralised trust models with unified governance
 
 #### Compliance Requirements
-- GDPR compliance for data protection
-- eIDAS2 regulation alignment
-- National higher education regulations
-- European interoperability standards
+- **GDPR Compliance**: Data protection regulation alignment and privacy by design implementation
+- **eIDAS2 Regulation Alignment**: Preparation for upcoming European digital identity regulation
+- **National Higher Education Regulations**: Compliance with member state educational legislation
+- **European Interoperability Standards**: Alignment with European standards for digital credential recognition
 
 ### Quality Assurance and Risk Management
 
 #### Risk Categories and Mitigation:
-1. **Technical Risks**: Integration issues, security vulnerabilities
-   - Mitigation: Phased testing, technical validation checkpoints
+1. **Technical Risks**: Integration issues, security vulnerabilities, system performance degradation
+   - **Mitigation**: Phased testing approach, comprehensive technical validation checkpoints, performance benchmarking
 
-2. **Operational Risks**: Resource constraints, training gaps
-   - Mitigation: Structured training programmes, SPOC support
+2. **Operational Risks**: Resource constraints, staff training gaps, user adoption challenges
+   - **Mitigation**: Structured training programmes, dedicated SPOC (Single Point of Contact) support, user engagement strategies
 
-3. **Compliance Risks**: GDPR breaches, credential validity issues
-   - Mitigation: Governance validation, regular compliance reviews
+3. **Compliance Risks**: GDPR breaches, credential validity issues, cross-border recognition failures
+   - **Mitigation**: Governance validation processes, regular compliance reviews, legal consultation integration
 
 #### Success Metrics and KPIs:
-- Number of institutions successfully deploying user journeys
-- Credential issuance and verification success rates
-- User satisfaction scores
-- Cross-border verification capability demonstration
-- System uptime and reliability metrics
+- **Implementation Success**: Number of institutions successfully deploying comprehensive user journeys
+- **Technical Performance**: Credential issuance and verification success rates across pilots
+- **User Experience**: User satisfaction scores and adoption rate metrics
+- **Cross-Border Capability**: Cross-border verification capability demonstration and success rates
+- **System Reliability**: System uptime, performance metrics, and incident response effectiveness
 
 ## User Journey Categories
 
 The methodology defines standardised user journey categories that all piloting agents must implement:
 
 ### Core User Journeys:
-1. **Wallet Setup and User Onboarding**
-2. **Personal Identification (PID) Retrieval**
-3. **Credential Issuance (Academic & Professional)**
-4. **Quality Assurance Attestation Issuance**
-5. **Credential Verification by Third Parties**
-6. **Credential Lifecycle Management**
-7. **Support and Issue Resolution**
+1. **Wallet Setup and User Onboarding**: Complete user registration and wallet configuration process
+2. **Personal Identification (PID) Retrieval**: Integration with national digital identity systems  
+3. **Credential Issuance (Academic & Professional)**: Comprehensive credential creation and delivery workflows
+4. **Quality Assurance Attestation Issuance**: Educational quality verification and certification processes
+5. **Credential Verification by Third Parties**: External verification and acceptance procedures
+6. **Credential Lifecycle Management**: Revocation, updates, and status management
+7. **Support and Issue Resolution**: User assistance and technical support processes
 
 ### Cross-Border Verification Requirement:
-Each piloting agent must demonstrate cross-border verification capability by providing public endpoints that can verify credentials issued by institutions in other member states.
+Each piloting agent must demonstrate cross-border verification capability by providing public endpoints that can verify credentials issued by institutions in other member states. This requirement ensures:
+- **European Interoperability**: Seamless credential recognition across borders
+- **Trust Network Establishment**: Functional trust relationships between institutions
+- **Real-World Validation**: Practical demonstration of cross-border recognition
+- **Scalability Confirmation**: Proof of concept for European-wide deployment
 
-## Monitoring and Reporting Framework
+## Implementation Support Framework
 
-### Structured Reporting Mechanism:
-- **Weekly Progress Reports** from Piloting Agents to SPOCs
-- **Evidence Collection** and validation against requirements
-- **Issue Escalation** procedures for technical and governance challenges
-- **KPI Alignment Monitoring** to ensure contribution to project objectives
+### Continuous Monitoring and Improvement
+**Operational Oversight**
+- Weekly KPI tracking and performance assessment
+- Systematic incident reporting and user feedback collection
+- Alignment monitoring with broader WP3 project objectives
+- Continuous improvement proposal development and implementation
 
-### Key Performance Indicators:
-- 10 wallet issuing countries involved
-- 1,000 wallet users across WP5
-- 25 education domain institutions interfacing with wallets
-- 5,000 wallet transactions in pre-production environment
-- Cross-border verification demonstrations
+**Long-Term Sustainability**
+- Operational capability maintenance beyond pilot phase
+- Scaling strategy development for institutional expansion
+- Community building and knowledge sharing facilitation
+- Standards evolution adaptation and compliance maintenance
 
-## Success Outcomes
+### Documentation and Knowledge Management
+**Implementation Documentation**
+- Comprehensive technical implementation guides
+- User journey templates and customisation guidelines
+- Best practices documentation and lesson learned capture
+- Troubleshooting resources and common issue resolution
 
-This methodology successfully enabled:
+**Community Resources**
+- Inter-institutional collaboration and coordination platforms
+- Regular knowledge sharing sessions and workshops
+- Peer support networks and technical assistance communities
+- Standards development participation and contribution opportunities
 
-### Technical Achievements:
-- Deployment of interoperable digital credential infrastructure across multiple European countries
-- Demonstration of both classical PKI and decentralised identity approaches
-- Cross-border verification capability between different national systems
+## Regional Implementation Coordination
 
-### Organisational Achievements:
-- Coordinated implementation across diverse educational and professional institutions
-- Standardised governance frameworks whilst respecting national sovereignty
-- Effective knowledge transfer and capacity building
+### European Coordination Framework
+**Multi-Level Governance Integration**
+- **European Level**: Overall project coordination and standards development
+- **National Level**: Member state regulatory compliance and coordination
+- **Institutional Level**: Local implementation and operational management
+- **Technical Level**: Infrastructure deployment and maintenance coordination
 
-### Strategic Achievements:
-- Practical validation of European digital identity infrastructure
-- Evidence base for scaling digital credentials across the EU
-- Foundation for future European Digital Identity Wallet deployment
+### Cross-Border Collaboration
+**International Partnership Development**
+- Bilateral and multilateral verification agreement establishment
+- Technical coordination for cross-border testing and validation
+- Standards harmonisation and interoperability enhancement
+- Joint problem-solving and innovation development
 
-## Conclusion
+## Related Documentation and Cross-References
 
-The DC4EU WP5 user journey deployment methodology represents a comprehensive approach to coordinating complex, multi-national digital infrastructure deployment. By combining structured project management, technical standardisation, and flexible local adaptation, the methodology successfully enabled diverse European institutions to collaborate in creating an interoperable digital credentials ecosystem.
+### Implementation Status and Monitoring
+- [**Piloting Status Tracker**](./piloting/piloting-status-tracker.md) - Real-time implementation progress monitoring
+- [**Compliance Tracking Documentation**](./entities/compliance.md) - Regulatory compliance oversight
+- [**Quality Assurance Procedures**](./entities/implementation.md) - Implementation quality standards
 
-The SPOC model proved particularly effective in balancing central coordination with national autonomy, whilst the five-phase implementation approach ensured systematic readiness and risk mitigation. The methodology's emphasis on continuous monitoring, feedback collection, and iterative improvement established a foundation for sustainable operations and future expansion.
+### Pilot-Specific Implementation Guides
+- [**Pilot 1 Classical PKI Implementation**](../pilot1/README.md) - Traditional PKI deployment approach
+- [**Pilot 2 Decentralised PKI Implementation**](../pilot2/README.md) - Modern decentralised identity deployment
+- [**Pilot 3 Combined Implementation**](../pilot3/README.md) - Dual trust model deployment strategy
 
-This methodology serves as a replicable framework for similar large-scale European digital infrastructure initiatives, demonstrating how careful coordination, clear governance, and structured implementation can achieve ambitious interoperability objectives across diverse national contexts.
+### Technical Documentation and Resources
+- [**Infrastructure Implementation Procedures**](./entities/implementation.md) - Technical deployment specifications
+- [**User Journey Templates**](../elements/README.md) - Standardised user experience documentation
+- [**Security and Compliance Framework**](./entities/compliance.md) - Security and regulatory compliance requirements
+
+---
+
+*For current implementation status and real-time progress monitoring across all piloting agents and deployment approaches, please refer to the [Piloting Status Tracker](./piloting/piloting-status-tracker.md).*
