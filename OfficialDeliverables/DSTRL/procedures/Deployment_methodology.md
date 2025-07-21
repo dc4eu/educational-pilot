@@ -290,7 +290,7 @@ Each piloting agent must demonstrate cross-border verification capability by pro
 ### Pilot-Specific Implementation Guides
 - [**Pilot 1 Classical PKI Implementation**](../pilot1/README.md) - Traditional PKI deployment approach
 - [**Pilot 2 Decentralised PKI Implementation**](../pilot2/README.md) - Modern decentralised identity deployment
-- [**Pilot 3 Combined Implementation**](../pilot3/README.md) - Dual trust model deployment strategy
+- [**Pilot 3 Combined Implementation**](../pìlot3/README.md) - Dual trust model deployment strategy
 
 ### Technical Documentation and Resources
 - [**Infrastructure Implementation Procedures**](./entities/implementation.md) - Technical deployment specifications
