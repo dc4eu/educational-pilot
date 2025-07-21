@@ -265,7 +265,7 @@ Real-time documentation of ongoing piloting activities:
 ## Current Status and Achievements
 
 ### Active Implementation Metrics
-- **Operational Verification Services**: 50+ DNS endpoints providing cross-border verification capabilities
+- **Operational Verification Services**: 39 DNS endpoints providing cross-border verification capabilities
 - **Geographic Coverage**: Active implementations across 23 European countries
 - **Institutional Diversity**: Universities, professional bodies, and government agencies successfully deployed
 - **User Engagement**: Thousands of credentials issued with high user satisfaction rates
