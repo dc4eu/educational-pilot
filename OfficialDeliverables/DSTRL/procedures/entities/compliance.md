@@ -1,192 +1,142 @@
-# DC4EU Regulatory Compliance Framework
-## Ensuring Legal Adherence and Governance Tracking for Digital Credential Entities
+# DSTRL Compliance Tracking and Monitoring Framework
 
-### Overview
+**Digital Student Records and Transcript Ledger - Regulatory Compliance and Entity Management**
 
-The DC4EU regulatory compliance framework provides **systematic approaches** for ensuring that legal entities operating within the digital credential ecosystem maintain **continuous adherence** to applicable laws, regulations, and standards. This framework emphasises **organisational accountability** and **inter-institutional governance**.
+This document establishes comprehensive compliance tracking mechanisms for DC4EU implementations, ensuring adherence to European regulatory frameworks, data protection requirements, and technical standards across all piloting agents and deployment approaches.
 
----
+## Implementation Compliance Monitoring
 
-## Regulatory Foundation
+For real-time tracking of compliance status across all piloting agents, including regulatory adherence, technical requirements fulfilment, and documentation completeness, please refer to the [**DC4EU Piloting Status Tracker**](../piloting/piloting-status-tracker.md).
 
-### Primary Legal Framework
-- **eIDAS 2.0 Regulation (EU) 2024/1183**
-- **General Data Protection Regulation (GDPR)**
-- **Commission Implementing Regulations**
-- **National implementing legislation**
-- **Sectoral qualification frameworks**
+The status tracker provides essential compliance oversight including:
+- **Technical Requirements Compliance**: X.509 certificates, DID implementation, DNS availability
+- **Documentation Compliance**: Scenarios templates, progress templates, governance documentation
+- **Cross-Border Verification Capability**: International recognition and verification infrastructure
+- **Regional Compliance Patterns**: Country-specific regulatory alignment and implementation approaches
 
-### Technical Standards
-- **Architecture Reference Framework (ARF) v1.5+**
-- **ETSI TS 119 471** (EAA Provider requirements)
-- **W3C Verifiable Credentials** standards
-- **European Learning Model (ELM)** specifications
+## Regulatory Compliance Framework
 
----
+### European Union Legal Framework
 
-## Entity-Specific Compliance Requirements
+#### eIDAS 2.0 Regulation Compliance
+**Digital Identity Regulation Alignment**
+- **Trust Service Provider Registration**: Institutional registration as qualified or non-qualified trust service providers
+- **Electronic Identification Means**: Compliance with European digital identity standards and interoperability requirements
+- **Cross-Border Recognition**: Mutual recognition mechanisms and technical interoperability standards
+- **Liability and Accountability**: Clear responsibility frameworks for credential issuance and verification
 
-### Authentic Sources
-#### Legal Compliance
-- **Designation under national law** as authoritative source
-- **GDPR compliance** for personal data processing
-- **Data accuracy obligations** under institutional mandate
-- **Cross-border data transfer** compliance (adequacy decisions)
+**Article-Specific Compliance Requirements**
+- **Article 6a**: European Digital Identity Wallet ecosystem integration and compatibility
+- **Article 12a**: Qualified Electronic Attestation of Attributes (QEAA) compliance for educational credentials
+- **Article 45c**: Trust service provider designation and oversight mechanisms
+- **Article 47b**: Cross-border electronic identification mutual recognition
 
-#### Technical Compliance  
-- **Secure interface implementation** for attribute verification
-- **Audit logging** of all attribute disclosures
-- **Data integrity measures** and validation procedures
-- **Availability requirements** for verification services
+#### GDPR Data Protection Compliance
+**Personal Data Processing Requirements**
+- **Lawful Basis Establishment**: Clear legal basis for credential data processing (typically legitimate interest or consent)
+- **Data Minimisation**: Implementation of selective disclosure technologies and privacy-preserving credential presentation
+- **Purpose Limitation**: Specific, explicit, and legitimate purpose definition for credential processing
+- **Storage Limitation**: Data retention policies aligned with educational record requirements and legal obligations
 
-#### Operational Compliance
-- **Staff training** on data protection and security
-- **Incident response procedures** for data breaches
-- **Regular backup and recovery** testing
-- **Change management** for system updates
+**Individual Rights Implementation**
+- **Right to Information**: Clear transparency about credential data processing and sharing
+- **Right of Access**: User access to personal data contained in credentials and processing logs
+- **Right to Rectification**: Procedures for correcting inaccurate credential information
+- **Right to Erasure**: Credential revocation and data deletion procedures
+- **Right to Portability**: Credential export and transfer capabilities between systems
 
-### QEAA Providers (Qualified Trust Service Providers)
-#### Legal Compliance
-- **Qualified status maintenance** with National Supervisory Body
-- **eIDAS 2.0 Article 21** notification and verification procedures
-- **Liability provisions** compliance for qualified services
-- **Professional indemnity insurance** requirements
+### National Higher Education Regulatory Compliance
 
-#### Technical Compliance
-- **ETSI TS 119 471** conformance for EAA services
-- **Common Criteria evaluation** for security components
-- **Cryptographic standards** compliance (FIPS, Common Criteria)
-- **Time-stamping services** integration
+#### Member State Educational Legislation
+**Institutional Authorisation and Recognition**
+- **Degree Awarding Powers**: Institutional authority to issue specific types of educational credentials
+- **Quality Assurance Compliance**: Alignment with national and European quality assurance frameworks
+- **Professional Qualification Recognition**: Integration with regulated profession requirements and recognition procedures
+- **Academic Record Management**: Compliance with national student record-keeping and archival requirements
 
-#### Operational Compliance
-- **Conformity Assessment Body (CAB) audits** annually
-- **Risk management framework** implementation
-- **Business continuity planning** and testing
-- **Staff vetting and security clearance** procedures
+#### Cross-Border Educational Recognition
+**Bologna Process Implementation**
+- **European Credit Transfer System (ECTS)**: Accurate credit representation and transfer facilitation
+- **Qualification Framework Alignment**: Compatibility with European and national qualification frameworks
+- **Learning Outcome Documentation**: Comprehensive learning outcome representation in digital credentials
+- **Grade Conversion and Recognition**: Accurate academic achievement representation for international recognition
 
-### Public Body EAA Providers
-#### Legal Compliance
-- **Public sector designation** under national authority
-- **Transparency obligations** for public services
-- **Public procurement rules** compliance for technical services
-- **Administrative law** compliance for citizen services
+## Technical Compliance Standards
 
-#### Technical Compliance
-- **Equivalent security to QTSPs** as per eIDAS 2.0 Article 45f
-- **Qualified certificate usage** for electronic signatures/seals
-- **Government interoperability standards** compliance
-- **Accessibility requirements** for public digital services
+### Pilot-Specific Technical Requirements
 
-#### Operational Compliance
-- **Public sector audit procedures** and annual reporting
-- **Citizen complaint mechanisms** and resolution procedures
-- **Service availability targets** and performance monitoring
-- **Public sector cybersecurity** framework compliance
+#### Pilot 1 Classical PKI Technical Compliance
+**Certificate Infrastructure Requirements**
+- **X.509v3 PKI Certificate Standards**: Compliance with RFC 5280 and related standards
+- **Certificate Authority Trust Chain**: Proper certificate hierarchy establishment and management
+- **Certificate Revocation Lists (CRL)**: Implementation of real-time certificate status checking
+- **Public Key Infrastructure**: Secure key management and cryptographic operation compliance
 
-### EAA Providers (Non-Qualified)
-#### Legal Compliance
-- **Registration requirements** with relevant supervisory authority
-- **Consumer protection obligations** for service provision
-- **Competition law compliance** in commercial operations
-- **Sectoral regulation compliance** (education, professional services)
+**Current Compliance Status** (Referenced from Status Tracker):
+- **X.509v3 Issuer Certificates**: Mixed implementation status across participating institutions
+- **X.509v3 RP Certificates**: Limited availability in current pilot environment
+- **CRL Infrastructure**: Partial deployment requiring enhancement for full compliance
 
-#### Technical Compliance
-- **Security measures** proportionate to risk assessment
-- **Data protection by design** implementation
-- **Interoperability standards** for credential formats
-- **Service level agreements** with client institutions
+#### Pilot 2 Decentralised PKI Technical Compliance
+**Decentralised Identity Standards**
+- **W3C DID Standards**: Compliance with W3C Decentralised Identifier specifications
+- **W3C Verifiable Credentials**: Alignment with W3C Verifiable Credentials Data Model
+- **EBSI Integration**: European Blockchain Services Infrastructure compatibility and trust registry integration
+- **JSON-LD Processing**: Semantic interoperability and linked data standards compliance
 
-#### Operational Compliance
-- **Quality management systems** implementation
-- **Staff competency requirements** and training programmes  
-- **Financial stability requirements** for service continuity
-- **Client due diligence** procedures
+**Current Compliance Status** (Referenced from Status Tracker):
+- **DID Implementation**: 100% compliance across all Pilot 2 participants
+- **W3C VC Standards**: Universal implementation with full standards alignment
+- **EBSI Trust Registry Integration**: Complete integration enabling cross-border verification
+- **DNS Endpoint Availability**: 100% deployment supporting international verification
 
-### Relying Parties
-#### Legal Compliance
-- **Registration obligations** in Member State registry
-- **Data minimisation principles** compliance (GDPR Article 5)
-- **Legitimate interest assessments** for attribute requests
-- **Proportionality requirements** for verification procedures
+#### Pilot 3 Combined Implementation Compliance
+**Dual Trust Model Requirements**
+- **Parallel Compliance**: Full adherence to both Pilot 1 and Pilot 2 technical requirements
+- **Cross-System Integration**: Unified compliance across both classical and decentralised approaches
+- **Operational Coordination**: Comprehensive compliance management across dual infrastructure
+- **Standards Evolution**: Preparation for emerging standards and regulatory developments
 
-#### Technical Compliance
-- **Proper validation procedures** for received credentials
-- **Secure storage requirements** for verification records
-- **Access control measures** for verification systems
-- **Integration testing** with wallet interfaces
+### Data Protection and Privacy Compliance
 
-#### Operational Compliance
-- **Privacy impact assessments** for new services
-- **User consent management** systems and procedures
-- **Incident reporting** for verification failures
-- **Regular system security assessments**
+#### Privacy by Design Implementation
+**Technical Privacy Measures**
+- **Selective Disclosure**: User control over personal information sharing and presentation
+- **Data Minimisation**: Technical implementation ensuring minimal necessary data processing
+- **Pseudonymisation**: Where appropriate, implementation of pseudonymous credential identifiers
+- **Encryption and Security**: End-to-end protection of credential data in transit and at rest
 
----
+**Consent Management and User Rights**
+- **Informed Consent**: Clear user understanding of data processing and sharing implications
+- **Granular Control**: User ability to control specific data elements and sharing contexts
+- **Withdrawal Mechanisms**: Simple procedures for consent withdrawal and credential deactivation
+- **Audit Trails**: Comprehensive logging of data processing activities for accountability
 
-## Compliance Monitoring Framework
+## Entity Designation and Registration Framework
 
-### Continuous Monitoring Approach
+### Trust Service Provider Categorisation
 
-#### Level 1: Self-Assessment
-**Frequency:** Quarterly
-**Scope:** Basic operational compliance
-**Method:** Automated compliance dashboards and reporting
+#### Qualified Trust Service Provider (QTSP) Track
+**Requirements for QTSP Designation**
+- **Regulatory Approval**: National supervisory body recognition and oversight
+- **Technical Compliance**: Qualified electronic signature and seal capabilities
+- **Audit and Certification**: Regular third-party auditing and compliance certification
+- **Insurance and Liability**: Comprehensive liability coverage and financial guarantees
 
-**Key Metrics:**
-- System availability percentages
-- Response time performance
-- Error rates and resolution times
-- User satisfaction scores
-
-#### Level 2: Supervisory Review
-**Frequency:** Annually  
-**Scope:** Comprehensive compliance assessment
-**Method:** Document review and technical testing
-
-**Key Areas:**
-- Legal requirement adherence
-- Technical standard conformance
-- Operational procedure effectiveness
-- Risk management adequacy
-
-#### Level 3: External Audit
-**Frequency:** As required (typically every 2-3 years)
-**Scope:** Independent validation of compliance claims
-**Method:** Third-party audit by accredited assessors
-
-**Focus Areas:**
-- Security control effectiveness
-- Data protection implementation
-- Business continuity capabilities
-- Governance framework maturity
-
-### Compliance Tracking Tools
-
-#### Entity Status Dashboard
-```
-Entity Compliance Overview
-├── Regulatory Compliance Status
-│   ├── eIDAS 2.0: ✓ Compliant / ⚠ Issues / ✗ Non-compliant
-│   ├── GDPR: ✓ Compliant / ⚠ Issues / ✗ Non-compliant
-│   └── ARF: ✓ Compliant / ⚠ Issues / ✗ Non-compliant
-├── Operational Status
-│   ├── Service Availability: [Percentage]
-│   ├── Response Performance: [Metrics]
-│   └── Error Rates: [Statistics]
-└── Certification Status
-    ├── Qualified Status: [Valid/Expired/Suspended]
-    ├── Accreditation: [Current/Renewal Due]
-    └── Audit Results: [Pass/Conditional/Fail]
-```
-
-#### Compliance Checklist Templates
-
-**Pre-Onboarding Checklist:**
-- [ ] Legal entity registration verification
+**Institutional Preparation Checklist:**
+- [ ] National supervisory body application submitted
+- [ ] Technical infrastructure audit completed
 - [ ] Required certifications obtained
 - [ ] Technical capabilities demonstrated
 - [ ] Staff competency validated
 - [ ] Insurance and liability coverage confirmed
+
+#### Non-Qualified Trust Service Provider Track
+**Requirements for Non-QTSP Operation**
+- **Self-Declaration**: Institutional self-assessment and public declaration of compliance
+- **Technical Standards**: Alignment with technical standards and interoperability requirements
+- **Transparency**: Public availability of trust service information and operational procedures
+- **User Protection**: Clear user information and protection mechanisms
 
 **Ongoing Operational Checklist:**
 - [ ] Regular compliance monitoring active
@@ -202,99 +152,152 @@ Entity Compliance Overview
 - [ ] Remediation plans developed
 - [ ] Stakeholder communications ready
 
----
-
 ## Governance Tracking Mechanisms
 
 ### Multi-Level Governance Structure
 
 #### European Level Coordination
-- **Commission oversight** of implementing regulations
-- **Member State coordination** through expert groups
-- **Standards development** monitoring and updates
-- **Cross-border incident** coordination and response
+- **European Commission Oversight**: Implementation regulation compliance and coordination
+- **Member State Expert Group Coordination**: Cross-national policy alignment and harmonisation
+- **Standards Development Monitoring**: Active participation in W3C, EBSI, and European standards development
+- **Cross-Border Incident Coordination**: Collaborative response to international recognition issues
 
 #### National Level Supervision
-- **Supervisory body** oversight of designated entities
-- **Registry management** and trusted list maintenance
-- **Compliance monitoring** and enforcement actions
-- **Stakeholder coordination** and communication
+- **Supervisory Body Oversight**: National authority monitoring of designated entities and trust service providers
+- **Registry Management**: Trusted list maintenance and cross-border recognition infrastructure
+- **Compliance Monitoring**: Regular assessment and enforcement of regulatory requirements
+- **Stakeholder Coordination**: National education sector engagement and communication
 
 #### Institutional Level Management
-- **Internal compliance** programmes and monitoring
-- **Risk management** and mitigation strategies
-- **Quality assurance** systems and procedures
-- **Continuous improvement** processes and updates
+- **Internal Compliance Programmes**: Institutional monitoring and self-assessment procedures
+- **Risk Management**: Systematic risk identification, assessment, and mitigation strategies
+- **Quality Assurance Systems**: Continuous improvement and operational excellence programmes
+- **Continuous Improvement Processes**: Regular review and enhancement of compliance procedures
 
 ### Governance Metrics and KPIs
 
 #### System-Wide Performance Indicators
-- **Entity onboarding success rates** by role and Member State
-- **Cross-border verification volumes** and success rates
-- **Incident frequency and resolution times**
-- **User satisfaction** across different stakeholder groups
+- **Entity Onboarding Success Rates**: Success metrics by entity role and Member State
+- **Cross-Border Verification Volumes**: Transaction volumes and success rates for international verification
+- **Incident Frequency and Resolution Times**: System reliability and response effectiveness metrics
+- **User Satisfaction**: Stakeholder satisfaction across different user groups and use cases
 
 #### Compliance Effectiveness Measures
-- **Audit pass rates** by entity type and jurisdiction
-- **Regulatory update implementation** speed and coverage
-- **Non-compliance detection** and correction rates
-- **Stakeholder feedback** quality and responsiveness
+- **Audit Pass Rates**: Compliance assessment results by entity type and jurisdiction
+- **Regulatory Update Implementation**: Speed and completeness of regulatory change implementation
+- **Non-Compliance Detection and Correction**: Monitoring system effectiveness and remediation success
+- **Stakeholder Feedback Quality**: Responsiveness and effectiveness of compliance communication
 
 ### Issue Management and Escalation
 
 #### Level 1: Operational Issues
 **Responsibility:** Entity-level management
 **Response Time:** 24-48 hours
-**Examples:** Service outages, performance degradation, user complaints
+**Examples:** Service outages, performance degradation, user complaints, minor technical issues
+
+**Resolution Process:**
+- Immediate incident acknowledgement and impact assessment
+- Internal technical team engagement and problem diagnosis
+- User communication and temporary mitigation implementation
+- Root cause analysis and permanent resolution development
 
 #### Level 2: Compliance Issues  
 **Responsibility:** Supervisory body intervention
 **Response Time:** 5-10 working days
-**Examples:** Regulatory non-compliance, certification lapses, audit findings
+**Examples:** Regulatory non-compliance, certification lapses, audit findings, cross-border recognition failures
+
+**Resolution Process:**
+- Formal notice and compliance assessment initiation
+- Remediation plan development and approval
+- Enhanced monitoring and reporting implementation
+- Follow-up verification and compliance confirmation
 
 #### Level 3: Systemic Issues
 **Responsibility:** European-level coordination
 **Response Time:** 30-60 days
-**Examples:** Cross-border recognition failures, standard incompatibilities, legal framework gaps
+**Examples:** Cross-border recognition failures, standard incompatibilities, legal framework gaps, major security incidents
 
----
+**Resolution Process:**
+- Multi-national coordination team establishment
+- Comprehensive impact assessment and stakeholder consultation
+- Policy and technical solution development
+- Implementation coordination and effectiveness monitoring
 
-## Enforcement and Remediation
+## Enforcement and Remediation Framework
 
 ### Progressive Enforcement Approach
 
 #### Stage 1: Advisory Notice
-- **Informal guidance** on compliance expectations
-- **Technical assistance** for implementation
-- **Timeline agreement** for remediation actions
-- **Follow-up monitoring** schedule establishment
+- **Informal Guidance**: Collaborative approach with educational support and technical assistance
+- **Technical Assistance**: Expert consultation and implementation guidance provision
+- **Timeline Agreement**: Mutually agreed remediation schedule and milestone definition
+- **Follow-up Monitoring**: Regular progress assessment and support continuation
 
 #### Stage 2: Formal Warning
-- **Written notice** of specific non-compliance
-- **Mandatory remediation plan** submission requirement
-- **Enhanced monitoring** and reporting obligations
-- **Potential public disclosure** of compliance issues
+- **Written Notice**: Official documentation of specific non-compliance issues and requirements
+- **Mandatory Remediation Plan**: Formal submission requirement with detailed corrective actions
+- **Enhanced Monitoring**: Increased reporting obligations and supervisory oversight
+- **Potential Public Disclosure**: Transparency measures regarding compliance status
 
 #### Stage 3: Regulatory Action
-- **Service restriction** or capability limitations
-- **Registration suspension** or conditional operation
-- **Financial penalties** or administrative fines
-- **Revocation procedures** for serious violations
+- **Service Restriction**: Limitation of operational capabilities or scope of services
+- **Registration Suspension**: Temporary or conditional operation restrictions
+- **Financial Penalties**: Administrative fines proportionate to non-compliance severity
+- **Revocation Procedures**: Formal processes for serious or persistent violations
 
 ### Remediation Support Services
 
 #### Technical Assistance Programmes
-- **Best practice guidance** development and sharing
-- **Training and capacity building** programmes
-- **Peer review and benchmarking** opportunities
-- **Technical infrastructure** sharing initiatives
+- **Best Practice Guidance**: Development and sharing of implementation best practices
+- **Training and Capacity Building**: Educational programmes for technical and compliance staff
+- **Peer Review and Benchmarking**: Collaborative assessment and improvement opportunities
+- **Technical Infrastructure Sharing**: Collaborative infrastructure development and sharing initiatives
 
-#### Stakeholder Engagement
-- **Regular consultation** processes with industry
-- **Feedback mechanisms** for regulatory improvements
-- **Collaborative problem-solving** approaches
-- **Transparency reporting** on compliance trends
+#### Stakeholder Engagement and Communication
+- **Regular Consultation Processes**: Systematic engagement with educational institutions and industry stakeholders
+- **Feedback Mechanisms**: Channels for regulatory improvement suggestions and implementation feedback
+- **Collaborative Problem-Solving**: Multi-stakeholder approaches to complex compliance challenges
+- **Transparency Reporting**: Regular publication of compliance trends, challenges, and improvements
+
+## Continuous Compliance Monitoring
+
+### Real-Time Compliance Dashboard
+**Key Performance Indicators**
+- Technical requirements fulfilment rates across all pilot implementations
+- Documentation completeness and currency across participating institutions
+- Cross-border verification success rates and international recognition effectiveness
+- User satisfaction and complaint resolution metrics
+
+### Regular Assessment and Review Cycle
+**Quarterly Compliance Reviews**
+- Comprehensive compliance status assessment across all piloting agents
+- Regulatory development impact analysis and adaptation planning
+- Stakeholder feedback integration and improvement planning
+- Performance metric analysis and target adjustment
+
+**Annual Compliance Audit Programme**
+- External compliance verification and assessment
+- Best practice identification and knowledge sharing facilitation
+- Continuous improvement recommendation development
+- Regulatory alignment verification and enhancement
+
+## Related Documentation and Cross-References
+
+### Implementation Status Monitoring
+- [**Piloting Status Tracker**](../piloting/piloting-status-tracker.md) - Real-time compliance and implementation status monitoring
+- [**Deployment Methodology**](../Deployment_methodology.md) - Standardised compliance integration in implementation process
+- [**Entity Implementation Procedures**](./implementation.md) - Technical compliance implementation guidance
+
+### Pilot-Specific Compliance Requirements
+- [**Pilot 1 Classical PKI Compliance**](../../pilot1/README.md) - Traditional PKI regulatory and technical requirements
+- [**Pilot 2 Decentralised PKI Compliance**](../../pilot2/README.md) - Decentralised identity compliance framework
+- [**Pilot 3 Combined Compliance**](../../pilot3/README.md) - Dual trust model compliance coordination
+
+### Technical and Legal Resources
+- [**Infrastructure Implementation Standards**](./implementation.md) - Technical compliance implementation specifications
+- [**Quality Assurance Framework**](../../elements/README.md) - Quality management and assurance procedures
+- [**User Rights and Data Protection**](../../elements/documents/MyAcademicID/README.md) - Privacy and data protection implementation
 
 ---
 
-*This compliance framework ensures that the DC4EU ecosystem maintains high standards of legal adherence, operational reliability, and stakeholder trust whilst supporting entities in meeting their obligations through proportionate monitoring and assistance.*
+*This compliance framework ensures that the DC4EU ecosystem maintains high standards of legal adherence, operational reliability, and stakeholder trust whilst supporting entities in meeting their obligations through proportionate monitoring and assistance. For current compliance status across all implementations, please refer to the [Piloting Status Tracker](../piloting/piloting-status-tracker.md).*
