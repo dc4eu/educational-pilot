@@ -17,7 +17,7 @@ DSTRL represents the culmination of extensive piloting activities conducted by e
 
 ## Current Implementation Status
 
-For real-time tracking of implementation progress across all participating institutions and countries, please refer to the [**DC4EU Piloting Status Tracker**](./procedures/piloting/piloting-status-tracker.md).
+For real-time tracking of implementation progress across all participating institutions and countries, please refer to the [**DC4EU Piloting Status Tracker**](./procedures/piloting/dc4eu_pilot_tracking_status.md).
 
 **Implementation Results Summary:**
 - **Total Participating Institutions**: 36+ educational institutions across 14 European countries
