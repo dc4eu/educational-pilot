@@ -65,7 +65,6 @@ Source of updated information: https:/sites.ey.com/:x:/r/sites/DC4EU-EBSINE/Shar
 
 | Country | Piloting Agent     | Contact                   | DNS (Pilot 1)                  | Available    |
 |---------|--------------------|---------------------------|-------------------------------|----|
-| Germany|    GovPart       |     Helmut & Guido        |                               | 🔴 |
 | Netherlands| University of Twente        |    Helenn Vanderzaag     |    | 🟠 |
 | Netherlands| Saxion University of Applied Sciences        |    Franco de Vitta      |    | 🟠 |
 | Portugal| COFAC - Lusofona University        |    Paulo Ferreira     |    | 🟠 |
