@@ -177,6 +177,9 @@ The DC4EU project implements three distinct pilot configurations:
 3. **Documentation Maintenance**: Ensure continuous alignment with evolving project requirements
 4. **User Experience Improvement**: Refine implementation based on operational feedback
 
+## Visual status
+Find latest uopdated visual sttaus at [DC4EU Tracking Progress for Piloting Agents](./DC4EU%20Piloting%20Agents%20Progress%20Tracker.pdf)
+
 ## Conclusion
 
 The DC4EU piloting programme demonstrates significant progress across diverse technical implementations and geographical regions. The current status reflects successful deployment of innovative digital credential infrastructure while highlighting specific areas requiring continued attention and development.
