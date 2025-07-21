@@ -47,7 +47,7 @@ The DSTRL is organised into comprehensive results documentation covering all asp
 - **Lessons Learned**: Success of decentralised identity technologies, effectiveness of flexible deployment approaches
 - **Cross-Border Results**: Demonstrated successful international credential verification
 
-#### [**Pilot 3: Combined Implementation Results**](./pìlot3/README.md)
+#### [**Pilot 3: Combined Implementation Results**](./pilot3/README.md)
 - **Implementation Approach**: Dual trust model supporting both Classical and Decentralised PKI
 - **Deployment Results**: Comprehensive dual infrastructure implementation
 - **Participating Institutions**: 3 organisations across Netherlands, Portugal (6 total implementations: 3 PKI + 3 dPKI)
