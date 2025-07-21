@@ -121,6 +121,11 @@ When verifiers request information from educational wallets, they similarly auth
 
 The primary innovation of WP5 Pilot 2 is integrating **verifiable governance structures** that reflect the **hierarchical and federated nature** of European educational authority into the technical trust infrastructure.
 
+##### Technical Validation Status
+- **ATOS/IZERTIS Solution Validation**: ✅ Complete - Validated using GRNet validation scripts
+- **Profile Compliance**: ✅ Verified - Full interoperability compliance confirmed
+- **Validation Framework**: [DC4EU Technical Validation Methodology](../../procedures/validation/validation-methodology.md)
+
 #### 2.2 ROLES AND RESPONSIBILITIES
 
 The **Hybrid Trust Framework** encompasses traditional PKI roles enhanced with **decentralised governance capabilities**:

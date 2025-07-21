@@ -61,6 +61,7 @@ For detailed implementation guidance, please refer to the specific pilot documen
 - [Pilot2 DID Implementation Guide](./pilot2/did-implementation.md)
 - [Pilot2 EBSI Integration](./pilot2/ebsi-integration.md)
 - [Pilot2 W3C VC Processing](./pilot2/w3c-vc-processing.md)
+*This implementation has been validated using the [DC4EU Technical Validation Methodology](../../../procedures/validation/validation-methodology.md) developed by GRNet.*
 
 ## Additional Resources
 
