@@ -29,7 +29,7 @@ For real-time tracking of implementation progress across all participating insti
 
 The DSTRL is organised into comprehensive results documentation covering all aspects of the piloting activities:
 
-### [**Pilot Implementation Results**](./pilot1/) - Technical Deployment Outcomes
+### [**Pilot Implementation Results**](./pilots_overview_dstrl.md) - Technical Deployment Outcomes
 
 #### [**Pilot 1: Classical PKI Implementation Results**](./pilot1/README.md)
 - **Implementation Approach**: Traditional PKI with SD-JWT credentials
