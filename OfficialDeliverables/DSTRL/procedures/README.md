@@ -191,10 +191,5 @@ This procedural framework is designed to evolve with the European digital identi
 
 Regular updates ensure the framework remains current with regulatory changes, technological developments, and operational experience from deployment across European institutions.
 
----
-
-**Last Updated:** July 2025  
-**Version:** 2.1  
-**Next Review:** December 2025
 
 *This procedural framework supports the creation of a unified European digital credential ecosystem whilst respecting institutional autonomy and national sovereignty in educational and professional qualification systems. By focusing on legal entities and their formalised relationships, it provides the foundation for trusted, interoperable, and legally compliant digital credential management across the European Union.*
