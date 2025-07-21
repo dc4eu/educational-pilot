@@ -1,298 +1,244 @@
-# Deployment and Testing Scenarios Results Library (DSTRL)
+# Digital Student Records and Transcript Ledger (DSTRL)
 
-**DC4EU Implementation Repository for European Digital Educational Credentials**
+**Official Deliverables Documentation - DC4EU Project**
 
-The DSTRL serves as the comprehensive deployment and testing results repository documenting real-world implementation scenarios for digital educational credentials within the DC4EU (Digital Credentials for Europe) project. As part of the large-scale pilot under the eIDAS 2.0 framework, the DSTRL provides documented implementation patterns, procedural guidance, and technical components derived from successful deployments across European educational institutions.
+The Digital Student Records and Transcript Ledger (DSTRL) is a comprehensive framework for implementing secure, interoperable digital educational credentials across European institutions. Developed as part of the DC4EU (Digital Credentials for Europe) project, DSTRL provides the technical specifications, implementation guidance, and operational procedures necessary for establishing European-wide digital credential ecosystems.
 
 ## Project Overview
 
-### DC4EU Context
-The DC4EU project represents a multinational consortium of 102+ partners from 23 countries, coordinated by the Spanish Ministry of Economic Affairs and Digital Transformation. The project's mission focuses on developing and demonstrating large-scale implementation of the EUDI (European Union Digital Identity) reference wallet ecosystem, with particular emphasis on educational credentials and professional qualifications across the European Union.
+DSTRL represents a collaborative effort to modernise European educational credential management through digital technologies that comply with eIDAS 2.0 regulation and support the European Digital Identity Wallet (EUDI) ecosystem. The framework accommodates diverse institutional requirements whilst ensuring interoperability and cross-border recognition across EU Member States.
 
-### DSTRL Mission
-The DSTRL serves as the central knowledge base documenting proven implementation scenarios and testing results from piloting agents across Europe. It provides comprehensive analysis of deployment patterns, user journey validation, technical architecture outcomes, and regulatory compliance achievements derived from real-world implementations of digital credential systems.
+### Key Objectives
+- **European Interoperability**: Seamless credential recognition and verification across national borders
+- **Regulatory Compliance**: Full alignment with eIDAS 2.0, GDPR, and national educational regulations
+- **Technical Flexibility**: Support for multiple trust models and deployment approaches
+- **Educational Mobility**: Enhanced support for student and professional mobility within Europe
+- **Innovation Foundation**: Forward-looking architecture supporting emerging digital identity standards
 
-The repository documents three distinct implementation approaches through actual piloting results, providing evidence-based guidance for institutions seeking to replicate successful deployment patterns whilst ensuring alignment with European standards and regulatory requirements.
+## Current Implementation Status
 
-## Strategic Objectives
+For real-time tracking of implementation progress across all participating institutions and countries, please refer to the [**DC4EU Piloting Status Tracker**](./procedures/piloting/piloting-status-tracker.md).
 
-### European Digital Education Transformation
-The DSTRL advances key European Union strategic objectives through comprehensive implementation support:
+**Quick Implementation Overview:**
+- **Total Participating Institutions**: 36+ educational institutions across 14 European countries
+- **Pilot Implementations**: 3 distinct technical approaches (Classical PKI, Decentralised PKI, Combined)
+- **Cross-Border Verification**: Active verification capabilities between multiple member states
+- **Standards Compliance**: W3C Verifiable Credentials, X.509v3 PKI, EBSI integration
 
-**European Education Area (EHEA) Digitalisation**
-- Seamless academic mobility through standardised digital credential formats
-- Automated recognition of qualifications and learning achievements
-- Elimination of administrative barriers for credential verification processes  
-- Enhanced support for lifelong learning and professional development pathways
+## Documentation Structure
 
-**eIDAS 2.0 Regulation Alignment**
-- Implementation of Electronic Attestations of Attributes (EAAs) for educational contexts
-- Integration with European digital identity infrastructure and trust frameworks
-- Compliance with enhanced digital signature and trust service requirements
-- Preparation for comprehensive EUDI Wallet ecosystem integration
+The DSTRL documentation is organised into five main directories, each serving specific stakeholder groups and implementation phases:
 
-**Digital Single Market Advancement**  
-- Reduced friction for professional and academic mobility across Member States
-- Standardised digital credential formats and automated verification processes
-- Enhanced trust, security, and reliability for educational credential transactions
-- Foundation for innovative educational service delivery models and partnerships
+### [**Pilot Implementations**](./pilot1/) - Technical Implementation Approaches
 
-## Technical Architecture Framework
+#### [**Pilot 1: Classical PKI Implementation**](./pilot1/README.md)
+- **Technical Approach**: Traditional PKI with SD-JWT credentials
+- **Trust Model**: Hierarchical certificate authorities and X.509v3 certificates
+- **Deployment**: Primarily SaaS through SUNET/SURF infrastructure
+- **Participating Countries**: Denmark, Finland, Netherlands, Norway, Sweden
+- **Key Strengths**: Leverages existing PKI infrastructure, familiar technology base
+- **Use Cases**: Institutions with established PKI and preference for traditional trust models
 
-### Multi-Trust Model Results Documentation
-The DSTRL documents results from three distinct implementation pathways, each validated through extensive piloting across European institutions:
+#### [**Pilot 2: Decentralised PKI Implementation**](./pilot2/README.md)
+- **Technical Approach**: Hybrid trust combining Classical PKI with Decentralised PKI
+- **Trust Model**: W3C Verifiable Credentials with DID-based trust and EBSI integration
+- **Deployment**: Flexible options (Dockerised, SaaS, National implementations)
+- **Participating Countries**: Belgium, Germany, Hungary, Italy, Lithuania, Poland, Portugal, Romania, Spain, Sweden
+- **Key Strengths**: Future-ready architecture, eIDAS 2.0 alignment, cross-border interoperability
+- **Use Cases**: Forward-looking institutions ready for decentralised identity technologies
 
-#### **Pilot1: Classical PKI with SD-JWT**
-- **Trust Model**: Traditional Public Key Infrastructure with hierarchical certificate authorities
-- **Credential Format**: Selective Disclosure JSON Web Tokens (SD-JWT)
-- **Platform**: SUNET/SURF SaaS environment for streamlined deployment
-- **Wallet Technology**: wwWallet integration for credential storage and management
-- **Target Audience**: Institutions with existing PKI investments seeking immediate deployment
-- **Implementation Focus**: Documented deployment results, proven security outcomes, and regulatory compliance achievements
+#### [**Pilot 3: Combined Implementation**](./pilot3/README.md)
+- **Technical Approach**: Dual trust model supporting both Classical and Decentralised PKI
+- **Trust Model**: Parallel implementation of Pilot 1 and Pilot 2 approaches
+- **Deployment**: Comprehensive dual infrastructure with unified user experience
+- **Participating Countries**: Netherlands, Portugal
+- **Key Strengths**: Maximum flexibility, comprehensive verification compatibility
+- **Use Cases**: Institutions seeking maximum adaptability and strategic positioning
 
-#### **Pilot2: Hybrid Trust with W3C Verifiable Credentials**  
-- **Trust Model**: Combined Classical PKI with Decentralised PKI via EBSI integration
-- **Credential Format**: W3C Verifiable Credentials with blockchain anchoring
-- **Platform**: ATOS/IZERTIS Dockerised solution for flexible deployment
-- **Wallet Technology**: EUDI Wallet (EUDIW by IZERTIS) for standards alignment
-- **Target Audience**: Forward-looking institutions preparing for eIDAS 2.0 requirements
-- **Implementation Focus**: Tested interoperability results, regulatory alignment validation, and future-readiness assessment
+### [**Procedures**](./procedures/) - Operational Framework and Legal Compliance
 
-#### **Pilot3: Combined Implementation (Pilot1 + Pilot2)**
-- **Trust Model**: Simultaneous operation of both Classical and Decentralised PKI
-- **Credential Format**: Support for both SD-JWT and W3C VC formats
-- **Platform**: Dual infrastructure deployment across both environments
-- **Wallet Technology**: Compatibility with both wwWallet and EUDI Wallet systems
-- **Target Audience**: Institutions requiring maximum flexibility and comprehensive future-proofing
-- **Implementation Focus**: Comprehensive testing results, user choice validation, and transition pathway analysis
+#### [**Legal Entity Framework**](./procedures/entities-main-framework.md)
+- Comprehensive guide to organisational roles and responsibilities in the DC4EU ecosystem
+- Six primary entity roles: Authentic Sources, QEAA Providers, Public EAA Providers, EAA Providers, Relying Parties, Supervisory Bodies
+- Multi-role scenarios and eligibility requirements for different organisation types
 
-### Core Technology Standards Integration
-**European and International Standards Compliance**
-- **W3C Verifiable Credentials**: International standard for interoperable digital credentials
-- **European Learning Model (ELM)**: European framework for educational data representation
-- **EBSI (European Blockchain Services Infrastructure)**: EU blockchain platform for trust anchoring
-- **eIDAS 2.0**: European regulation for digital identity and comprehensive trust services
-- **GDPR**: European data protection regulation compliance with privacy-by-design principles
+#### [**Regulatory Compliance**](./procedures/entities/compliance.md)
+- eIDAS 2.0 regulation alignment and implementation requirements
+- GDPR data protection compliance framework for digital credentials
+- Multi-level governance structure (European, National, Institutional)
+- Progressive enforcement approach and remediation procedures
 
-## Repository Structure and Navigation
+#### [**Implementation Procedures**](./procedures/entities/implementation.md)
+- Step-by-step technical implementation guidance for both Classical PKI and Decentralised PKI
+- Quality assurance frameworks and testing procedures
+- Pilot implementation methodologies and scaling strategies
+- Support resources and long-term maintenance requirements
 
-### Core Components
+#### [**Deployment Methodology**](./procedures/Deployment_methodology.md)
+- Standardised implementation framework across all pilot approaches
+- Phased deployment approach with clear milestones and success criteria
+- Risk management and quality assurance procedures
+- Cross-border verification requirements and testing protocols
 
-#### `/elements` - Foundational Technical Building Blocks
-The elements directory contains the essential technical components and specifications:
+#### [**Piloting Status Tracker**](./procedures/piloting/piloting-status-tracker.md)
+- Real-time implementation progress monitoring across all participating institutions
+- Technical requirements compliance tracking (X.509 certificates, DID implementation, DNS availability)
+- Cross-border verification capability assessment and regional analysis
+- Key performance indicators and success metrics dashboard
 
-**`/documents`** - Technical Specifications and Implementation Guides
-- **EDCL (European Digital Credentials Library)**: Comprehensive credential management system with issuing, storage, and verification capabilities
-- **MyAcademicID**: Federated academic identity management framework supporting cross-institutional operations
-- **EMREX**: European student mobility records exchange integration for seamless data transfer
+### [**Elements**](./elements/) - Core Technical Components and Tools
 
-**`/converters`** - Interoperability and Format Conversion Tools  
-- Format conversion services enabling transformation between national and European standards
-- Semantic mapping tools for accurate credential data transformation and validation
-- Quality assurance mechanisms ensuring data integrity throughout conversion processes
+#### [**Technical Components Overview**](./elements/README.md)
+- Foundational building blocks for DSTRL implementation
+- Standards compliance framework (W3C, European standards, international specifications)
+- Integration guidance for institutional systems and existing infrastructure
 
-#### `/pilot1` - Classical PKI Implementation Results
-Documented deployment outcomes and testing results from traditional PKI-based credential systems:
-- Infrastructure deployment results and configuration validation outcomes
-- User journey testing results for PKI-based credential operations
-- Piloting agent implementation reports with detailed performance analysis
-- SD-JWT credential format testing results and interoperability assessments
+#### [**EDCL (European Digital Credentials Library)**](./elements/documents/)
+- Comprehensive system for issuing, storing, and verifying digital educational credentials
+- Built on European Learning Model (ELM) and W3C Verifiable Credentials standards
+- Integration with EDCI Issuer, EDCI Wallet (Europass), and verification components
 
-#### `/pilot2` - Hybrid Trust Implementation Results
-Documented testing outcomes from next-generation decentralised credential systems:
-- DID (Decentralised Identifier) implementation results and performance validation
-- EBSI integration testing outcomes and blockchain anchoring effectiveness
-- W3C Verifiable Credentials deployment results and standards compliance validation
-- Cross-border verification testing results and automated trust discovery effectiveness
+#### [**MyAcademicID**](./elements/documents/MyAcademicID/)
+- Federated academic identity management system for European higher education
+- European Student Identifier (ESI) framework and eduPerson standards implementation
+- Cross-institutional credential verification and academic mobility support
 
-#### `/pilot3` - Combined Implementation Results
-Comprehensive testing outcomes and analysis from dual trust model deployments:
-- Unified infrastructure management results across both Classical and Decentralised PKI
-- User experience testing outcomes for multi-trust environments
-- Comparative analysis of deployment approaches with performance metrics
-- Migration pathway testing results and transition strategy validation
+#### [**Format Converters**](./elements/converters/)
+- RESTful API services for converting between different credential formats
+- Support for national formats to European standards transformation
+- Semantic mapping between different data models with quality assurance
 
-#### `/procedures` - Operational and Legal Framework
-Essential procedural documentation for compliant implementation:
-- **Legal Entity Framework**: Comprehensive guidance for organisational roles and responsibilities
-- **Regulatory Compliance**: Systematic frameworks for eIDAS 2.0 and GDPR adherence
-- **Implementation Guidance**: Step-by-step procedures for technical integration
-- **Inter-organisational Relationships**: Trust network mapping and management procedures
+## Target Audiences and Usage Guidance
 
-#### `/piloting` - Active Implementation Tracking
-Real-time documentation of ongoing piloting activities:
-- **DNS Registry**: Public cross-border verification service endpoints
-- **Implementation Status**: Current deployment status across participating institutions
-- **Performance Metrics**: Operational statistics and user engagement data
+### **Educational Institutions**
+- **Getting Started**: Begin with [Pilot Selection Guide](./procedures/Deployment_methodology.md) to determine optimal implementation approach
+- **Implementation Planning**: Review [Technical Implementation Procedures](./procedures/entities/implementation.md)
+- **Current Status**: Monitor progress via [Piloting Status Tracker](./procedures/piloting/piloting-status-tracker.md)
+- **Best Practices**: Study successful implementations in your preferred pilot approach
 
-## Implementation Scope and Impact
+### **Policy Makers and Regulators**
+- **Regulatory Framework**: Review [Legal Entity Framework](./procedures/entities-main-framework.md) and [Compliance Documentation](./procedures/entities/compliance.md)
+- **Implementation Progress**: Monitor real-world deployment via [Status Tracker](./procedures/piloting/piloting-status-tracker.md)
+- **Cross-Border Coordination**: Understand international verification capabilities and mechanisms
+- **Standards Development**: Access evidence base for European digital identity policy development
 
-### Geographic Coverage and Institutional Participation
-**European-Wide Implementation Across 23+ Countries**
-- **Nordic Region**: Finland, Sweden, Norway, Denmark with comprehensive institutional participation
-- **Western Europe**: Netherlands, Germany, Belgium with major university deployments  
-- **Southern Europe**: Spain, Portugal, Italy, Greece with extensive piloting programs
-- **Central Europe**: Hungary, Poland, Czech Republic, Lithuania with diverse implementation scenarios
-- **Extended Coverage**: Romania and additional Member States with growing participation
+### **Technology Partners and Developers**
+- **Technical Specifications**: Start with [Core Technical Components](./elements/README.md)
+- **Integration Guidance**: Access APIs, SDKs, and implementation examples
+- **Standards Compliance**: Review W3C, X.509v3, and EBSI integration requirements  
+- **Testing Frameworks**: Utilise validation tools and quality assurance procedures
 
-**Diverse Educational and Professional Ecosystem Engagement**
-- **Universities**: Public and private higher education institutions across multiple disciplines
-- **Applied Sciences**: Universities of applied sciences, polytechnics, and technical institutions
-- **Professional Bodies**: Medical councils, engineering associations, legal societies, and certification bodies
-- **National Agencies**: Education ministries, qualification recognition bodies, and regulatory authorities
-- **Technology Partners**: Digital identity platforms, credential management systems, and integration specialists
+### **Project Managers and Coordinators**
+- **Project Overview**: Begin with this main README for comprehensive understanding
+- **Implementation Methodology**: Follow [Deployment Methodology](./procedures/Deployment_methodology.md)
+- **Progress Monitoring**: Use [Status Tracker](./procedures/piloting/piloting-status-tracker.md) for operational oversight
+- **Risk Management**: Apply quality assurance and compliance frameworks
 
-### Current Deployment Statistics and Achievements
-**Comprehensive Large-Scale Pilot Metrics**
-- **Active Participating Partners**: 102+ partners with ongoing implementations across 23 countries
-- **Deployed Credentials**: Thousands of educational and professional credentials issued and verified
-- **Diverse User Base**: Students, graduates, faculty, professionals, and administrative staff
-- **Cross-Border Operations**: Extensive international credential verification and recognition activities
-- **Verification Services**: 50+ active DNS endpoints providing public cross-border verification capabilities
+### **Researchers and Evaluators**
+- **Implementation Evidence**: Access real-world deployment data via [Status Tracker](./procedures/piloting/piloting-status-tracker.md)
+- **Comparative Analysis**: Study different trust model implementations across pilots
+- **Standards Evolution**: Monitor practical application of emerging digital identity standards
+- **Policy Impact**: Assess regulatory compliance and cross-border interoperability achievements
 
-## User Journey Framework and Experience Design
+## Implementation Success Stories
 
-### Comprehensive Credential Lifecycle Management
+### Regional Implementation Patterns
 
-#### **Enhanced Credential Issuance Journey**
-1. **Identity Verification**: Multi-factor authentication with authentic institutional data sources
-2. **Eligibility Assessment**: Comprehensive academic record validation and achievement confirmation
-3. **Credential Generation**: Standards-compliant digital credential creation with full metadata
-4. **Cryptographic Signing**: Institutional digital signature using qualified certificates or DIDs
-5. **Wallet Integration**: Secure delivery to user's chosen digital wallet application
-6. **Trust Registry Registration**: Automatic registration in appropriate European trust frameworks
+#### **Nordic Collaboration** (Pilot 1 - Classical PKI)
+- **Approach**: Collaborative SaaS infrastructure through SUNET/SURF
+- **Strengths**: Leveraging existing NREN partnerships and PKI infrastructure
+- **Results**: Streamlined deployment with shared technical resources and standardised implementation
 
-#### **Advanced Credential Verification Journey**  
-1. **Presentation Request**: Verifier initiates credential request with specific attribute requirements
-2. **User Consent Management**: Credential holder maintains full control over information sharing
-3. **Selective Disclosure**: Privacy-preserving presentation of only necessary information
-4. **Multi-Layer Verification**: Cryptographic validation, trust chain verification, and status checking
-5. **Trust Validation**: Comprehensive verification of issuer authority and credential lifecycle status
-6. **Decision Documentation**: Transparent audit trail with comprehensive compliance reporting
+#### **Central and Southern European Innovation** (Pilot 2 - Decentralised PKI)
+- **Approach**: Diverse deployment strategies including Dockerised, SaaS, and National implementations
+- **Strengths**: Forward-looking technical architecture with EBSI integration
+- **Results**: 100% DNS endpoint availability enabling complete cross-border verification
 
-#### **Cross-Border Recognition Journey**
-1. **International Presentation**: Seamless credential presentation across Member State boundaries
-2. **Automatic Trust Discovery**: Real-time validation of international issuer credentials
-3. **Policy Translation**: Automated mapping between different national regulatory frameworks
-4. **Qualification Assessment**: Standards-based evaluation according to receiving country requirements
-5. **Recognition Documentation**: Transparent record-keeping of recognition decisions and rationale
-6. **Appeal Mechanisms**: Standardised procedures for dispute resolution and review processes
+#### **Strategic Implementation Leadership** (Pilot 3 - Combined Approach)
+- **Approach**: Comprehensive dual trust model implementation
+- **Strengths**: Maximum flexibility and compatibility with diverse verification systems
+- **Results**: Advanced institutional capability demonstrating feasibility of multi-trust-model operations
 
-## Regulatory and Compliance Framework
+### Key Achievements Across All Pilots
+- **Cross-Border Verification**: Active credential verification between institutions in multiple countries
+- **Standards Compliance**: Successful implementation of W3C, EBSI, and PKI standards
+- **User Experience**: Positive feedback on wallet integration and credential management
+- **Institutional Integration**: Successful integration with existing academic record systems
+- **Regulatory Alignment**: Demonstrated compliance with GDPR and preparation for eIDAS 2.0
 
-### Comprehensive eIDAS 2.0 Alignment
-**Strategic Preparation for European Digital Identity Regulation**
-- **Electronic Attestations of Attributes (EAAs)**: Full implementation of educational and professional EAAs
-- **Qualified Trust Service Providers**: Comprehensive preparation for QTSP status and operational obligations
-- **EUDI Wallet Integration**: Native compatibility with European digital wallet ecosystem standards
-- **Cross-Border Recognition**: Automated acceptance mechanisms across all Member States
+## Quality Assurance and Governance
 
-### Privacy Protection and Data Rights Management  
-**GDPR Compliance with Privacy-by-Design Implementation**
-- **Data Minimisation**: Selective disclosure capabilities ensuring minimal necessary information sharing
-- **Consent Management**: User-controlled data sharing preferences with granular consent mechanisms
-- **Right to Erasure**: Comprehensive credential revocation and data deletion capabilities
-- **Audit Trail**: Complete data processing documentation ensuring full transparency and accountability
+### **Multi-Level Governance Structure**
+- **European Level**: Overall project coordination and standards development through DC4EU project consortium
+- **National Level**: Member state coordination and regulatory compliance through national education authorities
+- **Institutional Level**: Local implementation and operational management by participating educational institutions
 
-### Educational Standards Integration
-**Comprehensive Alignment with European Educational Frameworks**
-- **European Qualifications Framework (EQF)**: Standardised qualification level mapping and recognition
-- **European Credit Transfer System (ECTS)**: Academic credit representation and seamless transfer
-- **European Standards and Guidelines (ESG)**: Quality assurance framework alignment and compliance
-- **Bologna Process**: Active support for European Higher Education Area strategic objectives
+### **Continuous Quality Improvement**
+- **Real-Time Monitoring**: Operational status tracking through automated dashboards and reporting
+- **Stakeholder Feedback**: Regular consultation with institutions, students, and technology partners
+- **Standards Evolution**: Active participation in W3C, EBSI, and European standards development
+- **Best Practices Development**: Knowledge sharing and continuous improvement across implementations
 
-## Quality Assurance and Validation Framework
+### **Risk Management and Compliance**
+- **Technical Risk Mitigation**: Comprehensive testing frameworks and validation procedures
+- **Regulatory Compliance**: Systematic adherence to European and national legal requirements
+- **Operational Resilience**: Multi-level support structures and issue escalation procedures
+- **Privacy Protection**: GDPR compliance with privacy-by-design principles
 
-### Multi-Level Testing and Validation Approach
-**Comprehensive Quality Assurance Mechanisms**
-- **Technical Compliance**: Rigorous standards adherence testing and specification conformance validation
-- **Interoperability Testing**: Extensive cross-system compatibility verification and data exchange validation  
-- **Security Assessment**: Professional penetration testing, vulnerability assessment, and risk analysis
-- **User Experience Evaluation**: Comprehensive usability testing, accessibility verification, and stakeholder feedback
+## Future Development and Sustainability
 
-### Continuous Improvement and Enhancement Process
-**Iterative Development with Stakeholder Integration**
-- **Feedback Integration**: Systematic incorporation of user, institutional, and regulatory stakeholder input
-- **Performance Monitoring**: Real-time system metrics analysis and performance optimisation strategies
-- **Standards Evolution**: Proactive adaptation to changing European and international standards
-- **Community Collaboration**: Open development approach with knowledge sharing and collaborative enhancement
+### **Standards Evolution Integration**
+- **W3C Standards Development**: Active participation in Verifiable Credentials and Decentralised Identifiers working groups
+- **EBSI Integration Enhancement**: Ongoing collaboration with European Blockchain Services Infrastructure development
+- **eIDAS 2.0 Preparation**: Alignment with upcoming European digital identity regulation
+- **EUDI Wallet Ecosystem**: Integration with European Digital Identity Wallet development
 
-## Implementation Support and Resource Ecosystem
+### **Scaling and Expansion Strategy**
+- **Geographic Expansion**: Extension to additional EU Member States and Associated Countries
+- **Sectorial Broadening**: Application to professional qualifications and vocational education
+- **Technology Evolution**: Adaptation to emerging digital identity technologies and standards
+- **Sustainability Planning**: Long-term operational and financial sustainability frameworks
 
-### Comprehensive Multi-Level Support Framework
+### **Innovation and Research**
+- **Academic Research Collaboration**: Partnership with universities for ongoing innovation and evaluation
+- **Industry Engagement**: Collaboration with technology providers for continuous improvement
+- **Policy Development Support**: Evidence base provision for European digital identity policy
+- **International Coordination**: Alignment with global digital identity developments
 
-#### **Technical Implementation Support**
-- **Detailed Implementation Guides**: Step-by-step deployment documentation with practical examples
-- **API Documentation**: Comprehensive technical integration specifications with code examples
-- **Community Support Forums**: Peer support networks and collaborative knowledge sharing platforms
-- **Professional Consultation**: Expert technical assistance and specialised implementation support services
+## Support and Resources
 
-#### **Capacity Building and Training Programs**
-- **Technical Workshops**: Hands-on implementation training specifically designed for institutional IT teams
-- **Strategic Leadership Briefings**: Executive-level guidance for institutional leadership and decision-makers
-- **User Training Programs**: Comprehensive education for students, faculty, staff, and administrators
-- **Train-the-Trainer Initiatives**: Specialised programs for institutional training coordinators and champions
+### **Technical Support**
+- **Documentation Portal**: Comprehensive technical documentation and implementation guides
+- **Community Forums**: Peer support and knowledge sharing platforms
+- **Professional Services**: Access to certified implementation partners and consultation services
+- **Training Programmes**: Regular workshops, webinars, and certification courses
 
-#### **Ongoing Operational Support and Maintenance**
-- **Regular System Updates**: Continuous improvement, feature enhancement, and security patch deployment
-- **Standards Evolution Support**: Proactive adaptation to changing European and international standards
-- **Regulatory Compliance Maintenance**: Ongoing support for evolving legal and regulatory requirements
-- **Innovation Integration**: Systematic incorporation of emerging technologies and enhanced capabilities
+### **Community Engagement**
+- **Regular Coordination Meetings**: Monthly stakeholder meetings and quarterly strategic reviews
+- **Best Practices Sharing**: Knowledge exchange sessions and case study development
+- **Innovation Workshops**: Collaborative sessions on emerging technologies and standards
+- **Policy Engagement**: Participation in European digital identity policy development
 
-## Getting Started with DSTRL Implementation
-
-### For Educational Institutions
-1. **Comprehensive Assessment**: Review institutional requirements, current digital capabilities, and strategic objectives
-2. **Pilot Selection**: Choose appropriate implementation pathway based on technical readiness and institutional goals
-3. **Implementation Planning**: Develop detailed deployment timeline with resource allocation and stakeholder engagement
-4. **Stakeholder Alignment**: Ensure institutional leadership support and user community engagement
-5. **Technical Integration**: Connect institutional systems with selected DSTRL infrastructure components
-
-### For Technology Partners
-1. **Standards Review**: Understand comprehensive technical specifications and compliance requirements
-2. **Platform Development**: Build or adapt existing systems for DSTRL compatibility and integration
-3. **Testing and Validation**: Ensure complete conformance with quality, security, and interoperability standards
-4. **Certification Process**: Obtain necessary approvals and achieve trust service provider status
-5. **Market Deployment**: Launch commercial offerings fully aligned with DSTRL framework requirements
-
-### For Policy Makers and Regulatory Bodies
-1. **Regulatory Alignment**: Ensure national legislation comprehensively supports digital credential deployment
-2. **Trust Framework Establishment**: Develop national trust anchors and recognition mechanisms
-3. **Cross-Border Coordination**: Active participation in European-level policy harmonisation initiatives
-4. **Innovation Support**: Provide funding, incentives, and regulatory support for institutional adoption
-5. **Quality Oversight**: Implement comprehensive oversight and compliance monitoring mechanisms
-
-## Current Status and Achievements
-
-### Active Implementation Metrics
-- **Operational Verification Services**: 39 DNS endpoints providing cross-border verification capabilities
-- **Geographic Coverage**: Active implementations across 23 European countries
-- **Institutional Diversity**: Universities, professional bodies, and government agencies successfully deployed
-- **User Engagement**: Thousands of credentials issued with high user satisfaction rates
-- **Cross-Border Recognition**: Successful international verification and recognition processes demonstrated
-
-### Proven Implementation Patterns
-- **Pilot1 Deployments**: Classical PKI implementations demonstrating immediate deployment capability
-- **Pilot2 Advances**: Hybrid trust models proving future-readiness and standards alignment
-- **Pilot3 Flexibility**: Combined approaches showing comprehensive institutional capability
-- **Regulatory Compliance**: Demonstrated alignment with eIDAS 2.0 and GDPR requirements
+### **Continuous Learning and Development**
+- **Implementation Feedback Integration**: Systematic collection and integration of operational experience
+- **Standards Development Participation**: Active contribution to European and international standards
+- **Research Collaboration**: Ongoing academic research partnerships and evaluation studies
+- **International Coordination**: Engagement with global digital identity initiatives and standards
 
 ---
 
-## Contact and Support Resources
+## Quick Navigation
 
-**Project Information and Resources:**
-- **Official Website**: https://www.dc4eu.eu
-- **Technical Documentation**: Comprehensive implementation and integration resources
-- **Community Support**: Collaborative forums and peer knowledge sharing networks
-- **Professional Services**: Expert consultation and specialised implementation assistance
+### **Getting Started Fast-Track**
+1. **Understand Your Context**: Review [Legal Entity Framework](./procedures/entities-main-framework.md) to understand your organisation's potential roles
+2. **Choose Implementation Approach**: Compare [Pilot 1](./pilot1/README.md), [Pilot 2](./pilot2/README.md), and [Pilot 3](./pilot3/README.md) to select optimal technical approach
+3. **Review Current Progress**: Check [Status Tracker](./procedures/piloting/piloting-status-tracker.md) to see real-world implementation results
+4. **Plan Implementation**: Follow [Deployment Methodology](./procedures/Deployment_methodology.md) for structured implementation approach
+5. **Access Technical Resources**: Use [Core Components](./elements/README.md) and technical documentation for detailed implementation guidance
 
-**Project Leadership and Coordination:**
-- **Project Coordinator**: Spanish Ministry of Economic Affairs and Digital Transformation
-- **Technical Leadership**: DC4EU Consortium Partners and Implementation Specialists  
-- **Standards Coordination**: European Commission Digital Building Blocks Initiative
-- **Research Collaboration**: European Universities and Research Institution Network
-
----
-
-*The Deployment and Testing Scenarios Results Library represents the collective knowledge and validated outcomes from European digital credential implementation, providing comprehensive, tested, and documented results from real-world deployments. Through systematic documentation of implementation scenarios, proven technical patterns, and comprehensive analysis of deployment outcomes from piloting agents across Europe, the DSTRL enables educational institutions to implement digital credentials confidently whilst leveraging the experiences and lessons learned from successful deployments across European institutions.*
+### **Key Documentation Links**
+- **[Implementation Status Dashboard](./procedures/piloting/piloting-status-tracker.md)** - Real-time progress across all pilots
+- **[Legal Framework Overview](./procedures/entities-main-framework.md)** - Organisational roles and compliance requirements
+- **[Technical Implementation Guide](./procedures/entities/implementation.md)** - Step-by-step deployment procedures
+- **[Deployment Methodology](./procedures/Deployment_methodology.md)** - Standardised implementation framework
+- **[Compliance Framework](./procedures/entities/compliance.md)** - Regulatory adherence and monitoring
