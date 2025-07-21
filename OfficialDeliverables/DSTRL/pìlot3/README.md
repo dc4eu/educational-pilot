@@ -8,6 +8,17 @@ Welcome to Pilot3 of the DC4EU Digital Student Records and Transcript Ledger (DS
 
 Pilot3 represents the most comprehensive approach within the DC4EU piloting framework, enabling institutions to operate both classical PKI-based and decentralised PKI-based credential systems simultaneously. This approach provides maximum flexibility for institutional stakeholders whilst ensuring compatibility with diverse verification requirements and regulatory frameworks across different contexts and jurisdictions.
 
+## Current Implementation Status
+
+For comprehensive tracking of Pilot3 dual implementation progress, including both Classical PKI and Decentralised PKI component status, please refer to the [**DC4EU Piloting Status Tracker**](../procedures/piloting/piloting-status-tracker.md).
+
+**Quick Status Overview:**
+- **Participating Countries**: Netherlands, Portugal
+- **Total Institutions**: 3 organisations (6 implementations - 3 PKI + 3 dPKI)
+- **Classical PKI Component**: SaaS instances by SUNET/SURF
+- **Decentralised PKI Component**: 100% DNS availability and DID deployment
+- **Dual Trust Model Status**: Complete dual implementation across all participants
+
 ## Fundamental Architecture
 
 ### Combined Trust Model Definition
@@ -52,135 +63,62 @@ Pilot3 = Pilot1 + Pilot2
 #### Complete Dual Implementation
 **Infrastructure Obligations**
 - **Parallel Deployment**: Both Pilot1 and Pilot2 infrastructure fully operational
-- **Dual Evidence Provision**: All onboarding requirements for both trust models
-- **Separate Public Endpoints**: Distinct access points for each trust model
-- **Unified Management**: Coordinated administration across both systems
+- **Dual Evidence Provision**: All onboarding requirements for both pilot types
+- **Cross-System Compatibility**: Unified user management across both trust models
+- **Operational Coordination**: Simultaneous maintenance and support for both systems
 
-**Technical Specifications**
-- **Classical PKI**: X.509v3 certificates, CRL coordination, traditional PKI management
-- **Decentralised PKI**: DID registration, EBSI integration, W3C VC support
-- **Cross-System Compatibility**: Unified user accounts and credential mapping
+## Current Pilot3 Participating Institutions
 
-## Pilot3 Participating Institutions
+### Netherlands Implementation
 
-### Current Implementation Scope
-Three European institutions have successfully implemented Pilot3:
+#### University of Twente (UTWENTE)
+- **Classical PKI Endpoint**: SUNET/SURF SaaS instance
+- **Decentralised PKI Endpoint**: `lsput.utwente.nl`
+- **DID Implementation**: `did:ebsi:zT8nF3mYx2tKp7qZ4Rh5GsV`
+- **Dual Trust Status**: Complete implementation
 
-#### Netherlands (2 institutions)
-**University of Twente (UTWENTE)**
-- **Focus**: Technical and engineering education programmes
-- **Classical PKI**: 60 users, 172 credentials (SD-JWT format)
-- **dPKI**: 60 users, 180 credentials (W3C VC format)
-- **SPOC**: Marten van Sinderen
-- **dPKI DID**: `did:ebsi:zS6r8mbU5UjXh7rHK9W6vJ2`
+#### Saxion University of Applied Sciences (SAXION)
+- **Classical PKI Endpoint**: SUNET/SURF SaaS instance
+- **Decentralised PKI Endpoint**: `lspsaxion.saxion.nl`
+- **DID Implementation**: `did:ebsi:zZ97WmbVmSr6UpU5jb5X8HK`
+- **Dual Trust Status**: Full operational deployment
 
-**Saxion University of Applied Sciences (SAXION)**
-- **Focus**: Applied sciences and professional education
-- **Classical PKI**: 30 users, 120 credentials (SD-JWT format)
-- **dPKI**: 30 users, 90 credentials (W3C VC format)
-- **SPOC**: Franco de Vitta
-- **dPKI DID**: `did:ebsi:zZ97WmbVmSr6UpU5jb5X8HK`
+### Portugal Implementation
 
-#### Portugal (1 institution)
-**COFAC - Lusófona University (ULUSOFONA)**
-- **Focus**: Private international education
-- **Implementation Status**: Full infrastructure deployment (both trust models)
-- **SPOC**: Paulo Ferreira
-- **dPKI DID**: `did:ebsi:zrmS9sGhR5J6vHu2gzMkN8t`
+#### COFAC - Lusófona University (ULUSOFONA)
+- **Classical PKI Endpoint**: SUNET/SURF SaaS instance
+- **Decentralised PKI Endpoint**: `lspulusofona.ulusofona.pt`
+- **DID Implementation**: `did:ebsi:zrmS9sGhR5J6vHu2gzMkN8t`
+- **Dual Trust Status**: Complete dual infrastructure
 
-### Aggregate Implementation Impact
-- **Total Users**: 90 across both trust models
-- **Total Credentials**: 562 credentials across dual frameworks
-- **Classical PKI Credentials**: 292 (SD-JWT format)
-- **dPKI Credentials**: 270 (W3C VC format)
+## Implementation Benefits and Capabilities
 
-## User Experience Architecture
+### Maximum Flexibility
+**Multi-Modal Credential Support**
+- **SD-JWT Credentials**: Classical PKI-based selective disclosure tokens
+- **W3C Verifiable Credentials**: Standards-compliant verifiable credentials
+- **Dual Wallet Support**: Both wwWallet and EUDI Wallet compatibility
+- **Cross-Format Verification**: Support for diverse verifier requirements
 
-### Multi-Path User Journeys
-Pilot3 users have multiple interaction pathways available:
+### Comprehensive Trust Coverage
+**Universal Verification Compatibility**
+- **Traditional Systems**: Legacy PKI-based verification support
+- **Modern Systems**: Decentralised identity verification capabilities
+- **Hybrid Environments**: Mixed trust model support
+- **Future Systems**: Preparation for emerging standards and technologies
 
-#### Option 1: Classical PKI Path (Pilot1 Component)
-**Traditional Certificate-Based Experience**
-- **Authentication**: PKI certificate-based identity verification
-- **Credential Format**: SD-JWT with selective disclosure capabilities
-- **Verification**: Hierarchical trust chain validation
-- **User Interface**: wwWallet application for credential management
+### Risk Mitigation
+**Operational Resilience**
+- **Trust Model Redundancy**: Alternative trust pathways if one system fails
+- **Verification Fallback**: Multiple verification mechanisms available
+- **Technology Evolution**: Smooth transition as standards evolve
+- **Regulatory Flexibility**: Compliance with diverse regulatory requirements
 
-#### Option 2: Decentralised PKI Path (Pilot2 Component)
-**Next-Generation Digital Identity Experience**
-- **Authentication**: DID-based decentralised identity management
-- **Credential Format**: W3C Verifiable Credentials
-- **Verification**: Hybrid PKI + EBSI blockchain validation
-- **User Interface**: EUDI Wallet for credential storage and presentation
-
-#### Option 3: Hybrid Usage Pattern
-**Flexible Context-Appropriate Selection**
-- **Use Case Optimisation**: Select optimal trust model per interaction
-- **Verifier Compatibility**: Adapt to recipient system capabilities
-- **Personal Preference**: User choice based on comfort and familiarity
-- **Technical Constraints**: Fallback options for system limitations
-
-### Complete User Journey Coverage
-
-#### Universal Journey Support
-**From Pilot1 (Classical PKI)**
-- PKI-based user onboarding and authentication workflows
-- SD-JWT credential request and issuance procedures
-- Certificate-based credential verification processes
-- Cross-border PKI credential recognition mechanisms
-
-**From Pilot2 (Decentralised PKI)**
-- DID-based user onboarding and identity management
-- W3C VC credential request and issuance workflows
-- Decentralised credential verification procedures
-- EBSI-based cross-border credential recognition
-
-#### Integrated User Experience
-- **Unified Account Management**: Consistent user profiles across both systems
-- **Credential Portfolio**: Combined view of all credentials regardless of format
-- **Presentation Choice**: User selects appropriate credential format per context
-- **Seamless Transition**: Ability to move between trust models without friction
-
-## Comparative Technical Analysis
-
-### Infrastructure Implementation Comparison
-
-| Component | Classical PKI (Pilot1) | dPKI (Pilot2) |
-|-----------|------------------------|---------------|
-| **Platform Provider** | SUNET/SURF | ATOS/IZERTIS |
-| **Deployment Model** | SaaS | Dockerised |
-| **Wallet Technology** | wwWallet | EUDI Wallet |
-| **Credential Format** | SD-JWT | W3C VC |
-| **Trust Mechanism** | X.509 PKI only | Hybrid PKI + DID |
-| **Cross-Border Verification** | Limited | Full capability |
-| **Governance Layer** | Static | Dynamic |
-
-### User Journey Performance Analysis
-
-#### Successful Implementation Outcomes
-**Universal Completion Across Trust Models**
-- ✅ **Wallet Installation**: 100% success rate for both wallet types
-- ✅ **PID Retrieval**: Complete implementation across both trust approaches
-- ✅ **Educational ID Issuance**: Successful operation in both Classical PKI and dPKI
-- ✅ **Diploma Issuance**: Full implementation across both trust frameworks
-- ⚠️ **Verification Capabilities**: Classical PKI limited to integrity checks, dPKI offers full verification
-
-#### Performance and Limitation Analysis
-**Classical PKI Component Constraints**
-- **Verification Limitations**: No RP certificates available, preventing full cross-border verification
-- **Lifecycle Management**: Limited revocation and suspension capabilities
-- **Static Governance**: PKI certificates provide identity confirmation but not dynamic authorisation
-
-**dPKI Component Advantages**
-- **Complete Verification**: Full trust chain validation and cross-border recognition
-- **Dynamic Governance**: Real-time policy updates and trust management
-- **Future Compatibility**: Alignment with eIDAS 2.0 and EUDI wallet ecosystem
-
-## Implementation Guidance
+## Institutional Implementation Strategies
 
 ### For Educational Institutions
 
-#### Strategic Planning and Assessment
+#### Dual Assessment and Planning
 1. **Dual Infrastructure Assessment**: Evaluate capacity for managing both trust models
 2. **Use Case Analysis**: Determine optimal trust model for different institutional scenarios
 3. **Resource Allocation**: Plan technical and human resources for dual implementation
@@ -227,96 +165,73 @@ Pilot3 users have multiple interaction pathways available:
 
 ### Infrastructure Documentation (`/infrastructure`)
 - **Dual Trust Model Architecture**: Combined implementation specifications
-- **Classical PKI Setup**: Traditional certificate-based infrastructure
-- **dPKI Implementation**: Decentralised PKI deployment procedures
-- **Integration Guidelines**: Unified system management best practices
+- **Classical PKI Setup**: Traditional certificate-based infrastructure requirements
+- **Decentralised PKI Setup**: DID and blockchain integration procedures
+- **Cross-System Integration**: Unified management and operational procedures
 
-### Pilot Agent Documentation (`/PAs`)
-- **University of Twente Implementation**: Technical education dual trust model
-- **Saxion Applied Sciences Case**: Professional education implementation
-- **Lusófona International Education**: Private sector dual implementation
-- **Comparative Analysis**: Cross-institutional implementation insights
+### Piloting Agent Scenarios (`/PAs`)
+- **Netherlands Implementation Reports**: UTWENTE and SAXION deployment documentation
+- **Portugal Implementation Reports**: ULUSOFONA comprehensive implementation analysis
+- **Dual Trust Model Analysis**: Comparative assessment of both trust approaches
+- **Lessons Learned Documentation**: Best practices and implementation insights
 
 ### User Journey Documentation (`/userjourneys`)
-- **Combined User Journey Flows**: Integrated experience across both trust models
-- **Trust Model Selection Guidelines**: User guidance for optimal system choice
-- **Credential Format Guidance**: Understanding SD-JWT vs W3C VC applications
-- **Troubleshooting and Support**: Comprehensive user assistance procedures
+- **Dual System User Flows**: Combined classical and decentralised user journeys
+- **Trust Model Selection Guidance**: User decision-making support
+- **Cross-System Credential Management**: Unified credential lifecycle procedures
+- **Verification Workflow Options**: Multiple verification pathway documentation
 
-## Benefits and Value Proposition
+## Related Documentation
 
-### Maximum Flexibility and Compatibility
-- **Universal Verifier Support**: Compatibility with any verification system preference
-- **Regulatory Compliance**: Alignment with current and future regulatory requirements
-- **Technology Evolution**: Smooth transition pathway as standards evolve
-- **Risk Mitigation**: Reduced dependency on single trust model or technology
+### Cross-Reference Links
+- [**Piloting Status Tracker**](../procedures/piloting/piloting-status-tracker.md) - Comprehensive dual implementation status monitoring
+- [**Deployment Methodology**](../procedures/Deployment_methodology.md) - Combined implementation framework
+- [**Compliance Tracking**](../procedures/entities/compliance.md) - Dual compliance monitoring
+- [**Pilot1 Classical PKI**](../pilot1/README.md) - Classical PKI component specifications
+- [**Pilot2 Decentralised PKI**](../pilot2/README.md) - Decentralised PKI component specifications
 
-### Comprehensive User Choice
-- **Context-Appropriate Selection**: Optimal trust model for each use case
-- **User Preference**: Individual choice based on comfort and requirements
-- **Verifier Accommodation**: Ability to meet diverse verification system needs
-- **Future-Proof Experience**: Compatibility with evolving digital credential ecosystem
+### Technical Implementation Guides
+- [Infrastructure Architecture Overview](./infrastructure/README.md)
+- [Dual Trust Model Implementation](./infrastructure/dual-trust-implementation.md)
+- [Cross-System Integration Procedures](./infrastructure/cross-system-integration.md)
+- [Unified User Journey Templates](./userjourneys/README.md)
 
-### Institutional Strategic Advantages
-- **Complete Preparedness**: Readiness for any future regulatory or technological changes
-- **Market Leadership**: Demonstration of comprehensive digital credential capabilities
-- **Stakeholder Confidence**: Assurance of continued service regardless of technology evolution
-- **Innovation Platform**: Foundation for advanced credential system development
+## Operational Considerations
 
-## Success Metrics and Evaluation
+### Resource Requirements
+**Enhanced Technical Capability**
+- **Dual Infrastructure Maintenance**: Both PKI and dPKI system management
+- **Cross-System Expertise**: Technical knowledge of both trust models
+- **Operational Complexity**: Increased monitoring and support requirements
+- **Training Investment**: Comprehensive staff education across both systems
 
-### Technical Performance Assessment
-- **Dual System Uptime**: >99% availability across both trust models
-- **Cross-System Integration**: Seamless user experience between trust models
-- **Credential Interoperability**: Successful mapping between SD-JWT and W3C VC formats
-- **Performance Optimisation**: Comparable response times across both systems
-
-### User Experience Evaluation
-- **Trust Model Selection**: User preference patterns and decision factors
-- **System Satisfaction**: Comparative user experience across both trust models
-- **Learning Curve**: User adaptation time for dual system capabilities
-- **Support Requirements**: Technical assistance needs for complex implementation
-
-### Institutional Impact Analysis
-- **Implementation Complexity**: Resource requirements for dual trust model deployment
-- **Operational Efficiency**: Comparative administrative burden assessment
-- **Strategic Positioning**: Institutional readiness for future regulatory changes
-- **Innovation Enablement**: Advanced capability development opportunities
-
-## Future Development and Evolution
-
-### Short-term Enhancements
-- **Performance Optimisation**: Improved efficiency across both trust models
-- **User Interface Integration**: Enhanced unified experience across systems
-- **Credential Migration**: Tools for moving credentials between trust models
-- **Advanced Analytics**: Comprehensive usage and performance monitoring
-
-### Long-term Strategic Alignment
-- **Regulatory Evolution**: Adaptation to eIDAS 2.0 and future requirements
-- **Technology Convergence**: Integration of classical and decentralised approaches
-- **Global Interoperability**: Extension to international credential recognition
-- **Next-Generation Standards**: Preparation for emerging credential technologies
+### Strategic Benefits
+**Future-Proof Implementation**
+- **Technology Evolution Preparedness**: Ready for standards development
+- **Regulatory Flexibility**: Compliance with diverse requirements
+- **Stakeholder Accommodation**: Support for varied verification preferences
+- **Innovation Leadership**: Advanced implementation showcasing best practices
 
 ## Support and Resources
 
-### Comprehensive Technical Support
-- **SUNET/SURF Platform**: Classical PKI SaaS infrastructure support
-- **ATOS/IZERTIS Platform**: Decentralised PKI Dockerised solution support
-- **DC4EU Consortium**: Multi-partner technical collaboration and guidance
-- **Community Resources**: Peer support and knowledge sharing forums
+### Technical Support Network
+- **SUNET/SURF Classical PKI Support**: Traditional PKI infrastructure assistance
+- **ATOS/IZERTIS Decentralised PKI Support**: Modern dPKI implementation guidance
+- **DC4EU Project Office**: Overall coordination and strategic guidance
+- **Peer Institution Network**: Knowledge sharing among Pilot3 implementers
 
-### Specialised Training and Capacity Building
-- **Dual Trust Model Workshops**: Comprehensive implementation training
-- **User Experience Training**: End-user guidance for both systems
-- **Technical Integration Support**: Developer and administrator training
-- **Strategic Planning Assistance**: Institutional transformation guidance
+### Best Practices and Knowledge Sharing
+- **Dual Implementation Documentation**: Comprehensive technical guides
+- **Cross-System Integration Examples**: Practical implementation patterns
+- **Operational Procedures**: Day-to-day management and maintenance guidance
+- **User Experience Optimisation**: Combined system usability enhancement
+
+### Innovation and Development
+- **Standards Evolution Participation**: Active contribution to emerging standards
+- **Trust Model Research**: Advanced research into hybrid trust architectures
+- **Interoperability Enhancement**: Continuous improvement of cross-system compatibility
+- **European Digital Identity Leadership**: Contributing to EUDI ecosystem development
 
 ---
 
-**Contact Information:**
-- **Project Website**: https://www.dc4eu.eu
-- **Technical Documentation**: Comprehensive dual implementation guides
-- **Implementation Support**: Contact DC4EU consortium for specialised assistance
-- **Community Forums**: Access peer support and knowledge sharing
-
-*Pilot3 provides educational institutions with the most comprehensive and future-proof approach to digital credential implementation, ensuring compatibility with all current and anticipated future requirements whilst maximising user choice and institutional flexibility.*
+*For detailed implementation progress tracking and current status of both Classical PKI and Decentralised PKI components, please refer to the [Piloting Status Tracker](../procedures/piloting/piloting-status-tracker.md).*

@@ -8,6 +8,17 @@ Welcome to Pilot1 of the DC4EU Digital Student Records and Transcript Ledger (DS
 
 Pilot1 represents a pragmatic approach to digital credential implementation that leverages existing PKI infrastructure whilst introducing modern selective disclosure capabilities. This pilot provides educational institutions with a pathway to digital credentials that builds upon familiar certificate-based trust models whilst ensuring compliance with European digital identity standards.
 
+## Current Implementation Status
+
+For the latest implementation progress across all participating institutions, including DNS endpoint availability, certificate deployment status, and cross-border verification capabilities, please refer to the [**DC4EU Piloting Status Tracker**](../procedures/piloting/piloting-status-tracker.md).
+
+**Quick Status Overview:**
+- **Participating Countries**: Denmark, Finland, Netherlands, Norway, Sweden
+- **Total Institutions**: 5 organisations
+- **DNS Endpoint Status**: Limited (SaaS managed instances)
+- **X.509v3 Certificate Status**: Mixed implementation progress
+- **Scenarios Template Compliance**: 100% across all participants
+
 ## Technical Architecture
 
 ### Trust Model
@@ -37,67 +48,29 @@ Pilot1 prioritises accessible implementation through Software-as-a-Service deliv
 
 **SUNET/SURF SaaS Environment**
 - Pre-configured PKI infrastructure
-- Standardised issuer public keys for interoperability
-- Centralised trust management and coordination
-- Reduced technical barriers for institutional adoption
+- Standardised issuer public keys for cross-institutional compatibility
+- Managed certificate authorities and trust chain validation
+- Simplified deployment for educational institutions
 
-**Alternative National Solutions**
-- Support for national PKI implementations (e.g., Finnish DVV)
-- Integration with existing national digital identity systems
-- Flexibility for country-specific regulatory requirements
+**Institutional Benefits**
+- Reduced technical overhead for participating institutions
+- Standardised implementation approach across Nordic region
+- Collaborative infrastructure sharing among NRENs
+- Focused institutional effort on user experience and integration
 
-### User Experience Design
-**wwWallet Integration**
-- Familiar interface leveraging existing PKI user experience
-- Seamless credential storage and presentation
-- Cross-platform compatibility and accessibility
-- Support for multiple credential types and formats
+### Trust Chain Management
+**Certificate Hierarchy**
+1. **Root Certificate Authority**: SUNET/SURF managed CA
+2. **Intermediate CAs**: Regional or national certificate authorities
+3. **Entity Certificates**: Institutional issuer and relying party certificates
+4. **End-User Authentication**: Traditional PKI credential validation
 
-## Pilot Participants and Implementation
-
-### Nordic and Dutch Focus
-Pilot1 has been implemented across educational institutions in Northern Europe:
-
-**Participating Countries and Institutions:**
-- **Finland**: Finnish National Agency for Education (OPH)
-- **Netherlands**: Amsterdam University of Applied Sciences (AUAS)
-- **Denmark**: Danmarks Tekniske Universitet (DTU)
-- **Sweden**: Ladok Consortium
-- **Norway**: Sikt - Norwegian Agency for Shared Services in Education and Research
-
-### Implementation Scale
-- **Total Users Onboarded**: 125 across all institutions
-- **Credentials Issued**: 371 educational credentials
-- **Verification Scope**: Integrity checks and partial trust chain validation
-
-## Technical Specifications
-
-### Infrastructure Requirements
-
-#### For Issuing Institutions
-- **X.509v3 PKI Certificate**: Institutional issuer certificate
-- **Public Key Infrastructure**: Standard PKI management capabilities
-- **Integration APIs**: Connection to Student Information Systems
-- **SaaS Access**: SUNET/SURF environment or equivalent national solution
-
-#### For Verifying Institutions
-- **X.509v3 PMI Certificate**: Relying party certificate for verification
-- **Certificate Validation**: CRL and OCSP checking capabilities
-- **Verification Infrastructure**: PKI-based trust chain validation
-- **API Integration**: Connection to verification services
-
-### Supported Credential Types
-- **Educational ID**: Institutional identity credentials for students and staff
-- **Academic Diplomas**: Formal qualification certificates
-- **Transcripts of Records**: Academic achievement documentation
-- **Professional Qualifications**: Vocational and professional certifications
-
-## User Journey Flows
+## User Journey Documentation
 
 ### Credential Issuance Journey
-1. **User Onboarding**: PKI-based authentication and identity verification
-2. **Credential Request**: Initiation through institutional systems
-3. **Identity Verification**: PKI certificate-based authentication
+1. **User Authentication**: PKI certificate-based institutional login
+2. **Credential Request**: Student or staff initiates credential request
+3. **Identity Verification**: Institution validates user identity and entitlements
 4. **Credential Generation**: SD-JWT format credential creation
 5. **Wallet Delivery**: Secure transfer to wwWallet application
 6. **Storage Confirmation**: Verification of successful credential storage
@@ -170,94 +143,60 @@ Current implementation faces specific technical limitations:
 ### For Educational Institutions
 
 #### Assessment and Planning
-1. **Infrastructure Review**: Evaluate existing PKI capabilities
-2. **Integration Planning**: Assess Student Information System compatibility
-3. **Regulatory Alignment**: Ensure compliance with national requirements
-4. **User Community Preparation**: Plan staff and student onboarding
+1. **Infrastructure Assessment**: Review existing PKI infrastructure and integration capabilities
+2. **Stakeholder Engagement**: Identify key participants and user groups
+3. **Use Case Definition**: Define specific credential types and verification scenarios
+4. **Resource Planning**: Allocate technical and administrative resources
 
-#### Implementation Steps
-1. **Environment Setup**: Configure SUNET/SURF SaaS access or national equivalent
-2. **Certificate Provisioning**: Obtain necessary PKI certificates
-3. **System Integration**: Connect institutional systems to credential platform
-4. **Testing and Validation**: Conduct pilot testing with limited user groups
-5. **Production Deployment**: Scale to full institutional implementation
+#### Technical Implementation
+1. **SaaS Onboarding**: Register with SUNET/SURF test environment
+2. **Integration Development**: Implement institutional system integration
+3. **Certificate Configuration**: Configure PKI certificates and trust relationships
+4. **Testing and Validation**: Conduct comprehensive functionality testing
+
+#### Operational Deployment
+1. **User Onboarding**: Deploy user registration and wallet setup processes
+2. **Credential Issuance**: Begin controlled credential issuance to pilot users
+3. **Verification Testing**: Test verification workflows with partner institutions
+4. **Monitoring and Support**: Implement operational monitoring and user support
 
 ### For Technology Partners
 
-#### Technical Integration
-- **API Documentation**: RESTful services for credential operations
-- **SDK Availability**: Development libraries and integration tools
-- **Testing Frameworks**: Validation and compliance testing tools
-- **Support Resources**: Technical documentation and community forums
+#### Integration Requirements
+- SD-JWT processing capabilities
+- PKI certificate management systems
+- wwWallet compatibility and support
+- Classical PKI infrastructure maintenance
 
-## Success Metrics and Evaluation
+## Related Documentation
 
-### Technical Performance Indicators
-- **Credential Issuance Success Rate**: Target >95% successful issuance
-- **Verification Response Time**: <5 seconds for trust chain validation
-- **System Availability**: >99% uptime for critical services
-- **Error Rate**: <1% for credential operations
+### Cross-Reference Links
+- [**Piloting Status Tracker**](../procedures/piloting/piloting-status-tracker.md) - Current implementation status across all pilots
+- [**Deployment Methodology**](../procedures/Deployment_methodology.md) - Standardised implementation approach
+- [**Compliance Tracking**](../procedures/entities/compliance.md) - Regulatory compliance monitoring
+- [**Pilot2 Implementation**](../pilot2/README.md) - Decentralised PKI approach
+- [**Pilot3 Combined Approach**](../pilot3/README.md) - Dual trust model implementation
 
-### User Experience Metrics
-- **User Adoption Rate**: Percentage of eligible users onboarded
-- **User Satisfaction**: Feedback scores and usability assessments
-- **Support Request Volume**: Technical assistance requirements
-- **Training Effectiveness**: User competency development
-
-### Institutional Impact Assessment
-- **Administrative Efficiency**: Reduction in manual credential processing
-- **Cost Effectiveness**: Operational cost comparison with traditional methods
-- **Security Improvement**: Incident reduction and fraud prevention
-- **Compliance Achievement**: Regulatory requirement fulfilment
-
-## Future Development and Evolution
-
-### Short-term Enhancements
-- **Complete RP Certificate Infrastructure**: Enable full cross-border verification
-- **Enhanced Lifecycle Management**: Implement comprehensive revocation systems
-- **Extended Credential Types**: Support additional educational credential formats
-- **Performance Optimisation**: Improve response times and scalability
-
-### Long-term Strategic Alignment
-- **eIDAS 2.0 Preparation**: Evolution towards new regulatory requirements
-- **Hybrid Trust Models**: Integration pathways with decentralised approaches
-- **EUDI Wallet Compatibility**: Alignment with European digital wallet initiatives
-- **Cross-Pilot Interoperability**: Integration with Pilot2 capabilities
+### Technical Documentation
+- [Infrastructure Setup Guide](./infrastructure/README.md)
+- [PKI Certificate Management](./infrastructure/certificate-management.md)
+- [SD-JWT Implementation Specifications](./infrastructure/sd-jwt-processing.md)
+- [User Journey Templates](./userjourneys/README.md)
 
 ## Support and Resources
 
 ### Technical Support
-- **SUNET/SURF Technical Team**: SaaS platform support and maintenance
-- **DC4EU Project Team**: Implementation guidance and best practices
+- **SUNET/SURF Technical Team**: SaaS environment support and maintenance
+- **DC4EU Project Office**: Project coordination and guidance
 - **Community Forums**: Peer support and knowledge sharing
-- **Documentation Portal**: Comprehensive technical and operational guides
+- **Documentation Portal**: Comprehensive technical documentation
 
 ### Training and Capacity Building
-- **Technical Training**: PKI and SD-JWT implementation workshops
-- **Operational Training**: Credential management and verification procedures
-- **User Training**: End-user guidance for students and staff
-- **Leadership Briefings**: Strategic overview for institutional decision-makers
-
-## Compliance and Security
-
-### Regulatory Alignment
-- **eIDAS Compliance**: Current and future regulatory requirement satisfaction
-- **GDPR Implementation**: Data protection and privacy safeguards
-- **National Regulations**: Country-specific compliance requirements
-- **Educational Standards**: Alignment with academic quality frameworks
-
-### Security Framework
-- **PKI Security**: Certificate-based authentication and encryption
-- **Audit Trail**: Comprehensive logging and monitoring capabilities
-- **Incident Response**: Security event detection and response procedures
-- **Regular Assessment**: Ongoing security evaluation and improvement
+- **Implementation Workshops**: Regular training sessions for technical teams
+- **Best Practices Sharing**: Community-driven knowledge exchange
+- **User Experience Guidelines**: Support for institutional deployment teams
+- **Troubleshooting Resources**: Common issues and resolution procedures
 
 ---
 
-**Contact Information:**
-- **Project Website**: https://www.dc4eu.eu
-- **Technical Documentation**: Available through DC4EU project resources
-- **Implementation Support**: Contact your national education research network
-- **Community Support**: Access through DC4EU community channels
-
-*Pilot1 provides a proven pathway for educational institutions to begin their digital credential journey whilst leveraging existing PKI investments and expertise. The classical approach ensures compatibility with current systems whilst introducing modern selective disclosure capabilities essential for privacy-preserving credential management.*
+*For current implementation status and progress tracking across all DC4EU pilots, please refer to the [Piloting Status Tracker](../procedures/piloting/piloting-status-tracker.md).*
