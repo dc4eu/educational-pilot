@@ -126,7 +126,7 @@ For organisations requiring integration between traditional PKI infrastructure a
 ## Implementation Guidance
 
 ### **For All Relying Parties**
-[**Wallet Relying Party PKI Guidelines**](./wallet-relying-party-pki.md)  
+[**Wallet Relying Party PKI Guidelines**](./wrp_pki_page.md)  
 Comprehensive guide for credential verification, WRPAC/WRPRC implementation, and entitlements framework
 
 ---
@@ -141,17 +141,17 @@ Complete signing process using pure dPKI with EBSI, JAdES D-Zero profile impleme
 Step-by-step verification with practical code examples, tools, and troubleshooting
 
 #### Hybrid X.509-DID Implementation
-[**X.509-DID Binding Guide for Credential Issuers**](./x509-did-binding-guide.md)  
+[**X.509-DID Binding Guide for Credential Issuers**](./x509_did_binding_page.md)  
 Advanced hybrid approach combining traditional PKI with DID binding, EBSI integration workflows
 
 ---
 
 ### **Architecture Decision Support**
 
-[**Hybrid PKI Impact Analysis: X.509-DID vs Pure dPKI**](./hybrid-pki-impact-analysis.md)  
+[**Hybrid PKI Impact Analysis: X.509-DID vs Pure dPKI**](./hybrid_pki_impact.md)  
 **Essential reading before implementation**: Comprehensive comparison, performance impact analysis, migration strategies, and technical trade-offs
 
-[**Hybrid vs Pure dPKI: Key Differences and Impact**](./hybrid-vs-pure-dpki-differences.md)  
+[**Hybrid vs Pure dPKI: Key Differences and Impact**](./hybrid_vs_pure_dpki.md)  
 **Focused technical comparison**: Direct side-by-side analysis of implementation differences, code examples, and performance implications
 
 > **Implementation Recommendation**: Start with the Impact Analysis document to understand the technical and business implications of each approach, then review the Key Differences guide for specific implementation details, and finally follow the specific implementation guide for your chosen model.
