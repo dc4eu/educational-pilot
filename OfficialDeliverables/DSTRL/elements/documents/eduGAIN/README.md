@@ -181,7 +181,7 @@ DC4EU has successfully implemented multiple scenarios demonstrating how educatio
 
 **Scenario 1: Closed Ecosystem**
 - Internal credential issuance for institutional purposes
-- Minimal eIDAS2 compliance requirements
+- Minimal eIDAS2 compliance requirements, no EUDIW interaction
 - Suitable for basic educational identity needs
 
 **Scenario 2: Non-Qualified TSP Integration**
