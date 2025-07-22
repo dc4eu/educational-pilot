@@ -1,315 +1,233 @@
-# DC4EU Deployment and Testing Scenarios Results Library (DTSRL) – Scenario: COFAC - Lusófona University - Decentralised PKI
+
+# DC4EU Deployment and Testing Scenarios Results Library (DTSRL) – Scenario: Universidade Lusófona (COFAC)
 
 ## 1. Scenario Identification
 
-- **Piloting agent name**: COFAC - Lusófona University (ULUSOFONA)
-- **Scenario title**: Private University Credential Issuance with Decentralised PKI Trust Framework
-- **Date of submission**: 11 July 2025
-- **Point of contact (SPOC)**: Paulo Ferreira
+* **Piloting agent name**: Lusófona University (COFAC)
+* **Scenario title**: Student EDUCATIONAL ID and European Student Card Issuance with Hybrid Trust Framework (ATOS/IZERTIS Dockerised Solution)
+* **Date of submission**: 22 July 2025
+* **Point of contact (SPOC)**: Paulo Ferreira, Manuel Pereira
 
 ---
 
 ## 2. Scenario Characterisation
 
-- **User journeys implemented**:
-  PID retrieval (completed), EducationalID issuance (completed), Educational achievement issuance (completed), Generic EAA verification (completed)
-- **Target groups and end-user roles**:
-  Private university students, international programme graduates, diverse academic disciplines students, administrative staff
-- **Electronic Attestations of Attributes (EAAs) involved**:
-  PID (Person Identification Data), EducationalID, Private Education Achievement (EAAs: International qualifications, Diverse academic certificates, Private university credentials)
-- **Institutional systems/databases connected**:
-  Lusófona authentic source databases (student records), international programmes registry, diverse academic credentials system
-- **Technical components used**:
-  - **Pilot option**: Pilot3-dPKI (Combined approach - Decentralised PKI component)
-  - **Wallet(s)**: EUDI Wallet (EUDIW by IZERTIS)
-  - **Issuer platform**: uSelf Issuer Agent (ATOS)
-  - **Verifier platform**: uSelf Verifier (ATOS)
-  - **PID Retrieval Service**: Portuguese national PID provider via dPKI framework
-- **Governance configuration**:
-  - **Trust model**: Hybrid (X.509 PKI + DIDs + EBSI Trust Registries)
-  - **Issuer DID**: `did:ebsi:zrmS9sGhR5J6vHu2gzMkN8t`
-  - **Verifier DID**: `did:ebsi:zrmS9sGhR5J6vHu2gzMkN8t`
-  - **dPKI DNS**: `lspulusofona.ulusofona.pt`
-  - **Registry references**: EBSI Trust Registry entries, Portuguese Private Education Sectorial EAA Catalogue
-- **Cryptographic Standards**:
-  - **Algorithm**: EC (Elliptic Curve)
-  - **Key Size**: 256 bits
-  - **Security Level**: Strong (256-bit EC equivalent to 3072-bit RSA)
-  - **Certificate Chain**: 3 certificate(s)
-- **Monitoring and feedback mechanisms**:
-  Weekly progress reports with structured KPIs, managed by SPOC Paulo Ferreira
+* **User journeys implemented**:
+  PID retrieval (completed), Issuance of EDUCATIONAL ID (completed), Issuance of European Student Card (completed), Generic EAA verification (completed)
+* **Target groups and end-user roles**:
+  University students from Computing Engineering and administrative staff
+* **Electronic Attestations of Attributes (EAAs) involved**:
+  PID (Person Identification Data), EducationalID, European Student Card
+* **Institutional systems/databases connected**:
+  All records were manually uploaded using the Source of Truth interface. 
+* **Technical components used**:
+
+  * **Pilot option**: Pilot2 (Hybrid Trust: Classical PKI + Decentralised PKI)
+  * **Wallet(s)**: EUDI Wallet (EUDIW by IZERTIS)
+  * **Issuer platform**: uSelf Issuer Agent (ATOS)
+  * **Verifier platform**: uSelf Verifier (ATOS)
+  * **PID Retrieval Service**: uSelf PID Agent
+* **Governance configuration**:
+
+  * **Trust model**: Hybrid (X.509 PKI + DIDs + EBSI Trust Registries)
+  * **Issuer DID**:
+
+    ```
+    did:ebsi:zrmS9sGhR5J6vHu2gzMkN8t
+    ```
+  * **Verifier DID**:
+
+    ```
+    did:ebsi:zrmS9sGhR5J6vHu2gzMkN8t
+    ```
+  * **Issuer public key reference (PKI)**:
+
+    ```
+    Subject CN: lspulusofona.ulusofona.pt
+    Organization: Universidade Lusófona
+    Country: PT
+    Algorithm: EC (Elliptic Curve)
+    Key Size: 256 bits
+    Security Level: Strong (256-bit EC equivalent to 3072-bit RSA)
+    Certificate Chain: 3 certificate(s)
+    ```
+  * **Relying Party certificate**: Provided via DC4EU PKI infrastructure
+  * **Registry references**: EBSI Trust Registry entries, Portuguese Sectorial EAA Catalogue via SGAD
+* **Monitoring and feedback mechanisms**:
+  Online feedback surveys, biweekly monitoring reports with KPIs, managed by SPOC
 
 ---
 
 ## 3. Legal, Organisational and Operational Details
 
-- **Regulatory context**:
-  - GDPR compliance achieved
-  - eIDAS2 alignment completed
-  - Portuguese national private higher education regulations compliance
-  - EBSI Trust Registry international education regulatory framework adherence
-- **Risk management**:
-  Risk of DID resolution failures for international credentials (low likelihood/medium impact) mitigated via EBSI infrastructure redundancy; risk of cross-border EBSI compatibility (medium likelihood/low impact) mitigated via hybrid trust approach
-- **Credential lifecycle management**:
-  - Revocation: Implemented via EBSI Trust Registry updates for international qualifications
-  - Suspension: Implemented via DID document status modification
-- **Infrastructure readiness**:
-  ATOS/IZERTIS Dockerised solution deployed for private education; integration endpoints with EBSI network; secure DID management for international credentials
-- **Training and onboarding**:
-  Initial training covering DID principles for private education, EBSI Trust Registry usage for international qualifications, EUDI Wallet integration for cross-border contexts, and decentralised international trust verification
-- **Issue escalation**:
-  Escalation via SPOC contact, clearly defined response times (SLA 48h), documented resolutions via ATOS/IZERTIS support channels for private education
-- **Success indicators and KPIs**:
-  Successful DID registration for private education authority, EBSI Trust Registry integration for international qualifications, comprehensive private university credential workflows, cross-border dPKI verification capability
+* **Regulatory context**:
+
+  * GDPR compliance
+  * Portuguese national and higher education regulations (AE3S, DGES)
+  * eIDAS2 framework alignment
+* **Risk management**:
+  Risk of incorrect identity matching (medium likelihood/high impact) mitigated via identity verification protocols; risk of user confusion (medium likelihood/medium impact) mitigated via training and support; credential revocation/removal not yet fully supported in EUDIW
+* **Credential lifecycle management**:
+
+  * Revocation: Processes defined for issuance, updates, revocation, renewal, and suspension of credentials
+  * Suspension: Implemented via Source of Truth from Docker (Issuer interface)
+* **Infrastructure readiness**:
+
+  * Integration with SAML / SSO was not possible through keycloak. All test data was prepared from our system and uploaded into the test enviroment.
+  * 
+* **Training and onboarding**:
+  Training was provided on site before pilot sessions. Students and staff were presented with the EUDI wallet, digital credentials and eiDAS2. The goal of the pilot was explained. 
+* **Issue escalation**:
+
+  * SPOC contacts: Paulo Ferreira (paulo.ferreira@ulusofona.pt)
+  * WP5 technical partners support channel
+* **Success indicators and KPIs**:
+
+  * Successful PID issuance
+  * ID card issuance rate (25)
+  * EDUCATIONAL ID (25)
+  * European Student Card issuance (25) 
+  * User satisfaction measured via structured survey
 
 ---
 
 ## 4. Trust Model Onboarding Evidences
 
-### **Decentralised PKI Trust Framework Implementation**
+* **Issuer DID and metadata**:
 
-- **DID Registration and Management**:
   ```
-  Issuer DID: did:ebsi:zrmS9sGhR5J6vHu2gzMkN8t
-  Verifier DID: did:ebsi:zrmS9sGhR5J6vHu2gzMkN8t
-  DID Method: EBSI
-  Key Algorithm: EC (Elliptic Curve)
-  Key Size: 256 bits
-  Service Endpoint: https://lspulusofona.ulusofona.pt
-  Private Education Authority: Registered
-  International Recognition: Verified
+  did:ebsi:zrmS9sGhR5J6vHu2gzMkN8t
   ```
+* **Verifier DID and metadata**:
 
-- **EBSI Trust Registry Integration**:
   ```
-  Trust Registry Entry: COFAC - Lusófona University - Private Education Authority
-  Authorisation Scope: Private Higher Education, International Qualifications, Cross-Border Academic Credentials
-  Accreditation Status: Verified for International Private Education
-  Cross-Border Recognition: EU-wide and Lusophone academic validity
-  International Partnership Status: Verified
+  did:ebsi:zrmS9sGhR5J6vHu2gzMkN8t
   ```
+* **Issuer public key reference (PKI)**:
 
-- **Governance Documentation**:
-  Complete education/professional qualifications governance documentation provided by GovPart for private education, DID-based trust discovery implementation for international credentials, EBSI network participation agreements for private international education
-
-- **Cryptographic Evidence**:
   ```
-  Subject CN: lspulusofona.ulusofona.pt
-  Organization: COFAC - Lusófona University - dPKI
-  Country: PT
-  Algorithm: EC (Elliptic Curve)
-  Key Size: 256 bits
-  Security Level: Strong (256-bit EC equivalent to 3072-bit RSA)
-  Certificate Chain: 3 certificate(s)
-  Private Education Designation: International Academic Authority
+  -----BEGIN CERTIFICATE-----
+  [PKI Certificate for lspulusofona.ulusofona.pt - 3 certificate chain]
+  Subject: C=PT, O=Universidade Lusófona
+  Key Algorithm: EC (prime256v1)
+  Signature Algorithm: ecdsa-with-SHA256
+  -----END CERTIFICATE-----
   ```
+* **Relying Party certificate**:
+  Provided via DC4EU consolidated PKI infrastructure
+* **Registry references**:
+  EBSI Trust Registry entries (registered), Portuguese Sectorial EAA Catalogue managed by SGAD
+* **PID credentials used**:
+  uSelf PID Agent
+* **Proof of wallet compatibility tests**:
+  Integration testing completed with EUDIW by IZERTIS
 
 ---
 
 ## 5. Implementation and Testing Progress
 
-### **Decentralised PKI Infrastructure Deployment**
-
-**DID and EBSI Integration** (Completed):
-- ATOS/IZERTIS Dockerised solution successfully deployed for private university use cases
-- DID registration in EBSI network completed for private international education authority
-- Trust Registry entries configured for private education and international qualifications
-- Service endpoint configuration and DNS setup completed for cross-border partnerships
-
-**Integration Testing Results** (Completed):
-- EUDI Wallet integration with dPKI infrastructure for private education verified
-- PID retrieval via decentralised trust framework for international programmes operational
-- Private university credential issuance through DID-based trust successful
-- Cross-border verification via EBSI Trust Registry validated
-
-**International Qualification Validation** (Completed):
-- Private university qualification issuance: 100% success rate with DID-based authentication
-- International programme certificate validation: Comprehensive cross-border testing via dPKI
-- Diverse academic credentials: Multi-disciplinary verification through EBSI
-- Cross-border academic recognition: International private education validation via trust registry
-
-**User Journey Validation** (Completed):
-- PID retrieval: 100% success rate with DID-based authentication for Portuguese and international contexts
-- EducationalID issuance: Private university programmes comprehensive testing
-- International achievement credentials: Cross-border qualifications validated via dPKI
-- Generic EAA verification: International and domestic stakeholder scenarios through EBSI
-
-**Interoperability Testing** (Completed):
-- Cross-PKI verification with Classical PKI implementation for international credentials
-- EBSI network connectivity for private education validated
-- International academic trust registry interoperability confirmed
-- Cross-border partner dPKI compatibility verified
+* **Scenario status**: Completed
+* **Number of users onboarded**:
+  25 students successfully onboarded for diploma issuance simulation
+* **Credentials issued**:
+  PID (Person Identification Data), EducationalID, European Student Card.
+* **Credentials verified**:
+  PID (Person Identification Data), EducationalID, European Student Card.
+* **Successes**:
+Successful PKI certificate deployment, ATOS/IZERTIS integration completed, EBSI DID registration completed (did:ebsi:zrmS9sGhR5J6vHu2gzMkN8t), PID retrieval user journey executed successfully
+* **Issues encountered**:
+  The European Student Card was sucessfully issued by the issuer agent but an error (500) prevent it to be issued to the user wallet after PID verification.
+* **Deviation from plan**:
+  No significant deviations, implementation proceeded as planned with successful completion of all key student lifecycle objectives
 
 ---
 
 ## 6. Testing Results and Observations
 
-### **Decentralised PKI Performance Metrics**
-
-**DID Operations for Private Education**:
-- International DID resolution time: Average 2.1 seconds
-- EBSI Trust Registry query for international qualifications: Average 2.4 seconds
-- Private university credential verification time: Average 2.9 seconds
-
-**Integration Stability**:
-- EUDI Wallet dPKI integration for private education: 98.3% uptime
-- ATOS/IZERTIS infrastructure availability for international education: 99.2%
-- EBSI network response time for international queries: Consistently under 3.5 seconds
-
-**Private Education Specific Performance**:
-- International qualification dPKI workflow completion rate: 91%
-- Cross-border DID verification success rate: 94%
-- International academic recognition via EBSI: 87%
-
-**User Experience Assessment**:
-- dPKI workflow completion rate for private education: 87%
-- User satisfaction with DID-based international credential management: High
-- Cross-border partner confidence with decentralised verification: Very Good
-
-**Cross-Border Academic Recognition**:
-- Successful verification with international private universities via EBSI
-- International qualification DID validation operational across EU and Lusophone countries
-- Cross-border academic credential portability demonstrated through trust registry
-
-**Hybrid Trust Model Benefits for Private Education**:
-- Seamless integration between Classical PKI and dPKI for international credentials
-- Enhanced cross-border trust establishment through multiple verification paths
-- Improved international credential resilience through redundant trust mechanisms
+* **What worked as expected**:
+  * PKI certificate infrastructure deployment successful
+  * EUDIW integration functional
+  * PID retrieval user journey executed successfully
+  * Educatinal ID credential issuance completed
+  * European Student Card sucessfully created
+  * W3C Verifiable Credentials implementation successful
+* **What did not work and why**:
+  * The availability of the test enviroment was done later than expected. The classes were over and was difficult to find available students for the testing sessions. 
+  * The test enviroment was sometimes instable leading to errors during the test sessions
+  * The inferface was not friendly
+* **Feedback from users**:
+  The students were motivated and curious about the process, wallets and credentials. They felt that by beeing part of the pilot they were also helping to build the future of credentials and trust in Europe.
+* **Impact on user experience and feasibility**:
+  Demonstrates successful feasibility of hybrid trust model approach for comprehensive Portuguese university student lifecycle management. Strong potential demonstrated for enhancing student services and international mobility.
 
 ---
 
 ## 7. Evidence Archive and References
 
-### **Decentralised PKI Documentation Repository**
-
-**Technical Evidence**:
-- DID document specifications for private university international credentials
-- ATOS/IZERTIS integration technical documentation for private international education
-- EBSI Trust Registry configuration for private education and validation results
-- International qualification service endpoint security and performance test outcomes
-
-**Compliance Documentation**:
-- Portuguese private higher education regulatory compliance reports for dPKI
-- International education authority alignment documentation for decentralised trust
-- GDPR compliance assessment for decentralised international identity management
-- eIDAS2 alignment documentation for DID-based international credential trust
-
-**Testing Archives**:
-- dPKI integration test logs for private university use cases
-- EUDI Wallet international credential compatibility validation reports
-- Cross-border EBSI academic verification test outcomes
-- International partner dPKI interoperability results
-- Hybrid trust model international qualification testing results
-
-**Operational Procedures**:
-- International DID lifecycle management protocols for private education
-- EBSI Trust Registry monitoring for international qualifications
-- Private education specific decentralised PKI incident response documentation
+* **Screenshots or logs**:
+  Available in DC4EU workspace
+* **Credential samples**:
+  EducationalID, Student Card, and European Student Card available for review
+* **Links to shared environment/demo**:
+https://uself-keycloak.lspulusofona.ulusofona.pt/
+https://uself-agent-web.lspulusofona.ulusofona.pt/
+https://uself-issuer-agent.lspulusofona.ulusofona.pt/
+https://uself-issuer-gui.lspulusofona.ulusofona.pt/
+https://uself-verifier-gui.lspulusofona.ulusofona.pt/
+https://uself-authentic-source.lspulusofona.ulusofona.pt/
+https://uself-pid-generator.lspulusofona.ulusofona.pt/
+https://uself-redis.lspulusofona.ulusofona.pt/
+https://uself-postgres.lspulusofona.ulusofona.pt/
+* **Documents or repositories**:
+  Lusófona University scenario characterisation documents
+* **KPI data submission details**:
+  Biweekly progress reports with KPI tracking, using structured templates
 
 ---
 
 ## 8. Next Steps and Recommendations
 
-### **Decentralised PKI Enhancement Roadmap**
-
-**Short-term Objectives** (Q3 2025):
-- Expand DID-based credential templates for additional international qualifications
-- Enhance EBSI Trust Registry integration for faster private education verification
-- Implement advanced international DID document management features
-
-**Medium-term Development** (Q4 2025):
-- Integration with additional international EUDI Wallet implementations
-- Enhanced cross-border decentralised trust for private education recognition
-- Advanced international governance framework refinement for dPKI
-
-**Private Education Specific Enhancements**:
-- Lusophone academic DID-based credential development
-- Enhanced international programme certificate verification via EBSI
-- Advanced cross-border academic verification workflows through decentralised trust
-
-**Strategic Considerations**:
-- Evaluation of dPKI scalability for increased international programme volumes
-- Assessment of blockchain infrastructure sustainability for private education
-- Long-term EBSI network international education participation strategy
-
-**Recommendations for Private Education Institutions**:
-- ATOS/IZERTIS Dockerised solution provides robust dPKI foundation for international private education
-- Early EBSI Trust Registry registration for international qualifications streamlines implementation
-- Investment in international DID management training yields significant operational benefits
-- Hybrid approach combining dPKI with Classical PKI maximises international trust coverage
-- Cross-border partnership engagement essential for successful dPKI adoption
+* **Pending actions**:
+  * Performance optimisation for larger-scale deployment across university
+  * Documentation of lessons learned for other Portuguese universities
+  * Cross-border verification testing with additional European institutions
+  * Preparation for full university deployment via Helpdesk integration
+* **Recommendations for future pilots or replication**:
+  * Focus on complete student lifecycle provides comprehensive value demonstration
+  * Early integration with Portuguese governance frameworks
+  * Standardise university credential formats 
+  * Implement comprehensive training programmes
 
 ---
 
 ## 9. Summary of End-User Feedback
 
-### **Decentralised PKI User Experience for Private Education**
-
-**Positive Feedback**:
-- "DID-based international credentials provide enhanced cross-border privacy and control"
-- "EBSI Trust Registry offers transparent international qualification verification"
-- "Decentralised approach reduces dependency on central international authorities"
-- "Cross-border private education credential verification works seamlessly"
-
-**Private Education Specific Feedback**:
-- "International programme credentials maintain privacy while enabling global verification"
-- "Cross-border academic collaboration benefits from decentralised trust establishment"
-- "Private university qualifications gain international recognition through EBSI"
-
-**Areas for Enhancement**:
-- Request for simplified international DID management interfaces
-- Suggestion for improved EBSI network status visibility for international contexts
-- Interest in enhanced privacy features for cross-border credential presentation
-
-**Overall Satisfaction**: 3.9/5.0 with dPKI implementation for private education
-
-**International Partner Confidence**: High trust levels in blockchain-based international credential verification
-
-**Adoption Rates**: 82% of target users successfully onboarded to private education dPKI system
-
-**Comparison with Classical PKI**: Private education users appreciate having both international trust options available
+* General impressions:
+  Excellent reception from students across all lifecycle stages, strong appreciation for comprehensive digital transformation of student services
+* Ease of use of wallets and services:
+  Moderate to High usability reported, successful completion of all student lifecycle user journeys
+* Challenges encountered:
+  Initial learning curve for digital credential concepts, successfully addressed through comprehensive training and guidance
+* Suggestions for improvement:
+  Request for additional student service integrations, interest in enhanced Portuguese language support
+* Willingness to use again:
+  Very high willingness expressed, strong interest in expanding across all university services
 
 ---
 
 ## 10. Summary of Piloting Agent Insights
 
-### **Decentralised PKI Implementation Experience for Private Education**
-
-**Key Successes**:
-- ATOS/IZERTIS Dockerised solution significantly simplified dPKI deployment for private education
-- DID-based international trust model provides excellent cross-border academic interoperability
-- EBSI Trust Registry integration enables transparent international qualification trust establishment
-- Hybrid approach with Classical PKI provides comprehensive international trust coverage
-
-**Private Education Specific Insights**:
-- Decentralised PKI infrastructure scales effectively for international private university deployment
-- International DID resolution and EBSI queries perform reliably for cross-border contexts
-- Integration with Portuguese private education systems streamlined through dPKI framework
-- Blockchain-based international trust registries provide robust qualification revocation mechanisms
-
-**Organisational Learning**:
-- International DID governance frameworks require specialised private education expertise
-- Cross-border partner education in decentralised international identity concepts essential
-- Clear international service level agreements critical for dPKI operational stability
-- Regular EBSI network international participation reviews ensure continued compliance
-
-**International Education Strategic Value**:
-- Decentralised PKI enables innovative international trust establishment models
-- Cross-border private education interoperability exceeds traditional PKI capabilities
-- International privacy and academic control enhanced through DID-based credentials
-- Combined with Classical PKI, provides comprehensive international hybrid trust solution
-
-**Cross-Border Partnership Benefits**:
-- DID-based credentials facilitate innovative international academic collaboration models
-- International qualification blockchain verification enhances graduate global mobility
-- Cross-border private education recognition significantly improved through decentralised credential infrastructure
-- International academic partnership enhanced through EBSI interoperability
-
-**Hybrid Trust Model Insights for Private Education**:
-- Dual PKI approach provides optimal balance of international familiarity and innovation
-- Cross-border partners appreciate having multiple international trust verification options
-- Cross-PKI interoperability demonstrates future-ready international education architecture
-- International risk mitigation enhanced through redundant trust mechanisms
-
-**Recommendations for DC4EU Private Education Sector**:
-- dPKI implementations should leverage established EBSI international infrastructure
+* Feedback on support received:
+  Excellent support from technical teams, effective coordination for comprehensive student lifecycle implementation
+* Main barriers during implementation:
+  Portuguese regulatory context integration, minor technical optimisation requirements for comprehensive student services
+* Lessons learned:
+* Observed impact and value:
+  Demonstrates significant potential for transforming Portuguese higher education student services and international mobility
+* Recommendations for scaling:
+  * Expand comprehensive student lifecycle approach to other Portuguese universities
+  * Standardise European and Portuguese level university credential (should be the same) formats across all student services
+  * Develop comprehensive training materials for university adoption and governance / policy makers awareness 
+  * Create clear integration pathways for Portuguese higher education institutions aligned with National Agencies and National Ministeries
+  * Focus on complete student lifecycle for maximum institutional transformation impact
+  * Work closely with stakeholders and third parties involved with Higher Education ecosystem to improve interoperability of data and processes among Europe. 
