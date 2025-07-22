@@ -14,15 +14,18 @@
 - **User journeys implemented**:
   - Wallet installation
   - PID issuance (SD-JWT)
-  - EducationalID issuance
+  - EHIC issuance
   - Diploma issuance
-  - QR-based verification (integrity checks only)
+  - Micocredential issuance
+  - QR-based verification of all EAA's, including selective disclosure
 - **Target groups and end-user roles**:
   - Students (approx. 25 pilot users)
   - Staff involved in credential management
 - **Electronic Attestations of Attributes (EAAs) involved**:
-  - EducationalID
+  - PID
   - Diploma
+  - Microcredential
+  - EHIC
 - **Institutional systems/databases connected**:
   - None (remote SaaS issuance)
 - **Technical components used**:
@@ -40,7 +43,7 @@
   - **Relying Party certificate**: Not available (cross-border verification not implemented)
   - **Decentralised Identifiers (DIDs)**: Not applicable
 - **Monitoring and feedback mechanisms**:
-  - Weekly progress updates to WP5
+  - Weekly progress updates to WP5, filled in readyness tracker, filled in KPI results
 
 ---
 
@@ -50,8 +53,7 @@
   - GDPR compliance
   - Dutch higher education regulations
 - **Risk management**:
-  - Lifecycle out of scope
-  - No cross-border verification
+  - availability/performance SaaS solution + effect on perceived reliability of wallet, feasability end-users for testsessions.
 - **Credential lifecycle management**:
   - Revocation: Not implemented (not provided by WP7)
   - Suspension: Not implemented (not provided by WP7)
@@ -84,28 +86,29 @@
 - **Number of users onboarded**:\
   53 students
 - **Credentials issued**:\
-  224 educational credentials
+  324 educational credentials
 - **Credentials verified**:\
-  114 Integrity checks only
+  114 credentials verified in SaaS testenvironment (amount lower then amount issued, only because lack of time)
 - **Successes**:
-  - Smooth issuance process
+  - activating process wallet, Smooth issuance and verification process after initial hickups, functionality of verification for both student and institutions, positive about possibility of selective disclosure in verification process
 - **Issues encountered**:
-  - No RP certificate provisioned
+  - technical and user experience challenges (slow performance)
+  - usability limited (lack of visual guidance)
 - **Deviation from plan**:
-  - Verification limited to integrity checks
+  - delay in piloting with the result of cancelling 6 testsessions; adding EHIC; having to skip both EducationalID and revoking process of credentials as those services were not available
 
 ---
 
 ## 6. Testing Results and Observations
 
 - **What worked as expected**:
-  - Credential issuance
+  - after initial hickups, most features worked as planned: credential issuance, activating wallets, verification process, and selective disclosure in verif process (above expectations) within the SaaS environment of WP7
 - **What did not work and why**:
-  - No cross-border verification due to lack of RP certificates
+  - revocation process did not work as it was not available in the interop lab, the same goes for EducationalID
 - **Feedback from users**:
-  - Positive about simplicity
+- Positive about simplicity, selective disclosure and the idea behind this testwallet.
 - **Impact on user experience and feasibility**:
-  - Verification limited
+  - users recommending improvements in performance, clarity, and accessibility as they believe in the principle of the wwwallet and digital credentials
 
 ---
 
@@ -127,27 +130,28 @@
 - **Pending actions**:\
   None
 - **Recommendations**:
-  - Ensure RP certificates are available in future pilots
+ - Improvements in performance and usability (fit for purpose) are essential to the success of EUDI-wallets. 
+ - Recommendations for future pilots or replication: higher performance and UX-levels before starting testphase; planning testmaterials more timely. Changes proposed to methodology or components: improved survey end-users, based on industry standard questionnaires concerning UX.
 
 ---
 
 ## 9. Summary of End-User Feedback
 
 - General impressions: Positive
-- Ease of use: High
-- Challenges: None reported
-- Suggestions: Enable full verification
+- Ease of use: medium to high after initial hickups
+- Challenges: None 
+- Suggestions: Enable revoking of credentials; improve usability (tool-tips, explaining the ecosystem behind (what happens with my data, where am i in the process))
 - Willingness to use again: Yes
 
 ---
 
 ## 10. Summary of Piloting Agent Insights
 
-- Feedback: Support from SURF was sufficient
-- Barriers: No RP certificate available
-- Lessons: Verification scope to be planned early
-- Observed impact: Clear demonstration of issuance
-- Recommendations: Clarify verification requirements at start
+- Feedback: Support from SURF and WP7 was more then sufficient and quick
+- Barriers: planning issues
+- Lessons: testmaterials to be planned early
+- Observed impact: Clear demonstration of issuance and verification process, including selective disclosure
+- Recommendations: timely planning of testmaterials and environment
 
 ---
 
