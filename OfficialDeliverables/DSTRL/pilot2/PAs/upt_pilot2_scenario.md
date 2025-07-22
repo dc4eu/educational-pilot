@@ -14,9 +14,9 @@
 * **User journeys implemented**:
   PID retrieval (completed), Onboarding in education, EducationalID issuance (completed), Educational achievement issuance (completed), Generic EAA verification (completed)
 * **Target groups and end-user roles**:
-  10 graduate students who have received their BSc diploma from UPT, academic administrative staff, registry office personnel
+  10 students who have completed a PhD Summer School at UPT
 * **Electronic Attestations of Attributes (EAAs) involved**:
-  PID (Person Identification Data), EducationalID, Educational Achievement (EAA: Diploma Supplement)
+  PID (Person Identification Data), EducationalID, Educational Achievement (EAA: Micro-credential)
 * **Institutional systems/databases connected**:
   UPT authentic source databases (academic records), identity verification system, student information system
 * **Technical components used**:
@@ -25,7 +25,7 @@
   * **Wallet(s)**: EUDI Wallet (EUDIW by IZERTIS)
   * **Issuer platform**: uSelf Issuer Agent (ATOS)
   * **Verifier platform**: uSelf Verifier (ATOS)
-  * **PID Retrieval Service**: Romanian national PID provider integration
+  * **PID Retrieval Service**: uSelf PID Generator
 * **Governance configuration**:
 
   * **Trust model**: Hybrid (X.509 PKI + DIDs + EBSI Trust Registries)
@@ -60,28 +60,28 @@
 ## 3. Legal, Organisational and Operational Details
 
 * **Regulatory context**:
-
   * GDPR compliance
   * eIDAS2 alignment and regulation
   * Romanian national higher education regulations
 * **Risk management**:
-  Risk of incorrect identity matching (medium likelihood/high impact) mitigated via identity verification protocols; risk of user confusion (medium likelihood/medium impact) mitigated via training and support
-* **Credential lifecycle management**:
+  * Risk of incorrect identity matching (medium likelihood/high impact) mitigated via identity verification protocols; risk of user confusion (medium likelihood/medium impact) mitigated via training and support
 
+* **Credential lifecycle management**:
   * Revocation: Implemented via EBSI Trust Registry
   * Suspension: Implemented via institutional controls
-* **Infrastructure readiness**:
 
+* **Infrastructure readiness**:
   * Test environment operational with ATOS/IZERTIS integration
   * Production readiness: Achieved
-* **Training and onboarding**:
-  10 graduate students and approximately 3 administrative staff trained
-* **Issue escalation**:
 
+* **Training and onboarding**:
+  10 students and approximately 3 administrative staff trained
+
+* **Issue escalation**:
   * SPOC contact: Diana Andone
   * Clearly defined response times and documented resolutions via SGAD
-* **Success indicators and KPIs**:
 
+* **Success indicators and KPIs**:
   * Successful onboarding completion rate
   * EAA issuance rate
   * EAA verification success rate
@@ -126,11 +126,11 @@
 
 * **Scenario status**: Completed
 * **Number of users onboarded**:
-  10 graduate students with BSc diplomas successfully onboarded
+  10 students who have completed a PhD Summer School at UPT
 * **Credentials issued**:
-  PID (Person Identification Data), EducationalID, Educational Achievement (Diploma Supplement)
+  PID (Person Identification Data), EducationalID, Educational Achievement (Micro-credential)
 * **Credentials verified**:
-  PID verification completed during PID retrieval user journey, EducationalID verified, Educational Achievement (Diploma Supplement) verified
+  PID verification completed during PID retrieval user journey, EducationalID verified, Educational Achievement (Micro-credential) verified
 * **Successes**:
   Successful PKI certificate deployment, ATOS/IZERTIS integration completed, EBSI DID registration completed (did:ebsi:ztoPE2wdSYBuzGt7r8g5wAX), PID retrieval user journey executed successfully, comprehensive educational credential issuance and verification workflows demonstrated, effective graduate student engagement
 * **Issues encountered**:
@@ -148,7 +148,7 @@
   * IZERTIS wallet integration functional
   * PID retrieval user journey executed successfully
   * EducationalID issuance and verification completed
-  * Educational Achievement (Diploma Supplement) issuance and verification completed
+  * Educational Achievement (Micro-credential) issuance and verification completed
   * Graduate student onboarding process effective
   * W3C Verifiable Credentials implementation successful
   * Romanian regulatory compliance achieved
@@ -156,7 +156,7 @@
   * Minor performance considerations for scaling beyond pilot scope
   * Some initial user familiarisation requirements for digital credential concepts
 * **Feedback from users**:
-  Positive response from graduate students, particular appreciation for Diploma Supplement digitisation and potential for international academic mobility
+  Positive response from graduate students, particular appreciation for Micro-credential digitisation and potential for international academic mobility
 * **Impact on user experience and feasibility**:
   Demonstrates successful feasibility of hybrid trust model approach for Romanian technical university context. Strong potential demonstrated for enhancing graduate student mobility and credential recognition across Europe.
 
@@ -167,7 +167,7 @@
 * **Screenshots or logs**:
   Available in DC4EU workspace: Romania-UPT folder
 * **Credential samples**:
-  EducationalID and Diploma Supplement samples (redacted) available for review
+  EducationalID and Micro-credential samples (redacted) available for review
 * **Links to shared environment/demo**:
   https://lspupt.upt.ro (DNS endpoint operational)
 * **Documents or repositories**:
@@ -187,7 +187,7 @@
 * **Recommendations for future pilots or replication**:
   * Focus on graduate students provides clear value demonstration for international mobility
   * Early integration with Romanian higher education regulatory framework
-  * Standardise Diploma Supplement digital formats across European technical universities
+  * Standardise Micro-credential digital formats across European technical universities
   * Implement comprehensive training programmes for technical university contexts
 
 ---
@@ -214,7 +214,7 @@
 * Main barriers during implementation:
   Romanian regulatory context integration, minor technical optimisation requirements for technical university context
 * Lessons learned:
-  Value of focusing on graduate students for international mobility use cases, importance of Diploma Supplement digitisation, effectiveness of ATOS/IZERTIS solution for technical university environments
+  Value of focusing on graduate students for international mobility use cases, importance of Micro-credential digitisation, effectiveness of ATOS/IZERTIS solution for technical university environments
 * Observed impact and value:
   Demonstrates significant potential for transforming Romanian technical higher education credential management, strong foundation for enhancing European technical education mobility
 * Recommendations for scaling:
