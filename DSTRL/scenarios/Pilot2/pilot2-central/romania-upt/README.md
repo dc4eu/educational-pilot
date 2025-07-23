@@ -17,7 +17,7 @@ his scenario shows how Politehnica University of Timisoara issues and verifies m
 
 ### 2. micro-credential issuance
 
-* student registry exports microicredential metadata from the UPT University system.
+* student registry exports micro-credential metadata from the UPT University system.
 * participants review data in the wallet.
 * issuer API signs and stores MC eaas in wallets.
 
@@ -45,9 +45,9 @@ his scenario shows how Politehnica University of Timisoara issues and verifies m
 | **infrastructure readiness**             | Dockerized services available in the UPT Cloud |
 | **onboarding and training plan**         | wallet quick‑start PDF, short webinar |
 | **progress tracking and reporting plan** | weekly dg‑eac report |
-| **issue escalation procedure**           | IT service desk `helpdesk@upt.ro`, escalated to credentials lead Andra Popescu within 4 hours |
+| **issue escalation procedure**           | IT service desk `helpdesk@upt.ro`, escalated to credentials lead Diana Andone within 8 hours |
 | **success metrics and kpis**             | See table below |
-| **spoc contact and validation status**   | Andra Popescu, credentials lead, [a.popescu@upt.ro](mailto:a.popescu@upt.ro); compliance review 25 july 2025 |
+| **spoc contact and validation status**   | Diana Andone, credentials lead, [diana.andone@upt.ro](mailto:diana.andone@upt.ro); compliance review 25 july 2025 |
 
 ### success metrics and kpis
 

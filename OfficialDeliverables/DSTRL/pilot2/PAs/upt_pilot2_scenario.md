@@ -78,7 +78,7 @@
   28 students and 3 administrative staff trained
 
 * **Issue escalation**:
-  * SPOC contact: Diana Andone diana.andone@upt.ro mailto:diana.andone@upt.ro 
+  * SPOC contact: Diana Andone [diana.andone@upt.ro](mailto:diana.andone@upt.ro)
   * Clearly defined response times and documented resolutions via SGAD
 
 * **Success indicators and KPIs**:
@@ -131,7 +131,7 @@
   PID (Person Identification Data), EducationalID, Educational Achievement (Micro-credential)
 * **Credentials verified**:
   PID verification completed during PID retrieval user journey, EducationalID verified, Educational Achievement (Micro-credential) verified
-  10 users sucessfully verified the credentials
+  11 users successfully verified the credentials
 * **Successes**:
   Successful PKI certificate deployment, ATOS/IZERTIS integration completed, EBSI DID registration completed (did:ebsi:ztoPE2wdSYBuzGt7r8g5wAX), PID retrieval user journey executed successfully, comprehensive educational credential issuance and verification workflows demonstrated, effective graduate student engagement
 * **Issues encountered**:
@@ -157,7 +157,7 @@
   * Minor performance considerations for scaling beyond pilot scope
   * Some initial user familiarisation requirements for digital credential concepts
 * **Feedback from users**:
-  Positive response from graduate students, particular appreciation for Micro-credential digitisation and potential for international academic mobility, negative for teh complicated method for those with minimum digital skills, without training only a few could have succeded
+  Positive response from graduate students, particular appreciation for Micro-credential digitisation and potential for international academic mobility, negative for the complicated method for those with minimum digital skills, without training only a few could have succeeded
 * **Impact on user experience and feasibility**:
   Demonstrates successful feasibility of hybrid trust model approach for Romanian technical university context. Strong potential demonstrated for enhancing graduate student mobility and credential recognition across Europe.
 
@@ -166,7 +166,9 @@
 ## 7. Evidence Archive and References
 
 * **Screenshots or logs**:
-  Available in DC4EU workspace: Romania-UPT folder
+  Available at the following links: 
+  * [DC4EU Workspace romania-upt folder](../../../../DSTRL/scenarios/Pilot2/pilot2-central/romania-upt/)
+  * UPT proofs (larger files) - upon request
 * **Credential samples**:
   EducationalID and Micro-credential samples (redacted) available for review
 * **Links to shared environment/demo**:
@@ -196,7 +198,7 @@
 ## 9. Summary of End-User Feedback
 
 * General impressions:
-  Very positive reception from graduate students, strong appreciation for digital transformation of academic credentials
+  Very positive reception from students, strong appreciation for digital transformation of academic credentials
 * Ease of use of wallets and services:
   High usability reported, successful completion of all educational credential user journeys
 * Challenges encountered:
@@ -215,7 +217,7 @@
 * Main barriers during implementation:
   Romanian regulatory context integration, minor technical optimisation requirements for technical university context
 * Lessons learned:
-  Value of focusing on graduate students for international mobility use cases, importance of Micro-credential digitisation, effectiveness of ATOS/IZERTIS solution for technical university environments
+  Value of focusing on students for international mobility use cases, importance of Micro-credential digitisation, effectiveness of ATOS/IZERTIS solution for technical university environments
 * Observed impact and value:
   Demonstrates significant potential for transforming Romanian technical higher education credential management, strong foundation for enhancing European technical education mobility
 * Recommendations for scaling:
