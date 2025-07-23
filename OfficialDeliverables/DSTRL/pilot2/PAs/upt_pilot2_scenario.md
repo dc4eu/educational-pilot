@@ -4,7 +4,7 @@
 
 * **Piloting agent name**: Politehnica University of Timisoara (UPT)
 * **Scenario title**: Educational Credential Issuance and Verification with Hybrid Trust Framework (ATOS/IZERTIS Solution)
-* **Date of submission**: 11 July 2025
+* **Date of submission**: 23 July 2025
 * **Point of contact (SPOC)**: Diana Andone
 
 ---
@@ -14,7 +14,7 @@
 * **User journeys implemented**:
   PID retrieval (completed), Onboarding in education, EducationalID issuance (completed), Educational achievement issuance (completed), Generic EAA verification (completed)
 * **Target groups and end-user roles**:
-  10 students who have completed a PhD Summer School at UPT
+  28 students who have completed all the activities in the E³UDRES² – Ent-r-e-novators PhD Summer School at UPT and agreed to the GDPR and the EBSI information and done the minimum training
 * **Electronic Attestations of Attributes (EAAs) involved**:
   PID (Person Identification Data), EducationalID, Educational Achievement (EAA: Micro-credential)
 * **Institutional systems/databases connected**:
@@ -75,10 +75,10 @@
   * Production readiness: Achieved
 
 * **Training and onboarding**:
-  10 students and approximately 3 administrative staff trained
+  28 students and 3 administrative staff trained
 
 * **Issue escalation**:
-  * SPOC contact: Diana Andone
+  * SPOC contact: Diana Andone diana.andone@upt.ro mailto:diana.andone@upt.ro 
   * Clearly defined response times and documented resolutions via SGAD
 
 * **Success indicators and KPIs**:
@@ -126,11 +126,12 @@
 
 * **Scenario status**: Completed
 * **Number of users onboarded**:
-  10 students who have completed a PhD Summer School at UPT
+  28 students who have completed all the activities in the E³UDRES² – Ent-r-e-novators PhD Summer School at UPT and agreed to the GDPR and the EBSI information and done the minimum training
 * **Credentials issued**:
   PID (Person Identification Data), EducationalID, Educational Achievement (Micro-credential)
 * **Credentials verified**:
   PID verification completed during PID retrieval user journey, EducationalID verified, Educational Achievement (Micro-credential) verified
+  10 users sucessfully verified the credentials
 * **Successes**:
   Successful PKI certificate deployment, ATOS/IZERTIS integration completed, EBSI DID registration completed (did:ebsi:ztoPE2wdSYBuzGt7r8g5wAX), PID retrieval user journey executed successfully, comprehensive educational credential issuance and verification workflows demonstrated, effective graduate student engagement
 * **Issues encountered**:
@@ -156,7 +157,7 @@
   * Minor performance considerations for scaling beyond pilot scope
   * Some initial user familiarisation requirements for digital credential concepts
 * **Feedback from users**:
-  Positive response from graduate students, particular appreciation for Micro-credential digitisation and potential for international academic mobility
+  Positive response from graduate students, particular appreciation for Micro-credential digitisation and potential for international academic mobility, negative for teh complicated method for those with minimum digital skills, without training only a few could have succeded
 * **Impact on user experience and feasibility**:
   Demonstrates successful feasibility of hybrid trust model approach for Romanian technical university context. Strong potential demonstrated for enhancing graduate student mobility and credential recognition across Europe.
 
@@ -199,7 +200,7 @@
 * Ease of use of wallets and services:
   High usability reported, successful completion of all educational credential user journeys
 * Challenges encountered:
-  Initial learning curve for digital credential concepts, successfully addressed through training
+  Initial learning curve for digital credential concepts and method, successfully addressed through training
 * Suggestions for improvement:
   Request for additional credential types (research certificates, project portfolios), interest in enhanced mobile features
 * Willingness to use again:
@@ -219,6 +220,7 @@
   Demonstrates significant potential for transforming Romanian technical higher education credential management, strong foundation for enhancing European technical education mobility
 * Recommendations for scaling:
   * Expand implementation to other Romanian technical universities
+  * Expand implementation for the E³UDRES² European Universities Alliance and implementation in its Arena
   * Standardise technical education credential formats across European technical universities
   * Develop comprehensive training materials for technical university adoption
   * Create clear integration pathways for Romanian higher education institutions

@@ -1,15 +1,15 @@
-# Politehnica University of Timisoara (UPT) – pilot – issuance and verification of Micro-credentials for a PhD Summer School
+# Politehnica University of Timisoara (UPT) – pilot – issuance and verification of Micro-credentials for the E³UDRES² – Ent-r-e-novators Summer School
 
 ## scenario description
 
-this scenario shows how Politehnica University of Timisoara issues and verifies micro-credentials for a PhD Summer School of attributes (eaas) through both EBSI decentralised PKI and the romanian national trust list managed by the Ministry of Research, Innovation and Digitalisation. the process follows **eIDAS2 article 6a**, the **eu digital identity architecture and reference framework (arf)** and connects to the **single digital gateway once‑only technical system (oots)** for PID retrieval.
+his scenario shows how Politehnica University of Timisoara issues and verifies micro-credentials for the E³UDRES² – Ent-r-e-novators PhD Summer School, part of teh E³UDRES² European Universities Alliance, of attributes (eaas) through both EBSI decentralised PKI and the Romanian national trust list managed by the Ministry of Research, Innovation and Digitalisation. the process follows **eIDAS2 article 6a**, the **eu digital identity architecture and reference framework (arf)** and connects to the **single digital gateway once‑only technical system (oots)** for PID retrieval.
 
 ## key steps per user journey
 
 ### 1. onboarding in education
 
-* select 10 participants from UPT and European Universities in the PhD Summer School.
-  * **selection criteria:** the participants completed all the activities in the program
+* select 25 participants from UPT and European Universities Alliance in the PhD Summer School.
+  * **selection criteria:** the participants completed all the activities in the program and agreed to the GDPR and the EBSI information and done the minimum training
 * deliver Izertis EUDI wallets and onboarding tokens.
 * verify each participant’s identity and issue credentials for PID retrieval.
 * guide graduates through PID retrieval and wallet activation.
@@ -17,7 +17,7 @@ this scenario shows how Politehnica University of Timisoara issues and verifies 
 
 ### 2. micro-credential issuance
 
-* student registry exports microicredential metadata from the University system.
+* student registry exports microicredential metadata from the UPT University system.
 * participants review data in the wallet.
 * issuer API signs and stores MC eaas in wallets.
 
@@ -33,7 +33,7 @@ this scenario shows how Politehnica University of Timisoara issues and verifies 
 | **scenario name**                        | micro-credential issuance and verification |
 | **piloting agent**                       | Politehnica University of Timisoara |
 | **end users identification**             | 10 students |
-| **selection criteria**                   | PhD Summer School Completion |
+| **selection criteria**                   | E³UDRES² – Ent-r-e-novators PhD Summer School Completion |
 | **eaas involved**                        | PID, EducationalID, Micro-credential |
 | **institutional systems involved**       | university registry, issuer microservice, verifier portal |
 | **technical components**                 | Issuer API `https://uself-issuer-gui.lspupt.upt.ro`, Verifier API `https://uself-verifier-gui.lspupt.upt.ro`, PID gateway `https://uself-pid-generator.lspupt.upt.ro`, Izertis EUDI Wallet |
