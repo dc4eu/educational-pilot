@@ -52,16 +52,17 @@ The analysis encompasses scenarios from educational institutions across Europe i
 
 | Country | Institutions | Technical Providers |
 |---------|--------------|-------------------|
-| Spain | 7 | ATOS/IZERTIS, GovPart |
-| Poland | 6 | OPI/NASK, ATOS/IZERTIS |
-| Germany | 2 | GovPart |
-| Romania | 2 | ATOS/IZERTIS |
-| Hungary | 2 | ATOS/IZERTIS |
-| Lithuania | 1 | ATOS/IZERTIS |
-| Portugal | 1 | ATOS/IZERTIS |
-| Spain | 1 | GovPart |
-| Sweden | 1 | ATOS/IZERTIS |
 | Belgium | 1 | Walt.ID |
+| Germany | 2 | GovPart |
+| Hungary | 2 | ATOS/IZERTIS |
+| Italy   | 1 | ATOS/IZERTIS |
+| Lithuania | 1 | ATOS/IZERTIS |
+| Poland | 6 | OPI/NASK, ATOS/IZERTIS |
+| Portugal | 2 | ATOS/IZERTIS |
+| Romania | 2 | ATOS/IZERTIS |
+| Spain | 7 | ATOS/IZERTIS, GovPart |
+| Sweden | 1 | ATOS/IZERTIS |
+
 
 ## Technical Architecture Analysis
 
