@@ -28,7 +28,7 @@ This matrix provides a comprehensive comparison of the technical aspects between
 | **Schema Standard** | JSON Schema with SD-JWT extensions - **EVOLVING** | W3C VC Data Model + European Learning Model (ELM) - **MATURE** |
 | **Selective Disclosure** | Built-in with SD-JWT hashing - **DRAFT SPECIFICATION** | Supported through W3C VC features - **TESTED IMPLEMENTATIONS** |
 | **Credential Structure** | JWT with `_sd` arrays for privacy - **EXPERIMENTAL** | JSON-LD with cryptographic proofs - **PRODUCTION-READY** |
-| **Privacy Mechanism** | Hash-based selective disclosure - **UNPROVEN AT SCALE** | Multiple methods (BBS+, zero-knowledge proofs) - **BATTLE-TESTED** |
+| **Privacy Mechanism** | Hash-based selective disclosure - **UNPROVEN AT SCALE** | Multiple methods (SD-JWS, BBS+, zero-knowledge proofs) - **BATTLE-TESTED** |
 
 ---
 
@@ -62,12 +62,12 @@ This matrix provides a comprehensive comparison of the technical aspects between
 
 | **Aspect** | **Pilot1 (Classical PKI)** | **Pilot2 (Hybrid PKI)** |
 |:-----------|:---------------------------|:------------------------|
-| **Core Infrastructure** | Traditional CA infrastructure | CA infrastructure + EBSI blockchain |
-| **Registry Services** | Certificate revocation lists (CRLs), OCSP | CRL/OCSP + EBSI registries (DID, Trust, Schema) |
+| **Core Infrastructure** | Traditional CA infrastructure | CA infrastructure + Verifiable Data Registries (EBSI) |
+| **Registry Services** | Certificate revocation lists (CRLs), OCSP | CRL/OCSP + Verifiable Data Registries (DID, Trust, Schema) |
 | **Blockchain Integration** | Not required | EBSI blockchain integration required |
 | **Distributed Ledger** | Not applicable | EBSI-based distributed ledger |
 | **Node Requirements** | CA connectivity | CA connectivity + EBSI node access |
-| **Scalability Model** | Traditional PKI scalability | Hybrid scalability (PKI + blockchain) |
+| **Scalability Model** | Traditional PKI scalability | Hybrid scalability (PKI + dPKI) |
 
 ---
 
@@ -155,8 +155,8 @@ This matrix provides a comprehensive comparison of the technical aspects between
 | **Aspect** | **Pilot1 (Classical PKI)** | **Pilot2 (Hybrid PKI)** |
 |:-----------|:---------------------------|:------------------------|
 | **Verification Speed** | Fast (traditional PKI) | Moderate (multiple registry queries) |
-| **Scalability** | High (proven PKI scalability) | Medium (blockchain limitations) |
-| **Network Dependency** | Moderate (CRL/OCSP) | High (EBSI connectivity required) |
+| **Scalability** | High (proven PKI scalability) | High (proven PKI & dPKI) |
+| **Network Dependency** | Moderate (CRL/OCSP) | High (Verifibale Data Registries connectivity required) |
 | **Offline Capabilities** | Limited | Enhanced (DID caching) |
 | **Resource Requirements** | Low to Medium | Medium to High |
 | **Throughput** | High | Medium |
@@ -167,11 +167,11 @@ This matrix provides a comprehensive comparison of the technical aspects between
 
 | **Aspect** | **Pilot1 (Classical PKI)** | **Pilot2 (Hybrid PKI)** |
 |:-----------|:---------------------------|:------------------------|
-| **Attack Vectors** | Traditional PKI attacks | PKI + blockchain attacks |
+| **Attack Vectors** | Traditional PKI attacks | PKI + DLT attacks |
 | **Single Point of Failure** | CA compromise | Distributed (reduced risk) |
 | **Quantum Resistance** | Depends on algorithms | Enhanced (crypto-agility) |
 | **Privacy Protection** | SD-JWT selective disclosure | Enhanced W3C VC privacy |
-| **Audit Trail** | Certificate logs | Certificate logs + blockchain |
+| **Audit Trail** | Certificate logs | Certificate logs + DLT |
 | **Compromise Recovery** | Certificate revocation | Certificate + DID key rotation |
 
 ---
@@ -180,10 +180,10 @@ This matrix provides a comprehensive comparison of the technical aspects between
 
 | **Aspect** | **Pilot1 (Classical PKI)** | **Pilot2 (Hybrid PKI)** |
 |:-----------|:---------------------------|:------------------------|
-| **Educational Credentials** | Optimised for traditional diplomas | Enhanced for comprehensive qualifications |
-| **Professional Qualifications** | Standard certification support | Advanced competency mapping |
+| **Educational Credentials** | Optimised for traditional diplomas | + Enhanced for comprehensive qualifications |
+| **Professional Qualifications** | Standard certification support | + Advanced competency mapping |
 | **Micro-credentials** | Basic support | Enhanced granular credentials |
-| **Cross-border Mobility** | Limited automatic recognition | Enhanced EBSI-facilitated recognition |
+| **Cross-border Mobility** | Limited automatic recognition | Enhanced Verifibale Data Registries-facilitated recognition |
 | **Industry Integration** | Traditional sector alignment | Innovation-focused sectors |
 | **Government Services** | Standard public sector | Enhanced public sector innovation |
 
@@ -193,7 +193,7 @@ This matrix provides a comprehensive comparison of the technical aspects between
 
 | **Aspect** | **Pilot1 (Classical PKI)** | **Pilot2 (Hybrid PKI)** |
 |:-----------|:---------------------------|:------------------------|
-| **Optimal EAA Scenarios** | **PubEAA + QEAA** (Scenarios 3 & 4) | **Non-qualified EAA** (Scenario 2) |
+| **Optimal EAA Scenarios** | **PubEAA + QEAA** (Scenarios 3 & 4) | **Non-qualified EAA** (Scenario 2, applicable also to 3 & 4) |
 | **PubEAA Suitability** | **HIGH** - Classical PKI aligns with public sector authentic source requirements | **MEDIUM** - Can complement but not primary focus |
 | **QEAA Suitability** | **HIGH** - Natural fit for qualified trust service provider infrastructure | **MEDIUM** - Can complement but adds complexity |
 | **Non-qualified EAA Suitability** | **LOW** - Limited trust mechanisms for non-qualified scenarios | **HIGH** - EBSI provides crucial trust enhancement |
@@ -206,7 +206,7 @@ This matrix provides a comprehensive comparison of the technical aspects between
 
 | **Aspect** | **Pilot1 (Classical PKI)** | **Pilot2 (Hybrid PKI)** |
 |:-----------|:---------------------------|:------------------------|
-| **PubEAA Requirements** | ✅ Qualified electronic signature/seal support | ✅ Qualified signature + DID binding |
+| **PubEAA Requirements** | ✅ Qualified electronic signature/seal support | ✅ Qualified signature/seal + DID binding |
 | **QEAA Requirements** | ✅ QTSP infrastructure alignment | ✅ QTSP + EBSI registration |
 | **Non-qualified EAA Gap** | ❌ **Limited automated trust processing** | ✅ **EBSI-enhanced trust mechanisms** |
 | **Authentic Source Integration** | ✅ Natural fit with public sector PKI | ✅ Enhanced with verifiable accreditation |
