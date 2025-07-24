@@ -130,9 +130,9 @@
 * **Number of users onboarded**:
   Research group members and graduate students successfully onboarded
 * **Credentials issued**:
-  PID (Person Identification Data), EducationalID, Educational Achievement (Microcredentials)
+  PID (Person Identification Data), EducationalID, Educational Achievement (European Higher Education Diploma)
 * **Credentials verified**:
-  PID verification completed during PID retrieval user journey, EducationalID verified, Educational Achievement (Microcredentials) verified, enhanced verification testing through blockchain lab
+  PID verification completed during PID retrieval user journey, EducationalID verified, Educational Achievement (European Higher Education Diploma) verified, enhanced verification testing through blockchain lab
 * **Successes**:
   Successful PKI certificate deployment, ATOS/IZERTIS integration completed, EBSI DID registration completed (did:ebsi:zn2SoctQ3TmBgPbiTWftF42), PID retrieval user journey executed successfully, comprehensive educational credential issuance and verification workflows demonstrated, blockchain lab expertise enhanced implementation quality
 * **Issues encountered**:
@@ -150,7 +150,7 @@
   * IZERTIS wallet integration functional
   * PID retrieval user journey executed successfully
   * EducationalID issuance and verification completed
-  * Educational Achievement (Microcredentials) issuance and verification completed
+  * Educational Achievement (European Higher Education Diploma) issuance and verification completed
   * Research group onboarding process efficient
   * W3C Verifiable Credentials implementation successful
   * Hungarian regulatory compliance achieved
@@ -170,7 +170,7 @@
 * **Screenshots or logs**:
   Available in DC4EU workspace: Hungary-BME folder
 * **Credential samples**:
-  EducationalID and Microcredential samples (redacted) available for review
+  EducationalID and European Higher Education Diploma samples (redacted) available for review
 * **Links to shared environment/demo**:
   https://lspbme.cloud.bme.hu (DNS endpoint operational)
 * **Documents or repositories**:
