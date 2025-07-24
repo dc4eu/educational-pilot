@@ -14,11 +14,11 @@
 * **User journeys implemented**:
   PID retrieval (completed), EducationalID issuance (completed), Educational achievement issuance (completed), Generic EAA verification (completed)
 * **Target groups and end-user roles**:
-  Multidisciplinary students, humanities graduates, science students, academic staff, international exchange participants
+  Multidisciplinary students, science students, academic staff
 * **Electronic Attestations of Attributes (EAAs) involved**:
-  PID (Person Identification Data), EducationalID, Educational Achievement (Humanities degrees, Science qualifications, Language certifications, Cultural studies credentials)
+  PID (Person Identification Data), EducationalID, Educational Achievement, Science qualifications
 * **Institutional systems/databases connected**:
-  UAH academic management system, student records database, international exchange database, humanities and science programme systems
+  UAH academic management system, student records database, science programme systems
 * **Technical components used**:
 
   * **Pilot option**: Pilot2 (Hybrid Trust: Classical PKI + Decentralised PKI)
@@ -126,9 +126,9 @@
 
 * **Scenario status**: Completed
 * **Number of users onboarded**:
-  50 multidisciplinary students, 15 faculty members, 5 international office staff
+  30 multidisciplinary students, 5 faculty members
 * **Credentials issued**:
-  70 PID credentials, 70 EducationalID credentials, 48 Educational Achievement credentials
+  35 PID credentials, 35 EducationalID credentials, 56 Educational Achievement credentials
 * **Credentials verified**:
   All issued credentials successfully verified through cross-border scenarios, including international exchange partnerships
 * **Successes**:
@@ -160,7 +160,7 @@
 * **Credential samples**:
   Redacted samples of multidisciplinary PID, EducationalID, and Educational Achievement credentials
 * **Links to shared environment/demo**:
-  https://lspuah.uah.es
+  https://uself-issuer-gui.lspuah.uah.es
 * **Documents or repositories**:
   Multidisciplinary education documentation, integration guides for diverse academic systems
 * **KPI data submission details**:
