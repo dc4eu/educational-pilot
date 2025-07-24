@@ -44,6 +44,10 @@ The analysis encompasses scenarios from educational institutions across Europe i
 - University of Zielona Gora (ZGORA) - Poland 
 - Medical University of Lublin (UMLUB) - Poland 
 
+**Waly.ID Platform (1 institutions)**:
+- Howest University (HOWEST) - Belgium
+
+
 ### Geographic Distribution
 
 | Country | Institutions | Technical Providers |
@@ -57,6 +61,7 @@ The analysis encompasses scenarios from educational institutions across Europe i
 | Portugal | 1 | ATOS/IZERTIS |
 | Spain | 1 | GovPart |
 | Sweden | 1 | ATOS/IZERTIS |
+| Belgium | 1 | Walt.ID |
 
 ## Technical Architecture Analysis
 
