@@ -5,11 +5,11 @@
 
 | **Work package** | WP 5 |
 |------------------|------|
-| **Task** | E&PQ.1 The Initiatives Mapping and Alignment Checklist |
+| **Task** | 5.3 The Initiatives Mapping and Alignment Checklist |
 | **Submission date** | 24/07/2025 |
-| **Deliverable lead** | DVSV |
+| **Deliverable lead** | AEAD |
 | **Version** | V0.1 |
-| **Authors** | Gerd Bauer, Katharina Hilmar, Khaliunaa Damdinbazar |
+| **Authors** | Lluís Ariño, Sara Osacar |
 | **Reviewers** | WP5 Partners, Work Package Leaders |
 
 | **Abstract** | The "Initiatives Mapping and Alignment Checklist" (IMAC) document for Education and Professional Qualifications serves as a comprehensive guide for implementing digital credentials within the European Union's education and professional qualification framework. Combining the Education and Professional Qualifications Rulebook with the Education and Professional Qualifications Case Study, it provides a unified perspective on governance, legal compliance, and technical interoperability. The document highlights key insights from the DC4EU pilot, emphasising privacy-by-design principles, selective disclosure policies, and cross-border interoperability. It offers actionable recommendations and readiness checklists to support stakeholders in building a secure, user-centric, and harmonised digital public infrastructure for education across Europe. |
