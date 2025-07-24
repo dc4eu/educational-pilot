@@ -297,7 +297,7 @@ The matrix reveals a fundamental insight: **the choice between Pilot1 and Pilot2
 - **Risk factor**: Draft SD-JWT specifications create uncertainty across all scenarios
 
 **Pilot2 (Hybrid PKI)**:
-- **Essential** for non-qualified EAA scenarios where "EBSI provides major business value"
+- **Essential** for non-qualified EAA scenarios where "Verifiable Data Regsitries provide major business value"
 - **Complementary** for PubEAA/QEAA scenarios with enhanced capabilities
 - **Comprehensive** coverage of all EAA scenarios with mature W3C standards
 - **Stable foundation**: 6+ years of proven W3C VC technology
