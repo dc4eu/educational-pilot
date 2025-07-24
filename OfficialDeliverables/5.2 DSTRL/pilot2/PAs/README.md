@@ -44,7 +44,7 @@ The analysis encompasses scenarios from educational institutions across Europe i
 - University of Zielona Gora (ZGORA) - Poland 
 - Medical University of Lublin (UMLUB) - Poland 
 
-**Waly.ID Platform (1 institutions)**:
+**Walt.ID Platform (1 institutions)**:
 - Howest University (HOWEST) - Belgium
 
 
