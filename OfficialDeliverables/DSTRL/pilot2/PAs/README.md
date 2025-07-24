@@ -35,17 +35,20 @@ The analysis encompasses scenarios from educational institutions across Europe i
 - Ludwig-Maximilians-Universität München (LMU) - Germany
 - National University of Distance Education (UNED) - Spain
 
-**OPI/NASK Platform (3 institutions)**:
-- University of Warsaw (UW) - Poland  
-- University of Silesia (US) - Poland
-- University of Zielona Gora (ZGORA) - Poland
+**OPI/NASK Platform (6 institutions)**:
+4- University of Warsaw (UW) - Poland
+- University of Silesia in Katowice (US) - Poland 
+- Silesian University of Technology (POLSL) - Poland 
+- Kozminski University - Poland
+- University of Zielona Gora (ZGORA) - Poland 
+- Medical University of Lublin (UMLUB) - Poland 
 
 ### Geographic Distribution
 
 | Country | Institutions | Technical Providers |
 |---------|--------------|-------------------|
 | Spain | 6 | ATOS/IZERTIS, GovPart |
-| Poland | 3 | OPI/NASK, ATOS/IZERTIS |
+| Poland | 6 | OPI/NASK, ATOS/IZERTIS |
 | Germany | 2 | GovPart |
 | Romania | 2 | ATOS/IZERTIS |
 | Hungary | 2 | ATOS/IZERTIS |
