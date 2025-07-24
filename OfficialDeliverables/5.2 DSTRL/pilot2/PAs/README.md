@@ -26,7 +26,7 @@ The analysis encompasses scenarios from educational institutions across Europe i
 - University of Múrcia (UM) - Spain
 - Lusófona University - Portugal
 - University of Alcalá (UAH) - Spain
-- Colegio Oficial de Médicos (CGCOM) - Spain
+- Consejo General de Colegios Oficiales de Médicos (CGCOM) - Spain
 - Research Institutes of Sweden (RISE) - Sweden
 - University Financing Executive Unit (UEFISCDI) - Romania
 - University of Bologna (UNIBO) - Italy (dPKI only)
