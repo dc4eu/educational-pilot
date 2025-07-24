@@ -48,7 +48,7 @@ The rulebook emphasises semantic consistency through the European Learning Model
 
 Operational insights and policy recommendations based on DC4EU pilot implementations, showcasing real-world applications in educational mobility and professional recognition scenarios.
 
-### Chapter 4: Conclusion
-*[To be developed]*
+### [Chapter 4: Conclusion](./Conclusions/README.md)
+*[To be finalised]*
 
 Summary of key findings and actionable recommendations for scaling the DC4EU framework across Member States' educational systems.
