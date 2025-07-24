@@ -104,9 +104,9 @@ did:ebsi:z[unique_identifier]
 |--------|-------------------|
 | **Total Institutions** | 25+ |
 | **Users Onboarded** | 625+ (25 per institution minimum) |
-| **Countries Represented** | 9 |
+| **Countries Represented** | 10 |
 | **Technical Providers** | 3 major platforms |
-| **User Journeys Completed** | PID retrieval, EducationalID, Diploma, Verification |
+| **User Journeys Completed** | PID retrieval, EducationalID, Academic/Professional achievemet, Cross-border verification |
 
 ### Credential Types Successfully Issued
 
