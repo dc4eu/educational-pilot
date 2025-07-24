@@ -12,12 +12,11 @@ The analysis encompasses scenarios from educational institutions across Europe i
 
 ### By Technical Provider Integration
 
-**ATOS/IZERTIS uSelf Platform (17 institutions)**:
+**ATOS/IZERTIS uSelf Platform (16 institutions)**:
 - University of Warsaw (UW) - Poland
 - University of Silesia in Katowice (US) - Poland  
 - University of Zielona Gora (ZGORA) - Poland
 - Vytautas Magnus University (VMU) - Lithuania
-- Ludwig-Maximilians-Universität München (LMU) - Germany
 - Universitat Rovira i Virgili (URV) - Spain
 - Politehnica University of Timisoara (UPT) - Romania
 - Edutus University (EDUTUS) - Hungary
@@ -25,15 +24,16 @@ The analysis encompasses scenarios from educational institutions across Europe i
 - Universidad Carlos III de Madrid (UC3M) - Spain
 - Universidad Politécnica de Madrid (UPM) - Spain
 - University of Múrcia (UM) - Spain
-- National University of Distance Education (UNED) - Spain
 - Lusófona University - Portugal
 - University of Alcalá (UAH) - Spain
 - Research Institutes of Sweden (RISE) - Sweden
 - University Financing Executive Unit (UEFISCDI) - Romania
-
-**GovPart Platform (2 institutions)**:
-- Humboldt-Universität zu Berlin (HU-BERLIN) - Germany
 - University of Bologna (UNIBO) - Italy (dPKI only)
+
+**GovPart Platform (3 institutions)**:
+- Humboldt-Universität zu Berlin (HU-BERLIN) - Germany
+- Ludwig-Maximilians-Universität München (LMU) - Germany
+- National University of Distance Education (UNED) - Spain
 
 **OPI/NASK Platform (3 institutions)**:
 - University of Warsaw (UW) - Poland  
@@ -44,9 +44,9 @@ The analysis encompasses scenarios from educational institutions across Europe i
 
 | Country | Institutions | Technical Providers |
 |---------|--------------|-------------------|
-| Spain | 6 | ATOS/IZERTIS |
+| Spain | 6 | ATOS/IZERTIS, GovPart |
 | Poland | 3 | OPI/NASK, ATOS/IZERTIS |
-| Germany | 2 | ATOS/IZERTIS, GovPart |
+| Germany | 2 | GovPart |
 | Romania | 2 | ATOS/IZERTIS |
 | Hungary | 2 | ATOS/IZERTIS |
 | Lithuania | 1 | ATOS/IZERTIS |
