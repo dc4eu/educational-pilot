@@ -54,7 +54,7 @@ The analysis encompasses scenarios from educational institutions across Europe i
 | Hungary | 2 | ATOS/IZERTIS |
 | Lithuania | 1 | ATOS/IZERTIS |
 | Portugal | 1 | ATOS/IZERTIS |
-| Italy | 1 | GovPart |
+| Spain | 1 | GovPart |
 | Sweden | 1 | ATOS/IZERTIS |
 
 ## Technical Architecture Analysis
