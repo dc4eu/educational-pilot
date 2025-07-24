@@ -20,7 +20,7 @@
 
 This IMAC document is organised into comprehensive chapters that provide both strategic guidance and operational insights for implementing digital credentials in European education and professional qualifications:
 
-### [Chapter 1: Introduction](./education_imac_chapter1-2.md)
+### [Chapter 1: Introduction](./education_imac_chapter1.md)
 **Purpose and Scope of the Education and Professional Qualifications Framework**
 
 This foundational chapter establishes the context and objectives for implementing digital credentials within the European Union's education and professional qualification framework. It outlines:
