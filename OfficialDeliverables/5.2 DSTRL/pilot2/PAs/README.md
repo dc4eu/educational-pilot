@@ -92,9 +92,9 @@ did:ebsi:z[unique_identifier]
 | Component | Pilot2 Implementation | Coverage |
 |-----------|----------------------|----------|
 | **Wallet** | EUDI Wallet (EUDIW by IZERTIS) | Universal |
-| **Issuer Platform** | uSelf Issuer Agent (ATOS), GovPart SaaS, OPI/NASK | 100% |
-| **Verifier Platform** | uSelf Verifier (ATOS), GovPart SaaS Verifier, OPI/NASK | 100% |
-| **PID Service** | National PID providers + uSelf PID Agent | 100% |
+| **Issuer Platform** | uSelf Issuer Agent (ATOS), GovPart SaaS, OPI/NASK, Walt.ID | 100% |
+| **Verifier Platform** | uSelf Verifier (ATOS), GovPart SaaS Verifier, OPI/NASK, Walt.ID | 100% |
+| **PID Service** | National PID providers or uSelf PID Agent | 100% |
 
 ## Credential Volumes and User Engagement
 
@@ -105,7 +105,7 @@ did:ebsi:z[unique_identifier]
 | **Total Institutions** | 25+ |
 | **Users Onboarded** | 625+ (25 per institution minimum) |
 | **Countries Represented** | 10 |
-| **Technical Providers** | 3 major platforms |
+| **Technical Providers** | 4 major platforms |
 | **User Journeys Completed** | PID retrieval, EducationalID, Academic/Professional achievemet, Cross-border verification |
 
 ### Credential Types Successfully Issued
