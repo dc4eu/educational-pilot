@@ -26,6 +26,7 @@ The analysis encompasses scenarios from educational institutions across Europe i
 - University of Múrcia (UM) - Spain
 - Lusófona University - Portugal
 - University of Alcalá (UAH) - Spain
+- Colegio Oficial de Médicos (CGCOM) - Spain
 - Research Institutes of Sweden (RISE) - Sweden
 - University Financing Executive Unit (UEFISCDI) - Romania
 - University of Bologna (UNIBO) - Italy (dPKI only)
@@ -36,7 +37,7 @@ The analysis encompasses scenarios from educational institutions across Europe i
 - National University of Distance Education (UNED) - Spain
 
 **OPI/NASK Platform (6 institutions)**:
-4- University of Warsaw (UW) - Poland
+- University of Warsaw (UW) - Poland
 - University of Silesia in Katowice (US) - Poland 
 - Silesian University of Technology (POLSL) - Poland 
 - Kozminski University - Poland
@@ -47,7 +48,7 @@ The analysis encompasses scenarios from educational institutions across Europe i
 
 | Country | Institutions | Technical Providers |
 |---------|--------------|-------------------|
-| Spain | 6 | ATOS/IZERTIS, GovPart |
+| Spain | 7 | ATOS/IZERTIS, GovPart |
 | Poland | 6 | OPI/NASK, ATOS/IZERTIS |
 | Germany | 2 | GovPart |
 | Romania | 2 | ATOS/IZERTIS |
