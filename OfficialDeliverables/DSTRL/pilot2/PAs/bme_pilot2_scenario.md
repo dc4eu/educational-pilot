@@ -16,9 +16,9 @@
 * **Target groups and end-user roles**:
   Graduate students from BME's Critical Systems Research Group, academic administrative staff, blockchain lab personnel
 * **Electronic Attestations of Attributes (EAAs) involved**:
-  PID (Person Identification Data), EducationalID, Educational Achievement (EAAs: Microcredentials)
+  PID (Person Identification Data), EducationalID, Educational Achievement (EAAs: European Higher Education Diploma)
 * **Institutional systems/databases connected**:
-  BME authentic source databases (academic records), identity verification system, Critical Systems Research Group databases
+  BME authentic source databases (academic records), identity verification system.
 * **Technical components used**:
 
   * **Pilot option**: Pilot2 (Hybrid Trust: Classical PKI + Decentralised PKI)
