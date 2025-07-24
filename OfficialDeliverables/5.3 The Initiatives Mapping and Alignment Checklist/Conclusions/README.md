@@ -50,7 +50,7 @@ The digital credentials ecosystem involves multiple interconnected stakeholder c
 ### Implementation Pathway Recommendations
 
 **Phased Implementation Approach**
-- Short-term (1-2 years): Pilot programmes and standards development
+- Short-term (1-2 years): Pilot production programmes and standards development
 - Medium-term (3-5 years): Widespread adoption and interoperability achievement
 - Long-term (5+ years): Full ecosystem integration and innovation leadership
 
