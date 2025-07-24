@@ -261,7 +261,7 @@ This matrix provides a comprehensive comparison of the technical aspects between
 
 ### **Key Scenario Alignment:**
 - **Pilot1**: Optimised for **PubEAA (Scenario 3)** and **QEAA (Scenario 4)**
-- **Pilot2**: Essential for **Non-qualified EAA (Scenario 2)** where "EBSI provides major business value"
+- **Pilot2**: Essential for **Non-qualified EAA (Scenario 2)** where "Verifable Data registries provide major business value" (extendible to scenarios 3 & 4)
 
 ---
 
