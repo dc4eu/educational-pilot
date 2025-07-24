@@ -12,7 +12,7 @@ The analysis encompasses scenarios from educational institutions across Europe i
 
 ### By Technical Provider Integration
 
-**ATOS/IZERTIS uSelf Platform (16 institutions)**:
+**ATOS/IZERTIS uSelf Platform (17 institutions)**:
 - University of Warsaw (UW) - Poland
 - University of Silesia in Katowice (US) - Poland  
 - University of Zielona Gora (ZGORA) - Poland
