@@ -16,4 +16,39 @@
 |-------------|-------------|
 | **Keywords** | DC4EU, EQF, EHEA, DEAP, eID, eIDAS, EUDIW, EUDIW Toolbox, ID, IR, Issuer, LoA, LSP, Educational Credentials, PID, QR, VC, Verifier, VP, ELM, EDCI, Professional Qualifications |
 
----
+## Document Structure
+
+This IMAC document is organised into comprehensive chapters that provide both strategic guidance and operational insights for implementing digital credentials in European education and professional qualifications:
+
+### [Chapter 1: Introduction](./education_imac_chapter1-2.md)
+**Purpose and Scope of the Education and Professional Qualifications Framework**
+
+This foundational chapter establishes the context and objectives for implementing digital credentials within the European Union's education and professional qualification framework. It outlines:
+
+- The unified perspective combining theoretical frameworks with practical case studies
+- Strategic guidance for stakeholders including Member States, educational institutions, and professional bodies
+- Key characteristics addressing educational mobility, institutional autonomy, privacy protection, and technical interoperability
+- Integration with European frameworks such as EQF, EHEA, and ELM specifications
+
+### [Chapter 2: Education and Professional Qualifications Rulebook](./education_imac_chapter2.md)
+**Comprehensive Framework for Digital Credential Coordination**
+
+This detailed chapter presents the complete rulebook for implementing digital educational credentials across the European Union. It covers:
+
+- **Governance Framework**: Multi-layered approach respecting subsidiarity whilst enabling European coordination
+- **Legal and Regulatory Framework**: eIDAS 2.0 compliance, education-specific legislation, and institutional rights
+- **Service Description Framework**: Formal credentials, professional qualifications, and supporting services
+- **Trust Framework and Technical Interoperability**: Classical PKI, Decentralised PKI (EBSI), and hybrid approaches
+- **Implementation Considerations**: Stakeholder onboarding, security measures, and technical infrastructure requirements
+
+The rulebook emphasises semantic consistency through the European Learning Model (ELM), selective disclosure for privacy protection, and localised validation policies whilst maintaining academic freedom and institutional independence.
+
+### Chapter 3: Education and Professional Qualifications Case Study
+*[To be developed]*
+
+Operational insights and policy recommendations based on DC4EU pilot implementations, showcasing real-world applications in educational mobility and professional recognition scenarios.
+
+### Chapter 4: Conclusion
+*[To be developed]*
+
+Summary of key findings and actionable recommendations for scaling the DC4EU framework across Member States' educational systems.
