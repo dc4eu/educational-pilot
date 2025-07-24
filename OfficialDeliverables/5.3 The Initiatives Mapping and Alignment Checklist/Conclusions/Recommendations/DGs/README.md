@@ -18,7 +18,8 @@ The recommendations address critical coordination gaps, leverage the substantial
 6. [DG-GROW Recommendations](#dg-grow-recommendations)
 7. [DG-DIGIT Recommendations](#dg-digit-recommendations)
 8. [HADEA Recommendations](#hadea-recommendations)
-9. [EUROPEUM-EDIC Recommendations](#europeum-edic-recommendations)
+9. [EACEA Recommendations](#eacea-recommendations)
+10. [EUROPEUM-EDIC Recommendations](#europeum-edic-recommendations)
 10. [Member State Recommendations](#member-state-recommendations)
 11. [Educational Institution Recommendations](#educational-institution-recommendations)
 12. [Implementation Timeline and Coordination](#implementation-timeline-and-coordination)
@@ -83,6 +84,14 @@ The Business Blueprint demonstrates that eIDAS 2.0 compliance and EUDIW integrat
 - Integrate EUDIW functionality and eIDAS-compliant verification mechanisms
 - Implement ELM semantic standards and DC4EU converter specifications
 - Deploy dPKI trust frameworks for institutional verification
+
+**University Alliances Initiatives:**
+- Conduct immediate review of all university alliance digital initiatives to ensure eIDAS 2.0 compliance
+- Prevent development of alliance-isolated solutions that could fragment the European digital credential ecosystem
+- Mandate cross-alliance interoperability requirements using ELM semantic standards
+- Ensure university alliance platforms integrate with broader European digital credential infrastructure rather than creating proprietary, closed systems
+- Require alliance initiatives to demonstrate compatibility with EUDIW and broader eIDAS 2.0 framework
+- Establish coordination mechanisms between different university alliances to prevent duplicated effort and ensure consistent technical standards
 
 ---
 
@@ -336,6 +345,62 @@ As the Directorate-General responsible for digital infrastructure and services, 
 - Ensure all digital infrastructure supports eIDAS 2.0 technical requirements and EUDIW integration
 - Implement necessary security enhancements for production-grade digital credential services
 - Develop standardised APIs and integration frameworks for member state and institutional adoption
+
+---
+
+## EACEA Recommendations
+
+### Erasmus+ Programme Digital Transformation
+
+As the Education, Audiovisual and Culture Executive Agency responsible for managing Erasmus+ and other key educational programmes, EACEA must ensure systematic integration of digital credentials into all programme operations whilst maintaining programme integrity and enhancing participant mobility.
+
+#### Programme Integration and Digital Credential Adoption
+
+**Erasmus+ digital transformation:**
+- **Mandatory eIDAS compliance**: Require all Erasmus+ digital initiatives to demonstrate full eIDAS 2.0 compliance and EUDIW integration
+- **Digital credential integration**: Systematically integrate digital credential capabilities into all Erasmus+ programme components (student mobility, staff mobility, strategic partnerships)
+- **Cross-programme interoperability**: Ensure digital credential systems work seamlessly across all EACEA-managed programmes (Erasmus+, Creative Europe, European Solidarity Corps)
+
+**Online Learning Agreement (OLA) evolution:**
+- **VCs4OLA implementation**: Accelerate implementation of Verifiable Credentials for Online Learning Agreement platform based on DC4EU specifications
+- **EUDIW integration**: Enable students to export learning agreements directly to their European Digital Identity Wallets
+- **Real-time verification**: Implement real-time verification capabilities for learning agreements using eIDAS-compliant systems
+
+#### Erasmus Without Papers Enhancement
+
+**EWP platform modernisation:**
+- **EIDAs 2.0 compliance**: Ensure Erasmus Without Papers platform fully complies with eIDAS 2.0 technical and legal requirements
+- **Digital credential support**: Integrate comprehensive digital credential support for all EWP processes and data exchanges
+- **Institution onboarding**: Provide systematic support for educational institutions integrating with eIDAS-compliant EWP systems
+
+**Cross-border mobility facilitation:**
+- **Automatic recognition**: Implement automatic recognition capabilities for digital credentials across all participating institutions
+- **Simplified verification**: Streamline credential verification processes for Erasmus+ participants using digital credential infrastructure
+- **Enhanced data portability**: Enable seamless data portability for students moving between institutions and countries
+
+#### Stakeholder Support and Capacity Building
+
+**Institutional support framework:**
+- **Technical assistance**: Provide comprehensive technical assistance for educational institutions implementing digital credential systems
+- **Training programmes**: Develop and deliver training programmes for institutional staff on digital credential management
+- **Best practice sharing**: Facilitate sharing of best practices and lessons learned among participating institutions
+
+**Participant empowerment:**
+- **Student digital literacy**: Support student digital literacy development for effective use of digital credential systems
+- **Career service enhancement**: Enhance career services through verified digital credentials improving graduate employability
+- **Alumni network development**: Leverage digital credentials to strengthen and maintain Erasmus+ alumni networks
+
+#### Performance Monitoring and Quality Assurance
+
+**Programme effectiveness measurement:**
+- **Digital impact assessment**: Systematic assessment of digital credential impact on programme effectiveness and participant outcomes
+- **Quality metric integration**: Integration of digital credential quality metrics into overall programme monitoring and evaluation
+- **Stakeholder satisfaction**: Regular measurement of stakeholder satisfaction with digital credential services and support
+
+**Continuous improvement framework:**
+- **Feedback integration**: Systematic integration of participant and institutional feedback into programme improvement initiatives
+- **Innovation development**: Support for innovation in digital credential applications within Erasmus+ programmes
+- **International coordination**: Coordination with other international education programmes on digital credential standards and practices
 
 ---
 
