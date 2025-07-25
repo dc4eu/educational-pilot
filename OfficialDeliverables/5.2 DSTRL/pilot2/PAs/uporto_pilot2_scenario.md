@@ -12,19 +12,19 @@
 ## 2. Scenario Characterisation
 
 * **User journeys implemented**:
-  PID retrieval (completed), Student Enrollment, Issuance of Student Card, Issuance of Student Diplomas, Generic EAA verification (completed)
+  PID retrieval (completed), Student Enrollment, Issuance of Educational ID (used as Student Card), Issuance of Student Diplomas, Generic EAA verification (completed)
 * **Target groups and end-user roles**:
   U.Porto students (New enrollees, Graduates requesting diplomas, Students requesting ID cards), administrative staff
 * **Electronic Attestations of Attributes (EAAs) involved**:
   PID (Person Identification Data), EducationalID, Educational Achievement (EAA: Enrollment HE, Diplomas, Diploma Supplements)
 * **Institutional systems/databases connected**:
-  U.Porto's academic management system (SIGARRA), authentication system, and student records database
+  U.Porto's authentication system and student records database
 * **Technical components used**:
 
   * **Pilot option**: Pilot2 (Hybrid Trust: Classical PKI + Decentralised PKI)
   * **Wallet(s)**: EUDI Wallet (EUDIW)
-  * **Issuer platform**: U.Porto system
-  * **Verifier platform**: U.Porto system
+  * **Issuer platform**: uSelf Issuer Agent
+  * **Verifier platform**: uSelf Verifier
   * **PID Retrieval Service**: Portuguese national PID provider integration
 * **Governance configuration**:
 
@@ -72,7 +72,7 @@
   * Suspension: Implemented via institutional controls
 * **Infrastructure readiness**:
 
-  * U.Porto SSO; secure databases; integration endpoints for ID issuance and diploma requests using a VM with the dockers for VC issuance and verification, according to the user journey; landing pages for simulating credential lifecycle, connected to the wallet and the internal U. Porto network, CGD for card issuance
+  * U.Porto SSO; secure databases; integration endpoints for ID issuance and diploma requests using a VM with the dockers for VC issuance and verification, according to the user journey; landing pages for simulating credential lifecycle, connected to the wallet and the internal U.Porto platforms
 * **Training and onboarding**:
   Initial training covering eIDAS2, PID, Educational Achievements, and the U.Porto authentication system; User guidance on requesting and using the student card; Practical training on using eIDAS for student enrollment and digital diploma issuance using the EUDIW; Graduate guidance on diploma request process and digital access
 * **Issue escalation**:
@@ -143,16 +143,11 @@
 
 * **What worked as expected**:
   * PKI certificate infrastructure deployment successful
-  * U.Porto system integration completed
+  * Platform integration completed
   * EUDIW integration functional
-  * PID retrieval user journey executed successfully
-  * Student enrollment process completed
-  * Student ID card issuance completed
-  * Diploma issuance and verification completed
-  * Student onboarding process effective
+  * All user journeys executed successfully
   * W3C Verifiable Credentials implementation successful
   * Portuguese regulatory compliance achieved
-  * SIGARRA integration successful
 * **What did not work and why**:
   * Minor performance considerations for scaling beyond pilot scope
   * Some initial user training requirements for digital credential concepts
@@ -168,11 +163,11 @@
 * **Screenshots or logs**:
   Available in DC4EU workspace: Portugal-UPORTO folder
 * **Credential samples**:
-  EducationalID, Student Card, and Diploma samples (redacted) available for review
+  EducationalID(Student Card), and Diploma samples (redacted) available for review
 * **Links to shared environment/demo**:
   [U.Porto DNS endpoint]
 * **Documents or repositories**:
-  U.Porto scenario characterisation documents, SIGARRA integration specifications
+  U.Porto scenario characterisation documents, technical integration specifications
 * **KPI data submission details**:
   Biweekly progress reports with KPI tracking, using structured templates
 
