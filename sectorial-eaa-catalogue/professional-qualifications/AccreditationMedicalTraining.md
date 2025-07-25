@@ -138,16 +138,6 @@ JSON Schema to accredit medical training activities with European Accreditation 
                       "type": "string"
                     }
                   },
-                  "EQFLevel": {
-                    "description": "Defines the qualification level as specified by the European Qualification Framework.",
-                    "type": "string",
-                    "format": "uri"
-                  },
-                  "NQFLevel": {
-                    "description": "Defines the qualification level as specified by a National Qualification Framework.",
-                    "type": "string",
-                    "format": "uri"
-                  },
                   "trainingDuration": {
                     "type": "object",
                     "description": "Duration of the study programme",
@@ -255,14 +245,6 @@ JSON Schema to accredit medical training activities with European Accreditation 
                       },
                       "required": ["id", "type", "framework", "point"]
                     }      
-                  },
-                  "limitQFLevel": {
-                    "description": "Defines the european qualification level for which the accreditation is valid",
-                    "type": "array",
-                    "items": {
-                      "type": "string",
-                      "format": "uri"
-                    }
                   },
                   "limitJurisdiction": {
                     "description": "Defines the jurisdiction for which the accreditation is valid",
