@@ -127,7 +127,7 @@
 
 * **Scenario status**: Completed
 * **Number of users onboarded**:
-  Students successfully onboarded for comprehensive credential testing
+  33 Staff successfully onboarded for comprehensive credential testing
 * **Credentials issued**:
   PID (Person Identification Data), EducationalID, Educational Achievement (Microcredentials)
 * **Credentials verified**:
