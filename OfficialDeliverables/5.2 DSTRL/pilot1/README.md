@@ -1,8 +1,8 @@
 # DSTRL Pilot1 - Classical PKI with SD-JWT
 
-**Digital Student Records and Transcript Ledger - Classical PKI Implementation**
+**Deployment and Testing Scenarios Results Library - Classical PKI Implementation**
 
-Welcome to Pilot1 of the DC4EU Digital Student Records and Transcript Ledger (DSTRL) project. This pilot demonstrates the implementation of digital educational credentials using traditional Public Key Infrastructure (PKI) with Selective Disclosure JSON Web Tokens (SD-JWT) for credential format.
+Welcome to Pilot1 of the DC4EU Deployment and Testing Scenarios Results Library  (DSTRL) project. This pilot demonstrates the implementation of digital educational credentials using traditional Public Key Infrastructure (PKI) with Selective Disclosure JSON Web Tokens (SD-JWT) for credential format.
 
 ## Overview
 

@@ -1,8 +1,8 @@
 # DSTRL Pilot2 - Hybrid Trust with W3C Verifiable Credentials
 
-**Digital Student Records and Transcript Ledger - Decentralised PKI Implementation**
+**Deployment and Testing Scenarios Results Library - Decentralised PKI Implementation**
 
-Welcome to Pilot2 of the DC4EU Digital Student Records and Transcript Ledger (DSTRL) project. This pilot demonstrates the implementation of digital educational credentials using a hybrid trust model that combines Classical PKI with Decentralised PKI, utilising W3C Verifiable Credentials and European Blockchain Services Infrastructure (EBSI) integration.
+Welcome to Pilot2 of the DC4EU Deployment and Testing Scenarios Results Library (DSTRL) project. This pilot demonstrates the implementation of digital educational credentials using a hybrid trust model that combines Classical PKI with Decentralised PKI, utilising W3C Verifiable Credentials and European Blockchain Services Infrastructure (EBSI) integration.
 
 ## Overview
 

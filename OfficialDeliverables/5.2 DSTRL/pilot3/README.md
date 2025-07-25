@@ -1,8 +1,8 @@
 # DSTRL Pilot3 - Combined Implementation (Pilot1 + Pilot2)
 
-**Digital Student Records and Transcript Ledger - Dual Trust Model Implementation**
+**DDeployment and Testing Scenarios Results Library - Dual Trust Model Implementation**
 
-Welcome to Pilot3 of the DC4EU Digital Student Records and Transcript Ledger (DSTRL) project. This pilot demonstrates the simultaneous implementation of both Classical PKI (Pilot1) and Hybrid Trust (Pilot2) approaches, providing educational institutions with comprehensive dual trust model capabilities and maximum flexibility for credential issuance and verification.
+Welcome to Pilot3 of the DC4EU  Deployment and Testing Scenarios Results Library (DSTRL) project. This pilot demonstrates the simultaneous implementation of both Classical PKI (Pilot1) and Hybrid Trust (Pilot2) approaches, providing educational institutions with comprehensive dual trust model capabilities and maximum flexibility for credential issuance and verification.
 
 ## Overview
 
