@@ -125,7 +125,7 @@
 
 * **Scenario status**: Completed
 * **Number of users onboarded**:
-  Spanish medical doctors successfully onboarded for professional qualification verification
+  Spanish medical doctors (25) successfully onboarded for professional qualification verification
 * **Credentials issued**:
   Not applicable (verification-focused scenario)
 * **Credentials verified**:
