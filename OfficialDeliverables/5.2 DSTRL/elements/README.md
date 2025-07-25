@@ -1,8 +1,8 @@
 # DSTRL Elements
 
-**Deployment and Testing Scenarios Results Library  - Core Components**
+**Deployment and Testing Scenarios Results Library - Core Components**
 
-Welcome to the DSTRL Elements directory, which contains the foundational components, documentation, and tools that comprise the Digital Student Records and Transcript Ledger ecosystem. This directory serves as the central repository for technical specifications, implementation guides, and supporting infrastructure for European digital educational credentialing.
+Welcome to the DSTRL Elements directory, which contains the foundational components, documentation, and tools that comprise the Deployment and Testing Scenarios Results Library  ecosystem. This directory serves as the central repository for technical specifications, implementation guides, and supporting infrastructure for European digital educational credentialing.
 
 ## Overview
 
