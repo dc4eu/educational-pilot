@@ -95,9 +95,9 @@ All three institutions implemented comprehensive dPKI following the established 
 |-----------|---------------|------|
 | **Platform Provider** | SUNET/SURF | ATOS/IZERTIS |
 | **Deployment Model** | SaaS | Dockerised |
-| **Wallet Technology** | wwWallet | EUDI Wallet |
+| **Wallet Technology** | wwWallet | DC4EU Identify Wallet |
 | **Credential Format** | SD-JWT | W3C VC |
-| **Trust Mechanism** | X.509 PKI only | Hybrid PKI + DID |
+| **Trust Mechanism** | X.509 PKI only | Hybrid PKI + dPKI |
 | **Cross-Border Verification** | Limited | Full capability |
 | **Governance Layer** | Static | Dynamic |
 
