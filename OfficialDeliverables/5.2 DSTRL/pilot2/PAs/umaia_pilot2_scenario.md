@@ -113,7 +113,7 @@
 ## 5. Implementation and Testing Progress
 
 * **Scenario status**: Completed
-* **Number of users onboarded**: University students successfully onboarded for credential testing
+* **Number of users onboarded**: 25 final year university students successfully onboarded for credential testing
 * **Credentials issued**: PID (Person Identification Data), EducationalID, Educational Achievement (University degrees)
 * **Credentials verified**: PID verification completed during PID retrieval user journey, EducationalID verified, Educational Achievement verified
 * **Successes**: Successful PKI certificate deployment, platform integration completed, EBSI DID registration completed, comprehensive educational credential workflows demonstrated
