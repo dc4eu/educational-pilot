@@ -70,34 +70,6 @@ The training certificate schema defines the data structure for representing trai
           "issuing_country": {
             "type": "string",
             "description": "Country of the issuing institution"
-          },
-          "accreditation": {
-            "type": "array",
-            "description": "Accreditation information",
-            "items": {
-              "type": "object",
-              "properties": {
-                "accreditationBody": {
-                  "type": "string",
-                  "description": "Name of the accreditation body"
-                },
-                "accreditationId": {
-                  "type": "string",
-                  "description": "Identifier of the accreditation"
-                },
-                "accreditationDate": {
-                  "type": "string",
-                  "format": "date",
-                  "description": "Date of accreditation"
-                },
-                "validUntil": {
-                  "type": "string",
-                  "format": "date",
-                  "description": "Accreditation validity end date"
-                }
-              },
-              "required": ["accreditationBody", "accreditationId"]
-            }
           }
         },
         "required": ["id", "legalName"]
@@ -134,23 +106,6 @@ The training certificate schema defines the data structure for representing trai
                 "additionalProperties": {
                   "type": "string"
                 }
-              },
-              "level": {
-                "type": "object",
-                "description": "Qualification level information",
-                "properties": {
-                  "eqfLevel": {
-                    "type": "integer",
-                    "minimum": 1,
-                    "maximum": 8,
-                    "description": "European Qualifications Framework level"
-                  },
-                  "nqfLevel": {
-                    "type": "string",
-                    "description": "National Qualifications Framework level"
-                  }
-                },
-                "required": ["eqfLevel"]
               },
               "fieldOfStudy": {
                 "type": "object",
@@ -306,8 +261,7 @@ The training certificate schema defines the data structure for representing trai
                       "type": "string"
                     }
                   }
-                },
-                "required": ["noteLiteral"]
+                }
               },
               "learningOutcomes": { 
                 "type": "array",
