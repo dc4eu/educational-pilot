@@ -121,7 +121,7 @@ All institutions successfully completed identical user journeys across both trus
 | ULUSOFONA | 50 (25 users × 2 types) | 75 (25 users × 3 types) | 125 |
 | **Total** | **342 credentials** | **345 credentials** | **687 credentials** |
 
-**Pilot3 Total Impact**: 90 users, 562 credentials across dual trust frameworks
+**Pilot3 Total Impact**: 121 users, 687 credentials across dual trust frameworks
 
 ## Critical Technical Insights
 
