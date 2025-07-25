@@ -76,7 +76,7 @@
   * Test environment operational with ATOS/IZERTIS integration
   * Production readiness: Partial (awaiting EBSI DID registration completion)
 * **Training and onboarding**:
-  30 students and approximately 5 administrative staff trained
+  60 students and approximately 5 administrative staff trained
 * **Issue escalation**:
 
   * SPOC contact: Maria Teresa Bordas at SGAD
@@ -127,9 +127,9 @@
 
 * **Scenario status**: Completed
 * **Number of users onboarded**:
-  30 students selected and prepared for pilot testing
+  60 students and staff selected and prepared for pilot testing
 * **Credentials issued**:
-  PID (Person Identification Data), EducationalID, EuropeanHigherEducationMicroCredentials
+  PID (Person Identification Data), EducationalID, EuropeanHigherEducationMicroCredentials, EuropeanHigherEdcuationDiploma, EuropeanHigherEducationTranscriptofRecords
 * **Credentials verified**:
   PID verification completed during PID retrieval user journey, EducationalID verified, EuropeanHigherEducationMicroCredentials verified
 * **Successes**:
