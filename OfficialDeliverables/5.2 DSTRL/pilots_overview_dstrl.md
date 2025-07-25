@@ -9,7 +9,7 @@ This document provides a comprehensive overview of the contents within the three
 The DC4EU project implements three distinct pilot configurations, each representing different trust models and technical approaches:
 
 - **Pilot 1**: Classical PKI with SD-JWT credentials
-- **Pilot 2**: Hybrid Trust (Classical PKI + Decentralised PKI) with W3C Verifiable Credentials  
+- **Pilot 2**: Hybrid Trust (Classical PKI + Decentralised PKI) with W3C Verifiable Credentials in alignment to 1st batch of the implementing acts
 - **Pilot 3**: Combined implementation (Pilot 1 + Pilot 2) with dual trust models
 
 For real-time implementation status across all pilots, see: [**Piloting Status Tracker**](./procedures/piloting/piloting-status-tracker.md)
