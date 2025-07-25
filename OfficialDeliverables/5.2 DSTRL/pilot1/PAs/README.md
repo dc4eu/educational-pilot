@@ -36,7 +36,7 @@ This standardisation demonstrates effective coordination by SURF/SUNET but also 
 | Ladok (Sweden) | 50 | 125 | 125 Integrity checks only |
 | Sikt (Norway) | 25 | 50 | Integrity checks only |
 
-**Total Impact**: 178 users, 471 credentials issued, demonstrating significant pilot scale.
+**Total Impact**: 178 users, 571 credentials issued, demonstrating significant pilot scale.
 
 ## Critical Technical Limitations
 
