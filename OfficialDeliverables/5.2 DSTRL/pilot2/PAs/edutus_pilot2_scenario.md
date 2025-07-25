@@ -126,9 +126,9 @@
 
 * **Scenario status**: Completed
 * **Number of users onboarded**:
-  University students successfully onboarded for credential testing
+  25 University students successfully onboarded for credential testing
 * **Credentials issued**:
-  PID (Person Identification Data), EducationalID, Educational Achievement (University credentials)
+  PID (Person Identification Data), EducationalID, Educational Achievement (European Higher Education Diploma)
 * **Credentials verified**:
   PID verification completed during PID retrieval user journey, EducationalID verified, Educational Achievement verified
 * **Successes**:
