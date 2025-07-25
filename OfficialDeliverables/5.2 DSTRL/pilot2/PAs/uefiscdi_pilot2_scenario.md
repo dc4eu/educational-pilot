@@ -114,7 +114,7 @@
 ## 5. Implementation and Testing Progress
 
 * **Scenario status**: Completed
-* **Number of users onboarded**: Higher education stakeholders successfully onboarded for credential testing
+* **Number of users onboarded**: Higher education stakeholders (10 graduates) successfully onboarded for credential testing
 * **Credentials issued**: PID (Person Identification Data), EducationalID, Educational Achievement (Higher education financing certificates)
 * **Credentials verified**: PID verification completed during PID retrieval user journey, EducationalID verified, Educational Achievement verified
 * **Successes**: Successful PKI certificate deployment, ATOS/IZERTIS Dockerised solution integration completed, EBSI DID registration completed, comprehensive higher education financing credential workflows demonstrated
