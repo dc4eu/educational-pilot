@@ -125,7 +125,7 @@
 
 * **Scenario status**: Completed
 * **Number of users onboarded**:
-  New enrollees, graduates requesting diplomas, students requesting ID cards successfully onboarded
+  25 - New enrollees, graduates requesting diplomas, students requesting ID cards successfully onboarded
 * **Credentials issued**:
   PID (Person Identification Data), EducationalID, Educational Achievement (Enrollment HE, Diplomas, Diploma Supplements)
 * **Credentials verified**:
