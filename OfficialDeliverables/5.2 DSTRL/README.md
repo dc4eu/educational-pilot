@@ -15,53 +15,85 @@ DSTRL represents the culmination of extensive piloting activities conducted by e
 - **Cross-Border Verification Evidence**: Practical demonstration of international credential recognition capabilities
 - **Stakeholder Guidance**: Evidence-based recommendations for future implementations
 
-## Current Implementation Status
+## Current Implementation Status - Updated Results
+
+### **Overall Project Achievement Summary**
+
+**Total Documented Implementation Results**:
+- **1,107+ end users** successfully onboarded across all pilots
+- **3,244+ digital credentials** issued and verified
+- **36+ participating institutions** across 12 European countries
+- **Three validated technical approaches** with comprehensive comparative analysis
+
+### **Pilot-Specific Results**
+
+#### **Pilot 1: Classical PKI Implementation**
+- **5 institutions** across Nordic and Dutch regions
+- **178 documented end users** successfully onboarded
+- **571 credentials issued** using SD-JWT format
+- **Technical validation**: Successful credential issuance with identified verification limitations
+- **Key insight**: Classical PKI effective for credential issuance but limited for cross-border verification
+
+#### **Pilot 2: Hybrid Trust (Classical PKI + Decentralised PKI)**
+- **28+ institutions** across 10 European countries
+- **789+ documented end users** successfully participating
+- **2,558+ credentials issued** using W3C Verifiable Credentials
+- **Technical validation**: 100% DNS endpoint availability and comprehensive cross-border verification
+- **Key insight**: Most successful approach for European-scale digital credential deployment
+
+#### **Pilot 3: Combined Implementation**
+- **3 institutions** implementing dual trust models
+- **115 documented end users** testing both approaches
+- **Mixed technical results**: Classical PKI successful, dPKI challenges identified
+- **Key insight**: Dual implementation provides flexibility but requires significant resources
 
 For real-time tracking of implementation progress across all participating institutions and countries, please refer to the [**DC4EU Piloting Status Tracker**](./procedures/piloting/piloting-status-tracker.md).
 
-**Implementation Results Summary:**
-- **Total Participating Institutions**: 36+ educational institutions across 14 European countries
-- **Completed Pilot Scenarios**: 3 distinct technical approaches with comprehensive testing results
-- **Cross-Border Verification Results**: Successfully demonstrated international credential verification
-- **Standards Compliance Achievement**: Validated W3C Verifiable Credentials, X.509v3 PKI, and EBSI integration
+## Library Structure and Navigation
 
-## DSTRL Structure and Results Documentation
+### **Pilot Implementation Documentation**
 
-The DSTRL is organised into comprehensive results documentation covering all aspects of the piloting activities:
+#### [**Pilot 1: Classical PKI Implementation**](./pilot1/README.md)
+**Implementation Approach**: Traditional Public Key Infrastructure with SD-JWT credentials  
+**Results Summary**: 5 institutions, 178 users, 571 credentials - Nordic/Dutch implementation success  
+**Key Findings**:
+- Successful traditional PKI deployment with SD-JWT credential format
+- SUNET/SURF SaaS environment provides reliable infrastructure foundation
+- Cross-border verification limitations identified requiring hybrid approaches
+- Strong foundation for institutions with established PKI infrastructure
 
-### [**Pilot Implementation Results**](./pilots_overview_dstrl.md) - Technical Deployment Outcomes
+#### [**Pilot 2: Hybrid Trust Implementation**](./pilot2/README.md)
+**Implementation Approach**: Combined Classical PKI + Decentralised PKI with W3C Verifiable Credentials  
+**Results Summary**: 28+ institutions, 789+ users, 2,558+ credentials - Comprehensive European deployment  
+**Key Findings**:
+- Most successful pilot approach with highest user adoption and credential volume
+- Successful EBSI integration demonstrating blockchain-based trust capabilities
+- Complete cross-border verification validated across multiple member states
+- Multiple deployment models (Dockerised, SaaS, National) successfully tested
+- Strong evidence supporting eIDAS 2.0 preparation and future European digital identity framework
 
-#### [**Pilot 1: Classical PKI Implementation Results**](./pilot1/README.md)
-- **Implementation Approach**: Traditional PKI with SD-JWT credentials
-- **Deployment Results**: SaaS implementation through SUNET/SURF infrastructure
-- **Participating Institutions**: 5 organisations across Denmark, Finland, Netherlands, Norway, Sweden
-- **Technical Outcomes**: Mixed X.509v3 certificate implementation status, limited DNS endpoint availability
-- **Lessons Learned**: Strengths of leveraging existing PKI infrastructure, challenges with relying party certificate provisioning
-- **User Experience Results**: Positive feedback on familiar PKI-based workflows
+#### [**Pilot 3: Combined Implementation**](./pilot3/README.md)
+**Implementation Approach**: Dual trust model supporting both Classical and Decentralised PKI  
+**Results Summary**: 3 institutions, 115 users - Strategic institutional positioning with mixed technical results  
+**Key Findings**:
+- Successful demonstration of institutional flexibility through dual trust model support
+- Classical PKI component achieved full functionality with expected limitations
+- Decentralised PKI component experienced technical challenges requiring resolution
+- Resource-intensive approach suitable for strategic institutional positioning
 
-#### [**Pilot 2: Decentralised PKI Implementation Results**](./pilot2/README.md)
-- **Implementation Approach**: Hybrid trust with W3C Verifiable Credentials and EBSI integration
-- **Deployment Results**: Multiple deployment models (Dockerised, SaaS, National implementations)
-- **Participating Institutions**: 28 organisations across Belgium, Germany, Hungary, Italy, Lithuania, Poland, Portugal, Romania, Spain, Sweden
-- **Technical Outcomes**: 100% DNS endpoint availability, universal DID deployment, complete EBSI integration
-- **Lessons Learned**: Success of decentralised identity technologies, effectiveness of flexible deployment approaches
-- **Cross-Border Results**: Demonstrated successful international credential verification
+### **Operational Framework and Procedures**
 
-#### [**Pilot 3: Combined Implementation Results**](./pilot3/README.md)
-- **Implementation Approach**: Dual trust model supporting both Classical and Decentralised PKI
-- **Deployment Results**: Comprehensive dual infrastructure implementation
-- **Participating Institutions**: 3 organisations across Netherlands, Portugal (6 total implementations: 3 PKI + 3 dPKI)
-- **Technical Outcomes**: Successfully demonstrated parallel operation of both trust models
-- **Lessons Learned**: Feasibility of multi-trust-model operations, increased resource requirements
-- **Strategic Value**: Maximum flexibility for diverse verification requirements
+#### [**Implementation Procedures and Legal Framework**](./procedures/README.md)
+**Comprehensive Procedural Documentation**
+- Legal entity ecosystem framework and organisational roles
+- Regulatory compliance requirements and monitoring procedures
+- Step-by-step implementation guidance for different institutional contexts
+- Quality assurance frameworks and testing methodologies
 
-### [**Procedures and Methodologies**](./procedures/) - Implementation Framework Results
-
-#### [**Deployment Methodology Validation**](./procedures/Deployment_methodology.md)
-- **Methodology Testing**: Validation of standardised deployment framework across all pilot approaches
-- **Phase Implementation Results**: Evidence of successful phased deployment approach effectiveness
-- **Risk Management Outcomes**: Documented risk mitigation strategies and their effectiveness
-- **Quality Assurance Results**: Comprehensive testing framework validation and improvement recommendations
+**Key Results Documentation**:
+- **Implementation Procedures Validation**: Step-by-step procedure validation across different institutional contexts
+- **Infrastructure Deployment Outcomes**: Evidence of successful PKI and dPKI infrastructure establishment
+- **Integration Testing Results**: Validation of institutional system integration approaches
 
 #### [**Compliance Framework Testing**](./procedures/entities/compliance.md)
 - **Regulatory Compliance Results**: Evidence of eIDAS 2.0 preparation and GDPR compliance achievement
@@ -102,32 +134,44 @@ The DSTRL is organised into comprehensive results documentation covering all asp
 #### [**MyAcademicID Deployment Results**](./elements/documents/MyAcademicID/)
 - **Academic Identity Management Testing**: Validation of federated identity management across European institutions
 - **ESI Framework Implementation**: Successful European Student Identifier framework deployment results
-- **Cross-Institutional Verification**: Evidence of successful academic mobility support and credential verification
+- **Cross-Border Recognition Testing**: Validated international academic identity recognition mechanisms
 
-#### [**Format Converter Performance**](./elements/converters/)
-- **Conversion Service Testing**: Validated RESTful API performance for credential format transformation
-- **Semantic Mapping Results**: Evidence of successful transformation between national formats and European standards
-- **Quality Assurance Outcomes**: Validated conversion accuracy and error handling mechanisms
+## Key Research Findings and Evidence
 
-## Implementation Results by Stakeholder Groups
+### **Comparative Analysis Results**
 
-### **Educational Institution Outcomes**
+#### **Trust Model Performance Comparison**
+**Classical PKI (Pilot 1)**:
+- **Strengths**: Familiar implementation approach, established infrastructure compatibility
+- **Limitations**: Cross-border verification challenges, limited governance flexibility
+- **Best Use**: Institutions with existing PKI infrastructure seeking incremental digital transformation
 
-#### **Successful Implementation Patterns**
-- **Nordic Collaboration Model**: SUNET/SURF SaaS approach demonstrated effective resource sharing
-- **Decentralised Implementation Success**: 28 institutions successfully deployed modern dPKI infrastructure
-- **Dual Trust Model Feasibility**: 3 institutions proved viability of comprehensive dual implementation
+**Hybrid Trust (Pilot 2)**:
+- **Strengths**: Complete cross-border verification, EBSI integration, future-ready architecture
+- **Performance**: Highest user adoption (789+ users), highest credential volume (2,558+ credentials)
+- **Best Use**: Forward-looking institutions ready for comprehensive European digital identity integration
 
-#### **Lessons Learned and Recommendations**
-- **Infrastructure Preparation**: Adequate technical preparation crucial for successful deployment
-- **Staff Training Effectiveness**: Comprehensive training programmes essential for operational success
-- **User Experience Insights**: Positive user feedback on both classical and decentralised approaches
-- **Cross-Border Testing Value**: International verification testing provided valuable operational insights
+**Combined Implementation (Pilot 3)**:
+- **Strengths**: Maximum verification compatibility, institutional flexibility
+- **Challenges**: Resource-intensive, complex operational requirements
+- **Best Use**: Strategic institutions requiring maximum flexibility and comprehensive verification coverage
 
-### **Policy and Regulatory Outcomes**
+#### **Regional Implementation Insights**
+- **Nordic Countries**: Strong PKI foundation enabling successful Pilot 1 deployment
+- **Central/Southern Europe**: Diverse Pilot 2 approaches demonstrating adaptability across different national contexts
+- **Poland**: National SaaS model successfully scaled across 6 universities with 150 students
+- **Spain**: Multiple institutional implementations demonstrating Pilot 2 effectiveness across diverse higher education contexts
 
-#### **Regulatory Compliance Evidence**
-- **eIDAS 2.0 Preparation**: Successful preparation for upcoming European digital identity regulation
+### **Stakeholder Impact Results**
+
+#### **Educational Institution Results**
+- **Implementation Success**: High success rates across diverse institutional contexts and technical capabilities
+- **User Adoption**: Strong positive feedback from 1,107+ participating end users
+- **Cross-Border Recognition**: Validated seamless credential recognition across European institutions
+- **Operational Integration**: Successful integration with existing institutional systems and workflows
+
+#### **Policy and Regulatory Results**
+- **eIDAS 2.0 Preparation**: Demonstrated practical pathways for eIDAS 2.0 compliance and implementation
 - **GDPR Compliance Achievement**: Demonstrated privacy-by-design implementation across all pilots
 - **Cross-Border Recognition**: Validated international credential recognition mechanisms
 - **Standards Evolution Support**: Practical evidence supporting European digital identity policy development
@@ -150,99 +194,51 @@ The DSTRL is organised into comprehensive results documentation covering all asp
 - **Standards Contribution**: Practical feedback contributed to W3C and EBSI standards development
 - **Technology Evolution**: Evidence supporting emerging digital identity technology adoption
 
-## Key Research Findings and Evidence
+## Strategic Recommendations and Implementation Guidance
 
-### **Comparative Analysis Results**
+### **Implementation Pathway Recommendations**
 
-#### **Trust Model Effectiveness**
-- **Classical PKI**: Effective for institutions with existing PKI infrastructure, challenges with RP certificate availability
-- **Decentralised PKI**: Demonstrated superior cross-border verification capabilities and future-ready architecture
-- **Combined Approach**: Proved feasibility but requires significant additional resources
+#### **For Educational Institutions**
+**Choose Pilot 1** if your institution has:
+- Established PKI infrastructure and expertise
+- Preference for traditional certificate-based approaches
+- Primary focus on domestic credential recognition
+- Limited resources for advanced digital identity implementation
 
-#### **Deployment Model Success Factors**
-- **SaaS Advantages**: Reduced institutional technical burden, standardised implementation
-- **Dockerised Benefits**: Institutional control and customisation capabilities
-- **National Coordination**: Effective for coordinated multi-institutional deployment
+**Choose Pilot 2** if your institution seeks:
+- Comprehensive European digital identity integration
+- Cross-border credential recognition capabilities
+- eIDAS 2.0 preparation and future-ready architecture
+- Integration with European Digital Identity Wallet ecosystem
 
-### **Cross-Border Verification Evidence**
-- **Technical Feasibility**: Successfully demonstrated international credential verification
-- **Trust Relationship Establishment**: Validated automatic trust discovery mechanisms
-- **Standards Interoperability**: Evidence of W3C VC and EBSI standards effectiveness
-- **Operational Scalability**: Demonstrated ability to scale verification across multiple countries
+**Choose Pilot 3** if your institution requires:
+- Maximum verification compatibility across diverse systems
+- Strategic positioning for evolving digital identity standards
+- Comprehensive institutional flexibility
+- Adequate resources for dual infrastructure maintenance
 
-### **User Experience Research Results**
-- **Wallet Integration**: Positive user feedback on both wwWallet and EUDI Wallet implementations
-- **Credential Management**: Successful user adoption of digital credential workflows
-- **Privacy Control**: Validated selective disclosure and privacy-preserving credential presentation
-- **Cross-Border Usage**: Evidence of successful international credential presentation
+#### **Implementation Success Factors**
+- **Technical Preparation**: Adequate infrastructure assessment and resource allocation
+- **Staff Training**: Comprehensive education programmes for operational teams
+- **Cross-Border Planning**: Early engagement with international verification partnerships
+- **User Experience Focus**: Systematic user onboarding and support development
 
-## Strategic Recommendations Based on Results
+### **Policy and Standards Development Recommendations**
 
-### **For Future Implementations**
-1. **Pilot Selection Strategy**: Choose Pilot 2 for forward-looking institutions, Pilot 1 for PKI-established environments
-2. **Infrastructure Preparation**: Invest adequate time in technical preparation and staff training
-3. **Cross-Border Testing**: Prioritise international verification capability development
-4. **User Experience Focus**: Implement comprehensive user onboarding and training programmes
+#### **Evidence-Based Policy Guidance**
+- **Standards Adoption**: Strong evidence supporting W3C Verifiable Credentials and EBSI integration
+- **Cross-Border Frameworks**: Validated mechanisms for international credential recognition
+- **Regulatory Preparation**: Demonstrated pathways for eIDAS 2.0 compliance and implementation
+- **Technology Evolution**: Evidence supporting decentralised identity adoption in European context
 
-### **For Policy Development**
-1. **Standards Adoption**: Support W3C Verifiable Credentials and EBSI integration in European policy
-2. **Regulatory Alignment**: Continue eIDAS 2.0 preparation based on piloting evidence
-3. **Cross-Border Coordination**: Strengthen mechanisms for international credential recognition
-4. **Privacy Protection**: Maintain focus on GDPR compliance and privacy-by-design principles
+#### **Regulatory Framework Support**
+- **Multi-Level Governance**: Proven effectiveness of European, National, and Institutional coordination
+- **Compliance Automation**: Validated automated compliance monitoring and reporting mechanisms
+- **Progressive Enforcement**: Tested escalation procedures and remediation approaches
 
-### **For Technology Evolution**
-1. **Infrastructure Investment**: Prioritise decentralised PKI and EBSI integration capabilities
-2. **Standards Development**: Continue active participation in W3C and EBSI standards evolution
-3. **Interoperability Enhancement**: Focus on cross-system compatibility and format conversion
-4. **User Experience Optimisation**: Invest in wallet technology and user interface improvements
+## Getting Started with DSTRL Implementation
 
-## Quality Assurance and Validation Results
-
-### **Testing Framework Effectiveness**
-- **Comprehensive Testing**: Validated systematic testing approach across all pilot implementations
-- **Quality Metrics**: Demonstrated measurable quality improvement through structured testing
-- **Issue Resolution**: Proved effectiveness of systematic issue identification and resolution procedures
-- **Continuous Improvement**: Evidence of successful iterative improvement based on testing feedback
-
-### **Compliance Monitoring Results**
-- **Automated Tracking**: Successfully deployed automated compliance monitoring and reporting
-- **Real-Time Oversight**: Validated real-time status tracking and performance monitoring
-- **Multi-Level Governance**: Demonstrated effective coordination across governance levels
-- **Stakeholder Engagement**: Evidence of successful stakeholder consultation and feedback integration
-
-## Future Development Recommendations
-
-### **Scaling Strategy Based on Results**
-- **Geographic Expansion**: Systematic approach to additional EU Member State participation
-- **Institutional Diversity**: Include more diverse institution types based on piloting evidence
-- **Technology Evolution**: Adaptation strategy based on emerging standards and technology developments
-- **Sustainability Planning**: Long-term operational sustainability based on piloting experience
-
-### **Innovation Priorities**
-- **Standards Evolution**: Continued participation in W3C, EBSI, and European standards development
-- **Technology Integration**: Enhanced integration with emerging digital identity technologies
-- **User Experience Enhancement**: Continued improvement based on user feedback and research
-- **Cross-Border Coordination**: Strengthened international collaboration mechanisms
-
-## Support and Resources for Implementation
-
-### **Evidence-Based Guidance**
-- **Implementation Patterns**: Documented successful implementation approaches based on piloting results
-- **Best Practices Repository**: Comprehensive collection of lessons learned and recommendations
-- **Technical Documentation**: Evidence-based technical implementation guidance
-- **Training Resources**: Validated training programmes and materials
-
-### **Community and Knowledge Sharing**
-- **Practitioner Network**: Active community of institutions with implementation experience
-- **Knowledge Exchange**: Regular sharing sessions based on piloting experience
-- **Research Collaboration**: Ongoing academic research partnerships for continuous improvement
-- **Policy Engagement**: Evidence-based contribution to European digital identity policy development
-
----
-
-## Quick Navigation to Results
-
-### **Implementation Evidence Fast-Track**
+### **Implementation Navigation Path**
 1. **Overall Progress**: Review [Status Tracker](./procedures/piloting/piloting-status-tracker.md) for comprehensive implementation results
 2. **Technical Results**: Compare [Pilot 1](./pilot1/README.md), [Pilot 2](./pilot2/README.md), and [Pilot 3](./pilot3/README.md) implementation outcomes
 3. **Methodology Validation**: Review [Deployment Methodology](./procedures/Deployment_methodology.md) effectiveness results
