@@ -209,4 +209,4 @@ As the European digital identity ecosystem continues to evolve, the EMREX Gatewa
 
 ---
 
-*This chapter is part of the Digital Student Records and Transcript Ledger (DSTRL) documentation, contributing to the broader understanding of digital credential systems in European higher education.*
+*This chapter is part of the Deployment and Testing Scenarios Results Library (DSTRL) documentation, contributing to the broader understanding of digital credential systems in European higher education.*
