@@ -1,6 +1,6 @@
 # DSTRL Deployment Methodology
 
-**Digital Student Records and Transcript Ledger - Standardised Implementation Framework**
+**Deployment and Testing Scenarios Results Library - Standardised Implementation Framework**
 
 This document defines the standardised methodology for deploying Digital Credentials for Europe (DC4EU) implementations across educational institutions, ensuring consistent quality, compliance, and operational effectiveness whilst accommodating diverse institutional requirements and national contexts.
 
