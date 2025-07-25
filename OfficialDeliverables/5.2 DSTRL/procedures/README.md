@@ -1,6 +1,6 @@
 # DSTRL Procedures Directory
 
-**Digital Student Records and Transcript Ledger - Operational Procedures and Legal Framework**
+**Deployment and Testing Scenarios Results Library - Operational Procedures and Legal Framework**
 
 This directory contains the comprehensive procedural framework and legal guidance documentation for implementing the Deployment and Testing Scenarios Results Library (DSTRL) within the European digital credentials ecosystem. It serves as the authoritative reference for organisations seeking to understand, implement, and operate within the DC4EU (Digital Credentials for Europe) legal and operational framework.
 
