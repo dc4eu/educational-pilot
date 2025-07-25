@@ -15,37 +15,37 @@ The ecosystem operates through clearly defined **organisational roles**, **trust
 
 This framework consists of a main overview document (this page) and five comprehensive sub-documents that provide detailed guidance for different aspects of the ecosystem:
 
-### 📋 **Core Framework Overview** (This Document)
+### **Core Framework Overview** (This Document)
 - Executive summary and navigation
 - Key concepts and principles
 - Quick reference guides
 - Integration overview
 
-### 🏛️ **[Entity Roles & Responsibilities](./entities-main-framework.md)**
+### **[Entity Roles & Responsibilities](./entities-main-framework.md)**
 - **Purpose:** Define organisational capabilities and responsibilities
 - **Key Focus:** Six primary roles (Authentic Sources, QEAA Providers, Pub-EAA Providers, EAA Providers, Relying Parties, Supervisory Bodies)
 - **Content:** Legal requirements, eligible entities, multi-role scenarios
 - **Audience:** Legal entities determining their ecosystem role(s)
 
-### 🔗 **[Inter-Organisational Relationships](./entities/relationships.md)**  
+### **[Inter-Organisational Relationships](./entities/relationships.md)**  
 - **Purpose:** Map inter-organisational dependencies and trust networks
 - **Key Focus:** Authority, verification, and operational relationships
 - **Content:** Trust chains, cross-border mechanisms, relationship lifecycle
 - **Audience:** Entities establishing partnerships and trust relationships
 
-### ⚖️ **[Regulatory Compliance Framework](./entities/compliance.md)**
+### **[Regulatory Compliance Framework](./entities/compliance.md)**
 - **Purpose:** Ensure systematic regulatory adherence
 - **Key Focus:** Entity-specific compliance requirements and monitoring
 - **Content:** Legal obligations, compliance checklists, enforcement mechanisms
 - **Audience:** Compliance officers, auditors, supervisory bodies
 
-### 🛠️ **[Implementation Guidance](./entities/implementation.mdimplementation.md)**
+### **[Implementation Guidance](./entities/implementation.mdimplementation.md)**
 - **Purpose:** Provide practical onboarding procedures
 - **Key Focus:** Step-by-step integration processes
 - **Content:** Classical PKI and dPKI scenarios, technical requirements, testing frameworks
 - **Audience:** Technical teams, project managers, implementation specialists
 
-### 📊 **[Governance & Monitoring](./entities/governance.md)**
+### **[Governance & Monitoring](./entities/governance.md)**
 - **Purpose:** Establish systematic oversight and performance management
 - **Key Focus:** Multi-level governance architecture and monitoring
 - **Content:** Performance metrics, risk management, accountability frameworks
@@ -57,12 +57,12 @@ This framework consists of a main overview document (this page) and five compreh
 
 The DC4EU ecosystem is fundamentally an **inter-organisational trust network** where:
 
-### 🏢 **Institutional Identity First**
+### **Institutional Identity First**
 - **Educational institutions**, **professional bodies**, and **public authorities** assume defined roles
 - **Organisational capabilities** determine ecosystem participation scope
 - **Institutional accountability** maintains trust and reliability
 
-### 🤝 **Formalised Trust Relationships**
+### **Formalised Trust Relationships**
 - **Trust relationships** are established through formal accreditation and certification processes
 - **Authority chains** define supervision and oversight responsibilities  
 - **Operational agreements** enable day-to-day ecosystem functions
@@ -96,14 +96,14 @@ The DC4EU ecosystem is fundamentally an **inter-organisational trust network** w
 
 ## Implementation Pathways
 
-### 🛤️ **Pathway 1: Classical PKI Implementation**
+### **Pathway 1: Classical PKI Implementation**
 **Best for:** Organisations with existing PKI infrastructure
 - Traditional X.509v3 certificate-based trust
 - EU Trusted List integration
 - Established QTSP relationships
 - **→ [Start with Implementation Guidance](implementation.md#classical-pki-infrastructure)**
 
-### 🛤️ **Pathway 2: Hybrid PKI + dPKI Implementation**  
+### **Pathway 2: Hybrid PKI + dPKI Implementation**  
 **Best for:** Organisations seeking future-ready solutions
 - Combines traditional certificates with EBSI DIDs
 - Enhanced interoperability and verifiability
@@ -114,7 +114,7 @@ The DC4EU ecosystem is fundamentally an **inter-organisational trust network** w
 
 ## Compliance Quick Check
 
-### ✅ **Pre-Onboarding Essentials**
+### **Pre-Onboarding Essentials**
 Before beginning any onboarding process, ensure your organisation has:
 
 - [ ] **Legal Entity Status**: Verified company/institution registration
@@ -162,14 +162,14 @@ graph TB
 
 ## Getting Started Checklist
 
-### 📋 **For New Organisations**
+### **For New Organisations**
 1. **Determine Your Role(s)**: [Review Entity Roles & Responsibilities](entity-roles.md)
 2. **Understand Relationships**: [Study Inter-Organisational Requirements](relationships.md)  
 3. **Assess Compliance**: [Complete Compliance Framework Review](compliance.md)
 4. **Plan Implementation**: [Follow Implementation Guidance](implementation.md)
 5. **Establish Governance**: [Implement Monitoring Framework](governance.md)
 
-### 📋 **For Existing Ecosystem Participants**
+### **For Existing Ecosystem Participants**
 1. **Review Current Compliance**: [Use Compliance Tracking Tools](compliance.md#compliance-tracking-tools)
 2. **Optimise Relationships**: [Assess Trust Network Position](relationships.md#relationship-lifecycle-management)
 3. **Enhance Governance**: [Implement Advanced Monitoring](governance.md#performance-monitoring-framework)
@@ -179,14 +179,14 @@ graph TB
 
 ## Support and Resources
 
-### 📚 **Documentation Suite**
+### **Documentation Suite**
 - **[Entity Roles & Responsibilities](entity-roles.md)**: Comprehensive role definitions and requirements
 - **[Inter-Organisational Relationships](relationships.md)**: Trust network mapping and management  
 - **[Regulatory Compliance Framework](compliance.md)**: Systematic compliance assurance
 - **[Implementation Guidance](implementation.md)**: Practical onboarding procedures
 - **[Governance & Monitoring](governance.md)**: Oversight and performance management
 
-### 🆘 **Additional Support**
+### **Additional Support**
 - **Technical Assistance**: Contact your national supervisory body
 - **Implementation Support**: Engage with certified implementation partners
 - **Training Resources**: Access DC4EU training programmes and materials
