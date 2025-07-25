@@ -150,6 +150,8 @@
   * PID retrieval user journey executed successfully with verification
   * EducationalID issuance and verification completed
   * EuropeanHigherEducationMicroCredentials issuance and verification completed
+  * EuropeanHigherEducationDiploma issuance and verification completed
+  * EuropeanHigherEducationTranscriptOfRecords issuance and verification completed
   * Student onboarding process smooth
   * Multilingual support (Catalan/Spanish/English) implemented successfully
   * W3C Verifiable Credentials implementation successful
