@@ -53,13 +53,11 @@ DC4EU's selection of ELM v3 is based on the standard's demonstration of exceptio
 
 **Federating model functionality** - ELM v3 integrates and unifies the strongest characteristics of all other standards, creating a comprehensive framework rather than competing alternatives. The model's strength lies in its comprehensive approach to representing complex educational concepts including learning outcomes and achievements, credit systems (such as ECTS), assessment methods and grading schemes, professional competencies and skills, and quality assurance information.
 
-**Holistic coverage provision** - The standard ensures comprehensive coverage across all educational contexts, supporting primary, secondary, tertiary, and adult education, as well as formal, non-formal, and informal learning achievements. ELM aligns with established European frameworks including the European Qualifications Framework, European Skills, Competences, Qualifications and Occupations (ESCO), Europass Digital Credentials Infrastructure, Bologna Process terminology, and Learning Opportunities and Qualifications in Europe.
+**Enhanced semantic richness** - The standard provides extensive semantic capability for representing complex learning relationships and educational concepts. This includes sophisticated metadata support, comprehensive vocabularies for educational terms, detailed qualification level mapping, and rich contextual information that enables nuanced educational achievement representation.
 
-**Interoperability enablement** - ELM v3 facilitates seamless integration with data from different sources and standards, promoting cross-institutional collaboration. The standard enables uniform structuring of credential data, allowing educational and professional qualifications to be recognised across all member states without additional modifications. This interoperability supports existing Bologna Process tools including ECTS credits, degree cycle indicators, qualification framework levels, and quality assurance status.
+**Comprehensive institutional support** - ELM v3 includes detailed organisational information crucial for trust and verification processes. This encompasses legal entity representation, accreditation status documentation, quality assurance information, and institutional relationship mapping that supports cross-border educational collaboration.
 
-**Privacy and security assurance** - ELM v3 incorporates robust privacy-preserving features including selective disclosure capabilities, allowing users to share only necessary portions of their credentials whilst maintaining data integrity. The standard includes cryptographic proofs that safeguard personal data, ensuring credential holders can control what information is shared in line with GDPR principles. Personal identification remains compliant with privacy laws whilst supporting comprehensive educational profile linkage.
-
-**Scalability assurance** - The framework adapts effectively to different educational contexts, from local institutions to international programmes. ELM's data model allows for encoding information relevant to different educational settings and levels, including qualification descriptions, learning outcomes, accreditation details, and the context of the learning process, whilst supporting customisation for different credentialing needs.
+**Cross-border compatibility** - The standard's design inherently supports European mobility requirements through standardised qualification representation, consistent learning outcome documentation, harmonised assessment criteria, and unified credit transfer mechanisms that facilitate seamless academic mobility across member states.
 
 **Future-proof architecture** - ELM v3's structure accommodates evolution and extensions, ensuring long-term viability and adaptability. The model supports semantic consistency across implementations, enables extensions following established patterns, provides comprehensive multilingual support, and maintains explicit alignment with European frameworks whilst considering privacy requirements for holder information.
 
@@ -67,42 +65,26 @@ DC4EU's selection of ELM v3 is based on the standard's demonstration of exceptio
 
 ## DC4EU's Implementation Success: ELM in Practice
 
-### Proven Implementation Results
-
-DC4EU's practical implementation of ELM v3 has demonstrated exceptional performance across multiple institutional contexts, with measurable success metrics validating the selection decision:
-
-**Technical Performance Achievements:**
-- Diploma issuance success rate: >99.8%
-- Average credential generation time: <45 seconds
-- Academic record correlation accuracy: >99.95%
-- Cross-border verification success: >98%
-- System availability: >99.9%
-
-**Academic Integration Success:**
-- Graduate satisfaction score: >4.7/5
-- Employer verification adoption: >85%
-- European university recognition: >95%
-- Academic mobility facilitation: >90% of applications
-
-**European Compliance Validation:**
-- ELM v3.2 schema compliance: 100%
-- Bologna Process alignment: 100%
-- Quality assurance validation: 100%
-- Cross-border recognition success: >95%
-
 ### Practical Implementation Examples
 
-**University Diploma Issuance:** Universities successfully issue Master's degree credentials in ELM format, ensuring compatibility with EQF levels and enabling seamless cross-border recognition through the EUHED network.
+**University Diploma Issuance:** Universities successfully issue Master's degree credentials in ELM format, ensuring compatibility with EQF levels and enabling seamless cross-border recognition through the EUHED network. The implementation demonstrates how complex degree structures, including multiple specialisations, research components, and thesis requirements, can be comprehensively represented whilst maintaining interoperability with existing university information systems.
 
-**Micro-Credentials Management:** The framework effectively handles micro-credentials from short learning programmes and skill certifications, supporting the Council Recommendation on micro-credentials by standardising their issuance and enhancing transparency.
+**Micro-Credentials Management:** The framework effectively handles micro-credentials from short learning programmes and skill certifications, supporting the Council Recommendation on micro-credentials by standardising their issuance and enhancing transparency. This includes representation of stackable credentials, prerequisite relationships, and alignment with both formal qualification frameworks and professional competency requirements.
 
-**Cross-Border Student Mobility:** When universities issue transcripts for students participating in Erasmus programmes, ELM ensures course credits, grades, and learning outcomes are represented consistently for correct interpretation by institutions across different countries.
+**Cross-Border Student Mobility:** When universities issue transcripts for students participating in Erasmus programmes, ELM ensures course credits, grades, and learning outcomes are represented consistently for correct interpretation by institutions across different countries. The standard supports complex scenarios including grade conversion, credit transfer calculations, and cultural adaptation of assessment criteria whilst maintaining academic integrity.
+
+**Professional Qualification Integration:** ELM v3 facilitates the representation of professional qualifications and continuing professional development requirements. This includes mapping professional competencies to educational achievements, documenting regulatory compliance requirements, and supporting professional body recognition processes across different European jurisdictions.
+
+**Vocational Education and Training (VET) Support:** The standard comprehensively represents VET qualifications, including practical skills demonstration, workplace learning components, and industry-specific competency requirements. This supports the European approach to VET qualification recognition and enables seamless progression between vocational and academic pathways.
+
+**Quality Assurance Integration:** ELM v3 incorporates quality assurance information directly into credential representation, including accreditation status, quality review outcomes, and compliance with European quality frameworks. This embedded approach ensures that credential verification processes automatically include quality validation without requiring separate verification steps.
 
 ## DC4EU's Strategic Roadmap: ELM Evolution Opportunities
 
 ### DC4EU's Identified Enhancement Areas
 
 DC4EU recognises that whilst ELM v3 currently provides the most comprehensive standard available, strategic evolution opportunities exist to achieve complete ecosystem coverage.
+
 **From Edu-API v1:**
 - Association management including enrolment processes and student-course relationships
 - Comprehensive rooms/building details covering physical infrastructure and facilities
