@@ -4,8 +4,6 @@
 
 The education and professional qualifications sectorial rulebook establishes a standardised approach for managing digital educational and professional credentials within the European Union. This framework balances member state sovereignty with European integration needs, creating a unified system that supports educational mobility while respecting national and institutional autonomy.
 
-
-
 ## Components
 
 This sectorial rulebook covers the following key areas:
@@ -24,9 +22,11 @@ This sectorial rulebook covers the following key areas:
 
 - **[Education and Professional Qualifications Ontology](./european-learning-model.md)**: The European Learning Model (ELM) that creates a shared understanding of educational achievements.
 
+- **[Sectorial EAA Catalogue](./sectorial-eaa-catalogue/)**: Comprehensive catalogue of educational and professional credential data models, schemas, and implementation examples that demonstrate practical application of the rulebook principles.
+
 - **[Issuance](./issuance.md)** and **[Issuance technical details](./issuance_details.md)**: The process for issuing different types of attestations.
 
-- **[Disclosure of information](./information-disclosure.md)**: How information can be dislcosed to protect privacy.
+- **[Disclosure of information](./information-disclosure.md)**: How information can be disclosed to protect privacy.
 
 - **[Sharing Mechanisms](./sharing-mechanisms.md)**: The framework supporting European mobility through credential sharing.
 
@@ -40,10 +40,9 @@ This sectorial rulebook covers the following key areas:
   
 - **[Technical profiles](./profiles/)**: Technical profiles supported for Education and Professional Qualifications.
 
+
 ## Purpose
 
 Each component serves both practical needs and policy goals, creating a system that works for students, institutions, and member states while advancing European educational integration. The technical implementations always support policy priorities, making the system both practically useful and politically aligned with European goals for education, privacy, and mobility.
 
-## Relationship to Other Documentation
-
-This rulebook provides the foundational principles upon which the [Sectorial EAA Rulebook](../sectorial-eaa-catalogue/README.md) and [Implementation Toolkits](../toolkits/README.md) are built.
+The [Sectorial EAA Catalogue](./sectorial-eaa-catalogue/) demonstrates practical implementation of these principles through concrete data models and schemas for educational and professional credentials, providing implementers with ready-to-use examples and specifications.
