@@ -20,7 +20,7 @@ This sectorial rulebook covers the following key areas:
 
 - **[Data Model](./data-model.md)**: The structure for educational data following W3C Verifiable Credential standards.
 
-- **[Education and Professional Qualifications Ontology](./european-learning-model.md)**: The European Learning Model (ELM) that creates a shared understanding of educational achievements.
+- **[Education and Professional Qualifications Ontology](./european-learning-model.md)**: The European Learning Model (ELM) that creates a shared understanding of educationaland professional qualifications achievements.
 
 - **[Sectorial EAA Catalogue](./sectorial-eaa-catalogue/)**: Comprehensive catalogue of educational and professional credential data models, schemas, and implementation examples that demonstrate practical application of the rulebook principles.
 
