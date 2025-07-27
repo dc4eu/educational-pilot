@@ -33,13 +33,12 @@ This sectorial rulebook covers the following key areas:
 - **[Verification](./verification.md)** and **[Verification technical details](./verification-deatils.md)**: The process ensuring credential validity while protecting privacy.
 
 - **[Enforcement Policy Agent](./enforcement-policy-agent.md)**: How wallets implement European privacy principles.
-
-- **[Supporting Infrastructure](./supporting-infrastructure.md)**: The systems supporting the credential ecosystem.
-  
-- **[Trust models](./trust-models/)**: Trust models supported for Education and professional Qualifications.
-  
+ 
 - **[Technical profiles](./profiles/)**: Technical profiles supported for Education and Professional Qualifications.
 
+- **[Trust models](./trust-models/)**: Trust models supported for Education and professional Qualifications.
+
+- **[Supporting Infrastructure](./supporting-infrastructure.md)**: The systems supporting the credential ecosystem.
 
 ## Purpose
 
