@@ -2,82 +2,160 @@
 
 ## Overview
 
-The credential data model follows W3C Verifiable Credential standards, structuring educational data in a consistent format. This standardised approach enables interoperability while supporting the specific needs of educational credentials.
+The credential data model follows W3C Verifiable Credential standards, structuring educational data in a consistent format. This standardised approach enables interoperability whilst supporting the specific needs of educational credentials.
+
+## Compliance with 1st Batch of eIDAS Implementing Acts
+
+In alignment with the **first batch of eIDAS implementing acts**, specifically the implementing regulation **"laying down rules for the application of Regulation (EU) No 910/2014 of the European Parliament and of the Council as regards person identification data and electronic attestations of attributes issued to European Digital Identity"**, the European framework mandates that **data shall be issued in two formats**:
+
+### Mandated Data Formats
+
+1. **ISO/IEC 18013-5:2021 [ISO18013-5] format** where person identification data attributes must be encoded in **CBOR**
+2. **W3C Verifiable Credentials Data Model 1.1** where person identification data attributes must be encoded in **JSON**
+
+### Strategic Choice: W3C-VCDM for Education and Professional Qualifications
+
+For the **education and professional qualifications sector**, where **semantic richness, ontological alignment, and cross-border interoperability** are paramount, the chosen data model in full alignment with eIDAS and the 1st batch of implementing acts is **W3C Verifiable Credentials Data Model (W3C-VCDM)**.
+
+This strategic choice is driven by several critical requirements:
+
+**Semantic Richness Requirements**:
+- Educational credentials require complex semantic relationships between learning outcomes, competencies, assessments, and achievements
+- Professional qualifications demand precise representation of skills, competencies, and regulatory compliance
+- The **European Learning Model (ELM)** ontology requires sophisticated data structures that W3C-VCDM can accommodate through JSON-LD
+
+**Cross-Border European Alignment**:
+- **European Education Area** initiatives require harmonised credential representation
+- **Bologna Process** implementations benefit from semantic interoperability
+- **European Qualifications Framework (EQF)** alignment necessitates structured ontological mapping
+- **Europass Digital Credentials Infrastructure** integration requires W3C-VCDM compatibility
+
+**Global Mobility Considerations**:
+- **Beyond-Europe mobility** requires internationally recognised standards
+- **W3C-VCDM** provides global interoperability for European credentials
+- **JSON-based encoding** ensures universal accessibility and processing
+- **International academic recognition** benefits from globally adopted standards
+
+**Technical and Regulatory Advantages**:
+- **JSON encoding** provides human-readable and machine-processable format
+- **Linked Data capabilities** through JSON-LD enable rich semantic expression
+- **Extensibility** supports evolving educational and professional requirements
+- **Privacy-preserving features** align with GDPR and eIDAS privacy principles
+
+## Implementation: EDC-W3C-VCDM
+
+The practical implementation is achieved through **European Digital Credentials compliant with W3C-VCDM (EDC-W3C-VCDM)**, which represents:
+
+- **ELM ontology serialisation** in W3C-VCDM format
+- **Full compliance** with the 1st batch of implementing acts
+- **Semantic interoperability** across European educational systems
+- **Global recognition** through internationally adopted standards
+
+This approach ensures that educational and professional credentials issued in Europe are:
+- **Legally compliant** with eIDAS implementing acts
+- **Semantically rich** to represent complex educational achievements
+- **Globally interoperable** for international mobility
+- **Privacy-preserving** through advanced W3C-VCDM features
 
 ## Key Components
 
 Each credential includes:
 
 ### Context Definitions
-- Provides semantic definitions for credential interpretation
-- Enables consistent understanding across systems
-- Links to standardised vocabularies
-- Supports semantic interoperability
+- Provides semantic definitions for credential interpretation using **JSON-LD contexts**
+- Enables consistent understanding across systems through **European Learning Model** vocabulary
+- Links to standardised vocabularies including **EQF, ESCO, and educational taxonomies**
+- Supports semantic interoperability through **W3C-VCDM context mechanisms**
 
 ### Unique Identifier
-- Creates a distinct reference for each credential
-- Supports verification and tracking
-- Enables reference across systems
-- Maintains credential distinctiveness
+- Creates a distinct reference for each credential following **W3C-VCDM identifier requirements**
+- Supports verification and tracking through **cryptographically verifiable identifiers**
+- Enables reference across systems using **DIDs or HTTP URIs**
+- Maintains credential distinctiveness through **globally unique identifiers**
 
 ### Credential Type
-- Indicates the nature of the educational achievement
-- Supports appropriate handling by different systems
-- Enables filtering and categorisation
-- Aligns with educational taxonomies
+- Indicates the nature of the educational achievement using **W3C-VCDM type system**
+- Supports appropriate handling by different systems through **semantic typing**
+- Enables filtering and categorisation using **educational credential taxonomies**
+- Aligns with educational taxonomies through **ELM-based type definitions**
 
 ### Issuing Authority Identifier
-- Links the credential to its authoritative source
-- Supports trust verification
-- Enables institutional recognition
-- Connects to trusted issuer registries
+- Links the credential to its authoritative source using **verifiable issuer identifiers**
+- Supports trust verification through **institutional DIDs or certificates**
+- Enables institutional recognition through **trusted issuer registries**
+- Connects to trusted issuer registries via **EBSI trust infrastructure**
 
-### Issue Date
-- Records when the credential was officially granted
-- Supports timelines of achievement
-- Enables chronological organisation
-- Facilitates validity checking
+### Issue Date and Validity
+- Records when the credential was officially granted using **ISO 8601 date formats**
+- Supports timelines of achievement through **temporal validity indicators**
+- Enables chronological organisation of **educational progression**
+- Facilitates validity checking through **machine-readable date constraints**
 
-### Credential Holder Information
-- Identifies the person to whom the credential belongs
-- Links achievements to individual educational journeys
-- Supports privacy-protecting identification
-- Enables appropriate credential attribution
+### Credential Subject Information
+- Identifies the person to whom the credential belongs using **privacy-preserving identifiers**
+- Links achievements to individual educational journeys through **verifiable subject identification**
+- Supports privacy-protecting identification via **selective disclosure mechanisms**
+- Enables appropriate credential attribution through **cryptographic binding**
+
+### Educational Achievement Data
+- Represents learning outcomes using **European Learning Model structures**
+- Documents competencies and skills through **ESCO-aligned taxonomies**
+- Records assessment results using **EQF-compliant level indicators**
+- Supports quality assurance information through **accreditation references**
 
 ### Cryptographic Proof of Authenticity
-- Ensures the credential hasn't been tampered with
-- Supports verification of issuer authority
-- Enables trust establishment
-- Protects credential integrity
+- Ensures the credential hasn't been tampered with using **W3C-VCDM proof mechanisms**
+- Supports verification of issuer authority through **digital signatures**
+- Enables trust establishment via **cryptographic verification protocols**
+- Protects credential integrity through **tamper-evident proofs**
 
 ### Multi-language Support
-- Enables credential interpretation across languages
-- Supports mobility across language regions
-- Facilitates cross-border understanding
-- Respects linguistic diversity
+- Enables credential interpretation across languages using **JSON-LD language tags**
+- Supports mobility across language regions through **multilingual field encoding**
+- Facilitates cross-border understanding via **European language support**
+- Respects linguistic diversity through **native language preservation**
 
 ## Implementation Considerations
 
-When implementing the data model:
-- JSON-LD contexts should be properly maintained
-- Cryptographic suites should follow current best practices
-- Schema validation should be implemented
-- Extensibility should be supported for future needs
-- Backwards compatibility should be maintained
+When implementing the W3C-VCDM data model for educational credentials:
+- **JSON-LD contexts** should reference European Learning Model vocabularies
+- **Cryptographic suites** should follow current W3C-VCDM best practices and eIDAS requirements
+- **Schema validation** should implement both W3C-VCDM and ELM compliance checking
+- **Extensibility** should be supported for future educational requirements whilst maintaining compatibility
+- **Backwards compatibility** should be maintained with existing European credential systems
+- **Privacy features** should leverage W3C-VCDM selective disclosure capabilities
+- **Status management** should implement privacy-preserving revocation mechanisms
 
 ## Cross-Border Scenarios
 
-For cross-border educational mobility, the data model provides:
-- Consistent interpretation of credentials across member states
-- Support for multilingual credential representation
-- Standardised formats for qualification recognition
-- Interoperability between different national systems
+For cross-border educational mobility and professional recognition, the W3C-VCDM data model provides:
+- **Consistent interpretation** of credentials across all member states through semantic interoperability
+- **Multilingual credential representation** using JSON-LD language support
+- **Standardised formats** for qualification recognition through W3C global standards
+- **Interoperability** between different national systems via shared data model
+- **Semantic alignment** with European educational frameworks through ELM integration
+- **Global recognition** potential through internationally adopted W3C standards
 
-## Alignment with Standards
+## Alignment with Standards and Frameworks
 
-The data model aligns with:
-- W3C Verifiable Credentials Data Model
-- European Learning Model
-- Europass Digital Credentials Infrastructure
-- Schema.org educational vocabulary
-- European Qualifications Framework
+The W3C-VCDM implementation aligns with:
+- **W3C Verifiable Credentials Data Model 1.1** as mandated by eIDAS implementing acts
+- **European Learning Model (ELM) v3.2** for educational semantic representation
+- **Europass Digital Credentials Infrastructure** for European credential interoperability
+- **European Qualifications Framework (EQF)** for qualification level representation
+- **ESCO taxonomy** for skills and competency classification
+- **Schema.org educational vocabulary** for global semantic interoperability
+- **eIDAS 2.0 requirements** for European digital identity compliance
+- **GDPR principles** for privacy-preserving credential management
+
+## Technical Standards Integration
+
+The implementation ensures compliance with:
+- **ISO/IEC 18013-5:2021** compatibility for hybrid scenarios where CBOR encoding is required
+- **W3C-VCDM 1.1 specification** for core credential structure and verification
+- **JSON-LD 1.1** for semantic linking and context management
+- **RFC 7519 (JWT)** for compact credential serialisation when required
+- **StatusList2021** for privacy-preserving credential status management
+- **European Blockchain Services Infrastructure (EBSI)** standards for trust anchoring
+
+This comprehensive approach ensures that educational and professional credentials are not only compliant with current European regulations but also positioned for future evolution and global interoperability whilst maintaining the highest standards of privacy protection and semantic richness.
