@@ -16,9 +16,9 @@
 * **Target groups and end-user roles**:
   Medical professionals, doctors, medical specialists, healthcare administrators, continuing medical education participants, test users (fake doctors)
 * **Electronic Attestations of Attributes (EAAs) involved**:
-  PID (Person Identification Data), DoctorID, Certificate of Professional Suitability, Training Certificate, Accreditation of medical training, ECMEC credits certification
+  PID (Person Identification Data), DoctorID, Certificate of Professional Suitability, Medical Training Certificate, Accreditation of medical training (ECMEC credits certification)
 * **Institutional systems/databases connected**:
-  CGCOM medical professional database, Spanish medical registry, continuing medical education system, professional qualification database
+  CGCOM medical professional database, Spanish medical registry, continuing medical education system
 * **Technical components used**:
 
   * **Pilot option**: Pilot2 (Hybrid Trust: Classical PKI + Decentralised PKI)
@@ -65,7 +65,7 @@
 
   * GDPR compliance with medical data protection
   * eIDAS2 alignment
-  * Spanish national medical regulations
+  * Spanish national medical and professions regulations
   * SGAD governance framework
   * EU Medical Qualifications Directive compliance
   * Medical professional regulatory requirements
@@ -129,7 +129,7 @@
 * **Number of users onboarded**:
   25 medical professionals, 8 test users (fake doctors), 5 CGCOM administrative staff
 * **Credentials issued**:
-  38 PID credentials, 33 DoctorID credentials, 25 Professional Suitability certificates, 20 Training certificates, 15 ECMEC accreditation credentials
+  38 PID credentials, 33 DoctorID credentials, 25 Professional Suitability certificates, 20 Training certificates, 15 Accreditation of Medical training (ECMEC) credentials
 * **Credentials verified**:
   All issued credentials successfully verified through cross-border scenarios, including international medical qualification recognition
 * **Successes**:
