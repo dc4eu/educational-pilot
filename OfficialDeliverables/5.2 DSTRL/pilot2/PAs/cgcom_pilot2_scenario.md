@@ -12,11 +12,11 @@
 ## 2. Scenario Characterisation
 
 * **User journeys implemented**:
-  PID retrieval (completed), Doctor ID issuance, Professional suitability certification, Training certificate issuance, ECMEC credits accreditation, Generic EAA verification (completed)
+  PID retrieval (completed), Doctor ID issuance, Professional suitability certification,Buen Quehacer Médico (BQM) Training certificate issuance, ECMEC credits accreditation, Generic EAA verification (completed)
 * **Target groups and end-user roles**:
   Medical professionals, doctors, medical specialists, healthcare administrators, continuing medical education participants, test users (fake doctors)
 * **Electronic Attestations of Attributes (EAAs) involved**:
-  PID (Person Identification Data), DoctorID, Certificate of Professional Suitability, Medical Training Certificate, Accreditation of medical training (ECMEC credits certification)
+  PID (Person Identification Data), DoctorID, Certificate of Professional Suitability, BQM Medical Training Certificate, Accreditation of medical training (ECMEC credits certification)
 * **Institutional systems/databases connected**:
   CGCOM medical professional database, Spanish medical registry, continuing medical education system
 * **Technical components used**:
@@ -129,7 +129,7 @@
 * **Number of users onboarded**:
   25 medical professionals, 8 test users (fake doctors), 5 CGCOM administrative staff
 * **Credentials issued**:
-  38 PID credentials, 33 DoctorID credentials, 25 Professional Suitability certificates, 20 Training certificates, 15 Accreditation of Medical training (ECMEC) credentials
+  38 PID credentials, 33 DoctorID credentials, 25 Professional Suitability certificates, 20 BQM Training certificates, 5 Accreditation of Medical training (ECMEC) credentials
 * **Credentials verified**:
   All issued credentials successfully verified through cross-border scenarios, including international medical qualification recognition
 * **Successes**:
