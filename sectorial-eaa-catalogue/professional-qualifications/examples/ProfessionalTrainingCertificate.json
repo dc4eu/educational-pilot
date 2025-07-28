@@ -28,7 +28,7 @@
     "givenName": "John",
     "familyName": "Doe",
     "qualification": {
-      "title": "Buen Quehacer del Médico (BQM)",
+      "trainingAwarded": "Buen Quehacer del Médico (BQM)",
       "level": {
         "eqfLevel": 8
       },
@@ -38,7 +38,7 @@
           "en": "Health"
         }
       },
-      "trainingAwarded": "BQM - Relación médico-paciente",
+      "title": "BQM - Relación médico-paciente",
       "trainingDuration": {
         "startDate": "2024-11-24",
         "endDate": "2024-11-27"
