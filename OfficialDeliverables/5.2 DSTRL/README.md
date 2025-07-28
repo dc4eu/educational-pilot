@@ -19,7 +19,7 @@ The DC4EU project implements three distinct pilot configurations, each represent
 **Platform**: SUNET/SURF SaaS environment  
 **Wallet Technology**: wwWallet
 
-**Participating Regions**: Denmark, Finland, Netherlands, Norway, Sweden  
+**Participating Countries**: Denmark, Finland, Netherlands, Norway, Sweden  
 **Total Institutions**: 5 organisations
 
 **Key Characteristics**:
@@ -42,8 +42,8 @@ The DC4EU project implements three distinct pilot configurations, each represent
 **Platform**: EBSI integration with institutional deployment flexibility  
 **Wallet Technology**: Multiple wallet implementations supporting W3C standards
 
-**Participating Regions**: Austria, Belgium, Croatia, Cyprus, Germany, Greece, Italy, Slovenia, Spain  
-**Total Institutions**: 18 organisations
+**Participating Countries**: Belgium, Germany, Hungary, Italy, Lithuania, Poland, Portugal, Romania, Spain, Sweden  
+**Total Institutions**: 31 organisations (28 in final deployment status)
 
 **Key Characteristics**:
 - Forward-looking decentralised identity technology implementation aligned with eIDAS 2.0 preparation
@@ -64,6 +64,9 @@ The DC4EU project implements three distinct pilot configurations, each represent
 **Trust Model**: Comprehensive dual trust model supporting both classical and decentralised PKI  
 **Platform**: Integrated deployment supporting both SaaS and EBSI platforms  
 **Wallet Technology**: Multi-format wallet supporting both SD-JWT and W3C VC standards
+
+**Participating Countries**: Netherlands, Portugal  
+**Total Institutions**: 3 organisations (6 implementations - 3 PKI + 3 dPKI)
 
 **Strategic Implementation**: Pilot 3 = Pilot 1 + Pilot 2
 
