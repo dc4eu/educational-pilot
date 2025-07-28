@@ -58,7 +58,7 @@ flowchart LR
     A --> E["Quality Assurance<br>(mandatory, EQAVET)"]
     A --> F["Issuer Country<br>(mandatory)"]
     B --> G["Learning Outcomes<br>(mandatory, min 1)"]
-    B --> H["ECVET"] Points<br>(mandatory, 1–15)"]
+    B --> H["ECVET Points<br>(mandatory, 1–15)"]
     B --> I["Level<br>(mandatory, EQF)"]
     B --> J["Learning Setting<br>(mandatory, e.g., work-based)"]
     B --> K["Stackability<br>(optional)"]
