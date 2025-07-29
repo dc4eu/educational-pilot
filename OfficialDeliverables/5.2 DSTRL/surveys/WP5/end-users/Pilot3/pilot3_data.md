@@ -567,13 +567,3 @@ All 10 individual responses: 6, 7, 5, 8, 6, 7, 6, 5, 6, 5
 3. **Enhanced cross-border verification** reliability
 4. **Better synchronization** with institutional databases
 5. **Comprehensive user onboarding** for dual-approach system
-
-### Conclusion
-
-Pilot 3's combined approach presents unique challenges, evidenced by the lowest average recommendation score (5.9/10) among all pilots and highest problem rate (58%). The dual PKI implementation creates complexity that users find difficult to navigate, compounded by severe language support deficiencies and technical performance issues.
-
-However, the 100% institutional participation and comprehensive feedback (146 responses) provide valuable insights for improving the combined approach. The consistent feedback patterns across Dutch and Portuguese institutions validate the priority areas for development.
-
-**Key Success Metric:** Despite challenges, 71% of users maintain some level of trust in the tool, indicating that the foundational concept is sound but requires significant user experience improvements to reach its potential.
-
-**Strategic Implication:** Pilot 3's challenges highlight the importance of user-centric design when implementing complex technical architectures, particularly in multilingual educational environments.
