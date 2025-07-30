@@ -55,8 +55,8 @@ The DC4EU project implements three distinct pilot configurations, each represent
 
 **Technical Requirements**:
 - X.509v3 PKI certificates as issuer credentials
-- X.509v3 PMI certificates as relying party verification
-- Certificate Revocation Lists (CRL) coordination for trust verification
+- X.509v3 PMI certificates as relying party verification (not implemented for SaaS solution)
+- Certificate Revocation Lists (CRL) coordination for trust verification (not implemented)
 - Classical PKI infrastructure maintenance and monitoring
 
 ### Pilot 2: Decentralised PKI Implementation
@@ -68,7 +68,7 @@ The DC4EU project implements three distinct pilot configurations, each represent
 
 **Participating Countries**: Belgium, Germany, Hungary, Italy, Lithuania, Poland, Portugal, Romania, Spain, Sweden  
 **Total Institutions**: 28 organisations  
-**Implementation Status**: 100% DNS endpoint availability for cross-border verification
+**Implementation Status**: Individual endpoint availability for cross-border verification; trust model verification
 
 **Key Characteristics**:
 - Decentralised identifier (DID) based trust model
