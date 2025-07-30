@@ -6,18 +6,45 @@ Welcome to Pilot2 of the DC4EU Deployment and Testing Scenarios Results Library 
 
 ## Overview
 
-Pilot2 represents the next generation of digital credential infrastructure, designed to align with eIDAS 2.0 regulation and the European Union Digital Identity (EUDI) Wallet ecosystem. This pilot provides educational institutions with a forward-looking approach that combines the reliability of traditional PKI with the flexibility and interoperability of decentralised identity technologies.
+Pilot2 demonstrates three distinct approaches to implementing next-generation digital credential infrastructure using Hybrid Trust architecture. Through 31 institutional scenarios across 10 countries, this pilot reveals **distributed autonomous deployments** (ATOS/IZERTIS Dockerised), **managed service implementations** (ATOS/IZERTIS SaaS via GovPart), and **coordinated national deployments** (OPI/NASK), providing educational institutions with multiple pathways to advanced digital credentials whilst highlighting different governance, service delivery, and infrastructure strategies within the European decentralised identity ecosystem.
+
+## Implementation Models Demonstrated
+
+Pilot2 encompasses three distinctive implementation approaches within the Hybrid Trust framework:
+
+### ATOS/IZERTIS Dockerised Autonomous Model
+**Participating institutions**: 22 institutions across Belgium, Hungary, Italy, Lithuania, Portugal, Romania, Spain
+- **Infrastructure model**: Self-hosted institutional deployment with complete sovereignty
+- **Governance approach**: Institutional autonomy with direct vendor relationships
+- **Technical customisation**: Maximum flexibility for local requirements and advanced integration
+- **Support model**: Direct ATOS/IZERTIS technical support with institutional maintenance responsibility
+
+### ATOS/IZERTIS SaaS Model via GovPart
+**Participating institutions**: LMU München, HU Berlin (Germany), UNED (Spain)
+- **Infrastructure model**: Professional managed service delivery of ATOS/IZERTIS technology
+- **Governance approach**: Service-level agreements with professional support management
+- **Technical customisation**: Managed service customisation within SaaS framework
+- **Support model**: GovPart professional managed service with ATOS/IZERTIS technology backing
+
+### OPI/NASK National Coordinated Model  
+**Participating institutions**: 6 Polish universities (University of Warsaw, University of Silesia, Silesian University of Technology, Kozminski University, University of Zielona Gora, Medical University of Lublin)
+- **Infrastructure model**: National SaaS coordination with shared infrastructure
+- **Governance approach**: National legislation compliance with institutional participation
+- **Technical standardisation**: Unified national standards with institutional variation capabilities
+- **Support model**: National coordination team with centralised infrastructure management
+
+All models successfully demonstrate Hybrid Trust capabilities whilst revealing different strategic approaches to European decentralised credential adoption.
 
 ## Current Implementation Status
 
-For comprehensive implementation progress tracking across all participating institutions, including DNS endpoint deployment, DID implementation status, and cross-border verification capabilities, please refer to the [**DC4EU Piloting Status Tracker**](../procedures/piloting/piloting-status-tracker.md).
+For comprehensive implementation progress across all three implementation models, including DNS endpoint deployment, DID implementation status, and cross-border verification capabilities, please refer to the [**DC4EU Piloting Status Tracker**](../procedures/piloting/piloting-status-tracker.md).
 
-**Quick Status Overview:**
-- **Participating Countries**: Belgium, Germany, Hungary, Italy, Lithuania, Poland, Portugal, Romania, Spain, Sweden
-- **Total Institutions**: 28 organisations
-- **DNS Endpoint Status**: 100% availability for cross-border verification
-- **DID Implementation Status**: Fully deployed across all participants
-- **Scenarios Template Compliance**: Universal provision
+**Key Implementation Achievements**:
+- **31 institutions successfully deployed** across three viable implementation models
+- **100% DNS endpoint availability** demonstrating complete cross-border verification infrastructure
+- **Universal DID deployment** with EBSI integration across all participants
+- **Multiple deployment pathways validated** accommodating diverse institutional requirements and capabilities
+- **Standards compliance achieved** for W3C Verifiable Credentials and eIDAS 2.0 alignment
 
 ## Technical Architecture
 
@@ -39,7 +66,7 @@ For comprehensive implementation progress tracking across all participating inst
 - **DID Management**: Decentralised identifier creation and resolution
 - **EBSI Trust Registries**: European blockchain-based trust infrastructure
 - **EUDI Wallet**: European digital wallet for credential storage
-- **uSelf Platform**: ATOS/IZERTIS implementation for credential operations
+- **Multiple Platform Options**: ATOS/IZERTIS (Dockerised/SaaS) and OPI/NASK national solutions
 
 ## Implementation Approach
 
@@ -59,54 +86,107 @@ Pilot2 leverages the European Blockchain Services Infrastructure for trust estab
 - **Interoperability**: Standards-based cross-system compatibility
 
 ### Flexible Deployment Options
-Pilot2 supports multiple deployment approaches to accommodate diverse institutional requirements:
+Pilot2 validates three deployment approaches accommodating diverse institutional requirements:
 
 **ATOS/IZERTIS Dockerised Solution**
-- Self-hosted institutional deployment
-- Full control over infrastructure and data
-- Customisable integration with existing systems
-- Institutional sovereignty over credential issuance
+- Self-hosted institutional deployment with maximum customisation
+- Full control over infrastructure and data management
+- Extensive integration capabilities with existing institutional systems
+- Direct vendor relationships ensuring professional technical support
 
-**Govpart SaaS Instance**
-- Managed service deployment option
-- Reduced technical overhead for institutions
-- Standardised implementation with customisation options
-- Professional support and maintenance services
+**ATOS/IZERTIS SaaS via GovPart**
+- Professional managed service deployment reducing institutional overhead
+- Access to advanced ATOS/IZERTIS technology through service delivery
+- Service-level customisation within managed framework
+- GovPart professional support with technology provider backing
 
-**National SaaS Implementations**
-- Country-specific managed services (e.g., OPI/NASK in Poland)
-- National regulatory compliance and coordination
-- Shared infrastructure among national institutions
-- Coordinated cross-border verification capabilities
+**OPI/NASK National SaaS Implementation**
+- Country-specific managed coordination with national regulatory compliance
+- Shared infrastructure among national institutions reducing individual costs
+- Coordinated cross-border verification with national-level support
+- National infrastructure management with institutional participation
 
-## Implementation Variations by Region
+## Strengths and Capabilities
 
-### Dockerised Deployment Countries
-**Belgium, Hungary, Italy, Lithuania, Portugal, Romania, Spain**
-- **Technical Approach**: ATOS/IZERTIS Dockerised solution
-- **Institutional Control**: High autonomy over infrastructure
-- **Customisation Level**: Extensive institutional customisation capabilities
-- **Maintenance Model**: Institutional or contracted technical support
+### Future-Ready Architecture
+- **eIDAS 2.0 Alignment**: Full preparation for upcoming European regulation
+- **EUDI Wallet Compatibility**: Complete integration with European digital identity ecosystem
+- **Blockchain Integration**: Comprehensive EBSI leverage for decentralised trust establishment
+- **Standards Compliance**: Universal W3C and European standards adherence
 
-### SaaS Deployment Countries
-**Germany**
-- **Technical Approach**: Govpart SaaS instance
-- **Institutional Control**: Managed service with institutional configuration
-- **Customisation Level**: Service-level customisation options
-- **Maintenance Model**: Professional managed service support
+### Model-Specific Capabilities
 
-### National SaaS Implementation
-**Poland**
-- **Technical Approach**: OPI/NASK national SaaS instance
-- **Institutional Control**: National coordination with institutional participation
-- **Customisation Level**: National standards with institutional variation
-- **Maintenance Model**: National infrastructure management
+#### Dockerised Autonomous Model Strengths
+- **Maximum institutional sovereignty**: Complete control over credential infrastructure and policies
+- **Advanced customisation**: Extensive integration with institutional research, blockchain labs, and specialised systems
+- **Innovation leadership**: Support for cutting-edge use cases and institutional research requirements
+- **Direct vendor relationships**: Immediate access to ATOS/IZERTIS technical expertise and development
 
-### Unique Implementation Approaches
-**Spain - Medical Professional Integration**
-- **CGCOM**: Medical professional credential integration
-- **UNED**: Distance education specialisation
-- **Multiple Universities**: Coordinated regional implementation
+#### SaaS Managed Service Model Strengths
+- **Simplified deployment**: Professional service management reducing institutional technical burden
+- **Technology access**: Advanced ATOS/IZERTIS capabilities through managed service delivery
+- **Cross-institutional coordination**: Demonstrated capability for shared service models
+- **Professional support**: GovPart managed service expertise with technology provider backing
+
+#### National Coordinated Model Strengths
+- **National integration**: Seamless coordination with national education systems and regulations
+- **Shared infrastructure efficiency**: Cost-effective deployment through shared national resources
+- **Regulatory compliance**: Built-in alignment with national legal frameworks and requirements
+- **Coordinated scaling**: National-level infrastructure management enabling systematic expansion
+
+### Enhanced Security and Privacy
+- **Decentralised Trust**: Elimination of single points of failure through distributed architecture
+- **Selective Disclosure**: Fine-grained privacy control with user-driven information sharing
+- **Advanced Cryptographic Integrity**: Multiple digital signature mechanisms including jAdES compliance
+- **Blockchain Anchoring**: Immutable trust establishment through EBSI integration
+
+### Cross-Border Interoperability
+- **Automatic Trust Discovery**: Dynamic trust relationship establishment across European institutions
+- **Standards-Based Verification**: Universal W3C VC compatibility ensuring international recognition
+- **EBSI Trust Registry**: European-wide decentralised trust infrastructure integration
+- **Multi-Language Support**: Comprehensive support for European linguistic diversity
+
+## Current Implementation Achievements
+
+### Technical Infrastructure Success
+- **100% DNS Endpoint Availability**: Complete cross-border verification infrastructure operational across all models
+- **Universal DID Deployment**: All 31 institutions operating with decentralised identifiers and EBSI integration
+- **Multiple Service Models**: Successful validation of autonomous, managed service, and national coordination approaches
+- **Professional Integration**: Comprehensive support for educational, professional, and research credential applications
+
+### Operational Capabilities
+- **Cross-Border Verification**: Active international verification demonstrated across all implementation models
+- **Deployment Model Flexibility**: Successful accommodation of diverse institutional technical capabilities and preferences
+- **Standards Compliance**: Universal W3C VC implementation ensuring European and international interoperability
+- **Scalable Architecture**: Proven support for institutional, managed service, and national-scale deployments
+
+## Current Limitations and Considerations
+
+### Advanced Technical Constraints
+
+Despite successful deployment, Pilot2 implementations face specific technical limitations:
+
+**Advanced Selective Disclosure Implementation**
+- **SD-JWS with jAdES Compliance**: Complete description of selective disclosure using SD-JWS compliant with jAdES standards has been developed and compliance demonstrated, but full implementation in production environments remains pending
+- **Implementation Gap**: While basic embedded disclosure has been implemented in the hybrid approach (released July 30), the complete SD-JWS selective disclosure with demonstrated jAdES compliance has not yet been deployed across all participating institutions
+- **Production Deployment**: The technical solution exists and compliance has been validated, but scaling to production deployment across all implementation models requires additional coordination
+
+### Model-Specific Considerations
+
+#### Dockerised Autonomous Model
+- **High technical requirements**: Institutions need substantial technical capabilities for deployment and maintenance
+- **Resource intensity**: Requires dedicated institutional technical resources and expertise
+- **Coordination complexity**: Individual deployments require careful coordination for interoperability
+
+#### SaaS Managed Service Model
+- **Service dependency**: Institutional capabilities dependent on managed service provider performance
+- **Customisation limitations**: Service-level customisation within managed framework constraints
+- **Vendor relationship management**: Requires coordination between institutions, service provider, and technology vendor
+
+#### National Coordinated Model
+- **National dependency**: Institutional capabilities linked to national infrastructure coordination
+- **Standardisation constraints**: National standards may limit individual institutional customisation
+- **Scaling coordination**: National-level coordination required for expansion and enhancement
 
 ## User Journey Categories
 
@@ -125,126 +205,78 @@ Pilot2 supports multiple deployment approaches to accommodate diverse institutio
 - **Batch Credential Operations**
 - **Audit Trail and Compliance Reporting**
 
-## Strengths and Capabilities
-
-### Future-Ready Architecture
-- **eIDAS 2.0 Alignment**: Preparation for upcoming European regulation
-- **EUDI Wallet Compatibility**: Integration with European digital identity ecosystem
-- **Blockchain Integration**: Leveraging EBSI for trust establishment
-- **Standards Compliance**: W3C and European standards adherence
-
-### Enhanced Security and Privacy
-- **Decentralised Trust**: Reduced single points of failure
-- **Selective Disclosure**: Fine-grained privacy control
-- **Cryptographic Integrity**: Advanced digital signature mechanisms
-- **Blockchain Anchoring**: Immutable trust establishment
-
-### Cross-Border Interoperability
-- **Automatic Trust Discovery**: Dynamic trust relationship establishment
-- **Standards-Based Verification**: W3C VC universal compatibility
-- **EBSI Trust Registry**: European-wide trust infrastructure
-- **Multi-Language Support**: International credential presentation
-
-## Current Implementation Achievements
-
-### Technical Infrastructure Success
-- **100% DNS Endpoint Availability**: Complete cross-border verification infrastructure
-- **Universal DID Deployment**: All institutions operating with decentralised identifiers
-- **EBSI Integration**: Successful blockchain trust registry integration
-- **W3C VC Compliance**: Standards-compliant credential issuance
-
-### Operational Capabilities
-- **Cross-Border Verification**: Active verification between multiple countries
-- **Multiple Deployment Models**: Successful variety of institutional approaches
-- **Professional Integration**: Medical and educational professional qualification support
-- **Scalable Architecture**: Support for large-scale institutional deployment
-
 ## Directory Structure
 
 ### Infrastructure Documentation (`/infrastructure`)
-- Hybrid trust model implementation specifications
-- DID management and EBSI integration procedures
-- W3C Verifiable Credentials processing guidelines
-- Cross-border verification configuration
+- Hybrid trust model implementation specifications for all three deployment approaches
+- DID management and EBSI integration procedures across different models
+- W3C Verifiable Credentials processing guidelines and standards compliance
+- Cross-border verification configuration for autonomous, managed, and coordinated deployments
 
 ### Piloting Agent Scenarios (`/PAs`)
-- Detailed institutional implementation reports by country
-- Deployment model comparisons and analysis
-- Lessons learned and best practices documentation
-- Technical configuration examples and templates
+- **Comprehensive implementation analysis** comparing Dockerised autonomous, SaaS managed service, and national coordinated approaches
+- **Detailed institutional implementation reports** from 31 institutions across 10 European countries
+- **Comparative technical insights** highlighting deployment model diversity within Hybrid Trust framework
+- **User journey outcomes** and cross-border verification testing results across all implementation models
+- **Strategic recommendations** for European decentralised credential adoption pathways
 
 ### User Journey Documentation (`/userjourneys`)
-- W3C VC credential issuance workflows
-- Decentralised verification processes
-- EUDI Wallet integration procedures
-- Cross-border recognition scenarios
+- W3C VC credential issuance workflows across different deployment models
+- Decentralised verification processes and cross-border recognition scenarios
+- EUDI Wallet integration procedures for all implementation approaches
+- Multi-model interoperability and user experience consistency guidelines
 
 ## Getting Started with Pilot2
 
 ### For Educational Institutions
 
-#### Implementation Planning
-1. **Infrastructure Assessment**: Evaluate capacity for hybrid trust model implementation
-2. **Deployment Model Selection**: Choose between Dockerised, SaaS, or National approaches
-3. **Integration Architecture**: Design connection with existing institutional systems
-4. **Stakeholder Engagement**: Coordinate with technical, legal, and academic stakeholders
+#### Implementation Planning and Model Selection
+1. **Infrastructure Assessment**: Evaluate institutional technical capabilities, resource availability, and strategic objectives
+2. **Deployment Model Selection**: Choose between autonomous Dockerised, managed SaaS service, or national coordinated approaches based on:
+   - **Technical capabilities**: Internal technical expertise and infrastructure management capacity
+   - **Resource availability**: Financial and human resources for deployment and ongoing maintenance
+   - **Governance preferences**: Institutional sovereignty requirements vs. shared service benefits
+   - **Integration complexity**: Advanced customisation needs vs. standardised deployment efficiency
+   - **Strategic positioning**: Innovation leadership objectives vs. operational efficiency priorities
 
-#### Technical Implementation
-1. **DID Infrastructure Setup**: Establish decentralised identifier management
-2. **EBSI Integration**: Configure European blockchain trust registry connections
-3. **W3C VC Processing**: Implement verifiable credentials issuance and verification
-4. **Cross-Border Testing**: Validate verification capabilities with international partners
+#### Implementation Pathway Selection
+- **Dockerised Autonomous**: For institutions with strong technical capabilities seeking maximum customisation and innovation opportunities
+- **SaaS Managed Service**: For institutions seeking advanced technology access with professional support and reduced technical overhead
+- **National Coordinated**: For institutions preferring simplified deployment through national coordination with shared infrastructure benefits
 
-#### Operational Deployment
-1. **User Onboarding**: Deploy EUDI wallet setup and user registration
-2. **Credential Workflows**: Implement institutional credential issuance processes
-3. **Verification Services**: Enable third-party verification capabilities
-4. **Monitoring and Analytics**: Establish operational oversight and performance tracking
+## Strategic Insights and Recommendations
 
-### For Technology Partners
+### Validated Implementation Pathways
 
-#### Technical Integration Requirements
-- **DID Infrastructure**: Decentralised identifier creation and management systems
-- **EBSI Connectivity**: European blockchain integration capabilities
-- **W3C VC Processing**: Verifiable credentials standards implementation
-- **EUDI Wallet Support**: European digital identity wallet compatibility
+Pilot2 demonstrates that **Hybrid Trust architecture provides comprehensive deployment flexibility** through three proven strategies:
 
-## Related Documentation
+**Dockerised Autonomous Model**: Enables maximum institutional control and advanced customisation whilst maintaining European interoperability, suitable for institutions with strong technical capabilities seeking innovation leadership and advanced integration opportunities.
 
-### Cross-Reference Links
-- [**Piloting Status Tracker**](../procedures/piloting/piloting-status-tracker.md) - Real-time implementation status across all pilots
-- [**Deployment Methodology**](../procedures/Deployment_methodology.md) - Standardised implementation framework
-- [**Compliance Tracking**](../procedures/entities/compliance.md) - Regulatory compliance monitoring
-- [**Pilot1 Classical PKI**](../pilot1/README.md) - Traditional PKI approach comparison
-- [**Pilot3 Combined Implementation**](../pilot3/README.md) - Dual trust model deployment
+**SaaS Managed Service Model**: Provides professional managed service access to advanced technology whilst maintaining institutional configuration capabilities, suitable for institutions seeking reduced technical overhead with professional support and technology access.
 
-### Technical Documentation
-- [Infrastructure Architecture Guide](./infrastructure/README.md)
-- [DID Implementation Specifications](./infrastructure/did-implementation.md)
-- [EBSI Integration Procedures](./infrastructure/ebsi-integration.md)
-- [W3C VC Processing Guidelines](./infrastructure/w3c-vc-processing.md)
-- [User Journey Implementation Templates](./userjourneys/README.md)
+**National Coordinated Model**: Provides streamlined deployment through national coordination whilst maintaining full cross-border capabilities, suitable for institutions seeking simplified technical requirements with professional national support and regulatory compliance.
 
-## Support and Resources
+### Critical Success Factors
 
-### Technical Support Network
-- **ATOS/IZERTIS Technical Team**: Dockerised solution support and development
-- **Govpart Support Services**: SaaS instance management and customisation
-- **National Support Teams**: Country-specific technical assistance (e.g., OPI/NASK)
-- **DC4EU Project Office**: Overall project coordination and guidance
+1. **EBSI Integration**: Universal requirement for European-wide trust establishment and cross-border recognition
+2. **Standards Compliance**: W3C Verifiable Credentials implementation essential for international interoperability
+3. **Deployment Model Flexibility**: Supporting autonomous, managed service, and coordinated approaches accommodates diverse institutional needs and capabilities
+4. **Professional Technical Support**: Multiple support models (vendor-direct, managed service, national coordination) provide essential implementation assistance
+5. **Service Model Diversity**: Multiple service delivery approaches enable institutions to choose optimal deployment strategy based on capabilities and objectives
 
-### Community and Knowledge Sharing
-- **Implementation Community**: Active peer support network across 28 institutions
-- **Best Practices Repository**: Shared knowledge base and documentation
-- **Regular Coordination Meetings**: Ongoing collaboration and problem-solving sessions
-- **Training and Capacity Building**: Continuous education and skill development programmes
+### Production Deployment Considerations
 
-### Innovation and Development
-- **Standards Development Participation**: Active contribution to W3C and European standards
-- **EBSI Integration Enhancement**: Ongoing blockchain infrastructure optimisation
-- **EUDI Wallet Evolution**: Participation in European digital identity wallet development
-- **Cross-Border Verification Advancement**: Continuous improvement of international recognition capabilities
+The successful demonstration of three distinct but equally viable deployment models within Pilot2 validates the **comprehensive adaptability required for pan-European adoption** whilst ensuring **technical standardisation and interoperability** for seamless cross-border credential recognition.
+
+All three models successfully address the classical PKI limitations identified in Pilot1, providing:
+- **Complete cross-border verification capabilities** through EBSI integration and DID architecture
+- **Real-time trust discovery** enabling automatic trust establishment across European institutions
+- **Enhanced privacy protection** through selective disclosure mechanisms and user-controlled information sharing
+- **Future-ready architecture** fully aligned with eIDAS 2.0 regulation and EUDI Wallet ecosystem requirements
+- **Standards compliance** ensuring long-term interoperability and international recognition
+
+The proven success of multiple deployment models within Pilot2's Hybrid Trust framework provides **comprehensive pathways for European educational credential infrastructure** supporting institutional autonomy, managed service efficiency, and national coordination whilst maintaining European integration objectives and cross-border interoperability requirements.
 
 ---
 
-*For detailed implementation progress and current status across all participating institutions, please refer to the [Piloting Status Tracker](../procedures/piloting/piloting-status-tracker.md).*
+*For detailed implementation analysis and comparative technical insights, refer to [Pilot2 Participating Agent Scenarios](./PAs/README.md).*
