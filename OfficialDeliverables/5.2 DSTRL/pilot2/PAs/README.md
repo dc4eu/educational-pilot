@@ -1,6 +1,4 @@
-# Propuesta de Reestructuración: OfficialDeliverables/5.2 DSTRL/pilot2/PAs/README.md
-
-## Estructura Propuesta (Siguiendo la Metodología de Pilot1)
+# DC4EU Pilot2 Scenarios
 
 ### Executive Summary
 
