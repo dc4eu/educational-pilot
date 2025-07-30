@@ -114,14 +114,14 @@ The DC4EU project implements three distinct pilot configurations, each represent
 ### Technical Implementation Achievements
 
 #### Cross-Border Verification Success
-- **Pilot1**: Unique endpoint availability (SaaS managed environments). Intergiry check.
-- **Pilot2**: Endpoint deployment enabling full cross-border verification. Full trust model verification.
-- **Pilot3**: Mixed based on component implementation
+- **Pilot1**: Limited DNS endpoint availability (SaaS managed environments)
+- **Pilot2**: 100% DNS endpoint deployment enabling full cross-border verification
+- **Pilot3**: Mixed availability based on component implementation
 
 #### Standards Compliance
 - **W3C VC Implementation**: Full standards compliance across Pilot2 and Pilot3
-- **SD-JWT Deployment**: Full compliance in Pilot1 and Pilot3
-- **EBSI Integration**: Complete verifiable data refsitries' integration in Pilot2 and Pilot3
+- **SD-JWT Deployment**: Selective disclosure capabilities operational in Pilot1 and Pilot3
+- **EBSI Integration**: Complete blockchain trust registry integration in Pilot2 and Pilot3
 
 ## Framework Components and Architecture
 
@@ -181,11 +181,6 @@ The DC4EU project implements three distinct pilot configurations, each represent
 #### **eIDAS Regulatory Framework**
 - **[eIDAS Scenarios Documentation](./eidas-scenarios/README.md)** - Comprehensive guide to eIDAS 2.0 operational scenarios and their implications for digital credential systems
 
-#### **Implementation Results Analysis**
-- **[Implementation Results Dashboard](./procedures/piloting/piloting-status-tracker.md)** - Comprehensive results tracking across all pilots
-- **[Technical Testing Results](./procedures/entities/implementation.md)** - Infrastructure deployment validation outcomes
-- **[Compliance Achievement Results](./procedures/entities/compliance.md)** - Regulatory compliance validation evidence
-
 #### **Pilot-Specific Implementation Guides**
 - **[Pilot 1 Implementation](./pilot1/README.md)** - Classical PKI deployment specifications and results
 - **[Pilot 2 Implementation](./pilot2/README.md)** - Decentralised PKI deployment specifications and results
@@ -195,6 +190,11 @@ The DC4EU project implements three distinct pilot configurations, each represent
 - **[Infrastructure Requirements](./elements/README.md)** - Technical deployment specifications and component documentation
 - **[User Journey Documentation](./pilot1/userjourneys/README.md)** - Standardised user experience frameworks
 - **[Quality Assurance Procedures](./elements/documents/README.md)** - Quality management and validation frameworks
+
+#### **Implementation Results Analysis**
+- **[Implementation Results Dashboard](./procedures/piloting/piloting-status-tracker.md)** - Comprehensive results tracking across all pilots
+- **[Technical Testing Results](./procedures/entities/implementation.md)** - Infrastructure deployment validation outcomes
+- **[Compliance Achievement Results](./procedures/entities/compliance.md)** - Regulatory compliance validation evidence
 
 #### **Survey Results and Analysis**
 - **[Complete Survey Analysis](./surveys/README.md)** - Comprehensive user experience and implementation feedback
