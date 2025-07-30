@@ -114,14 +114,14 @@ The DC4EU project implements three distinct pilot configurations, each represent
 ### Technical Implementation Achievements
 
 #### Cross-Border Verification Success
-- **Pilot1**: Limited DNS endpoint availability (SaaS managed environments)
-- **Pilot2**: 100% DNS endpoint deployment enabling full cross-border verification
+- **Pilot1**: Unique endpoint availability (SaaS managed environments); no trust model verification.
+- **Pilot2**: individual endpoint deployment enabling full cross-border verification using trust model(s)
 - **Pilot3**: Mixed availability based on component implementation
 
 #### Standards Compliance
 - **W3C VC Implementation**: Full standards compliance across Pilot2 and Pilot3
 - **SD-JWT Deployment**: Selective disclosure capabilities operational in Pilot1 and Pilot3
-- **EBSI Integration**: Complete blockchain trust registry integration in Pilot2 and Pilot3
+- **EBSI Integration**: Complete verfifibale data trust registries integration in Pilot2 and Pilot3
 
 ## Framework Components and Architecture
 
