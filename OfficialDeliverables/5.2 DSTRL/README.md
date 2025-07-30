@@ -8,6 +8,29 @@ The Deployment and Testing Scenarios Results Library (DSTRL) is a comprehensive 
 
 DSTRL represents the culmination of extensive piloting activities conducted by educational institutions across Europe, documenting their experiences implementing digital educational credential systems using three distinct technical approaches. This library provides evidence-based insights for future implementations, policy development, and standards evolution in European digital identity ecosystems.
 
+## eIDAS 2.0 Regulatory Context and Piloting Framework
+
+The DC4EU piloting activities are structured around the eIDAS 2.0 regulatory framework, which establishes four distinct operational scenarios for digital credential systems. These scenarios form the foundational context for how the technical pilots were designed and implemented:
+
+### eIDAS Scenarios Framework
+
+The eIDAS 2.0 regulation defines four operational scenarios that determine how educational institutions can issue and verify digital credentials:
+
+- **Scenario 1**: Closed ecosystem operations (outside eIDAS framework)
+- **Scenario 2**: Non-qualified Trust Service Provider operations with EUDI Wallet integration
+- **Scenario 3**: Public sector body operations (Pub-EAA providers)  
+- **Scenario 4**: Qualified Trust Service Provider operations (QEAA providers)
+
+### Pilot Alignment with eIDAS Scenarios
+
+The DC4EU technical pilots were specifically designed to address different eIDAS scenarios:
+
+- **Pilot1 (Classical PKI)**: Primarily aligned with eIDAS scenarios 3 and 4, utilising traditional certificate authorities and hierarchical trust models
+- **Pilot2 (Decentralised PKI)**: Primarily aligned with eIDAS scenario 2, whilst also providing capabilities that extend value to scenarios 3 and 4
+- **Pilot3 (Combined Implementation)**: Enables institutions to operate across multiple eIDAS scenarios simultaneously
+
+**For detailed information about eIDAS scenarios and their implications for digital credential implementation, please refer to the [eIDAS Scenarios Documentation](./eidas-scenarios/README.md).**
+
 ## Pilot Implementations Overview
 
 The DC4EU project implements three distinct pilot configurations, each representing different trust models and technical approaches to digital credential deployment across European educational institutions.
@@ -154,6 +177,9 @@ The DC4EU project implements three distinct pilot configurations, each represent
 4. **Share Experience**: Contribute lessons learned to DSTRL knowledge base for community benefit
 
 ### Key Navigation Links
+
+#### **eIDAS Regulatory Framework**
+- **[eIDAS Scenarios Documentation](./eidas-scenarios/README.md)** - Comprehensive guide to eIDAS 2.0 operational scenarios and their implications for digital credential systems
 
 #### **Implementation Results Analysis**
 - **[Implementation Results Dashboard](./procedures/piloting/piloting-status-tracker.md)** - Comprehensive results tracking across all pilots
