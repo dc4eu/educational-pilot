@@ -94,6 +94,7 @@ The four-institution consortium demonstrates **federated SaaS implementation**:
 - **RP certificate absence**: Universal limitation preventing full cross-border verification
 - **Limited authentic source integration**: Test environments without production data connectivity
 - **Verification constraints**: Restricted to integrity checks rather than full trust chain validation
+- **Limited revocation**: No credential revocation or suspension capabilities implemented
 
 ### Comparative Analysis
 
