@@ -10,7 +10,7 @@ The Continuous Professional Development Schema defines the data structure to rep
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://eaa-rulebook.europa.eu/schemas/cpd/0.0.1",
-  "title": "Doctor ID",
+  "title": "Continuous Professional Developmen",
   "description": "Schema for Continuous Professional Development credentials",
   "type": "object",
   "properties": {
