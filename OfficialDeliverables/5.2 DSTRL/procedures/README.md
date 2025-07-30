@@ -1,204 +1,227 @@
-# DSTRL Procedures Directory
+# Deployment and Testing Scenarios Results Library (DSTRL)
 
-**Deployment and Testing Scenarios Results Library - Operational Procedures and Legal Framework**
+**Official Deliverables Documentation - DC4EU Project**
 
-This directory contains the comprehensive procedural framework and legal guidance documentation for implementing the Deployment and Testing Scenarios Results Library (DSTRL) within the European digital credentials ecosystem. It serves as the authoritative reference for organisations seeking to understand, implement, and operate within the DC4EU (Digital Credentials for Europe) legal and operational framework.
+The Deployment and Testing Scenarios Results Library (DSTRL) is a comprehensive repository documenting the real-world implementation results, testing scenarios, and deployment experiences from the DC4EU (Digital Credentials for Europe) project's piloting activities across European educational institutions. DSTRL serves as the authoritative collection of practical implementation evidence, lessons learned, and operational insights from deploying digital credential systems across diverse institutional and national contexts.
 
-## Overview
+## Library Overview
 
-The DSTRL Procedures directory provides detailed guidance on the legal, technical, and operational requirements for establishing and maintaining digital credential services across European educational institutions and professional bodies. This documentation addresses the complex regulatory environment established by eIDAS 2.0 and provides practical implementation pathways for different organisational contexts.
+DSTRL represents the culmination of extensive piloting activities conducted by educational institutions across Europe, documenting their experiences implementing digital educational credential systems using three distinct technical approaches. This library provides evidence-based insights for future implementations, policy development, and standards evolution in European digital identity ecosystems.
 
-The procedures framework centres on a **legal entity-centric approach**, where educational institutions, professional bodies, public authorities, and technology providers assume clearly defined roles within a formalised trust network governed by European and national regulations.
+## Pilot Implementations Overview
 
-## Directory Structure and Navigation
+The DC4EU project implements three distinct pilot configurations, each representing different trust models and technical approaches to digital credential deployment across European educational institutions.
 
-### Main Framework Documents
+### Pilot 1: Classical PKI Implementation
 
-#### [`entities-main-framework.md`](./entities-main-framework.md)
-**Purpose:** Comprehensive overview of the DC4EU legal entity ecosystem framework  
-**Key Content:**
-- Executive summary and navigation guide for the entire framework
-- Quick reference matrix of entity roles and eligibility
-- Implementation pathway recommendations (Classical PKI vs dPKI/EBSI)
-- Trust network overview and relationship mapping
-- Getting started checklists for new and existing organisations
+**Implementation Approach**: Traditional Public Key Infrastructure with Selective Disclosure JSON Web Tokens  
+**Trust Model**: Hierarchical certificate authorities and X.509v3 certificates  
+**Platforms**: SUNET/SURF SaaS environment  
+**Wallet Technology**: wwWallet
 
-#### Legal Entity Framework (`/entities/`)
-A comprehensive sub-directory containing five core documents that define the operational framework for different types of legal entities within the DC4EU ecosystem:
+**Participating Countries**: Denmark, Finland, Netherlands, Norway, Sweden  
+**Total Institutions**: 5 organisations
 
-**[`compliance.md`](./entities/compliance.md)**
-- **Purpose:** Systematic regulatory adherence framework
-- **Focus:** Entity-specific compliance requirements and monitoring procedures
-- **Key Sections:**
-  - Compliance requirements by entity type (QEAA Providers, Public Bodies, Relying Parties)
-  - Continuous monitoring frameworks and tracking tools
-  - Multi-level governance structure (European, National, Institutional)
-  - Progressive enforcement approach and remediation procedures
-  - Compliance checklists and dashboard templates
+**Key Characteristics**:
+- Traditional PKI trust chains with established certificate authority hierarchies
+- SD-JWT credential format providing selective disclosure capabilities
+- SaaS-first deployment strategy through Nordic and Dutch NREN infrastructure
+- Focus on familiar implementation approaches for institutions with existing PKI capabilities
+- Integration with established identity management systems and processes
+- **eIDAS Alignment**: Primarily aligned with eIDAS scenarios 3 and 4 (qualified electronic attestation of attributes)
 
-**[`implementation.md`](./entities/implementation.md)**
-- **Purpose:** Practical step-by-step implementation guidance
-- **Focus:** Technical integration processes and operational procedures
-- **Key Sections:**
-  - Classical PKI infrastructure implementation (X.509v3 certificates)
-  - Decentralised PKI/EBSI integration (DIDs and blockchain)
-  - Quality assurance and testing frameworks
-  - Pilot implementation procedures and scaling strategies
-  - Support resources and maintenance requirements
+**Technical Requirements**:
+- X.509v3 PKI certificates as issuer credentials
+- X.509v3 PMI certificates as relying party verification
+- Certificate Revocation Lists (CRL) coordination for trust verification
+- Classical PKI infrastructure maintenance and monitoring
 
-**[`relationships.md`](./entities/relationships.md)**
-- **Purpose:** Inter-organisational trust network mapping
-- **Focus:** Authority hierarchies and operational dependencies
-- **Key Sections:**
-  - Authority relationship matrices (European, National, Institutional levels)
-  - Trust chain structures and cross-border mechanisms
-  - Operational relationship patterns and lifecycle management
-  - Quality assurance metrics and issue resolution procedures
+### Pilot 2: Decentralised PKI Implementation
 
-**[`validation/validation-methodology.md`](./validation/validation-methodology.md)**
-- **Purpose:** Technical validation methodology for centralised solutions
-- **Focus:** GRNet-developed validation scripts for Pilot 2 and Pilot 3-dPKI compliance
-- **Key Sections:**
-  - ATOS/IZERTIS solution validation framework
-  - Interoperability compliance verification scripts
-  - Profile conformance testing procedures
-  - Open-source validation scripts release (EUPLv2)
+**Implementation Approach**: Decentralised PKI with W3C Verifiable Credentials and EBSI Integration  
+**Trust Model**: Decentralised identity with blockchain-anchored trust registries  
+**Platforms**: ATOS/IZERTIS Dockerised solutions, Govpart SaaS instances, and national SaaS implementations (OPI/NASK in Poland)  
+**Wallet Technologies**: EUDI Wallet (European Union Digital Identity Wallet), DC4EU Identify Wallet
 
-## Key Concepts and Principles
+**Participating Countries**: Belgium, Germany, Hungary, Italy, Lithuania, Poland, Portugal, Romania, Spain, Sweden  
+**Total Institutions**: 28 organisations  
+**Implementation Status**: 100% DNS endpoint availability for cross-border verification
 
-### Legal Entity Ecosystem Approach
-The DSTRL procedures framework operates on fundamental principles that distinguish it from individual-focused identity systems:
+**Key Characteristics**:
+- Decentralised identifier (DID) based trust model
+- W3C Verifiable Credentials for semantic interoperability
+- EBSI (European Blockchain Services Infrastructure) integration
+- Forward-looking alignment with eIDAS 2.0 and EUDI wallet ecosystem
+- Self-sovereign identity principles with institutional trust anchoring
+- **eIDAS Alignment**: Primarily aligned with eIDAS scenario 2 (European Digital Identity Wallet), whilst also complementing scenarios 3 and 4
 
-**Institutional Identity First**
-- Educational institutions, professional bodies, and public authorities assume defined ecosystem roles
-- Organisational capabilities determine the scope of ecosystem participation
-- Institutional accountability maintains trust and reliability across the network
+**Technical Requirements**:
+- DID implementation for issuer and verifier capabilities
+- EBSI blockchain integration for trust registry services
+- W3C VC standards compliance for credential format
+- Cross-border verification through decentralised trust discovery
 
-**Formalised Trust Relationships**
-- Trust relationships established through formal accreditation and certification processes
-- Authority chains define supervision and oversight responsibilities
-- Operational agreements enable day-to-day ecosystem functions
+### Pilot 3: Combined Implementation (Parallel Deployment)
 
-**Regulatory Compliance Integration**
-- Structured onboarding and monitoring frameworks maintain regulatory compliance
-- Legal obligations clearly defined for each organisational role
-- Enforcement mechanisms ensure accountability and standards maintenance
+**Implementation Approach**: Simultaneous deployment of both Classical PKI (Pilot1) and Decentralised PKI (Pilot2) as independent parallel systems  
+**Trust Model**: Dual trust model offering both traditional PKI and decentralised identity options  
+**Platforms**: Both SUNET/SURF SaaS and ATOS/IZERTIS Dockerised solutions (plus Govpart SaaS and national implementations where applicable)  
+**Wallet Technologies**: Both wwWallet and EUDI Wallet (including DC4EU Identify Wallet variants)
 
-### Entity Roles and Responsibilities
+**Participating Countries**: Netherlands, Portugal  
+**Total Institutions**: 3 organisations (requiring 6 implementations - 3 Classical PKI + 3 Decentralised PKI)
 
-The framework defines six primary organisational roles within the European digital credentials ecosystem:
+**Key Characteristics**:
+- Parallel implementation of both Pilot1 and Pilot2 solutions as separate systems
+- Maximum flexibility through dual trust model availability
+- Independent endpoints and infrastructure for each pilot approach
+- User and verifier choice between classical and decentralised verification pathways
+- Comprehensive implementation requiring full compliance with both pilot specifications
 
-#### **Authentic Sources (AS)**
-- Maintain authoritative records (student data, professional licences, qualifications)
-- Typically universities, professional bodies, and government agencies
-- Provide verified data feeds to credential issuers
+**Implementation Requirements**:
+- Complete Pilot1 implementation (classical PKI infrastructure)
+- Complete Pilot2 implementation (decentralised PKI infrastructure)
+- Separate operational procedures for each system
+- Parallel maintenance and support capabilities
 
-#### **Qualified EAA Providers (QEAA)**
-- Offer highest level of assurance for digital credential issuance
-- Must hold Qualified Trust Service Provider (QTSP) status
-- Subject to stringent regulatory oversight and compliance requirements
+**Important Note**: Pilot3 does not create a hybrid system combining classical and decentralised PKI. Instead, it requires institutions to deploy both Pilot1 and Pilot2 solutions as independent, parallel systems.
 
-#### **Public Body EAA Providers (Pub-EAA)**
-- Public sector entities designated to provide digital credential services
-- Equivalent security requirements to QTSPs but under public mandate
-- Government universities, professional licensing bodies, public certification authorities
+## Implementation Results and Lessons Learned
 
-#### **EAA Providers (Non-Qualified)**
-- Commercial and institutional providers offering digital credential services
-- Lower regulatory burden but must meet security and interoperability standards
-- Private universities, training providers, certification bodies
+### Technical Implementation Achievements
 
-#### **Relying Parties (RP)**
-- Organisations that verify and rely upon digital credentials
-- Educational institutions, employers, professional bodies, government services
-- Must implement proper verification procedures and data protection measures
+#### Cross-Border Verification Success
+- **Pilot1**: Limited DNS endpoint availability (SaaS managed environments)
+- **Pilot2**: 100% DNS endpoint deployment enabling full cross-border verification
+- **Pilot3**: Mixed availability based on component implementation
 
-#### **Supervisory Bodies**
-- National authorities responsible for oversight and regulation
-- Monitor compliance, maintain registries, enforce standards
-- Coordinate with European-level frameworks and cross-border operations
+#### Standards Compliance
+- **W3C VC Implementation**: Full standards compliance across Pilot2 and Pilot3
+- **SD-JWT Deployment**: Selective disclosure capabilities operational in Pilot1 and Pilot3
+- **EBSI Integration**: Complete blockchain trust registry integration in Pilot2 and Pilot3
 
-## Implementation Pathways
+## Framework Components and Architecture
 
-### Classical PKI Pathway
-**Recommended for:** Organisations with existing PKI infrastructure
-- Traditional X.509v3 certificate-based trust model
-- Integration with EU Trusted Lists
-- Established QTSP relationships
-- Proven security and compliance frameworks
+### Core Technical Elements
 
-### Decentralised PKI (dPKI) Pathway  
-**Recommended for:** Forward-looking organisations preparing for eIDAS 2.0
-- Decentralised Identifiers (DIDs) and W3C Verifiable Credentials
-- European Blockchain Services Infrastructure (EBSI) integration
-- Enhanced interoperability and verifiability
-- Preparation for evolving European standards
+#### DSTRL Elements (`/elements`)
+- **European Digital Credentials for Learners (EDCL)**: Comprehensive credential management system
+- **EMREX Integration**: European student mobility records exchange capabilities
+- **Format Converters**: Interoperability tools for credential format transformation
 
-### Hybrid Approach
-**Recommended for:** Organisations seeking comprehensive coverage
-- Combination of traditional certificates and EBSI DIDs
-- Dual trust model implementation
-- Enhanced flexibility and future-readiness
-- Comprehensive user journey support
+#### Operational Procedures (`/procedures`)
+- **Legal Entity Framework**: Comprehensive organisational role definitions and compliance requirements
+- **Implementation Guidance**: Step-by-step deployment procedures and technical specifications
+- **Quality Assurance**: Validation frameworks and testing methodologies
+- **Compliance Monitoring**: Regulatory adherence tracking and assessment tools
 
-## Regulatory Context
+### Pilot-Specific Documentation
 
-This procedural framework operates within the evolving European regulatory landscape, including:
+#### Pilot 1 - Classical PKI (`/pilot1`)
+- **Infrastructure Requirements**: Traditional PKI deployment specifications
+- **Participating Agents**: Nordic and Dutch institutional implementation experiences
+- **User Journeys**: Certificate-based credential workflows
+- **Technical Validation**: PKI infrastructure testing and validation procedures
 
-- **eIDAS 2.0 Regulation:** European framework for electronic identification and trust services
-- **General Data Protection Regulation (GDPR):** Data protection and privacy requirements
-- **European Qualifications Framework (EQF):** Academic credential recognition standards
-- **Architecture and Reference Framework (ARF):** Technical interoperability specifications
+#### Pilot 2 - Decentralised PKI (`/pilot2`)
+- **DID Infrastructure**: Decentralised identifier implementation guidelines
+- **EBSI Integration**: Blockchain trust registry connection procedures
+- **Participating Agents**: 28 institutional implementations across 10 countries
+- **Cross-Border Verification**: International trust discovery and validation mechanisms
 
-## Getting Started
+#### Pilot 3 - Combined Implementation (`/pilot3`)
+- **Parallel Infrastructure**: Dual system deployment requirements and procedures
+- **Participating Agents**: Netherlands and Portugal dual implementation experiences
+- **System Selection Guidance**: User and verifier decision-making support
+- **Operational Complexity Management**: Procedures for managing independent parallel systems
 
-### For New Organisations
-1. **Review Entity Roles:** Determine appropriate ecosystem role(s) using the main framework document
-2. **Assess Compliance Requirements:** Use entity-specific compliance documentation
-3. **Plan Implementation:** Select implementation pathway based on technical capabilities
-4. **Establish Relationships:** Identify necessary trust relationships and partnerships
-5. **Begin Pilot Implementation:** Follow structured testing and deployment procedures
+## Getting Started Guide
+
+### For New Institutions
+
+1. **Assess Institutional Requirements**: Evaluate technical capabilities, regulatory requirements, and strategic objectives
+2. **Review Implementation Options**: Compare pilot approaches based on institutional context and technical capacity
+3. **Examine Implementation Results**: Study documented experiences from similar institutions
+4. **Select Pilot Approach**: Choose implementation pathway based on technical capabilities and strategic objectives
+5. **Review Implementation Results**: Examine [Piloting Status Tracker](./procedures/piloting/piloting-status-tracker.md) for lessons learned
+6. **Begin Pilot Implementation**: Follow structured testing and deployment procedures documented in pilot-specific guides
 
 ### For Existing Participants
-1. **Review Current Compliance Status:** Utilise compliance tracking tools and dashboards
-2. **Optimise Trust Relationships:** Assess current network position and identify improvements
-3. **Enhance Governance:** Implement advanced monitoring and performance management
-4. **Consider Role Expansion:** Evaluate opportunities for additional ecosystem roles
+
+1. **Review Current Status**: Utilise [Piloting Status Tracker](./procedures/piloting/piloting-status-tracker.md) for comprehensive progress assessment
+2. **Optimise Implementation**: Assess current performance against documented success patterns and best practices
+3. **Enhance Capabilities**: Consider expanding roles or upgrading technical implementation based on documented outcomes
+4. **Share Experience**: Contribute lessons learned to DSTRL knowledge base for community benefit
+
+### Key Navigation Links
+
+#### **Implementation Results Analysis**
+- **[Implementation Results Dashboard](./procedures/piloting/piloting-status-tracker.md)** - Comprehensive results tracking across all pilots
+- **[Technical Testing Results](./procedures/entities/implementation.md)** - Infrastructure deployment validation outcomes
+- **[Compliance Achievement Results](./procedures/entities/compliance.md)** - Regulatory compliance validation evidence
+
+#### **Pilot-Specific Implementation Guides**
+- **[Pilot 1 Implementation](./pilot1/README.md)** - Classical PKI deployment specifications and results
+- **[Pilot 2 Implementation](./pilot2/README.md)** - Decentralised PKI deployment specifications and results
+- **[Pilot 3 Implementation](./pilot3/README.md)** - Combined parallel implementation approach and outcomes
+
+#### **Technical Documentation**
+- **[Infrastructure Requirements](./elements/README.md)** - Technical deployment specifications and component documentation
+- **[User Journey Documentation](./pilot1/userjourneys/README.md)** - Standardised user experience frameworks
+- **[Quality Assurance Procedures](./elements/documents/README.md)** - Quality management and validation frameworks
+
+#### **Survey Results and Analysis**
+- **[Complete Survey Analysis](./surveys/README.md)** - Comprehensive user experience and implementation feedback
+- **[Piloting Agent Feedback](./surveys/WP5/piloting-agents/README.md)** - Institutional implementation experiences
+- **[End-User Experience Data](./surveys/WP5/end-users/README.md)** - User journey and interface feedback
 
 ## Quality Assurance and Governance
 
-The procedures framework includes comprehensive quality assurance mechanisms:
+DSTRL maintains comprehensive quality assurance mechanisms ensuring reliability, accuracy, and continuous improvement:
 
 - **Multi-level governance structure** spanning European, national, and institutional levels
-- **Continuous monitoring frameworks** with automated compliance dashboards
-- **Progressive enforcement approach** with remediation support
-- **Performance metrics and KPIs** for system-wide effectiveness measurement
-- **Issue escalation procedures** with clear resolution pathways
+- **Continuous monitoring frameworks** with automated compliance tracking and performance dashboards
+- **Evidence-based documentation** with systematic validation and cross-referencing
+- **Regular updates** incorporating ongoing piloting outcomes, lessons learned, and regulatory developments
+- **Community feedback integration** ensuring practical relevance and implementation effectiveness
 
-## Support and Resources
+## Framework Evolution and Sustainability
 
-### Documentation Suite Navigation
-- **Main Framework:** [`entities-main-framework.md`](./entities-main-framework.md) - Comprehensive overview and quick reference
-- **Compliance Framework:** [`entities/compliance.md`](./entities/compliance.md) - Regulatory adherence procedures
-- **Implementation Guide:** [`entities/implementation.md`](./entities/implementation.md) - Technical integration procedures  
-- **Relationship Management:** [`entities/relationships.md`](./entities/relationships.md) - Trust network mapping
+The DSTRL framework is designed to evolve with the European digital identity landscape through:
 
-### Additional Support
-- **Technical Assistance:** Contact your national supervisory body for implementation support
-- **Training Resources:** Access DC4EU training programmes and certification materials
-- **Community Forums:** Participate in practitioner networks and knowledge-sharing platforms
-- **Professional Services:** Engage with certified implementation partners for deployment assistance
+- **European Commission policy development** and eIDAS 2.0 regulation implementation
+- **Standards bodies technical specification evolution** including W3C and EBSI development
+- **Practitioner feedback integration** from ongoing ecosystem participants and implementers
+- **Research collaboration** with academic institutions and industry partners for continuous improvement
+- **Community-driven development** ensuring practical applicability and implementation effectiveness
 
-## Framework Evolution
+## Implementation Success Factors
 
-This procedural framework is designed to evolve with the European digital identity landscape through:
+Based on comprehensive analysis of piloting results, key success factors include:
 
-- **European Commission policy development** and regulation updates
-- **Standards bodies technical specification evolution**
-- **Practitioner feedback** from ecosystem participants  
-- **Research findings** from academic and industry collaborations
+### Technical Success Factors
+- **Clear infrastructure requirements** and technical specifications
+- **Comprehensive testing frameworks** with automated validation
+- **Standards compliance verification** through standardised test suites
+- **Cross-system interoperability** validation and monitoring
 
-Regular updates ensure the framework remains current with regulatory changes, technological developments, and operational experience from deployment across European institutions.
+### Organisational Success Factors
+- **Executive leadership support** and strategic alignment
+- **Adequate resource allocation** for implementation and maintenance
+- **Comprehensive staff training** across technical and operational teams
+- **Change management processes** for institutional transformation
 
+### User Experience Success Factors
+- **Intuitive interface design** with user-centred development
+- **Reliable system performance** with minimal downtime
+- **Clear user guidance** and comprehensive support documentation
+- **Multi-channel support** including technical assistance and user training
 
-*This procedural framework supports the creation of a unified European digital credential ecosystem whilst respecting institutional autonomy and national sovereignty in educational and professional qualification systems. By focusing on legal entities and their formalised relationships, it provides the foundation for trusted, interoperable, and legally compliant digital credential management across the European Union.*
+---
+
+**DSTRL Maintenance**: This results library is continuously updated with ongoing piloting outcomes and lessons learned  
+**Current Results Period**: 30 July 2025 - Active piloting phase completion  
+**Version**: 2.0 (Comprehensive Results Integration)  
+**Contact**: DC4EU Project Office for detailed results analysis and implementation guidance
+
+*This comprehensive DSTRL documentation supports the creation of a unified European digital credential ecosystem whilst respecting institutional autonomy and national sovereignty in educational and professional qualification systems. The library provides evidence-based guidance for institutions, policy makers, and technology providers seeking to implement digital credential systems that are secure, interoperable, and aligned with European digital identity standards.*
