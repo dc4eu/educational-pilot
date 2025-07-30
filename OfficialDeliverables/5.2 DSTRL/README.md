@@ -29,6 +29,45 @@ The eIDAS 2.0 regulation defines four operational scenarios that determine how e
 - **Scenario 3**: Public sector body operations (Pub-EAA providers)  
 - **Scenario 4**: Qualified Trust Service Provider operations (QEAA providers)
 
+## Governance Framework and Trust Architecture
+
+The DC4EU implementation operates within a comprehensive governance framework that digitally represents the complex multi-level authority structures governing European education and professional qualifications. This framework ensures that digital credentials maintain the same legal validity and recognition as traditional paper-based qualifications whilst enabling cross-border mobility and verification.
+
+### Electronic Attestations of Attributes (EAA) Model
+
+The governance implementation utilises Electronic Attestations of Attributes (EAAs) - verifiable credentials that define institutional rights, authorisations, and capabilities within specific governance domains. This model enables:
+
+- **Digital verification** of issuer legitimacy and authorisation chains
+- **Cross-border recognition** of institutional mandates and qualifications  
+- **Temporal validation** ensuring historical accuracy of authorisations
+- **Compliance alignment** with eIDAS 2.0, GDPR, and national regulatory frameworks
+
+### Three-Tier Trust Architecture
+
+**Root Trusted Accreditation Organisations (RootTAOs)**
+- Ultimate trust anchors at European or national level (e.g., national ministries, GÉANT)
+- Issue foundational EAAs delegating authority to intermediate bodies
+
+**Trusted Accreditation Organisations (TAOs)**  
+- Intermediate trust entities such as National Research and Education Networks (NRENs)
+- Quality assurance agencies and professional regulatory bodies
+- Grant specific authorisations to operational credential issuers
+
+**Trusted Issuers (TIs)**
+- Educational institutions, universities, and professional bodies
+- Hold valid EAAs proving their authorisation scope and jurisdictional limitations
+- Issue credentials directly to learners and professionals
+
+### Sectoral Implementation Examples
+
+**Educational Qualifications**: Universities authorised through national education ministries and quality assurance agencies to issue specific qualification levels aligned with the European Qualifications Framework (EQF).
+
+**Professional Credentials**: Professional bodies such as medical councils (CGCOM in Spain) and engineering associations authorised to issue professional identity credentials and continuous development attestations.
+
+**Quality Assurance**: Independent agencies authorised to verify and validate institutional compliance with European Standards and Guidelines (ESG) and national regulatory requirements.
+
+**Comprehensive governance documentation**: **[Governance Framework Directory](./governances/README.md)**
+
 ### Pilot Alignment with eIDAS Scenarios
 
 The DC4EU technical pilots were specifically designed to address different eIDAS scenarios:
@@ -299,6 +338,12 @@ WP9 conducted strategic consultation focused on post-project sustainability, pro
 
 #### **eIDAS Regulatory Framework**
 - **[eIDAS Scenarios Documentation](./eidas-scenarios/README.md)** - Comprehensive guide to eIDAS 2.0 operational scenarios and their implications for digital credential systems
+
+#### **Governance and Trust Framework**
+- **[Governance Framework Directory](./governances/README.md)** - Comprehensive governance models for education and professional qualifications
+- **[DC4EU Governance Implementation](./governances/dc4eu_governance_implementation.md)** - Electronic Attestations of Attributes (EAA) model and three-tier trust architecture
+- **[European Governance Analysis](./governances/european-governance.md)** - Multi-level governance structures in European education and professional contexts
+  
 
 #### **Pilot-Specific Implementation Guides**
 - **[Pilot 1 Implementation](./pilot1/README.md)** - Classical PKI deployment specifications and results
