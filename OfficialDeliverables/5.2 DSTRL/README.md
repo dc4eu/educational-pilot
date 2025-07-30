@@ -39,8 +39,8 @@ The DC4EU project implements three distinct pilot configurations, each represent
 
 **Implementation Approach**: Traditional Public Key Infrastructure with Selective Disclosure JSON Web Tokens  
 **Trust Model**: Hierarchical certificate authorities and X.509v3 certificates  
-**Platforms**: SUNET/SURF SaaS environment  
-**Wallet Technology**: wwWallet
+**Platforms**: SUNET/SURF SaaS environment, OPH Finnish national platform (DVV)  
+**Wallet Technology**: wwWallet, Finnish EUDI Wallet Demo (DVV)
 
 **Participating Countries**: Denmark, Finland, Netherlands, Norway, Sweden  
 **Total Institutions**: 5 organisations
@@ -63,8 +63,8 @@ The DC4EU project implements three distinct pilot configurations, each represent
 
 **Implementation Approach**: Decentralised PKI with W3C Verifiable Credentials and EBSI Integration  
 **Trust Model**: Decentralised identity with blockchain-anchored trust registries  
-**Platforms**: ATOS/IZERTIS Dockerised solutions, Govpart SaaS instances, and national SaaS implementations (OPI/NASK in Poland)  
-**Wallet Technologies**: EUDI Wallet (European Union Digital Identity Wallet), DC4EU Identify Wallet
+**Platforms**: ATOS/IZERTIS Dockerised solutions, Govpart SaaS instances, national SaaS implementations (OPI/NASK in Poland), and Walt.ID solutions  
+**Wallet Technologies**: EUDI Wallet (European Union Digital Identity Wallet), DC4EU Identify Wallet, Walt.ID web wallet
 
 **Participating Countries**: Belgium, Germany, Hungary, Italy, Lithuania, Poland, Portugal, Romania, Spain, Sweden  
 **Total Institutions**: 28 organisations  
@@ -88,7 +88,7 @@ The DC4EU project implements three distinct pilot configurations, each represent
 
 **Implementation Approach**: Simultaneous deployment of both Classical PKI (Pilot1) and Decentralised PKI (Pilot2) as independent parallel systems  
 **Trust Model**: Dual trust model offering both traditional PKI and decentralised identity options  
-**Platforms**: Both SUNET/SURF SaaS and ATOS/IZERTIS Dockerised solutions (plus Govpart SaaS and national implementations where applicable)  
+**Platforms**: Both SUNET/SURF SaaS and ATOS/IZERTIS Dockerised solutions (plus Govpart SaaS, national implementations, and Walt.ID solutions where applicable)  
 **Wallet Technologies**: Both wwWallet and EUDI Wallet (including DC4EU Identify Wallet variants)
 
 **Participating Countries**: Netherlands, Portugal  
