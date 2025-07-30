@@ -20,7 +20,7 @@ This analysis covers the following five Pilot1 scenarios from educational instit
 
 The five scenarios demonstrate two distinct implementation approaches within the Classical PKI framework:
 
-#### SUNET/SURF SaaS Consortium (4 institutions)
+#### SUNET/SURF SaaS Solution (4 institutions)
 Four scenarios employed standardised technical configurations through the SUNET/SURF platform:
 - **Pilot option**: Classical PKI with SD-JWT credentials
 - **SaaS environment**: SUNET/SURF test environment
@@ -81,7 +81,7 @@ The OPH scenario represents a **sovereign national implementation** with the fol
 - **Interoperability gaps**: Attribute naming mismatches with DC4EU standards (e.g., "givenName.und" vs "givenName")
 - **Limited revocation**: No credential revocation or suspension capabilities implemented
 
-### SUNET/SURF Consortium Model
+### SUNET/SURF SaaS Model
 
 The four-institution consortium demonstrates **federated SaaS implementation**:
 
