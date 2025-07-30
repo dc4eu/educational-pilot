@@ -51,7 +51,7 @@ This implementation diversity demonstrates the flexibility of the Classical PKI 
 | **Sikt (Norway)** | SUNET/SURF SaaS | 25 | 50 | Integrity checks only |
 
 **Key distinctions:**
-- **OPH**: Only institution with full PID integration and cross-verifier testing
+- **OPH**: Institution with full PID integration and cross-verifier testing
 - **OPH**: Direct authentic source integration (national education registries)
 - **OPH**: National-scale infrastructure readiness demonstration
 - **Others**: Standardised SaaS approach with shared technical infrastructure
