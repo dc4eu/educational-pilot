@@ -24,10 +24,7 @@ This analysis covers representative scenarios from the 31 participating institut
 
 ## Complete Pilot2 Piloting Agent Scenarios
 
-### ATOS/IZERTIS Dockerised Model (22 institutions)
-
-#### Belgium (1 institution)
-- **[Howest University](howest_pilot2_scenario.md)** - Applied Sciences and Digital Innovation
+### ATOS/IZERTIS Dockerised Model (21 institutions)
 
 #### Hungary (2 institutions)
 - **[Budapest University of Technology (BME)](bme_pilot2_scenario.md)** - Technical University with Blockchain Lab Integration
@@ -71,7 +68,21 @@ This analysis covers representative scenarios from the 31 participating institut
 #### Spain (1 institution)
 - **[Universidad Nacional de Educación a Distancia (UNED)](uned_pilot2_scenario.md)** - Distance Education SaaS Implementation
 
-### OPI/NASK National Coordinated Model (6 institutions)
+### Walt.ID Custom Implementation Model
+
+The Howest University implementation represents **cross-provider interoperability validation**:
+
+#### Technical Infrastructure
+- **Platform**: Walt.ID issuer/verifier solution with custom digital identity architecture
+- **Wallet**: Walt.ID wallet technology
+- **Deployment control**: Complete institutional control with alternative technology stack
+- **Technical achievement**: Successful cross-border verification with different provider technologies
+
+#### Unique Capabilities
+- **Cross-provider interoperability**: Demonstrated seamless interaction with ATOS/IZERTIS and OPI/NASK implementations
+- **Technology agnosticism**: Validates European Hybrid Trust framework independence from specific vendor solutions
+- **Standards compliance**: Successful W3C VC and EBSI integration through stable technical profile
+- **Innovation validation**: Proves that multiple technology providers can coexist within European credential ecosystem (6 institutions)
 
 #### Poland (6 institutions)
 - **[University of Warsaw (UW)](uw_pilot2_scenario.md)** - Flagship National University Implementation
@@ -81,24 +92,30 @@ This analysis covers representative scenarios from the 31 participating institut
 - **[University of Zielona Gora](zgora_pilot2_scenario.md)** - Regional University Implementation
 - **[Medical University of Lublin](umlub_pilot2_scenario.md)** - Medical Education Specialisation
 
-### Specialised Implementations (2 institutions)
+### Walt.ID Custom Implementation (1 institution)
+
+#### Belgium (1 institution)
+- **[Howest University](howest_pilot2_scenario.md)** - Applied Sciences and Digital Innovation with Walt.ID Solution Demonstrating Cross-Provider Interoperability
+
+### Specialised Research Implementation (1 institution)
 
 #### Sweden (1 institution)
 - **[Research Institutes of Sweden (RISE)](rise_pilot2_scenario.md)** - Research Institute Professional Credentials
 
-#### Belgium (1 institution - Alternative Implementation)
-- **[Howest University - Walt.ID Implementation](howest_waltid_pilot2_scenario.md)** - Custom Digital Identity Solution
-
 **Total Institutions**: 31 organisations across 10 European countries
+- **ATOS/IZERTIS Dockerised**: 21 institutions
+- **ATOS/IZERTIS SaaS (GovPart)**: 3 institutions  
+- **OPI/NASK National**: 6 institutions
+- **Walt.ID Custom**: 1 institution
 
 ## Comparative Analysis
 
 ### Technical Implementation Diversity
 
-The 31 scenarios demonstrate three distinct implementation approaches within the Hybrid Trust framework:
+The 31 scenarios demonstrate three distinct implementation approaches within the Hybrid Trust framework, with additional validation of cross-provider interoperability:
 
-#### ATOS/IZERTIS Dockerised Autonomous Model (22 institutions)
-Institutions across Belgium, Hungary, Italy, Lithuania, Portugal, Romania, Spain implemented self-hosted autonomous deployments:
+#### ATOS/IZERTIS Dockerised Autonomous Model (21 institutions)
+Institutions across Hungary, Italy, Lithuania, Portugal, Romania, Spain implemented self-hosted autonomous deployments:
 - **Pilot option**: Hybrid Trust (Classical PKI + Decentralised PKI)  
 - **Platform**: ATOS/IZERTIS Dockerised solution (self-hosted)
 - **Wallet**: EUDI Wallet (EUDIW by IZERTIS)
@@ -117,6 +134,14 @@ German universities and UNED (Spain) implemented managed service deployment:
 - **Maintenance model**: Professional managed service support
 - **Participating institutions**: LMU München, HU Berlin (Germany), UNED (Spain)
 
+#### Walt.ID Custom Implementation Model (1 institution)
+Howest University (Belgium) implemented a distinctive alternative solution demonstrating cross-provider interoperability:
+- **Pilot option**: Hybrid Trust (Classical PKI + Decentralised PKI)
+- **Platform**: Walt.ID issuer/verifier solution
+- **Wallet**: Walt.ID wallet technology
+- **Infrastructure control**: Custom implementation with institutional sovereignty
+- **Interoperability achievement**: Successful cross-border verification and interoperability with other providers demonstrated through stable technical profile
+- **Strategic significance**: Validates technology-agnostic interoperability within European Hybrid Trust framework
 #### OPI/NASK National Coordinated Model (6 institutions)
 Polish universities implemented coordinated national deployment:
 - **Pilot option**: Hybrid Trust (Classical PKI + Decentralised PKI)
@@ -127,15 +152,16 @@ Polish universities implemented coordinated national deployment:
 - **DNS endpoints**: Coordinated national subdomain structure (`u1-u7.pilot-dc4eu.ebsi.nask.pl`)
 - **Governance model**: Centralised national infrastructure with distributed institution access
 
-This implementation diversity demonstrates the flexibility of the Hybrid Trust approach whilst highlighting different sovereignty, managed service, and coordination models within European decentralised identity frameworks.
+This implementation diversity demonstrates the flexibility of the Hybrid Trust approach whilst highlighting different sovereignty, managed service, coordination, and cross-provider interoperability models within European decentralised identity frameworks.
 
 ### Credential Volumes and User Engagement
 
 | Implementation Model | Countries | Institutions | Total Users | Credentials Issued | Verification Scope |
 |---------------------|-----------|--------------|-------------|-------------------|-------------------|
-| **ATOS/IZERTIS Dockerised** | 7 countries | 22 institutions | ~660 users* | ~1,980 credentials* | Full cross-border verification |
+| **ATOS/IZERTIS Dockerised** | 6 countries | 21 institutions | ~630 users* | ~1,890 credentials* | Full cross-border verification |
 | **ATOS/IZERTIS SaaS (GovPart)** | 2 countries | 3 institutions | ~90 users* | ~270 credentials* | Full cross-border verification |
 | **OPI/NASK National** | 1 country | 6 institutions | ~180 users* | ~540 credentials* | Full cross-border verification |
+| **Walt.ID Custom** | 1 country | 1 institution | ~30 users* | ~90 credentials* | **Cross-provider interoperability demonstrated** |
 
 *Estimates based on representative scenario data
 
@@ -143,10 +169,11 @@ This implementation diversity demonstrates the flexibility of the Hybrid Trust a
 - **Dockerised model**: Maximum institutional autonomy with individual technical responsibility
 - **SaaS model**: Managed service approach with professional support and reduced institutional overhead
 - **National model**: Coordinated deployment with shared infrastructure benefits
+- **Walt.ID custom model**: Demonstrates cross-provider interoperability and technology-agnostic standards compliance
 - **All models**: Complete cross-border verification capabilities achieved
 - **Universal success**: 100% DNS endpoint availability and DID deployment across all institutions
 
-**Total Impact**: ~930 users, ~2,790 credentials issued across three viable governance and deployment models.
+**Total Impact**: ~930 users, ~2,790 credentials issued across four viable governance and deployment models, with cross-provider interoperability validated.
 
 ## Implementation Model Analysis
 
@@ -184,6 +211,8 @@ The GovPart SaaS model provides **managed service deployment** of ATOS/IZERTIS t
 
 ### OPI/NASK National Coordinated Model
 
+### OPI/NASK National Coordinated Model
+
 The Polish national model demonstrates **coordinated national deployment**:
 
 #### Technical Infrastructure
@@ -206,16 +235,16 @@ The Polish national model demonstrates **coordinated national deployment**:
 
 ### Comparative Analysis
 
-| Aspect | ATOS/IZERTIS Dockerised | ATOS/IZERTIS SaaS (GovPart) | OPI/NASK National |
-|--------|--------------------------|----------------------------|-------------------|
-| **Infrastructure ownership** | Institutional autonomous | Managed service | National coordinated |
-| **Deployment complexity** | High institutional requirement | Simplified managed service | Simplified institutional onboarding |
-| **Customisation capability** | Maximum flexibility | Service-level options | National standards with variation |
-| **Technical support model** | Direct vendor relationship | Professional managed service | National coordination team |
-| **Cross-border verification** | Individual EBSI integration | Managed EBSI integration | National EBSI coordination |
-| **Regulatory compliance** | Institutional responsibility | Service provider assistance | National framework integration |
-| **Innovation potential** | High institutional autonomy | Managed innovation support | Coordinated national innovation |
-| **Scalability model** | Individual institutional scaling | Managed service scaling | National infrastructure scaling |
+| Aspect | ATOS/IZERTIS Dockerised | ATOS/IZERTIS SaaS (GovPart) | OPI/NASK National | Walt.ID Custom |
+|--------|--------------------------|----------------------------|-------------------|----------------|
+| **Infrastructure ownership** | Institutional autonomous | Managed service | National coordinated | Institutional autonomous |
+| **Deployment complexity** | High institutional requirement | Simplified managed service | Simplified institutional onboarding | High institutional requirement |
+| **Customisation capability** | Maximum flexibility | Service-level options | National standards with variation | Maximum flexibility |
+| **Technical support model** | Direct vendor relationship | Professional managed service | National coordination team | Direct vendor relationship |
+| **Cross-border verification** | Individual EBSI integration | Managed EBSI integration | National EBSI coordination | Cross-provider interoperability |
+| **Regulatory compliance** | Institutional responsibility | Service provider assistance | National framework integration | Institutional responsibility |
+| **Innovation potential** | High institutional autonomy | Managed innovation support | Coordinated national innovation | Cross-provider innovation |
+| **Scalability model** | Individual institutional scaling | Managed service scaling | National infrastructure scaling | Technology-agnostic scaling |
 
 ## Critical Technical Achievements
 
@@ -241,7 +270,7 @@ Despite successful deployment, Pilot2 implementations face specific technical co
 ### Model-Specific Technical Successes
 
 #### ATOS/IZERTIS Dockerised Model
-- **Institutional sovereignty**: Successful autonomous deployment across 7 countries and 22 institutions
+- **Institutional sovereignty**: Successful autonomous deployment across 6 countries and 21 institutions
 - **Technical customisation**: Advanced integration with blockchain labs, professional bodies, and research institutions
 - **Innovation leadership**: Support for cutting-edge use cases and institutional research requirements
 
@@ -254,6 +283,11 @@ Despite successful deployment, Pilot2 implementations face specific technical co
 - **National coordination**: Seamless deployment across 6 Polish universities with unified standards
 - **Regulatory integration**: Complete Polish national education regulation compliance
 - **Efficiency demonstration**: Reduced institutional technical requirements whilst maintaining full functionality
+
+#### Walt.ID Custom Model
+- **Cross-provider interoperability**: Successful verification and credential exchange with all other implementation models
+- **Technology agnosticism**: Validates European standards independence from specific vendor solutions
+- **Innovation validation**: Demonstrates that multiple technology providers can coexist within European credential ecosystem
 
 ## Key Learnings and Implications
 
@@ -274,13 +308,15 @@ Despite successful deployment, Pilot2 implementations face specific technical co
 
 ### Validated Implementation Pathways
 
-Pilot2 demonstrates that **Hybrid Trust architecture provides three viable deployment strategies**:
+Pilot2 demonstrates that **Hybrid Trust architecture provides four viable deployment strategies**:
 
 **Dockerised Autonomous Model**: Enables maximum institutional control and customisation whilst maintaining European interoperability, suitable for institutions with strong technical capabilities seeking advanced integration and innovation opportunities.
 
 **SaaS Managed Service Model**: Provides professional managed service deployment of advanced technology whilst maintaining institutional configuration capabilities, suitable for institutions seeking reduced technical overhead with professional support.
 
 **National Coordinated Model**: Provides streamlined deployment through national coordination whilst maintaining full cross-border capabilities, suitable for institutions seeking simplified technical requirements with professional national support.
+
+**Walt.ID Custom Model**: Validates technology-agnostic interoperability and cross-provider compatibility, suitable for institutions seeking alternative technology solutions whilst maintaining European standards compliance.
 
 ### Critical Success Factors
 
@@ -331,6 +367,7 @@ All implementation models successfully demonstrate **next-generation capabilitie
 - **Complete EBSI integration** enabling European-wide trust discovery
 - **Standards-compliant implementation** ensuring long-term interoperability
 - **Enhanced privacy protection** through selective disclosure mechanisms
+- **Cross-provider interoperability** validated through multiple technology solutions
 
 ### Strategic Recommendations for European Deployment
 
@@ -340,7 +377,7 @@ All implementation models successfully demonstrate **next-generation capabilitie
 4. **Enable service model flexibility**: Maintain options for self-hosted, SaaS, and national coordination deployment models
 5. **Enable innovation pathways**: Maintain flexibility for advanced use cases whilst ensuring baseline European interoperability
 
-The proven success of three distinct deployment models within Pilot2's Hybrid Trust framework provides **comprehensive pathways for European educational credential infrastructure** supporting institutional autonomy, managed service efficiency, and national coordination whilst maintaining European integration objectives.
+The proven success of four distinct deployment models within Pilot2's Hybrid Trust framework provides **comprehensive pathways for European educational credential infrastructure** supporting institutional autonomy, managed service efficiency, national coordination, and cross-provider interoperability whilst maintaining European integration objectives.
 
 ---
 
