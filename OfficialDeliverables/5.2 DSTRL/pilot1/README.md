@@ -2,75 +2,50 @@
 
 **Deployment and Testing Scenarios Results Library - Classical PKI Implementation**
 
-Welcome to Pilot1 of the DC4EU Deployment and Testing Scenarios Results Library  (DSTRL) project. This pilot demonstrates the implementation of digital educational credentials using traditional Public Key Infrastructure (PKI) with Selective Disclosure JSON Web Tokens (SD-JWT) for credential format.
+Welcome to Pilot1 of the DC4EU Deployment and Testing Scenarios Results Library (DSTRL) project. This pilot demonstrates the implementation of digital educational credentials using traditional Public Key Infrastructure (PKI) with Selective Disclosure JSON Web Tokens (SD-JWT) for credential format.
 
 ## Overview
 
-Pilot1 represents a pragmatic approach to digital credential implementation that leverages existing PKI infrastructure whilst introducing modern selective disclosure capabilities. This pilot provides educational institutions with a pathway to digital credentials that builds upon familiar certificate-based trust models whilst ensuring compliance with European digital identity standards.
+Pilot1 demonstrates two distinct approaches to digital credential implementation using Classical PKI infrastructure with Selective Disclosure JSON Web Tokens (SD-JWT). Through five institutional scenarios, this pilot reveals both **SaaS consortium models** (SUNET/SURF SaaS) and **sovereign national implementations** (Finnish DVV), providing educational institutions with multiple pathways to digital credentials whilst highlighting different governance and infrastructure strategies within European digital identity frameworks.
+
+## Implementation Models Demonstrated
+
+Pilot1 encompasses two distinctive implementation approaches within the Classical PKI framework:
+
+### SUNET/SURF SaaS Model
+**Participating institutions**: AUAS (Netherlands), DTU (Denmark), Ladok (Sweden), Sikt (Norway)
+- **Infrastructure model**: Shared SaaS platform
+- **Governance approach**: Multi-institutional consortium agreements  
+- **Technical standardisation**: Uniform configurations across Nordic and Dutch institutions
+- **Deployment complexity**: Simplified institutional requirements through centralised services
+
+### Finnish National Sovereign Model  
+**Participating institution**: OPH (Finnish National Agency for Education)
+- **Infrastructure model**: National DVV (Digital and Population Data Services Agency) 
+- **Governance approach**: National legislation-based (Acts 884/2017 and 906/2019)
+- **Technical capabilities**: Full PID integration with direct authentic source connectivity
+- **Deployment complexity**: Comprehensive national-scale infrastructure
+
+Both models successfully demonstrate Classical PKI viability whilst revealing different strategic approaches to European digital credential adoption.
 
 ## Current Implementation Status
 
-For the latest implementation progress across all participating institutions, including DNS endpoint availability, certificate deployment status, and cross-border verification capabilities, please refer to the [**DC4EU Piloting Status Tracker**](../procedures/piloting/piloting-status-tracker.md).
+For comprehensive implementation progress across both the SUNET/SURF consortium and Finnish national model, including  certificate deployment status, and cross-border verification capabilities, please refer to the [**DC4EU Piloting Status Tracker**](../procedures/piloting/piloting-status-tracker.md).
 
-**Quick Status Overview:**
-- **Participating Countries**: Denmark, Finland, Netherlands, Norway, Sweden
-- **Total Institutions**: 5 organisations
-- **DNS Endpoint Status**: Limited (SaaS managed instances)
-- **X.509v3 Certificate Status**: Mixed implementation progress
-- **Scenarios Template Compliance**: 100% across all participants
+**Key Implementation Insights**:
+- **178 users onboarded** across both implementation models
+- **571 credentials issued** demonstrating significant pilot scale
+- **Two viable governance approaches** validated within Classical PKI framework
+- **Cross-verifier compatibility** achieved (with technical adjustments required)
 
 ## Technical Architecture
 
-### Trust Model
-**Classical PKI (Public Key Infrastructure)**
-- Hierarchical trust chains using established Certificate Authorities
-- X.509v3 PKI certificates for issuer authentication
-- X.509v3 PMI certificates for relying party verification
-- Traditional certificate validation and revocation mechanisms
+### Core Components and Flow
 
-### Credential Format
-**SD-JWT (Selective Disclosure JSON Web Token)**
-- JSON Web Token structure with selective disclosure capabilities
-- Privacy-preserving credential presentation
-- Compatibility with existing JWT infrastructure
-- Support for credential minimisation and data protection
-
-### Core Components
-- **Issuer Infrastructure**: PKI-based credential issuance systems
-- **Wallet Technology**: wwWallet for credential storage and management
-- **Verification Services**: Certificate-based trust chain validation
-- **SaaS Platform**: SUNET/SURF test environment for streamlined deployment
-
-## Implementation Approach
-
-### SaaS-First Strategy
-Pilot1 prioritises accessible implementation through Software-as-a-Service delivery:
-
-**SUNET/SURF SaaS Environment**
-- Pre-configured PKI infrastructure
-- Standardised issuer public keys for cross-institutional compatibility
-- Managed certificate authorities and trust chain validation
-- Simplified deployment for educational institutions
-
-**Institutional Benefits**
-- Reduced technical overhead for participating institutions
-- Standardised implementation approach across Nordic region
-- Collaborative infrastructure sharing among NRENs
-- Focused institutional effort on user experience and integration
-
-### Trust Chain Management
-**Certificate Hierarchy**
-1. **Root Certificate Authority**: SUNET/SURF managed CA
-2. **Intermediate CAs**: Regional or national certificate authorities
-3. **Entity Certificates**: Institutional issuer and relying party certificates
-4. **End-User Authentication**: Traditional PKI credential validation
-
-## User Journey Documentation
-
-### Credential Issuance Journey
-1. **User Authentication**: PKI certificate-based institutional login
-2. **Credential Request**: Student or staff initiates credential request
-3. **Identity Verification**: Institution validates user identity and entitlements
+#### Credential Issuance Journey
+1. **User Authentication**: PKI certificate-based identity verification
+2. **Authorisation Check**: Institutional database query for credential eligibility
+3. **Data Retrieval**: Authentic source integration for credential attributes
 4. **Credential Generation**: SD-JWT format credential creation
 5. **Wallet Delivery**: Secure transfer to wwWallet application
 6. **Storage Confirmation**: Verification of successful credential storage
@@ -91,6 +66,20 @@ Pilot1 prioritises accessible implementation through Software-as-a-Service deliv
 - **Proven Security**: Time-tested cryptographic mechanisms
 - **Regulatory Compliance**: Alignment with eIDAS 1.0 frameworks
 
+### Model-Specific Capabilities
+
+#### SaaS Consortium Strengths (SUNET/SURF)
+- **Rapid deployment**: Simplified institutional onboarding through shared infrastructure
+- **Technical consistency**: Standardised configurations across multiple countries
+- **Resource efficiency**: Reduced individual institutional technical requirements
+- **Cross-border coordination**: Demonstrated Nordic-Dutch collaboration model
+
+#### National Sovereign Strengths (Finnish DVV)
+- **Production readiness**: Full integration with national education registries (KOSKI, VIRTA)
+- **Comprehensive coverage**: PID integration alongside educational credentials
+- **Authentic source connectivity**: Real-time access to official educational databases
+- **National compliance**: Full alignment with Finnish legal frameworks
+
 ### Selective Disclosure Benefits
 - **Privacy Protection**: Minimal data sharing capabilities
 - **GDPR Compliance**: Data minimisation and consent mechanisms
@@ -99,18 +88,31 @@ Pilot1 prioritises accessible implementation through Software-as-a-Service deliv
 
 ## Current Limitations and Considerations
 
-### Verification Constraints
-Current implementation faces specific technical limitations:
+### Universal Classical PKI Constraints
 
-**Relying Party Certificate Availability**
-- Limited RP certificate provisioning in pilot environment
-- Prevents full cross-border verification testing
-- Restricts demonstration of complete trust chain validation
+Both implementation models encountered shared limitations inherent to Classical PKI approaches:
 
-**Cross-Border Interoperability**
-- Verification limited to integrity checks in current deployment
-- Full trust chain validation requires additional infrastructure
-- International recognition depends on bilateral trust agreements
+**Relying Party Infrastructure Gaps**
+- **RP certificate absence**: Universal limitation preventing full cross-border verification testing
+- **Trust chain validation**: Incomplete PKI infrastructure limiting verification scope to integrity checks
+- **Cross-border interoperability**: Requires bilateral trust agreements and enhanced infrastructure
+
+### Model-Specific Limitations
+
+#### SUNET/SURF SaaS Model
+- **Test environment constraints**: Limited authentic source integration in pilot environments
+- **Scalability dependencies**: Reliant on consortium coordination for infrastructure scaling
+- **Limited lifecycle management**: No credential revocation or suspension capabilities implemented
+
+#### Finnish National Model (DVV)
+- **Standards alignment**: Credential structure differences requiring manual adjustments for DC4EU compatibility
+- **Manual processes**: Certificate sealing requires manual intervention limiting automation
+- **Interoperability gaps**: Attribute naming mismatches with European standards (e.g., "givenName.und" vs "givenName")
+- **Limited lifecycle management**: No credential revocation or suspension capabilities implemented
+
+### Strategic Implications
+
+These findings suggest that **hybrid approaches** combining national sovereignty with European interoperability standards offer the most promising pathway for production deployment.
 
 ### Lifecycle Management
 **Limited Credential Lifecycle Features**
@@ -127,10 +129,11 @@ Current implementation faces specific technical limitations:
 - Security configuration and operational guidance
 
 ### Piloting Agent Scenarios (`/PAs`)
-- Detailed implementation reports from participating institutions
-- User journey documentation and testing results
-- Lessons learned and implementation insights
-- Technical configuration examples and templates
+- **Comprehensive implementation analysis** comparing federated consortium (SUNET/SURF) and national sovereign (Finnish DVV) approaches
+- **Detailed scenario documentation** from five institutions across Nordic, Dutch, and Finnish educational systems  
+- **Comparative technical insights** highlighting infrastructure diversity within Classical PKI framework
+- **User journey outcomes** and verification testing results across both implementation models
+- **Strategic recommendations** for European digital credential adoption pathways
 
 ### User Journey Documentation (`/userjourneys`)
 - Step-by-step credential issuance processes
@@ -143,60 +146,35 @@ Current implementation faces specific technical limitations:
 ### For Educational Institutions
 
 #### Assessment and Planning
-1. **Infrastructure Assessment**: Review existing PKI infrastructure and integration capabilities
-2. **Stakeholder Engagement**: Identify key participants and user groups
-3. **Use Case Definition**: Define specific credential types and verification scenarios
-4. **Resource Planning**: Allocate technical and administrative resources
+1. **Infrastructure Assessment**: Evaluate existing PKI capabilities and institutional requirements
+2. **Governance Model Selection**: Determine alignment with consortium or national approaches
+3. **Implementation model selection**: Choose between federated consortium approach (SUNET/SURF model) or national sovereign implementation (Finnish DVV model) based on:
+   - **Institutional requirements**: Technical capacity and resource availability
+   - **Governance preferences**: Consortium agreements vs national legislation compliance
+   - **Integration complexity**: SaaS simplicity vs comprehensive authentic source connectivity
+   - **Strategic objectives**: Rapid deployment vs production-ready national infrastructure
 
-#### Technical Implementation
-1. **SaaS Onboarding**: Register with SUNET/SURF test environment
-2. **Integration Development**: Implement institutional system integration
-3. **Certificate Configuration**: Configure PKI certificates and trust relationships
-4. **Testing and Validation**: Conduct comprehensive functionality testing
+## Strategic Insights and Recommendations
 
-#### Operational Deployment
-1. **User Onboarding**: Deploy user registration and wallet setup processes
-2. **Credential Issuance**: Begin controlled credential issuance to pilot users
-3. **Verification Testing**: Test verification workflows with partner institutions
-4. **Monitoring and Support**: Implement operational monitoring and user support
+### Validated Implementation Pathways
 
-### For Technology Partners
+Pilot1 demonstrates that **Classical PKI remains viable** for European digital credential deployment through two distinct but equally valid approaches:
 
-#### Integration Requirements
-- SD-JWT processing capabilities
-- PKI certificate management systems
-- wwWallet compatibility and support
-- Classical PKI infrastructure maintenance
+**SaaS Model**: Enables rapid, coordinated deployment across multiple institutions and countries through shared infrastructure, suitable for institutions seeking simplified technical requirements and proven cross-border collaboration.
 
-## Related Documentation
+**National Sovereign Model**: Provides comprehensive, production-ready infrastructure with full authentic source integration, suitable for national agencies requiring complete control and regulatory compliance.
 
-### Cross-Reference Links
-- [**Piloting Status Tracker**](../procedures/piloting/piloting-status-tracker.md) - Current implementation status across all pilots
-- [**Deployment Methodology**](../procedures/Deployment_methodology.md) - Standardised implementation approach
-- [**Compliance Tracking**](../procedures/entities/compliance.md) - Regulatory compliance monitoring
-- [**Pilot2 Implementation**](../pilot2/README.md) - Decentralised PKI approach
-- [**Pilot3 Combined Approach**](../pilot3/README.md) - Dual trust model implementation
+### Critical Success Factors
 
-### Technical Documentation
-- [Infrastructure Setup Guide](./infrastructure/README.md)
-- [PKI Certificate Management](./infrastructure/certificate-management.md)
-- [SD-JWT Implementation Specifications](./infrastructure/sd-jwt-processing.md)
-- [User Journey Templates](./userjourneys/README.md)
+1. **Standards harmonisation**: Essential for European interoperability regardless of implementation model
+2. **RP infrastructure development**: Universal requirement for enhanced cross-border verification capabilities  
+3. **Governance flexibility**: Supporting both consortium and national approaches accommodates diverse institutional needs
+4. **Hybrid strategy readiness**: Classical PKI provides foundation for eventual integration with decentralised approaches (Pilot2)
 
-## Support and Resources
+### Production Deployment Considerations
 
-### Technical Support
-- **SUNET/SURF Technical Team**: SaaS environment support and maintenance
-- **DC4EU Project Office**: Project coordination and guidance
-- **Community Forums**: Peer support and knowledge sharing
-- **Documentation Portal**: Comprehensive technical documentation
-
-### Training and Capacity Building
-- **Implementation Workshops**: Regular training sessions for technical teams
-- **Best Practices Sharing**: Community-driven knowledge exchange
-- **User Experience Guidelines**: Support for institutional deployment teams
-- **Troubleshooting Resources**: Common issues and resolution procedures
+The diversity of successful implementation models within Pilot1 validates the **flexibility required for pan-European adoption** whilst highlighting **standardisation needs** for seamless interoperability across different governance and infrastructure approaches.
 
 ---
 
-*For current implementation status and progress tracking across all DC4EU pilots, please refer to the [Piloting Status Tracker](../procedures/piloting/piloting-status-tracker.md).*
+*For detailed scenario analysis and comparative technical insights, refer to [Pilot1 Participating Agent Scenarios](./PAs/README.md).*
