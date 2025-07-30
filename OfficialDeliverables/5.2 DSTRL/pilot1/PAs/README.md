@@ -97,7 +97,7 @@ The four-institution consortium demonstrates **federated SaaS implementation**:
 
 ### Comparative Analysis
 
-| Aspect | Finnish National (OPH) | SUNET/SURF Consortium |
+| Aspect | Finnish National (OPH) | SUNET/SURF SaaS |
 |--------|------------------------|----------------------|
 | **Infrastructure ownership** | National sovereign | Shared federated |
 | **Authentic source integration** | Production-ready | Test environment |
