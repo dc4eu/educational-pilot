@@ -120,7 +120,7 @@ The most significant finding across all scenarios is the **absence of Relying Pa
 - **Certificate lifecycle**: Manual sealing process limiting automated trust chain validation
 - **Revocation infrastructure**: Absence of credential revocation or suspension capabilities
 
-#### SUNET/SURF Consortium Model
+#### SUNET/SURF SaaS Model
 - **Relying Party infrastructure**: Universal absence of RP certificates preventing full verification testing
 - **Authentic source connectivity**: Limited to test data without production registry integration
 - **Trust chain validation**: Incomplete PKI infrastructure limiting cross-border verification scope
@@ -152,7 +152,7 @@ The OPH implementation demonstrates that **sovereign national infrastructure** c
 - Cross-verifier interoperability (with technical adjustments)
 - Scalable national deployment model
 
-### SUNET/SURF Consortium Coordination
+### SUNET/SURF SaaS Coordination
 The four-institution consortium proves that **federated SaaS approaches** can achieve technical standardisation across borders. Notable outcomes include:
 - Uniform technical implementation across Nordic and Dutch institutions
 - Simplified institutional deployment requirements
