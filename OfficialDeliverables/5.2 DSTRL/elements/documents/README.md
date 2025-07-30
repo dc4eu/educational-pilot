@@ -1,80 +1,58 @@
-# DSTRL Elements Documents
+# DSTRL Elements Documentation
 
-**Technical Specifications and Implementation Documentation**
+**Deployment and Testing Scenarios Results Library - Technical Specifications**
 
-Welcome to the DSTRL Elements Documents directory, which contains the comprehensive technical specifications, implementation guides, and detailed documentation for the core components of the Deployment and Testing Scenarios Results Library. This directory serves as the authoritative source for technical documentation covering the foundational systems that enable digital credential implementation across European educational and professional qualification contexts.
-
-## Overview
-
-The Documents directory contains detailed technical specifications derived from real-world implementation scenarios documented within the DTSRL. These specifications represent proven approaches to digital credential systems that have been tested and validated by piloting agents across Europe. Each documented component provides comprehensive guidance for implementing secure, interoperable, and standards-compliant digital credential systems.
-
-## Core Document Components
-
-### EDCL - European Digital Credentials Library
-
-**Comprehensive Digital Credential Management System**
-
-The EDCL represents a complete ecosystem for issuing, storing, and verifying digital educational credentials across European institutions. Built upon the European Learning Model (ELM) and W3C Verifiable Credentials standards, EDCL provides a production-ready implementation framework for institutional digital credential deployment.
-
-#### **EDCI System Architecture**
-**Integrated Component Framework**
-- **EDCI Issuer**: Template-driven credential generation with institutional customisation
-- **EDCI Wallet (Europass Integration)**: Secure storage within the Europass "My Library" service
-- **EDCI Viewer**: Multi-format credential visualisation and verification
-- **EDCI Verifier**: Comprehensive credential validation and trust chain verification
-
-#### **Key Technical Features**
-**European Digital Credentials (EDC) Specification**
-- **JSON-LD Structure**: Semantic interoperability with custom educational extensions
-- **jAdES Digital Signatures**: Legal-grade digital signatures compliant with European regulations
-- **European Learning Model Alignment**: Strict adherence to ELM 3.2 specifications
-- **Multi-Language Support**: Available in 31 Europass languages
-
-**Supported Credential Types**
-- **Formal Education Credentials**: University degrees, diploma supplements, transcripts
-- **Vocational Training Credentials**: VET certificates and professional development programmes
-- **Micro-credentials**: Modular learning achievements and stackable qualifications
-- **Professional Qualifications**: Industry-specific certifications and accreditations
-
-#### **Digital Signature Infrastructure**
-**Multiple Signing Mechanisms**
-- **NexU Integration**: Secure local signing via Secure Signature Creation Devices (SSCD)
-- **Local Sealing**: PKCS#12 format for institutions hosting their own infrastructure
-- **Audit Logging**: OIDC provider traceability for comprehensive compliance
-- **Template Customisation**: Institution-specific credential design and branding
-
-#### **Supporting Infrastructure**
-**Production-Ready Components**
-- **Keycloak Authentication**: Identity federation across all EDCI components
-- **MySQL Persistence**: Data storage for credential records and audit logs
-- **RESTful APIs**: Standardised interfaces for third-party integration
-- **Export Capabilities**: Multiple delivery channels including direct wallet integration
+This directory contains comprehensive technical documentation for the core components of the Deployment and Testing Scenarios Results Library (DSTRL) ecosystem. These specifications provide the foundation for implementing secure, interoperable digital credential systems across European educational institutions.
 
 ---
 
-### MyAcademicID - Federated Academic Identity Management
+## Core Components Overview
 
-**Advanced Academic Identity Framework for European Higher Education**
+The EDCL framework comprises three primary components that work together to provide a comprehensive digital credentialing ecosystem for European higher education:
 
-MyAcademicID implements a sophisticated federated identity management system specifically designed for European higher education contexts. The system supports the European Student Identifier (ESI) framework and eduPerson standards whilst enabling cross-institutional credential verification and academic mobility.
+### EDCL - European Digital Credentials for Learners
+
+**Comprehensive Digital Credential Management System**
+
+The European Digital Credentials for Learners represents a complete solution for issuing, storing, and verifying digital educational credentials across European institutions. Built on established European and international standards, EDCL provides the technical foundation for secure, interoperable credential management.
+
+#### **Key Features and Capabilities**
+- **Multi-Format Support**: Native support for European Learning Model (ELM), W3C Verifiable Credentials, and national credential formats
+- **Institutional Integration**: Seamless integration with existing student information systems and academic infrastructure
+- **Quality Assurance**: Comprehensive validation and verification mechanisms ensuring credential integrity
+- **Cross-Border Recognition**: Standards-compliant implementation enabling credential recognition across Member States
+
+#### **Technical Architecture**
+- **EDCI Issuer**: Institutional credential issuance platform with role-based access control
+- **EDCI Wallet Integration**: Direct integration with Europass digital wallet infrastructure
+- **Verification Services**: Real-time credential verification and authenticity checking
+- **API Framework**: RESTful APIs enabling integration with institutional systems
+
+---
+
+### Educational Identity Framework
+
+**Standards-Based Academic Identity Management**
+
+The educational identity framework provides secure, privacy-preserving identity management for students, faculty, and researchers across European higher education institutions. Built on established identity standards, the system enables seamless authentication and authorisation across institutional boundaries.
 
 #### **Federated Trust Architecture**
 **Multi-Level Governance Model**
 - **Institutional Level**: Local policy implementation and credential issuance
-- **National Level**: NREN coordination and oversight through national research networks
-- **European Level**: GÉANT standards development and cross-border coordination
+- **National Level**: National coordination and oversight through established networks
+- **European Level**: Standards development and cross-border coordination
 - **Dynamic Trust Discovery**: Real-time trust validation across multiple jurisdictions
 
 #### **Comprehensive Data Model**
 **Academic Identity Schema Implementation**
-The MyAcademicID data model incorporates eduPerson standard attributes and ESI framework requirements:
+The educational identity data model incorporates established standard attributes and European framework requirements:
 
 **Mandatory Attributes**
-- `communityUserIdentifier`: Opaque, non-revocable identifier following eduPersonUniqueId syntax
+- `communityUserIdentifier`: Opaque, non-revocable identifier following established syntax standards
 - `displayName`: User's full name for presentation purposes
 - `givenName` / `familyName`: Standard personal name components
 - `emailAddress`: Primary contact and communication identifier
-- `assurance`: Identity assurance level following REFEDS Assurance Framework
+- `assurance`: Identity assurance level following established assurance frameworks
 
 **Optional Academic Context Attributes**
 - `europeanStudentIdentifier`: ESI ensuring cross-institutional mobility
@@ -85,7 +63,7 @@ The MyAcademicID data model incorporates eduPerson standard attributes and ESI f
 #### **Electronic Attestations of Attributes (EAAs)**
 **Institutional Authorisation Framework**
 EAAs provide standardised mechanisms for representing institutional authority to issue credentials:
-- `MyAcademicIDIssuer`: Authorisation to issue MyAcademicID credentials
+- `EducationalCredentialIssuer`: Authorisation to issue educational identity credentials
 - `EQFlevelX`: Authority to issue credentials at specific European Qualifications Framework levels
 - `HigherEducationInstitution`: Recognition as legitimate higher education institution
 - `LicenceToActAtNationalLevel/EuropeanLevel`: Jurisdictional scope of authorisation
@@ -95,7 +73,7 @@ EAAs provide standardised mechanisms for representing institutional authority to
 - **W3C VCDM 1.1 & 2.0**: Support for both current and emerging standards
 - **Selective Disclosure**: Privacy-preserving credential presentation
 - **Consent Management**: User-controlled data sharing with comprehensive audit trails
-- **Cross-Border Interoperability**: Integration with eduGAIN, EMREX, and European frameworks
+- **Cross-Border Interoperability**: Integration with EMREX and European frameworks
 
 #### **Advanced Credential Lifecycle Management**
 **Comprehensive Status Management**
@@ -110,58 +88,25 @@ EAAs provide standardised mechanisms for representing institutional authority to
 
 **Proven Infrastructure for Academic Record Exchange**
 
-EMREX represents a mature, production-ready system for exchanging student records across European institutions. With eight countries currently utilising the open-source infrastructure, EMREX provides immediate access to authentic academic data sources and serves as a critical bridge between existing systems and emerging digital wallet technologies.
+EMREX represents a mature, production-ready system for exchanging student records across European institutions. The system provides immediate access to authentic academic transcripts and records, facilitating student mobility and credential verification across borders.
 
-#### **Established Network Architecture**
-**Distributed System Components**
-- **EMREX Contact Point (EMP)**: Primary interface for accessing student results from institutions
-- **EMREX Client (EMC)**: Application initiating transfers to requesting organisations
-- **EWP Registry**: Centralised registry maintaining network integrity whilst preserving distribution
+#### **Core EMREX Capabilities**
+- **Authentic Data Sources**: Direct integration with institutional student information systems
+- **European Learner Mobility Ontology (ELMO)**: Standardised format for academic record representation
+- **Cross-Border Recognition**: Established network of participating institutions across Europe
+- **Digital Wallet Integration**: Seamless integration with modern credential wallet systems
 
-#### **European Learner Mobility Ontology (ELMO)**
-**Standardised Educational Data Format**
-ELMO provides comprehensive structure for educational credentials including:
-- **Student Identification**: Verified identity information and authentication
-- **Institutional Details**: Accreditation and authorisation documentation
-- **Course Information**: Programme details and academic structure
-- **Assessment Data**: Grading systems and achievement evaluation
-- **Framework Alignment**: Qualification frameworks and standards mapping
+#### **Technical Implementation**
+- **Client-Server Architecture**: Scalable infrastructure supporting institutional integration
+- **Secure Data Transfer**: Encrypted communication channels ensuring data protection
+- **Format Conversion**: Built-in conversion between national formats and European standards
+- **Quality Assurance**: Comprehensive validation mechanisms ensuring data integrity
 
-#### **User-Centric Process Flow**
-**Secure Academic Record Transfer**
-1. **Authentication**: Student login using institutional credentials
-2. **Data Retrieval**: System fetches credentials from official data sources
-3. **Selection**: Students choose which results to share
-4. **Document Generation**: ELMO document creation with digital signature
-5. **Secure Transfer**: Document transmission to requesting organisation
-
-#### **DC4EU Integration Strategy**
-**EMREX Gateway Development**
-The DC4EU project proposes an EMREX Gateway (EMREX GW) to bridge existing infrastructure with EUDI Wallet ecosystem:
-
-**Core Gateway Functions**
-- **Data Storage**: Enable users to store EMREX credentials in EUDI Wallet
-- **Data Consumption**: Allow EMREX network to consume EUDI Wallet credentials
-- **Authentication Integration**: EUDI Wallet eID for EMREX network authentication
-- **Format Conversion**: Bidirectional ELMO-ELM transformation capabilities
-
-**Technical Integration Components**
-- **ELMO-ELM Converter**: Critical bidirectional format transformation
-- **Digital Signature Management**: Integration with existing signature infrastructure
-- **Wallet Integration Services**: APIs interfacing with WP7 toolkit components
-- **Error Handling**: Comprehensive failure scenario management
-
-#### **National Implementation Examples**
-**Proven Deployment Patterns**
-- **Norwegian Diploma Portal**: National diploma registry integration
-- **Ladok System**: Swedish national student information system integration
-- **Finnish OPH Participation**: Interoperability testing through direct wallet consumption
-
-#### **Development and Governance**
-**Collaborative Management Model**
-- **Management Board**: Task leaders responsible for technical and temporal monitoring
-- **Swedish-Norwegian Development Team**: Coordinated development through shared channels
-- **Open Source Foundation**: Community-driven enhancement and maintenance
+#### **Integration Benefits**
+- **Reduced Administrative Burden**: Automated transcript exchange eliminating manual processes
+- **Enhanced Student Experience**: Simplified application processes for international mobility
+- **Institutional Efficiency**: Streamlined credential verification and acceptance procedures
+- **Standards Compliance**: Full alignment with European educational data exchange requirements
 
 ---
 
@@ -191,85 +136,34 @@ The DC4EU project proposes an EMREX Gateway (EMREX GW) to bridge existing infras
 - **Hardware Security Module (HSM)**: Enhanced security for institutional signing
 
 #### **Trust and Verification Infrastructure**
-- **Certificate Authority Integration**: Traditional PKI trust chain support
-- **Decentralised Identifier (DID)**: Modern identity and trust establishment
-- **EBSI Trust Registries**: European blockchain-based trust infrastructure
-- **Cross-Border Recognition**: Automated trust discovery across Member States
+- **Certificate Authority Integration**: Support for established PKI infrastructure
+- **Distributed Identifier (DID)**: Modern decentralised identity mechanisms
+- **Trust Registry Integration**: Real-time verification of issuer authority
+- **Multi-Signature Support**: Enhanced security through multiple validation mechanisms
 
 ### Privacy and Data Protection
 
+#### **Privacy-by-Design Implementation**
+- **Minimal Data Disclosure**: Selective sharing of credential attributes
+- **User Consent Management**: Granular control over personal data sharing
+- **Data Minimisation**: Processing only essential information for specific purposes
+- **Audit Trail Maintenance**: Comprehensive logging of all data processing activities
+
 #### **GDPR Compliance Framework**
-- **Data Minimisation**: Selective disclosure and minimal information sharing
-- **Consent Management**: User-controlled data sharing preferences and rights
-- **Right to Erasure**: Credential revocation and data deletion capabilities
-- **Audit Trail**: Comprehensive data processing documentation and transparency
-
-#### **Privacy-Preserving Technologies**
-- **Selective Disclosure**: Context-appropriate information sharing
-- **Zero-Knowledge Proofs**: Advanced cryptographic privacy protection
-- **User Consent Control**: Individual control over personal data disclosure
-- **Anonymisation Capabilities**: Privacy protection for research and analytics
+- **Lawful Basis Documentation**: Clear legal grounds for all data processing
+- **Data Subject Rights**: Full support for access, rectification, and erasure rights
+- **Cross-Border Transfer Mechanisms**: Compliant international data sharing procedures
+- **Data Protection Impact Assessments**: Systematic privacy risk evaluation
 
 ---
 
-## Implementation Guidance and Support
+## Deployment and Integration Guidance
 
-### For Educational Institutions
+### Target Audiences and Use Cases
 
-#### **System Selection Guidance**
-**Choosing Appropriate Components**
-- **EDCL**: Institutions requiring comprehensive credential management with Europass integration
-- **MyAcademicID**: Universities needing federated identity management across institutional boundaries
-- **EMREX**: Institutions seeking immediate integration with existing European mobility infrastructure
-
-#### **Implementation Pathways**
-**Phased Deployment Approach**
-1. **Assessment Phase**: Evaluate institutional requirements and current system capabilities
-2. **Pilot Implementation**: Deploy selected components with limited user groups
-3. **Integration Testing**: Validate interoperability with existing institutional systems
-4. **Production Scaling**: Expand to full institutional implementation with comprehensive support
-
-### For Technology Partners
-
-#### **Integration Requirements**
-**Technical Development Specifications**
-- **API Compliance**: RESTful service implementation following documented specifications
-- **Standards Adherence**: W3C VC, ELM, and European digital signature compliance
-- **Security Implementation**: Cryptographic requirements and trust establishment
-- **Interoperability Testing**: Cross-system compatibility validation
-
-#### **Development Resources**
-**Comprehensive Technical Support**
-- **OpenAPI Specifications**: Detailed API documentation and integration guides
-- **Reference Implementations**: Working examples and code samples
-- **Testing Frameworks**: Validation tools and compliance verification
-- **Developer Community**: Forums and knowledge sharing platforms
-
-### Quality Assurance and Validation
-
-#### **Testing and Compliance**
-**Multi-Level Quality Assurance**
-- **Technical Compliance**: Standards adherence and specification conformance
-- **Security Assessment**: Penetration testing and vulnerability evaluation
-- **Interoperability Validation**: Cross-system compatibility verification
-- **User Experience Testing**: Usability assessment and accessibility compliance
-
-#### **Continuous Improvement**
-**Iterative Enhancement Process**
-- **Feedback Integration**: User and institutional input incorporation
-- **Performance Monitoring**: System metrics and optimisation tracking
-- **Standards Evolution**: Adaptation to changing European and international requirements
-- **Community Collaboration**: Open source development and knowledge sharing
-
----
-
-## Getting Started
-
-### Documentation Navigation
-
-#### **For System Implementers**
+#### **For Technical Implementers and System Integrators**
 1. **EDCL Documentation**: Comprehensive credential management system implementation
-2. **MyAcademicID Specifications**: Federated identity management technical requirements
+2. **Educational Identity Specifications**: Federated identity management technical requirements
 3. **EMREX Integration Guide**: Student mobility infrastructure connection procedures
 4. **Cross-Component Integration**: Unified system deployment strategies
 
