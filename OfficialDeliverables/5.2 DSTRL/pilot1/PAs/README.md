@@ -124,7 +124,7 @@ The most significant finding across all scenarios is the **absence of Relying Pa
 - **Relying Party infrastructure**: Universal absence of RP certificates preventing full verification testing
 - **Authentic source connectivity**: Limited to test data without production registry integration
 - **Trust chain validation**: Incomplete PKI infrastructure limiting cross-border verification scope
-- **DNS resolution coordination**: Technical coordination challenges affecting SaaS instance accessibility
+
 
 ## Key Learnings and Implications
 
