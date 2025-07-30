@@ -1,332 +1,338 @@
-# Analysis of DC4EU Pilot3 Scenarios
+# DC4EU Pilot3 Scenarios
 
 ## Executive Summary
 
-The DC4EU Pilot3 scenarios represent a pioneering approach to comprehensive hybrid trust frameworks in European digital credential infrastructure. Pilot3 institutions uniquely implemented **both Classical PKI and Decentralised PKI approaches simultaneously**, providing unprecedented insight into the comparative advantages and operational realities of dual trust model deployment within single educational institutions.
+The DC4EU Pilot3 scenarios demonstrate the simultaneous implementation of both Pilot1 (Classical PKI) and Pilot2 (Hybrid Trust) approaches within the same educational institutions. Through 6 institutional scenarios (3 institutions implementing both pilots) across 2 countries, this pilot reveals how institutions can successfully deploy **complete Pilot1 and Pilot2 implementations concurrently**, providing educational institutions with comprehensive validation of both approaches whilst enabling direct comparative analysis and maximum strategic flexibility within the European digital credential ecosystem.
 
-The three participating institutions—University of Twente, Saxion University of Applied Sciences (Netherlands), and COFAC - Lusófona University (Portugal)—successfully demonstrated that hybrid trust frameworks can provide optimal balance between familiar PKI reliability and innovative dPKI capabilities, whilst addressing the full spectrum of cross-border educational credential requirements.
+## Pilot3 Piloting Agent Scenarios
 
-## Pilot3 Participating Institutions Overview
+This analysis covers all 6 scenarios from the 3 participating institutions, each implementing both Pilot1 and Pilot2 simultaneously:
 
-Pilot3 represents a **combined approach** where each institution implements both trust models, requiring **six total scenario files** (two per institution) to capture the complete technical and operational landscape:
+**Pilot1 Implementation Scenarios:**
+- **[University of Twente - Pilot1](utwente_pilot3_pilot1_scenario.md)** - Classical PKI Implementation with SUNET/SURF SaaS and SD-JWT Credentials
+- **[Saxion University of Applied Sciences - Pilot1](saxion_pilot3_pilot1_scenario.md)** - Classical PKI Implementation with SUNET/SURF SaaS and SD-JWT Credentials
+- **[COFAC - Lusófona University - Pilot1](ulusofona_pilot3_pilot1_scenario.md)** - Classical PKI Implementation with SUNET/SURF SaaS and SD-JWT Credentials
 
-This analysis covers the following six Pilot3 scenarios from educational institutions implementing dual trust frameworks:
+**Pilot2 Implementation Scenarios:**
+- **[University of Twente - Pilot2](utwente_pilot3_pilot2_scenario.md)** - Hybrid Trust Implementation with ATOS/IZERTIS Dockerised Solution and W3C Verifiable Credentials
+- **[Saxion University of Applied Sciences - Pilot2](saxion_pilot3_pilot2_scenario.md)** - Hybrid Trust Implementation with ATOS/IZERTIS Dockerised Solution and W3C Verifiable Credentials
+- **[COFAC - Lusófona University - Pilot2](ulusofona_pilot3_pilot2_scenario.md)** - Hybrid Trust Implementation with ATOS/IZERTIS Dockerised Solution and W3C Verifiable Credentials
 
-### Classical PKI Scenarios
-- **[University of Twente - Classical PKI](utwente_pilot3_classical_pki_scenario.md)** - Technical Education Credential Issuance with SUNET/SURF SaaS (Classical PKI)
-- **[Saxion University of Applied Sciences - Classical PKI](saxion_pilot3_classical_pki_scenario.md)** - Applied Sciences Credential Issuance with SUNET/SURF SaaS (Classical PKI)
-- **[COFAC - Lusófona University - Classical PKI](ulusofona_pilot3_classical_pki_scenario.md)** - Private University Credential Issuance with SUNET/SURF SaaS (Classical PKI)
+## Complete Pilot3 Piloting Agent Scenarios
 
-### Decentralised PKI Scenarios
-- **[University of Twente - dPKI](utwente_pilot3_dpki_scenario.md)** - Technical Education Credential Issuance with Decentralised PKI Trust Framework
-- **[Saxion University of Applied Sciences - dPKI](saxion_pilot3_dpki_scenario.md)** - Applied Sciences Credential Issuance with Decentralised PKI Trust Framework
-- **[COFAC - Lusófona University - dPKI](ulusofona_pilot3_dpki_scenario.md)** - Private University Credential Issuance with Decentralised PKI Trust Framework
+### Netherlands Implementation (2 institutions - 4 scenarios)
 
-### Netherlands (2 institutions - 4 scenarios)
-
-**University of Twente (UTWENTE)**
-- **Classical PKI Scenario**: SUNET/SURF SaaS implementation
-- **dPKI Scenario**: ATOS/IZERTIS Dockerised solution
+#### University of Twente (UTWENTE)
+**Complete Pilot1 + Pilot2 Implementation:**
+- **[Pilot1 Scenario](utwente_pilot3_pilot1_scenario.md)**: Classical PKI with SUNET/SURF SaaS, wwWallet, and SD-JWT credentials
+- **[Pilot2 Scenario](utwente_pilot3_pilot2_scenario.md)**: Hybrid Trust with ATOS/IZERTIS Dockerised solution, EUDI Wallet, and W3C Verifiable Credentials
 - **Focus**: Technical education and engineering programmes
 - **SPOC**: Helenn Vanderzaag
-- **dPKI DNS**: `lsput.utwente.nl`
-- **dPKI DID**: `did:ebsi:zkZ45tZchyqA5NwQ5s9jPLN`
+- **Pilot1 Endpoint**: SUNET/SURF SaaS instance
+- **Pilot2 DNS**: `lsput.utwente.nl`
+- **Pilot2 DID**: `did:ebsi:zkZ45tZchyqA5NwQ5s9jPLN`
 
-**Saxion University of Applied Sciences (SAXION)**
-- **Classical PKI Scenario**: SUNET/SURF SaaS implementation
-- **dPKI Scenario**: ATOS/IZERTIS Dockerised solution
+#### Saxion University of Applied Sciences (SAXION)
+**Complete Pilot1 + Pilot2 Implementation:**
+- **[Pilot1 Scenario](saxion_pilot3_pilot1_scenario.md)**: Classical PKI with SUNET/SURF SaaS, wwWallet, and SD-JWT credentials
+- **[Pilot2 Scenario](saxion_pilot3_pilot2_scenario.md)**: Hybrid Trust with ATOS/IZERTIS Dockerised solution, EUDI Wallet, and W3C Verifiable Credentials
 - **Focus**: Applied sciences and professional education
 - **SPOC**: Franco de Vitta
-- **dPKI DNS**: `lspsaxion.saxion.nl`
-- **dPKI DID**: `did:ebsi:zZ97WmbVmSr6UpU5jb5X8HK`
+- **Pilot1 Endpoint**: SUNET/SURF SaaS instance
+- **Pilot2 DNS**: `lspsaxion.saxion.nl`
+- **Pilot2 DID**: `did:ebsi:zZ97WmbVmSr6UpU5jb5X8HK`
 
-### Portugal (1 institution - 2 scenarios)
+### Portugal Implementation (1 institution - 2 scenarios)
 
-**COFAC - Lusófona University (ULUSOFONA)**
-- **Classical PKI Scenario**: SUNET/SURF SaaS implementation
-- **dPKI Scenario**: ATOS/IZERTIS Dockerised solution
+#### COFAC - Lusófona University (ULUSOFONA)
+**Complete Pilot1 + Pilot2 Implementation:**
+- **[Pilot1 Scenario](ulusofona_pilot3_pilot1_scenario.md)**: Classical PKI with SUNET/SURF SaaS, wwWallet, and SD-JWT credentials
+- **[Pilot2 Scenario](ulusofona_pilot3_pilot2_scenario.md)**: Hybrid Trust with ATOS/IZERTIS Dockerised solution, EUDI Wallet, and W3C Verifiable Credentials
 - **Focus**: Private international education
 - **SPOC**: Paulo Ferreira
-- **dPKI DNS**: `lspulusofona.ulusofona.pt`
-- **dPKI DID**: `did:ebsi:zrmS9sGhR5J6vHu2gzMkN8t`
-
-## Dual Trust Model Architecture Analysis
-
-### Classical PKI Implementation (Pilot3-ClassicalPKI)
-
-All three institutions implemented Classical PKI following the established Pilot1 model:
-
-**Technical Configuration**:
-- **SaaS Environment**: SUNET/SURF test environment
-- **Wallet**: wwWallet
-- **Credential Format**: SD-JWT
-- **Trust Model**: Classical PKI only
-- **Issuer Public Key**: Standardised SUNET/SURF key reference
-- **Verification**: Limited to integrity checks (no RP certificates)
-
-**Institutional Alignment**:
-- **User Target**: 25 students per institution (75 total)
-- **Credentials Issued**: EducationalID and Diploma per user (150 total credentials)
-- **Verification Scope**: Integrity checks only due to infrastructure limitations
-
-### Decentralised PKI Implementation (Pilot3-dPKI)
-
-All three institutions implemented comprehensive dPKI following the established Pilot2 model:
-
-**Technical Configuration**:
-- **Platform**: ATOS/IZERTIS Dockerised solution
-- **Wallet**: EUDI Wallet (EUDIW by IZERTIS)
-- **Credential Format**: W3C Verifiable Credentials
-- **Trust Model**: Hybrid (X.509 PKI + DIDs + EBSI Trust Registries)
-- **EBSI Integration**: Full Trust Registry integration
-- **Verification**: Complete cross-border verification capabilities
-
-**Cryptographic Standards**:
-- **Algorithm**: EC (Elliptic Curve)
-- **Key Size**: 256 bits
-- **Security Level**: Strong (equivalent to 3072-bit RSA)
-- **Certificate Chain**: 3 certificate(s)
-
-## Comparative Implementation Analysis
-
-### Technical Infrastructure Comparison
-
-| Component | Classical PKI | dPKI |
-|-----------|---------------|------|
-| **Platform Provider** | SUNET/SURF | ATOS/IZERTIS |
-| **Deployment Model** | SaaS | Dockerised |
-| **Wallet Technology** | wwWallet | DC4EU Identify Wallet |
-| **Credential Format** | SD-JWT | W3C VC |
-| **Trust Mechanism** | X.509 PKI only | Hybrid PKI + dPKI |
-| **Cross-Border Verification** | Limited | Full capability |
-| **Governance Layer** | Static | Dynamic |
-
-### User Journey Completion Analysis
-
-All institutions successfully completed identical user journeys across both trust models:
-
-**Universal User Journeys**:
-- ✅ **Wallet Installation**: Both models successful
-- ✅ **PID Retrieval**: 100% completion rate across approaches
-- ✅ **EducationalID Issuance**: Successful in both Classical PKI and dPKI
-- ✅ **Diploma Issuance**: Complete implementation across trust models
-- ⚠️ **Verification**: Classical PKI limited to integrity checks, dPKI full verification
-
-### Credential Volume Assessment
-
-| Institution | Classical PKI Credentials | dPKI Credentials | Total Impact |
-|-------------|---------------------------|------------------|--------------|
-| UTWENTE | 172 (60 users × 2 types + 6) | 180 (60 users × 3 types) | 352 |
-| SAXION | 120 (30 users × 4 types) | 90 (30 users × 3 types) | 210 |
-| ULUSOFONA | 50 (25 users × 2 types) | 75 (25 users × 3 types) | 125 |
-| **Total** | **342 credentials** | **345 credentials** | **687 credentials** |
-
-**Pilot3 Total Impact**: 115 users, 687 credentials across dual trust frameworks
-
-## Critical Technical Insights
-
-### Classical PKI Limitations Confirmation
-
-Pilot3 Classical PKI scenarios confirmed the limitations identified in Pilot1:
-
-**Infrastructure Constraints**:
-- **No RP Certificates**: Unable to perform full cross-border verification
-- **Limited Lifecycle Management**: No revocation or suspension capabilities
-- **Static Governance**: PKI certificates confirm identity but not dynamic authorisation
-
-**User Experience Impact**:
-- **Familiar Technology**: High user acceptance of wwWallet
-- **Limited Verification**: Users frustrated by inability to demonstrate credential validity internationally
-- **Integration Challenges**: Minimal institutional system connectivity
-
-### dPKI Advantages Validation
-
-Pilot3 dPKI scenarios validated the enhanced capabilities demonstrated in Pilot2:
-
-**Enhanced Capabilities**:
-- **Full Cross-Border Verification**: Complete trust chain validation operational
-- **Dynamic Governance**: EBSI Trust Registry enables real-time authorisation verification
-- **Advanced Lifecycle Management**: Revocation and suspension via blockchain-based registries
-
-**Operational Benefits**:
-- **International Interoperability**: Seamless verification across European institutions
-- **Future-Ready Architecture**: Blockchain-based infrastructure scales effectively
-- **Enhanced User Privacy**: DID-based credentials provide superior privacy controls
-
-## Hybrid Trust Framework Insights
-
-### Dual Implementation Benefits
-
-Pilot3's unique dual approach revealed significant strategic advantages:
-
-**Risk Mitigation**:
-- **Technology Redundancy**: Multiple trust paths reduce single points of failure
-- **Stakeholder Comfort**: Classical PKI familiarity eases institutional adoption
-- **Future Flexibility**: dPKI readiness enables advanced capabilities as ecosystem matures
-
-**User Choice and Context**:
-- **Scenario-Appropriate Selection**: Users can select optimal trust model for specific verification contexts
-- **Gradual Transition**: Institutions can migrate gradually from Classical PKI to dPKI
-- **Interoperability Coverage**: Maximum compatibility with diverse verification environments
-
-### Institutional Learning Outcomes
-
-**Technical Capability Development**:
-- **Dual Expertise**: Technical teams gained proficiency in both trust models
-- **Comparative Understanding**: Direct experience with advantages and limitations of each approach
-- **Strategic Planning**: Enhanced capability to make informed technology choices
-
-**Operational Insights**:
-- **Resource Requirements**: Dual implementation requires approximately 1.7x resources of single model
-- **Training Complexity**: Staff training more comprehensive but yields greater organisational capability
-- **Support Infrastructure**: Two platform relationships provide enhanced support resilience
-
-## Platform Provider Performance Analysis
-
-### SUNET/SURF Classical PKI Performance
-
-**Consistent Delivery**:
-- **Standardised Implementation**: Identical technical configuration across all three institutions
-- **Reliable Infrastructure**: 99.8% availability across testing period
-- **Familiar User Experience**: wwWallet received positive user feedback
-
-**Limitations Confirmed**:
-- **No RP Certificate Provision**: Universal constraint preventing full verification testing
-- **Limited Institutional Integration**: Remote SaaS model prevents deep system connectivity
-- **Static Trust Model**: Unable to address dynamic governance requirements
-
-### ATOS/IZERTIS dPKI Performance
-
-**Advanced Capabilities**:
-- **Full Feature Implementation**: Complete EBSI integration with advanced verification
-- **Dockerised Deployment**: Flexible deployment model accommodating institutional requirements
-- **Comprehensive Support**: Technical teams reported excellent platform support
-
-**Superior Verification**:
-- **Cross-Border Success**: 95%+ verification success rate internationally
-- **Dynamic Trust Resolution**: Real-time EBSI Trust Registry queries operational
-- **Enhanced Privacy**: DID-based credentials provide granular disclosure controls
-
-## Regulatory and Governance Achievements
-
-### Compliance Framework Success
-
-**Universal Regulatory Compliance**:
-- **GDPR**: Both trust models achieved full GDPR compliance
-- **eIDAS2**: Complete alignment with European regulatory framework
-- **National Regulations**: Dutch and Portuguese national requirements met across both approaches
-
-### Enhanced Governance Capabilities
-
-**dPKI Governance Advantages**:
-- **Dynamic Authorisation**: EBSI Trust Registry enables real-time credential type validation
-- **International Recognition**: EU-wide trust establishment through blockchain infrastructure
-- **Granular Controls**: DID-based governance provides precise authorisation management
-
-**Classical PKI Governance Constraints**:
-- **Static Validation**: PKI certificates confirm institutional identity only
-- **Manual Processes**: Trust establishment requires manual coordination
-- **Limited Flexibility**: Inability to adapt to changing authorisation requirements
-
-## User Experience Comparative Assessment
-
-### Classical PKI User Feedback
-
-**Positive Reception**:
-- **Familiar Technology**: High comfort levels with PKI-based approach
-- **Straightforward Process**: wwWallet installation and use intuitive
-- **Trust Indicators**: Users appreciate established PKI trust signals
-
-**Limitation Awareness**:
-- **Verification Constraints**: Users disappointed by inability to demonstrate credential validity
-- **International Recognition**: Concerns about cross-border acceptance limitations
-- **Future Viability**: Questions about long-term technology sustainability
-
-### dPKI User Feedback
-
-**Innovation Appreciation**:
-- **Enhanced Privacy**: Users value granular control over information disclosure
-- **International Verification**: Successful cross-border validation highly appreciated
-- **Future-Ready Technology**: Confidence in blockchain-based infrastructure durability
-
-**Learning Curve Management**:
-- **New Concepts**: Initial DID and blockchain concept education required
-- **Advanced Features**: Users needed training to utilise full dPKI capabilities
-- **Overall Satisfaction**: High willingness to continue using dPKI systems
-
-### Hybrid Framework User Perspective
-
-**Optimal Flexibility**:
-- **Context Selection**: Users appreciate ability to choose appropriate trust model
-- **Stakeholder Compatibility**: Both approaches available for different verification scenarios
-- **Transition Comfort**: Classical PKI familiarity reduces resistance to dPKI adoption
-
-## Strategic Recommendations
-
-### Immediate Implementation Guidance
-
-**Dual Trust Model Adoption**:
-1. **Phased Implementation**: Begin with Classical PKI for familiarity, add dPKI for enhanced capabilities
-2. **Resource Planning**: Budget approximately 1.7x single model resources for dual implementation
-3. **Training Investment**: Comprehensive staff education yields significant operational advantages
-
-### Platform Selection Recommendations
-
-**Classical PKI Implementation**:
-- **SUNET/SURF SaaS**: Excellent for rapid Classical PKI deployment with minimal technical overhead
-- **RP Certificate Priority**: Advocate for expedited Relying Party certificate provisioning
-- **Migration Planning**: Treat Classical PKI as bridge technology to dPKI
-
-**dPKI Implementation**:
-- **ATOS/IZERTIS Platform**: Proven capability for comprehensive dPKI deployment
-- **EBSI Integration**: Prioritise full Trust Registry integration for maximum benefit
-- **International Coordination**: Engage early with cross-border partners for verification testing
-
-### Institutional Transformation Strategy
-
-**Hybrid Trust Framework Benefits**:
-1. **Risk Mitigation**: Dual implementation provides technology redundancy and stakeholder choice
-2. **Future Readiness**: dPKI capabilities position institutions for advanced credential ecosystems
-3. **International Competitiveness**: Enhanced cross-border verification capabilities attract international students and partnerships
-
-## European Digital Education Area Impact
-
-### Comprehensive Trust Coverage
-
-**Enhanced Mobility Support**:
-- **Universal Compatibility**: Hybrid approach accommodates diverse verification requirements
-- **Reduced Friction**: Multiple trust paths reduce credential recognition barriers
-- **Future Sustainability**: dPKI foundation supports evolving European integration requirements
-
-### Institutional Innovation Leadership
-
-**Advanced Capability Demonstration**:
-- **Technology Leadership**: Pilot3 institutions demonstrate comprehensive digital credential capability
-- **Stakeholder Confidence**: Dual approach provides assurance to conservative and innovative partners
-- **European Integration**: Enhanced capacity for cross-border educational collaboration
+- **Pilot1 Endpoint**: SUNET/SURF SaaS instance
+- **Pilot2 DNS**: `lspulusofona.ulusofona.pt`
+- **Pilot2 DID**: `did:ebsi:zrmS9sGhR5J6vHu2gzMkN8t`
+
+**Total Implementation**: 3 institutions across 2 European countries, each with complete Pilot1 and Pilot2 deployments (6 total implementations)
+
+## Comparative Analysis
+
+### Simultaneous Implementation Approaches
+
+The 6 scenarios demonstrate two distinct institutional approaches to implementing both Pilot1 and Pilot2 concurrently:
+
+#### Netherlands Dual-Pilot Implementation Model (2 institutions)
+Dutch institutions successfully implemented both complete pilots with focus on technical education environments:
+- **Institutional type**: Public universities of applied sciences and technical education
+- **Pilot1 implementation**: SUNET/SURF SaaS with wwWallet and SD-JWT credentials following Classical PKI approach
+- **Pilot2 implementation**: ATOS/IZERTIS Dockerised solution with EUDI Wallet and W3C Verifiable Credentials following Hybrid Trust approach
+- **Educational focus**: Technical education, engineering programmes, and applied sciences
+- **Strategic approach**: Comprehensive pilot validation with direct comparative analysis capability
+
+#### Portugal Dual-Pilot Implementation Model (1 institution)
+Portuguese institution successfully implemented both complete pilots with focus on private international education:
+- **Institutional type**: Private international university
+- **Pilot1 implementation**: SUNET/SURF SaaS with wwWallet and SD-JWT credentials following Classical PKI approach
+- **Pilot2 implementation**: ATOS/IZERTIS Dockerised solution with EUDI Wallet and W3C Verifiable Credentials following Hybrid Trust approach
+- **Educational focus**: Private international education and cross-border credential recognition
+- **Strategic approach**: Maximum flexibility preparation for diverse international verification requirements
+
+Both models successfully demonstrate the feasibility of implementing complete Pilot1 and Pilot2 approaches simultaneously whilst revealing different institutional contexts for comprehensive pilot deployment.
+
+### Pilot Performance Comparison and User Engagement
+
+| Pilot Implementation | Countries | Institutions | Total Users | Credentials Issued | Verification Scope |
+|---------------------|-----------|--------------|-------------|-------------------|-------------------|
+| **Pilot1 Implementations** | 2 countries | 3 institutions | ~75 users | ~150 credentials | Integrity checks only (Classical PKI limitations) |
+| **Pilot2 Implementations** | 2 countries | 3 institutions | ~75 users | ~225 credentials | Full cross-border verification (Hybrid Trust capabilities) |
+| **Combined Pilot3 Total** | 2 countries | 3 institutions | ~75 users | ~375 credentials | **Complete comparative validation** |
+
+### Pilot Performance Comparison and User Engagement
+
+| Pilot Implementation | Countries | Institutions | Total Users | Credentials Issued | Verification Scope |
+|---------------------|-----------|--------------|-------------|-------------------|-------------------|
+| **Pilot1 Implementations** | 2 countries | 3 institutions | ~75 users | ~150 credentials | Integrity checks only (Classical PKI limitations) |
+| **Pilot2 Implementations** | 2 countries | 3 institutions | ~75 users | ~225 credentials | Full cross-border verification (Hybrid Trust capabilities) |
+| **Combined Pilot3 Total** | 2 countries | 3 institutions | ~75 users | ~375 credentials | **Complete comparative validation** |
+
+**Key distinctions:**
+- **Pilot1 implementations**: Demonstrated Classical PKI approach with SUNET/SURF standardised configuration
+  - **Common technical stack**: SUNET/SURF SaaS environment, wwWallet, SD-JWT credentials
+  - **Shared issuer public key**: `MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEi3v64MrIKoS9Aofws9Dg3Vd7Ej9ZMBUYJ8DuHxb2mNDiRbrmJ6KqdIsrXWRfzguJUceYWZuo8Fx6RVP+E7Muvg==`
+  - **Verification limitations**: No RP certificates available, restricting verification to integrity checks
+  - **Consistency with standalone Pilot1**: Identical technical configuration and limitations
+- **Pilot2 implementations**: Demonstrated Hybrid Trust approach capabilities validated in standalone Pilot2 deployments
+  - **Platform diversity**: ATOS/IZERTIS Dockerised solutions with institutional DIDs
+  - **Enhanced capabilities**: Complete cross-border verification, EBSI integration, W3C VC compliance
+  - **Advanced features**: DID-based trust discovery, blockchain anchoring, enhanced lifecycle management
+- **Simultaneous deployment advantage**: Direct comparative analysis within same institutional contexts enabling informed strategic decisions
+- **Strategic validation**: Institutions gained first-hand experience with both approaches for future strategic planning
+
+**Total Impact**: ~75 users, ~375 credentials issued across complete Pilot1 and Pilot2 implementations, demonstrating comprehensive institutional preparation for European credential ecosystem diversity through direct pilot comparison.
+
+## Implementation Model Analysis
+
+### Netherlands Simultaneous Pilot Deployment Approach
+
+The Dutch institutions represent **comprehensive pilot validation strategy** through complete Pilot1 and Pilot2 implementation:
+
+#### Netherlands Simultaneous Pilot Deployment Approach
+
+The Dutch institutions represent **comprehensive pilot validation strategy** through complete Pilot1 and Pilot2 implementation:
+
+#### Technical Infrastructure
+- **Complete Pilot1 deployment**: Full Classical PKI implementation with SUNET/SURF SaaS, wwWallet, and SD-JWT credentials
+  - **SaaS environment**: SUNET/SURF test environment
+  - **Wallet platform**: wwWallet
+  - **Credential format**: SD-JWT (Selective Disclosure JSON Web Token)
+  - **Trust model**: Classical PKI with hierarchical certificate authorities
+  - **Issuer public key reference**: 
+    ```
+    MFkwEwYHKoZIzj0CAQYIKoS9Aofws9Dg3Vd7Ej9ZMBUYJ8DuHxb2mNDiRbrmJ6KqdIsrXWRfzguJUceYWZuo8Fx6RVP+E7Muvg==
+    ```
+  - **Verification capabilities**: Limited to integrity checks (no RP certificates available)
+- **Complete Pilot2 deployment**: Full Hybrid Trust implementation with ATOS/IZERTIS Dockerised solution, EUDI Wallet, and W3C Verifiable Credentials
+  - **Platform**: ATOS/IZERTIS Dockerised solution
+  - **Wallet platform**: EUDI Wallet (EUDIW by IZERTIS) 
+  - **Credential format**: W3C Verifiable Credentials
+  - **Trust model**: Hybrid (Classical PKI + Decentralised PKI + EBSI Trust Registries)
+  - **DID implementation**: Individual institutional DIDs with EBSI anchoring
+  - **Verification capabilities**: Complete cross-border verification operational
+- **Parallel operational capability**: Simultaneous operation of both complete pilot implementations
+- **Comparative analysis capability**: Direct institutional experience with both pilot approaches
+
+#### Unique Capabilities
+- **Direct pilot comparison**: Institutional ability to evaluate both Pilot1 and Pilot2 approaches within same context
+- **Comprehensive strategic positioning**: Complete understanding of both Classical PKI and Hybrid Trust capabilities and limitations
+- **Technical education alignment**: Both pilot implementations tested within technical and applied sciences educational contexts
+- **Innovation leadership demonstration**: Advanced institutional capability showcasing comprehensive pilot implementation
+
+#### Strategic Advantages
+- **Informed strategic decisions**: Direct comparative experience enabling evidence-based technology strategy development
+- **Risk mitigation**: Multiple pilot implementations reducing dependency on single approach
+- **Future-proofing**: Comprehensive preparation regardless of European ecosystem evolution direction
+- **Competitive positioning**: Advanced institutional capability through complete pilot implementation portfolio
+
+### Portugal Simultaneous Pilot Deployment Approach
+
+The Portuguese institution demonstrates **comprehensive international readiness** through complete Pilot1 and Pilot2 implementation:
+
+#### Portugal Simultaneous Pilot Deployment Approach
+
+The Portuguese institution demonstrates **comprehensive international readiness** through complete Pilot1 and Pilot2 implementation:
+
+#### Technical Infrastructure
+- **Complete Pilot1 deployment**: Full Classical PKI implementation adapted for private international education context
+  - **SaaS environment**: SUNET/SURF test environment (consistent with consortium approach)
+  - **Wallet platform**: wwWallet
+  - **Credential format**: SD-JWT credentials with selective disclosure capabilities
+  - **Trust model**: Classical PKI following established Pilot1 specifications
+  - **Issuer public key reference**: 
+    ```
+    MFkwEwYHKoZIzj0CAQYIKoS9Aofws9Dg3Vd7Ej9ZMBUYJ8DuHxb2mNDiRbrmJ6KqdIsrXWRfzguJUceYWZuo8Fx6RVP+E7Muvg==
+    ```
+  - **Verification scope**: Integrity checks only (consistent with Pilot1 limitations)
+- **Complete Pilot2 deployment**: Full Hybrid Trust implementation optimised for cross-border credential recognition
+  - **Platform**: ATOS/IZERTIS Dockerised solution
+  - **Wallet platform**: EUDI Wallet (EUDIW by IZERTIS)
+  - **Credential format**: W3C Verifiable Credentials
+  - **Trust model**: Hybrid (X.509 PKI + DIDs + EBSI Trust Registries)
+  - **DID implementation**: `did:ebsi:zrmS9sGhR5J6vHu2gzMkN8t`
+  - **Cross-border capability**: Complete verification operational
+- **Private sector implementation**: Demonstration of both pilot approaches within private university environment
+- **International mobility focus**: Both pilots configured for optimal cross-border educational credential recognition
+
+#### Unique Capabilities
+- **Private sector validation**: Successful implementation of both pilots within private educational institution
+- **International competitiveness**: Enhanced capability for diverse international verification requirements
+- **Cross-border optimization**: Both pilot implementations configured for maximum international compatibility
+- **Institutional differentiation**: Advanced credential infrastructure across both pilot approaches
+
+#### Strategic Advantages
+- **International market positioning**: Comprehensive capability for diverse global verification contexts
+- **Student mobility support**: Graduates equipped with credentials from both pilot approaches
+- **Competitive differentiation**: Advanced institutional infrastructure spanning complete DC4EU pilot spectrum
+- **Strategic flexibility**: Capability to respond to international market requirements through either pilot approach
+
+### Comparative Analysis
+
+| Aspect | Netherlands Model | Portugal Model |
+|--------|-------------------|----------------|
+| **Institutional type** | Public technical universities | Private international university |
+| **Pilot1 focus** | Classical PKI for technical education | Classical PKI for international compatibility |
+| **Pilot2 focus** | Hybrid Trust for innovation showcase | Hybrid Trust for cross-border recognition |
+| **Strategic rationale** | Comprehensive pilot validation | International competitiveness |
+| **Comparative advantage** | Technical innovation leadership | International mobility optimization |
+| **Market positioning** | European technical education leader | Global private education provider |
+| **Implementation scale** | Multiple institution coordination | Single institution focus |
+| **Future planning** | Evidence-based pilot strategy | International market responsiveness |
+
+## Critical Technical Achievements
+
+### Universal Simultaneous Implementation Success
+
+All institutions achieved **100% success in implementing both pilots simultaneously** with critical technical milestones:
+
+**Complete Pilot Implementation Achievements**:
+- **Pilot1 deployment success**: All institutions operational with complete Classical PKI implementations following Pilot1 specifications
+- **Pilot2 deployment success**: All institutions operational with complete Hybrid Trust implementations following Pilot2 specifications
+- **Parallel operational capability**: Successful simultaneous operation of both complete pilot implementations
+- **Institutional coordination**: Effective management of dual pilot implementations within single institutional contexts
+
+### Direct Pilot Comparison Validation
+
+Pilot3's unique simultaneous approach enabled direct validation of pilot capabilities within identical institutional contexts:
+
+**Pilot1 Performance Confirmation**:
+- **Classical PKI limitations**: Confirmed verification constraints identified in standalone Pilot1 implementations
+  - **RP certificate absence**: Universal limitation preventing full cross-border verification testing
+  - **Verification scope**: Limited to integrity checks due to infrastructure constraints
+  - **SUNET/SURF SaaS consistency**: Identical technical configuration with shared issuer public key across all institutions
+  - **wwWallet functionality**: Validated Classical PKI wallet performance within consortium framework
+- **SD-JWT credential functionality**: Validated selective disclosure capabilities within Classical PKI framework
+- **SUNET/SURF consortium effectiveness**: Confirmed federated consortium approach benefits and standardisation
+- **Technical standardisation**: Validated shared issuer public key approach (`MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEi3v64MrIKoS9Aofws9Dg3Vd7Ej9ZMBUYJ8DuHxb2mNDiRbrmJ6KqdIsrXWRfzguJUceYWZuo8Fx6RVP+E7Muvg==`)
+
+**Pilot2 Performance Confirmation**:
+- **Hybrid Trust capabilities**: Validated enhanced verification and cross-border capabilities
+- **W3C Verifiable Credentials effectiveness**: Confirmed standards compliance and interoperability benefits
+- **ATOS/IZERTIS solution performance**: Validated Dockerised deployment approach and technical capabilities
+- **EUDI Wallet user experience**: Confirmed next-generation wallet functionality and user satisfaction
+
+### Simultaneous Implementation Technical Successes
+
+#### Institutional Management Success
+- **Parallel pilot coordination**: Successful institutional management of complete Pilot1 and Pilot2 implementations
+- **User experience integration**: Effective user onboarding and training across both pilot approaches
+- **Technical resource allocation**: Successful distribution of technical resources across both pilot implementations
+
+#### Comparative Analysis Capability
+- **Direct pilot evaluation**: Institutional capability to assess pilot approaches within identical contexts
+- **Performance comparison**: Direct measurement of pilot capabilities, limitations, and user satisfaction
+- **Strategic planning enhancement**: Evidence-based institutional planning through comparative pilot experience
+
+## Strategic Implications and Recommendations
+
+### Validated Implementation Pathways
+
+Pilot3 demonstrates that **simultaneous Pilot1 and Pilot2 implementation provides optimal institutional strategic positioning** for European credential ecosystem participation:
+
+**Netherlands Comprehensive Validation Model**: Enables complete understanding of both pilot approaches whilst positioning institutions for informed strategic decisions based on direct comparative experience, suitable for technical education institutions seeking evidence-based technology strategy development and innovation leadership.
+
+**Portugal International Readiness Model**: Provides comprehensive preparation for diverse international verification requirements whilst demonstrating private sector capability for advanced credential infrastructure across both pilot approaches, suitable for international education providers seeking maximum market flexibility and competitive differentiation.
+
+### Critical Success Factors
+
+1. **Institutional commitment**: Organisational capability and willingness to deploy and maintain both complete pilot implementations
+2. **Technical resource allocation**: Adequate technical expertise and infrastructure capacity for simultaneous pilot operations
+3. **User engagement strategy**: Comprehensive user education and support across both pilot approaches
+4. **Strategic vision clarity**: Clear institutional understanding of simultaneous implementation benefits for long-term positioning
+5. **Comparative analysis capability**: Institutional processes for evaluating and leveraging direct pilot comparison insights
+
+### Production Deployment Considerations
+
+The successful demonstration of simultaneous Pilot1 and Pilot2 implementation validates the **comprehensive preparation approach** for European credential ecosystem participation whilst ensuring **maximum institutional strategic flexibility** through direct pilot comparison.
+
+Simultaneous implementation provides institutions with:
+- **Complete pilot understanding**: Direct experience with both Classical PKI and Hybrid Trust approaches within institutional context
+- **Evidence-based strategic planning**: Informed decision-making capability based on comparative pilot performance
+- **Risk mitigation**: Multiple pilot capabilities eliminating dependency on single approach success
+- **Market responsiveness**: Ability to respond to diverse stakeholder requirements through either pilot approach
+- **Competitive advantage**: Advanced institutional capability spanning complete DC4EU pilot spectrum
+
+## Key Learnings and Implications
+
+### Simultaneous Pilot Benefits
+
+1. **Comprehensive pilot validation**: Direct institutional experience with both pilot approaches enabling informed strategic decisions
+2. **Strategic flexibility maximisation**: Capability to respond to European ecosystem evolution through either pilot approach
+3. **Risk distribution**: Multiple pilot implementations reducing dependency on single approach success
+4. **Competitive positioning**: Advanced institutional capability demonstration through complete pilot spectrum implementation
+
+### Institutional Transformation
+
+1. **Enhanced strategic planning**: Evidence-based decision-making capability through direct pilot comparison
+2. **Technical capability development**: Comprehensive institutional expertise across both pilot approaches
+3. **European integration preparation**: Complete readiness for European Digital Education Area regardless of dominant approach
+4. **Innovation leadership**: Advanced institutional positioning through comprehensive pilot implementation portfolio
 
 ## Conclusions
 
-The DC4EU Pilot3 scenarios provide definitive evidence for the strategic value of comprehensive hybrid trust frameworks in European digital credential infrastructure. The successful dual implementation across three diverse educational institutions demonstrates both the feasibility and advantages of combined Classical PKI and dPKI approaches.
+The DC4EU Pilot3 scenarios establish **simultaneous Pilot1 and Pilot2 implementation as the optimal strategy** for comprehensive institutional preparation and strategic flexibility within European credential ecosystem evolution.
 
-**Key Achievements**:
-- **Comprehensive Implementation**: Successful deployment of both trust models within single institutions
-- **Comparative Validation**: Direct evidence of dPKI advantages whilst confirming Classical PKI limitations
-- **User Acceptance**: High satisfaction with hybrid approach providing flexibility and choice
-- **International Capability**: Enhanced cross-border verification through dPKI whilst maintaining PKI familiarity
+### Netherlands Comprehensive Validation Success
+The Dutch institutions demonstrate that **simultaneous pilot implementation enables evidence-based strategic planning** whilst providing complete understanding of both approaches. Key achievements include:
+- Successful simultaneous deployment of complete Pilot1 and Pilot2 implementations
+- Direct comparative analysis capability within technical education contexts
+- Evidence-based strategic planning enhancement through dual pilot experience
+- Innovation leadership positioning through comprehensive pilot implementation portfolio
 
-**Strategic Significance**:
-Pilot3 results establish hybrid trust frameworks as the optimal pathway for European educational credential infrastructure. The combination of Classical PKI reliability with dPKI innovation provides institutions with comprehensive capability to address diverse stakeholder requirements whilst positioning for future ecosystem evolution.
+### Portugal International Readiness Success
+The Portuguese institution proves that **simultaneous pilot implementation enhances international competitiveness** whilst providing maximum market flexibility. Notable outcomes include:
+- Successful simultaneous deployment within private international education context
+- Enhanced capability for diverse international verification requirements
+- Competitive differentiation through comprehensive pilot infrastructure
+- Strategic flexibility for international market responsiveness
 
-**Transformation Impact**:
-The dual trust model approach demonstrated in Pilot3 creates a clear pathway for institutional digital transformation. By providing both familiar PKI-based processes and advanced dPKI capabilities, institutions can manage stakeholder transition whilst building advanced credential verification capabilities essential for the European Digital Education Area.
+### Universal Simultaneous Implementation Advantages
+All institutions successfully demonstrate **comprehensive benefits** of implementing both pilots simultaneously:
+- **Complete pilot understanding** through direct institutional experience with both approaches
+- **Evidence-based strategic decisions** enabled by comparative pilot performance analysis
+- **Risk mitigation** through multiple pilot capabilities and reduced single-approach dependency
+- **Enhanced institutional positioning** through comprehensive pilot implementation capability
+- **Competitive advantage** through advanced infrastructure spanning complete DC4EU pilot spectrum
 
-**Implementation Pathway**:
-The success of Pilot3's hybrid approach establishes a proven framework for scaling digital credential infrastructure across European educational institutions. The demonstrated capability for dual trust model implementation, combined with positive user reception and enhanced verification capabilities, provides strong foundations for comprehensive European deployment supporting seamless educational and professional mobility across member states.
+### Strategic Recommendations for European Deployment
 
-**Future Evolution**:
-Pilot3 institutions have established themselves as leaders in digital credential infrastructure, with comprehensive hybrid trust capabilities positioning them to support the evolving requirements of European educational integration. The proven dual implementation model provides a template for institutional transformation whilst the enhanced dPKI capabilities ensure readiness for advanced European Digital Education Area requirements.
+1. **Support simultaneous implementation pathways**: Enable institutions to deploy both Pilot1 and Pilot2 approaches simultaneously based on strategic objectives and comprehensive preparation goals
+2. **Provide comprehensive pilot guidance**: Ensure institutional access to expertise and support across both complete pilot implementations
+3. **Enable comparative analysis**: Support institutional capability for evaluating pilot approaches through direct experience and performance comparison
+4. **Facilitate knowledge sharing**: Promote best practice development and institutional coordination among simultaneous implementation adopters
+5. **Recognise strategic leadership**: Acknowledge institutions demonstrating comprehensive pilot implementation capability as ecosystem development leaders
+
+The proven success of simultaneous Pilot1 and Pilot2 implementation within Pilot3 provides **comprehensive pathways for institutional strategic positioning** and European credential ecosystem leadership whilst supporting evidence-based technology strategy development and maximum competitive advantage achievement.
 
 ---
 
-*Analysis conducted on 11 July 2025 based on submitted DTSRL scenarios from participating Pilot3 institutions covering both Classical PKI and Decentralised PKI implementations.*
+*Analysis conducted on 30 July 2025 based on submitted DTSRL scenarios from participating Pilot3 institutions covering both complete Pilot1 and Pilot2 implementations.*
