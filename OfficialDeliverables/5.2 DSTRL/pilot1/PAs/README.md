@@ -104,7 +104,7 @@ The four-institution consortium demonstrates **federated SaaS implementation**:
 | **PID capabilities** | Full integration | Not implemented |
 | **Cross-verifier testing** | Successful | Limited to integrity |
 | **Scalability model** | National deployment | Multi-institutional SaaS |
-| **Governance complexity** | National legislation | Consortium agreements |
+| **Governance complexity** | National legislation | Based on Agreements |
 
 ## Critical Technical Limitations
 
