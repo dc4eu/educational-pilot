@@ -12,7 +12,7 @@ This credential allows doctors, among other things, to carry out administrative 
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://eaa-rulebook.europa.eu/schemas/cps/0.0.1",
-  "title": "Doctor ID",
+  "title": "Certificate of Professional Suitability",
   "description": "Schema for professional suitabilty credentials for physicians",
   "type": "object",
   "properties": {
