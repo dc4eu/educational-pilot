@@ -92,9 +92,14 @@ Both models successfully demonstrate the feasibility of implementing complete Pi
 
 | Pilot Implementation | Countries | Institutions | Total Users | Credentials Issued | Verification Scope |
 |---------------------|-----------|--------------|-------------|-------------------|-------------------|
-| **Pilot1 Implementations** | 2 countries | 3 institutions | ~75 users | ~150 credentials | Integrity checks only (Classical PKI limitations) |
+| **Pilot1 Implementations** | 2 countries | 3 institutions | 115 users | 317 credentials | Integrity checks only (Classical PKI limitations) |
 | **Pilot2 Implementations** | 2 countries | 3 institutions | ~75 users | ~225 credentials | Full cross-border verification (Hybrid Trust capabilities) |
-| **Combined Pilot3 Total** | 2 countries | 3 institutions | ~75 users | ~375 credentials | **Complete comparative validation** |
+| **Combined Pilot3 Total** | 2 countries | 3 institutions | ~190 users | ~542 credentials | **Complete comparative validation** |
+
+**Pilot1 Implementation Details:**
+- **University of Twente**: 60 engineering students, 172 educational credentials (SD-JWT)
+- **Saxion University**: 30 applied sciences students, 120 educational credentials (SD-JWT)  
+- **COFAC - Lusófona University**: 25 private university students, 50 credentials (25 EducationalID + 25 Diplomas)
 
 **Key distinctions:**
 - **Pilot1 implementations**: Demonstrated Classical PKI approach with SUNET/SURF standardised configuration
@@ -109,7 +114,7 @@ Both models successfully demonstrate the feasibility of implementing complete Pi
 - **Simultaneous deployment advantage**: Direct comparative analysis within same institutional contexts enabling informed strategic decisions
 - **Strategic validation**: Institutions gained first-hand experience with both approaches for future strategic planning
 
-**Total Impact**: ~75 users, ~375 credentials issued across complete Pilot1 and Pilot2 implementations, demonstrating comprehensive institutional preparation for European credential ecosystem diversity through direct pilot comparison.
+**Total Impact**: 115 users through Pilot1 components + ~75 users through Pilot2 components = ~190 total users, ~542 credentials issued across complete Pilot1 and Pilot2 implementations, demonstrating comprehensive institutional preparation for European credential ecosystem diversity through direct pilot comparison.
 
 ## Implementation Model Analysis
 
