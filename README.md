@@ -32,9 +32,9 @@ This repository is organised into several key sections:
 
 - **[Deployment and Testing Scenarios Results Library (DTSRL)](./OfficialDeliverables/5.2%20DSTRL/README.md)**: Comprehensive repository of validated deployment scenarios, user journeys, implementation toolkits, and piloting frameworks for digital credentials implementation across European institutions.
   
-- **[Elements](./elements)**: Elements produced/provided by DC4EU to facilitate adoption. Includes data model converters, gateways, reports.
+- **[Elements](./OfficialDeliverables/5.2%20DSTRL/elements/README.md)**: Elements produced/provided by DC4EU to facilitate adoption. Includes data model converters, gateways, reports.
 
-- **[Compliance](./compliance/)**: Information about EBSI and EUDI Wallet compliance tests to ensure interoperability with other issuer, verifier, and wallet solutions.
+- **[Compliance](./OfficialDeliverables/5.2%20DSTRL/procedures/validation/validation-methodology.md)**: Information about EBSI and EUDI Wallet compliance tests to ensure interoperability with other issuer, verifier, and wallet solutions.
 
 ## DTSRL - Deployment and Testing Scenarios Results Library
 
