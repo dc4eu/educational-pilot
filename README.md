@@ -43,9 +43,9 @@ The **[DTSRL](./DSTRL/README.md)** serves as the central knowledge base for impl
 ### Core DTSRL Components
 
 - **User journeys**: Provided user journeys to demonstrate cross-border interaction, ready-to-go infrastructure, and foundation to extend/provide more user journeys and/or EAAs.
-- [Pilot1 user journeys](./OfficialDeliverables/5.2%20DSTRL/pilot1/userjourneys/README.md)
-- [Pilot2 user journeys](./OfficialDeliverables/5.2%20DSTRL/pilot2/userjourneys/README.md)
-- [Pilot3 user journeys](./OfficialDeliverables/5.2%20DSTRL/pilot3/userjourneys/README.md)
+- - [Pilot1 user journeys](./OfficialDeliverables/5.2%20DSTRL/pilot1/userjourneys/README.md)
+- - [Pilot2 user journeys](./OfficialDeliverables/5.2%20DSTRL/pilot2/userjourneys/README.md)
+- - [Pilot3 user journeys](./OfficialDeliverables/5.2%20DSTRL/pilot3/userjourneys/README.md)
   
   
 - **[Scenarios](./DSTRL/scenarios/README.md)**: Complete scenario definitions that detail the elements each piloting agent must provide to characterise, execute, and monitor user journeys in alignment with governance, technical, and reporting requirements.
