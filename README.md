@@ -49,8 +49,11 @@ The **[DTSRL](./DSTRL/README.md)** serves as the central knowledge base for impl
   
   
 - **[Scenarios](./DSTRL/scenarios/README.md)**: Complete scenario definitions that detail the elements each piloting agent must provide to characterise, execute, and monitor user journeys in alignment with governance, technical, and reporting requirements.
+- - [Pilot1 scenarios](./OfficialDeliverables/5.2%20DSTRL/pilot1/PAs/README.md)
+- - [Pilot2 scenarios](./OfficialDeliverables/5.2%20DSTRL/pilot2/PAs/README.md)
+- - [Pilot3 scenarios](./OfficialDeliverables/5.2%20DSTRL/pilot3/PAs/README.md)
 
-- **[Piloting](./DSTRL/piloting/README.md)**: Operational framework for piloting agents including progress tracking, SPOC coordination, and implementation validation across the DC4EU Large Scale Pilot.
+- **[Piloting](./OfficialDeliverables/5.2%20DSTRL/procedures/README.md)**: Operational framework for piloting agents including progress tracking, SPOC coordination, and implementation validation across the DC4EU Large Scale Pilot.
   
 - **[Toolkits](./DSTRL/toolkits/README.md)**: Implementation resources including technical architecture, component descriptions, workflows (RFCs), and specific use cases to help develop user journeys for both Classical PKI and Decentralised PKI approaches.
 
