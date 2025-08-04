@@ -30,7 +30,7 @@ This repository is organised into several key sections:
 
 - **[EAA Characterisation](./sectorial-eaa-catalogue/EAA_Characterisation.md)**: Characterisation of an Electronic Attestation of Attributes (EAA).
 
-- **[Deployment and Testing Scenarios Results Library (DTSRL)](./DTSRL/)**: Comprehensive repository of validated deployment scenarios, user journeys, implementation toolkits, and piloting frameworks for digital credentials implementation across European institutions.
+- **[Deployment and Testing Scenarios Results Library (DTSRL)](./OfficialDeliverables/5.2%20DSTRL/README.md)**: Comprehensive repository of validated deployment scenarios, user journeys, implementation toolkits, and piloting frameworks for digital credentials implementation across European institutions.
   
 - **[Elements](./elements)**: Elements produced/provided by DC4EU to facilitate adoption. Includes data model converters, gateways, reports.
 
