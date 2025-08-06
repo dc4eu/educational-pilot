@@ -158,10 +158,7 @@ Advanced hybrid approach combining traditional PKI with DID binding, EBSI integr
 
 ## Support and Resources
 
-- **DC4EU Project**: [Official Website]
-- **EBSI Documentation**: [Technical Specifications]
-- **eIDAS Regulation**: [Legal Framework]
-- **Implementation Support**: [Contact Information]
+- **Implementation**: CertSign (Romania - QTSP provider), Logalty (Spain), ATOS/EVIDENCE (Spain), IZERTIS (Spain)
 
 ---
 
