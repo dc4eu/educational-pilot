@@ -12,7 +12,7 @@ This repository is organised into several key sections:
 
 - **[eIDAS roles](./docs/eIDAS-roles.md)**: Outlines the key roles within the European digital identity framework under eIDAS, detailing their definitions, functions, types of attestations issued, regulatory references, and compliance requirements.
   
-- **[Trust models](./sectorial-rulebook/trust-models.md)**: Outlines trust models accepted for **Education and Professional qualifcations** (Classical PKI & Decentralised PKI using EBSI). 
+- **[Trust models](./sectorial-rulebook/trust-models/README.md)**: Outlines trust models accepted for **Education and Professional qualifcations** (Classical PKI & Decentralised PKI using EBSI). 
 
 - **[Governance in Education and Professional Qualifications](./governances)**: Understanding existing governance(s)
 
