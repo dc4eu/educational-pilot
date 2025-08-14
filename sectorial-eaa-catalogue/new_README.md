@@ -181,13 +181,13 @@ This document serves as the main introduction to the DC4EU sectoral EAA catalogu
 - [1.3 Cross-border identity verification](./chapter-1-foundational-identity.md#13-cross-border-identity-verification)
 
 ### Chapter 2: non-foundational identity EAAs
-- [2.1 Enrolment status attestation (EAA1)](./chapters/02-non-foundational-identity/enrolment-status.md)
-- [2.2 Educational ID](./chapters/02-non-foundational-identity/educational-id.md)
-- [2.3 Alliance ID](./chapters/02-non-foundational-identity/alliance-id.md)
-- [2.4 European student card](./chapters/02-non-foundational-identity/european-student-card.md)
-- [2.5 MyAcademic ID](./chapters/02-non-foundational-identity/myacademic-id.md)
-- [2.6 Professional ID](./chapters/02-non-foundational-identity/professional-id.md)
-- [2.7 Doctor ID](./chapters/02-non-foundational-identity/doctor-id.md)
+- [2.1 Enrolment status attestation (EAA1)](./chapter-2-non-foundational-identity.md#21-enrolment-status-attestation-eaa1)
+- [2.2 Educational ID](./chapter-2-non-foundational-identity.md#22-educational-id)
+- [2.3 Alliance ID](./chapter-2-non-foundational-identity.md#23-alliance-id)
+- [2.4 European student card](./chapter-2-non-foundational-identity.md#24-european-student-card)
+- [2.5 MyAcademic ID](./chapter-2-non-foundational-identity.md#25-myacademic-id)
+- [2.6 Professional ID](./chapter-2-non-foundational-identity.md#26-professional-id)
+- [2.7 Doctor ID](./chapter-2-non-foundational-identity.md#27-doctor-id)
 
 ### Chapter 3: formal education achievement EAAs
 #### 3.1 Higher education credentials
