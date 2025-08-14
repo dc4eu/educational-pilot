@@ -176,9 +176,9 @@ This comprehensive framework establishes the foundation for secure, interoperabl
 This document serves as the main introduction to the DC4EU sectoral EAA catalogue. For detailed technical specifications and data models, please refer to the following chapters:
 
 ### Chapter 1: foundational identity data models
-- [1.1 Person identifier (PID) specification](./chapters/01-foundational-identity/pid-specification.md)
-- [1.2 Legal entity identification models](./chapters/01-foundational-identity/legal-entity-models.md)
-- [1.3 Cross-border identity verification](./chapters/01-foundational-identity/cross-border-verification.md)
+- [1.1 Person identifier (PID) specification](./chapter-1-foundational-identity.md#11-person-identifier-pid-specification)
+- [1.2 Legal entity identification models](./chapter-1-foundational-identity.md#12-legal-entity-identification-models)
+- [1.3 Cross-border identity verification](./chapter-1-foundational-identity.md#13-cross-border-identity-verification)
 
 ### Chapter 2: non-foundational identity EAAs
 - [2.1 Enrolment status attestation (EAA1)](./chapters/02-non-foundational-identity/enrolment-status.md)
