@@ -1,0 +1,246 @@
+# DC4EU sectoral catalogue of electronic attestations of attributes (EAAs)
+
+## Introduction
+
+The DC4EU project has developed a comprehensive sectoral catalogue of electronic attestations of attributes (EAAs) that operates within the framework of the revised eIDAS regulation (eIDAS2) and the European digital identity wallet (EUDIW). This catalogue establishes clear distinctions between different types of digital credentials based on their legal foundations and practical applications.
+
+## Legal framework and regulatory foundations
+
+### The dual legal regime approach
+
+The DC4EU sectoral catalogue operates under two distinct but complementary legal regimes established by eIDAS2:
+
+#### 1. The eID legal regime
+
+This regime governs **foundational identity credentials** that establish the legal identity of individuals. In the DC4EU context, this specifically refers to:
+
+- **Person identification data (PID)**: the foundational identity credential within the EUDIW
+- **Legal entity identification**: credentials that establish the identity of organisations and institutions
+
+These credentials serve as the bedrock of trust within the digital identity ecosystem, providing legally recognised identification that enables all subsequent digital interactions.
+
+#### 2. The trust services legal regime
+
+This regime encompasses all other digital credentials that are not foundational identity credentials. Within this framework, credentials are expressed as **electronic attestations of attributes (EAAs)** and include:
+
+- Professional qualifications and certifications
+- Educational achievements and degrees  
+- Domain-specific identity credentials
+- Organisational memberships and affiliations
+
+## EAA typology and classification
+
+### Foundational identity EAAs
+
+**Person identifier (PID)** represents the core foundational identity credential:
+
+- **Legal basis**: eID legal regime under eIDAS2
+- **Purpose**: establishes unique, legally recognised identity for natural persons
+- **Scope**: cross-sectoral application across all EU member states
+- **Integration**: mandatory component of EUDIW implementation
+- **Trust level**: qualified electronic attestation of attributes (QEAA)
+
+### Non-foundational EAAs: two primary categories
+
+#### Category 1: domain-specific identity attestations
+
+These EAAs enable identification, authentication, and authorisation within specific domains whilst not serving as foundational legal identity:
+
+**Characteristics**:
+- Provide identity functions within defined contexts
+- Enable role-based access and permissions  
+- Support domain-specific authentication requirements
+- Complement but do not replace foundational PID
+
+**Examples from the DC4EU catalogue**:
+- **Enrolment status (EAA1)**: confirms current student status for accessing educational services
+- **Professional membership credentials**: validates membership in professional bodies or organisations
+- **Engineer ID**: provides professional identity for engineering contexts
+
+#### Category 2: academic and professional achievement attestations
+
+These EAAs document learning outcomes, qualifications, and professional competencies:
+
+**Characteristics**:
+- Document completed educational programmes
+- Validate professional skills and competencies
+- Support mobility and recognition processes
+- Enable granular disclosure of achievements
+
+**Examples from the DC4EU catalogue**:
+- **Degree qualification (EAA2)**: represents formal degree or qualification from authorised institutions
+- **Certificate of professional competence (CPC)**: documents professional certifications and competencies
+- **Professional qualification credentials**: validates regulated professional qualifications
+
+## Technical architecture and standards
+
+### Data model foundation
+
+All EAAs in the DC4EU catalogue are built upon:
+
+- **W3C verifiable credentials data model (VCDM)**: ensuring international interoperability
+- **European learning model (ELM v3.2)**: providing shared ontology for educational credentials
+- **JSON-LD schemas**: enabling machine-readable credential definitions
+- **StatusList2021**: supporting real-time revocation and suspension
+
+### Trust infrastructure
+
+The catalogue operates within a sophisticated trust infrastructure:
+
+#### Identity trust (classical PKI)
+- **Qualified web authentication certificates (QWACs)**: for secure communication
+- **Qualified seal certificates (QSealCs)**: for credential signing
+- **EU trusted lists (LOTL)**: for trust service discovery
+- **Certificate revocation lists (CRLs) and OCSP**: for revocation checking
+
+#### Functional role trust (decentralised PKI and registries)
+- **Trusted issuer registry (TIR)**: registers entities authorised to issue specific EAAs
+- **Trusted accreditation organisation registry (TAOR)**: lists accreditation authorities
+- **Trusted schema registry (TSR)**: maps EAAs to authorised roles and policies
+
+## EAA characterisation framework
+
+Each EAA in the catalogue is comprehensively characterised using standardised metadata:
+
+### Core identification fields
+- **eaa_id**: unique identifier for the EAA type
+- **title**: human-readable name of the credential
+- **description**: semantic meaning and application domain
+- **credential_type**: classification as verifiable credential, verifiable attestation, or QEAA
+
+### Technical specifications
+- **data_model**: reference to JSON-LD schema and structural standards
+- **sectoral_scope**: domain of application (formal education, professional qualifications, etc.)
+- **binding_requirements**: cryptographic binding specifications
+- **revocation_support**: status management capabilities
+
+### Authorisation framework
+- **issuable_by**: entities authorised to issue the EAA
+- **usable_by**: entities authorised to verify the EAA  
+- **requires_pid**: whether foundational identity binding is mandatory
+- **disclosure_policy**: privacy and access control specifications
+
+## Implementation considerations
+
+### Governance and standards alignment
+
+The catalogue requires coordination across multiple stakeholders:
+
+- **DG-EAC**: responsible for primary, secondary, and tertiary education credentials
+- **DG-EMPL**: oversees adult education and vocational training credentials
+- **Member states**: maintain sovereignty over educational competencies whilst ensuring interoperability
+- **Educational institutions**: must register as trust service providers under eIDAS2
+
+### Privacy and selective disclosure
+
+All EAAs support advanced privacy protection:
+
+- **Selective disclosure**: users can share only necessary credential attributes
+- **Zero-knowledge proofs**: enable verification without revealing sensitive information
+- **Purpose limitation**: verifiers can only access data relevant to declared purposes
+- **Consent management**: users maintain control over credential sharing decisions
+
+### Cross-border recognition
+
+The catalogue facilitates seamless cross-border mobility:
+
+- **Mutual recognition**: eIDAS2 mandates acceptance of qualified EAAs across member states
+- **Standardised verification**: common technical standards enable automated recognition
+- **Legal harmonisation**: aligned legal frameworks support credential portability
+- **Quality assurance**: trust registries ensure credential authenticity and validity
+
+## Future development and evolution
+
+### Continuous expansion
+
+The catalogue will evolve to encompass:
+
+- Additional educational sectors and qualification types
+- Emerging professional competency frameworks  
+- Micro-credentials and alternative learning pathways
+- International qualification recognition mechanisms
+
+### Technology advancement
+
+Future enhancements will include:
+
+- Enhanced zero-knowledge proof implementations
+- Improved interoperability with international systems
+- Advanced privacy-preserving verification mechanisms
+- Integration with emerging European digital infrastructure
+
+This comprehensive framework establishes the foundation for secure, interoperable, and privacy-preserving digital credentials that support educational and professional mobility across Europe whilst maintaining the highest standards of trust and legal compliance.
+
+## Document structure and navigation
+
+This document serves as the main introduction to the DC4EU sectoral EAA catalogue. For detailed technical specifications and data models, please refer to the following chapters:
+
+### Chapter 1: foundational identity data models
+- [1.1 Person identifier (PID) specification](./chapters/01-foundational-identity/pid-specification.md)
+- [1.2 Legal entity identification models](./chapters/01-foundational-identity/legal-entity-models.md)
+- [1.3 Cross-border identity verification](./chapters/01-foundational-identity/cross-border-verification.md)
+
+### Chapter 2: non-foundational identity EAAs
+- [2.1 Enrolment status attestation (EAA1)](./chapters/02-non-foundational-identity/enrolment-status.md)
+- [2.2 Educational ID](./chapters/02-non-foundational-identity/educational-id.md)
+- [2.3 Alliance ID](./chapters/02-non-foundational-identity/alliance-id.md)
+- [2.4 European student card](./chapters/02-non-foundational-identity/european-student-card.md)
+- [2.5 MyAcademic ID](./chapters/02-non-foundational-identity/myacademic-id.md)
+- [2.6 Professional ID](./chapters/02-non-foundational-identity/professional-id.md)
+- [2.7 Doctor ID](./chapters/02-non-foundational-identity/doctor-id.md)
+
+### Chapter 3: formal education achievement EAAs
+#### 3.1 Higher education credentials
+- [3.1.1 European higher education diploma (EUHED)](./chapters/03-formal-education/higher-education-diploma.md)
+- [3.1.2 European higher education diploma supplement (EUHEDS)](./chapters/03-formal-education/diploma-supplement.md)
+- [3.1.3 European higher education transcript of records (EUHETOR)](./chapters/03-formal-education/transcript-records.md)
+- [3.1.4 European higher education proof of enrolment (EUHEPOE)](./chapters/03-formal-education/proof-enrolment.md)
+- [3.1.5 European higher education micro-credential (EUHEMIC)](./chapters/03-formal-education/he-microcredential.md)
+
+#### 3.2 Vocational education and training credentials
+- [3.2.1 European VET micro-credential (EUVETMC)](./chapters/03-formal-education/vet-microcredential.md)
+- [3.2.2 European VET diploma (EUVETD)](./chapters/03-formal-education/vet-diploma.md)
+- [3.2.3 European VET certificate (EUVETC)](./chapters/03-formal-education/vet-certificate.md)
+
+#### 3.3 Generic educational credentials
+- [3.3.1 Degree qualification (EAA2)](./chapters/03-formal-education/degree-qualification.md)
+- [3.3.2 European digital credential (EDC)](./chapters/03-formal-education/european-digital-credential.md)
+
+### Chapter 4: professional qualifications EAAs
+- [4.1 Certificate of professional competence (CPC)](./chapters/04-professional-qualifications/professional-competence.md)
+- [4.2 Professional medical certification (PMC)](./chapters/04-professional-qualifications/medical-certification.md)
+- [4.3 Certificate of professional suitability (CPS)](./chapters/04-professional-qualifications/professional-suitability.md)
+- [4.4 Accreditation medical training (AMT)](./chapters/04-professional-qualifications/medical-training.md)
+- [4.5 Continuous professional development (CPD)](./chapters/04-professional-qualifications/continuous-development.md)
+- [4.6 Professional training certificate (PTC)](./chapters/04-professional-qualifications/training-certificate.md)
+
+### Chapter 5: quality assurance regimes
+- [5.1 Institutional accreditation schemas](./chapters/05-quality-assurance/institutional-accreditation.md)
+- [5.2 European quality assurance register (EQAR) alignment](./chapters/05-quality-assurance/eqar-alignment.md)
+- [5.3 National quality framework integration](./chapters/05-quality-assurance/national-frameworks.md)
+- [5.4 Quality labels and certification](./chapters/05-quality-assurance/quality-labels.md)
+
+### Chapter 6: core data model specifications
+#### 6.1 European learning model (ELM) implementation
+- [6.1.1 ELM v3.2 ontology specification](./chapters/06-data-models/elm-ontology.md)
+- [6.1.2 ELM-to-W3C VCDM mapping](./chapters/06-data-models/elm-w3c-mapping.md)
+- [6.1.3 Achievement and qualification frameworks](./chapters/06-data-models/achievement-frameworks.md)
+
+#### 6.2 W3C verifiable credentials adaptations
+- [6.2.1 EDC-W3C VCDM compliant schemas](./chapters/06-data-models/edc-w3c-schemas.md)
+- [6.2.2 Education-specific credential types](./chapters/06-data-models/education-credential-types.md)
+- [6.2.3 Proof formats and verification mechanisms](./chapters/06-data-models/proof-formats.md)
+
+#### 6.3 Multi-language and semantic support
+- [6.3.1 Multi-language support structures](./chapters/06-data-models/multi-language-support.md)
+- [6.3.2 Semantic definitions and ontologies](./chapters/06-data-models/semantic-definitions.md)
+- [6.3.3 ESCO skills integration](./chapters/06-data-models/esco-integration.md)
+
+### Technical annexes
+- [Annex A: Complete JSON-LD schemas repository](./annexes/annex-a-schemas.md)
+- [Annex B: Trust registry specifications (TIR, TAOR, TSR)](./annexes/annex-b-trust-registries.md)
+- [Annex C: Privacy and disclosure policies](./annexes/annex-c-privacy-policies.md)
+- [Annex D: Implementation guidelines and conversion tools](./annexes/annex-d-implementation.md)
+- [Annex E: EAA characterisation framework](./annexes/annex-e-characterisation.md)
+- [Annex F: Compliance and audit requirements](./annexes/annex-f-compliance.md)
+- [Annex G: Registry URLs and schema locations](./annexes/annex-g-registries.md)
