@@ -237,10 +237,10 @@ This document serves as the main introduction to the DC4EU sectoral EAA catalogu
 - [6.3.3 ESCO skills integration](./chapters/06-data-models/esco-integration.md)
 
 ### Technical annexes
-- [Annex A: Complete JSON-LD schemas repository](./annexes/annex-a-schemas.md)
-- [Annex B: Trust registry specifications (TIR, TAOR, TSR)](./annexes/annex-b-trust-registries.md)
-- [Annex C: Privacy and disclosure policies](./annexes/annex-c-privacy-policies.md)
-- [Annex D: Implementation guidelines and conversion tools](./annexes/annex-d-implementation.md)
-- [Annex E: EAA characterisation framework](./annexes/annex-e-characterisation.md)
-- [Annex F: Compliance and audit requirements](./annexes/annex-f-compliance.md)
-- [Annex G: Registry URLs and schema locations](./annexes/annex-g-registries.md)
+- [Annex A: Complete JSON-LD schemas repository](./annex_a_json_schemas_repository.md)
+- [Annex B: Trust registry specifications (TIR, TAOR, TSR)](./annex_b_trust_registries.md)
+- [Annex C: Privacy and disclosure policies](./annex_c_privacy_policies.md)
+- [Annex D: Implementation guidelines and conversion tools](./annex_d_implementation_guidelines.md)
+- [Annex E: EAA characterisation framework](./annex_e_characterisation_framework.md)
+- [Annex F: Compliance and audit requirements](./annex_f_compliance_audit.md)
+- [Annex G: Registry URLs and schema locations](./annex_g_registry_urls.md)
