@@ -215,10 +215,10 @@ This document serves as the main introduction to the DC4EU sectoral EAA catalogu
 - [4.6 Professional training certificate (PTC)](./chapters/04-professional-qualifications/training-certificate.md)
 
 ### Chapter 5: quality assurance regimes
-- [5.1 Institutional accreditation schemas](./chapters/05-quality-assurance/institutional-accreditation.md)
-- [5.2 European quality assurance register (EQAR) alignment](./chapters/05-quality-assurance/eqar-alignment.md)
-- [5.3 National quality framework integration](./chapters/05-quality-assurance/national-frameworks.md)
-- [5.4 Quality labels and certification](./chapters/05-quality-assurance/quality-labels.md)
+- [5.1 Institutional accreditation schemas](./chapter-5-quality-assurance.md#51-institutional-accreditation-schemas)
+- [5.2 European quality assurance register (EQAR) alignment](./chapter-5-quality-assurance.md#52-european-quality-assurance-register-eqar-alignment)
+- [5.3 National quality framework integration](./chapter-5-quality-assurance.md#53-national-quality-framework-integration)
+- [5.4 Quality labels and certification](./chapter-5-quality-assurance.md#54-quality-labels-and-certification)
 
 ### Chapter 6: core data model specifications
 #### 6.1 European learning model (ELM) implementation
