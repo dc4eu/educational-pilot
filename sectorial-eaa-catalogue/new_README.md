@@ -198,9 +198,9 @@ This document serves as the main introduction to the DC4EU sectoral EAA catalogu
 - [3.1.5 European higher education micro-credential (EUHEMIC)](./chapter-3-formal-education.md#315-european-higher-education-micro-credential-euhemic)
 
 #### 3.2 Vocational education and training credentials
-- [3.2.1 European VET micro-credential (EUVETMC)](./chapters/03-formal-education/vet-microcredential.md)
-- [3.2.2 European VET diploma (EUVETD)](./chapters/03-formal-education/vet-diploma.md)
-- [3.2.3 European VET certificate (EUVETC)](./chapters/03-formal-education/vet-certificate.md)
+- [3.2.1 European VET micro-credential (EUVETMC)](./chapter-3-formal-education.md#321-european-vet-micro-credential-euvetmc)
+- [3.2.2 European VET diploma (EUVETD)](./chapter-3-formal-education.md#322-european-vet-diploma-euvetd)
+- [3.2.3 European VET certificate (EUVETC)](./chapter-3-formal-education.md#323-european-vet-certificate-euvetc)
 
 #### 3.3 Generic educational credentials
 - [3.3.1 Degree qualification (EAA2)](./chapters/03-formal-education/degree-qualification.md)
