@@ -191,11 +191,11 @@ This document serves as the main introduction to the DC4EU sectoral EAA catalogu
 
 ### Chapter 3: formal education achievement EAAs
 #### 3.1 Higher education credentials
-- [3.1.1 European higher education diploma (EUHED)](./chapters/03-formal-education/higher-education-diploma.md)
-- [3.1.2 European higher education diploma supplement (EUHEDS)](./chapters/03-formal-education/diploma-supplement.md)
-- [3.1.3 European higher education transcript of records (EUHETOR)](./chapters/03-formal-education/transcript-records.md)
-- [3.1.4 European higher education proof of enrolment (EUHEPOE)](./chapters/03-formal-education/proof-enrolment.md)
-- [3.1.5 European higher education micro-credential (EUHEMIC)](./chapters/03-formal-education/he-microcredential.md)
+- [3.1.1 European higher education diploma (EUHED)](./chapter-3-formal-education.md#311-european-higher-education-diploma-euhed)
+- [3.1.2 European higher education diploma supplement (EUHEDS)](./chapter-3-formal-education.md#312-european-higher-education-diploma-supplement-euheds)
+- [3.1.3 European higher education transcript of records (EUHETOR)](./chapter-3-formal-education.md#313-european-higher-education-transcript-of-records-euhetor)
+- [3.1.4 European higher education proof of enrolment (EUHEPOE)](./chapter-3-formal-education.md#314-european-higher-education-proof-of-enrolment-euhepoe)
+- [3.1.5 European higher education micro-credential (EUHEMIC)](./chapter-3-formal-education.md#315-european-higher-education-micro-credential-euhemic)
 
 #### 3.2 Vocational education and training credentials
 - [3.2.1 European VET micro-credential (EUVETMC)](./chapters/03-formal-education/vet-microcredential.md)
