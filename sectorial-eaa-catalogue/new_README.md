@@ -203,8 +203,8 @@ This document serves as the main introduction to the DC4EU sectoral EAA catalogu
 - [3.2.3 European VET certificate (EUVETC)](./chapter-3-formal-education.md#323-european-vet-certificate-euvetc)
 
 #### 3.3 Generic educational credentials
-- [3.3.1 Degree qualification (EAA2)](./chapters/03-formal-education/degree-qualification.md)
-- [3.3.2 European digital credential (EDC)](./chapters/03-formal-education/european-digital-credential.md)
+- [3.3.1 Degree qualification (EAA2)](./chapter-3-formal-education.md#331-degree-qualification-eaa2)
+- [3.3.2 European digital credential (EDC)](./chapter-3-formal-education.md#332-european-digital-credential-edc)
 
 ### Chapter 4: professional qualifications EAAs
 - [4.1 Certificate of professional competence (CPC)](./chapters/04-professional-qualifications/professional-competence.md)
