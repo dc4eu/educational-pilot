@@ -207,12 +207,12 @@ This document serves as the main introduction to the DC4EU sectoral EAA catalogu
 - [3.3.2 European digital credential (EDC)](./chapter-3-formal-education.md#332-european-digital-credential-edc)
 
 ### Chapter 4: professional qualifications EAAs
-- [4.1 Certificate of professional competence (CPC)](./chapters/04-professional-qualifications/professional-competence.md)
-- [4.2 Professional medical certification (PMC)](./chapters/04-professional-qualifications/medical-certification.md)
-- [4.3 Certificate of professional suitability (CPS)](./chapters/04-professional-qualifications/professional-suitability.md)
-- [4.4 Accreditation medical training (AMT)](./chapters/04-professional-qualifications/medical-training.md)
-- [4.5 Continuous professional development (CPD)](./chapters/04-professional-qualifications/continuous-development.md)
-- [4.6 Professional training certificate (PTC)](./chapters/04-professional-qualifications/training-certificate.md)
+- [4.1 Certificate of professional competence (CPC)](./chapter-4-professional-qualifications.md#41-certificate-of-professional-competence-cpc)
+- [4.2 Professional medical certification (PMC)](./chapter-4-professional-qualifications.md#42-professional-medical-certification-pmc)
+- [4.3 Certificate of professional suitability (CPS)](./chapter-4-professional-qualifications.md#43-certificate-of-professional-suitability-cps)
+- [4.4 Accreditation medical training (AMT)](./chapter-4-professional-qualifications.md#44-accreditation-medical-training-amt)
+- [4.5 Continuous professional development (CPD)](./chapter-4-professional-qualifications.md#45-continuous-professional-development-cpd)
+- [4.6 Professional training certificate (PTC)](./chapter-4-professional-qualifications.md#46-professional-training-certificate-ptc)
 
 ### Chapter 5: quality assurance regimes
 - [5.1 Institutional accreditation schemas](./chapter-5-quality-assurance.md#51-institutional-accreditation-schemas)
