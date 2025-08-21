@@ -222,19 +222,18 @@ This document serves as the main introduction to the DC4EU sectoral EAA catalogu
 
 ### Chapter 6: core data model specifications
 #### 6.1 European learning model (ELM) implementation
-- [6.1.1 ELM v3.2 ontology specification](./chapters/06-data-models/elm-ontology.md)
-- [6.1.2 ELM-to-W3C VCDM mapping](./chapters/06-data-models/elm-w3c-mapping.md)
-- [6.1.3 Achievement and qualification frameworks](./chapters/06-data-models/achievement-frameworks.md)
+- [6.1.1 ELM v3.2 ontology specification](./chapter-6-core-data-models.md#611-elm-v32-ontology-specification)
+- [6.1.2 ELM-to-W3C VCDM mapping](./chapter-6-core-data-models.md#612-elm-to-w3c-vcdm-mapping)
 
 #### 6.2 W3C verifiable credentials adaptations
-- [6.2.1 EDC-W3C VCDM compliant schemas](./chapters/06-data-models/edc-w3c-schemas.md)
-- [6.2.2 Education-specific credential types](./chapters/06-data-models/education-credential-types.md)
-- [6.2.3 Proof formats and verification mechanisms](./chapters/06-data-models/proof-formats.md)
+- [6.2.1 EDC-W3C VCDM compliant schemas](./chapter-6-core-data-models.md#621-edc-w3c-vcdm-compliant-schemas)
+- [6.2.2 Education-specific credential types](./chapter-6-core-data-models.md#622-education-specific-credential-types)
+- [6.2.3 Proof formats and verification mechanisms](./chapter-6-core-data-models.md#623-proof-formats-and-verification-mechanisms)
 
 #### 6.3 Multi-language and semantic support
-- [6.3.1 Multi-language support structures](./chapters/06-data-models/multi-language-support.md)
-- [6.3.2 Semantic definitions and ontologies](./chapters/06-data-models/semantic-definitions.md)
-- [6.3.3 ESCO skills integration](./chapters/06-data-models/esco-integration.md)
+- [6.3.1 Multi-language support structures](./chapter-6-core-data-models.md#631-multi-language-support-structures)
+- [6.3.2 Semantic definitions and ontologies](./chapter-6-core-data-models.md#632-semantic-definitions-and-ontologies)
+- [6.3.3 ESCO skills integration](./chapter-6-core-data-models.md#633-esco-skills-integration)
 
 ### Technical annexes
 - [Annex A: Complete JSON-LD schemas repository](./annex_a_json_schemas_repository.md)
