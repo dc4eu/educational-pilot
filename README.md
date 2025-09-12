@@ -8,7 +8,6 @@ This repository provides comprehensive documentation and implementation guidance
 
 This repository is organised into several key sections:
 
-- **[Education and professional qualifications Business Bleuprint - BBP](./OfficialDeliverables/5.1%20BBP/README.md)**: The DC4EU WP5 Business Blueprint is a strategic document developed to guide the integration and adoption of digital credentials across the European Union, enhancing the digital transformation of education and professional qualifications. This blueprint aligns with the European Commission’s 2030 Digital Education Action Plan, focusing on interoperability, accessibility, quality assurance, sustainability, and stakeholder engagement
 
 - **[eIDAS roles](./docs/eIDAS-roles.md)**: Outlines the key roles within the European digital identity framework under eIDAS, detailing their definitions, functions, types of attestations issued, regulatory references, and compliance requirements.
   
@@ -24,7 +23,7 @@ This repository is organised into several key sections:
 
 - **[Sectorial rulebook](./sectorial-rulebook/)**: The core framework that establishes standardised approaches for managing digital educational and professional credentials within the European Union.
 
-- The **[BBP](./OfficialDeliverables/BBP/v2.0/DC4EU_D5.1_WP5_Business%20Blueprint_v.2.0.pdf)**: The Business Blueprint for education and professionalqualifications.
+- **[Education and professional qualifications Business Bleuprint - BBP](./OfficialDeliverables/5.1%20BBP/README.md)**: The DC4EU WP5 Business Blueprint is a strategic document developed to guide the integration and adoption of digital credentials across the European Union, enhancing the digital transformation of education and professional qualifications. This blueprint aligns with the European Commission’s 2030 Digital Education Action Plan, focusing on interoperability, accessibility, quality assurance, sustainability, and stakeholder engagement.
 
 - **[Sectorial EAA catalogue](./sectorial-eaa-catalogue/)**: Contains all data models and schemas agreed at sectorial level for Education and Professional Qualifications, including formal education, quality assurance regimes, and non-foundational ID.
 
