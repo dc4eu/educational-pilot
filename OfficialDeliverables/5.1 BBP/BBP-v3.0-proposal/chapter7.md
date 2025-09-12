@@ -369,7 +369,7 @@ __System Interaction__
 
  University Academic Records System 
 
-![Image8](../../images/bbp-image8.png)
+![Image8](./images/bbp-image8.png)
 
 This user journey demonstrates how verifiable credentials and digital identities can simplify studying across alliance institutions, reducing administrative burden and enhancing the student experience\.
 
@@ -619,7 +619,7 @@ National eID authentication system
 
  University of Lausanne notification system 
 
-![Image9](../../images/bbp-image9.png)
+![Image9](./images/bbp-image9.png)
 
 This detailed user journey illustrates the step\-by\-step process of obtaining and using verifiable credentials for cross\-border university applications\. It shows the interactions between the student \(Anna\), the issuing university \(University of Athens\), and the verifying university \(University of Lausanne\), as well as the various systems involved in the process\. This journey demonstrates how verifiable credentials can simplify and streamline the application process for international higher education programmes\.
 
@@ -782,7 +782,7 @@ __System Interaction__
 
  Institution's system verifies eCIP through CGCOM Central Registry 
 
-![Image10](../../images/bbp-image10.png)
+![Image10](./images/bbp-image10.png)
 
 This user journey demonstrates the step\-by\-step process of obtaining and using an eCIP for a collegiate doctor, from the initial request to sharing with relevant organisations\. It shows the interactions between the collegiate doctor \(Anna\), the COM \(Colegio Oficial de Médicos\), CGCOM \(Consejo General de Colegios Oficiales de Médicos\), and the verifying organisations, as well as the various systems involved in the process\.
 
@@ -932,7 +932,7 @@ __System Interaction__
  Institution's system verifies certificate through SEAFORMEC platform 
 
 
-![Image11](../../images/bbp-image11.png)
+![Image11](./images/bbp-image11.png)
 
 This user journey demonstrates the step\-by\-step process of obtaining and using a SEAFORMEC accreditation certificate, from submitting the initial request to sharing the certificate with relevant organisations\. It shows the interactions between the training provider \(MedEduCo\), SEAFORMEC, UEMS, assessors, and the verifying organisations, as well as the various systems involved in the process
 
@@ -1104,7 +1104,7 @@ __System Interaction__
 
  Institution's system verifies certificate through SEAFORMEC platform 
 
-![Image12](../../images/bbp-image12.png)
+![Image12](./images/bbp-image12.png)
 
 This user journey demonstrates the step\-by\-step process of obtaining and using a SEAFORMEC accreditation certificate, from submitting the initial request to sharing the certificate with relevant organisations\. It shows the interactions between the training provider \(MedEduCo\), SEAFORMEC, UEMS, assessors, and the verifying organisations, as well as the various systems involved in the process\.
 
@@ -1272,7 +1272,7 @@ __System Interaction__
 
  Organisation's system verifies certificate through CGCOM platform 
 
-![Image13](../../images/bbp-image13.png)
+![Image13](./images/bbp-image13.png)
 
 This user journey demonstrates the step\-by\-step process of obtaining and using a BQM certificate, from registering for training to sharing the certificate with relevant organisations\. It shows the interactions between the healthcare professional \(Dr\. Sofia\), the Foundation, CGCOM, and the verifying organisations, as well as the various systems involved in the process
 
@@ -1447,7 +1447,7 @@ __ System Interaction __
 
  Organisation's system verifies certificate through CGCOM platform 
 
-![Image14](../../images/bbp-image14.png)
+![Image14](./images/bbp-image14.png)
 
 This user journey demonstrates the step\-by\-step process of obtaining and using a VPC certificate, from the initial request to sharing with relevant organisations\. It shows the interactions between the doctor \(Dr\. Luis\), the COM \(Colegio Oficial de Médicos\), the CGCOM \(Consejo General de Colegios Oficiales de Médicos\), and the verifying organisations, as well as the various systems involved in the process\. This journey illustrates how digital credentials can streamline the process of maintaining and verifying professional medical qualifications\.
 

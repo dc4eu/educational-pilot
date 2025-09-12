@@ -105,7 +105,7 @@ To illustrate the practical applications of the chosen data models, the followin
 
 The framework implements a two\-layer approach that forms the backbone of the credential ecosystem\. This structure allows for both standardization and flexibility, addressing the diverse needs of educational institutions and professional bodies across Europe\.
 
-![Image15](../../images/bbp-image15.png)
+![Image15](./images/bbp-image15.png)
 
 #### 8\.3\.1 Core layer \(Sector\-wide\)
 
@@ -966,7 +966,7 @@ Visual representations of the framework's architecture help stakeholders underst
 
 #### 8\.7\.2 Core architecture components
 
-![Image16](../../images/bbp-image16.png)
+![Image16](./images/bbp-image16.png)
 
 The diagram above illustrates:
 
@@ -984,7 +984,7 @@ Key business implications:
 
 #### 8\.7\.3 Implementation architecture
 
-![Image17](../../images/bbp-image17.png)
+![Image17](./images/bbp-image17.png)
 
 This diagram demonstrates:
 

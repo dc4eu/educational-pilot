@@ -57,7 +57,7 @@ The schema supports internationalisation through language codes and includes str
 - Managing institutional email and identification systems
 - Recording specific institutional affiliations through schacHomeOrganization
 
-![Image18](../../images/bbp-image18.png)
+![Image18](./images/bbp-image18.png)
 
 JSON serialisation
 
@@ -107,7 +107,7 @@ This model supports the European academic community by:
 - Providing clear identity assurance levels
 - Supporting cross\-border academic services
 
-![Image18](../../images/bbp-image18.png)
+![Image18](./images/bbp-image18.png)
 
 JSON seralisation
 
@@ -167,7 +167,7 @@ The model links with external standards and frameworks:
 
 Each component maintains strict validation requirements while offering flexibility to accommodate different educational contexts across Europe\.
 
-![Image19](../../images/bbp-image19.png)
+![Image19](./images/bbp-image19.png)
 
 The European Learning Model \(ELM\) can be used to issue credentials \(referred to as Electronic Attestations of Attributes \. EAAs\), for a wide range of education and training levels and contexts\. This includes tertiary, secondary, primary, and adult education, as well as formal, non\-formal, and informal learning achievements\. The model is highly adaptable and built on principles that support various types of learning outcomes, making it suitable for diverse use cases\.
 
@@ -241,7 +241,7 @@ This model serves university alliances by:
 - Supporting verifiable credentials
 - Enabling cross\-alliance recognition
 
-![Image20](../../images/bbp-image20.png)
+![Image20](./images/bbp-image20.png)
 
 JSON serialisation
 
