@@ -1,1018 +1,1052 @@
 ## <a id="_Toc182376700"></a><a id="_Toc184710061"></a>Chapter 8: Technical framework and sectorial EAA's catalogue
 
-This chapter details the technical framework and data model that support secure and interoperable digital credentialing across the EU\. By defining the core architecture, data structures, and protocols for credential management, this framework underpins the operational model’s compliance with EU standards like eIDAS and GDPR\. The focus on data security and interoperability ensures that educational and professional credentials can be issued and verified seamlessly across borders, offering a trusted solution for all stakeholders in the credentialing ecosystem\.
+This chapter details the technical framework and data model that support secure and interoperable digital credentialing across the EU. By defining the core architecture, data structures, and protocols for credential management, this framework underpins the operational model's compliance with EU standards like eIDAS and GDPR. The focus on data security and interoperability ensures that educational and professional credentials can be issued and verified seamlessly across borders, offering a trusted solution for all stakeholders in the credentialing ecosystem.
 
-### <a id="_Toc182376701"></a><a id="_Toc184710062"></a>8\.1 Introduction
+### <a id="_Toc182376701"></a><a id="_Toc184710062"></a>8.1 Introduction
 
-The implementation of trust frameworks for educational and professional credentials requires a robust and flexible technical foundation that can accommodate diverse national requirements while maintaining standardization where needed\. This chapter outlines the technical framework and data model that enables the seamless issuance, management, and verification of credentials across Europe\.
+The implementation of trust frameworks for educational and professional credentials requires a robust and flexible technical foundation that can accommodate diverse national requirements while maintaining standardization where needed. This chapter outlines the technical framework and data model that enables the seamless issuance, management, and verification of credentials across Europe.
 
-The framework builds upon established international standards, particularly the W3C Verifiable Credentials Data Model and the European Learning Model, to ensure consistency, interoperability, and trust across implementations while supporting the specific needs of the European education and qualification landscape\. It is designed to be both forward\-looking and backward compatible, ensuring that institutions can transition at their own pace while maintaining interoperability across the ecosystem
+The framework builds upon established international standards, particularly the W3C Verifiable Credentials Data Model and the European Learning Model, to ensure consistency, interoperability, and trust across implementations while supporting the specific needs of the European education and qualification landscape. It is designed to be both forward-looking and backward compatible, ensuring that institutions can transition at their own pace while maintaining interoperability across the ecosystem.
 
-This technical framework implements the operational model detailed in Chapter 4 and supports the use cases presented in Chapter 6\.
+This technical framework implements the [operational model detailed in Chapter 4](chapter4.md) and supports the [use cases presented in Chapter 7](chapter7.md).
 
-### <a id="_Toc182376702"></a><a id="_Toc184710063"></a>8\.2 Core data model architecture
+### <a id="_Toc182376702"></a><a id="_Toc184710063"></a>8.2 Core data model architecture
 
-The adoption of the W3C Verifiable Credentials \(VC\) Data Model and the European Learning Model \(ELM\) as the core standards for credential issuance and verification is rooted in their proven capabilities for fostering interoperability, ensuring data privacy, and supporting cross\-border mobility within the EU\. These models align with global digital identity and data standards, making them particularly suited to the objectives outlined in the European Qualifications Framework \(EQF\) and the Digital Education Action Plan \(DEAP\)\.
+The adoption of the W3C Verifiable Credentials (VC) Data Model and the European Learning Model (ELM) as the core standards for credential issuance and verification is rooted in their proven capabilities for fostering interoperability, ensuring data privacy, and supporting cross-border mobility within the EU. These models align with global digital identity and data standards, making them particularly suited to the objectives outlined in the European Qualifications Framework (EQF) and the Digital Education Action Plan (DEAP).
 
-Key Advantages Include:
+#### Key advantages of the chosen standards:
 
-- Interoperability: The W3C VC model enables uniform structuring of credential data, allowing educational and professional qualifications to be recognised across all member states without additional modifications\.
-- Privacy and Security: Features like selective disclosure and cryptographic proofs safeguard personal data, ensuring that credential holders can control what information is shared, in line with GDPR principles\.
-- Alignment with EU Standards: The use of ELM ensures compatibility with EU\-wide initiatives, facilitating seamless integration with services such as Europass and the European Digital Credentials Infrastructure \(EDCI\)\.
+| Advantage Category | W3C VC Benefits | ELM Benefits | Combined Impact |
+|--------------------|-----------------|--------------|-----------------|
+| **Interoperability** | Uniform credential data structuring | European education-specific standardisation | Educational and professional qualifications recognised across all member states |
+| **Privacy and Security** | Selective disclosure and cryptographic proofs | Privacy-preserving educational data handling | Personal data protection with user control over information sharing |
+| **EU Standards Alignment** | Global digital identity compatibility | EU-wide educational initiatives integration | Seamless integration with Europass and EDCI services |
 
-These aspects underscore why the W3C VC and ELM were selected as the foundational data models for this framework, promoting a unified and secure approach to credentialing across Europe\.
+These aspects underscore why the W3C VC and ELM were selected as the foundational data models for this framework, promoting a unified and secure approach to credentialing across Europe.
 
-The choice of the W3C Verifiable Credentials Data Model and the European Learning Model \(ELM\) as the standards for credentialing is also rooted in their strong support for interoperability, privacy\-preserving features, and alignment with EU digital education policies\. These models enable uniformity in the structure of educational credentials, ensuring that digital documents can be securely verified and understood across all EU Member States, enhancing cross\-border mobility\.
+#### Integration with existing European standards
 
-The selected data model incorporates established Bologna Process tools like:
+The selected data model incorporates established Bologna Process tools:
 
-- ECTS credits for measuring student workload
-- Degree cycle indicators \(Bachelor's, Master's, Doctorate\)
-- Qualification framework levels
-- Quality assurance status
+- **ECTS credits**: For measuring student workload and facilitating credit transfer
+- **Degree cycle indicators**: Bachelor's/Master's/Doctorate structure compatibility
+- **Qualification framework levels**: Integration with EQF and national frameworks
+- **Quality assurance status**: Maintaining educational quality standards
 
-This ensures compatibility with existing European higher education standards while enabling new digital capabilities\.
+This ensures compatibility with existing European higher education standards while enabling new digital capabilities.
 
-This model enables the credential lifecycle management described in Section 4\.2 and supports the implementation roadmap outlined in Chapter 8\.
+This model enables the [credential lifecycle management described in Section 4.2](chapter4.md#42-credential-lifecycle-management) and supports the [implementation roadmap outlined in Chapter 10](chapter10.md).
 
-#### 8\.2\.1 Design philosophy
+#### 8.2.1 Design philosophy
 
-The implementation of the European Learning Model \(ELM\) alongside the W3C Verifiable Credentials framework directly addresses the challenges of interoperability and cross\-border recognition\. By leveraging these models, institutions can ensure that issued credentials maintain a standardised format that is both machine\-readable and verifiable across different systems\. This approach mitigates issues related to varying national data standards and supports a coherent digital education ecosystem throughout the EU\.
+The implementation of the European Learning Model (ELM) alongside the W3C Verifiable Credentials framework directly addresses the challenges of interoperability and cross-border recognition. By leveraging these models, institutions can ensure that issued credentials maintain a standardised format that is both machine-readable and verifiable across different systems. This approach mitigates issues related to varying national data standards and supports a coherent digital education ecosystem throughout the EU.
 
 The technical framework is built on two complementary principles that ensure both consistency and adaptability:
 
-1\. Standardization through a mandatory core structure:
+#### 1. Standardisation through mandatory core structure
 
-- Ensures essential information is consistently captured and presented
-- Facilitates international recognition and comparison of qualifications
-- Provides a foundation that cannot be modified, guaranteeing data integrity
-- Enables interoperability across different systems and countries
+- **Consistent information capture**: Ensures essential information is consistently captured and presented
+- **International recognition**: Facilitates international recognition and comparison of qualifications
+- **Data integrity foundation**: Provides a foundation that cannot be modified, guaranteeing data integrity
+- **Cross-system interoperability**: Enables interoperability across different systems and countries
 
-2\. Flexibility through country\-specific extensions:
+#### 2. Flexibility through country-specific extensions
 
-- Allows individual countries to add their unique requirements
-- Enables incorporation of local educational standards
-- Supports country\-specific grading systems
-- Maintains compatibility with the international framework
+- **National requirements accommodation**: Allows individual countries to add their unique requirements
+- **Local standards integration**: Enables incorporation of local educational standards
+- **Country-specific grading systems**: Supports country-specific grading systems
+- **Framework compatibility**: Maintains compatibility with the international framework
 
-This dual approach ensures that while credentials remain internationally recognizable and verifiable, they can also accommodate the specific needs and requirements of different educational systems and professional bodies\.
+This dual approach ensures that while credentials remain internationally recognizable and verifiable, they can also accommodate the specific needs and requirements of different educational systems and professional bodies.
 
-The technical framework implements the W3C Verifiable Credentials Data Model as its foundation, extended by the European Learning Model to address education\-specific requirements\. This standards\-based approach ensures:
+#### Framework implementation characteristics
 
-- Consistent credential structure across implementations
-- Built\-in support for privacy\-preserving features like selective disclosure
-- Compatibility with existing and future European digital identity initiatives
-- Clear separation between core credential attributes and extension fields
+The technical framework implements the W3C Verifiable Credentials Data Model as its foundation, extended by the European Learning Model to address education-specific requirements. This standards-based approach ensures:
 
-The integration of the European Learning Model \(ELM\) provides a practical solution to the challenges of cross\-border credential recognition by ensuring data consistency and standardization\. This is critical for member states that need seamless interoperability for educational and professional credentialing\. The framework supports the objectives set by the European Qualifications Framework \(EQF\) and promotes transparency across diverse national systems\.
+- **Consistent credential structure** across implementations
+- **Built-in privacy features**: Support for privacy-preserving features like selective disclosure
+- **European digital identity compatibility**: With existing and future European digital identity initiatives
+- **Clear architectural separation**: Between core credential attributes and extension fields
 
-How this benefits stakeholders:
+#### Stakeholder benefits analysis
 
-- Educational Institutions: Simplifies the process of credential issuance and verification by using a model that is compatible with EU systems and frameworks\.
-- Employers and Professional bodies: Facilitates the recognition of professional qualifications and reduces the need for manual validation processes\.
-- Credential holders: Provides a user\-centric approach that prioritises privacy and ease of use, empowering individuals to share their qualifications confidently across borders\.
+| Stakeholder Group | Primary Benefits | Technical Implementation | Policy Alignment |
+|-------------------|------------------|-------------------------|------------------|
+| **Educational Institutions** | Simplified credential issuance and verification through EU-compatible models | Integration with existing student information systems | Supports European Education Area objectives |
+| **Employers and Professional bodies** | Streamlined qualification recognition and reduced manual validation | Automated verification through standardised APIs | Aligns with Single Digital Gateway principles |
+| **Credential holders** | User-centric approach prioritising privacy and cross-border mobility | Selective disclosure and user-controlled data sharing | Supports Once-Only Principle implementation |
 
-This context further ensures alignment with EU strategies such as the European Education Area \(EEA\) and the Single Digital Gateway \(SDG\), which promote cross\-border digital services and the Once\-Only Principle \(OOP\)\.
+This context ensures alignment with EU strategies such as the European Education Area (EEA) and the Single Digital Gateway (SDG), which promote cross-border digital services and the Once-Only Principle (OOP).
 
-#### 8\.2\.2 Language requirements
+#### 8.2.2 Language requirements
 
 A critical aspect of the framework is its approach to language management, which balances international accessibility with local compliance:
 
-1\. English as mandatory generation language:
+#### English as mandatory generation language
 
-- All core documentation must be generated in English
-- Ensures international accessibility
-- Maintains consistency in terminology across implementations
-- Serves as the reference version for verification
+- **Universal accessibility**: All core documentation must be generated in English
+- **International compatibility**: Ensures international accessibility and recognition
+- **Terminology consistency**: Maintains consistency in terminology across implementations
+- **Verification reference**: Serves as the reference version for verification processes
 
-2\. Additional official languages through extensions:
+#### Additional official languages through extensions
 
-- Countries can add their official languages
-- Multiple language support through standardized extension mechanisms
-- Preserves local identity while ensuring international accessibility
+- **National language support**: Countries can add their official languages through standardised mechanisms
+- **Multi-language capabilities**: Multiple language support through standardised extension mechanisms
+- **Cultural identity preservation**: Preserves local identity while ensuring international accessibility
+- **Compliance with local requirements**: Supports national language legislation and cultural needs
 
-This approach ensures that credentials can be understood internationally while meeting local language requirements, supporting both mobility and local compliance needs\.
+This approach ensures that credentials can be understood internationally while meeting local language requirements, supporting both mobility and local compliance needs.
 
-#### 8\.2\.3 Practical examples and Use Cases
+#### 8.2.3 Practical examples and use cases
 
-To illustrate the practical applications of the chosen data models, the following use cases demonstrate their impact:
+To illustrate the practical applications of the chosen data models, the following use cases demonstrate their real-world impact:
 
-1. Cross\-Border academic recognition: A student in Germany graduates with a digitally issued diploma based on the W3C VC and ELM standards\. When applying for a master's programme in Spain, the receiving university can instantly verify the diploma’s authenticity and details using cryptographic proofs embedded in the credential\. This streamlines admissions processes, reduces administrative burdens, and ensures data privacy\.
-2. Employer verification of Professional qualifications: A professional from France moves to Italy and presents their verifiable professional certification to a potential employer\. The certification, structured according to the W3C VC model and containing ELM\-compliant data fields, allows the employer to quickly verify the credential through an interoperable verification system\. This facilitates faster hiring processes and enhances trust\.
-3. Lifelong Learning and Micro\-Credential recognition: An individual participates in an online training course provided by a Finnish institution, earning a micro\-credential formatted according to the ELM and W3C VC standards\. This credential is stored in their EUDI wallet and presented to a Swedish employer as part of their application\. The standardised format ensures the employer can verify the credential’s validity, supporting better skills matching and career progression\.
+#### Cross-border academic recognition scenario
 
-### <a id="_Toc182376703"></a><a id="_Toc184710064"></a>8\.3 Model structure
+A student in Germany graduates with a digitally issued diploma based on the W3C VC and ELM standards. When applying for a master's programme in Spain, the receiving university can instantly verify the diploma's authenticity and details using cryptographic proofs embedded in the credential. This streamlines admissions processes, reduces administrative burdens, and ensures data privacy.
 
-The framework implements a two\-layer approach that forms the backbone of the credential ecosystem\. This structure allows for both standardization and flexibility, addressing the diverse needs of educational institutions and professional bodies across Europe\.
+**Technical process**:
+1. German university issues ELM-compliant digital diploma
+2. Student stores credential in EUDI wallet
+3. Spanish university requests credential verification
+4. Automated cryptographic verification confirms authenticity
+5. EQF level mapping enables automatic qualification comparison
+
+#### Employer verification of professional qualifications
+
+A professional from France moves to Italy and presents their verifiable professional certification to a potential employer. The certification, structured according to the W3C VC model and containing ELM-compliant data fields, allows the employer to quickly verify the credential through an interoperable verification system. This facilitates faster hiring processes and enhances trust.
+
+**Technical benefits**:
+- Instant verification without manual processes
+- Cryptographic proof of authenticity
+- ESCO skills mapping for precise job matching
+- Cross-border professional mobility support
+
+#### Lifelong learning and micro-credential recognition
+
+An individual participates in an online training course provided by a Finnish institution, earning a micro-credential formatted according to the ELM and W3C VC standards. This credential is stored in their EUDI wallet and presented to a Swedish employer as part of their application. The standardised format ensures the employer can verify the credential's validity, supporting better skills matching and career progression.
+
+**Implementation advantages**:
+- Seamless integration of formal and non-formal learning
+- Standardised micro-credential recognition
+- Enhanced career development pathways
+- Support for lifelong learning objectives
+
+### <a id="_Toc182376703"></a><a id="_Toc184710064"></a>8.3 Model structure
+
+The framework implements a two-layer approach that forms the backbone of the credential ecosystem. This structure allows for both standardisation and flexibility, addressing the diverse needs of educational institutions and professional bodies across Europe.
 
 ![Image15](./images/bbp-image15.png)
 
-#### 8\.3\.1 Core layer \(Sector\-wide\)
+The diagram above illustrates the dual-layer architecture that enables both European-wide standardisation and national flexibility while maintaining full interoperability across all implementations.
 
-The core layer establishes the fundamental structure that ensures consistency across all implementations\. It consists of carefully selected mandatory and optional fields:
+#### 8.3.1 Core layer (Sector-wide)
 
-##### Mandatory Fields:
+The core layer establishes the fundamental structure that ensures consistency across all implementations. It consists of carefully selected mandatory and optional fields that provide the essential foundation for credential recognition and verification.
 
-1\. Qualification title
+#### Mandatory fields specification
 
-- Official name in English
-- Standardized naming conventions
-- Clear identification of level and field
+| Field Category | Field Name | Description | International Standards Alignment | Verification Purpose |
+|----------------|------------|-------------|----------------------------------|---------------------|
+| **Identity** | Qualification title | Official name in English with standardised naming conventions | EQF terminology alignment | Clear qualification identification |
+| | Recipient's name | Full legal name with international format standards | ISO naming standards | Individual identification |
+| | Date of birth | Standardised date format as additional identifier | ISO 8601 format | Identity verification |
+| **Institution** | Issuing institution | Official name with standardised identifiers and database links | EU institutional registries | Source verification |
+| **Qualification** | Qualification level | International framework alignment with clear academic/professional indication | EQF level mapping | Cross-border comparison |
+| | Programme duration | Standardised format including time period and credit points | ECTS compatibility | Study intensity comparison |
+| **Accessibility** | Language of generation | Mandatory English version ensuring international accessibility | EN language standard | Universal understanding |
+| **Classification** | Field of study | Standardised classification aligned with international systems | ISCED classification | Field-specific recognition |
 
-2\. Recipient's name
+#### Optional fields specification
 
-- Full legal name
-- International format standards
-- Provisions for different naming conventions
+| Field Category | Purpose | Implementation Benefits | National Flexibility |
+|----------------|---------|------------------------|---------------------|
+| **Assessment** | Grading scheme with assessment methods and international comparison tables | Transparent evaluation standards | Accommodation of national grading systems |
+| **Prerequisites** | Access requirements including programme prerequisites and special conditions | Clear admission pathways | Integration with national education systems |
+| **Additional Information** | Supplementary information and programme-specific details | Enhanced qualification context | Cultural and institutional specificity |
 
-3\. Date of birth
+#### 8.3.2 Country Extensions
 
-- Standardized date format
-- Additional identifier
-- Prevents confusion with similar names
+The extension layer provides the flexibility needed to accommodate national requirements while maintaining the integrity of the core model. These extensions enable comprehensive localisation without compromising international interoperability.
 
-4\. Issuing institution
+#### Extension categories
 
-- Official name
-- Standardized identifiers
-- Links to institutional databases
-- Qualification level
+| Extension Type | Implementation Scope | Benefits | Examples |
+|----------------|---------------------|----------|----------|
+| **Language Support** | National language requirements with maintained English correlation | Cultural preservation and legal compliance | German, French, Spanish extensions |
+| **Qualification Frameworks** | Integration with national systems and regional framework mapping | National sovereignty respect | Flemish Qualification Level, ISCED integration |
+| **Educational Standards** | Local formatting requirements and country-specific elements | Regulatory compliance | National grading scales, local terminology |
 
-5\.Qualification level
+#### Comprehensive country extension matrix
 
-- Alignment with international qualification frameworks
-- Clear indication of academic or professional level
-- Facilitates qualification comparison across borders
+| Field | Core Requirement | Austria | Belgium | Czech Republic | France | Germany | Italy | Norway | Poland | Spain |
+|-------|------------------|---------|---------|----------------|--------|---------|-------|--------|--------|-------|
+| **Qualification title** | Mandatory (English) | No extension | No extension | No extension | Specific variants | No extension | Title variants | No extension | Local terminology | No extension |
+| **Recipient's name** | Mandatory (International format) | No extension | No extension | Czech formatting | No extension | No extension | No extension | No extension | Local formatting | No extension |
+| **Date of birth** | Mandatory (ISO format) | No extension | No extension | No extension | Optional formatting | No extension | No extension | No extension | No extension | No extension |
+| **Issuing institution** | Mandatory (Official name) | Institution translation | Local language inclusion | Name in Czech | Original and French | No extension | No extension | No extension | No extension | No extension |
+| **Qualification level** | Mandatory (EQF aligned) | EQF notation | Flemish level | ISCED classification | National indicator | National indicator | Italian level | National level | National level | National level |
+| **Programme duration** | Mandatory (ECTS compatible) | No extension | ECTS and local credits | ECTS | No extension | Credit type notation | No extension | Local credits | Duration notation | Credits notation |
+| **Language of generation** | Mandatory (English) | German extension | Dutch/French/German | Czech extension | French extension | German extension | Italian extension | Norwegian extension | Polish extension | Spanish extension |
+| **Field of study** | Mandatory (ISCED aligned) | ISCED notation | Flemish field | Czech field | French descriptor | No extension | Italian descriptor | Field notation | Field notation | National notation |
+| **Grading scheme** | Optional | Austrian scale | Grading with percentile | Local scale | French descriptors | German scale | Italian scale | Norwegian scale | Polish scale | Spanish system |
+| **Access requirements** | Optional | Entry requirements | Prerequisites | Local requirements | Local requirements | Access criteria | Italian requirements | Entry criteria | Access requirements | Entry criteria |
+| **Additional notes** | Optional | Austrian info | No extension | National recognition | Legal notes | Additional details | Cultural details | Regulations | National specifics | Legal notes |
 
-6\. Programme duration
+This comprehensive matrix demonstrates how the framework accommodates diverse national requirements while maintaining core interoperability standards.
 
-- Standardized format for expressing study duration
-- Includes both time period and credit points
-- Enables accurate comparison of study intensity
+#### 8.3.3 Standards and specifications
 
-7\. Language of generation \(English\)
+The technical framework implements internationally recognised standards to ensure interoperability, security, and wide adoption across the European education and professional qualification landscape.
 
-- Mandatory English version of all content
-- Ensures international accessibility
-- Serves as the reference version
+#### Core standards implementation
 
-8\. Field of study
+#### W3C Verifiable Credentials Data Model
 
-- Standardized classification of academic/professional field
-- Aligned with international classification systems
-- Enables accurate field\-specific comparison
+The W3C Verifiable Credentials Data Model serves as the foundational standard for the framework, providing a robust and internationally recognised approach to digital credentials. This standard represents a global consensus on digital credential structure and verification, developed through extensive collaboration within the World Wide Web Consortium (W3C).
 
-##### Optional Fields:
+**Key capabilities addressed**:
 
-1\. Grading scheme
+| Challenge Area | W3C VC Solution | Educational Impact | Technical Implementation |
+|----------------|-----------------|-------------------|-------------------------|
+| **Credential authenticity** | Cryptographic verification preventing tampering | Trust in educational qualifications | Digital signatures and hash verification |
+| **Data structure consistency** | Standardised representation of credential elements | Machine-readable and human-understandable formats | JSON-LD schema implementation |
+| **Privacy preservation** | Selective disclosure capabilities | User control over shared information | Zero-knowledge proofs and selective revelation |
+| **Lifecycle management** | Comprehensive issuance, verification, and revocation | Institutional control over credential validity | Status checking and revocation lists |
 
-- Assessment methods
-- Grade calculations
-- International comparison tables
+**Privacy-preserving features**: The model's support for selective disclosure enables credential holders to share only specific parts of their credentials while maintaining verifiability. For instance, a professional might share their qualification title and date of issuance without revealing their date of birth, even though all information is contained in the same credential.
 
-2\. Access requirements
+**Institutional benefits**: When a university issues a digital diploma, the W3C VC standard ensures that all crucial elements are represented in a consistent, machine-readable format while remaining human-understandable, supporting both automated processing and manual review.
 
-- Program prerequisites
-- Previous qualifications
-- Special conditions
+#### Decentralised identifier (DID) integration
 
-3\. Additional notes
+Complementing the Verifiable Credentials Data Model, decentralised identifiers provide the critical infrastructure for managing digital identity within the framework. DIDs represent a paradigm shift from traditional centralised identity systems, offering a more resilient and flexible approach to identity management in educational and professional contexts.
 
-- Supplementary information
-- Program\-specific details
-- Special achievements
+**Core benefits for educational institutions**:
 
-#### 8\.3\.2 Country Extensions
+| Benefit Category | DID Capabilities | Educational Application | System Advantages |
+|------------------|------------------|------------------------|------------------|
+| **Institutional autonomy** | Independent identity management | Universities maintain control while participating in broader ecosystem | Balanced independence with interoperability |
+| **Verification efficiency** | Direct verification without central contact | Digital diploma verification without contacting issuing university | Streamlined verification processes |
+| **Technical flexibility** | Support for various authentication methods | Large universities and small professional bodies can use appropriate systems | Scalable implementation approaches |
+| **Future-proofing** | Evolution support without breaking existing credentials | Infrastructure evolution while maintaining credential validity | Long-term system sustainability |
 
-The extension layer provides the flexibility needed to accommodate national requirements while maintaining the integrity of the core model\. These extensions enable:
+The combination of these core standards provides comprehensive benefits:
 
-1\. Additional official language support:
+#### 1. Trust and security framework
+- **Cryptographic verification**: Ensures credential authenticity through mathematical proofs
+- **Tamper-evident structure**: Detects any unauthorised modifications
+- **Secure issuer identities**: Verifiable institutional digital identities
+- **Protected revocation mechanisms**: Secure processes for credential status management
 
-- Implementation of national language requirements
-- Maintenance of local language versions
-- Correlation with English core content
+#### 2. Privacy and control mechanisms
+- **Granular information control**: User-controlled sharing of specific credential elements
+- **Privacy-preserving verification**: Verification without exposing unnecessary data
+- **Data minimisation support**: Compliance with privacy-by-design principles
+- **GDPR compliance**: Built-in support for European data protection requirements
 
-2\. Country\-specific qualification frameworks:
+#### 3. Interoperability and scalability
+- **Standardised credential formats**: Consistent structure across all implementations
+- **Vendor-independent systems**: No lock-in to specific technology providers
+- **Cross-border recognition**: Seamless qualification recognition across Europe
+- **Future-proof foundation**: Support for emerging technologies and standards
 
-- Integration with national systems
-- Mapping to local standards
-- Alignment with regional frameworks
+#### 4. Institutional autonomy preservation
+- **Independent identity management**: Institutions control their own digital identities
+- **Flexible implementation options**: Adaptable to different institutional needs
+- **Maintained institutional control**: Preservation of institutional authority over credentials
+- **Local requirements support**: Accommodation of national and institutional specific needs
 
-3\. Local educational standards compliance:
+#### Complementary specifications
 
-- Adherence to national regulations
-- Local formatting requirements
-- Country\-specific educational elements
+#### European Learning Model (ELM)
 
-Field
+The European Learning Model represents a significant advancement in standardising educational credentials across Europe. While the W3C Verifiable Credentials Data Model provides the basic structure, ELM extends this foundation with detailed specifications for representing educational achievements, qualifications, and learning outcomes specifically for European education systems.
 
-Sector\-wide \(Core\)
+**Development approach**: ELM was developed through extensive collaboration between educational institutions, government bodies, and technical experts across Europe, ensuring real-world requirement alignment while maintaining compatibility with existing educational processes and systems.
 
-Austria
+**Comprehensive educational concept support**:
 
-Belgium
+| Educational Concept | ELM Implementation | Cross-border Benefits | Technical Features |
+|---------------------|-------------------|----------------------|-------------------|
+| **Learning outcomes and achievements** | Standardised outcome descriptions | Consistent interpretation across countries | Structured data fields and taxonomies |
+| **Credit systems and workload** | ECTS integration and alternative credit systems | Seamless credit transfer and recognition | Mathematical credit conversion algorithms |
+| **Assessment methods and grading** | Multiple grading scheme support | Grade comparability across systems | Standardised assessment metadata |
+| **Professional competencies and skills** | ESCO integration and skill mapping | Labour market alignment | Competency frameworks and skill taxonomies |
+| **Quality assurance information** | Accreditation and quality status | Trust in qualification standards | Institutional verification mechanisms |
 
-Bulgaria
+**Practical application example**: When a university needs to issue a transcript of records for a student participating in the Erasmus programme, ELM ensures that course credits, grades, and learning outcomes are represented in a way that can be correctly interpreted by institutions across different countries, significantly reducing administrative burden and enabling accurate credit recognition.
 
-Czech Republic
+**Complex qualification support**: ELM addresses the challenge of representing qualifications that combine multiple elements, such as joint degrees or professional certifications with multiple specialisations, ensuring that complex credentials remain machine-readable and verifiable while preserving all necessary context and detail.
 
-France
+#### Alignment with European frameworks
 
-Germany
+#### European Qualifications Framework (EQF)
 
-Iceland
+The European Qualifications Framework represents one of the most significant achievements in European educational cooperation, providing a common reference system that makes qualifications comparable across national borders. In digital credentials, EQF integration is essential for ensuring automatic qualification understanding and evaluation across different national contexts.
 
-Italy
+**EQF integration capabilities**:
 
-Norway
+| EQF Feature | Digital Credential Implementation | Automation Benefits | Cross-border Impact |
+|-------------|----------------------------------|-------------------|-------------------|
+| **Eight-level structure** | Structured EQF level information in credentials | Automatic qualification comparison | Seamless international recognition |
+| **Learning outcomes focus** | Detailed learning outcomes in standardised format | Precise matching to requirements | Skills-based evaluation across borders |
+| **National framework integration** | Simultaneous national and EQF level expression | Maintained national specificity with European comparability | Translation between national systems |
 
-Poland
+**Automated processes enabled**:
+1. **Automatic level mapping**: When credentials include structured EQF information, receiving institutions can automatically verify qualification levels for admission requirements
+2. **National framework translation**: Digital credentials can simultaneously express qualifications in national terms and corresponding EQF levels
+3. **Learning outcomes verification**: Detailed learning outcomes enable precise matching of qualifications to specific requirements
 
-Portugal
+#### ESCO (European Skills, Competences, Qualifications and Occupations)
 
-Romania
+ESCO provides the crucial link between education and the labour market through standardised, multilingual classification of skills, competences, qualifications, and occupations. Integration into digital credentials creates powerful tools for matching educational achievements with professional opportunities across Europe.
 
-Slovakia
+**ESCO integration benefits**:
 
-Slovenia
+| ESCO Feature | Implementation in Digital Credentials | Labour Market Benefits | Technical Implementation |
+|--------------|--------------------------------------|----------------------|-------------------------|
+| **Standardised terminology** | Common language across European languages | Automatic qualification translation and precise job matching | Multilingual taxonomies and mapping algorithms |
+| **Skills-based mapping** | Educational achievements expressed as specific skills | Better qualification-to-job matching and clearer development pathways | Granular competency frameworks |
+| **Labour market intelligence** | Structured vocabulary for automatic analysis | Skill needs identification and career guidance | Data analytics and trend analysis |
 
-Spain
+**Comprehensive system benefits**:
 
-Qualification title
+#### 1. Enhanced mobility and recognition
+- **Automatic qualification level comparison** through standardised frameworks
+- **Consistent skills interpretation** across borders through common terminology
+- **Simplified recognition procedures** through automated matching
+- **Reduced barriers to professional mobility** through standardised credentials
 
- Mandatory                   
+#### 2. Improved educational planning
+- **Better alignment with labour market needs** through skills mapping
+- **Evidence-based curriculum development** through data analytics
+- **Clear progression pathways** through structured frameworks
+- **Support for lifelong learning** through comprehensive skill tracking
 
- No extension                   
+#### 3. Employment market efficiency
+- **Precise matching** of qualifications to job requirements
+- **Reduced skills mismatches** through better information
+- **Better career guidance** through clear pathways
+- **Enhanced workforce development** through targeted training
 
- No extension                       
+#### 4. System-wide intelligence
+- **Improved qualification transparency** through standardised information
+- **Better understanding of skill needs** through data analysis
+- **Enhanced policy development** through evidence-based insights
+- **Evidence-based decision making** through comprehensive data
 
- No extension                    
+The alignment with these European frameworks transforms digital credentials from simple digital documents into powerful tools for educational and professional mobility. By embedding EQF levels and ESCO classifications within standardised digital credentials, the system creates a comprehensive ecosystem that makes qualifications truly comparable across borders, connects education directly to employment opportunities, supports evidence-based policy making, and facilitates lifelong learning and professional development.
 
- No extension                      
+This framework alignment ensures that digital credentials carry verified information about educational achievements while providing structured, meaningful data that supports real-world mobility and opportunity across Europe.
 
- Specific qualification variant     
+### <a id="_Toc182376704"></a><a id="_Toc184710065"></a>8.4 Country-specific implementations
 
- No extension                      
+The framework supports various implementation approaches across different regions, reflecting diverse educational landscapes while maintaining interoperability. This section details how the technical framework accommodates national requirements through standardised extension mechanisms.
 
- No extension                    
+#### 8.4.1 Western European extensions
 
- Specific title variants           
+Western European implementations reflect sophisticated educational traditions and established cross-border cooperation mechanisms:
 
- No extension                     
+#### Austria
+- **German language extension**: Implements full documentation in German while maintaining English core for international accessibility
+- **EQF level notation**: Integrates European Qualification Framework references with Austrian national qualifications
+- **Additional Austrian info**: Includes specific information about Austrian higher education characteristics and institutional traditions
 
- Local terminology                
+#### Belgium
+- **Multi-language support**: Implements three official languages (Dutch, French, German) reflecting the country's linguistic diversity and federal structure
+- **Flemish Qualification Level**: Incorporates specific qualification framework used in the Flemish region
+- **Regional variations**: Special considerations for different educational systems across Belgian regions
 
- No extension                    
+#### France
+- **French language extension**: Complete documentation in French parallel to English core with technical terminology preservation
+- **National level indicators**: Integration with French qualification framework and specific degree classifications
+- **Specific qualification variants**: Accommodates unique French degree titles, specialisations, and educational traditions
 
- Specific titles                
+#### Germany
+- **German language extension**: Full German translation maintaining technical precision and educational terminology
+- **Specific duration notation**: Detailed semester and credit point system reflecting German higher education structure
+- **German grading scale**: Integration of the numerical grading system with descriptors for international comparison
 
- No extension                   
+#### Spain
+- **Spanish language extension**: Complete Spanish translation with technical terminology and educational concepts
+- **National field notation**: Specific classification of academic disciplines aligned with Spanish educational categories
+- **European initiatives integration**: Connection with Spain's participation in European educational programmes
 
- No extension                  
+#### 8.4.2 Eastern European extensions
 
- No extension                      
+Eastern European implementations reflect educational reforms, EU alignment processes, and national educational characteristics:
 
-Recipient's name
+#### Bulgaria
+- **Bulgarian language extension**: Complete documentation in Bulgarian with Cyrillic script support
+- **National qualification level**: Integration with reformed qualification framework post-EU accession
+- **Local entry requirements**: Specific prerequisites aligned with Bulgarian national educational standards
 
- Mandatory                   
+#### Czech Republic
+- **Czech language extension**: Full Czech translation with technical accuracy and educational terminology
+- **Specific formatting requirements**: Adherence to national documentation standards and official formats
+- **Local grading scale**: Integration of Czech evaluation system with international comparison capabilities
 
- No extension                   
+#### Poland
+- **Polish language extension**: Complete Polish translation preserving technical meaning
+- **Local terminology**: Specific academic and professional terms reflecting Polish educational traditions
+- **National qualification specifics**: Integration with Polish qualification framework and educational structure
 
- No extension                       
+#### Romania
+- **Romanian language extension**: Full Romanian translation with technical precision
+- **Optional formatting**: Flexibility in document presentation accommodating national preferences
+- **Romanian grading scale**: Integration of national evaluation system with European standards
 
- No extension                    
+#### Slovakia
+- **Slovak language extension**: Complete Slovak translation maintaining technical accuracy
+- **Credit type notation**: Specific credit system implementation reflecting Slovak higher education structure
+- **Local qualification recognition**: Requirements aligned with Slovak national recognition procedures
 
- Specific Czech formatting         
+#### 8.4.3 Nordic extensions
 
- No extension                       
+Nordic implementations emphasise international compatibility while maintaining regional educational traditions and high digitalisation standards:
 
- No extension                      
+#### Iceland
+- **Icelandic language extension**: Full documentation in Icelandic preserving cultural and educational terminology
+- **ECTS inclusion**: Strong integration with European Credit Transfer System reflecting Iceland's European engagement
+- **National entry requirements**: Specific prerequisites for Icelandic institutions and unique admission procedures
 
- No extension                    
+#### Norway
+- **Norwegian language extension**: Complete Norwegian translation with educational terminology
+- **Local credits system**: Integration with Norwegian credit framework alongside ECTS compatibility
+- **Specific field notation**: Alignment with Norwegian academic classifications and research categories
 
- No extension                      
+#### 8.4.4 Southern European extensions
 
- No extension                     
+Southern European implementations reflect regional educational practices, cultural traditions, and alignment with European standards:
 
- Specific local formatting        
+#### Italy
+- **Italian language extension**: Complete Italian translation with academic and technical terminology
+- **Specific title variants**: Accommodation of traditional Italian degree titles and historical classifications
+- **Local cultural details**: Integration of specific Italian academic traditions and institutional characteristics
 
- No extension                    
+#### Portugal
+- **Portuguese language extension**: Full Portuguese translation maintaining technical precision
+- **ECTS notation**: Detailed credit system implementation reflecting Portuguese higher education structure
+- **Portuguese legal notes**: Compliance with national regulations and legal requirements
 
- No extension                   
+#### Slovenia
+- **Slovenian language extension**: Complete Slovenian translation with technical accuracy
+- **Local grading system**: Integration of national evaluation methods with European standards
+- **Slovenian legal notes**: Specific regulatory requirements and compliance mechanisms
 
- No extension                   
+### <a id="_Toc182376705"></a><a id="_Toc184710066"></a>8.5 Implementation guidelines
 
- No extension                  
+The successful deployment of this framework requires careful attention to both technical and organisational considerations. This section provides comprehensive guidance for institutions and national authorities implementing the framework.
 
- No extension                      
+#### 8.5.1 Core model implementation
 
-Date of birth
+#### Phase 1: Foundation establishment
 
- Mandatory                   
+**Mandatory fields implementation**:
+- **Data types and relationships**: Define precise data types, validation rules, and relationships between credential elements
+- **Validation rules implementation**: Create comprehensive validation logic ensuring data quality and consistency
+- **Standardised templates creation**: Develop template structures that accommodate both core and extension requirements
 
- No extension                   
+**English default configuration**:
+- **Primary language controls**: Set up language management systems with English as the default reference
+- **Translation frameworks**: Establish systematic approaches for managing multilingual content
+- **Language-specific validation**: Implement validation rules that account for linguistic variations while maintaining consistency
 
- No extension                       
+**Data format standardisation**:
+- **Standardised formatting implementation**: Define and implement consistent formatting across all credential types
+- **Character set requirements**: Establish Unicode support for international character sets and special symbols
+- **Field parameter establishment**: Define precise parameters for each field including length, format, and validation criteria
 
- No extension                    
+#### 8.5.2 Extension implementation
 
- No extension                      
+#### Phase 2: National customisation
 
- Optional formatting                
+**Extension module development**:
+- **Modular framework creation**: Develop flexible extension mechanisms that inherit from core structures
+- **Inheritance implementation**: Ensure proper inheritance patterns that maintain core integrity while enabling customisation
+- **Extension boundary establishment**: Define clear boundaries between core requirements and national extensions
 
- No extension                      
+**Language addition configuration**:
+- **Multi-language support setup**: Implement comprehensive language management systems
+- **Translation management implementation**: Create workflows for maintaining translations and updates
+- **Language-specific validation creation**: Develop validation rules that accommodate national language requirements
 
- No extension                    
+**Local formatting implementation**:
+- **Country-specific format definition**: Create national formatting standards that complement international requirements
+- **Regional template creation**: Develop templates that reflect national educational traditions and legal requirements
+- **Formatting validation establishment**: Implement validation systems for national format compliance
 
- No extension                      
+**National qualification framework integration**:
+- **Local qualification system implementation**: Integrate national qualification frameworks with international standards
+- **International standards mapping**: Create mapping mechanisms between national and international frameworks
+- **Qualification validation establishment**: Develop validation systems for qualification level accuracy
 
- No extension                     
+**Regional grading scheme setup**:
+- **Local grading system implementation**: Integrate national grading systems with international comparison capabilities
+- **Grade conversion tools creation**: Develop automated conversion mechanisms between different grading systems
+- **Grade validation rules establishment**: Implement validation for grading accuracy and consistency
 
- No extension                     
+### <a id="_Toc182376706"></a><a id="_Toc184710067"></a>8.6 Maintenance and updates
 
- No extension                    
+To ensure the long-term success of the framework, regular maintenance and updates are essential. This section outlines systematic approaches to maintaining framework effectiveness and relevance.
 
- Optional formatting            
+#### 8.6.1 Core model updates
 
- No extension                   
+#### Ensuring ongoing effectiveness of the core structure
 
- Optional formatting           
+**Regular review of mandatory fields**:
+- **Scheduled assessment periods**: Establish quarterly reviews of core field effectiveness and relevance
+- **Change impact analysis**: Comprehensive assessment of proposed changes on existing implementations
+- **Update implementation procedures**: Systematic approaches to implementing core model updates across the ecosystem
 
- No extension                      
+**Standardisation compliance checks**:
+- **Regular compliance audits**: Systematic auditing of implementation compliance with core standards
+- **Standard evolution monitoring**: Continuous monitoring of W3C and ELM standard developments
+- **Adjustment procedures**: Defined processes for adapting to standard changes and updates
 
-Issuing institution
+**International compatibility verification**:
+- **Cross-border testing procedures**: Regular testing of credential interoperability across national boundaries
+- **Compatibility assessment protocols**: Systematic evaluation of compatibility with international systems
+- **Update validation processes**: Comprehensive testing procedures for validating framework updates
 
- Mandatory                   
+#### 8.6.2 Extension updates
 
- Translation of institution     
+#### Managing country-specific components
 
- Inclusion of local language        
+**Country-specific regulation monitoring**:
+- **Legislative change tracking**: Systematic monitoring of national education legislation changes
+- **Regulatory compliance assessment**: Regular evaluation of framework compliance with national regulations
+- **Update planning procedures**: Structured approaches to planning and implementing regulatory updates
 
- Local official name             
+**Local requirement implementations**:
+- **Requirement analysis processes**: Systematic analysis of new national educational requirements
+- **Implementation planning procedures**: Structured approaches to implementing new requirements
+- **Testing procedures establishment**: Comprehensive testing of local requirement implementations
 
- Name in Czech                     
+**Regional format updates**:
+- **Format change assessment**: Regular evaluation of national format requirement changes
+- **Update implementation processes**: Systematic approaches to implementing format updates
+- **Validation procedures**: Comprehensive validation of regional format changes
 
- Name in original and French        
+### <a id="_Toc182376707"></a><a id="_Toc184710068"></a>8.7 Model visualisation and business architecture
 
- No extension                      
+#### 8.7.1 Overview
 
- No extension                    
+Visual representations of the framework's architecture help stakeholders understand how different components interact and support business processes. These visualisations bridge the gap between technical implementation and business requirements, ensuring alignment across all levels of the organisation.
 
- No extension                      
+The architectural visualisations serve multiple purposes:
+- **Stakeholder communication**: Enabling clear communication across technical and non-technical stakeholders
+- **Implementation guidance**: Providing visual guides for system implementation and integration
+- **Process understanding**: Illustrating how business processes map to technical components
+- **Integration planning**: Supporting integration with existing systems and workflows
 
- No extension                     
-
- No extension                     
-
- No extension                    
-
- No extension                   
-
- No extension                   
-
- No extension                  
-
- No extension                      
-
-Qualification level
-
- Mandatory                   
-
- EQF level notation             
-
- Flemish Qualification Level        
-
- National qualification level    
-
- ISCED classification              
-
- French national level indicator    
-
- German national level indicator    
-
- EQF inclusion                  
-
- Italian qualification level       
-
- Norwegian national level         
-
- Polish national level            
-
- Portuguese national level       
-
- Romanian national level        
-
- National level indicator       
-
- National level indicator      
-
- Spanish national level            
-
-Programme duration
-
- Mandatory                   
-
- No extension                   
-
- ECTS and local credits             
-
- No extension                    
-
- ECTS                               
-
- No extension                       
-
- Duration notation by credit type  
-
- Duration in ECTS               
-
- No extension                      
-
- Duration in local credits        
-
- Duration notation                
-
- Duration notation by ECTS       
-
- ECTS notation                  
-
- Duration notation by credit type 
-
- ECTS notation               
-
- Duration notation by credits      
-
-Language of generation
-
- Mandatory \(English\)         
-
- German as extension            
-
- Dutch, French, German as extension 
-
- Bulgarian as extension          
-
- Czech as extension                 
-
- French as extension                
-
- German as extension               
-
- Icelandic as extension         
-
- Italian as extension              
-
- Norwegian as extension           
-
- Polish as extension              
-
- Portuguese as extension         
-
- Romanian as extension           
-
- Slovak as extension            
-
- Slovenian as extension         
-
- Spanish as extension              
-
-Field of study
-
- Mandatory                   
-
- ISCED field notation           
-
- Flemish qualification field        
-
- ISCED field                     
-
- Specific Czech field              
-
- Field descriptor in French         
-
- No extension                      
-
- No extension                    
-
- Specific Italian field descriptor 
-
- Specific field notation          
-
- Specific field notation          
-
- ISCED field notation            
-
- ISCED notation                 
-
- ISCED notation                 
-
- ISCED notation                
-
- National field notation           
-
-Grading scheme
-
- Optional                    
-
- Austrian grading scale         
-
- Grading with percentile            
-
- Bulgarian grading scale         
-
- Local grading scale               
-
- French grading with descriptors    
-
- German grading scale               
-
- Local grading scale            
-
- Italian grading scale             
-
- Norwegian grading scale          
-
- Polish grading scale             
-
- Portuguese grading system       
-
- Romanian grading scale          
-
- Local grading scheme           
-
- Local grading system          
-
- Spanish grading system            
-
-Access requirements
-
- Optional                    
-
- Entry requirement field        
-
- Access and prerequisites           
-
- Local entry requirements        
-
- Specific local prerequisites       
-
- Local entry requirements            
-
- Access criteria                   
-
- National entry requirements   
-
- Italian entry requirements        
-
- Norwegian entry criteria         
-
- Polish access requirements       
-
- Portuguese access requirements  
-
- Romanian entry requirements     
-
- Access requirements            
-
- Local entry criteria           
-
- Spanish entry criteria            
-
-Additional notes
-
- Optional                    
-
- Additional Austrian info       
-
- No extension                       
-
- National requirements for recognition 
-
- Specific notes for Czech use      
-
- French legal notes                 
-
- German additional details          
-
- Icelandic local notes           
-
- Local cultural details            
-
- Norwegian regulations            
-
- National qualification specifics 
-
- Portuguese legal notes          
-
- Romanian notes                 
-
- Slovak notes                   
-
- Slovenian legal notes          
-
- National legal notes              
-
-#### 7\.3\.3 Standards and Specifications
-
-The technical framework implements internationally recognized standards to ensure interoperability, security, and wide adoption across the European education and professional qualification landscape:
-
-##### Core Standards
-
-- W3C Verifiable Credentials Data Model
-
-The W3C Verifiable Credentials Data Model serves as the foundational standard for our framework, providing a robust and internationally recognized approach to digital credentials\. This standard was developed through extensive collaboration within the World Wide Web Consortium \(W3C\), representing a global consensus on how digital credentials should be structured and verified\.
-
-The standard addresses several critical challenges in digital credentialing\. First, it ensures that credentials can be cryptographically verified, meaning that any attempt to tamper with or forge a credential can be detected\. This is particularly crucial in education and professional qualifications, where the authenticity of credentials directly impacts employment opportunities and further education prospects\.
-
-The model's structure directly supports our core layer requirements by providing standardized ways to represent essential credential information\. For example, when a university issues a degree certificate, the standard ensures that all crucial elements \- from the graduate's name to the qualification level \- are represented in a consistent, machine\-readable format while remaining human\-understandable\.
-
-One of the model's key strengths is its support for privacy\-preserving features, particularly selective disclosure\. This means that credential holders can choose to share only specific parts of their credentials while maintaining the verifiability of that information\. For instance, a professional might choose to share their qualification title and date of issuance without revealing their date of birth, even though all this information is contained in the same credential\.
-
-The standard also includes robust mechanisms for managing the lifecycle of credentials, including issuance, verification, and potential revocation\. This ensures that institutions can maintain control over their credentials even after they've been issued, for instance, being able to revoke a professional certification if necessary\.
-
-- Pseudonyms 
-
-Complementing the Verifiable Credentials Data Model, pseudonyms provide the critical infrastructure for managing digital identity within our framework\. Pseudonyms represent a paradigm shift from traditional centralized identity systems, offering a more resilient and flexible approach to identity management in educational and professional contexts\.
-
-Pseudonyms solve several fundamental challenges in credential management\. They provide a way for educational institutions, professional bodies, and other organizations to establish persistent, verifiable digital identities that don't depend on any single centralized system\. This is particularly important in the European context, where we need to support autonomous operation of numerous educational institutions while maintaining interoperability\.
-
-The standard enables educational institutions to maintain their autonomy while participating in the broader credential ecosystem\. Each institution can create and manage its own identifiers while still being part of the trusted network\. This balances the need for institutional independence with the requirements for system\-wide trust and verifiability\.
-
-For example, when a university issues a digital diploma, its Digital identifier serves as a verifiable digital signature that can be checked independently by any party, without needing to contact the university directly\. This significantly streamlines the verification process while maintaining security\.
-
-Pseudonyms also can support the various authentication methods needed by different types of institutions\. A large university might implement sophisticated key management systems, while a smaller professional body could use simpler authentication methods \- all while maintaining compatibility with the broader framework\.
-
-The standard's flexibility in supporting different authentication methods and service endpoints means that institutions can evolve their technical infrastructure over time without breaking existing credentials\. This future\-proofing is essential for a system that needs to remain operational for decades, as educational credentials often do\.
-
-The combination of these core standards provides several key benefits for our framework:
-
-1. Trust and Security
-
-- Cryptographic verification ensures credential authenticity
-- Tamper\-evident credential structure
-- Secure, verifiable issuer identities
-- Protected credential revocation mechanisms
-
-1. Privacy and Control
-
-- Granular control over information sharing
-- Privacy\-preserving verification processes
-- Support for data minimization principles
-- Compliance with GDPR requirements
-
-1. Interoperability and Scalability
-
-- Standardized credential formats
-- Vendor\-independent implementations
-- Cross\-border credential recognition
-- Future\-proof technical foundation
-
-1. Institutional Autonomy
-
-- Independent identity management
-- Flexible implementation options
-- Maintained institutional control
-- Supported local requirements
-
-##### Complementary Specifications
-
-The core standards provide a solid foundation for digital credentials, but education and professional qualifications have unique requirements that need additional standardization\. Two key specifications have been developed to address these sector\-specific needs, building upon the core standards while adding crucial education\-specific functionality\.
-
-- European Learning Model \(ELM\)
-
-The European Learning Model represents a significant advancement in standardizing educational credentials across Europe\. While the W3C Verifiable Credentials Data Model provides the basic structure for digital credentials, ELM extends this foundation with detailed specifications for representing educational achievements, qualifications, and learning outcomes in a way that meets the specific needs of European education systems\.
-
-ELM was developed through extensive collaboration between educational institutions, government bodies, and technical experts across Europe\. This collaborative development ensures that the model addresses real\-world requirements while maintaining compatibility with existing educational processes and systems\.
-
-The model's strength lies in its comprehensive approach to representing educational credentials\. It defines standardized ways to express complex educational concepts such as:
-
-- Learning outcomes and achievements
-- Credit systems and workload measurements
-- Assessment methods and grading schemes
-- Professional competencies and skills
-- Quality assurance information
-
-For example, when a university needs to issue a transcript of records for a student participating in the Erasmus program, ELM ensures that course credits, grades, and learning outcomes are represented in a way that can be correctly interpreted by institutions across different countries\. This standardization significantly reduces the administrative burden of student mobility and credit recognition\.
-
-ELM also addresses the challenge of representing qualifications that combine multiple elements, such as joint degrees or professional certifications with multiple specializations\. Its structured approach ensures that complex credentials remain machine\-readable and verifiable while preserving all necessary context and detail\.
-
-##### Alignment with European Frameworks
-
-While technical standards provide the foundation for digital credentials, and education\-specific specifications add sector functionality, alignment with established European frameworks is crucial for ensuring that digital credentials serve their ultimate purpose: supporting education and professional mobility across Europe\. Two key frameworks provide the structured context needed for meaningful credential recognition and comparison\.
-
-- European Qualifications Framework \(EQF\)
-
-The European Qualifications Framework represents one of the most significant achievements in European educational cooperation, providing a common reference system that makes qualifications comparable across national borders\. In the context of digital credentials, EQF integration is essential for ensuring that qualifications can be automatically understood and evaluated across different national contexts\.
-
-The EQF's eight\-level structure provides a sophisticated yet practical approach to comparing qualifications\. Each level is defined through learning outcomes – what a person knows, understands, and can do – rather than focusing on formal educational pathways\. This outcomes\-based approach is particularly valuable for digital credentials because it enables:
-
-1. Automated Level Mapping When credentials are issued digitally, they can include structured EQF level information that allows automatic comparison of qualifications\. For example, when a graduate with a Bachelor's degree from Spain applies for a Master's program in Germany, the receiving institution can automatically verify that the qualification meets their entry requirements through EQF level mapping\.
-2. National Framework Integration The EQF acts as a translation device between different national qualification frameworks\. Digital credentials can simultaneously express qualifications in terms of national levels and their corresponding EQF levels, maintaining both national specificity and European comparability\. This is crucial for countries that maintain their own qualification frameworks while participating in the European educational space\.
-3. Learning Outcomes Verification Digital credentials structured according to EQF principles can include detailed learning outcomes information in a standardized format\. This enables more precise matching of qualifications to requirements, whether for further education or employment purposes\. For instance, an employer in Sweden can understand exactly what skills and knowledge a qualification from Romania represents\.
-
-- ESCO \(European Skills, Competences, Qualifications and Occupations\)
-
-ESCO provides the crucial link between education and the labor market by offering a standardized, multilingual classification of skills, competences, qualifications, and occupations\. Its integration into digital credentials creates a powerful tool for matching educational achievements with professional opportunities across Europe\.
-
-ESCO's value in digital credentialing comes from several key features:
-
-1. Standardized Terminology ESCO provides a common language for describing skills and competencies across all European languages\. This standardization is essential for digital credentials because it enables:
-
-- Automatic translation of qualifications between languages
-- Precise matching of skills to job requirements
-- Consistent interpretation of competencies across borders
-- Clear communication between education and employment sectors
-
-1. Skills\-Based Mapping The framework allows digital credentials to express educational achievements in terms of specific skills and competencies\. This granular approach offers several benefits:
-
-- More precise matching of qualifications to job requirements
-- Better support for recognition of partial qualifications
-- Clearer pathways for professional development
-- Enhanced support for lifelong learning
-
-1. Labor Market Intelligence By using ESCO's structured vocabulary, digital credentials can be automatically analyzed to:
-
-- Identify emerging skill needs
-- Track qualification trends
-- Support career guidance
-- Inform curriculum development
-
-The integration of these frameworks with digital credentials provides several crucial benefits:
-
-1. Enhanced Mobility and Recognition
-
-- Automatic qualification level comparison
-- Consistent skills interpretation across borders
-- Simplified recognition procedures
-- Reduced barriers to professional mobility
-
-1. Improved Educational Planning
-
-- Better alignment with labor market needs
-- Evidence\-based curriculum development
-- Clear progression pathways
-- Support for lifelong learning
-
-1. Employment Market Efficiency
-
-- Precise matching of qualifications to jobs
-- Reduced skills mismatches
-- Better career guidance
-- Enhanced workforce development
-
-1. System\-wide Intelligence
-
-- Improved qualification transparency
-- Better understanding of skill needs
-- Enhanced policy development
-- Evidence\-based decision making
-
-The alignment with these European frameworks transforms digital credentials from simple digital documents into powerful tools for educational and professional mobility\. By embedding EQF levels and ESCO classifications within standardized digital credentials, we create a comprehensive system that:
-
-- Makes qualifications truly comparable across borders
-- Connects education directly to employment opportunities
-- Supports evidence\-based policy making
-- Facilitates lifelong learning and professional development
-
-This framework alignment ensures that digital credentials not only carry verified information about educational achievements but also provide structured, meaningful data that supports real\-world mobility and opportunity across Europe\. The combination of technical standards, educational specifications, and framework alignment creates a robust ecosystem that serves the needs of learners, educational institutions, employers, and policy makers while advancing European educational and professional mobility objectives\.
-
-### <a id="_Toc182376704"></a><a id="_Toc184710065"></a>8\.4 Country\-specific implementations
-
-The framework supports various implementation approaches across different regions, reflecting the diverse educational landscapes while maintaining interoperability\.
-
-#### 8\.4\.1 Western European Extensions
-
-Western European implementations reflect sophisticated educational traditions and cross\-border cooperation:
-
-- Austria
-	- German language extension: Implements full documentation in German while maintaining English core
-	- EQF level notation: Integrates European Qualification Framework references with national qualifications
-	- Additional Austrian info: Includes specific information about Austrian higher education characteristics
-- Belgium
-	- Multi\-language support: Implements three official languages \(Dutch, French, German\) reflecting the country's linguistic diversity
-	- Flemish Qualification Level: Incorporates specific qualification framework used in the Flemish region
-	- Special considerations for regional variations in educational systems
-- France
-	- French language extension: Complete documentation in French parallel to English core
-	- National level indicators: Integration with French qualification framework
-	- Specific qualification variants: Accommodates unique French degree titles and specializations
-- Germany
-	- German language extension: Full German translation maintaining technical precision
-	- Specific duration notation: Detailed semester and credit point system
-	- German grading scale: Integration of the numerical grading system with descriptors
-- Spain
-	- Spanish language extension: Complete Spanish translation with technical terminology
-	- National field notation: Specific classification of academic disciplines
-	- Integration with European educational initiatives
-
-#### 8\.4\.2 Eastern European Extensions
-
-Eastern European implementations reflect educational reforms and EU alignment:
-
-- Bulgaria
-	- Bulgarian language extension: Complete documentation in Bulgarian
-	- National qualification level: Integration with reformed qualification framework
-	- Local entry requirements: Specific prerequisites aligned with national standards
-- Czech Republic
-	- Czech language extension: Full Czech translation with technical accuracy
-	- Specific formatting requirements: Adherence to national documentation standards
-	- Local grading scale: Integration of Czech evaluation system
--  Poland
-	- Polish language extension: Complete Polish translation
-	- Local terminology: Specific academic and professional terms
-	- National qualification specifics: Integration with Polish qualification framework
-- Romania
-	- Romanian language extension: Full Romanian translation
-	- Optional formatting: Flexibility in document presentation
-	- Romanian grading scale: Integration of national evaluation system
-- Slovakia
-	- Slovak language extension: Complete Slovak translation
-	- Credit type notation: Specific credit system implementation
-	- Local qualification recognition requirements
-
-#### 8\.4\.3 Nordic Extensions
-
-Nordic implementations emphasize international compatibility while maintaining regional educational traditions:
-
-- Iceland
-	- Icelandic language extension: Full documentation in Icelandic
-	- ECTS inclusion: Strong integration with European Credit Transfer System
-	- National entry requirements: Specific prerequisites for Icelandic institutions
-- Norway
-	- Norwegian language extension: Complete Norwegian translation
-	- Local credits system: Integration with Norwegian credit framework
-	- Specific field notation: Alignment with Norwegian academic classifications
-
-#### 8\.4\.4 Southern European Extensions
-
-Southern European implementations reflect regional educational practices while ensuring international recognition:
-
-- Italy
-	- Italian language extension: Complete Italian translation
-	- Specific title variants: Accommodation of traditional degree titles
-	- Local cultural details: Integration of specific academic traditions
-- Portugal
-	-  Portuguese language extension: Full Portuguese translation
-	-  ECTS notation: Detailed credit system implementation
-	-  Portuguese legal notes: Compliance with national regulations
-- Slovenia
-	- Slovenian language extension: Complete Slovenian translation
-	- Local grading system: Integration of national evaluation methods
-	- Slovenian legal notes: Specific regulatory requirements
-
-### <a id="_Toc182376705"></a><a id="_Toc184710066"></a>8\.5 Implementation guidelines
-
-The successful deployment of this framework requires careful attention to both technical and organizational considerations\.
-
-#### 8\.5\.1 Core Model Implementation
-
-Key steps for implementing the fundamental structure include:
-
-1\. Establishing mandatory fields:
-
-- Define data types and relationships
-- Implement validation rules
-- Create standardized templates
-
-2\. Implementing English as default:
-
-- Set up primary language controls
-- Establish translation frameworks
-- Define language\-specific validation
-
-3\. Configuring data formats:
-
-- Implement standardized formatting
-- Define character set requirements
-- Establish field parameters
-
-#### 8\.5\.2 Extension Implementation
-
-Guidelines for adding country\-specific features include:
-
-1\. Creating extension modules:
-
-- Develop modular framework
-- Implement inheritance from core
-- Establish extension boundaries
-
-2\. Configuring language additions:
-
-- Set up multi\-language support
-- Implement translation management
-- Create language\-specific validation
-
-3\. Implement local formatting rules
-
-- Define country\-specific formats
-- Create regional templates
-- Establish formatting validation
-
-4\. Add national qualification frameworks
-
-- Implement local qualification systems
-- Create mapping to international standards
-- Establish qualification validation
-
-5\. Set up regional grading schemes
-
-- Implement local grading systems
-- Create grade conversion tools
-- Establish grade validation rules
-
-### <a id="_Toc182376706"></a><a id="_Toc184710067"></a>8\.6 Maintenance and updates
-
-To ensure the long\-term success of the framework, regular maintenance and updates are essential:
-
-#### 8\.6\.1 Core model updates
-
-Ensuring ongoing effectiveness of the core structure:
-
-- Regular review of mandatory fields
-	- Scheduled assessment periods
-	- Change impact analysis
-	- Update implementation procedures
-- Standardization compliance checks
-	-  Regular compliance audits
-	-  Standard evolution monitoring
-	-  Adjustment procedures
-- International compatibility verification
-	-  Cross\-border testing
-	-  Compatibility assessments
-	-  Update validation
-
-#### 8\.6\.2 Extension updates
-
-Managing country\-specific components:
-
-- Country\-specific regulation monitoring
-	- Legislative change tracking
-	- Regulatory compliance assessment
-	- Update planning
-- Local requirement implementations
-	- Requirement analysis
-	- Implementation planning
-	- Testing procedures
-- Regional format updates
-	- Format change assessment
-	- Update implementation
-	- Validation procedures
-
-### <a id="_Toc182376707"></a><a id="_Toc184710068"></a>8\.7 Model visualization and business architecture
-
-#### 8\.7\.1 Overview
-
-Visual representations of the framework's architecture help stakeholders understand how different components interact and support business processes\. These visualizations bridge the gap between technical implementation and business requirements, ensuring alignment across all levels of the organization\.
-
-#### 8\.7\.2 Core architecture components
+#### 8.7.2 Core architecture components
 
 ![Image16](./images/bbp-image16.png)
 
-The diagram above illustrates:
+The architectural diagram illustrates the comprehensive framework structure:
 
-- Core components \(light blue\) representing mandatory elements
-- Extension components \(light green\) showing country\-specific additions
-- Relationships between different elements of the framework
-- Integration points with existing systems
+**Core components (light blue)**: Representing mandatory elements that ensure international interoperability and consistent credential structure across all implementations.
 
-Key business implications:
+**Extension components (light green)**: Showing country-specific additions that accommodate national requirements while maintaining compatibility with the core framework.
 
-- Standardized core enables cross\-border recognition
-- Flexible extensions support national requirements
-- Clear separation of concerns allows phased implementation
-- Modular design supports future adaptability
+**Integration interfaces**: Demonstrating connection points with existing institutional systems and European-level infrastructure.
 
-#### 8\.7\.3 Implementation architecture
+**Data flow patterns**: Illustrating how credential data flows through the system from issuance to verification.
+
+#### Key business implications
+
+| Business Area | Architectural Support | Implementation Benefits | Strategic Value |
+|---------------|----------------------|------------------------|-----------------|
+| **Cross-border recognition** | Standardised core enables automatic qualification comparison | Reduced administrative burden and processing time | Enhanced educational and professional mobility |
+| **National compliance** | Flexible extensions support local requirements without compromising interoperability | Maintained national sovereignty with European integration | Balanced autonomy and cooperation |
+| **Phased implementation** | Clear separation of concerns allows gradual system adoption | Reduced implementation risk and cost | Sustainable technology adoption |
+| **Future adaptability** | Modular design supports evolving requirements and technologies | Long-term system sustainability | Future-proof investment |
+
+#### 8.7.3 Implementation architecture
 
 ![Image17](./images/bbp-image17.png)
 
-This diagram demonstrates:
+The implementation architecture demonstrates:
 
-- How the framework supports key business processes
-- Integration with existing workflows
-- Data exchange patterns
-- User interaction points
+**Business process integration**: How the framework supports key educational and professional processes from credential issuance through verification and recognition.
 
-Operational benefits:
+**System interaction patterns**: Integration approaches with existing educational management systems, student information systems, and professional registration databases.
 
-- Streamlined workflows
-- Reduced manual intervention
-- Clear process ownership
-- Enhanced efficiency
+**Data exchange protocols**: Standardised methods for credential sharing, verification requests, and status updates between different system components.
 
-#### 8\.7\.6 Maintenance and Evolution
+**User interaction models**: How different user types (students, institutions, employers, authorities) interact with the framework through various interfaces.
 
-The visualizations provided in this chapter should be regularly updated to reflect:
+#### Operational benefits analysis
 
-- Changes in business requirements
-- New technological capabilities
-- Evolving regulatory requirements
-- Stakeholder feedback
+| Operational Area | Framework Support | Efficiency Gains | Quality Improvements |
+|------------------|------------------|-----------------|---------------------|
+| **Workflow automation** | Automated credential verification and status checking | 70-80% reduction in manual verification time | Enhanced accuracy through automated processes |
+| **Manual intervention reduction** | Systematic automation of routine credential operations | Significant cost reduction in administrative processes | Reduced human error and improved consistency |
+| **Process ownership clarity** | Clear definition of roles and responsibilities in credential lifecycle | Improved accountability and process transparency | Enhanced service quality and user satisfaction |
+| **System efficiency enhancement** | Optimised data flows and processing workflows | Improved system performance and response times | Better user experience and system reliability |
 
-This ensures that the framework continues to align with business needs while maintaining technical integrity\.
+#### 8.7.4 Maintenance and evolution
 
-### <a id="_Toc182376708"></a><a id="_Toc184710069"></a>8\.8 Conclusion
+The visualisations provided in this chapter should be regularly updated to reflect evolving requirements:
 
-The technical framework for sectorial EAA's catalogue and data model presented in this chapter provide the foundation for a robust and flexible credential management system across Europe\. By balancing standardization with flexibility, and international accessibility with local compliance, the framework enables the successful implementation of trust frameworks while accommodating the diverse needs of educational and professional institutions across Europe\.
+**Business requirement changes**:
+- Adaptation to new educational policies and international cooperation agreements
+- Integration of emerging educational models and qualification types
+- Response to changing stakeholder needs and expectations
 
-This technical infrastructure supports the use cases presented in previous chapters and enables the continuous evolution of credential management practices\. As technology and educational needs continue to evolve, the framework's modular design ensures it can adapt while maintaining the integrity and interoperability of credentials across the European education and professional qualification landscape\.
+**Technological capability evolution**:
+- Incorporation of new cryptographic standards and security technologies
+- Integration with emerging European digital identity initiatives
+- Adaptation to new educational technology platforms and systems
+
+**Regulatory requirement updates**:
+- Compliance with updated European regulations and directives
+- Adaptation to national legislative changes affecting education
+- Integration with evolving data protection and privacy requirements
+
+**Stakeholder feedback integration**:
+- Regular incorporation of user feedback and experience insights
+- Adaptation based on implementation lessons learned
+- Evolution based on stakeholder suggestions and requirements
+
+This ensures that the framework continues to align with business needs while maintaining technical integrity and supporting the evolving European educational landscape.
+
+### <a id="_Toc182376708"></a><a id="_Toc184710069"></a>8.8 Technical implementation examples
+
+To support practical implementation of the framework, this section provides concrete examples of technical specifications and code implementations.
+
+#### 8.8.1 Core data model JSON schema example
+
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://europa.eu/schemas/edc/core-credential-schema.json",
+  "title": "European Digital Credential Core Schema",
+  "description": "Core schema for European educational and professional digital credentials",
+  "type": "object",
+  "properties": {
+    "@context": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": [
+        "https://www.w3.org/2018/credentials/v1",
+        "https://europa.eu/schemas/edc/v1"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "format": "uri",
+      "description": "Unique identifier for the credential"
+    },
+    "type": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "contains": {
+        "const": "EuropeanDigitalCredential"
+      },
+      "description": "Credential types including European Digital Credential"
+    },
+    "issuer": {
+      "type": "string",
+      "format": "uri",
+      "description": "DID of the credential issuer"
+    },
+    "issuanceDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Date and time of credential issuance"
+    },
+    "credentialSubject": {
+      "$ref": "#/$defs/CredentialSubject"
+    }
+  },
+  "required": ["@context", "id", "type", "issuer", "issuanceDate", "credentialSubject"],
+  "$defs": {
+    "CredentialSubject": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uri",
+          "description": "DID of the credential holder"
+        },
+        "qualificationTitle": {
+          "$ref": "#/$defs/MultilingualText",
+          "description": "Title of the qualification"
+        },
+        "recipientName": {
+          "type": "string",
+          "description": "Full legal name of the recipient"
+        },
+        "dateOfBirth": {
+          "type": "string",
+          "format": "date",
+          "description": "Date of birth in YYYY-MM-DD format"
+        },
+        "issuingInstitution": {
+          "$ref": "#/$defs/Institution"
+        },
+        "qualificationLevel": {
+          "$ref": "#/$defs/QualificationLevel"
+        },
+        "programmeDuration": {
+          "$ref": "#/$defs/Duration"
+        },
+        "fieldOfStudy": {
+          "$ref": "#/$defs/FieldOfStudy"
+        },
+        "gradingScheme": {
+          "$ref": "#/$defs/GradingScheme"
+        }
+      },
+      "required": [
+        "id", "qualificationTitle", "recipientName", "dateOfBirth",
+        "issuingInstitution", "qualificationLevel", "programmeDuration", "fieldOfStudy"
+      ]
+    },
+    "MultilingualText": {
+      "type": "object",
+      "properties": {
+        "en": {
+          "type": "string",
+          "description": "English text (mandatory)"
+        }
+      },
+      "required": ["en"],
+      "patternProperties": {
+        "^[a-z]{2}$": {
+          "type": "string",
+          "description": "Text in additional languages (ISO 639-1)"
+        }
+      }
+    },
+    "Institution": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "$ref": "#/$defs/MultilingualText"
+        },
+        "identifier": {
+          "type": "string",
+          "description": "Standardized institutional identifier"
+        },
+        "country": {
+          "type": "string",
+          "pattern": "^[A-Z]{2}$",
+          "description": "ISO 3166-1 alpha-2 country code"
+        }
+      },
+      "required": ["name", "identifier", "country"]
+    },
+    "QualificationLevel": {
+      "type": "object",
+      "properties": {
+        "eqfLevel": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 8,
+          "description": "European Qualifications Framework level"
+        },
+        "nationalLevel": {
+          "type": "string",
+          "description": "National qualification framework level"
+        }
+      },
+      "required": ["eqfLevel"]
+    },
+    "Duration": {
+      "type": "object",
+      "properties": {
+        "years": {
+          "type": "number",
+          "minimum": 0
+        },
+        "ectsCredits": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": ["ectsCredits"]
+    },
+    "FieldOfStudy": {
+      "type": "object",
+      "properties": {
+        "iscedCode": {
+          "type": "string",
+          "pattern": "^[0-9]{4}$",
+          "description": "ISCED-F 2013 field of study code"
+        },
+        "description": {
+          "$ref": "#/$defs/MultilingualText"
+        }
+      },
+      "required": ["iscedCode", "description"]
+    },
+    "GradingScheme": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "$ref": "#/$defs/MultilingualText"
+        },
+        "scale": {
+          "type": "string",
+          "description": "Description of the grading scale"
+        },
+        "grade": {
+          "type": "string",
+          "description": "Achieved grade"
+        }
+      }
+    }
+  }
+}
+```
+
+#### 8.8.2 Country extension example (German implementation)
+
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://europa.eu/schemas/edc/extensions/de-credential-extension.json",
+  "title": "German Extension for European Digital Credentials",
+  "description": "German-specific extensions for educational credentials",
+  "allOf": [
+    {
+      "$ref": "https://europa.eu/schemas/edc/core-credential-schema.json"
+    }
+  ],
+  "properties": {
+    "credentialSubject": {
+      "properties": {
+        "qualificationTitle": {
+          "properties": {
+            "de": {
+              "type": "string",
+              "description": "German qualification title"
+            }
+          },
+          "required": ["en", "de"]
+        },
+        "issuingInstitution": {
+          "properties": {
+            "name": {
+              "properties": {
+                "de": {
+                  "type": "string",
+                  "description": "German institution name"
+                }
+              },
+              "required": ["en", "de"]
+            }
+          }
+        },
+        "qualificationLevel": {
+          "properties": {
+            "germanLevel": {
+              "type": "string",
+              "enum": ["Bachelor", "Master", "Diplom", "Magister", "Promotion"],
+              "description": "German national qualification level"
+            }
+          }
+        },
+        "programmeDuration": {
+          "properties": {
+            "semesters": {
+              "type": "integer",
+              "minimum": 1,
+              "description": "Duration in semesters"
+            }
+          }
+        },
+        "gradingScheme": {
+          "properties": {
+            "germanGrade": {
+              "type": "object",
+              "properties": {
+                "numericGrade": {
+                  "type": "number",
+                  "minimum": 1.0,
+                  "maximum": 4.0,
+                  "description": "German numeric grade (1.0-4.0)"
+                },
+                "gradeDescription": {
+                  "type": "string",
+                  "enum": ["sehr gut", "gut", "befriedigend", "ausreichend"],
+                  "description": "German grade description"
+                }
+              },
+              "required": ["numericGrade", "gradeDescription"]
+            }
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+#### 8.8.3 Verification API specification
+
+```yaml
+openapi: 3.0.3
+info:
+  title: European Digital Credential Verification API
+  description: API for verifying European digital educational and professional credentials
+  version: 1.0.0
+  contact:
+    name: European Digital Credential Framework
+    url: https://europa.eu/edc/support
+servers:
+  - url: https://api.europa.eu/edc/v1
+    description: European Digital Credential API
+paths:
+  /verify:
+    post:
+      summary: Verify a digital credential
+      description: Verifies the authenticity and validity of a European digital credential
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VerificationRequest'
+      responses:
+        '200':
+          description: Verification completed successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VerificationResponse'
+        '400':
+          description: Invalid request format
+        '422':
+          description: Credential verification failed
+        '500':
+          description: Internal server error
+  /credential/{id}/status:
+    get:
+      summary: Check credential status
+      description: Retrieves the current status of a digital credential
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Credential identifier
+      responses:
+        '200':
+          description: Status retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CredentialStatus'
+        '404':
+          description: Credential not found
+components:
+  schemas:
+    VerificationRequest:
+      type: object
+      required:
+        - credential
+      properties:
+        credential:
+          type: object
+          description: The credential to be verified
+        verificationOptions:
+          type: object
+          properties:
+            checkStatus:
+              type: boolean
+              default: true
+              description: Whether to check credential status
+            checkIssuer:
+              type: boolean
+              default: true
+              description: Whether to verify issuer identity
+    VerificationResponse:
+      type: object
+      properties:
+        verified:
+          type: boolean
+          description: Overall verification result
+        verificationDetails:
+          type: object
+          properties:
+            signatureValid:
+              type: boolean
+              description: Cryptographic signature verification result
+            issuerValid:
+              type: boolean
+              description: Issuer verification result
+            statusValid:
+              type: boolean
+              description: Credential status verification result
+            dateValid:
+              type: boolean
+              description: Credential date validity result
+        errors:
+          type: array
+          items:
+            type: string
+          description: List of verification errors if any
+    CredentialStatus:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Credential identifier
+        status:
+          type: string
+          enum: [valid, revoked, suspended, expired]
+          description: Current credential status
+        statusDate:
+          type: string
+          format: date-time
+          description: Date when status was last updated
+        reason:
+          type: string
+          description: Reason for status change (if applicable)
+```
+
+### <a id="_Toc182376709"></a><a id="_Toc184710070"></a>8.9 Conclusion
+
+The technical framework for sectorial EAA's catalogue and data model presented in this chapter provides the foundation for a robust and flexible credential management system across Europe. By balancing standardisation with flexibility, and international accessibility with local compliance, the framework enables the successful implementation of trust frameworks while accommodating the diverse needs of educational and professional institutions across Europe.
+
+#### Key achievements of the technical framework
+
+**Comprehensive standardisation**: The framework successfully combines W3C Verifiable Credentials with the European Learning Model, creating a standardised yet flexible approach that serves both international interoperability and national requirements.
+
+**Privacy and security integration**: Built-in privacy-preserving features, including selective disclosure and cryptographic verification, ensure that personal data is protected while enabling efficient credential verification across borders.
+
+**European framework alignment**: Integration with EQF and ESCO frameworks transforms digital credentials into powerful tools for educational and professional mobility, connecting education directly to employment opportunities.
+
+**Scalable implementation approach**: The modular design supports phased implementation, allowing institutions to adopt the framework at their own pace while maintaining compatibility with the broader ecosystem.
+
+#### Future evolution and adaptability
+
+This technical infrastructure supports the [use cases presented in Chapter 7](chapter7.md) and enables the continuous evolution of credential management practices. As technology and educational needs continue to evolve, the framework's modular design ensures it can adapt while maintaining the integrity and interoperability of credentials across the European education and professional qualification landscape.
+
+The framework is designed to accommodate:
+- **Emerging technologies**: Integration of new cryptographic standards and verification methods
+- **Educational innovation**: Support for new types of credentials and learning modalities
+- **Regulatory evolution**: Adaptation to changing European and national regulations
+- **Stakeholder needs**: Response to evolving requirements from educational institutions, employers, and individuals
+
+#### Implementation pathway
+
+Successful implementation of this technical framework requires:
+
+1. **Systematic approach**: Following the implementation guidelines provided in [Section 8.5](#85-implementation-guidelines)
+2. **Stakeholder engagement**: Involving educational institutions, professional bodies, and technology providers
+3. **Phased deployment**: Gradual rollout as outlined in the [implementation roadmap in Chapter 10](chapter10.md)
+4. **Continuous monitoring**: Regular assessment and updates based on practical experience and stakeholder feedback
+
+The technical framework establishes a solid foundation for transforming credential management in Europe, supporting the vision of seamless educational and professional mobility while respecting institutional autonomy and national sovereignty. Through careful implementation and continuous evolution, this framework will contribute significantly to achieving the goals of the European Education Area and supporting Europe's digital transformation in education and professional qualifications.
