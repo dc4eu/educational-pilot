@@ -8,6 +8,18 @@ The DC4EU educational pilot demonstrates end-to-end implementation of EBSI-compl
 
 ## Available Deliverables
 
+### D5.1 - Business Blue Print (BBP)
+
+**[→ View Documentation](./5.1%20BBP/README.md)**
+
+A comprehensive framework for digital credential management across the European Union that establishes the foundation for trusted, interoperable, and privacy-preserving digital credentials supporting educational mobility and professional recognition throughout Europe. Built upon the European Digital Identity framework (eIDAS 2.0), the BBP addresses fundamental challenges facing educational institutions, students, and professionals in managing and verifying qualifications across borders whilst respecting institutional autonomy.
+
+**Key highlights:**
+- Comprehensive trust model and governance framework for credential operations
+- Structured onboarding procedures for individuals and institutions
+- Standardised approaches for digital credential lifecycle management
+- Technical framework with detailed data model architecture and implementation guidance
+
 ### D5.2 - Deployment and Testing Scenarios Results Library (DSTRL)
 
 **[→ View Documentation](./5.2%20DSTRL/README.md)**
