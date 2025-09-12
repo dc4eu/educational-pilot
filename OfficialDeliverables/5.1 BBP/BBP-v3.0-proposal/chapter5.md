@@ -23,7 +23,7 @@ The credential issuance process follows standardized formats based on the W3C Ve
 
 BPMN Diagram 
 
-![Image3](../../images/bbp-image3.png)
+![Image3](./images/bbp-image3.png)
 
 #### Phases of the onboarding process
 
@@ -72,7 +72,7 @@ The admission phase concludes once the data is successfully validated\.
 
 BPMN Diagram Placeholder
 
-![Image4](../../images/bbp-image4.png)
+![Image4](./images/bbp-image4.png)
 
 ##### Phase 2: Enrolment
 
@@ -100,7 +100,7 @@ Process Description
 
 BPMN Diagram 
 
-![Image5](../../images/bbp-image5.png)
+![Image5](./images/bbp-image5.png)
 
  
 
@@ -135,7 +135,7 @@ Process Description
 BPMN Diagram 
 
 
-![Image6](../../images/bbp-image6.png)
+![Image6](./images/bbp-image6.png)
 
 #### Actors and Systems Overview
 
@@ -498,4 +498,4 @@ This process enables organisations to participate in non\-foundational identity 
 
 The onboarding of legal entities into the trust framework follows a structured process that addresses three distinct governance types: entitlement, quality assurance, and non\-foundational identity\. Each flow represents a specific aspect of establishing trust and authority within the framework\.
 
-![Image7](../../images/bbp-image7.png)
+![Image7](./images/bbp-image7.png)
