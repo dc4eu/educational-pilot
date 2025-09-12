@@ -40,13 +40,13 @@ From an institutional viewpoint, education appears as distinct segments\. Each s
 
 Yet for students like Jacob, education forms one continuous journey\. From primary school through university and into professional life, each achievement builds upon previous ones\. This personal learning path knows no institutional boundaries \- it's a single story of growth and development\.
 
-
+![Image1](../../images/bbp-image1.png)
 
 *figure 1 \- educational journey*
 
 The European educational space adds another layer of complexity\. Different directorates manage various aspects of education, each with its own systems and requirements\. This fragmentation makes cross\-border mobility particularly challenging for students and professionals\.
 
-
+![Image2](../../images/bbp-image2.png)
 
 *figure 2 \- EC educational landscape*
 
