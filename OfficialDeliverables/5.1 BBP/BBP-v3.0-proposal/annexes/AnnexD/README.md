@@ -1,5 +1,3 @@
-Looking at Annex D, I can see opportunities for improvement in terms of cross-references and presentation format. Here's the updated version with proper links and enhanced formatting:
-
 # Annex D: Regulatory references
 
 This annex provides a comprehensive overview of the key European regulations, directives, and frameworks that underpin the digital credential ecosystem for education and professional qualifications. These regulatory foundations ensure legal compliance, cross-border recognition, and alignment with broader European digital transformation objectives.
