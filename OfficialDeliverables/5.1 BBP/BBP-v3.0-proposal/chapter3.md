@@ -1,189 +1,271 @@
 ## <a id="_Toc182376668"></a><a id="_Toc184710015"></a>Chapter 3: Current challenges and needs in educational and professional credential management
 
-The management of educational credentials in Europe is at a critical juncture, facing a myriad of challenges stemming from the diverse and decentralised nature of the continent's education systems\. This chapter examines the current state of credential management, identifying key challenges and needs within the European educational ecosystem\.
+The management of educational credentials in Europe is at a critical juncture, facing a myriad of challenges stemming from the diverse and decentralised nature of the continent's education systems. This chapter examines the current state of credential management, identifying key challenges and needs within the European educational ecosystem.
 
-The trust framework's solution to these challenges is detailed in Section 4\.1, with technical specifications provided in Section 7\.2\.
+The trust framework's solution to these challenges is detailed in [Section 4.1](chapter4.md#41-trust-model-and-governance-framework), with technical specifications provided in [Section 7.2](chapter7.md#72-categories-of-use-cases).
 
-### <a id="_Toc182376669"></a><a id="_Toc184710016"></a>3\.1 Credential issuance and verification
+### <a id="_Toc182376669"></a><a id="_Toc184710016"></a>3.1 Credential issuance and verification
 
-#### 3\.1\.1 Diversity in credential formats
+#### 3.1.1 Diversity in credential formats
 
-Educational institutions across Europe issue credentials in a wide range of formats, from traditional paper\-based documents to advanced digital certificates\. This diversity reflects deep\-rooted institutional practices and national regulations\.
+Educational institutions across Europe issue credentials in a wide range of formats, from traditional paper-based documents to advanced digital certificates. This diversity reflects deep-rooted institutional practices and national regulations.
 
-Paper\-based credentials remain common in many European countries, often incorporating security features such as watermarks or holograms\. However, these present challenges in terms of verification, especially across borders, and are vulnerable to loss or damage\.
+#### Current credential format landscape:
 
-Digital credentials are gaining traction, with formats ranging from simple PDF documents to more sophisticated verifiable credentials\-based certificates\. Some institutions issue hybrid credentials, providing both paper and digital versions\. The adoption of digital credentials varies significantly between countries and institutions\.
+| Format Type | Characteristics | Advantages | Challenges |
+|-------------|----------------|-------------|------------|
+| **Paper-based credentials** | Traditional documents with security features (watermarks, holograms) | Familiar, legally established | Verification challenges, cross-border issues, vulnerable to loss/damage |
+| **Simple digital credentials** | PDF documents, basic digital formats | Easy to distribute, cost-effective | Limited security, difficult to verify authenticity |
+| **Advanced digital credentials** | Verifiable credentials-based certificates | Secure, tamper-evident, machine-readable | Requires new infrastructure, limited adoption |
+| **Hybrid credentials** | Both paper and digital versions provided | Flexibility for different contexts | Increased administrative burden, potential inconsistency |
 
-This diversity in credential formats creates challenges for employers and educational institutions attempting to verify qualifications from different countries\. Each format may require different verification methods, leading to inefficiencies and potential security risks\.
+This diversity in credential formats creates challenges for employers and educational institutions attempting to verify qualifications from different countries. Each format may require different verification methods, leading to inefficiencies and potential security risks.
 
-#### 3\.1\.2 Verification processes
+#### 3.1.2 Verification processes
 
-The verification of educational credentials remains a complex and often manual process in many parts of Europe\. Methods used for verification vary widely, reflecting the diverse credential formats and institutional practices\.
+The verification of educational credentials remains a complex and often manual process in many parts of Europe. Methods used for verification vary widely, reflecting the diverse credential formats and institutional practices.
 
-Many institutions still rely on direct communication with the issuing body for verification\. This method, while potentially thorough, is time\-consuming and resource\-intensive\. It can lead to significant delays in processes such as university admissions or job applications, particularly when credentials need to be verified across borders\.
+#### Current verification challenges:
 
-Some countries have implemented digital verification platforms at a national level\. For example, the Netherlands has developed a system called DUO, which allows for the digital verification of Dutch educational credentials\. While such systems can streamline the verification process within a country, they often lack interoperability with systems from other countries, limiting their usefulness in a pan\-European context\.
+**Manual verification methods:**
+- **Direct institutional contact**: Time-consuming and resource-intensive communication with issuing bodies
+- **Case-by-case evaluation**: Potentially thorough but subjective and inconsistent
+- **Cross-border delays**: Significant processing time when credentials need international verification
 
-There's a need for a trust infrastructure must provide:
+**National digital platforms:**
+- **Limited national systems**: Some countries like the Netherlands (DUO system) have digital verification
+- **Interoperability gaps**: National systems lack cross-border compatibility
+- **Pan-European limitations**: Useful within countries but limited European context
 
-- Distributed verification capabilities
-- Redundant record keeping
-- Independent verification pathways
-- Protection against single points of failure
+#### Trust infrastructure requirements:
 
-Such infrastructure is a potential solution for credential verification, offering the potential for near\-instantaneous verification and could significantly reduce the administrative burden of credential checking\.
+There's a need for a trust infrastructure that must provide:
 
-The lack of a standardised, digitalised cross\-border verification system creates inefficiencies and potential security risks\. It also poses barriers to student mobility and professional recognition across Europe, as the time and effort required to verify credentials can discourage institutions and employers from considering applicants with qualifications from unfamiliar systems\.
+| Requirement | Description | Benefit |
+|------------|-------------|---------|
+| **Distributed verification capabilities** | Multiple verification points across the network | Prevents single points of failure |
+| **Redundant record keeping** | Multiple copies of verification data | Ensures data availability and reliability |
+| **Independent verification pathways** | Various methods to verify credentials | Increases system resilience |
+| **Protection against single points of failure** | System continues functioning if components fail | Maintains continuous service |
 
-#### 3\.1\.3 Building on Bologna Process achievements
+Such infrastructure offers potential for near-instantaneous verification and could significantly reduce the administrative burden of credential checking.
 
-The current digital credential challenges mirror those addressed by the Bologna Process for degree structures and quality assurance\. The Bologna Process demonstrated that:
+The lack of a standardised, digitalised cross-border verification system creates inefficiencies and potential security risks. It also poses barriers to student mobility and professional recognition across Europe, as the time and effort required to verify credentials can discourage institutions and employers from considering applicants with qualifications from unfamiliar systems.
 
-- Common standards can coexist with national autonomy
-- Voluntary frameworks can achieve widespread adoption
-- Practical tools \(like ECTS\) can solve complex cross\-border challenges
-- Quality assurance can be standardized while respecting institutional diversity
+#### 3.1.3 Building on Bologna Process achievements
 
-These lessons inform our approach to digital credential standardization\. Just as ECTS created a common "currency" for academic credit, digital credentials need standardized formats and trust frameworks that work across borders while respecting institutional and national requirements\.
+The current digital credential challenges mirror those addressed by the Bologna Process for degree structures and quality assurance. 
 
-### <a id="_Toc182376670"></a><a id="_Toc184710017"></a>3\.2 Recognition of qualifications
+#### Bologna Process lessons for digital credentials:
 
-#### 3\.2\.1 Academic recognition
+| Bologna Achievement | Digital Credential Application |
+|-------------------|------------------------------|
+| **Common standards with national autonomy** | Standardised digital formats respecting institutional requirements |
+| **Voluntary framework adoption** | Opt-in digital credential systems with clear benefits |
+| **Practical tools (ECTS)** | Digital credential "currency" for cross-border recognition |
+| **Standardised quality assurance** | Digital trust frameworks respecting institutional diversity |
 
-The recognition of academic qualifications for further study presents several challenges, largely stemming from the autonomy granted to educational institutions in many European countries\.
+These lessons inform our approach to digital credential standardization. Just as ECTS created a common "currency" for academic credit, digital credentials need standardized formats and trust frameworks that work across borders while respecting institutional and national requirements.
 
-Institutional autonomy in recognition practices leads to inconsistencies in how qualifications are valued and recognised\. An academic qualification that is readily accepted for further study in one institution may be viewed differently by another, even within the same country\. This variability can create uncertainty for students and potentially lead to unfair outcomes\.
+### <a id="_Toc182376670"></a><a id="_Toc184710017"></a>3.2 Recognition of qualifications
 
-The methods used for evaluating and recognising prior qualifications vary widely\. Some institutions conduct case\-by\-case manual evaluations, which can be thorough but time\-consuming and potentially subjective\. Others use more standardised procedures based on systems like the European Credit Transfer and Accumulation System \(ECTS\)\. While ECTS has helped to standardise credit recognition within the European Higher Education Area, its application is not uniform across all institutions and programmes\.
+#### 3.2.1 Academic recognition
 
-The lack of automation in recognition processes is a significant issue\. Few institutions reported automated recognition processes, with most relying on human evaluation\. This reliance on manual processes can lead to delays and inconsistencies, particularly when dealing with a high volume of applications or unfamiliar qualifications\.
+The recognition of academic qualifications for further study presents several challenges, largely stemming from the autonomy granted to educational institutions in many European countries.
 
-#### 3\.2\.2 Professional recognition
+#### Academic recognition challenges:
 
-The recognition of professional qualifications faces its own set of challenges, often more complex due to the regulatory nature of many professions\.
+**Institutional autonomy effects:**
+- **Inconsistent evaluation**: Qualifications valued differently between institutions, even within same country
+- **Variable standards**: Recognition practices differ significantly across institutions
+- **Uncertainty for students**: Unpredictable outcomes create barriers to mobility
 
-Each EU member state has its own regulations for professional recognition, particularly for regulated professions\. This regulatory complexity can make it difficult for professionals to have their qualifications recognised when moving between countries, even within the EU\.
+**Evaluation methodology issues:**
+- **Manual case-by-case evaluation**: Thorough but time-consuming and potentially subjective
+- **ECTS standardisation gaps**: Despite Bologna Process, application not uniform across all institutions
+- **Automation deficits**: Few institutions report automated recognition processes
 
-The responsibility for recognition is often distributed among numerous authorities based on professional fields\. For example, medical qualifications might be recognised by a health authority or by the national body representing the corresponding professional corporations, while engineering qualifications fall under a different body\. This fragmentation can make the recognition process confusing and time\-consuming for applicants, who may need to navigate multiple systems and requirements\.
+**Process inefficiencies:**
+- **Human-dependent evaluation**: Most institutions rely on manual assessment
+- **High-volume challenges**: Delays and inconsistencies when processing many applications
+- **Unfamiliar qualification handling**: Difficulties with qualifications from unknown systems
 
-While some countries have implemented digital services for professional recognition applications, many processes remain paper\-based and time\-consuming\. The European Professional Card, an electronic procedure for recognising professional qualifications between EU countries, is a step towards digitalisation but is currently limited to a few professions\.
+#### 3.2.2 Professional recognition
 
-These challenges significantly hinder professional mobility within Europe\. Professionals may face lengthy and complex processes to have their qualifications recognised in different countries, potentially discouraging them from seeking opportunities abroad or leading to underemployment when they do move\.
+Professional qualification recognition faces more complex challenges due to regulatory requirements across different professions.
 
-The operational model addresses these challenges through mechanisms detailed in Section 4\.2, with practical examples demonstrated in Section 6\.3\.1\.
+#### Professional recognition complexity:
 
-### <a id="_Toc182376671"></a><a id="_Toc184710018"></a>3\.3 Data management and interoperability
+| Challenge Area | Description | Impact |
+|---------------|-------------|--------|
+| **Regulatory fragmentation** | Each EU member state has own regulations for professional recognition | Difficult cross-border professional mobility |
+| **Multi-authority responsibility** | Different bodies handle different professions (medical, engineering, etc.) | Confusing navigation for applicants |
+| **Paper-based processes** | Many recognition processes remain manual and time-consuming | Lengthy delays, administrative burden |
+| **Limited digital services** | European Professional Card available only for few professions | Restricted modernisation of recognition |
 
-#### 3\.3\.1 Data models and standards
+These challenges significantly hinder professional mobility within Europe. Professionals may face lengthy and complex processes to have their qualifications recognised in different countries, potentially discouraging them from seeking opportunities abroad or leading to underemployment when they do move.
 
-The lack of widely adopted standards for data models in the education sector is a significant barrier to interoperability\. Our research found that only 18% of surveyed countries reported aligning their educational data models with international standards like ELMO \- ELMO is a data format for the exchange of \(education\) result information\. ELMO is an implementation of the European \(CEN\) standards ELM\-AI \(European Learner Mobility – Achievement Information, EN 15981\) and MLO \(Metadata for Learning Objects, EN 15982\)\.
+The operational model addresses these challenges through mechanisms detailed in [Section 4.2](chapter4.md#42-credential-lifecycle-management), with practical examples demonstrated in [Section 6.3.1](chapter6.md#631-formal-accreditation).
 
-The adoption of common data models varies across education levels\. Higher education tends to have higher adoption rates \(59% of surveyed countries\), likely due to initiatives like the Bologna Process which have encouraged standardisation in this sector\. However, adoption rates are lower for other levels of education, creating challenges for lifelong learning recognition\.
+### <a id="_Toc182376671"></a><a id="_Toc184710018"></a>3.3 Data management and interoperability
 
-This lack of standardisation hampers data interoperability and complicates the process of comparing and recognising qualifications across borders\. When educational data is stored and structured differently in various systems, it becomes difficult to create automated processes for qualification recognition or to provide comprehensive views of an individual's educational achievements\.
+#### 3.3.1 Data models and standards
 
-#### 3\.3\.2 Data sharing and privacy
+The lack of widely adopted standards for data models in the education sector is a significant barrier to interoperability.
 
-While all surveyed countries adhere to the General Data Protection Regulation \(GDPR\), the implementation of education or professional\-specific data protection measures varies\. This variability can create uncertainty about what data can be shared and how, potentially hindering efforts to create comprehensive systems for credential recognition\.
+#### Current standardisation levels:
 
-There are limited mechanisms for secure, efficient cross\-border exchange of educational data\. While initiatives like EMREX aim to facilitate such exchange in higher education, their adoption is not universal\. The lack of established channels for data exchange can lead to reliance on less secure methods or create barriers to recognition processes\.
+| Standard/Level | Adoption Rate | Implementation Details |
+|----------------|---------------|----------------------|
+| **International standards (ELMO)** | 18% | European Learner Mobility format for result information exchange |
+| **University education data models** | 59% | Higher adoption due to Bologna Process initiatives |
+| **Upper secondary education** | 53% | Moderate adoption with room for improvement |
+| **Other education levels** | Lower rates | Significant challenges for lifelong learning recognition |
 
-Balancing data sharing for recognition purposes with stringent privacy requirements presents an ongoing challenge\. Educational institutions and regulatory bodies must navigate the need to verify and recognise qualifications while respecting individuals' rights to data privacy and control over their personal information\.
+**ELMO definition**: ELMO is a data format for the exchange of (education) result information. ELMO is an implementation of the European (CEN) standards ELM-AI (European Learner Mobility – Achievement Information, EN 15981) and MLO (Metadata for Learning Objects, EN 15982).
 
-### <a id="_Toc182376672"></a><a id="_Toc184710019"></a>3\.4 Technological infrastructure
+This lack of standardisation hampers data interoperability and complicates the process of comparing and recognising qualifications across borders. When educational data is stored and structured differently in various systems, it becomes difficult to create automated processes for qualification recognition or to provide comprehensive views of an individual's educational achievements.
 
-The development of technological infrastructure to support digital credential management varies significantly across Europe, creating disparities in the ability to issue, manage, and verify digital credentials\.
+#### 3.3.2 Data sharing and privacy
 
-Some countries have implemented national platforms for issuing and verifying digital credentials\. For example, Estonia's e\-government infrastructure includes provisions for digital educational certificates\. However, these advanced systems are not universally adopted across Europe\.
+#### Data sharing challenges:
 
-Trusted ledger initiatives for credential management are being explored by some institutions, offering potential for secure, decentralised credential verification\. However, widespread adoption remains limited, often confined to pilot projects or specific institutions\.
+**GDPR compliance variation:**
+- **Universal GDPR adherence**: All surveyed countries follow General Data Protection Regulation
+- **Sector-specific implementation**: Education-specific data protection measures vary significantly
+- **Sharing uncertainty**: Unclear guidelines on what data can be shared and how
 
-Many institutions still rely on legacy systems that are not easily integrated with newer digital solutions\. This reliance on older technology can create barriers to adopting more advanced credential management systems and can hinder interoperability efforts\.
+**Cross-border exchange limitations:**
+- **Limited secure mechanisms**: Few established channels for safe educational data exchange
+- **EMREX adoption gaps**: Higher education exchange initiatives not universally adopted
+- **Insecure alternatives**: Lack of proper channels leads to less secure data sharing methods
 
-The disparity in technological readiness across European educational institutions poses challenges for implementing unified digital credential solutions\. Institutions with more advanced systems may be reluctant to adopt new standards that require significant changes, while those with less developed infrastructure may struggle to implement more advanced solutions\.
+**Privacy-recognition balance:**
+- **Verification needs vs privacy rights**: Challenge of enabling recognition while protecting individual data
+- **Control over personal information**: Need for systems that respect individual data ownership
+- **Recognition efficiency requirements**: Balance between thorough verification and privacy protection
 
-### <a id="_Toc182376673"></a><a id="_Toc184710020"></a>3\.5 Legal and regulatory framework
+### <a id="_Toc182376672"></a><a id="_Toc184710019"></a>3.4 Technological infrastructure
 
-The legal and regulatory landscape for educational credentials in Europe is complex and varied, reflecting the diversity of national education systems and the evolving nature of digital credentials\.
+The development of technological infrastructure to support digital credential management varies significantly across Europe, creating disparities in the ability to issue, manage, and verify digital credentials.
 
-Many countries have specific legislation governing the issuance and recognition of educational credentials\. These laws may not always align with digital transformation goals, potentially creating legal barriers to the adoption of digital credentials or new verification methods\.
+#### Infrastructure development spectrum:
 
-EU\-level initiatives like the European Qualifications Framework aim to improve the comparability of qualifications across countries\. However, implementation and recognition at the national level remain inconsistent, highlighting the challenges of creating truly pan\-European solutions in education\.
+| Development Level | Examples | Characteristics | Limitations |
+|------------------|----------|----------------|-------------|
+| **Advanced national systems** | Estonia's e-government infrastructure | Comprehensive digital credential provisions | Limited to specific countries |
+| **Pilot implementations** | Various trusted ledger initiatives | Exploring secure, decentralised verification | Confined to specific institutions/projects |
+| **Legacy system dependence** | Many European institutions | Older technology difficult to integrate | Barriers to advanced system adoption |
+| **Mixed readiness levels** | Across European institutions | Varied technological capabilities | Challenges for unified solutions |
 
-The evolving landscape of digital identity regulations, including the amended eIDAS Regulation framework, presents both opportunities and challenges for digital credential management\. While these regulations aim to create a common framework for electronic identification across Europe, their application to educational and professional credentials is still developing\.
+#### Implementation challenges:
 
-According to Recital \(55\) of the eIDAS 2 Regulation, “an electronic attestation of attributes should not be denied legal effect on the grounds that it is in an electronic form or that it does not meet the requirements of the qualified electronic attestation of attributes”, a principle that ensures the validity of any electronic attestation of attributes, especially when a sector\-specific EU or national legislation already allows issuing documents to specific bodies\. One relevant example for the educational and professional domain is the Professional Qualifications Directive, where the issuers of the credentials would be the competent authority, typically an authentic source of the information contained within\.
+**Technology adoption barriers:**
+- **Advanced system reluctance**: Institutions with sophisticated systems hesitant to adopt new standards requiring significant changes
+- **Infrastructure limitations**: Less developed institutions struggle with advanced solution implementation
+- **Integration complexity**: Difficulty connecting legacy systems with modern digital solutions
+- **Interoperability obstacles**: Technical barriers preventing system-wide coordination
 
-Thus, Article 1\(c\) of the amended eIDAS Regulation “establishes a legal framework for”, among others, “electronic attestation of attributes”, which is defined by Article 3\(44\) as “an attestation in electronic form that allows attributes to be authenticated”\. The amended eIDAS Regulation considers two specific subtypes of electronic attestations of attributes \(named as “qualified electronic attestation of attributes” and “electronic attestation of attributes issued by or on behalf of a public sector body responsible for an authentic source”\), which receive direct legal recognition, but enshrining the validity and judicial admissibility of all electronic attestations of attributes\. According to Article 45b\(1\) of the amended eIDAS Regulation, “an electronic attestation of attributes shall not be denied legal effect or admissibility as evidence in legal proceedings on the sole ground that it is in electronic form or that it does not meet the requirements for qualified electronic attestations of attributes”\.
+### <a id="_Toc182376673"></a><a id="_Toc184710020"></a>3.5 Legal and regulatory framework
 
-This legal approach, which is common to the different legal evidentiary institutions enabled by trust services, ensures that innovative approaches can be used in real world use cases requiring legal validity\. 
+The legal and regulatory landscape for educational credentials in Europe is complex and varied, reflecting the diversity of national education systems and the evolving nature of digital credentials.
 
-Navigating this complex regulatory environment while pushing for innovation in credential management requires careful consideration, to be explored during the Large\-Scale Pilots\. Depending of the results, it may necessitate legislative updates at both national and EU levels \(especially to the eIDAS Implementing Acts\) to fully enable the potential of digital credentials while ensuring appropriate safeguards and recognition\. This is potentially one of the most relevant contributions to the evolution of the eIDAS ecosystem, where some gaps have already been identified\.
+#### Regulatory complexity layers:
 
-### <a id="_Toc182376674"></a><a id="_Toc184710021"></a>3\.6 Stakeholder needs and concerns
+**National legislation challenges:**
+- **Digital alignment gaps**: Existing laws may not align with digital transformation goals
+- **Verification method barriers**: Legal obstacles to adopting new credential verification approaches
+- **Implementation inconsistency**: National approaches to EU-level initiatives vary significantly
 
-Different stakeholders in the educational ecosystem have varying needs and concerns regarding credential management\. Understanding and addressing these diverse perspectives is crucial for developing effective solutions\.
+**EU-level framework development:**
+- **European Qualifications Framework**: Aims for cross-country comparability but inconsistent national implementation
+- **eIDAS Regulation evolution**: Creates opportunities and challenges for digital credential management
+- **Professional Qualifications Directive**: Provides foundation for educational credential authority
 
-Educational institutions seek ways to reduce the administrative burden associated with issuing and verifying credentials\. They also express concerns about balancing standardisation with institutional autonomy in credential issuance and recognition\. Many institutions face challenges in adapting to new technologies for credential management, including costs and training needs\.
+#### eIDAS 2.0 implications for educational credentials:
 
-Students and graduates demand easily portable and universally recognised credentials to support mobility for study and work\. They express concerns about data privacy and desire greater control over their educational records\. There's an increasing need for recognition of non\-traditional learning experiences and micro\-credentials, reflecting changing patterns of learning and career development\. Students are seeking more flexible ways to showcase their skills and knowledge, beyond traditional degree certificates\.
+**Legal framework establishment:**
+According to **Recital (55)** of the eIDAS 2 Regulation: *"an electronic attestation of attributes should not be denied legal effect on the grounds that it is in an electronic form or that it does not meet the requirements of the qualified electronic attestation of attributes"*
 
-Employers and professional bodies seek quick and reliable methods to verify candidates' qualifications\. This need is particularly acute in sectors with high mobility or where specific qualifications are crucial for regulatory compliance\. There's a growing emphasis on recognising specific skills and competencies beyond formal qualifications, as employers look for more granular information about candidates' capabilities\. Multinational employers face challenges in comparing and recognising qualifications from different educational systems, which can complicate international recruitment processes\.
+**Electronic attestation definition:**
+**Article 3(44)** defines electronic attestation of attributes as *"an attestation in electronic form that allows attributes to be authenticated"*
 
-Regulatory bodies are tasked with ensuring the quality and integrity of educational and professional credentials while adapting to technological changes\. They must balance the need for innovation with maintaining rigorous standards\. There's an increasing need for cross\-border cooperation between national regulatory bodies to facilitate smoother recognition processes\. Developing robust systems to prevent credential fraud remains a key concern, particularly as digital credentials become more prevalent\.
+**Legal validity assurance:**
+**Article 45b(1)** states: *"an electronic attestation of attributes shall not be denied legal effect or admissibility as evidence in legal proceedings on the sole ground that it is in electronic form or that it does not meet the requirements for qualified electronic attestations of attributes"*
 
-### <a id="_Toc182376675"></a><a id="_Toc184710022"></a>3\.7 Opportunities for digital solutions
+This legal approach ensures that innovative approaches can be used in real world use cases requiring legal validity, particularly relevant for educational and professional credentials where issuers would be competent authorities serving as authentic sources.
+
+#### Implementation considerations:
+
+Navigating this complex regulatory environment while pushing for innovation in credential management requires careful consideration, to be explored during the Large-Scale Pilots. Depending on results, it may necessitate legislative updates at both national and EU levels (especially to the eIDAS Implementing Acts) to fully enable the potential of digital credentials while ensuring appropriate safeguards and recognition. This represents potentially one of the most relevant contributions to the evolution of the eIDAS ecosystem.
+
+### <a id="_Toc182376674"></a><a id="_Toc184710021"></a>3.6 Stakeholder needs and concerns
+
+Different stakeholders in the educational ecosystem have varying needs and concerns regarding credential management. Understanding and addressing these diverse perspectives is crucial for developing effective solutions.
+
+#### Stakeholder requirements matrix:
+
+| Stakeholder Group | Primary Needs | Key Concerns | Desired Outcomes |
+|------------------|---------------|--------------|------------------|
+| **Educational institutions** | • Reduce administrative burden<br>• Balance standardisation with autonomy<br>• Modernise credential systems | • Technology adaptation costs<br>• Staff training requirements<br>• System integration complexity | • Efficient credential management<br>• Maintained institutional identity<br>• Streamlined verification processes |
+| **Students and graduates** | • Portable, universally recognised credentials<br>• Control over educational records<br>• Recognition of diverse learning experiences | • Data privacy protection<br>• Qualification mobility barriers<br>• Micro-credential recognition | • Easy credential sharing<br>• Enhanced mobility opportunities<br>• Comprehensive skill showcasing |
+| **Employers and professional bodies** | • Quick, reliable qualification verification<br>• Skills-based candidate assessment<br>• Regulatory compliance support | • Cross-system qualification comparison<br>• Fraud prevention<br>• International recruitment complexity | • Instant verification capabilities<br>• Granular competency information<br>• Streamlined compliance processes |
+| **Regulatory bodies** | • Quality and integrity assurance<br>• Cross-border cooperation<br>• Fraud prevention systems | • Innovation vs standards balance<br>• Technology adaptation<br>• Regulatory harmonisation | • Robust oversight capabilities<br>• Enhanced cooperation mechanisms<br>• Effective fraud detection |
+
+#### Evolving stakeholder demands:
+
+**Student expectations evolution:**
+- **Traditional degree limitations**: Moving beyond formal certificates to flexible skill demonstration
+- **Lifelong learning recognition**: Need for non-traditional learning experience validation
+- **Career development support**: Comprehensive records supporting professional growth
+
+**Employer requirements advancement:**
+- **Granular capability assessment**: Looking beyond formal qualifications to specific competencies
+- **Real-time verification needs**: Particularly acute in high-mobility sectors or regulatory compliance areas
+- **International recruitment challenges**: Difficulty comparing qualifications across different educational systems
+
+### <a id="_Toc182376675"></a><a id="_Toc184710022"></a>3.7 Opportunities for digital solutions
 
 The trust framework offers five key opportunity areas for transforming credential management:
 
-1\. Digital transformation
+#### Digital transformation opportunities:
 
-- Standardized digital credential formats across Europe
-- Secure, verifiable digital documents replacing paper
-- Integration with existing information systems
-- Support for emerging credential types
-- Digital workflow automation
+| Opportunity Area | Current Challenge | Digital Solution Benefits | Implementation Features |
+|------------------|------------------|---------------------------|------------------------|
+| **Digital transformation** | Paper-based, fragmented systems | Standardised formats, secure documents, system integration | • Europe-wide digital credential formats<br>• Verifiable digital document replacement<br>• Existing system integration<br>• Emerging credential type support<br>• Automated workflow processes |
+| **Cross-border mobility** | Manual verification, language barriers | Automated recognition, standardised verification | • Automated qualification recognition<br>• Standardised verification protocols<br>• Multilingual credential support<br>• Simplified professional licensing<br>• Enhanced student mobility |
+| **System efficiency** | Manual processes, high costs | Reduced manual work, streamlined operations | • Reduced manual verification needs<br>• Streamlined administrative processes<br>• Lower operational costs<br>• Faster credential processing<br>• Improved data accuracy |
+| **Data protection and privacy** | Limited user control, security risks | Enhanced control, secure storage | • Enhanced personal data control<br>• Secure credential storage<br>• Privacy-preserving verification<br>• GDPR compliance<br>• Selective information sharing |
+| **Innovation support** | Rigid systems, limited collaboration | New service models, enhanced matching | • New educational service models<br>• Enhanced labour market matching<br>• Lifelong learning support<br>• Improved policy analytics<br>• Cross-institutional collaboration |
 
-2\. Cross\-border mobility
-
-- Automated qualification recognition
-- Standardized credential verification
-- Multilingual credential support
-- Simplified professional licensing
-- Enhanced student mobility
-
-3\. System efficiency
-
-- Reduced manual verification needs
-- Streamlined administrative processes
-- Lower operational costs
-- Faster credential processing
-- Improved data accuracy
-
-4\. Data protection and privacy
-
-- Enhanced personal data control
-- Secure credential storage
-- Privacy\-preserving verification
-- Compliance with GDPR
-- Selective information sharing
-
-5\. Innovation support
-
-- New educational service models
-- Enhanced labour market matching
-- Support for lifelong learning
-- Improved policy analytics
-- Cross\-institutional collaboration
+#### Implementation pathway:
 
 These opportunities are realised through:
 
-- Operational processes detailed in Chapter 4
-- Technical implementations specified in 8
-- Practical use cases demonstrated in Chapter 7 Implementation guidance is provided in Chapter 8
+- **Operational processes** detailed in [Chapter 4](chapter4.md)
+- **Technical implementations** specified in [Chapter 8](chapter8.md)
+- **Practical use cases** demonstrated in [Chapter 7](chapter7.md)
+- **Implementation guidance** provided in [Chapter 8](chapter8.md)
 
-The current state of educational credential management in Europe presents a complex landscape of challenges and opportunities\. Key issues include the diversity of issuance and verification practices, inconsistencies in recognition processes, limited data standardisation and interoperability, varied technological readiness, and a complex regulatory environment\.
+#### Current state assessment:
 
-Addressing these challenges requires a multifaceted approach that considers the needs of all stakeholders while leveraging technological innovations\. The development of solutions like the European Digital Identity Wallet and associated frameworks offers promising avenues for addressing many of these challenges\. By providing a standardised, secure platform for storing and sharing digital credentials, such systems could significantly improve the portability and recognition of qualifications across Europe\.
+The current state of educational credential management in Europe presents a complex landscape of challenges and opportunities. Key issues include:
 
-However, successful implementation will require careful consideration of the diverse national contexts, regulatory requirements, and stakeholder needs identified in this analysis\. It will also necessitate ongoing dialogue and cooperation between educational institutions, employers, regulatory bodies, and technology providers to ensure that solutions meet the needs of all parties and can be effectively integrated into existing systems\.
+**Primary challenges identified:**
+- Diversity of issuance and verification practices
+- Inconsistencies in recognition processes  
+- Limited data standardisation and interoperability
+- Varied technological readiness
+- Complex regulatory environment
+
+**Solution development requirements:**
+Addressing these challenges requires a multifaceted approach that considers the needs of all stakeholders while leveraging technological innovations. The development of solutions like the European Digital Identity Wallet and associated frameworks offers promising avenues for addressing many of these challenges.
+
+**Implementation success factors:**
+By providing a standardised, secure platform for storing and sharing digital credentials, such systems could significantly improve the portability and recognition of qualifications across Europe. However, successful implementation will require:
+
+- Careful consideration of diverse national contexts
+- Accommodation of varying regulatory requirements
+- Address stakeholder needs identified in this analysis
+- Ongoing dialogue and cooperation between educational institutions, employers, regulatory bodies, and technology providers
+- Solutions that meet all parties' needs and can be effectively integrated into existing systems
