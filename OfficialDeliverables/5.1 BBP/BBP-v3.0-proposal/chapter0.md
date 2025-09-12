@@ -93,8 +93,4 @@ This infrastructure ensures that:
 
 Through these changes, learning truly returns to the learner. Students like Jacob will no longer face unnecessary barriers when pursuing their educational goals. They'll have full control over their achievements while institutions maintain their role as trusted credential issuers.
 
-<<<<<<< HEAD
 The practical implementation of these solutions is demonstrated through the use cases in [Chapter 7](chapter7.md), with specific guidance for adoption provided in [Chapter 8](chapter8.md).
-=======
-The practical implementation of these solutions is demonstrated through the use cases in Chapter 7, with specific guidance for adoption provided in Chapter 8\.
->>>>>>> 89ad1f1a10be794109846f1ef55f78e6ee9f9eb3
