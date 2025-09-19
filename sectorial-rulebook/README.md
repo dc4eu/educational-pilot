@@ -22,7 +22,7 @@ This sectorial rulebook covers the following key areas:
 
 - **[Education and Professional Qualifications Ontology](./european-learning-model.md)**: The European Learning Model (ELM) that creates a shared understanding of educationaland professional qualifications achievements.
 
-- **[Sectorial EAA Catalogue](./sectorial-eaa-catalogue/)**: Comprehensive catalogue of educational and professional credential data models, schemas, and implementation examples that demonstrate practical application of the rulebook principles.
+- **[Sectorial EAA Catalogue](../sectorial-eaa-catalogue/README.md)**: Comprehensive catalogue of educational and professional credential data models, schemas, and implementation examples that demonstrate practical application of the rulebook principles.
 
 - **[Issuance](./issuance.md)** and **[Issuance technical details](./issuance_details.md)**: The process for issuing different types of attestations.
 
