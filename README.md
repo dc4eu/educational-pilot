@@ -23,7 +23,7 @@ This repository is organised into several key sections:
 
 - **[Sectorial rulebook](./sectorial-rulebook/)**: The core framework that establishes standardised approaches for managing digital educational and professional credentials within the European Union.
 
-- **[Education and professional qualifications Business Bleuprint - BBP](./OfficialDeliverables/5.1%20BBP/README.md)**: The DC4EU WP5 Business Blueprint is a strategic document developed to guide the integration and adoption of digital credentials across the European Union, enhancing the digital transformation of education and professional qualifications. This blueprint aligns with the European Commission’s 2030 Digital Education Action Plan, focusing on interoperability, accessibility, quality assurance, sustainability, and stakeholder engagement.
+- **[Education and professional qualifications Business Blueprint - BBP](./OfficialDeliverables/5.1%20BBP/README.md)**: The DC4EU WP5 Business Blueprint is a strategic document developed to guide the integration and adoption of digital credentials across the European Union, enhancing the digital transformation of education and professional qualifications. This blueprint aligns with the European Commission’s 2030 Digital Education Action Plan, focusing on interoperability, accessibility, quality assurance, sustainability, and stakeholder engagement.
 
 - **[Sectorial EAA catalogue](./sectorial-eaa-catalogue/README.md)**: Contains all data models and schemas agreed at sectorial level for Education and Professional Qualifications, including formal education, quality assurance regimes, and non-foundational ID.
 
