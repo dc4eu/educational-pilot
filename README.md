@@ -35,7 +35,7 @@ This repository is organised into several key sections:
 
 - **[Compliance](./OfficialDeliverables/5.2%20DSTRL/procedures/validation/validation-methodology.md)**: Information about EBSI and EUDI Wallet compliance tests to ensure interoperability with other issuer, verifier, and wallet solutions.
 
-## DTSRL - Deployment and Testing Scenarios Results Library
+## DTSRL - Deployment and Testing Scenarios Results Library - During project development
 
 The **[DTSRL](./DSTRL/README.md)** serves as the central knowledge base for implementing digital credentials in practice. It contains:
 
