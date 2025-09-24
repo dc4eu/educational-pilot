@@ -427,7 +427,7 @@ graph LR
 | Resource | URL | Description |
 |----------|-----|-------------|
 | **EBSI Documentation** | https://docs.ebsi.eu | Technical specifications |
-| **DC4EU Schemas** | https://schemas.dc4eu.eu | Schema repository |
+| **DC4EU Schemas** | https://github.com/dc4eu/educational-pilot/blob/main/sectorial-eaa-catalogue/README.md | Schema repository |
 | **Implementation Guide** | https://guide.dc4eu.eu | Step-by-step guides |
 | **API Reference** | https://api.dc4eu.eu/docs | API documentation |
 | **Support Portal** | https://support.dc4eu.eu | Technical support |
