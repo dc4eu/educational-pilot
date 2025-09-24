@@ -1,4 +1,3 @@
-```markdown
 # Chapter 8: Technical framework and sectorial EAA's catalogue
 
 ## 8.1 Introduction
