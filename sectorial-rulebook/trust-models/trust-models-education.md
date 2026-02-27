@@ -1,4 +1,4 @@
-# Trust models accpeted for education and professional qualifications - Understanding the Classical PKI model and its extension using EBSI under eIDAS2
+# Accepted trust models for education and professional qualifications - Understanding the Classical PKI model and its extension using EBSI under eIDAS2
 
 ## Table of contents
 - [Trust models accpeted for education and professional qualifications - Understanding the Classical PKI model and its extension using EBSI under eIDAS2](#trust-models-accpeted-for-education-and-professional-qualifications---understanding-the-classical-pki-model-and-its-extension-using-ebsi-under-eidas2)
