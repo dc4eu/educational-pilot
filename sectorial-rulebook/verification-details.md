@@ -215,15 +215,45 @@ def validate_payload_schema(payload):
             if field not in claim:
                 raise ValueError(f"Missing claim field: {field}")
     
-    # Validate credential schema reference
+    # Validate credential schema reference(s).
+    #
+    # IMPORTANT — profile detection:
+    #   * VCDM 1.1 profile (mandatory per the 1st batch of Implementing Acts):
+    #       `credentialSchema` is a single object (or a one-element array) of
+    #       type "JsonSchema". Run JSON Schema syntactic validation only.
+    #   * VCDM 2.0 profile (optional, forward-looking, dual validation):
+    #       `credentialSchema` is an array containing at least one "JsonSchema"
+    #       entry AND one "ShaclValidator2017" entry. Run JSON Schema
+    #       validation AND SHACL validation against the RDF graph materialised
+    #       from the JSON-LD (using the ELM v3.2 context).
+    # Verifiers SHOULD accept both profiles during the transition period and
+    # once future Implementing Act updates recognise VCDM 2.0 alongside 1.1.
     if 'credentialSchema' not in payload:
         raise ValueError("Missing credential schema reference")
-    
-    schema_ref = payload['credentialSchema']
-    if schema_ref['id'] != "https://trusted-registries.ebsi.eu/schemas/euhemc/1.0":
-        raise ValueError("Invalid schema reference")
-    
-    print("✓ Payload schema validation passed")
+
+    schema_refs = payload['credentialSchema']
+    if isinstance(schema_refs, dict):
+        schema_refs = [schema_refs]            # normalise to list
+
+    has_json_schema = any(s.get('type') == 'JsonSchema' for s in schema_refs)
+    has_shacl       = any(s.get('type') == 'ShaclValidator2017' for s in schema_refs)
+
+    if not has_json_schema:
+        raise ValueError("credentialSchema[] must contain a JsonSchema entry")
+
+    for ref in schema_refs:
+        if ref.get('type') == 'JsonSchema':
+            # e.g. validate with jsonschema/ajv against the referenced schema.
+            # All referenced schema URIs MUST resolve in the EBSI TSR v3.
+            validate_json_schema(payload, ref['id'])
+        elif ref.get('type') == 'ShaclValidator2017':
+            # VCDM 2.0 only. Example: pyshacl.validate(rdf_graph, shacl_graph).
+            validate_shacl_shape(payload, ref['id'])
+        else:
+            raise ValueError(f"Unsupported credentialSchema type: {ref.get('type')}")
+
+    profile = "VCDM 2.0 (dual validation)" if has_shacl else "VCDM 1.1"
+    print(f"✓ Payload schema validation passed ({profile})")
     return True
 ```
 

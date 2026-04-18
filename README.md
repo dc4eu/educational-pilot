@@ -25,7 +25,7 @@ This repository is organised into several key sections:
 
 - **[Education and professional qualifications Business Blueprint - BBP](./OfficialDeliverables/5.1%20BBP/README.md)**: The DC4EU WP5 Business Blueprint is a strategic document developed to guide the integration and adoption of digital credentials across the European Union, enhancing the digital transformation of education and professional qualifications. This blueprint aligns with the European Commission’s 2030 Digital Education Action Plan, focusing on interoperability, accessibility, quality assurance, sustainability, and stakeholder engagement.
 
-- **[Sectorial EAA catalogue](./sectorial-eaa-catalogue/README.md)**: Contains all data models and schemas agreed at sectorial level for Education and Professional Qualifications, including formal education, quality assurance regimes, and non-foundational ID.
+- **[Sectorial EAA catalogue](./sectorial-eaa-catalogue/README.md)**: Contains all data models and schemas agreed at sectorial level for Education and Professional Qualifications, including formal education, quality assurance regimes, and non-foundational ID. The catalogue publishes the **mandatory W3C‑VCDM 1.1 datamodels** (per the 1st batch of eIDAS Implementing Acts) and additionally an **optional forward‑looking W3C‑VCDM 2.0 profile** that introduces a dual JSON Schema + SHACL validation architecture anchored in ELM v3.2.
 
 - **[EAA Characterisation](./sectorial-eaa-catalogue/EAA_Characterisation.md)**: Characterisation of an Electronic Attestation of Attributes (EAA).
 
@@ -56,11 +56,11 @@ The **[DTSRL](./DSTRL/README.md)** serves as the central knowledge base for impl
   
 - **[Toolkits](./DSTRL/toolkits/README.md)**: Implementation resources including technical architecture, component descriptions, workflows (RFCs), and specific use cases to help develop user journeys for both Classical PKI and Decentralised PKI approaches.
 
-The DTSRL provides practical, validated implementation patterns based on real deployments across 20+ European institutions, supporting both Pilot 1 (Classical PKI unsng CRLs + SD-JWT) and Pilot 2 (Classical PKI uing CRLs + Decentralised PKI using Verifiable Data Registers + W3C VC) approaches.
+The DTSRL provides practical, validated implementation patterns based on real deployments across 20+ European institutions, supporting both Pilot 1 (Classical PKI using CRLs + SD-JWT) and Pilot 2 (Classical PKI using CRLs + Decentralised PKI using Verifiable Data Registers + W3C VC) approaches.
 
 ## Key Features
 
-This framework brings together European educational and professinal qualifications priorities:
+This framework brings together European educational and professional qualifications priorities:
 
 - Respects member state sovereignty in education
 - Maintains institutional independence
@@ -82,21 +82,21 @@ For new users, we recommend starting with:
 3. Learn about the [eIDAS scenarios](./eidas-scenarios/) to understand the trust models
 4. Explore the [Authorisation Model](./eaa-based-authorisation-model/) to understand how trust chains work
 5. Identify your [Role(s)](./docs/eIDAS-roles.md) within the ecosystem
-6. **Explore the [DTSRL](./DTSRL/) for practical implementation guidance:**
-   - Review [User journeys](./DTSRL/user-journeys/) to understand standard processes
-   - Study [Scenarios](./DTSRL/scenarios/) from existing piloting agents
-   - Access [Toolkits](./DTSRL/toolkits/) for technical implementation resources
-   - Understand the [Piloting](./DTSRL/piloting/) framework for participation
-7. Explore the [Elements](./elements) section to identify provided solutions to faciliate adoption with existing services
+6. **Explore the [DTSRL](./DSTRL/) for practical implementation guidance:**
+   - Review [User journeys](./DSTRL/user-journeys/) to understand standard processes
+   - Study [Scenarios](./DSTRL/scenarios/) from existing piloting agents
+   - Access [Toolkits](./DSTRL/toolkits/) for technical implementation resources
+   - Understand the [Piloting](./DSTRL/piloting/) framework for participation
+7. Explore the [Elements](./OfficialDeliverables/5.2%20DSTRL/elements/README.md) section to identify provided solutions to faciliate adoption with existing services
 8. Check the [Compliance](./compliance/) requirements for interoperability information
 
 ## Implementation Pathways
 
 ### For Educational Institutions
-Start with the **[DTSRL](./DTSRL/)** to access proven implementation patterns from peer institutions across Europe. The library provides step-by-step guidance for both technical implementation and governance compliance.
+Start with the **[DTSRL](./DSTRL/)** to access proven implementation patterns from peer institutions across Europe. The library provides step-by-step guidance for both technical implementation and governance compliance.
 
 ### For Technology Providers
-Review the **[Toolkits](./DTSRL/toolkits/)** section for technical specifications, API documentation, and integration guidance supporting both Classical PKI and Decentralised PKI approaches.
+Review the **[Toolkits](./DSTRL/toolkits/)** section for technical specifications, API documentation, and integration guidance supporting both Classical PKI and Decentralised PKI approaches.
 
 ### For Policy Makers and Governance Bodies
 Explore the **[Governance](./governances)** section and **[Sectorial Rulebook](./sectorial-rulebook/)** to understand the regulatory framework and authorisation models.

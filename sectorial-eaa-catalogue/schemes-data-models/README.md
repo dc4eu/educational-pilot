@@ -55,6 +55,19 @@ For detailed schema information, see [EDC-W3C-VCDM compliant data model](./edc-w
 
 For detailed conversion information, see [Conversion guideline from EDC to W3C-VCDM compliant data model](./vc-model-adaptations.md).
 
+### EDC as W3C-VCDM 2.0 Compliant Credentials — optional forward-looking profile
+
+> **Regulatory status.** W3C-VCDM **1.1 remains mandatory** under the 1st batch of eIDAS Implementing Acts. The **W3C-VCDM 2.0** profile described below is offered as an **additional, optional forward-looking profile** — it does **not** replace VCDM 1.1. Future updates to the Implementing Acts are expected to recognise **both** versions, and the catalogue is designed so that issuers and verifiers can support both simultaneously during the transition period and afterwards.
+
+EDC-W3C-VCDM 2.0 extends the VCDM 1.1 profile by using the `credentialSchema[]` array of VCDM 2.0 to reference **two** schemas simultaneously:
+
+- a `JsonSchema` entry, which preserves the syntactic validation already provided by the VCDM 1.1 profile, and
+- a `ShaclValidator2017` entry, which adds a semantic/ontological validation layer against the RDF graph materialised from the JSON-LD credential using the ELM v3.2 context.
+
+Both entries MUST be registered in the EBSI Trusted Schemas Registry v3. This is what is referred to as the **dual validation architecture**.
+
+For the detailed rationale, technology stack and examples, see [Dual Validation Architecture (SHACL + EBSI)](../edc-vcdm2.0/dual-validation-architecture.md). For the concrete datamodels, JSON Schemas, SHACL shapes and signed/unsigned examples available under this optional profile, see the [VCDM 2.0 table in the catalogue README](../README.md#table-with-available-datamodels-based-on-edc-w3c-w3c-vcdm-20-dual-json-schema--shacl-validation).
+
 
 ### Multi-language Support Structures
 

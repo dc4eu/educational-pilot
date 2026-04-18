@@ -274,7 +274,9 @@ A verifier (e.g., an employer or institution) checks the signed EUHEMC to ensure
 3. **Validate the Payload:**
    - Parse the decoded payload as JSON-LD and validate against the EUHEMC schema (`euhemc-schema.json`).
    - Ensure all mandatory Annex I elements are present (e.g., learner `fullName`, `issuerCountry`, `creditReceived`, `qualityAssurance`).
-   - Verify the `credentialSchema.id` (e.g., `https://trusted-registries.ebsi.eu/schemas/euhemc/1.0`) points to a trusted schema in EBSI's registries.
+   - Verify that every entry in `credentialSchema[]` points to a trusted schema in EBSI's Trusted Schemas Registry v3. The profile is detected by the `type` of the entries:
+     - **VCDM 1.1 profile (currently mandatory per the 1st batch of eIDAS Implementing Acts)** — one entry of `type: JsonSchema` (e.g. `https://trusted-registries.ebsi.eu/schemas/euhemc/1.0`).
+     - **VCDM 2.0 profile (optional, forward‑looking)** — two entries: one of `type: JsonSchema` **plus** one of `type: ShaclValidator2017`. Both MUST resolve in the EBSI TSR v3 and both MUST validate. Verifiers SHOULD accept credentials issued under either profile during the transition period and once future Implementing Act updates recognise VCDM 2.0 as well.
 
 4. **Verify the Signature:**
    - Retrieve the issuer's public key from the DID document (e.g., via EBSI's DID registry).
@@ -291,7 +293,8 @@ A verifier (e.g., an employer or institution) checks the signed EUHEMC to ensure
 ### 4. Alignment with Standards
 
 - **W3C Verifiable Credentials:**
-  - The EUHEMC uses JSON-LD with W3C contexts (`https://www.w3.org/2018/credentials/v1`) but omits the `proof` property, as JAdES D-Zero handles signatures externally via JWS. This is a valid implementation, as W3C allows alternative signature formats.
+  - Under the **VCDM 1.1 profile (mandatory)** the EUHEMC uses JSON-LD with W3C contexts (`https://www.w3.org/2018/credentials/v1`) but omits the `proof` property, as JAdES D-Zero handles signatures externally via JWS. This is a valid implementation, as W3C allows alternative signature formats.
+  - Under the **VCDM 2.0 profile (optional, forward‑looking)** the same credential MAY instead reference the VCDM 2.0 context (`https://www.w3.org/ns/credentials/v2`) together with the ELM v3.2 context, and MUST include a two‑entry `credentialSchema[]` array (`JsonSchema` + `ShaclValidator2017`). Signature mechanism remains JAdES D‑Zero.
 
 - **EBSI JAdES D-Zero:**
   - The header (`jades-d-z`, `sigT`, `sigPl`) and ES256 algorithm comply with EBSI's JAdES D-Zero profile, ensuring interoperability within the EU.
@@ -322,7 +325,9 @@ jws.verify(jws_string, public_key, algorithms=['ES256'])
 
 - **Trust**: Ensure the issuer's DID is in EBSI's Trusted Issuers Registry and the schema is valid.
 - **Revocation/Suspension**: Check EBSI's revocation/suspension to confirm the credential's validity.
-- **Schema Validation**: Use a JSON Schema validator (e.g., `ajv`) to ensure the payload conforms to `euhemc-schema.json`.
+- **Schema Validation**:
+  - Under the **VCDM 1.1 profile (mandatory)**: use a JSON Schema validator (e.g. `ajv`, or `jsonschema` in Python) to ensure the payload conforms to the single `JsonSchema` entry of `credentialSchema[]` (e.g. `euhemc-schema.json`).
+  - Under the **VCDM 2.0 profile (optional)**: additionally run a SHACL validator (e.g. `pyshacl` in Python, or any engine supporting `ShaclValidator2017`) against the RDF graph materialised from the JSON‑LD using the ELM v3.2 context, validating against the `ShaclValidator2017` entry of `credentialSchema[]`. A credential under this profile is only accepted when **both** validations pass.
 
 ### 6. Visual diagram
 ```mermaid

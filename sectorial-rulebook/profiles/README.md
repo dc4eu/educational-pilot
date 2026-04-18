@@ -24,8 +24,9 @@ This matrix provides a comprehensive comparison of the technical aspects between
 | **Aspect** | **Pilot1 (Classical PKI)** | **Pilot2 (Hybrid PKI)** |
 |:-----------|:---------------------------|:------------------------|
 | **Credential Format** | SD-JWT (Selective Disclosure JWT) - **DRAFT STANDARD** | W3C Verifiable Credentials (VC) - **ESTABLISHED STANDARD** |
-| **Data Model** | SD-JWT-VC - **PENDING STANDARDISATION** | W3C-VCDM 1.1 & W3C-VCDM 2.0 - **6+ YEARS PROVEN** |
-| **Schema Standard** | JSON Schema with SD-JWT extensions - **EVOLVING** | W3C VC Data Model + European Learning Model (ELM) - **MATURE** |
+| **Data Model** | SD-JWT-VC - **PENDING STANDARDISATION** | W3C-VCDM 1.1 (currently mandated by the 1st batch of eIDAS Implementing Acts) & W3C-VCDM 2.0 (optional, forward‑looking — expected to be recognised alongside 1.1 in future IA updates) - **6+ YEARS PROVEN** |
+| **Schema Standard** | JSON Schema with SD-JWT extensions - **EVOLVING** | W3C VC Data Model + European Learning Model (ELM v3.2) - **MATURE** |
+| **Validation Architecture** | JSON Schema only (syntactic) - **SINGLE LAYER** | **VCDM 1.1**: JSON Schema (syntactic, mandatory). **VCDM 2.0**: dual validation — JSON Schema (syntactic) **+** SHACL / `ShaclValidator2017` (semantic, ELM‑anchored) - **LAYERED** |
 | **Selective Disclosure** | Built-in with SD-JWT hashing - **DRAFT SPECIFICATION** | Supported through W3C VC features - **TESTED IMPLEMENTATIONS** |
 | **Credential Structure** | JWT with `_sd` arrays for privacy - **EXPERIMENTAL** | JSON-LD with cryptographic proofs - **PRODUCTION-READY** |
 | **Privacy Mechanism** | Hash-based selective disclosure - **UNPROVEN AT SCALE** | Multiple methods (SD-JWS, BBS+, zero-knowledge proofs) - **BATTLE-TESTED** |

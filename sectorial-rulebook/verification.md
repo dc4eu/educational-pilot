@@ -2,7 +2,7 @@
 
 ## Overview
 
-The verification process ensures credential validity while protecting privacy through a distributed system that avoids single points of failure. This approach balances security needs with privacy protection, preventing unnecessary monitoring of credential usage. For technical verification details read [Verification details](./verification-deatils.md) document.
+The verification process ensures credential validity while protecting privacy through a distributed system that avoids single points of failure. This approach balances security needs with privacy protection, preventing unnecessary monitoring of credential usage. For technical verification details read [Verification details](./verification-details.md) document.
 
 ## Key Characteristics
 
@@ -73,20 +73,27 @@ The verification process shall follow these steps:
 - Verify identity attributes when necessary
 - Apply appropriate identity assurance levels
 
-7. **Schema Compliance Checking** 
+7. **Schema Compliance Checking**
 - Verify credential structure
-- Validate against schema definitions (VC datamodel container: W3C-CVDM or SD-JWT-VCDM)
+- Validate against schema definitions (VC datamodel container: **W3C-VCDM** or SD-JWT-VCDM)
 - Check required fields
 - Ensure proper formatting
+- The verifier MUST detect the profile by inspecting the `credentialSchema[]` array of the credential and apply the appropriate validation:
+   - **7.a — VCDM 1.1 profile (mandatory per the 1st batch of eIDAS Implementing Acts).** `credentialSchema` contains a single entry of `type: JsonSchema`. Run syntactic JSON Schema validation against the referenced schema.
+   - **7.b — VCDM 2.0 profile (optional, forward‑looking).** `credentialSchema` contains **two** entries: one of `type: JsonSchema` and one of `type: ShaclValidator2017`. The verifier MUST:
+      1. Run the JSON Schema validation (as in 7.a) for the syntactic layer, and
+      2. Materialise the RDF graph from the JSON‑LD (using the ELM v3.2 context) and run SHACL validation against the `ShaclValidator2017` shape for the semantic layer.
+- Both the JSON Schema and, when present, the SHACL shape referenced from `credentialSchema[]` MUST resolve to entries in the EBSI Trusted Schemas Registry (v3).
+- Verifiers SHOULD accept **both** profiles during the transition period in which the Implementing Acts still only mandate VCDM 1.1, and are expected to keep accepting both once future updates of those acts recognise VCDM 2.0 as well.
 
-8. **EAA Catalogue Compliance Checking - EDC-W3C-VC + required/mandatory ELM objects/elements checking**
+8. **EAA Catalogue Compliance Checking — EDC-W3C-VC + required/mandatory ELM objects/elements checking**
 - Validate against sectorial catalogue definitions
    - Verify ontology mandatory elements
      - E.g. HEEUMC mandatory objects:
        - 1 Achievement
          - Linked to the achievement:
-           - Mandatory 1 Learing outcome 
-             - Linked to the Learing outome:
+           - Mandatory 1 Learning outcome
+             - Linked to the Learning outcome:
                - 1 Competence
        - 1 Assessment
        - But, take into account, that:
@@ -94,6 +101,7 @@ The verification process shall follow these steps:
          - More Competences and/or Skills can be linked to a Learning outcome
 - Check required elements
 - Ensure proper formatting against related schemes
+- **Profile note.** Under the **VCDM 1.1 profile** this ELM‑object check is performed as an additional, code‑driven step on top of the JSON Schema result (JSON Schema alone cannot express constraints like "at least one Achievement linked to one Learning Outcome linked to one Competence"). Under the **VCDM 2.0 profile** most of this ELM integrity checking is **enforced declaratively by the SHACL shape executed in step 7.b** — the catalogue's SHACL shapes encode the mandatory ELM cardinalities and relationships, so a VCDM 2.0 credential that passes SHACL has already satisfied the bulk of step 8 automatically. Step 8 then focuses on catalogue‑specific rules not expressible in SHACL (for instance cross‑credential coherence or references to external registries).
 
 9.  **Quality Assurance Verification**
 (If shared credential includes/combines quality assurance related information)

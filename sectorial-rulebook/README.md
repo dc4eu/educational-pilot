@@ -18,11 +18,13 @@ This sectorial rulebook covers the following key areas:
 
 - **[Lifecycle Management](./lifecycle-management.md)**: How credentials are tracked from creation through to potential revocation and/or suspension.
 
-- **[Data Model](./data-model.md)**: The structure for educational data following W3C Verifiable Credential standards.
+- **[Data Model](./data-model.md)**: The structure for educational data following W3C Verifiable Credential standards. W3C‑VCDM 1.1 is **currently mandatory** under the 1st batch of eIDAS Implementing Acts; W3C‑VCDM 2.0 is additionally offered as an **optional forward‑looking profile**, expected to be recognised alongside 1.1 in future IA updates.
+
+- **[Dual Validation Architecture (SHACL + EBSI)](../sectorial-eaa-catalogue/edc-vcdm2.0/dual-validation-architecture.md)**: JSON Schema + SHACL dual validation introduced with the optional VCDM 2.0 profile, combining syntactic (`JsonSchema`) and semantic (`ShaclValidator2017`) constraints anchored in ELM v3.2.
 
 - **[Education and Professional Qualifications Ontology](./european-learning-model.md)**: The European Learning Model (ELM) that creates a shared understanding of educationaland professional qualifications achievements.
 
-- **[Sectorial EAA Catalogue](../sectorial-eaa-catalogue/README.md)**: Comprehensive catalogue of educational and professional credential data models, schemas, and implementation examples that demonstrate practical application of the rulebook principles.
+- **[Sectorial EAA Catalogue](../sectorial-eaa-catalogue/README.md)**: Comprehensive catalogue of educational and professional credential data models, schemas, and implementation examples that demonstrate practical application of the rulebook principles. It publishes both the mandatory VCDM 1.1 datamodels and the additional optional VCDM 2.0 (dual validation) datamodels.
 
 - **[Issuance](./issuance.md)** and **[Issuance technical details](./issuance_details.md)**: The process for issuing different types of attestations.
 
@@ -30,7 +32,7 @@ This sectorial rulebook covers the following key areas:
 
 - **[Sharing Mechanisms](./sharing-mechanisms.md)**: The framework supporting European mobility through credential sharing.
 
-- **[Verification](./verification.md)** and **[Verification technical details](./verification-deatils.md)**: The process ensuring credential validity while protecting privacy.
+- **[Verification](./verification.md)** and **[Verification technical details](./verification-details.md)**: The process ensuring credential validity while protecting privacy.
 
 - **[Enforcement Policy Agent](./enforcement-policy-agent.md)**: How wallets implement European privacy principles.
  

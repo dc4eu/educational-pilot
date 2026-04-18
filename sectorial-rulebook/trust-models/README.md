@@ -137,7 +137,7 @@ Comprehensive guide for credential verification, WRPAC/WRPRC implementation, and
 [**EUHEMC JAdES D-Zero Signature Guide**](../issuance_details.md)  
 Complete signing process using pure dPKI with EBSI, JAdES D-Zero profile implementation
 
-[**EUHEMC JAdES D-Zero Verification Guide**](../verification-deatils.md)  
+[**EUHEMC JAdES D-Zero Verification Guide**](../verification-details.md)  
 Step-by-step verification with practical code examples, tools, and troubleshooting
 
 #### Hybrid X.509-DID Implementation
