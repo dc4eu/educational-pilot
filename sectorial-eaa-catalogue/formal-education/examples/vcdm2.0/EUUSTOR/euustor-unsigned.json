@@ -1,0 +1,902 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "http://data.europa.eu/snb/model/context/edc-ap"
+  ],
+  "id": "urn:uuid:f6a7b8c9-ustr-4abc-def0-567890123456",
+  "type": [
+    "VerifiableCredential",
+    "VerifiableAttestation",
+    "EuropeanDigitalCredential",
+    "EuropeanUpperSecondaryTranscriptOfRecords"
+  ],
+  "identifier": [
+    {
+      "id": "urn:identifier:EUUSTOR-2024-00001",
+      "type": "Identifier",
+      "notation": "EUUSTOR-2024-00001",
+      "schemeAgency": {
+        "en": "IES Cervantes, Madrid"
+      },
+      "dateIssued": "2024-06-20T10:00:00Z"
+    }
+  ],
+  "credentialProfiles": [
+    {
+      "id": "http://data.europa.eu/snb/credential/upperSecondaryTranscript",
+      "type": "Concept",
+      "skos:prefLabel": {
+        "en": "Upper Secondary Transcript of Records"
+      }
+    }
+  ],
+  "issuer": {
+    "id": "did:ebsi:zSchoolMadrid789",
+    "type": "Organisation",
+    "elm:legalName": {
+      "en": "IES Cervantes, Madrid"
+    },
+    "elm:eidasLegalIdentifier": {
+      "type": "LegalIdentifier",
+      "skos:notation": "ES-S-28000001",
+      "dc:spatial": {
+        "id": "http://publications.europa.eu/resource/authority/country/ESP"
+      }
+    },
+    "elm:location": {
+      "id": "urn:location:ies-cervantes",
+      "type": "Location",
+      "elm:address": [
+        {
+          "id": "urn:address:ies-cervantes",
+          "type": "Address",
+          "elm:countryCode": {
+            "id": "http://publications.europa.eu/resource/authority/country/ESP",
+            "type": "Concept",
+            "skos:notation": "ESP"
+          }
+        }
+      ]
+    }
+  },
+  "elm:wasDerivedFrom": {
+    "id": "urn:uuid:e5f6a7b8-eusc-4abc-cdef-456789012345",
+    "type": "EuropeanUpperSecondaryCertificate",
+    "dc:identifier": "EUUSC-2024-00001"
+  },
+  "elm:temporal": {
+    "type": "PeriodOfTime",
+    "elm:startDate": "2022-09-01T00:00:00Z",
+    "elm:endDate": "2024-06-20T00:00:00Z"
+  },
+  "elm:gradingScheme": {
+    "id": "urn:gradingscheme:spain-0-10",
+    "type": "Note",
+    "elm:noteLiteral": {
+      "en": "Spanish national grading scale: 0–10, where 5 is the minimum pass grade. Matrícula de Honor (MH) is awarded for scores of 9–10 to a maximum of 5% of students.",
+      "es": "Escala de calificación nacional española: 0–10. 5 es la nota mínima de aprobado."
+    }
+  },
+  "credentialSubject": {
+    "id": "did:ebsi:zCarlosMartinez123",
+    "type": "Person",
+    "elm:dateOfBirth": "2006-04-08T00:00:00Z",
+    "elm:familyName": {
+      "en": "Martínez"
+    },
+    "elm:givenName": {
+      "en": "Carlos"
+    },
+    "elm:hasClaim": [
+      {
+        "id": "urn:claim:bachillerato-maths",
+        "type": "LearningAchievement",
+        "dc:title": {
+          "en": "Mathematics II",
+          "es": "Mathematics II"
+        },
+        "elm:awardedBy": {
+          "id": "urn:awarding:ies-cervantes-2024",
+          "type": "AwardingProcess",
+          "elm:awardingBody": {
+            "id": "did:ebsi:zSchoolMadrid789",
+            "type": "Organisation",
+            "rov:legalName": "IES Cervantes, Madrid",
+            "elm:location": {
+              "id": "urn:location:ies-cervantes",
+              "type": "Location",
+              "elm:address": [
+                {
+                  "id": "urn:address:ies-cervantes",
+                  "type": "Address",
+                  "elm:countryCode": {
+                    "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                    "type": "Concept",
+                    "skos:notation": "ESP"
+                  }
+                }
+              ]
+            }
+          },
+          "elm:awardingDate": "2024-06-20T10:00:00Z",
+          "elm:location": {
+            "id": "urn:location:ies-cervantes",
+            "type": "Location",
+            "elm:address": [
+              {
+                "id": "urn:address:ies-cervantes",
+                "type": "Address",
+                "elm:countryCode": {
+                  "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                  "type": "Concept",
+                  "skos:notation": "ESP"
+                }
+              }
+            ]
+          }
+        },
+        "elm:specifiedBy": {
+          "id": "urn:spec:bachillerato-maths",
+          "type": "LearningAchievementSpecification",
+          "dc:title": {
+            "en": "Mathematics II"
+          },
+          "elm:educationSubject": [
+            {
+              "id": "http://data.europa.eu/snb/isced-f/0541",
+              "type": "Concept",
+              "skos:notation": "0541",
+              "skos:prefLabel": {
+                "en": "Mathematics"
+              }
+            }
+          ]
+        },
+        "elm:provenBy": [
+          {
+            "id": "urn:assessment:bachillerato-maths",
+            "type": "LearningAssessment",
+            "dc:title": {
+              "en": "Mathematics II – Final Examination"
+            },
+            "elm:grade": {
+              "id": "urn:grade:bachillerato-maths",
+              "type": "Note",
+              "elm:noteLiteral": {
+                "en": "9.2 / 10",
+                "es": "9.2 / 10"
+              }
+            },
+            "elm:awardedBy": {
+              "id": "urn:awarding:ies-cervantes-2024",
+              "type": "AwardingProcess",
+              "elm:awardingBody": {
+                "id": "did:ebsi:zSchoolMadrid789",
+                "type": "Organisation",
+                "rov:legalName": "IES Cervantes, Madrid",
+                "elm:location": {
+                  "id": "urn:location:ies-cervantes",
+                  "type": "Location",
+                  "elm:address": [
+                    {
+                      "id": "urn:address:ies-cervantes",
+                      "type": "Address",
+                      "elm:countryCode": {
+                        "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                        "type": "Concept",
+                        "skos:notation": "ESP"
+                      }
+                    }
+                  ]
+                }
+              },
+              "elm:awardingDate": "2024-06-20T10:00:00Z",
+              "elm:location": {
+                "id": "urn:location:ies-cervantes",
+                "type": "Location",
+                "elm:address": [
+                  {
+                    "id": "urn:address:ies-cervantes",
+                    "type": "Address",
+                    "elm:countryCode": {
+                      "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                      "type": "Concept",
+                      "skos:notation": "ESP"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "urn:claim:bachillerato-physics",
+        "type": "LearningAchievement",
+        "dc:title": {
+          "en": "Physics",
+          "es": "Physics"
+        },
+        "elm:awardedBy": {
+          "id": "urn:awarding:ies-cervantes-2024",
+          "type": "AwardingProcess",
+          "elm:awardingBody": {
+            "id": "did:ebsi:zSchoolMadrid789",
+            "type": "Organisation",
+            "rov:legalName": "IES Cervantes, Madrid",
+            "elm:location": {
+              "id": "urn:location:ies-cervantes",
+              "type": "Location",
+              "elm:address": [
+                {
+                  "id": "urn:address:ies-cervantes",
+                  "type": "Address",
+                  "elm:countryCode": {
+                    "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                    "type": "Concept",
+                    "skos:notation": "ESP"
+                  }
+                }
+              ]
+            }
+          },
+          "elm:awardingDate": "2024-06-20T10:00:00Z",
+          "elm:location": {
+            "id": "urn:location:ies-cervantes",
+            "type": "Location",
+            "elm:address": [
+              {
+                "id": "urn:address:ies-cervantes",
+                "type": "Address",
+                "elm:countryCode": {
+                  "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                  "type": "Concept",
+                  "skos:notation": "ESP"
+                }
+              }
+            ]
+          }
+        },
+        "elm:specifiedBy": {
+          "id": "urn:spec:bachillerato-physics",
+          "type": "LearningAchievementSpecification",
+          "dc:title": {
+            "en": "Physics"
+          },
+          "elm:educationSubject": [
+            {
+              "id": "http://data.europa.eu/snb/isced-f/0533",
+              "type": "Concept",
+              "skos:notation": "0533",
+              "skos:prefLabel": {
+                "en": "Physics"
+              }
+            }
+          ]
+        },
+        "elm:provenBy": [
+          {
+            "id": "urn:assessment:bachillerato-physics",
+            "type": "LearningAssessment",
+            "dc:title": {
+              "en": "Physics – Final Examination"
+            },
+            "elm:grade": {
+              "id": "urn:grade:bachillerato-physics",
+              "type": "Note",
+              "elm:noteLiteral": {
+                "en": "8.8 / 10",
+                "es": "8.8 / 10"
+              }
+            },
+            "elm:awardedBy": {
+              "id": "urn:awarding:ies-cervantes-2024",
+              "type": "AwardingProcess",
+              "elm:awardingBody": {
+                "id": "did:ebsi:zSchoolMadrid789",
+                "type": "Organisation",
+                "rov:legalName": "IES Cervantes, Madrid",
+                "elm:location": {
+                  "id": "urn:location:ies-cervantes",
+                  "type": "Location",
+                  "elm:address": [
+                    {
+                      "id": "urn:address:ies-cervantes",
+                      "type": "Address",
+                      "elm:countryCode": {
+                        "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                        "type": "Concept",
+                        "skos:notation": "ESP"
+                      }
+                    }
+                  ]
+                }
+              },
+              "elm:awardingDate": "2024-06-20T10:00:00Z",
+              "elm:location": {
+                "id": "urn:location:ies-cervantes",
+                "type": "Location",
+                "elm:address": [
+                  {
+                    "id": "urn:address:ies-cervantes",
+                    "type": "Address",
+                    "elm:countryCode": {
+                      "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                      "type": "Concept",
+                      "skos:notation": "ESP"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "urn:claim:bachillerato-chemistry",
+        "type": "LearningAchievement",
+        "dc:title": {
+          "en": "Chemistry",
+          "es": "Chemistry"
+        },
+        "elm:awardedBy": {
+          "id": "urn:awarding:ies-cervantes-2024",
+          "type": "AwardingProcess",
+          "elm:awardingBody": {
+            "id": "did:ebsi:zSchoolMadrid789",
+            "type": "Organisation",
+            "rov:legalName": "IES Cervantes, Madrid",
+            "elm:location": {
+              "id": "urn:location:ies-cervantes",
+              "type": "Location",
+              "elm:address": [
+                {
+                  "id": "urn:address:ies-cervantes",
+                  "type": "Address",
+                  "elm:countryCode": {
+                    "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                    "type": "Concept",
+                    "skos:notation": "ESP"
+                  }
+                }
+              ]
+            }
+          },
+          "elm:awardingDate": "2024-06-20T10:00:00Z",
+          "elm:location": {
+            "id": "urn:location:ies-cervantes",
+            "type": "Location",
+            "elm:address": [
+              {
+                "id": "urn:address:ies-cervantes",
+                "type": "Address",
+                "elm:countryCode": {
+                  "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                  "type": "Concept",
+                  "skos:notation": "ESP"
+                }
+              }
+            ]
+          }
+        },
+        "elm:specifiedBy": {
+          "id": "urn:spec:bachillerato-chemistry",
+          "type": "LearningAchievementSpecification",
+          "dc:title": {
+            "en": "Chemistry"
+          },
+          "elm:educationSubject": [
+            {
+              "id": "http://data.europa.eu/snb/isced-f/0531",
+              "type": "Concept",
+              "skos:notation": "0531",
+              "skos:prefLabel": {
+                "en": "Chemistry"
+              }
+            }
+          ]
+        },
+        "elm:provenBy": [
+          {
+            "id": "urn:assessment:bachillerato-chemistry",
+            "type": "LearningAssessment",
+            "dc:title": {
+              "en": "Chemistry – Final Examination"
+            },
+            "elm:grade": {
+              "id": "urn:grade:bachillerato-chemistry",
+              "type": "Note",
+              "elm:noteLiteral": {
+                "en": "9.5 / 10 (Matrícula de Honor)",
+                "es": "9.5 / 10 (Matrícula de Honor)"
+              }
+            },
+            "elm:awardedBy": {
+              "id": "urn:awarding:ies-cervantes-2024",
+              "type": "AwardingProcess",
+              "elm:awardingBody": {
+                "id": "did:ebsi:zSchoolMadrid789",
+                "type": "Organisation",
+                "rov:legalName": "IES Cervantes, Madrid",
+                "elm:location": {
+                  "id": "urn:location:ies-cervantes",
+                  "type": "Location",
+                  "elm:address": [
+                    {
+                      "id": "urn:address:ies-cervantes",
+                      "type": "Address",
+                      "elm:countryCode": {
+                        "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                        "type": "Concept",
+                        "skos:notation": "ESP"
+                      }
+                    }
+                  ]
+                }
+              },
+              "elm:awardingDate": "2024-06-20T10:00:00Z",
+              "elm:location": {
+                "id": "urn:location:ies-cervantes",
+                "type": "Location",
+                "elm:address": [
+                  {
+                    "id": "urn:address:ies-cervantes",
+                    "type": "Address",
+                    "elm:countryCode": {
+                      "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                      "type": "Concept",
+                      "skos:notation": "ESP"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "urn:claim:bachillerato-biology",
+        "type": "LearningAchievement",
+        "dc:title": {
+          "en": "Biology",
+          "es": "Biology"
+        },
+        "elm:awardedBy": {
+          "id": "urn:awarding:ies-cervantes-2024",
+          "type": "AwardingProcess",
+          "elm:awardingBody": {
+            "id": "did:ebsi:zSchoolMadrid789",
+            "type": "Organisation",
+            "rov:legalName": "IES Cervantes, Madrid",
+            "elm:location": {
+              "id": "urn:location:ies-cervantes",
+              "type": "Location",
+              "elm:address": [
+                {
+                  "id": "urn:address:ies-cervantes",
+                  "type": "Address",
+                  "elm:countryCode": {
+                    "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                    "type": "Concept",
+                    "skos:notation": "ESP"
+                  }
+                }
+              ]
+            }
+          },
+          "elm:awardingDate": "2024-06-20T10:00:00Z",
+          "elm:location": {
+            "id": "urn:location:ies-cervantes",
+            "type": "Location",
+            "elm:address": [
+              {
+                "id": "urn:address:ies-cervantes",
+                "type": "Address",
+                "elm:countryCode": {
+                  "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                  "type": "Concept",
+                  "skos:notation": "ESP"
+                }
+              }
+            ]
+          }
+        },
+        "elm:specifiedBy": {
+          "id": "urn:spec:bachillerato-biology",
+          "type": "LearningAchievementSpecification",
+          "dc:title": {
+            "en": "Biology"
+          },
+          "elm:educationSubject": [
+            {
+              "id": "http://data.europa.eu/snb/isced-f/0511",
+              "type": "Concept",
+              "skos:notation": "0511",
+              "skos:prefLabel": {
+                "en": "Biology"
+              }
+            }
+          ]
+        },
+        "elm:provenBy": [
+          {
+            "id": "urn:assessment:bachillerato-biology",
+            "type": "LearningAssessment",
+            "dc:title": {
+              "en": "Biology – Final Examination"
+            },
+            "elm:grade": {
+              "id": "urn:grade:bachillerato-biology",
+              "type": "Note",
+              "elm:noteLiteral": {
+                "en": "8.5 / 10",
+                "es": "8.5 / 10"
+              }
+            },
+            "elm:awardedBy": {
+              "id": "urn:awarding:ies-cervantes-2024",
+              "type": "AwardingProcess",
+              "elm:awardingBody": {
+                "id": "did:ebsi:zSchoolMadrid789",
+                "type": "Organisation",
+                "rov:legalName": "IES Cervantes, Madrid",
+                "elm:location": {
+                  "id": "urn:location:ies-cervantes",
+                  "type": "Location",
+                  "elm:address": [
+                    {
+                      "id": "urn:address:ies-cervantes",
+                      "type": "Address",
+                      "elm:countryCode": {
+                        "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                        "type": "Concept",
+                        "skos:notation": "ESP"
+                      }
+                    }
+                  ]
+                }
+              },
+              "elm:awardingDate": "2024-06-20T10:00:00Z",
+              "elm:location": {
+                "id": "urn:location:ies-cervantes",
+                "type": "Location",
+                "elm:address": [
+                  {
+                    "id": "urn:address:ies-cervantes",
+                    "type": "Address",
+                    "elm:countryCode": {
+                      "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                      "type": "Concept",
+                      "skos:notation": "ESP"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "urn:claim:bachillerato-spanish",
+        "type": "LearningAchievement",
+        "dc:title": {
+          "en": "Spanish Language and Literature",
+          "es": "Spanish Language and Literature"
+        },
+        "elm:awardedBy": {
+          "id": "urn:awarding:ies-cervantes-2024",
+          "type": "AwardingProcess",
+          "elm:awardingBody": {
+            "id": "did:ebsi:zSchoolMadrid789",
+            "type": "Organisation",
+            "rov:legalName": "IES Cervantes, Madrid",
+            "elm:location": {
+              "id": "urn:location:ies-cervantes",
+              "type": "Location",
+              "elm:address": [
+                {
+                  "id": "urn:address:ies-cervantes",
+                  "type": "Address",
+                  "elm:countryCode": {
+                    "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                    "type": "Concept",
+                    "skos:notation": "ESP"
+                  }
+                }
+              ]
+            }
+          },
+          "elm:awardingDate": "2024-06-20T10:00:00Z",
+          "elm:location": {
+            "id": "urn:location:ies-cervantes",
+            "type": "Location",
+            "elm:address": [
+              {
+                "id": "urn:address:ies-cervantes",
+                "type": "Address",
+                "elm:countryCode": {
+                  "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                  "type": "Concept",
+                  "skos:notation": "ESP"
+                }
+              }
+            ]
+          }
+        },
+        "elm:specifiedBy": {
+          "id": "urn:spec:bachillerato-spanish",
+          "type": "LearningAchievementSpecification",
+          "dc:title": {
+            "en": "Spanish Language and Literature"
+          },
+          "elm:educationSubject": [
+            {
+              "id": "http://data.europa.eu/snb/isced-f/0232",
+              "type": "Concept",
+              "skos:notation": "0232",
+              "skos:prefLabel": {
+                "en": "Literature"
+              }
+            }
+          ]
+        },
+        "elm:provenBy": [
+          {
+            "id": "urn:assessment:bachillerato-spanish",
+            "type": "LearningAssessment",
+            "dc:title": {
+              "en": "Spanish Language and Literature – Final Examination"
+            },
+            "elm:grade": {
+              "id": "urn:grade:bachillerato-spanish",
+              "type": "Note",
+              "elm:noteLiteral": {
+                "en": "8.0 / 10",
+                "es": "8.0 / 10"
+              }
+            },
+            "elm:awardedBy": {
+              "id": "urn:awarding:ies-cervantes-2024",
+              "type": "AwardingProcess",
+              "elm:awardingBody": {
+                "id": "did:ebsi:zSchoolMadrid789",
+                "type": "Organisation",
+                "rov:legalName": "IES Cervantes, Madrid",
+                "elm:location": {
+                  "id": "urn:location:ies-cervantes",
+                  "type": "Location",
+                  "elm:address": [
+                    {
+                      "id": "urn:address:ies-cervantes",
+                      "type": "Address",
+                      "elm:countryCode": {
+                        "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                        "type": "Concept",
+                        "skos:notation": "ESP"
+                      }
+                    }
+                  ]
+                }
+              },
+              "elm:awardingDate": "2024-06-20T10:00:00Z",
+              "elm:location": {
+                "id": "urn:location:ies-cervantes",
+                "type": "Location",
+                "elm:address": [
+                  {
+                    "id": "urn:address:ies-cervantes",
+                    "type": "Address",
+                    "elm:countryCode": {
+                      "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                      "type": "Concept",
+                      "skos:notation": "ESP"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "urn:claim:bachillerato-english",
+        "type": "LearningAchievement",
+        "dc:title": {
+          "en": "English Language (B2)",
+          "es": "English Language (B2)"
+        },
+        "elm:awardedBy": {
+          "id": "urn:awarding:ies-cervantes-2024",
+          "type": "AwardingProcess",
+          "elm:awardingBody": {
+            "id": "did:ebsi:zSchoolMadrid789",
+            "type": "Organisation",
+            "rov:legalName": "IES Cervantes, Madrid",
+            "elm:location": {
+              "id": "urn:location:ies-cervantes",
+              "type": "Location",
+              "elm:address": [
+                {
+                  "id": "urn:address:ies-cervantes",
+                  "type": "Address",
+                  "elm:countryCode": {
+                    "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                    "type": "Concept",
+                    "skos:notation": "ESP"
+                  }
+                }
+              ]
+            }
+          },
+          "elm:awardingDate": "2024-06-20T10:00:00Z",
+          "elm:location": {
+            "id": "urn:location:ies-cervantes",
+            "type": "Location",
+            "elm:address": [
+              {
+                "id": "urn:address:ies-cervantes",
+                "type": "Address",
+                "elm:countryCode": {
+                  "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                  "type": "Concept",
+                  "skos:notation": "ESP"
+                }
+              }
+            ]
+          }
+        },
+        "elm:specifiedBy": {
+          "id": "urn:spec:bachillerato-english",
+          "type": "LearningAchievementSpecification",
+          "dc:title": {
+            "en": "English Language (B2)"
+          },
+          "elm:educationSubject": [
+            {
+              "id": "http://data.europa.eu/snb/isced-f/0231",
+              "type": "Concept",
+              "skos:notation": "0231",
+              "skos:prefLabel": {
+                "en": "Language"
+              }
+            }
+          ]
+        },
+        "elm:provenBy": [
+          {
+            "id": "urn:assessment:bachillerato-english",
+            "type": "LearningAssessment",
+            "dc:title": {
+              "en": "English Language (B2) – Final Examination"
+            },
+            "elm:grade": {
+              "id": "urn:grade:bachillerato-english",
+              "type": "Note",
+              "elm:noteLiteral": {
+                "en": "9.0 / 10",
+                "es": "9.0 / 10"
+              }
+            },
+            "elm:awardedBy": {
+              "id": "urn:awarding:ies-cervantes-2024",
+              "type": "AwardingProcess",
+              "elm:awardingBody": {
+                "id": "did:ebsi:zSchoolMadrid789",
+                "type": "Organisation",
+                "rov:legalName": "IES Cervantes, Madrid",
+                "elm:location": {
+                  "id": "urn:location:ies-cervantes",
+                  "type": "Location",
+                  "elm:address": [
+                    {
+                      "id": "urn:address:ies-cervantes",
+                      "type": "Address",
+                      "elm:countryCode": {
+                        "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                        "type": "Concept",
+                        "skos:notation": "ESP"
+                      }
+                    }
+                  ]
+                }
+              },
+              "elm:awardingDate": "2024-06-20T10:00:00Z",
+              "elm:location": {
+                "id": "urn:location:ies-cervantes",
+                "type": "Location",
+                "elm:address": [
+                  {
+                    "id": "urn:address:ies-cervantes",
+                    "type": "Address",
+                    "elm:countryCode": {
+                      "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                      "type": "Concept",
+                      "skos:notation": "ESP"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "issued": "2024-06-20T10:00:00Z",
+  "validFrom": "2024-06-20T10:00:00Z",
+  "credentialSchema": [
+    {
+      "id": "https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/0xaf7975b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1",
+      "type": "JsonSchema"
+    },
+    {
+      "id": "https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/PENDING_TSR_REGISTRATION_EUUSTOR",
+      "type": "ShaclValidator2017"
+    }
+  ],
+  "credentialStatus": [
+    {
+      "id": "urn:status:f6a7b8c9-ustr-4abc-def0-567890123456",
+      "type": "StatusList2021Entry",
+      "statusPurpose": "revocation",
+      "statusListIndex": "0",
+      "statusListCredential": "https://api-pilot.ebsi.eu/status-list/2025/07"
+    }
+  ],
+  "elm:displayParameter": {
+    "id": "urn:display:euustor-carlos-2024",
+    "type": "DisplayParameter",
+    "dc:title": {
+      "en": "Upper Secondary Transcript of Records",
+      "es": "Expediente Académico de Bachillerato"
+    },
+    "dc:description": {
+      "en": "Official record of subject results achieved by Carlos Martínez during the Bachillerato programme at IES Cervantes, Madrid."
+    },
+    "dc:language": [
+      {
+        "id": "http://publications.europa.eu/resource/authority/language/ENG",
+        "type": "Concept",
+        "skos:notation": "ENG"
+      }
+    ],
+    "elm:primaryLanguage": {
+      "id": "http://publications.europa.eu/resource/authority/language/ENG",
+      "type": "Concept",
+      "skos:notation": "ENG"
+    },
+    "elm:individualDisplay": [
+      {
+        "id": "urn:display:individual-1",
+        "type": "IndividualDisplay",
+        "dc:language": {
+          "id": "http://publications.europa.eu/resource/authority/language/ENG",
+          "type": "Concept",
+          "skos:notation": "ENG"
+        },
+        "elm:displayDetail": [
+          {
+            "id": "urn:display:detail-1",
+            "type": "DisplayDetail",
+            "elm:image": {
+              "id": "urn:media:certificate-image",
+              "type": "MediaObject",
+              "elm:contentType": {
+                "id": "http://publications.europa.eu/resource/authority/file-type/PNG",
+                "type": "Concept",
+                "skos:notation": "PNG"
+              },
+              "elm:contentEncoding": {
+                "id": "http://data.europa.eu/snb/encoding/6146cde7dd",
+                "type": "Concept",
+                "skos:notation": "base64"
+              },
+              "elm:content": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAACklEQVR4nGMAAQAABQABDQottAAAAABJRU5ErkJggg=="
+            },
+            "elm:page": 1
+          }
+        ]
+      }
+    ]
+  }
+}

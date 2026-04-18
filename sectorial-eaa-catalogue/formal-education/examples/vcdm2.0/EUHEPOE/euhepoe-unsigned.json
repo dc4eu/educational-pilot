@@ -1,0 +1,263 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "http://data.europa.eu/snb/model/context/edc-ap"
+  ],
+  "id": "urn:uuid:a1b2c3d4-poe0-4abc-8def-012345678901",
+  "type": [
+    "VerifiableCredential",
+    "VerifiableAttestation",
+    "EuropeanDigitalCredential",
+    "EuropeanHigherEducationProofOfEnrolment"
+  ],
+  "identifier": [
+    {
+      "id": "urn:identifier:POE-2025-00001",
+      "type": "Identifier",
+      "notation": "POE-2025-00001",
+      "schemeAgency": {
+        "en": "University of Barcelona"
+      },
+      "dateIssued": "2025-09-01T08:00:00Z"
+    }
+  ],
+  "credentialProfiles": [
+    {
+      "id": "http://data.europa.eu/snb/credential/proofOfEnrolment",
+      "type": "Concept",
+      "skos:prefLabel": {
+        "en": "Proof of Enrolment"
+      }
+    }
+  ],
+  "issuer": {
+    "id": "did:ebsi:zABC987654321XYZ",
+    "type": "Organisation",
+    "elm:legalName": {
+      "en": "University of Barcelona"
+    },
+    "elm:eidasLegalIdentifier": {
+      "type": "LegalIdentifier",
+      "skos:notation": "ES-A-08015510",
+      "dc:spatial": {
+        "id": "http://publications.europa.eu/resource/authority/country/ESP"
+      }
+    },
+    "elm:location": {
+      "id": "urn:location:university-barcelona",
+      "type": "Location",
+      "elm:address": [
+        {
+          "id": "urn:address:university-barcelona",
+          "type": "Address",
+          "elm:countryCode": {
+            "id": "http://publications.europa.eu/resource/authority/country/ESP",
+            "type": "Concept",
+            "skos:notation": "ESP"
+          },
+          "elm:fullAddress": {
+            "id": "urn:note:address-ub",
+            "type": "Note",
+            "elm:noteLiteral": {
+              "en": "Gran Via de les Corts Catalanes, 585, 08007 Barcelona, Spain"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "credentialSubject": {
+    "id": "did:ebsi:zJaneDoe456",
+    "type": "Person",
+    "elm:dateOfBirth": "1998-11-20T00:00:00Z",
+    "elm:familyName": {
+      "en": "Smith"
+    },
+    "elm:givenName": {
+      "en": "Jane"
+    },
+    "elm:hasClaim": [
+      {
+        "id": "urn:claim:poe-msc-datascience-2025",
+        "type": "LearningActivity",
+        "dc:title": {
+          "en": "Enrolment – MSc in Data Science, AY 2025/2026"
+        },
+        "elm:awardedBy": {
+          "id": "urn:awarding:ub-poe-2025",
+          "type": "AwardingProcess",
+          "elm:awardingBody": {
+            "id": "did:ebsi:zABC987654321XYZ",
+            "type": "Organisation",
+            "elm:legalName": {
+              "en": "University of Barcelona"
+            },
+            "elm:location": {
+              "id": "urn:location:university-barcelona",
+              "type": "Location",
+              "elm:address": [
+                {
+                  "id": "urn:address:university-barcelona",
+                  "type": "Address",
+                  "elm:countryCode": {
+                    "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                    "type": "Concept",
+                    "skos:notation": "ESP"
+                  }
+                }
+              ]
+            }
+          },
+          "elm:awardingDate": "2025-09-01T08:00:00Z",
+          "elm:location": {
+            "id": "urn:location:university-barcelona",
+            "type": "Location",
+            "elm:address": [
+              {
+                "id": "urn:address:university-barcelona",
+                "type": "Address",
+                "elm:countryCode": {
+                  "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                  "type": "Concept",
+                  "skos:notation": "ESP"
+                }
+              }
+            ]
+          }
+        },
+        "elm:participatedIn": {
+          "id": "urn:opportunity:ub-msc-datascience",
+          "type": "LearningOpportunity",
+          "dc:title": {
+            "en": "MSc in Data Science"
+          },
+          "elm:providedBy": {
+            "id": "did:ebsi:zABC987654321XYZ",
+            "type": "Organisation",
+            "elm:legalName": {
+              "en": "University of Barcelona"
+            },
+            "elm:location": {
+              "id": "urn:location:university-barcelona",
+              "type": "Location",
+              "elm:address": [
+                {
+                  "id": "urn:address:university-barcelona",
+                  "type": "Address",
+                  "elm:countryCode": {
+                    "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                    "type": "Concept",
+                    "skos:notation": "ESP"
+                  }
+                }
+              ]
+            }
+          },
+          "elm:EQFLevel": {
+            "id": "http://data.europa.eu/snb/eqf/7",
+            "type": "Concept",
+            "skos:notation": "7",
+            "skos:prefLabel": {
+              "en": "EQF Level 7"
+            },
+            "skos:inScheme": {
+              "id": "http://data.europa.eu/snb/eqf/25831c2",
+              "type": "ConceptScheme"
+            }
+          },
+          "elm:mode": [
+            {
+              "id": "http://data.europa.eu/snb/learning-schedule/fulltime",
+              "type": "Concept",
+              "skos:prefLabel": {
+                "en": "Full-time"
+              }
+            }
+          ],
+          "elm:temporal": {
+            "type": "PeriodOfTime",
+            "elm:startDate": "2025-09-01T00:00:00Z",
+            "elm:endDate": "2026-07-31T23:59:59Z"
+          }
+        }
+      }
+    ]
+  },
+  "issued": "2025-09-01T08:00:00Z",
+  "validFrom": "2025-09-01T08:00:00Z",
+  "validUntil": "2026-07-31T23:59:59Z",
+  "credentialSchema": [
+    {
+      "id": "https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/0x9e7bdb44d35fd008e491e82a22a35d74fa71ae2b9f7bf8e2e53db14ef8c11b09",
+      "type": "JsonSchema"
+    },
+    {
+      "id": "https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/PENDING_TSR_REGISTRATION_EUHEPOE",
+      "type": "ShaclValidator2017"
+    }
+  ],
+  "credentialStatus": [
+    {
+      "id": "urn:status:a1b2c3d4-poe0-4abc-8def-012345678901",
+      "type": "StatusList2021Entry",
+      "statusPurpose": "revocation",
+      "statusListIndex": "0",
+      "statusListCredential": "https://api-pilot.ebsi.eu/status-list/2025/07"
+    }
+  ],
+  "elm:displayParameter": {
+    "id": "urn:display:poe-jane-2025",
+    "type": "DisplayParameter",
+    "dc:title": {
+      "en": "Proof of Enrolment – MSc Data Science"
+    },
+    "dc:description": {
+      "en": "Proof that Jane Smith is enrolled in the MSc in Data Science programme at the University of Barcelona for academic year 2025/2026."
+    },
+    "dc:language": [
+      {
+        "id": "http://publications.europa.eu/resource/authority/language/ENG",
+        "type": "Concept",
+        "skos:notation": "ENG"
+      }
+    ],
+    "elm:primaryLanguage": {
+      "id": "http://publications.europa.eu/resource/authority/language/ENG",
+      "type": "Concept",
+      "skos:notation": "ENG"
+    },
+    "elm:individualDisplay": [
+      {
+        "id": "urn:display:individual-1",
+        "type": "IndividualDisplay",
+        "dc:language": {
+          "id": "http://publications.europa.eu/resource/authority/language/ENG",
+          "type": "Concept",
+          "skos:notation": "ENG"
+        },
+        "elm:displayDetail": [
+          {
+            "id": "urn:display:detail-1",
+            "type": "DisplayDetail",
+            "elm:image": {
+              "id": "urn:media:certificate-image",
+              "type": "MediaObject",
+              "elm:contentType": {
+                "id": "http://publications.europa.eu/resource/authority/file-type/PNG",
+                "type": "Concept",
+                "skos:notation": "PNG"
+              },
+              "elm:contentEncoding": {
+                "id": "http://data.europa.eu/snb/encoding/6146cde7dd",
+                "type": "Concept",
+                "skos:notation": "base64"
+              },
+              "elm:content": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAACklEQVR4nGMAAQAABQABDQottAAAAABJRU5ErkJggg=="
+            },
+            "elm:page": 1
+          }
+        ]
+      }
+    ]
+  }
+}

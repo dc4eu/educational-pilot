@@ -1,0 +1,2803 @@
+{
+  "@context": {
+    "adms": "http://www.w3.org/ns/adms#",
+    "clv": "http://data.europa.eu/m8g/",
+    "cpv": "http://www.w3.org/ns/person#",
+    "cred": "https://www.w3.org/2018/credentials#",
+    "dc": "http://purl.org/dc/terms/",
+    "edc": "https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/shacl/edc-generic#",
+    "elm": "http://data.europa.eu/snb/model/elm/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "locn": "http://www.w3.org/ns/locn#",
+    "org": "http://www.w3.org/ns/org#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rov": "http://www.w3.org/ns/regorg#",
+    "sh": "http://www.w3.org/ns/shacl#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "edc:AwardingProcessShape",
+      "@type": "sh:NodeShape",
+      "sh:name": {
+        "@language": "en",
+        "@value": "Awarding Process"
+      },
+      "sh:property": [
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb63"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb64"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb65"
+        }
+      ],
+      "sh:targetClass": {
+        "@id": "elm:AwardingProcess"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb63",
+      "sh:message": {
+        "@language": "en",
+        "@value": "elm:awardingBody is mandatory (1..*) on AwardingProcess."
+      },
+      "sh:minCount": 1,
+      "sh:path": {
+        "@id": "elm:awardingBody"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb64",
+      "sh:datatype": {
+        "@id": "xsd:dateTime"
+      },
+      "sh:maxCount": 1,
+      "sh:path": {
+        "@id": "elm:awardingDate"
+      },
+      "sh:severity": {
+        "@id": "sh:Warning"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb65",
+      "sh:maxCount": 1,
+      "sh:node": {
+        "@id": "edc:LocationShape"
+      },
+      "sh:path": {
+        "@id": "elm:location"
+      },
+      "sh:severity": {
+        "@id": "sh:Warning"
+      }
+    },
+    {
+      "@id": "edc:LearningOpportunityShape",
+      "@type": "sh:NodeShape",
+      "sh:name": {
+        "@language": "en",
+        "@value": "Learning Opportunity"
+      },
+      "sh:property": [
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb59"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb60"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb61"
+        }
+      ],
+      "sh:targetClass": {
+        "@id": "elm:LearningOpportunity"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb59",
+      "sh:message": {
+        "@language": "en",
+        "@value": "dc:title is mandatory (1..*) on LearningOpportunity."
+      },
+      "sh:minCount": 1,
+      "sh:path": {
+        "@id": "dc:title"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb60",
+      "sh:message": {
+        "@language": "en",
+        "@value": "elm:providedBy is mandatory (1..*) on LearningOpportunity."
+      },
+      "sh:minCount": 1,
+      "sh:node": {
+        "@id": "edc:OrganisationShape"
+      },
+      "sh:path": {
+        "@id": "elm:providedBy"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb61",
+      "sh:datatype": {
+        "@id": "xsd:duration"
+      },
+      "sh:maxCount": 1,
+      "sh:path": {
+        "@id": "elm:duration"
+      },
+      "sh:severity": {
+        "@id": "sh:Warning"
+      }
+    },
+    {
+      "@id": "edc:GroupShape",
+      "@type": "sh:NodeShape",
+      "sh:name": {
+        "@language": "en",
+        "@value": "Group"
+      },
+      "sh:property": {
+        "@id": "_:n60af88093d9c405c9512ab11b990995cb105"
+      },
+      "sh:targetClass": {
+        "@id": "elm:Group"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb105",
+      "sh:message": {
+        "@language": "en",
+        "@value": "skos:prefLabel is mandatory (1..*) on Group."
+      },
+      "sh:minCount": 1,
+      "sh:path": {
+        "@id": "skos:prefLabel"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "edc:LocationShape",
+      "@type": "sh:NodeShape",
+      "sh:name": {
+        "@language": "en",
+        "@value": "Location"
+      },
+      "sh:property": {
+        "@id": "_:n60af88093d9c405c9512ab11b990995cb90"
+      },
+      "sh:targetClass": {
+        "@id": "dc:Location"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb90",
+      "sh:message": {
+        "@language": "en",
+        "@value": "elm:address is mandatory (1..*) on Location."
+      },
+      "sh:minCount": 1,
+      "sh:node": {
+        "@id": "edc:AddressShape"
+      },
+      "sh:path": {
+        "@id": "elm:address"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "edc:ShaclValidator2017Shape",
+      "@type": "sh:NodeShape",
+      "sh:name": {
+        "@language": "en",
+        "@value": "SHACL Validator 2017"
+      },
+      "sh:property": {
+        "@id": "_:n60af88093d9c405c9512ab11b990995cb121"
+      },
+      "sh:targetClass": {
+        "@id": "elm:ShaclValidator2017"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb121",
+      "sh:hasValue": {
+        "@id": "sh:IRI"
+      },
+      "sh:path": {
+        "@id": "sh:nodeKind"
+      },
+      "sh:severity": {
+        "@id": "sh:Warning"
+      }
+    },
+    {
+      "@id": "edc:VerifiableCredentialShape",
+      "@type": "sh:NodeShape",
+      "sh:name": {
+        "@language": "en",
+        "@value": "Verifiable Credential"
+      },
+      "sh:property": [
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb13"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb14"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb15"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb16"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb17"
+        }
+      ],
+      "sh:targetClass": {
+        "@id": "cred:VerifiableCredential"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb13",
+      "sh:message": {
+        "@language": "en",
+        "@value": "cred:credentialSchema is mandatory (1..*) and must be an IRI."
+      },
+      "sh:minCount": 1,
+      "sh:nodeKind": {
+        "@id": "sh:IRI"
+      },
+      "sh:path": {
+        "@id": "cred:credentialSchema"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb14",
+      "sh:maxCount": 1,
+      "sh:minCount": 1,
+      "sh:path": {
+        "@id": "cred:credentialSubject"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb15",
+      "sh:maxCount": 1,
+      "sh:minCount": 1,
+      "sh:node": {
+        "@id": "edc:IssuerNodeShape"
+      },
+      "sh:path": {
+        "@id": "cred:issuer"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb16",
+      "sh:datatype": {
+        "@id": "xsd:dateTime"
+      },
+      "sh:maxCount": 1,
+      "sh:minCount": 1,
+      "sh:path": {
+        "@id": "cred:issued"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb17",
+      "sh:datatype": {
+        "@id": "xsd:dateTime"
+      },
+      "sh:maxCount": 1,
+      "sh:minCount": 1,
+      "sh:path": {
+        "@id": "cred:validFrom"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "edc:GradingSchemeShape",
+      "@type": "sh:NodeShape",
+      "sh:name": {
+        "@language": "en",
+        "@value": "Grading Scheme"
+      },
+      "sh:property": {
+        "@id": "_:n60af88093d9c405c9512ab11b990995cb103"
+      },
+      "sh:targetClass": {
+        "@id": "elm:GradingScheme"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb103",
+      "sh:message": {
+        "@language": "en",
+        "@value": "dc:title is mandatory (1..*) on GradingScheme."
+      },
+      "sh:minCount": 1,
+      "sh:path": {
+        "@id": "dc:title"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "edc:LearningEntitlementShape",
+      "@type": "sh:NodeShape",
+      "sh:name": {
+        "@language": "en",
+        "@value": "Learning Entitlement"
+      },
+      "sh:property": [
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb42"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb43"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb44"
+        }
+      ],
+      "sh:targetClass": {
+        "@id": "elm:LearningEntitlement"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb42",
+      "sh:message": {
+        "@language": "en",
+        "@value": "dc:title is mandatory (1..*) on LearningEntitlement."
+      },
+      "sh:minCount": 1,
+      "sh:path": {
+        "@id": "dc:title"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb43",
+      "sh:maxCount": 1,
+      "sh:message": {
+        "@language": "en",
+        "@value": "elm:awardedBy is mandatory (1..1) on LearningEntitlement."
+      },
+      "sh:minCount": 1,
+      "sh:node": {
+        "@id": "edc:AwardingProcessShape"
+      },
+      "sh:path": {
+        "@id": "elm:awardedBy"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb44",
+      "sh:datatype": {
+        "@id": "xsd:dateTime"
+      },
+      "sh:maxCount": 1,
+      "sh:path": {
+        "@id": "elm:expiryDate"
+      },
+      "sh:severity": {
+        "@id": "sh:Warning"
+      }
+    },
+    {
+      "@id": "edc:DisplayParameterShape",
+      "@type": "sh:NodeShape",
+      "sh:name": {
+        "@language": "en",
+        "@value": "Display Parameter"
+      },
+      "sh:property": [
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb72"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb73"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb74"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb75"
+        }
+      ],
+      "sh:targetClass": {
+        "@id": "elm:DisplayParameter"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb72",
+      "sh:message": {
+        "@language": "en",
+        "@value": "dc:title is mandatory (1..*) on DisplayParameter."
+      },
+      "sh:minCount": 1,
+      "sh:path": {
+        "@id": "dc:title"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb73",
+      "sh:message": {
+        "@language": "en",
+        "@value": "dc:language is mandatory (1..*) on DisplayParameter."
+      },
+      "sh:minCount": 1,
+      "sh:node": {
+        "@id": "edc:ConceptShape"
+      },
+      "sh:path": {
+        "@id": "dc:language"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb74",
+      "sh:maxCount": 1,
+      "sh:message": {
+        "@language": "en",
+        "@value": "elm:primaryLanguage is mandatory (1..1) on DisplayParameter."
+      },
+      "sh:minCount": 1,
+      "sh:node": {
+        "@id": "edc:ConceptShape"
+      },
+      "sh:path": {
+        "@id": "elm:primaryLanguage"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb75",
+      "sh:message": {
+        "@language": "en",
+        "@value": "elm:individualDisplay is mandatory (1..*) on DisplayParameter."
+      },
+      "sh:minCount": 1,
+      "sh:node": {
+        "@id": "edc:IndividualDisplayShape"
+      },
+      "sh:path": {
+        "@id": "elm:individualDisplay"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "edc:EuropeanDigitalPresentationShape",
+      "@type": "sh:NodeShape",
+      "sh:name": {
+        "@language": "en",
+        "@value": "European Digital Presentation"
+      },
+      "sh:property": [
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb122"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb123"
+        }
+      ],
+      "sh:targetClass": {
+        "@id": "elm:EuropeanDigitalPresentation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb122",
+      "sh:node": {
+        "@id": "edc:EuropeanDigitalCredentialShape"
+      },
+      "sh:path": {
+        "@id": "cred:verifiableCredential"
+      },
+      "sh:severity": {
+        "@id": "sh:Warning"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb123",
+      "sh:node": {
+        "@id": "edc:VerificationCheckShape"
+      },
+      "sh:path": {
+        "@id": "elm:verificationCheck"
+      },
+      "sh:severity": {
+        "@id": "sh:Warning"
+      }
+    },
+    {
+      "@id": "edc:GeometryShape",
+      "@type": "sh:NodeShape",
+      "sh:name": {
+        "@language": "en",
+        "@value": "Geometry"
+      },
+      "sh:property": [
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb108"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb109"
+        }
+      ],
+      "sh:targetClass": {
+        "@id": "locn:Geometry"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb108",
+      "sh:datatype": {
+        "@id": "xsd:string"
+      },
+      "sh:path": {
+        "@id": "clv:latitude"
+      },
+      "sh:severity": {
+        "@id": "sh:Warning"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb109",
+      "sh:datatype": {
+        "@id": "xsd:string"
+      },
+      "sh:path": {
+        "@id": "clv:longitude"
+      },
+      "sh:severity": {
+        "@id": "sh:Warning"
+      }
+    },
+    {
+      "@id": "edc:VerificationCheckShape",
+      "@type": "sh:NodeShape",
+      "sh:name": {
+        "@language": "en",
+        "@value": "Verification Check"
+      },
+      "sh:property": [
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb116"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb117"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb118"
+        }
+      ],
+      "sh:targetClass": {
+        "@id": "elm:VerificationCheck"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb116",
+      "sh:maxCount": 1,
+      "sh:message": {
+        "@language": "en",
+        "@value": "elm:verificationStatus is mandatory (1..1) on VerificationCheck."
+      },
+      "sh:minCount": 1,
+      "sh:node": {
+        "@id": "edc:ConceptShape"
+      },
+      "sh:path": {
+        "@id": "elm:verificationStatus"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb117",
+      "sh:maxCount": 1,
+      "sh:message": {
+        "@language": "en",
+        "@value": "dc:type is mandatory (1..1) on VerificationCheck."
+      },
+      "sh:minCount": 1,
+      "sh:node": {
+        "@id": "edc:ConceptShape"
+      },
+      "sh:path": {
+        "@id": "dc:type"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb118",
+      "sh:maxCount": 1,
+      "sh:message": {
+        "@language": "en",
+        "@value": "elm:subject is mandatory (1..1) on VerificationCheck."
+      },
+      "sh:minCount": 1,
+      "sh:path": {
+        "@id": "elm:subject"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "edc:OrganisationShape",
+      "@type": "sh:NodeShape",
+      "sh:name": {
+        "@language": "en",
+        "@value": "Organisation"
+      },
+      "sh:property": [
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb24"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb25"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb26"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb27"
+        }
+      ],
+      "sh:targetClass": {
+        "@id": "elm:Organisation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb24",
+      "sh:message": {
+        "@language": "en",
+        "@value": "rov:legalName is mandatory (1..*) on Organisation."
+      },
+      "sh:minCount": 1,
+      "sh:path": {
+        "@id": "rov:legalName"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb25",
+      "sh:message": {
+        "@language": "en",
+        "@value": "elm:location is mandatory (1..*) on Organisation."
+      },
+      "sh:minCount": 1,
+      "sh:node": {
+        "@id": "edc:LocationShape"
+      },
+      "sh:path": {
+        "@id": "elm:location"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb26",
+      "sh:maxCount": 1,
+      "sh:message": {
+        "@language": "en",
+        "@value": "elm:eidasLegalIdentifier is recommended (0..1) on Organisation."
+      },
+      "sh:node": {
+        "@id": "edc:LegalIdentifierShape"
+      },
+      "sh:path": {
+        "@id": "elm:eidasLegalIdentifier"
+      },
+      "sh:severity": {
+        "@id": "sh:Warning"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb27",
+      "sh:maxCount": 1,
+      "sh:node": {
+        "@id": "edc:LegalIdentifierShape"
+      },
+      "sh:path": {
+        "@id": "rov:registration"
+      },
+      "sh:severity": {
+        "@id": "sh:Warning"
+      }
+    },
+    {
+      "@id": "edc:ResultDistributionShape",
+      "@type": "sh:NodeShape",
+      "sh:name": {
+        "@language": "en",
+        "@value": "Result Distribution"
+      },
+      "sh:property": {
+        "@id": "_:n60af88093d9c405c9512ab11b990995cb110"
+      },
+      "sh:targetClass": {
+        "@id": "elm:ResultDistribution"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb110",
+      "sh:node": {
+        "@id": "edc:ResultCategoryShape"
+      },
+      "sh:path": {
+        "@id": "elm:resultCategory"
+      },
+      "sh:severity": {
+        "@id": "sh:Warning"
+      }
+    },
+    {
+      "@id": "edc:LegalIdentifierShape",
+      "@type": "sh:NodeShape",
+      "sh:name": {
+        "@language": "en",
+        "@value": "Legal Identifier"
+      },
+      "sh:property": [
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb86"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb87"
+        }
+      ],
+      "sh:targetClass": {
+        "@id": "elm:LegalIdentifier"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb86",
+      "sh:maxCount": 1,
+      "sh:message": {
+        "@language": "en",
+        "@value": "skos:notation is mandatory (1..1) on LegalIdentifier."
+      },
+      "sh:minCount": 1,
+      "sh:path": {
+        "@id": "skos:notation"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb87",
+      "sh:maxCount": 1,
+      "sh:message": {
+        "@language": "en",
+        "@value": "dc:spatial is mandatory (1..1) on LegalIdentifier."
+      },
+      "sh:minCount": 1,
+      "sh:node": {
+        "@id": "edc:ConceptShape"
+      },
+      "sh:path": {
+        "@id": "dc:spatial"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "edc:LearningEntitlementSpecificationShape",
+      "@type": "sh:NodeShape",
+      "sh:name": {
+        "@language": "en",
+        "@value": "Learning Entitlement Specification"
+      },
+      "sh:property": [
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb53"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb54"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb55"
+        }
+      ],
+      "sh:targetClass": {
+        "@id": "elm:LearningEntitlementSpecification"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb53",
+      "sh:message": {
+        "@language": "en",
+        "@value": "dc:title is mandatory (1..*) on LearningEntitlementSpecification."
+      },
+      "sh:minCount": 1,
+      "sh:path": {
+        "@id": "dc:title"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb54",
+      "sh:maxCount": 1,
+      "sh:message": {
+        "@language": "en",
+        "@value": "elm:entitlementStatus is mandatory (1..1) on LearningEntitlementSpecification."
+      },
+      "sh:minCount": 1,
+      "sh:node": {
+        "@id": "edc:ConceptShape"
+      },
+      "sh:path": {
+        "@id": "elm:entitlementStatus"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb55",
+      "sh:maxCount": 1,
+      "sh:message": {
+        "@language": "en",
+        "@value": "dc:type is mandatory (1..1) on LearningEntitlementSpecification."
+      },
+      "sh:minCount": 1,
+      "sh:node": {
+        "@id": "edc:ConceptShape"
+      },
+      "sh:path": {
+        "@id": "dc:type"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "edc:DisplayDetailShape",
+      "@type": "sh:NodeShape",
+      "sh:name": {
+        "@language": "en",
+        "@value": "Display Detail"
+      },
+      "sh:property": [
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb78"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb79"
+        }
+      ],
+      "sh:targetClass": {
+        "@id": "elm:DisplayDetail"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb78",
+      "sh:maxCount": 1,
+      "sh:message": {
+        "@language": "en",
+        "@value": "elm:image is mandatory (1..1) on DisplayDetail."
+      },
+      "sh:minCount": 1,
+      "sh:node": {
+        "@id": "edc:MediaObjectShape"
+      },
+      "sh:path": {
+        "@id": "elm:image"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb79",
+      "sh:datatype": {
+        "@id": "xsd:positiveInteger"
+      },
+      "sh:maxCount": 1,
+      "sh:message": {
+        "@language": "en",
+        "@value": "elm:page is mandatory (1..1) and must be xsd:positiveInteger on DisplayDetail."
+      },
+      "sh:minCount": 1,
+      "sh:path": {
+        "@id": "elm:page"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "edc:LearningActivitySpecificationShape",
+      "@type": "sh:NodeShape",
+      "sh:name": {
+        "@language": "en",
+        "@value": "Learning Activity Specification"
+      },
+      "sh:property": [
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb49"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb50"
+        }
+      ],
+      "sh:targetClass": {
+        "@id": "elm:LearningActivitySpecification"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb49",
+      "sh:message": {
+        "@language": "en",
+        "@value": "dc:title is mandatory (1..*) on LearningActivitySpecification."
+      },
+      "sh:minCount": 1,
+      "sh:path": {
+        "@id": "dc:title"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb50",
+      "sh:datatype": {
+        "@id": "xsd:duration"
+      },
+      "sh:maxCount": 1,
+      "sh:path": {
+        "@id": "elm:volumeOfLearning"
+      },
+      "sh:severity": {
+        "@id": "sh:Warning"
+      }
+    },
+    {
+      "@id": "edc:ResultCategoryShape",
+      "@type": "sh:NodeShape",
+      "sh:name": {
+        "@language": "en",
+        "@value": "Result Category"
+      },
+      "sh:property": [
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb111"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb112"
+        }
+      ],
+      "sh:targetClass": {
+        "@id": "elm:ResultCategory"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb111",
+      "sh:datatype": {
+        "@id": "xsd:string"
+      },
+      "sh:maxCount": 1,
+      "sh:message": {
+        "@language": "en",
+        "@value": "elm:label is mandatory (1..1) on ResultCategory."
+      },
+      "sh:minCount": 1,
+      "sh:path": {
+        "@id": "elm:label"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb112",
+      "sh:datatype": {
+        "@id": "xsd:positiveInteger"
+      },
+      "sh:maxCount": 1,
+      "sh:message": {
+        "@language": "en",
+        "@value": "elm:count is mandatory (1..1) on ResultCategory."
+      },
+      "sh:minCount": 1,
+      "sh:path": {
+        "@id": "elm:count"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "edc:LearningAssessmentShape",
+      "@type": "sh:NodeShape",
+      "sh:name": {
+        "@language": "en",
+        "@value": "Learning Assessment"
+      },
+      "sh:property": [
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb39"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb40"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb41"
+        }
+      ],
+      "sh:targetClass": {
+        "@id": "elm:LearningAssessment"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb39",
+      "sh:message": {
+        "@language": "en",
+        "@value": "dc:title is mandatory (1..*) on LearningAssessment."
+      },
+      "sh:minCount": 1,
+      "sh:path": {
+        "@id": "dc:title"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb40",
+      "sh:maxCount": 1,
+      "sh:message": {
+        "@language": "en",
+        "@value": "elm:awardedBy is mandatory (1..1) on LearningAssessment."
+      },
+      "sh:minCount": 1,
+      "sh:node": {
+        "@id": "edc:AwardingProcessShape"
+      },
+      "sh:path": {
+        "@id": "elm:awardedBy"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb41",
+      "sh:maxCount": 1,
+      "sh:message": {
+        "@language": "en",
+        "@value": "elm:grade is mandatory (1..1) on LearningAssessment."
+      },
+      "sh:minCount": 1,
+      "sh:node": {
+        "@id": "edc:NoteShape"
+      },
+      "sh:path": {
+        "@id": "elm:grade"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "edc:QualificationShape",
+      "@type": "sh:NodeShape",
+      "sh:name": {
+        "@language": "en",
+        "@value": "Qualification"
+      },
+      "sh:property": [
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb56"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb57"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb58"
+        }
+      ],
+      "sh:targetClass": {
+        "@id": "elm:Qualification"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb56",
+      "sh:message": {
+        "@language": "en",
+        "@value": "dc:title is mandatory (1..*) on Qualification."
+      },
+      "sh:minCount": 1,
+      "sh:path": {
+        "@id": "dc:title"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb57",
+      "sh:maxCount": 1,
+      "sh:node": {
+        "@id": "edc:ConceptShape"
+      },
+      "sh:path": {
+        "@id": "elm:EQFLevel"
+      },
+      "sh:severity": {
+        "@id": "sh:Warning"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb58",
+      "sh:node": {
+        "@id": "edc:AccreditationShape"
+      },
+      "sh:path": {
+        "@id": "elm:accreditation"
+      },
+      "sh:severity": {
+        "@id": "sh:Warning"
+      }
+    },
+    {
+      "@id": "edc:ShortenedGradingShape",
+      "@type": "sh:NodeShape",
+      "sh:name": {
+        "@language": "en",
+        "@value": "Shortened Grading"
+      },
+      "sh:property": [
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb113"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb114"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb115"
+        }
+      ],
+      "sh:targetClass": {
+        "@id": "elm:ShortenedGrading"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb113",
+      "sh:datatype": {
+        "@id": "xsd:integer"
+      },
+      "sh:maxCount": 1,
+      "sh:message": {
+        "@language": "en",
+        "@value": "elm:percentageLower is mandatory (1..1) on ShortenedGrading."
+      },
+      "sh:minCount": 1,
+      "sh:path": {
+        "@id": "elm:percentageLower"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb114",
+      "sh:datatype": {
+        "@id": "xsd:integer"
+      },
+      "sh:maxCount": 1,
+      "sh:message": {
+        "@language": "en",
+        "@value": "elm:percentageEqual is mandatory (1..1) on ShortenedGrading."
+      },
+      "sh:minCount": 1,
+      "sh:path": {
+        "@id": "elm:percentageEqual"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb115",
+      "sh:datatype": {
+        "@id": "xsd:integer"
+      },
+      "sh:maxCount": 1,
+      "sh:message": {
+        "@language": "en",
+        "@value": "elm:percentageHigher is mandatory (1..1) on ShortenedGrading."
+      },
+      "sh:minCount": 1,
+      "sh:path": {
+        "@id": "elm:percentageHigher"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "edc:IdentifierShape",
+      "@type": "sh:NodeShape",
+      "sh:name": {
+        "@language": "en",
+        "@value": "Identifier"
+      },
+      "sh:property": {
+        "@id": "_:n60af88093d9c405c9512ab11b990995cb85"
+      },
+      "sh:targetClass": {
+        "@id": "elm:Identifier"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb85",
+      "sh:maxCount": 1,
+      "sh:message": {
+        "@language": "en",
+        "@value": "skos:notation is mandatory (1..1) on Identifier."
+      },
+      "sh:minCount": 1,
+      "sh:path": {
+        "@id": "skos:notation"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "edc:LearningActivityShape",
+      "@type": "sh:NodeShape",
+      "sh:name": {
+        "@language": "en",
+        "@value": "Learning Activity"
+      },
+      "sh:property": [
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb36"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb37"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb38"
+        }
+      ],
+      "sh:targetClass": {
+        "@id": "elm:LearningActivity"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb36",
+      "sh:message": {
+        "@language": "en",
+        "@value": "dc:title is mandatory (1..*) on LearningActivity."
+      },
+      "sh:minCount": 1,
+      "sh:path": {
+        "@id": "dc:title"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb37",
+      "sh:maxCount": 1,
+      "sh:message": {
+        "@language": "en",
+        "@value": "elm:awardedBy is mandatory (1..1) on LearningActivity."
+      },
+      "sh:minCount": 1,
+      "sh:node": {
+        "@id": "edc:AwardingProcessShape"
+      },
+      "sh:path": {
+        "@id": "elm:awardedBy"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb38",
+      "sh:datatype": {
+        "@id": "xsd:positiveInteger"
+      },
+      "sh:maxInclusive": 100,
+      "sh:minInclusive": 0,
+      "sh:path": {
+        "@id": "elm:levelOfCompletion"
+      },
+      "sh:severity": {
+        "@id": "sh:Warning"
+      }
+    },
+    {
+      "@id": "edc:LearningAchievementShape",
+      "@type": "sh:NodeShape",
+      "sh:name": {
+        "@language": "en",
+        "@value": "Learning Achievement"
+      },
+      "sh:property": [
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb30"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb31"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb32"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb33"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb34"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb35"
+        }
+      ],
+      "sh:targetClass": {
+        "@id": "elm:LearningAchievement"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb30",
+      "sh:message": {
+        "@language": "en",
+        "@value": "dc:title is mandatory (1..*) on LearningAchievement."
+      },
+      "sh:minCount": 1,
+      "sh:path": {
+        "@id": "dc:title"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb31",
+      "sh:maxCount": 1,
+      "sh:message": {
+        "@language": "en",
+        "@value": "elm:awardedBy is mandatory (1..1) on LearningAchievement."
+      },
+      "sh:minCount": 1,
+      "sh:node": {
+        "@id": "edc:AwardingProcessShape"
+      },
+      "sh:path": {
+        "@id": "elm:awardedBy"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb32",
+      "sh:maxCount": 1,
+      "sh:path": {
+        "@id": "elm:specifiedBy"
+      },
+      "sh:severity": {
+        "@id": "sh:Warning"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb33",
+      "sh:node": {
+        "@id": "edc:LearningAssessmentShape"
+      },
+      "sh:path": {
+        "@id": "elm:provenBy"
+      },
+      "sh:severity": {
+        "@id": "sh:Warning"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb34",
+      "sh:node": {
+        "@id": "edc:CreditPointShape"
+      },
+      "sh:path": {
+        "@id": "elm:creditReceived"
+      },
+      "sh:severity": {
+        "@id": "sh:Warning"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb35",
+      "sh:node": {
+        "@id": "edc:LearningEntitlementShape"
+      },
+      "sh:path": {
+        "@id": "elm:entitlesTo"
+      },
+      "sh:severity": {
+        "@id": "sh:Warning"
+      }
+    },
+    {
+      "@id": "edc:EvidenceShape",
+      "@type": "sh:NodeShape",
+      "sh:name": {
+        "@language": "en",
+        "@value": "Evidence"
+      },
+      "sh:property": {
+        "@id": "_:n60af88093d9c405c9512ab11b990995cb119"
+      },
+      "sh:targetClass": {
+        "@id": "elm:Evidence"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb119",
+      "sh:maxCount": 1,
+      "sh:message": {
+        "@language": "en",
+        "@value": "dc:type is mandatory (1..1) on Evidence."
+      },
+      "sh:minCount": 1,
+      "sh:node": {
+        "@id": "edc:ConceptShape"
+      },
+      "sh:path": {
+        "@id": "dc:type"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "edc:ConceptSchemeShape",
+      "@type": "sh:NodeShape",
+      "sh:name": {
+        "@language": "en",
+        "@value": "Concept Scheme"
+      },
+      "sh:targetClass": {
+        "@id": "skos:ConceptScheme"
+      }
+    },
+    {
+      "@id": "edc:GrantShape",
+      "@type": "sh:NodeShape",
+      "sh:name": {
+        "@language": "en",
+        "@value": "Grant"
+      },
+      "sh:property": {
+        "@id": "_:n60af88093d9c405c9512ab11b990995cb104"
+      },
+      "sh:targetClass": {
+        "@id": "elm:Grant"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb104",
+      "sh:message": {
+        "@language": "en",
+        "@value": "dc:title is mandatory (1..*) on Grant."
+      },
+      "sh:minCount": 1,
+      "sh:path": {
+        "@id": "dc:title"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "edc:IssuerNodeShape",
+      "@type": "sh:NodeShape",
+      "sh:name": {
+        "@language": "en",
+        "@value": "Issuer Node"
+      },
+      "sh:property": {
+        "@id": "_:n60af88093d9c405c9512ab11b990995cb12"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb12",
+      "sh:maxCount": 1,
+      "sh:message": {
+        "@language": "en",
+        "@value": "elm:eidasLegalIdentifier is mandatory (1..1) on the issuer."
+      },
+      "sh:minCount": 1,
+      "sh:node": {
+        "@id": "edc:LegalIdentifierShape"
+      },
+      "sh:path": {
+        "@id": "elm:eidasLegalIdentifier"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "edc:LearningAssessmentSpecificationShape",
+      "@type": "sh:NodeShape",
+      "sh:name": {
+        "@language": "en",
+        "@value": "Learning Assessment Specification"
+      },
+      "sh:property": [
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb51"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb52"
+        }
+      ],
+      "sh:targetClass": {
+        "@id": "elm:LearningAssessmentSpecification"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb51",
+      "sh:message": {
+        "@language": "en",
+        "@value": "dc:title is mandatory (1..*) on LearningAssessmentSpecification."
+      },
+      "sh:minCount": 1,
+      "sh:path": {
+        "@id": "dc:title"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb52",
+      "sh:maxCount": 1,
+      "sh:node": {
+        "@id": "edc:GradingSchemeShape"
+      },
+      "sh:path": {
+        "@id": "elm:gradingScheme"
+      },
+      "sh:severity": {
+        "@id": "sh:Warning"
+      }
+    },
+    {
+      "@id": "edc:PhoneShape",
+      "@type": "sh:NodeShape",
+      "sh:name": {
+        "@language": "en",
+        "@value": "Phone"
+      },
+      "sh:property": {
+        "@id": "_:n60af88093d9c405c9512ab11b990995cb101"
+      },
+      "sh:targetClass": {
+        "@id": "elm:Phone"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb101",
+      "sh:datatype": {
+        "@id": "xsd:string"
+      },
+      "sh:maxCount": 1,
+      "sh:path": {
+        "@id": "elm:phoneNumber"
+      },
+      "sh:severity": {
+        "@id": "sh:Warning"
+      }
+    },
+    {
+      "@id": "edc:IndividualDisplayShape",
+      "@type": "sh:NodeShape",
+      "sh:name": {
+        "@language": "en",
+        "@value": "Individual Display"
+      },
+      "sh:property": [
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb76"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb77"
+        }
+      ],
+      "sh:targetClass": {
+        "@id": "elm:IndividualDisplay"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb76",
+      "sh:maxCount": 1,
+      "sh:message": {
+        "@language": "en",
+        "@value": "dc:language is mandatory (1..1) on IndividualDisplay."
+      },
+      "sh:minCount": 1,
+      "sh:node": {
+        "@id": "edc:ConceptShape"
+      },
+      "sh:path": {
+        "@id": "dc:language"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb77",
+      "sh:message": {
+        "@language": "en",
+        "@value": "elm:displayDetail is mandatory (1..*) on IndividualDisplay."
+      },
+      "sh:minCount": 1,
+      "sh:node": {
+        "@id": "edc:DisplayDetailShape"
+      },
+      "sh:path": {
+        "@id": "elm:displayDetail"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "edc:AmountShape",
+      "@type": "sh:NodeShape",
+      "sh:name": {
+        "@language": "en",
+        "@value": "Amount"
+      },
+      "sh:property": [
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb96"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb97"
+        }
+      ],
+      "sh:targetClass": {
+        "@id": "elm:Amount"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb96",
+      "sh:datatype": {
+        "@id": "xsd:decimal"
+      },
+      "sh:maxCount": 1,
+      "sh:message": {
+        "@language": "en",
+        "@value": "elm:value is mandatory (1..1) on Amount."
+      },
+      "sh:minCount": 1,
+      "sh:path": {
+        "@id": "elm:value"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb97",
+      "sh:maxCount": 1,
+      "sh:message": {
+        "@language": "en",
+        "@value": "elm:unit is mandatory (1..1) on Amount."
+      },
+      "sh:minCount": 1,
+      "sh:node": {
+        "@id": "edc:ConceptShape"
+      },
+      "sh:path": {
+        "@id": "elm:unit"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "edc:AccreditationShape",
+      "@type": "sh:NodeShape",
+      "sh:name": {
+        "@language": "en",
+        "@value": "Accreditation"
+      },
+      "sh:property": [
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb67"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb68"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb69"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb70"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb71"
+        }
+      ],
+      "sh:targetClass": {
+        "@id": "elm:Accreditation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb67",
+      "sh:message": {
+        "@language": "en",
+        "@value": "dc:title is mandatory (1..*) on Accreditation."
+      },
+      "sh:minCount": 1,
+      "sh:path": {
+        "@id": "dc:title"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb68",
+      "sh:maxCount": 1,
+      "sh:message": {
+        "@language": "en",
+        "@value": "elm:accreditingAgent is mandatory (1..1) on Accreditation."
+      },
+      "sh:minCount": 1,
+      "sh:node": {
+        "@id": "edc:OrganisationShape"
+      },
+      "sh:path": {
+        "@id": "elm:accreditingAgent"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb69",
+      "sh:maxCount": 1,
+      "sh:message": {
+        "@language": "en",
+        "@value": "dc:type is mandatory (1..1) on Accreditation."
+      },
+      "sh:minCount": 1,
+      "sh:node": {
+        "@id": "edc:ConceptShape"
+      },
+      "sh:path": {
+        "@id": "dc:type"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb70",
+      "sh:datatype": {
+        "@id": "xsd:dateTime"
+      },
+      "sh:maxCount": 1,
+      "sh:path": {
+        "@id": "elm:expiryDate"
+      },
+      "sh:severity": {
+        "@id": "sh:Warning"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb71",
+      "sh:datatype": {
+        "@id": "xsd:dateTime"
+      },
+      "sh:maxCount": 1,
+      "sh:path": {
+        "@id": "elm:reviewDate"
+      },
+      "sh:severity": {
+        "@id": "sh:Warning"
+      }
+    },
+    {
+      "@id": "edc:WebResourceShape",
+      "@type": "sh:NodeShape",
+      "sh:name": {
+        "@language": "en",
+        "@value": "Web Resource"
+      },
+      "sh:property": {
+        "@id": "_:n60af88093d9c405c9512ab11b990995cb102"
+      },
+      "sh:targetClass": {
+        "@id": "elm:WebResource"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb102",
+      "sh:datatype": {
+        "@id": "xsd:anyURI"
+      },
+      "sh:maxCount": 1,
+      "sh:message": {
+        "@language": "en",
+        "@value": "elm:contentUrl is mandatory (1..1) on WebResource."
+      },
+      "sh:minCount": 1,
+      "sh:path": {
+        "@id": "elm:contentUrl"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "edc:PersonShape",
+      "@type": "sh:NodeShape",
+      "sh:name": {
+        "@language": "en",
+        "@value": "Person"
+      },
+      "sh:property": [
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb18"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb19"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb20"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb21"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb22"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb23"
+        }
+      ],
+      "sh:targetClass": {
+        "@id": "elm:Person"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb18",
+      "sh:message": {
+        "@language": "en",
+        "@value": "elm:hasClaim is mandatory (1..*) on Person."
+      },
+      "sh:minCount": 1,
+      "sh:path": {
+        "@id": "elm:hasClaim"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb19",
+      "sh:maxCount": 1,
+      "sh:path": {
+        "@id": "foaf:familyName"
+      },
+      "sh:severity": {
+        "@id": "sh:Warning"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb20",
+      "sh:maxCount": 1,
+      "sh:path": {
+        "@id": "foaf:givenName"
+      },
+      "sh:severity": {
+        "@id": "sh:Warning"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb21",
+      "sh:datatype": {
+        "@id": "xsd:dateTime"
+      },
+      "sh:maxCount": 1,
+      "sh:path": {
+        "@id": "elm:dateOfBirth"
+      },
+      "sh:severity": {
+        "@id": "sh:Warning"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb22",
+      "sh:maxCount": 1,
+      "sh:node": {
+        "@id": "edc:LegalIdentifierShape"
+      },
+      "sh:path": {
+        "@id": "elm:nationalId"
+      },
+      "sh:severity": {
+        "@id": "sh:Warning"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb23",
+      "sh:maxCount": 1,
+      "sh:node": {
+        "@id": "edc:LocationShape"
+      },
+      "sh:path": {
+        "@id": "elm:location"
+      },
+      "sh:severity": {
+        "@id": "sh:Warning"
+      }
+    },
+    {
+      "@id": "edc:MediaObjectShape",
+      "@type": "sh:NodeShape",
+      "sh:name": {
+        "@language": "en",
+        "@value": "Media Object"
+      },
+      "sh:property": [
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb80"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb81"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb82"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb83"
+        }
+      ],
+      "sh:targetClass": {
+        "@id": "elm:MediaObject"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb80",
+      "sh:datatype": {
+        "@id": "xsd:string"
+      },
+      "sh:maxCount": 1,
+      "sh:message": {
+        "@language": "en",
+        "@value": "elm:content is mandatory (1..1) on MediaObject."
+      },
+      "sh:minCount": 1,
+      "sh:path": {
+        "@id": "elm:content"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb81",
+      "sh:maxCount": 1,
+      "sh:message": {
+        "@language": "en",
+        "@value": "elm:contentEncoding is mandatory (1..1) on MediaObject."
+      },
+      "sh:minCount": 1,
+      "sh:node": {
+        "@id": "edc:ConceptShape"
+      },
+      "sh:path": {
+        "@id": "elm:contentEncoding"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb82",
+      "sh:maxCount": 1,
+      "sh:message": {
+        "@language": "en",
+        "@value": "elm:contentType is mandatory (1..1) on MediaObject."
+      },
+      "sh:minCount": 1,
+      "sh:node": {
+        "@id": "edc:ConceptShape"
+      },
+      "sh:path": {
+        "@id": "elm:contentType"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb83",
+      "sh:datatype": {
+        "@id": "xsd:integer"
+      },
+      "sh:maxCount": 1,
+      "sh:path": {
+        "@id": "elm:contentSize"
+      },
+      "sh:severity": {
+        "@id": "sh:Warning"
+      }
+    },
+    {
+      "@id": "edc:EuropeanDigitalCredentialShape",
+      "@type": "sh:NodeShape",
+      "sh:name": {
+        "@language": "en",
+        "@value": "European Digital Credential"
+      },
+      "sh:property": [
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb1"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb2"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb3"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb4"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb5"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb6"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb7"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb8"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb9"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb10"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb11"
+        }
+      ],
+      "sh:targetClass": {
+        "@id": "elm:EuropeanDigitalCredential"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb1",
+      "sh:message": {
+        "@language": "en",
+        "@value": "elm:credentialProfiles is mandatory (1..*) and must be a Concept."
+      },
+      "sh:minCount": 1,
+      "sh:node": {
+        "@id": "edc:ConceptShape"
+      },
+      "sh:path": {
+        "@id": "elm:credentialProfiles"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb2",
+      "sh:message": {
+        "@language": "en",
+        "@value": "cred:credentialSchema is mandatory (1..*). At least one ShaclValidator2017 entry is required."
+      },
+      "sh:minCount": 1,
+      "sh:path": {
+        "@id": "cred:credentialSchema"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb3",
+      "sh:maxCount": 1,
+      "sh:message": {
+        "@language": "en",
+        "@value": "elm:displayParameter is mandatory (1..1)."
+      },
+      "sh:minCount": 1,
+      "sh:node": {
+        "@id": "edc:DisplayParameterShape"
+      },
+      "sh:path": {
+        "@id": "elm:displayParameter"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb4",
+      "sh:maxCount": 1,
+      "sh:message": {
+        "@language": "en",
+        "@value": "cred:issuer is mandatory (1..1) and must conform to IssuerNodeShape."
+      },
+      "sh:minCount": 1,
+      "sh:node": {
+        "@id": "edc:IssuerNodeShape"
+      },
+      "sh:path": {
+        "@id": "cred:issuer"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb5",
+      "sh:maxCount": 1,
+      "sh:message": {
+        "@language": "en",
+        "@value": "cred:credentialSubject is mandatory (1..1)."
+      },
+      "sh:minCount": 1,
+      "sh:path": {
+        "@id": "cred:credentialSubject"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb6",
+      "sh:datatype": {
+        "@id": "xsd:dateTime"
+      },
+      "sh:maxCount": 1,
+      "sh:message": {
+        "@language": "en",
+        "@value": "cred:issued is mandatory (1..1) and must be xsd:dateTime."
+      },
+      "sh:minCount": 1,
+      "sh:path": {
+        "@id": "cred:issued"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb7",
+      "sh:datatype": {
+        "@id": "xsd:dateTime"
+      },
+      "sh:maxCount": 1,
+      "sh:message": {
+        "@language": "en",
+        "@value": "cred:validFrom is mandatory (1..1) and must be xsd:dateTime."
+      },
+      "sh:minCount": 1,
+      "sh:path": {
+        "@id": "cred:validFrom"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb8",
+      "sh:node": {
+        "@id": "edc:MediaObjectShape"
+      },
+      "sh:path": {
+        "@id": "elm:attachment"
+      },
+      "sh:severity": {
+        "@id": "sh:Warning"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb9",
+      "sh:path": {
+        "@id": "cred:credentialStatus"
+      },
+      "sh:severity": {
+        "@id": "sh:Warning"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb10",
+      "sh:datatype": {
+        "@id": "xsd:dateTime"
+      },
+      "sh:maxCount": 1,
+      "sh:path": {
+        "@id": "cred:validUntil"
+      },
+      "sh:severity": {
+        "@id": "sh:Warning"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb11",
+      "sh:path": {
+        "@id": "adms:identifier"
+      },
+      "sh:severity": {
+        "@id": "sh:Warning"
+      }
+    },
+    {
+      "@id": "edc:LearningAchievementSpecificationShape",
+      "@type": "sh:NodeShape",
+      "sh:name": {
+        "@language": "en",
+        "@value": "Learning Achievement Specification"
+      },
+      "sh:property": [
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb45"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb46"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb47"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb48"
+        }
+      ],
+      "sh:targetClass": {
+        "@id": "elm:LearningAchievementSpecification"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb45",
+      "sh:message": {
+        "@language": "en",
+        "@value": "dc:title is mandatory (1..*) on LearningAchievementSpecification."
+      },
+      "sh:minCount": 1,
+      "sh:path": {
+        "@id": "dc:title"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb46",
+      "sh:node": {
+        "@id": "edc:CreditPointShape"
+      },
+      "sh:path": {
+        "@id": "elm:creditPoint"
+      },
+      "sh:severity": {
+        "@id": "sh:Warning"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb47",
+      "sh:datatype": {
+        "@id": "xsd:duration"
+      },
+      "sh:maxCount": 1,
+      "sh:path": {
+        "@id": "elm:volumeOfLearning"
+      },
+      "sh:severity": {
+        "@id": "sh:Warning"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb48",
+      "sh:datatype": {
+        "@id": "xsd:duration"
+      },
+      "sh:maxCount": 1,
+      "sh:path": {
+        "@id": "elm:maximumDuration"
+      },
+      "sh:severity": {
+        "@id": "sh:Warning"
+      }
+    },
+    {
+      "@id": "edc:ContactPointShape",
+      "@type": "sh:NodeShape",
+      "sh:name": {
+        "@language": "en",
+        "@value": "Contact Point"
+      },
+      "sh:property": [
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb98"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb99"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb100"
+        }
+      ],
+      "sh:targetClass": {
+        "@id": "elm:ContactPoint"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb98",
+      "sh:node": {
+        "@id": "edc:AddressShape"
+      },
+      "sh:path": {
+        "@id": "elm:address"
+      },
+      "sh:severity": {
+        "@id": "sh:Warning"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb99",
+      "sh:path": {
+        "@id": "elm:emailAddress"
+      },
+      "sh:severity": {
+        "@id": "sh:Warning"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb100",
+      "sh:node": {
+        "@id": "edc:PhoneShape"
+      },
+      "sh:path": {
+        "@id": "elm:phone"
+      },
+      "sh:severity": {
+        "@id": "sh:Warning"
+      }
+    },
+    {
+      "@id": "edc:CreditPointShape",
+      "@type": "sh:NodeShape",
+      "sh:name": {
+        "@language": "en",
+        "@value": "Credit Point"
+      },
+      "sh:property": [
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb94"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb95"
+        }
+      ],
+      "sh:targetClass": {
+        "@id": "elm:CreditPoint"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb94",
+      "sh:maxCount": 1,
+      "sh:message": {
+        "@language": "en",
+        "@value": "elm:framework is mandatory (1..1) on CreditPoint."
+      },
+      "sh:minCount": 1,
+      "sh:node": {
+        "@id": "edc:ConceptShape"
+      },
+      "sh:path": {
+        "@id": "elm:framework"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb95",
+      "sh:datatype": {
+        "@id": "xsd:string"
+      },
+      "sh:maxCount": 1,
+      "sh:message": {
+        "@language": "en",
+        "@value": "elm:point is mandatory (1..1) on CreditPoint."
+      },
+      "sh:minCount": 1,
+      "sh:path": {
+        "@id": "elm:point"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "edc:AwardingOpportunityShape",
+      "@type": "sh:NodeShape",
+      "sh:name": {
+        "@language": "en",
+        "@value": "Awarding Opportunity"
+      },
+      "sh:property": {
+        "@id": "_:n60af88093d9c405c9512ab11b990995cb66"
+      },
+      "sh:targetClass": {
+        "@id": "elm:AwardingOpportunity"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb66",
+      "sh:message": {
+        "@language": "en",
+        "@value": "elm:awardingBody is mandatory (1..*) on AwardingOpportunity."
+      },
+      "sh:minCount": 1,
+      "sh:path": {
+        "@id": "elm:awardingBody"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "edc:AddressShape",
+      "@type": "sh:NodeShape",
+      "sh:name": {
+        "@language": "en",
+        "@value": "Address"
+      },
+      "sh:property": [
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb88"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb89"
+        }
+      ],
+      "sh:targetClass": {
+        "@id": "elm:Address"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb88",
+      "sh:maxCount": 1,
+      "sh:message": {
+        "@language": "en",
+        "@value": "elm:countryCode is mandatory (1..1) on Address."
+      },
+      "sh:minCount": 1,
+      "sh:node": {
+        "@id": "edc:ConceptShape"
+      },
+      "sh:path": {
+        "@id": "elm:countryCode"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb89",
+      "sh:maxCount": 1,
+      "sh:node": {
+        "@id": "edc:NoteShape"
+      },
+      "sh:path": {
+        "@id": "elm:fullAddress"
+      },
+      "sh:severity": {
+        "@id": "sh:Warning"
+      }
+    },
+    {
+      "@id": "edc:PriceDetailShape",
+      "@type": "sh:NodeShape",
+      "sh:name": {
+        "@language": "en",
+        "@value": "Price Detail"
+      },
+      "sh:property": {
+        "@id": "_:n60af88093d9c405c9512ab11b990995cb120"
+      },
+      "sh:targetClass": {
+        "@id": "elm:PriceDetail"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb120",
+      "sh:maxCount": 1,
+      "sh:node": {
+        "@id": "edc:AmountShape"
+      },
+      "sh:path": {
+        "@id": "elm:amount"
+      },
+      "sh:severity": {
+        "@id": "sh:Warning"
+      }
+    },
+    {
+      "@id": "edc:NoteShape",
+      "@type": "sh:NodeShape",
+      "sh:name": {
+        "@language": "en",
+        "@value": "Note"
+      },
+      "sh:property": {
+        "@id": "_:n60af88093d9c405c9512ab11b990995cb84"
+      },
+      "sh:targetClass": {
+        "@id": "elm:Note"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb84",
+      "sh:message": {
+        "@language": "en",
+        "@value": "elm:noteLiteral is mandatory (1..*) on Note."
+      },
+      "sh:minCount": 1,
+      "sh:path": {
+        "@id": "elm:noteLiteral"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "edc:PeriodOfTimeShape",
+      "@type": "sh:NodeShape",
+      "sh:name": {
+        "@language": "en",
+        "@value": "Period Of Time"
+      },
+      "sh:property": [
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb106"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb107"
+        }
+      ],
+      "sh:targetClass": {
+        "@id": "dc:PeriodOfTime"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb106",
+      "sh:datatype": {
+        "@id": "xsd:dateTime"
+      },
+      "sh:maxCount": 1,
+      "sh:path": {
+        "@id": "elm:startDate"
+      },
+      "sh:severity": {
+        "@id": "sh:Warning"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb107",
+      "sh:datatype": {
+        "@id": "xsd:dateTime"
+      },
+      "sh:maxCount": 1,
+      "sh:path": {
+        "@id": "elm:endDate"
+      },
+      "sh:severity": {
+        "@id": "sh:Warning"
+      }
+    },
+    {
+      "@id": "edc:ConceptShape",
+      "@type": "sh:NodeShape",
+      "sh:name": {
+        "@language": "en",
+        "@value": "Concept"
+      },
+      "sh:property": [
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb91"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb92"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb93"
+        }
+      ],
+      "sh:targetClass": {
+        "@id": "skos:Concept"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb91",
+      "sh:maxCount": 1,
+      "sh:path": {
+        "@id": "skos:notation"
+      },
+      "sh:severity": {
+        "@id": "sh:Warning"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb92",
+      "sh:path": {
+        "@id": "skos:prefLabel"
+      },
+      "sh:severity": {
+        "@id": "sh:Warning"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb93",
+      "sh:maxCount": 1,
+      "sh:node": {
+        "@id": "edc:ConceptSchemeShape"
+      },
+      "sh:path": {
+        "@id": "skos:inScheme"
+      },
+      "sh:severity": {
+        "@id": "sh:Warning"
+      }
+    },
+    {
+      "@id": "edc:LearningOutcomeShape",
+      "@type": "sh:NodeShape",
+      "sh:name": {
+        "@language": "en",
+        "@value": "Learning Outcome"
+      },
+      "sh:property": {
+        "@id": "_:n60af88093d9c405c9512ab11b990995cb62"
+      },
+      "sh:targetClass": {
+        "@id": "elm:LearningOutcome"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb62",
+      "sh:message": {
+        "@language": "en",
+        "@value": "dc:title is mandatory (1..*) on LearningOutcome."
+      },
+      "sh:minCount": 1,
+      "sh:path": {
+        "@id": "dc:title"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "edc:ClaimShape",
+      "@type": "sh:NodeShape",
+      "sh:name": {
+        "@language": "en",
+        "@value": "Claim"
+      },
+      "sh:property": [
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb28"
+        },
+        {
+          "@id": "_:n60af88093d9c405c9512ab11b990995cb29"
+        }
+      ],
+      "sh:targetClass": {
+        "@id": "elm:Claim"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb28",
+      "sh:message": {
+        "@language": "en",
+        "@value": "dc:title is mandatory (1..*) on Claim."
+      },
+      "sh:minCount": 1,
+      "sh:path": {
+        "@id": "dc:title"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "_:n60af88093d9c405c9512ab11b990995cb29",
+      "sh:maxCount": 1,
+      "sh:message": {
+        "@language": "en",
+        "@value": "elm:awardedBy is mandatory (1..1) on Claim."
+      },
+      "sh:minCount": 1,
+      "sh:node": {
+        "@id": "edc:AwardingProcessShape"
+      },
+      "sh:path": {
+        "@id": "elm:awardedBy"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    }
+  ]
+}

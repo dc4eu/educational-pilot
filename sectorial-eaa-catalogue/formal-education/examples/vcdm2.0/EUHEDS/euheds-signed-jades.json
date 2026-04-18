@@ -1,0 +1,614 @@
+{
+  "_comment": "JAdES D-Zero signed credential. The 'compact_jws' field is the canonical transport form. The 'unsigned_credential' is included for readability. To verify: resolve the kid DID fragment, check ES256 signature over header_base64url.payload_base64url using the P-256 public key.",
+  "unsigned_credential": {
+    "@context": [
+      "https://www.w3.org/ns/credentials/v2",
+      "http://data.europa.eu/snb/model/context/edc-ap"
+    ],
+    "id": "urn:uuid:c3d4e5f6-supp-4abc-adef-234567890123",
+    "type": [
+      "VerifiableCredential",
+      "VerifiableAttestation",
+      "EuropeanDigitalCredential",
+      "EuropeanHigherEducationDiplomaSupplement"
+    ],
+    "identifier": [
+      {
+        "id": "urn:identifier:EUHEDS-2025-00001",
+        "type": "Identifier",
+        "notation": "EUHEDS-2025-00001",
+        "schemeAgency": {
+          "en": "University of Barcelona"
+        },
+        "dateIssued": "2025-07-15T10:00:00Z"
+      }
+    ],
+    "credentialProfiles": [
+      {
+        "id": "http://data.europa.eu/snb/credential/diplomaSupplement",
+        "type": "Concept",
+        "skos:prefLabel": {
+          "en": "Higher Education Diploma Supplement"
+        }
+      }
+    ],
+    "issuer": {
+      "id": "did:ebsi:zABC987654321XYZ",
+      "type": "Organisation",
+      "elm:legalName": {
+        "en": "University of Barcelona"
+      },
+      "elm:eidasLegalIdentifier": {
+        "type": "LegalIdentifier",
+        "skos:notation": "ES-A-08015510",
+        "dc:spatial": {
+          "id": "http://publications.europa.eu/resource/authority/country/ESP"
+        }
+      },
+      "elm:location": {
+        "id": "urn:location:university-barcelona",
+        "type": "Location",
+        "elm:address": [
+          {
+            "id": "urn:address:university-barcelona",
+            "type": "Address",
+            "elm:countryCode": {
+              "id": "http://publications.europa.eu/resource/authority/country/ESP",
+              "type": "Concept",
+              "skos:notation": "ESP"
+            },
+            "elm:fullAddress": {
+              "id": "urn:note:address-ub",
+              "type": "Note",
+              "elm:noteLiteral": {
+                "en": "Gran Via de les Corts Catalanes, 585, 08007 Barcelona, Spain"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "elm:wasDerivedFrom": {
+      "id": "urn:uuid:b2c3d4e5-euhe-4abc-9def-123456789012",
+      "type": "EuropeanHigherEducationDiploma",
+      "dc:identifier": "EUHED-2025-00001"
+    },
+    "credentialSubject": {
+      "id": "did:ebsi:zJaneDoe456",
+      "type": "Person",
+      "elm:dateOfBirth": "1998-11-20T00:00:00Z",
+      "elm:familyName": {
+        "en": "Smith"
+      },
+      "elm:givenName": {
+        "en": "Jane"
+      },
+      "elm:hasClaim": [
+        {
+          "id": "urn:claim:ds-foundations",
+          "type": "LearningAchievement",
+          "dc:title": {
+            "en": "Foundations of Data Science"
+          },
+          "elm:awardedBy": {
+            "id": "urn:awarding:ub-diploma-2025",
+            "type": "AwardingProcess",
+            "elm:awardingBody": {
+              "id": "did:ebsi:zABC987654321XYZ",
+              "type": "Organisation",
+              "elm:legalName": {
+                "en": "University of Barcelona"
+              },
+              "elm:location": {
+                "id": "urn:location:university-barcelona",
+                "type": "Location",
+                "elm:address": [
+                  {
+                    "id": "urn:address:university-barcelona",
+                    "type": "Address",
+                    "elm:countryCode": {
+                      "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                      "type": "Concept",
+                      "skos:notation": "ESP"
+                    }
+                  }
+                ]
+              }
+            },
+            "elm:awardingDate": "2025-07-15T10:00:00Z",
+            "elm:location": {
+              "id": "urn:location:university-barcelona",
+              "type": "Location",
+              "elm:address": [
+                {
+                  "id": "urn:address:university-barcelona",
+                  "type": "Address",
+                  "elm:countryCode": {
+                    "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                    "type": "Concept",
+                    "skos:notation": "ESP"
+                  }
+                }
+              ]
+            }
+          },
+          "elm:specifiedBy": {
+            "id": "urn:spec:ds-foundations",
+            "type": "LearningAchievementSpecification",
+            "dc:title": {
+              "en": "Foundations of Data Science – Specification"
+            },
+            "elm:creditPoint": [
+              {
+                "id": "urn:credit:ds-foundations",
+                "type": "CreditPoint",
+                "elm:framework": {
+                  "id": "http://data.europa.eu/snb/education-credit/6fcec5c425",
+                  "type": "Concept",
+                  "skos:notation": "ECTS"
+                },
+                "elm:point": "10"
+              }
+            ]
+          },
+          "elm:provenBy": [
+            {
+              "id": "urn:assessment:ds-foundations",
+              "type": "LearningAssessment",
+              "dc:title": {
+                "en": "Foundations of Data Science – Final Exam"
+              },
+              "elm:grade": {
+                "id": "urn:grade:ds-foundations",
+                "type": "Note",
+                "elm:noteLiteral": {
+                  "en": "A (Excellent)"
+                }
+              },
+              "elm:awardedBy": {
+                "id": "urn:awarding:ub-diploma-2025",
+                "type": "AwardingProcess",
+                "elm:awardingBody": {
+                  "id": "did:ebsi:zABC987654321XYZ",
+                  "type": "Organisation",
+                  "elm:legalName": {
+                    "en": "University of Barcelona"
+                  },
+                  "elm:location": {
+                    "id": "urn:location:university-barcelona",
+                    "type": "Location",
+                    "elm:address": [
+                      {
+                        "id": "urn:address:university-barcelona",
+                        "type": "Address",
+                        "elm:countryCode": {
+                          "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                          "type": "Concept",
+                          "skos:notation": "ESP"
+                        }
+                      }
+                    ]
+                  }
+                },
+                "elm:awardingDate": "2025-07-15T10:00:00Z",
+                "elm:location": {
+                  "id": "urn:location:university-barcelona",
+                  "type": "Location",
+                  "elm:address": [
+                    {
+                      "id": "urn:address:university-barcelona",
+                      "type": "Address",
+                      "elm:countryCode": {
+                        "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                        "type": "Concept",
+                        "skos:notation": "ESP"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ],
+          "elm:creditReceived": [
+            {
+              "id": "urn:credit-recv:ds-foundations",
+              "type": "CreditPoint",
+              "elm:framework": {
+                "id": "http://data.europa.eu/snb/education-credit/6fcec5c425",
+                "type": "Concept",
+                "skos:notation": "ECTS"
+              },
+              "elm:point": "10"
+            }
+          ]
+        },
+        {
+          "id": "urn:claim:ml-advanced",
+          "type": "LearningAchievement",
+          "dc:title": {
+            "en": "Advanced Machine Learning"
+          },
+          "elm:awardedBy": {
+            "id": "urn:awarding:ub-diploma-2025",
+            "type": "AwardingProcess",
+            "elm:awardingBody": {
+              "id": "did:ebsi:zABC987654321XYZ",
+              "type": "Organisation",
+              "elm:legalName": {
+                "en": "University of Barcelona"
+              },
+              "elm:location": {
+                "id": "urn:location:university-barcelona",
+                "type": "Location",
+                "elm:address": [
+                  {
+                    "id": "urn:address:university-barcelona",
+                    "type": "Address",
+                    "elm:countryCode": {
+                      "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                      "type": "Concept",
+                      "skos:notation": "ESP"
+                    }
+                  }
+                ]
+              }
+            },
+            "elm:awardingDate": "2025-07-15T10:00:00Z",
+            "elm:location": {
+              "id": "urn:location:university-barcelona",
+              "type": "Location",
+              "elm:address": [
+                {
+                  "id": "urn:address:university-barcelona",
+                  "type": "Address",
+                  "elm:countryCode": {
+                    "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                    "type": "Concept",
+                    "skos:notation": "ESP"
+                  }
+                }
+              ]
+            }
+          },
+          "elm:specifiedBy": {
+            "id": "urn:spec:ml-advanced",
+            "type": "LearningAchievementSpecification",
+            "dc:title": {
+              "en": "Advanced Machine Learning – Specification"
+            },
+            "elm:creditPoint": [
+              {
+                "id": "urn:credit:ml-advanced",
+                "type": "CreditPoint",
+                "elm:framework": {
+                  "id": "http://data.europa.eu/snb/education-credit/6fcec5c425",
+                  "type": "Concept",
+                  "skos:notation": "ECTS"
+                },
+                "elm:point": "15"
+              }
+            ]
+          },
+          "elm:provenBy": [
+            {
+              "id": "urn:assessment:ml-advanced",
+              "type": "LearningAssessment",
+              "dc:title": {
+                "en": "Advanced Machine Learning – Final Exam"
+              },
+              "elm:grade": {
+                "id": "urn:grade:ml-advanced",
+                "type": "Note",
+                "elm:noteLiteral": {
+                  "en": "B (Very Good)"
+                }
+              },
+              "elm:awardedBy": {
+                "id": "urn:awarding:ub-diploma-2025",
+                "type": "AwardingProcess",
+                "elm:awardingBody": {
+                  "id": "did:ebsi:zABC987654321XYZ",
+                  "type": "Organisation",
+                  "elm:legalName": {
+                    "en": "University of Barcelona"
+                  },
+                  "elm:location": {
+                    "id": "urn:location:university-barcelona",
+                    "type": "Location",
+                    "elm:address": [
+                      {
+                        "id": "urn:address:university-barcelona",
+                        "type": "Address",
+                        "elm:countryCode": {
+                          "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                          "type": "Concept",
+                          "skos:notation": "ESP"
+                        }
+                      }
+                    ]
+                  }
+                },
+                "elm:awardingDate": "2025-07-15T10:00:00Z",
+                "elm:location": {
+                  "id": "urn:location:university-barcelona",
+                  "type": "Location",
+                  "elm:address": [
+                    {
+                      "id": "urn:address:university-barcelona",
+                      "type": "Address",
+                      "elm:countryCode": {
+                        "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                        "type": "Concept",
+                        "skos:notation": "ESP"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ],
+          "elm:creditReceived": [
+            {
+              "id": "urn:credit-recv:ml-advanced",
+              "type": "CreditPoint",
+              "elm:framework": {
+                "id": "http://data.europa.eu/snb/education-credit/6fcec5c425",
+                "type": "Concept",
+                "skos:notation": "ECTS"
+              },
+              "elm:point": "15"
+            }
+          ]
+        },
+        {
+          "id": "urn:claim:ds-thesis",
+          "type": "LearningAchievement",
+          "dc:title": {
+            "en": "MSc Dissertation"
+          },
+          "elm:awardedBy": {
+            "id": "urn:awarding:ub-diploma-2025",
+            "type": "AwardingProcess",
+            "elm:awardingBody": {
+              "id": "did:ebsi:zABC987654321XYZ",
+              "type": "Organisation",
+              "elm:legalName": {
+                "en": "University of Barcelona"
+              },
+              "elm:location": {
+                "id": "urn:location:university-barcelona",
+                "type": "Location",
+                "elm:address": [
+                  {
+                    "id": "urn:address:university-barcelona",
+                    "type": "Address",
+                    "elm:countryCode": {
+                      "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                      "type": "Concept",
+                      "skos:notation": "ESP"
+                    }
+                  }
+                ]
+              }
+            },
+            "elm:awardingDate": "2025-07-15T10:00:00Z",
+            "elm:location": {
+              "id": "urn:location:university-barcelona",
+              "type": "Location",
+              "elm:address": [
+                {
+                  "id": "urn:address:university-barcelona",
+                  "type": "Address",
+                  "elm:countryCode": {
+                    "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                    "type": "Concept",
+                    "skos:notation": "ESP"
+                  }
+                }
+              ]
+            }
+          },
+          "elm:specifiedBy": {
+            "id": "urn:spec:ds-thesis",
+            "type": "LearningAchievementSpecification",
+            "dc:title": {
+              "en": "MSc Dissertation – Specification"
+            },
+            "elm:creditPoint": [
+              {
+                "id": "urn:credit:ds-thesis",
+                "type": "CreditPoint",
+                "elm:framework": {
+                  "id": "http://data.europa.eu/snb/education-credit/6fcec5c425",
+                  "type": "Concept",
+                  "skos:notation": "ECTS"
+                },
+                "elm:point": "30"
+              }
+            ]
+          },
+          "elm:provenBy": [
+            {
+              "id": "urn:assessment:ds-thesis",
+              "type": "LearningAssessment",
+              "dc:title": {
+                "en": "MSc Dissertation – Final Exam"
+              },
+              "elm:grade": {
+                "id": "urn:grade:ds-thesis",
+                "type": "Note",
+                "elm:noteLiteral": {
+                  "en": "A (Excellent)"
+                }
+              },
+              "elm:awardedBy": {
+                "id": "urn:awarding:ub-diploma-2025",
+                "type": "AwardingProcess",
+                "elm:awardingBody": {
+                  "id": "did:ebsi:zABC987654321XYZ",
+                  "type": "Organisation",
+                  "elm:legalName": {
+                    "en": "University of Barcelona"
+                  },
+                  "elm:location": {
+                    "id": "urn:location:university-barcelona",
+                    "type": "Location",
+                    "elm:address": [
+                      {
+                        "id": "urn:address:university-barcelona",
+                        "type": "Address",
+                        "elm:countryCode": {
+                          "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                          "type": "Concept",
+                          "skos:notation": "ESP"
+                        }
+                      }
+                    ]
+                  }
+                },
+                "elm:awardingDate": "2025-07-15T10:00:00Z",
+                "elm:location": {
+                  "id": "urn:location:university-barcelona",
+                  "type": "Location",
+                  "elm:address": [
+                    {
+                      "id": "urn:address:university-barcelona",
+                      "type": "Address",
+                      "elm:countryCode": {
+                        "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                        "type": "Concept",
+                        "skos:notation": "ESP"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ],
+          "elm:creditReceived": [
+            {
+              "id": "urn:credit-recv:ds-thesis",
+              "type": "CreditPoint",
+              "elm:framework": {
+                "id": "http://data.europa.eu/snb/education-credit/6fcec5c425",
+                "type": "Concept",
+                "skos:notation": "ECTS"
+              },
+              "elm:point": "30"
+            }
+          ]
+        }
+      ]
+    },
+    "issued": "2025-07-15T10:00:00Z",
+    "validFrom": "2025-07-15T10:00:00Z",
+    "credentialSchema": [
+      {
+        "id": "https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/0x597214cdf01374a2af87c76e3ae4dfce31e64e37e4826e7b17f1e5f84f329a57",
+        "type": "JsonSchema"
+      },
+      {
+        "id": "https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/PENDING_TSR_REGISTRATION_EUHEDS",
+        "type": "ShaclValidator2017"
+      }
+    ],
+    "credentialStatus": [
+      {
+        "id": "urn:status:c3d4e5f6-supp-4abc-adef-234567890123",
+        "type": "StatusList2021Entry",
+        "statusPurpose": "revocation",
+        "statusListIndex": "0",
+        "statusListCredential": "https://api-pilot.ebsi.eu/status-list/2025/07"
+      }
+    ],
+    "elm:displayParameter": {
+      "id": "urn:display:euheds-jane-2025",
+      "type": "DisplayParameter",
+      "dc:title": {
+        "en": "Diploma Supplement – MSc Data Science"
+      },
+      "dc:description": {
+        "en": "Detailed record of modules completed by Jane Smith as part of the MSc in Data Science."
+      },
+      "dc:language": [
+        {
+          "id": "http://publications.europa.eu/resource/authority/language/ENG",
+          "type": "Concept",
+          "skos:notation": "ENG"
+        }
+      ],
+      "elm:primaryLanguage": {
+        "id": "http://publications.europa.eu/resource/authority/language/ENG",
+        "type": "Concept",
+        "skos:notation": "ENG"
+      },
+      "elm:individualDisplay": [
+        {
+          "id": "urn:display:individual-1",
+          "type": "IndividualDisplay",
+          "dc:language": {
+            "id": "http://publications.europa.eu/resource/authority/language/ENG",
+            "type": "Concept",
+            "skos:notation": "ENG"
+          },
+          "elm:displayDetail": [
+            {
+              "id": "urn:display:detail-1",
+              "type": "DisplayDetail",
+              "elm:image": {
+                "id": "urn:media:certificate-image",
+                "type": "MediaObject",
+                "elm:contentType": {
+                  "id": "http://publications.europa.eu/resource/authority/file-type/PNG",
+                  "type": "Concept",
+                  "skos:notation": "PNG"
+                },
+                "elm:contentEncoding": {
+                  "id": "http://data.europa.eu/snb/encoding/6146cde7dd",
+                  "type": "Concept",
+                  "skos:notation": "base64"
+                },
+                "elm:content": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAACklEQVR4nGMAAQAABQABDQottAAAAABJRU5ErkJggg=="
+              },
+              "elm:page": 1
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "jws": {
+    "header": {
+      "alg": "ES256",
+      "typ": "jose",
+      "cty": "vc+ld+json",
+      "kid": "did:ebsi:zABC987654321XYZ#key-heds01",
+      "crit": [
+        "sigT",
+        "sigPl"
+      ],
+      "sigT": "2025-07-15T10:00:00Z",
+      "sigPl": {
+        "addressCountry": "ES",
+        "addressLocality": "Barcelona"
+      }
+    },
+    "header_base64url": "eyJhbGciOiJFUzI1NiIsInR5cCI6Impvc2UiLCJjdHkiOiJ2YytsZCtqc29uIiwia2lkIjoiZGlkOmVic2k6ekFCQzk4NzY1NDMyMVhZWiNrZXktaGVkczAxIiwiY3JpdCI6WyJzaWdUIiwic2lnUGwiXSwic2lnVCI6IjIwMjUtMDctMTVUMTA6MDA6MDBaIiwic2lnUGwiOnsiYWRkcmVzc0NvdW50cnkiOiJFUyIsImFkZHJlc3NMb2NhbGl0eSI6IkJhcmNlbG9uYSJ9fQ",
+    "payload_base64url": "eyJAY29udGV4dCI6WyJodHRwczovL3d3dy53My5vcmcvbnMvY3JlZGVudGlhbHMvdjIiLCJodHRwOi8vZGF0YS5ldXJvcGEuZXUvc25iL21vZGVsL2NvbnRleHQvZWRjLWFwIl0sImlkIjoidXJuOnV1aWQ6YzNkNGU1ZjYtc3VwcC00YWJjLWFkZWYtMjM0NTY3ODkwMTIzIiwidHlwZSI6WyJWZXJpZmlhYmxlQ3JlZGVudGlhbCIsIlZlcmlmaWFibGVBdHRlc3RhdGlvbiIsIkV1cm9wZWFuRGlnaXRhbENyZWRlbnRpYWwiLCJFdXJvcGVhbkhpZ2hlckVkdWNhdGlvbkRpcGxvbWFTdXBwbGVtZW50Il0sImlkZW50aWZpZXIiOlt7ImlkIjoidXJuOmlkZW50aWZpZXI6RVVIRURTLTIwMjUtMDAwMDEiLCJ0eXBlIjoiSWRlbnRpZmllciIsIm5vdGF0aW9uIjoiRVVIRURTLTIwMjUtMDAwMDEiLCJzY2hlbWVBZ2VuY3kiOnsiZW4iOiJVbml2ZXJzaXR5IG9mIEJhcmNlbG9uYSJ9LCJkYXRlSXNzdWVkIjoiMjAyNS0wNy0xNVQxMDowMDowMFoifV0sImNyZWRlbnRpYWxQcm9maWxlcyI6W3siaWQiOiJodHRwOi8vZGF0YS5ldXJvcGEuZXUvc25iL2NyZWRlbnRpYWwvZGlwbG9tYVN1cHBsZW1lbnQiLCJ0eXBlIjoiQ29uY2VwdCIsInNrb3M6cHJlZkxhYmVsIjp7ImVuIjoiSGlnaGVyIEVkdWNhdGlvbiBEaXBsb21hIFN1cHBsZW1lbnQifX1dLCJpc3N1ZXIiOnsiaWQiOiJkaWQ6ZWJzaTp6QUJDOTg3NjU0MzIxWFlaIiwidHlwZSI6Ik9yZ2FuaXNhdGlvbiIsImVsbTpsZWdhbE5hbWUiOnsiZW4iOiJVbml2ZXJzaXR5IG9mIEJhcmNlbG9uYSJ9LCJlbG06ZWlkYXNMZWdhbElkZW50aWZpZXIiOnsidHlwZSI6IkxlZ2FsSWRlbnRpZmllciIsInNrb3M6bm90YXRpb24iOiJFUy1BLTA4MDE1NTEwIiwiZGM6c3BhdGlhbCI6eyJpZCI6Imh0dHA6Ly9wdWJsaWNhdGlvbnMuZXVyb3BhLmV1L3Jlc291cmNlL2F1dGhvcml0eS9jb3VudHJ5L0VTUCJ9fSwiZWxtOmxvY2F0aW9uIjp7ImlkIjoidXJuOmxvY2F0aW9uOnVuaXZlcnNpdHktYmFyY2Vsb25hIiwidHlwZSI6IkxvY2F0aW9uIiwiZWxtOmFkZHJlc3MiOlt7ImlkIjoidXJuOmFkZHJlc3M6dW5pdmVyc2l0eS1iYXJjZWxvbmEiLCJ0eXBlIjoiQWRkcmVzcyIsImVsbTpjb3VudHJ5Q29kZSI6eyJpZCI6Imh0dHA6Ly9wdWJsaWNhdGlvbnMuZXVyb3BhLmV1L3Jlc291cmNlL2F1dGhvcml0eS9jb3VudHJ5L0VTUCIsInR5cGUiOiJDb25jZXB0Iiwic2tvczpub3RhdGlvbiI6IkVTUCJ9LCJlbG06ZnVsbEFkZHJlc3MiOnsiaWQiOiJ1cm46bm90ZTphZGRyZXNzLXViIiwidHlwZSI6Ik5vdGUiLCJlbG06bm90ZUxpdGVyYWwiOnsiZW4iOiJHcmFuIFZpYSBkZSBsZXMgQ29ydHMgQ2F0YWxhbmVzLCA1ODUsIDA4MDA3IEJhcmNlbG9uYSwgU3BhaW4ifX19XX19LCJlbG06d2FzRGVyaXZlZEZyb20iOnsiaWQiOiJ1cm46dXVpZDpiMmMzZDRlNS1ldWhlLTRhYmMtOWRlZi0xMjM0NTY3ODkwMTIiLCJ0eXBlIjoiRXVyb3BlYW5IaWdoZXJFZHVjYXRpb25EaXBsb21hIiwiZGM6aWRlbnRpZmllciI6IkVVSEVELTIwMjUtMDAwMDEifSwiY3JlZGVudGlhbFN1YmplY3QiOnsiaWQiOiJkaWQ6ZWJzaTp6SmFuZURvZTQ1NiIsInR5cGUiOiJQZXJzb24iLCJlbG06ZGF0ZU9mQmlydGgiOiIxOTk4LTExLTIwVDAwOjAwOjAwWiIsImVsbTpmYW1pbHlOYW1lIjp7ImVuIjoiU21pdGgifSwiZWxtOmdpdmVuTmFtZSI6eyJlbiI6IkphbmUifSwiZWxtOmhhc0NsYWltIjpbeyJpZCI6InVybjpjbGFpbTpkcy1mb3VuZGF0aW9ucyIsInR5cGUiOiJMZWFybmluZ0FjaGlldmVtZW50IiwiZGM6dGl0bGUiOnsiZW4iOiJGb3VuZGF0aW9ucyBvZiBEYXRhIFNjaWVuY2UifSwiZWxtOmF3YXJkZWRCeSI6eyJpZCI6InVybjphd2FyZGluZzp1Yi1kaXBsb21hLTIwMjUiLCJ0eXBlIjoiQXdhcmRpbmdQcm9jZXNzIiwiZWxtOmF3YXJkaW5nQm9keSI6eyJpZCI6ImRpZDplYnNpOnpBQkM5ODc2NTQzMjFYWVoiLCJ0eXBlIjoiT3JnYW5pc2F0aW9uIiwiZWxtOmxlZ2FsTmFtZSI6eyJlbiI6IlVuaXZlcnNpdHkgb2YgQmFyY2Vsb25hIn0sImVsbTpsb2NhdGlvbiI6eyJpZCI6InVybjpsb2NhdGlvbjp1bml2ZXJzaXR5LWJhcmNlbG9uYSIsInR5cGUiOiJMb2NhdGlvbiIsImVsbTphZGRyZXNzIjpbeyJpZCI6InVybjphZGRyZXNzOnVuaXZlcnNpdHktYmFyY2Vsb25hIiwidHlwZSI6IkFkZHJlc3MiLCJlbG06Y291bnRyeUNvZGUiOnsiaWQiOiJodHRwOi8vcHVibGljYXRpb25zLmV1cm9wYS5ldS9yZXNvdXJjZS9hdXRob3JpdHkvY291bnRyeS9FU1AiLCJ0eXBlIjoiQ29uY2VwdCIsInNrb3M6bm90YXRpb24iOiJFU1AifX1dfX0sImVsbTphd2FyZGluZ0RhdGUiOiIyMDI1LTA3LTE1VDEwOjAwOjAwWiIsImVsbTpsb2NhdGlvbiI6eyJpZCI6InVybjpsb2NhdGlvbjp1bml2ZXJzaXR5LWJhcmNlbG9uYSIsInR5cGUiOiJMb2NhdGlvbiIsImVsbTphZGRyZXNzIjpbeyJpZCI6InVybjphZGRyZXNzOnVuaXZlcnNpdHktYmFyY2Vsb25hIiwidHlwZSI6IkFkZHJlc3MiLCJlbG06Y291bnRyeUNvZGUiOnsiaWQiOiJodHRwOi8vcHVibGljYXRpb25zLmV1cm9wYS5ldS9yZXNvdXJjZS9hdXRob3JpdHkvY291bnRyeS9FU1AiLCJ0eXBlIjoiQ29uY2VwdCIsInNrb3M6bm90YXRpb24iOiJFU1AifX1dfX0sImVsbTpzcGVjaWZpZWRCeSI6eyJpZCI6InVybjpzcGVjOmRzLWZvdW5kYXRpb25zIiwidHlwZSI6IkxlYXJuaW5nQWNoaWV2ZW1lbnRTcGVjaWZpY2F0aW9uIiwiZGM6dGl0bGUiOnsiZW4iOiJGb3VuZGF0aW9ucyBvZiBEYXRhIFNjaWVuY2UgXHUyMDEzIFNwZWNpZmljYXRpb24ifSwiZWxtOmNyZWRpdFBvaW50IjpbeyJpZCI6InVybjpjcmVkaXQ6ZHMtZm91bmRhdGlvbnMiLCJ0eXBlIjoiQ3JlZGl0UG9pbnQiLCJlbG06ZnJhbWV3b3JrIjp7ImlkIjoiaHR0cDovL2RhdGEuZXVyb3BhLmV1L3NuYi9lZHVjYXRpb24tY3JlZGl0LzZmY2VjNWM0MjUiLCJ0eXBlIjoiQ29uY2VwdCIsInNrb3M6bm90YXRpb24iOiJFQ1RTIn0sImVsbTpwb2ludCI6IjEwIn1dfSwiZWxtOnByb3ZlbkJ5IjpbeyJpZCI6InVybjphc3Nlc3NtZW50OmRzLWZvdW5kYXRpb25zIiwidHlwZSI6IkxlYXJuaW5nQXNzZXNzbWVudCIsImRjOnRpdGxlIjp7ImVuIjoiRm91bmRhdGlvbnMgb2YgRGF0YSBTY2llbmNlIFx1MjAxMyBGaW5hbCBFeGFtIn0sImVsbTpncmFkZSI6eyJpZCI6InVybjpncmFkZTpkcy1mb3VuZGF0aW9ucyIsInR5cGUiOiJOb3RlIiwiZWxtOm5vdGVMaXRlcmFsIjp7ImVuIjoiQSAoRXhjZWxsZW50KSJ9fSwiZWxtOmF3YXJkZWRCeSI6eyJpZCI6InVybjphd2FyZGluZzp1Yi1kaXBsb21hLTIwMjUiLCJ0eXBlIjoiQXdhcmRpbmdQcm9jZXNzIiwiZWxtOmF3YXJkaW5nQm9keSI6eyJpZCI6ImRpZDplYnNpOnpBQkM5ODc2NTQzMjFYWVoiLCJ0eXBlIjoiT3JnYW5pc2F0aW9uIiwiZWxtOmxlZ2FsTmFtZSI6eyJlbiI6IlVuaXZlcnNpdHkgb2YgQmFyY2Vsb25hIn0sImVsbTpsb2NhdGlvbiI6eyJpZCI6InVybjpsb2NhdGlvbjp1bml2ZXJzaXR5LWJhcmNlbG9uYSIsInR5cGUiOiJMb2NhdGlvbiIsImVsbTphZGRyZXNzIjpbeyJpZCI6InVybjphZGRyZXNzOnVuaXZlcnNpdHktYmFyY2Vsb25hIiwidHlwZSI6IkFkZHJlc3MiLCJlbG06Y291bnRyeUNvZGUiOnsiaWQiOiJodHRwOi8vcHVibGljYXRpb25zLmV1cm9wYS5ldS9yZXNvdXJjZS9hdXRob3JpdHkvY291bnRyeS9FU1AiLCJ0eXBlIjoiQ29uY2VwdCIsInNrb3M6bm90YXRpb24iOiJFU1AifX1dfX0sImVsbTphd2FyZGluZ0RhdGUiOiIyMDI1LTA3LTE1VDEwOjAwOjAwWiIsImVsbTpsb2NhdGlvbiI6eyJpZCI6InVybjpsb2NhdGlvbjp1bml2ZXJzaXR5LWJhcmNlbG9uYSIsInR5cGUiOiJMb2NhdGlvbiIsImVsbTphZGRyZXNzIjpbeyJpZCI6InVybjphZGRyZXNzOnVuaXZlcnNpdHktYmFyY2Vsb25hIiwidHlwZSI6IkFkZHJlc3MiLCJlbG06Y291bnRyeUNvZGUiOnsiaWQiOiJodHRwOi8vcHVibGljYXRpb25zLmV1cm9wYS5ldS9yZXNvdXJjZS9hdXRob3JpdHkvY291bnRyeS9FU1AiLCJ0eXBlIjoiQ29uY2VwdCIsInNrb3M6bm90YXRpb24iOiJFU1AifX1dfX19XSwiZWxtOmNyZWRpdFJlY2VpdmVkIjpbeyJpZCI6InVybjpjcmVkaXQtcmVjdjpkcy1mb3VuZGF0aW9ucyIsInR5cGUiOiJDcmVkaXRQb2ludCIsImVsbTpmcmFtZXdvcmsiOnsiaWQiOiJodHRwOi8vZGF0YS5ldXJvcGEuZXUvc25iL2VkdWNhdGlvbi1jcmVkaXQvNmZjZWM1YzQyNSIsInR5cGUiOiJDb25jZXB0Iiwic2tvczpub3RhdGlvbiI6IkVDVFMifSwiZWxtOnBvaW50IjoiMTAifV19LHsiaWQiOiJ1cm46Y2xhaW06bWwtYWR2YW5jZWQiLCJ0eXBlIjoiTGVhcm5pbmdBY2hpZXZlbWVudCIsImRjOnRpdGxlIjp7ImVuIjoiQWR2YW5jZWQgTWFjaGluZSBMZWFybmluZyJ9LCJlbG06YXdhcmRlZEJ5Ijp7ImlkIjoidXJuOmF3YXJkaW5nOnViLWRpcGxvbWEtMjAyNSIsInR5cGUiOiJBd2FyZGluZ1Byb2Nlc3MiLCJlbG06YXdhcmRpbmdCb2R5Ijp7ImlkIjoiZGlkOmVic2k6ekFCQzk4NzY1NDMyMVhZWiIsInR5cGUiOiJPcmdhbmlzYXRpb24iLCJlbG06bGVnYWxOYW1lIjp7ImVuIjoiVW5pdmVyc2l0eSBvZiBCYXJjZWxvbmEifSwiZWxtOmxvY2F0aW9uIjp7ImlkIjoidXJuOmxvY2F0aW9uOnVuaXZlcnNpdHktYmFyY2Vsb25hIiwidHlwZSI6IkxvY2F0aW9uIiwiZWxtOmFkZHJlc3MiOlt7ImlkIjoidXJuOmFkZHJlc3M6dW5pdmVyc2l0eS1iYXJjZWxvbmEiLCJ0eXBlIjoiQWRkcmVzcyIsImVsbTpjb3VudHJ5Q29kZSI6eyJpZCI6Imh0dHA6Ly9wdWJsaWNhdGlvbnMuZXVyb3BhLmV1L3Jlc291cmNlL2F1dGhvcml0eS9jb3VudHJ5L0VTUCIsInR5cGUiOiJDb25jZXB0Iiwic2tvczpub3RhdGlvbiI6IkVTUCJ9fV19fSwiZWxtOmF3YXJkaW5nRGF0ZSI6IjIwMjUtMDctMTVUMTA6MDA6MDBaIiwiZWxtOmxvY2F0aW9uIjp7ImlkIjoidXJuOmxvY2F0aW9uOnVuaXZlcnNpdHktYmFyY2Vsb25hIiwidHlwZSI6IkxvY2F0aW9uIiwiZWxtOmFkZHJlc3MiOlt7ImlkIjoidXJuOmFkZHJlc3M6dW5pdmVyc2l0eS1iYXJjZWxvbmEiLCJ0eXBlIjoiQWRkcmVzcyIsImVsbTpjb3VudHJ5Q29kZSI6eyJpZCI6Imh0dHA6Ly9wdWJsaWNhdGlvbnMuZXVyb3BhLmV1L3Jlc291cmNlL2F1dGhvcml0eS9jb3VudHJ5L0VTUCIsInR5cGUiOiJDb25jZXB0Iiwic2tvczpub3RhdGlvbiI6IkVTUCJ9fV19fSwiZWxtOnNwZWNpZmllZEJ5Ijp7ImlkIjoidXJuOnNwZWM6bWwtYWR2YW5jZWQiLCJ0eXBlIjoiTGVhcm5pbmdBY2hpZXZlbWVudFNwZWNpZmljYXRpb24iLCJkYzp0aXRsZSI6eyJlbiI6IkFkdmFuY2VkIE1hY2hpbmUgTGVhcm5pbmcgXHUyMDEzIFNwZWNpZmljYXRpb24ifSwiZWxtOmNyZWRpdFBvaW50IjpbeyJpZCI6InVybjpjcmVkaXQ6bWwtYWR2YW5jZWQiLCJ0eXBlIjoiQ3JlZGl0UG9pbnQiLCJlbG06ZnJhbWV3b3JrIjp7ImlkIjoiaHR0cDovL2RhdGEuZXVyb3BhLmV1L3NuYi9lZHVjYXRpb24tY3JlZGl0LzZmY2VjNWM0MjUiLCJ0eXBlIjoiQ29uY2VwdCIsInNrb3M6bm90YXRpb24iOiJFQ1RTIn0sImVsbTpwb2ludCI6IjE1In1dfSwiZWxtOnByb3ZlbkJ5IjpbeyJpZCI6InVybjphc3Nlc3NtZW50Om1sLWFkdmFuY2VkIiwidHlwZSI6IkxlYXJuaW5nQXNzZXNzbWVudCIsImRjOnRpdGxlIjp7ImVuIjoiQWR2YW5jZWQgTWFjaGluZSBMZWFybmluZyBcdTIwMTMgRmluYWwgRXhhbSJ9LCJlbG06Z3JhZGUiOnsiaWQiOiJ1cm46Z3JhZGU6bWwtYWR2YW5jZWQiLCJ0eXBlIjoiTm90ZSIsImVsbTpub3RlTGl0ZXJhbCI6eyJlbiI6IkIgKFZlcnkgR29vZCkifX0sImVsbTphd2FyZGVkQnkiOnsiaWQiOiJ1cm46YXdhcmRpbmc6dWItZGlwbG9tYS0yMDI1IiwidHlwZSI6IkF3YXJkaW5nUHJvY2VzcyIsImVsbTphd2FyZGluZ0JvZHkiOnsiaWQiOiJkaWQ6ZWJzaTp6QUJDOTg3NjU0MzIxWFlaIiwidHlwZSI6Ik9yZ2FuaXNhdGlvbiIsImVsbTpsZWdhbE5hbWUiOnsiZW4iOiJVbml2ZXJzaXR5IG9mIEJhcmNlbG9uYSJ9LCJlbG06bG9jYXRpb24iOnsiaWQiOiJ1cm46bG9jYXRpb246dW5pdmVyc2l0eS1iYXJjZWxvbmEiLCJ0eXBlIjoiTG9jYXRpb24iLCJlbG06YWRkcmVzcyI6W3siaWQiOiJ1cm46YWRkcmVzczp1bml2ZXJzaXR5LWJhcmNlbG9uYSIsInR5cGUiOiJBZGRyZXNzIiwiZWxtOmNvdW50cnlDb2RlIjp7ImlkIjoiaHR0cDovL3B1YmxpY2F0aW9ucy5ldXJvcGEuZXUvcmVzb3VyY2UvYXV0aG9yaXR5L2NvdW50cnkvRVNQIiwidHlwZSI6IkNvbmNlcHQiLCJza29zOm5vdGF0aW9uIjoiRVNQIn19XX19LCJlbG06YXdhcmRpbmdEYXRlIjoiMjAyNS0wNy0xNVQxMDowMDowMFoiLCJlbG06bG9jYXRpb24iOnsiaWQiOiJ1cm46bG9jYXRpb246dW5pdmVyc2l0eS1iYXJjZWxvbmEiLCJ0eXBlIjoiTG9jYXRpb24iLCJlbG06YWRkcmVzcyI6W3siaWQiOiJ1cm46YWRkcmVzczp1bml2ZXJzaXR5LWJhcmNlbG9uYSIsInR5cGUiOiJBZGRyZXNzIiwiZWxtOmNvdW50cnlDb2RlIjp7ImlkIjoiaHR0cDovL3B1YmxpY2F0aW9ucy5ldXJvcGEuZXUvcmVzb3VyY2UvYXV0aG9yaXR5L2NvdW50cnkvRVNQIiwidHlwZSI6IkNvbmNlcHQiLCJza29zOm5vdGF0aW9uIjoiRVNQIn19XX19fV0sImVsbTpjcmVkaXRSZWNlaXZlZCI6W3siaWQiOiJ1cm46Y3JlZGl0LXJlY3Y6bWwtYWR2YW5jZWQiLCJ0eXBlIjoiQ3JlZGl0UG9pbnQiLCJlbG06ZnJhbWV3b3JrIjp7ImlkIjoiaHR0cDovL2RhdGEuZXVyb3BhLmV1L3NuYi9lZHVjYXRpb24tY3JlZGl0LzZmY2VjNWM0MjUiLCJ0eXBlIjoiQ29uY2VwdCIsInNrb3M6bm90YXRpb24iOiJFQ1RTIn0sImVsbTpwb2ludCI6IjE1In1dfSx7ImlkIjoidXJuOmNsYWltOmRzLXRoZXNpcyIsInR5cGUiOiJMZWFybmluZ0FjaGlldmVtZW50IiwiZGM6dGl0bGUiOnsiZW4iOiJNU2MgRGlzc2VydGF0aW9uIn0sImVsbTphd2FyZGVkQnkiOnsiaWQiOiJ1cm46YXdhcmRpbmc6dWItZGlwbG9tYS0yMDI1IiwidHlwZSI6IkF3YXJkaW5nUHJvY2VzcyIsImVsbTphd2FyZGluZ0JvZHkiOnsiaWQiOiJkaWQ6ZWJzaTp6QUJDOTg3NjU0MzIxWFlaIiwidHlwZSI6Ik9yZ2FuaXNhdGlvbiIsImVsbTpsZWdhbE5hbWUiOnsiZW4iOiJVbml2ZXJzaXR5IG9mIEJhcmNlbG9uYSJ9LCJlbG06bG9jYXRpb24iOnsiaWQiOiJ1cm46bG9jYXRpb246dW5pdmVyc2l0eS1iYXJjZWxvbmEiLCJ0eXBlIjoiTG9jYXRpb24iLCJlbG06YWRkcmVzcyI6W3siaWQiOiJ1cm46YWRkcmVzczp1bml2ZXJzaXR5LWJhcmNlbG9uYSIsInR5cGUiOiJBZGRyZXNzIiwiZWxtOmNvdW50cnlDb2RlIjp7ImlkIjoiaHR0cDovL3B1YmxpY2F0aW9ucy5ldXJvcGEuZXUvcmVzb3VyY2UvYXV0aG9yaXR5L2NvdW50cnkvRVNQIiwidHlwZSI6IkNvbmNlcHQiLCJza29zOm5vdGF0aW9uIjoiRVNQIn19XX19LCJlbG06YXdhcmRpbmdEYXRlIjoiMjAyNS0wNy0xNVQxMDowMDowMFoiLCJlbG06bG9jYXRpb24iOnsiaWQiOiJ1cm46bG9jYXRpb246dW5pdmVyc2l0eS1iYXJjZWxvbmEiLCJ0eXBlIjoiTG9jYXRpb24iLCJlbG06YWRkcmVzcyI6W3siaWQiOiJ1cm46YWRkcmVzczp1bml2ZXJzaXR5LWJhcmNlbG9uYSIsInR5cGUiOiJBZGRyZXNzIiwiZWxtOmNvdW50cnlDb2RlIjp7ImlkIjoiaHR0cDovL3B1YmxpY2F0aW9ucy5ldXJvcGEuZXUvcmVzb3VyY2UvYXV0aG9yaXR5L2NvdW50cnkvRVNQIiwidHlwZSI6IkNvbmNlcHQiLCJza29zOm5vdGF0aW9uIjoiRVNQIn19XX19LCJlbG06c3BlY2lmaWVkQnkiOnsiaWQiOiJ1cm46c3BlYzpkcy10aGVzaXMiLCJ0eXBlIjoiTGVhcm5pbmdBY2hpZXZlbWVudFNwZWNpZmljYXRpb24iLCJkYzp0aXRsZSI6eyJlbiI6Ik1TYyBEaXNzZXJ0YXRpb24gXHUyMDEzIFNwZWNpZmljYXRpb24ifSwiZWxtOmNyZWRpdFBvaW50IjpbeyJpZCI6InVybjpjcmVkaXQ6ZHMtdGhlc2lzIiwidHlwZSI6IkNyZWRpdFBvaW50IiwiZWxtOmZyYW1ld29yayI6eyJpZCI6Imh0dHA6Ly9kYXRhLmV1cm9wYS5ldS9zbmIvZWR1Y2F0aW9uLWNyZWRpdC82ZmNlYzVjNDI1IiwidHlwZSI6IkNvbmNlcHQiLCJza29zOm5vdGF0aW9uIjoiRUNUUyJ9LCJlbG06cG9pbnQiOiIzMCJ9XX0sImVsbTpwcm92ZW5CeSI6W3siaWQiOiJ1cm46YXNzZXNzbWVudDpkcy10aGVzaXMiLCJ0eXBlIjoiTGVhcm5pbmdBc3Nlc3NtZW50IiwiZGM6dGl0bGUiOnsiZW4iOiJNU2MgRGlzc2VydGF0aW9uIFx1MjAxMyBGaW5hbCBFeGFtIn0sImVsbTpncmFkZSI6eyJpZCI6InVybjpncmFkZTpkcy10aGVzaXMiLCJ0eXBlIjoiTm90ZSIsImVsbTpub3RlTGl0ZXJhbCI6eyJlbiI6IkEgKEV4Y2VsbGVudCkifX0sImVsbTphd2FyZGVkQnkiOnsiaWQiOiJ1cm46YXdhcmRpbmc6dWItZGlwbG9tYS0yMDI1IiwidHlwZSI6IkF3YXJkaW5nUHJvY2VzcyIsImVsbTphd2FyZGluZ0JvZHkiOnsiaWQiOiJkaWQ6ZWJzaTp6QUJDOTg3NjU0MzIxWFlaIiwidHlwZSI6Ik9yZ2FuaXNhdGlvbiIsImVsbTpsZWdhbE5hbWUiOnsiZW4iOiJVbml2ZXJzaXR5IG9mIEJhcmNlbG9uYSJ9LCJlbG06bG9jYXRpb24iOnsiaWQiOiJ1cm46bG9jYXRpb246dW5pdmVyc2l0eS1iYXJjZWxvbmEiLCJ0eXBlIjoiTG9jYXRpb24iLCJlbG06YWRkcmVzcyI6W3siaWQiOiJ1cm46YWRkcmVzczp1bml2ZXJzaXR5LWJhcmNlbG9uYSIsInR5cGUiOiJBZGRyZXNzIiwiZWxtOmNvdW50cnlDb2RlIjp7ImlkIjoiaHR0cDovL3B1YmxpY2F0aW9ucy5ldXJvcGEuZXUvcmVzb3VyY2UvYXV0aG9yaXR5L2NvdW50cnkvRVNQIiwidHlwZSI6IkNvbmNlcHQiLCJza29zOm5vdGF0aW9uIjoiRVNQIn19XX19LCJlbG06YXdhcmRpbmdEYXRlIjoiMjAyNS0wNy0xNVQxMDowMDowMFoiLCJlbG06bG9jYXRpb24iOnsiaWQiOiJ1cm46bG9jYXRpb246dW5pdmVyc2l0eS1iYXJjZWxvbmEiLCJ0eXBlIjoiTG9jYXRpb24iLCJlbG06YWRkcmVzcyI6W3siaWQiOiJ1cm46YWRkcmVzczp1bml2ZXJzaXR5LWJhcmNlbG9uYSIsInR5cGUiOiJBZGRyZXNzIiwiZWxtOmNvdW50cnlDb2RlIjp7ImlkIjoiaHR0cDovL3B1YmxpY2F0aW9ucy5ldXJvcGEuZXUvcmVzb3VyY2UvYXV0aG9yaXR5L2NvdW50cnkvRVNQIiwidHlwZSI6IkNvbmNlcHQiLCJza29zOm5vdGF0aW9uIjoiRVNQIn19XX19fV0sImVsbTpjcmVkaXRSZWNlaXZlZCI6W3siaWQiOiJ1cm46Y3JlZGl0LXJlY3Y6ZHMtdGhlc2lzIiwidHlwZSI6IkNyZWRpdFBvaW50IiwiZWxtOmZyYW1ld29yayI6eyJpZCI6Imh0dHA6Ly9kYXRhLmV1cm9wYS5ldS9zbmIvZWR1Y2F0aW9uLWNyZWRpdC82ZmNlYzVjNDI1IiwidHlwZSI6IkNvbmNlcHQiLCJza29zOm5vdGF0aW9uIjoiRUNUUyJ9LCJlbG06cG9pbnQiOiIzMCJ9XX1dfSwiaXNzdWVkIjoiMjAyNS0wNy0xNVQxMDowMDowMFoiLCJ2YWxpZEZyb20iOiIyMDI1LTA3LTE1VDEwOjAwOjAwWiIsImNyZWRlbnRpYWxTY2hlbWEiOlt7ImlkIjoiaHR0cHM6Ly9hcGktcGlsb3QuZWJzaS5ldS90cnVzdGVkLXNjaGVtYXMtcmVnaXN0cnkvdjMvc2NoZW1hcy8weDU5NzIxNGNkZjAxMzc0YTJhZjg3Yzc2ZTNhZTRkZmNlMzFlNjRlMzdlNDgyNmU3YjE3ZjFlNWY4NGYzMjlhNTciLCJ0eXBlIjoiSnNvblNjaGVtYSJ9LHsiaWQiOiJodHRwczovL2FwaS1waWxvdC5lYnNpLmV1L3RydXN0ZWQtc2NoZW1hcy1yZWdpc3RyeS92My9zY2hlbWFzL1BFTkRJTkdfVFNSX1JFR0lTVFJBVElPTl9FVUhFRFMiLCJ0eXBlIjoiU2hhY2xWYWxpZGF0b3IyMDE3In1dLCJjcmVkZW50aWFsU3RhdHVzIjpbeyJpZCI6InVybjpzdGF0dXM6YzNkNGU1ZjYtc3VwcC00YWJjLWFkZWYtMjM0NTY3ODkwMTIzIiwidHlwZSI6IlN0YXR1c0xpc3QyMDIxRW50cnkiLCJzdGF0dXNQdXJwb3NlIjoicmV2b2NhdGlvbiIsInN0YXR1c0xpc3RJbmRleCI6IjAiLCJzdGF0dXNMaXN0Q3JlZGVudGlhbCI6Imh0dHBzOi8vYXBpLXBpbG90LmVic2kuZXUvc3RhdHVzLWxpc3QvMjAyNS8wNyJ9XSwiZWxtOmRpc3BsYXlQYXJhbWV0ZXIiOnsiaWQiOiJ1cm46ZGlzcGxheTpldWhlZHMtamFuZS0yMDI1IiwidHlwZSI6IkRpc3BsYXlQYXJhbWV0ZXIiLCJkYzp0aXRsZSI6eyJlbiI6IkRpcGxvbWEgU3VwcGxlbWVudCBcdTIwMTMgTVNjIERhdGEgU2NpZW5jZSJ9LCJkYzpkZXNjcmlwdGlvbiI6eyJlbiI6IkRldGFpbGVkIHJlY29yZCBvZiBtb2R1bGVzIGNvbXBsZXRlZCBieSBKYW5lIFNtaXRoIGFzIHBhcnQgb2YgdGhlIE1TYyBpbiBEYXRhIFNjaWVuY2UuIn0sImRjOmxhbmd1YWdlIjpbeyJpZCI6Imh0dHA6Ly9wdWJsaWNhdGlvbnMuZXVyb3BhLmV1L3Jlc291cmNlL2F1dGhvcml0eS9sYW5ndWFnZS9FTkciLCJ0eXBlIjoiQ29uY2VwdCIsInNrb3M6bm90YXRpb24iOiJFTkcifV0sImVsbTpwcmltYXJ5TGFuZ3VhZ2UiOnsiaWQiOiJodHRwOi8vcHVibGljYXRpb25zLmV1cm9wYS5ldS9yZXNvdXJjZS9hdXRob3JpdHkvbGFuZ3VhZ2UvRU5HIiwidHlwZSI6IkNvbmNlcHQiLCJza29zOm5vdGF0aW9uIjoiRU5HIn0sImVsbTppbmRpdmlkdWFsRGlzcGxheSI6W3siaWQiOiJ1cm46ZGlzcGxheTppbmRpdmlkdWFsLTEiLCJ0eXBlIjoiSW5kaXZpZHVhbERpc3BsYXkiLCJkYzpsYW5ndWFnZSI6eyJpZCI6Imh0dHA6Ly9wdWJsaWNhdGlvbnMuZXVyb3BhLmV1L3Jlc291cmNlL2F1dGhvcml0eS9sYW5ndWFnZS9FTkciLCJ0eXBlIjoiQ29uY2VwdCIsInNrb3M6bm90YXRpb24iOiJFTkcifSwiZWxtOmRpc3BsYXlEZXRhaWwiOlt7ImlkIjoidXJuOmRpc3BsYXk6ZGV0YWlsLTEiLCJ0eXBlIjoiRGlzcGxheURldGFpbCIsImVsbTppbWFnZSI6eyJpZCI6InVybjptZWRpYTpjZXJ0aWZpY2F0ZS1pbWFnZSIsInR5cGUiOiJNZWRpYU9iamVjdCIsImVsbTpjb250ZW50VHlwZSI6eyJpZCI6Imh0dHA6Ly9wdWJsaWNhdGlvbnMuZXVyb3BhLmV1L3Jlc291cmNlL2F1dGhvcml0eS9maWxlLXR5cGUvUE5HIiwidHlwZSI6IkNvbmNlcHQiLCJza29zOm5vdGF0aW9uIjoiUE5HIn0sImVsbTpjb250ZW50RW5jb2RpbmciOnsiaWQiOiJodHRwOi8vZGF0YS5ldXJvcGEuZXUvc25iL2VuY29kaW5nLzYxNDZjZGU3ZGQiLCJ0eXBlIjoiQ29uY2VwdCIsInNrb3M6bm90YXRpb24iOiJiYXNlNjQifSwiZWxtOmNvbnRlbnQiOiJpVkJPUncwS0dnb0FBQUFOU1VoRVVnQUFBQUVBQUFBQkNBWUFBQUFmRmNTSkFBQUFDa2xFUVZSNG5HTUFBUUFBQlFBQkRRb3R0QUFBQUFCSlJVNUVya0pnZ2c9PSJ9LCJlbG06cGFnZSI6MX1dfV19fQ",
+    "signature_base64url": "vT3_hSshUkoL_3OXaJokli78k4vbWSaSUObKmhULQY4RbNkX9TNj1IILPH_aWUlydJhnytvFgAvG4vFSo782ZQ",
+    "compact_jws": "eyJhbGciOiJFUzI1NiIsInR5cCI6Impvc2UiLCJjdHkiOiJ2YytsZCtqc29uIiwia2lkIjoiZGlkOmVic2k6ekFCQzk4NzY1NDMyMVhZWiNrZXktaGVkczAxIiwiY3JpdCI6WyJzaWdUIiwic2lnUGwiXSwic2lnVCI6IjIwMjUtMDctMTVUMTA6MDA6MDBaIiwic2lnUGwiOnsiYWRkcmVzc0NvdW50cnkiOiJFUyIsImFkZHJlc3NMb2NhbGl0eSI6IkJhcmNlbG9uYSJ9fQ.eyJAY29udGV4dCI6WyJodHRwczovL3d3dy53My5vcmcvbnMvY3JlZGVudGlhbHMvdjIiLCJodHRwOi8vZGF0YS5ldXJvcGEuZXUvc25iL21vZGVsL2NvbnRleHQvZWRjLWFwIl0sImlkIjoidXJuOnV1aWQ6YzNkNGU1ZjYtc3VwcC00YWJjLWFkZWYtMjM0NTY3ODkwMTIzIiwidHlwZSI6WyJWZXJpZmlhYmxlQ3JlZGVudGlhbCIsIlZlcmlmaWFibGVBdHRlc3RhdGlvbiIsIkV1cm9wZWFuRGlnaXRhbENyZWRlbnRpYWwiLCJFdXJvcGVhbkhpZ2hlckVkdWNhdGlvbkRpcGxvbWFTdXBwbGVtZW50Il0sImlkZW50aWZpZXIiOlt7ImlkIjoidXJuOmlkZW50aWZpZXI6RVVIRURTLTIwMjUtMDAwMDEiLCJ0eXBlIjoiSWRlbnRpZmllciIsIm5vdGF0aW9uIjoiRVVIRURTLTIwMjUtMDAwMDEiLCJzY2hlbWVBZ2VuY3kiOnsiZW4iOiJVbml2ZXJzaXR5IG9mIEJhcmNlbG9uYSJ9LCJkYXRlSXNzdWVkIjoiMjAyNS0wNy0xNVQxMDowMDowMFoifV0sImNyZWRlbnRpYWxQcm9maWxlcyI6W3siaWQiOiJodHRwOi8vZGF0YS5ldXJvcGEuZXUvc25iL2NyZWRlbnRpYWwvZGlwbG9tYVN1cHBsZW1lbnQiLCJ0eXBlIjoiQ29uY2VwdCIsInNrb3M6cHJlZkxhYmVsIjp7ImVuIjoiSGlnaGVyIEVkdWNhdGlvbiBEaXBsb21hIFN1cHBsZW1lbnQifX1dLCJpc3N1ZXIiOnsiaWQiOiJkaWQ6ZWJzaTp6QUJDOTg3NjU0MzIxWFlaIiwidHlwZSI6Ik9yZ2FuaXNhdGlvbiIsImVsbTpsZWdhbE5hbWUiOnsiZW4iOiJVbml2ZXJzaXR5IG9mIEJhcmNlbG9uYSJ9LCJlbG06ZWlkYXNMZWdhbElkZW50aWZpZXIiOnsidHlwZSI6IkxlZ2FsSWRlbnRpZmllciIsInNrb3M6bm90YXRpb24iOiJFUy1BLTA4MDE1NTEwIiwiZGM6c3BhdGlhbCI6eyJpZCI6Imh0dHA6Ly9wdWJsaWNhdGlvbnMuZXVyb3BhLmV1L3Jlc291cmNlL2F1dGhvcml0eS9jb3VudHJ5L0VTUCJ9fSwiZWxtOmxvY2F0aW9uIjp7ImlkIjoidXJuOmxvY2F0aW9uOnVuaXZlcnNpdHktYmFyY2Vsb25hIiwidHlwZSI6IkxvY2F0aW9uIiwiZWxtOmFkZHJlc3MiOlt7ImlkIjoidXJuOmFkZHJlc3M6dW5pdmVyc2l0eS1iYXJjZWxvbmEiLCJ0eXBlIjoiQWRkcmVzcyIsImVsbTpjb3VudHJ5Q29kZSI6eyJpZCI6Imh0dHA6Ly9wdWJsaWNhdGlvbnMuZXVyb3BhLmV1L3Jlc291cmNlL2F1dGhvcml0eS9jb3VudHJ5L0VTUCIsInR5cGUiOiJDb25jZXB0Iiwic2tvczpub3RhdGlvbiI6IkVTUCJ9LCJlbG06ZnVsbEFkZHJlc3MiOnsiaWQiOiJ1cm46bm90ZTphZGRyZXNzLXViIiwidHlwZSI6Ik5vdGUiLCJlbG06bm90ZUxpdGVyYWwiOnsiZW4iOiJHcmFuIFZpYSBkZSBsZXMgQ29ydHMgQ2F0YWxhbmVzLCA1ODUsIDA4MDA3IEJhcmNlbG9uYSwgU3BhaW4ifX19XX19LCJlbG06d2FzRGVyaXZlZEZyb20iOnsiaWQiOiJ1cm46dXVpZDpiMmMzZDRlNS1ldWhlLTRhYmMtOWRlZi0xMjM0NTY3ODkwMTIiLCJ0eXBlIjoiRXVyb3BlYW5IaWdoZXJFZHVjYXRpb25EaXBsb21hIiwiZGM6aWRlbnRpZmllciI6IkVVSEVELTIwMjUtMDAwMDEifSwiY3JlZGVudGlhbFN1YmplY3QiOnsiaWQiOiJkaWQ6ZWJzaTp6SmFuZURvZTQ1NiIsInR5cGUiOiJQZXJzb24iLCJlbG06ZGF0ZU9mQmlydGgiOiIxOTk4LTExLTIwVDAwOjAwOjAwWiIsImVsbTpmYW1pbHlOYW1lIjp7ImVuIjoiU21pdGgifSwiZWxtOmdpdmVuTmFtZSI6eyJlbiI6IkphbmUifSwiZWxtOmhhc0NsYWltIjpbeyJpZCI6InVybjpjbGFpbTpkcy1mb3VuZGF0aW9ucyIsInR5cGUiOiJMZWFybmluZ0FjaGlldmVtZW50IiwiZGM6dGl0bGUiOnsiZW4iOiJGb3VuZGF0aW9ucyBvZiBEYXRhIFNjaWVuY2UifSwiZWxtOmF3YXJkZWRCeSI6eyJpZCI6InVybjphd2FyZGluZzp1Yi1kaXBsb21hLTIwMjUiLCJ0eXBlIjoiQXdhcmRpbmdQcm9jZXNzIiwiZWxtOmF3YXJkaW5nQm9keSI6eyJpZCI6ImRpZDplYnNpOnpBQkM5ODc2NTQzMjFYWVoiLCJ0eXBlIjoiT3JnYW5pc2F0aW9uIiwiZWxtOmxlZ2FsTmFtZSI6eyJlbiI6IlVuaXZlcnNpdHkgb2YgQmFyY2Vsb25hIn0sImVsbTpsb2NhdGlvbiI6eyJpZCI6InVybjpsb2NhdGlvbjp1bml2ZXJzaXR5LWJhcmNlbG9uYSIsInR5cGUiOiJMb2NhdGlvbiIsImVsbTphZGRyZXNzIjpbeyJpZCI6InVybjphZGRyZXNzOnVuaXZlcnNpdHktYmFyY2Vsb25hIiwidHlwZSI6IkFkZHJlc3MiLCJlbG06Y291bnRyeUNvZGUiOnsiaWQiOiJodHRwOi8vcHVibGljYXRpb25zLmV1cm9wYS5ldS9yZXNvdXJjZS9hdXRob3JpdHkvY291bnRyeS9FU1AiLCJ0eXBlIjoiQ29uY2VwdCIsInNrb3M6bm90YXRpb24iOiJFU1AifX1dfX0sImVsbTphd2FyZGluZ0RhdGUiOiIyMDI1LTA3LTE1VDEwOjAwOjAwWiIsImVsbTpsb2NhdGlvbiI6eyJpZCI6InVybjpsb2NhdGlvbjp1bml2ZXJzaXR5LWJhcmNlbG9uYSIsInR5cGUiOiJMb2NhdGlvbiIsImVsbTphZGRyZXNzIjpbeyJpZCI6InVybjphZGRyZXNzOnVuaXZlcnNpdHktYmFyY2Vsb25hIiwidHlwZSI6IkFkZHJlc3MiLCJlbG06Y291bnRyeUNvZGUiOnsiaWQiOiJodHRwOi8vcHVibGljYXRpb25zLmV1cm9wYS5ldS9yZXNvdXJjZS9hdXRob3JpdHkvY291bnRyeS9FU1AiLCJ0eXBlIjoiQ29uY2VwdCIsInNrb3M6bm90YXRpb24iOiJFU1AifX1dfX0sImVsbTpzcGVjaWZpZWRCeSI6eyJpZCI6InVybjpzcGVjOmRzLWZvdW5kYXRpb25zIiwidHlwZSI6IkxlYXJuaW5nQWNoaWV2ZW1lbnRTcGVjaWZpY2F0aW9uIiwiZGM6dGl0bGUiOnsiZW4iOiJGb3VuZGF0aW9ucyBvZiBEYXRhIFNjaWVuY2UgXHUyMDEzIFNwZWNpZmljYXRpb24ifSwiZWxtOmNyZWRpdFBvaW50IjpbeyJpZCI6InVybjpjcmVkaXQ6ZHMtZm91bmRhdGlvbnMiLCJ0eXBlIjoiQ3JlZGl0UG9pbnQiLCJlbG06ZnJhbWV3b3JrIjp7ImlkIjoiaHR0cDovL2RhdGEuZXVyb3BhLmV1L3NuYi9lZHVjYXRpb24tY3JlZGl0LzZmY2VjNWM0MjUiLCJ0eXBlIjoiQ29uY2VwdCIsInNrb3M6bm90YXRpb24iOiJFQ1RTIn0sImVsbTpwb2ludCI6IjEwIn1dfSwiZWxtOnByb3ZlbkJ5IjpbeyJpZCI6InVybjphc3Nlc3NtZW50OmRzLWZvdW5kYXRpb25zIiwidHlwZSI6IkxlYXJuaW5nQXNzZXNzbWVudCIsImRjOnRpdGxlIjp7ImVuIjoiRm91bmRhdGlvbnMgb2YgRGF0YSBTY2llbmNlIFx1MjAxMyBGaW5hbCBFeGFtIn0sImVsbTpncmFkZSI6eyJpZCI6InVybjpncmFkZTpkcy1mb3VuZGF0aW9ucyIsInR5cGUiOiJOb3RlIiwiZWxtOm5vdGVMaXRlcmFsIjp7ImVuIjoiQSAoRXhjZWxsZW50KSJ9fSwiZWxtOmF3YXJkZWRCeSI6eyJpZCI6InVybjphd2FyZGluZzp1Yi1kaXBsb21hLTIwMjUiLCJ0eXBlIjoiQXdhcmRpbmdQcm9jZXNzIiwiZWxtOmF3YXJkaW5nQm9keSI6eyJpZCI6ImRpZDplYnNpOnpBQkM5ODc2NTQzMjFYWVoiLCJ0eXBlIjoiT3JnYW5pc2F0aW9uIiwiZWxtOmxlZ2FsTmFtZSI6eyJlbiI6IlVuaXZlcnNpdHkgb2YgQmFyY2Vsb25hIn0sImVsbTpsb2NhdGlvbiI6eyJpZCI6InVybjpsb2NhdGlvbjp1bml2ZXJzaXR5LWJhcmNlbG9uYSIsInR5cGUiOiJMb2NhdGlvbiIsImVsbTphZGRyZXNzIjpbeyJpZCI6InVybjphZGRyZXNzOnVuaXZlcnNpdHktYmFyY2Vsb25hIiwidHlwZSI6IkFkZHJlc3MiLCJlbG06Y291bnRyeUNvZGUiOnsiaWQiOiJodHRwOi8vcHVibGljYXRpb25zLmV1cm9wYS5ldS9yZXNvdXJjZS9hdXRob3JpdHkvY291bnRyeS9FU1AiLCJ0eXBlIjoiQ29uY2VwdCIsInNrb3M6bm90YXRpb24iOiJFU1AifX1dfX0sImVsbTphd2FyZGluZ0RhdGUiOiIyMDI1LTA3LTE1VDEwOjAwOjAwWiIsImVsbTpsb2NhdGlvbiI6eyJpZCI6InVybjpsb2NhdGlvbjp1bml2ZXJzaXR5LWJhcmNlbG9uYSIsInR5cGUiOiJMb2NhdGlvbiIsImVsbTphZGRyZXNzIjpbeyJpZCI6InVybjphZGRyZXNzOnVuaXZlcnNpdHktYmFyY2Vsb25hIiwidHlwZSI6IkFkZHJlc3MiLCJlbG06Y291bnRyeUNvZGUiOnsiaWQiOiJodHRwOi8vcHVibGljYXRpb25zLmV1cm9wYS5ldS9yZXNvdXJjZS9hdXRob3JpdHkvY291bnRyeS9FU1AiLCJ0eXBlIjoiQ29uY2VwdCIsInNrb3M6bm90YXRpb24iOiJFU1AifX1dfX19XSwiZWxtOmNyZWRpdFJlY2VpdmVkIjpbeyJpZCI6InVybjpjcmVkaXQtcmVjdjpkcy1mb3VuZGF0aW9ucyIsInR5cGUiOiJDcmVkaXRQb2ludCIsImVsbTpmcmFtZXdvcmsiOnsiaWQiOiJodHRwOi8vZGF0YS5ldXJvcGEuZXUvc25iL2VkdWNhdGlvbi1jcmVkaXQvNmZjZWM1YzQyNSIsInR5cGUiOiJDb25jZXB0Iiwic2tvczpub3RhdGlvbiI6IkVDVFMifSwiZWxtOnBvaW50IjoiMTAifV19LHsiaWQiOiJ1cm46Y2xhaW06bWwtYWR2YW5jZWQiLCJ0eXBlIjoiTGVhcm5pbmdBY2hpZXZlbWVudCIsImRjOnRpdGxlIjp7ImVuIjoiQWR2YW5jZWQgTWFjaGluZSBMZWFybmluZyJ9LCJlbG06YXdhcmRlZEJ5Ijp7ImlkIjoidXJuOmF3YXJkaW5nOnViLWRpcGxvbWEtMjAyNSIsInR5cGUiOiJBd2FyZGluZ1Byb2Nlc3MiLCJlbG06YXdhcmRpbmdCb2R5Ijp7ImlkIjoiZGlkOmVic2k6ekFCQzk4NzY1NDMyMVhZWiIsInR5cGUiOiJPcmdhbmlzYXRpb24iLCJlbG06bGVnYWxOYW1lIjp7ImVuIjoiVW5pdmVyc2l0eSBvZiBCYXJjZWxvbmEifSwiZWxtOmxvY2F0aW9uIjp7ImlkIjoidXJuOmxvY2F0aW9uOnVuaXZlcnNpdHktYmFyY2Vsb25hIiwidHlwZSI6IkxvY2F0aW9uIiwiZWxtOmFkZHJlc3MiOlt7ImlkIjoidXJuOmFkZHJlc3M6dW5pdmVyc2l0eS1iYXJjZWxvbmEiLCJ0eXBlIjoiQWRkcmVzcyIsImVsbTpjb3VudHJ5Q29kZSI6eyJpZCI6Imh0dHA6Ly9wdWJsaWNhdGlvbnMuZXVyb3BhLmV1L3Jlc291cmNlL2F1dGhvcml0eS9jb3VudHJ5L0VTUCIsInR5cGUiOiJDb25jZXB0Iiwic2tvczpub3RhdGlvbiI6IkVTUCJ9fV19fSwiZWxtOmF3YXJkaW5nRGF0ZSI6IjIwMjUtMDctMTVUMTA6MDA6MDBaIiwiZWxtOmxvY2F0aW9uIjp7ImlkIjoidXJuOmxvY2F0aW9uOnVuaXZlcnNpdHktYmFyY2Vsb25hIiwidHlwZSI6IkxvY2F0aW9uIiwiZWxtOmFkZHJlc3MiOlt7ImlkIjoidXJuOmFkZHJlc3M6dW5pdmVyc2l0eS1iYXJjZWxvbmEiLCJ0eXBlIjoiQWRkcmVzcyIsImVsbTpjb3VudHJ5Q29kZSI6eyJpZCI6Imh0dHA6Ly9wdWJsaWNhdGlvbnMuZXVyb3BhLmV1L3Jlc291cmNlL2F1dGhvcml0eS9jb3VudHJ5L0VTUCIsInR5cGUiOiJDb25jZXB0Iiwic2tvczpub3RhdGlvbiI6IkVTUCJ9fV19fSwiZWxtOnNwZWNpZmllZEJ5Ijp7ImlkIjoidXJuOnNwZWM6bWwtYWR2YW5jZWQiLCJ0eXBlIjoiTGVhcm5pbmdBY2hpZXZlbWVudFNwZWNpZmljYXRpb24iLCJkYzp0aXRsZSI6eyJlbiI6IkFkdmFuY2VkIE1hY2hpbmUgTGVhcm5pbmcgXHUyMDEzIFNwZWNpZmljYXRpb24ifSwiZWxtOmNyZWRpdFBvaW50IjpbeyJpZCI6InVybjpjcmVkaXQ6bWwtYWR2YW5jZWQiLCJ0eXBlIjoiQ3JlZGl0UG9pbnQiLCJlbG06ZnJhbWV3b3JrIjp7ImlkIjoiaHR0cDovL2RhdGEuZXVyb3BhLmV1L3NuYi9lZHVjYXRpb24tY3JlZGl0LzZmY2VjNWM0MjUiLCJ0eXBlIjoiQ29uY2VwdCIsInNrb3M6bm90YXRpb24iOiJFQ1RTIn0sImVsbTpwb2ludCI6IjE1In1dfSwiZWxtOnByb3ZlbkJ5IjpbeyJpZCI6InVybjphc3Nlc3NtZW50Om1sLWFkdmFuY2VkIiwidHlwZSI6IkxlYXJuaW5nQXNzZXNzbWVudCIsImRjOnRpdGxlIjp7ImVuIjoiQWR2YW5jZWQgTWFjaGluZSBMZWFybmluZyBcdTIwMTMgRmluYWwgRXhhbSJ9LCJlbG06Z3JhZGUiOnsiaWQiOiJ1cm46Z3JhZGU6bWwtYWR2YW5jZWQiLCJ0eXBlIjoiTm90ZSIsImVsbTpub3RlTGl0ZXJhbCI6eyJlbiI6IkIgKFZlcnkgR29vZCkifX0sImVsbTphd2FyZGVkQnkiOnsiaWQiOiJ1cm46YXdhcmRpbmc6dWItZGlwbG9tYS0yMDI1IiwidHlwZSI6IkF3YXJkaW5nUHJvY2VzcyIsImVsbTphd2FyZGluZ0JvZHkiOnsiaWQiOiJkaWQ6ZWJzaTp6QUJDOTg3NjU0MzIxWFlaIiwidHlwZSI6Ik9yZ2FuaXNhdGlvbiIsImVsbTpsZWdhbE5hbWUiOnsiZW4iOiJVbml2ZXJzaXR5IG9mIEJhcmNlbG9uYSJ9LCJlbG06bG9jYXRpb24iOnsiaWQiOiJ1cm46bG9jYXRpb246dW5pdmVyc2l0eS1iYXJjZWxvbmEiLCJ0eXBlIjoiTG9jYXRpb24iLCJlbG06YWRkcmVzcyI6W3siaWQiOiJ1cm46YWRkcmVzczp1bml2ZXJzaXR5LWJhcmNlbG9uYSIsInR5cGUiOiJBZGRyZXNzIiwiZWxtOmNvdW50cnlDb2RlIjp7ImlkIjoiaHR0cDovL3B1YmxpY2F0aW9ucy5ldXJvcGEuZXUvcmVzb3VyY2UvYXV0aG9yaXR5L2NvdW50cnkvRVNQIiwidHlwZSI6IkNvbmNlcHQiLCJza29zOm5vdGF0aW9uIjoiRVNQIn19XX19LCJlbG06YXdhcmRpbmdEYXRlIjoiMjAyNS0wNy0xNVQxMDowMDowMFoiLCJlbG06bG9jYXRpb24iOnsiaWQiOiJ1cm46bG9jYXRpb246dW5pdmVyc2l0eS1iYXJjZWxvbmEiLCJ0eXBlIjoiTG9jYXRpb24iLCJlbG06YWRkcmVzcyI6W3siaWQiOiJ1cm46YWRkcmVzczp1bml2ZXJzaXR5LWJhcmNlbG9uYSIsInR5cGUiOiJBZGRyZXNzIiwiZWxtOmNvdW50cnlDb2RlIjp7ImlkIjoiaHR0cDovL3B1YmxpY2F0aW9ucy5ldXJvcGEuZXUvcmVzb3VyY2UvYXV0aG9yaXR5L2NvdW50cnkvRVNQIiwidHlwZSI6IkNvbmNlcHQiLCJza29zOm5vdGF0aW9uIjoiRVNQIn19XX19fV0sImVsbTpjcmVkaXRSZWNlaXZlZCI6W3siaWQiOiJ1cm46Y3JlZGl0LXJlY3Y6bWwtYWR2YW5jZWQiLCJ0eXBlIjoiQ3JlZGl0UG9pbnQiLCJlbG06ZnJhbWV3b3JrIjp7ImlkIjoiaHR0cDovL2RhdGEuZXVyb3BhLmV1L3NuYi9lZHVjYXRpb24tY3JlZGl0LzZmY2VjNWM0MjUiLCJ0eXBlIjoiQ29uY2VwdCIsInNrb3M6bm90YXRpb24iOiJFQ1RTIn0sImVsbTpwb2ludCI6IjE1In1dfSx7ImlkIjoidXJuOmNsYWltOmRzLXRoZXNpcyIsInR5cGUiOiJMZWFybmluZ0FjaGlldmVtZW50IiwiZGM6dGl0bGUiOnsiZW4iOiJNU2MgRGlzc2VydGF0aW9uIn0sImVsbTphd2FyZGVkQnkiOnsiaWQiOiJ1cm46YXdhcmRpbmc6dWItZGlwbG9tYS0yMDI1IiwidHlwZSI6IkF3YXJkaW5nUHJvY2VzcyIsImVsbTphd2FyZGluZ0JvZHkiOnsiaWQiOiJkaWQ6ZWJzaTp6QUJDOTg3NjU0MzIxWFlaIiwidHlwZSI6Ik9yZ2FuaXNhdGlvbiIsImVsbTpsZWdhbE5hbWUiOnsiZW4iOiJVbml2ZXJzaXR5IG9mIEJhcmNlbG9uYSJ9LCJlbG06bG9jYXRpb24iOnsiaWQiOiJ1cm46bG9jYXRpb246dW5pdmVyc2l0eS1iYXJjZWxvbmEiLCJ0eXBlIjoiTG9jYXRpb24iLCJlbG06YWRkcmVzcyI6W3siaWQiOiJ1cm46YWRkcmVzczp1bml2ZXJzaXR5LWJhcmNlbG9uYSIsInR5cGUiOiJBZGRyZXNzIiwiZWxtOmNvdW50cnlDb2RlIjp7ImlkIjoiaHR0cDovL3B1YmxpY2F0aW9ucy5ldXJvcGEuZXUvcmVzb3VyY2UvYXV0aG9yaXR5L2NvdW50cnkvRVNQIiwidHlwZSI6IkNvbmNlcHQiLCJza29zOm5vdGF0aW9uIjoiRVNQIn19XX19LCJlbG06YXdhcmRpbmdEYXRlIjoiMjAyNS0wNy0xNVQxMDowMDowMFoiLCJlbG06bG9jYXRpb24iOnsiaWQiOiJ1cm46bG9jYXRpb246dW5pdmVyc2l0eS1iYXJjZWxvbmEiLCJ0eXBlIjoiTG9jYXRpb24iLCJlbG06YWRkcmVzcyI6W3siaWQiOiJ1cm46YWRkcmVzczp1bml2ZXJzaXR5LWJhcmNlbG9uYSIsInR5cGUiOiJBZGRyZXNzIiwiZWxtOmNvdW50cnlDb2RlIjp7ImlkIjoiaHR0cDovL3B1YmxpY2F0aW9ucy5ldXJvcGEuZXUvcmVzb3VyY2UvYXV0aG9yaXR5L2NvdW50cnkvRVNQIiwidHlwZSI6IkNvbmNlcHQiLCJza29zOm5vdGF0aW9uIjoiRVNQIn19XX19LCJlbG06c3BlY2lmaWVkQnkiOnsiaWQiOiJ1cm46c3BlYzpkcy10aGVzaXMiLCJ0eXBlIjoiTGVhcm5pbmdBY2hpZXZlbWVudFNwZWNpZmljYXRpb24iLCJkYzp0aXRsZSI6eyJlbiI6Ik1TYyBEaXNzZXJ0YXRpb24gXHUyMDEzIFNwZWNpZmljYXRpb24ifSwiZWxtOmNyZWRpdFBvaW50IjpbeyJpZCI6InVybjpjcmVkaXQ6ZHMtdGhlc2lzIiwidHlwZSI6IkNyZWRpdFBvaW50IiwiZWxtOmZyYW1ld29yayI6eyJpZCI6Imh0dHA6Ly9kYXRhLmV1cm9wYS5ldS9zbmIvZWR1Y2F0aW9uLWNyZWRpdC82ZmNlYzVjNDI1IiwidHlwZSI6IkNvbmNlcHQiLCJza29zOm5vdGF0aW9uIjoiRUNUUyJ9LCJlbG06cG9pbnQiOiIzMCJ9XX0sImVsbTpwcm92ZW5CeSI6W3siaWQiOiJ1cm46YXNzZXNzbWVudDpkcy10aGVzaXMiLCJ0eXBlIjoiTGVhcm5pbmdBc3Nlc3NtZW50IiwiZGM6dGl0bGUiOnsiZW4iOiJNU2MgRGlzc2VydGF0aW9uIFx1MjAxMyBGaW5hbCBFeGFtIn0sImVsbTpncmFkZSI6eyJpZCI6InVybjpncmFkZTpkcy10aGVzaXMiLCJ0eXBlIjoiTm90ZSIsImVsbTpub3RlTGl0ZXJhbCI6eyJlbiI6IkEgKEV4Y2VsbGVudCkifX0sImVsbTphd2FyZGVkQnkiOnsiaWQiOiJ1cm46YXdhcmRpbmc6dWItZGlwbG9tYS0yMDI1IiwidHlwZSI6IkF3YXJkaW5nUHJvY2VzcyIsImVsbTphd2FyZGluZ0JvZHkiOnsiaWQiOiJkaWQ6ZWJzaTp6QUJDOTg3NjU0MzIxWFlaIiwidHlwZSI6Ik9yZ2FuaXNhdGlvbiIsImVsbTpsZWdhbE5hbWUiOnsiZW4iOiJVbml2ZXJzaXR5IG9mIEJhcmNlbG9uYSJ9LCJlbG06bG9jYXRpb24iOnsiaWQiOiJ1cm46bG9jYXRpb246dW5pdmVyc2l0eS1iYXJjZWxvbmEiLCJ0eXBlIjoiTG9jYXRpb24iLCJlbG06YWRkcmVzcyI6W3siaWQiOiJ1cm46YWRkcmVzczp1bml2ZXJzaXR5LWJhcmNlbG9uYSIsInR5cGUiOiJBZGRyZXNzIiwiZWxtOmNvdW50cnlDb2RlIjp7ImlkIjoiaHR0cDovL3B1YmxpY2F0aW9ucy5ldXJvcGEuZXUvcmVzb3VyY2UvYXV0aG9yaXR5L2NvdW50cnkvRVNQIiwidHlwZSI6IkNvbmNlcHQiLCJza29zOm5vdGF0aW9uIjoiRVNQIn19XX19LCJlbG06YXdhcmRpbmdEYXRlIjoiMjAyNS0wNy0xNVQxMDowMDowMFoiLCJlbG06bG9jYXRpb24iOnsiaWQiOiJ1cm46bG9jYXRpb246dW5pdmVyc2l0eS1iYXJjZWxvbmEiLCJ0eXBlIjoiTG9jYXRpb24iLCJlbG06YWRkcmVzcyI6W3siaWQiOiJ1cm46YWRkcmVzczp1bml2ZXJzaXR5LWJhcmNlbG9uYSIsInR5cGUiOiJBZGRyZXNzIiwiZWxtOmNvdW50cnlDb2RlIjp7ImlkIjoiaHR0cDovL3B1YmxpY2F0aW9ucy5ldXJvcGEuZXUvcmVzb3VyY2UvYXV0aG9yaXR5L2NvdW50cnkvRVNQIiwidHlwZSI6IkNvbmNlcHQiLCJza29zOm5vdGF0aW9uIjoiRVNQIn19XX19fV0sImVsbTpjcmVkaXRSZWNlaXZlZCI6W3siaWQiOiJ1cm46Y3JlZGl0LXJlY3Y6ZHMtdGhlc2lzIiwidHlwZSI6IkNyZWRpdFBvaW50IiwiZWxtOmZyYW1ld29yayI6eyJpZCI6Imh0dHA6Ly9kYXRhLmV1cm9wYS5ldS9zbmIvZWR1Y2F0aW9uLWNyZWRpdC82ZmNlYzVjNDI1IiwidHlwZSI6IkNvbmNlcHQiLCJza29zOm5vdGF0aW9uIjoiRUNUUyJ9LCJlbG06cG9pbnQiOiIzMCJ9XX1dfSwiaXNzdWVkIjoiMjAyNS0wNy0xNVQxMDowMDowMFoiLCJ2YWxpZEZyb20iOiIyMDI1LTA3LTE1VDEwOjAwOjAwWiIsImNyZWRlbnRpYWxTY2hlbWEiOlt7ImlkIjoiaHR0cHM6Ly9hcGktcGlsb3QuZWJzaS5ldS90cnVzdGVkLXNjaGVtYXMtcmVnaXN0cnkvdjMvc2NoZW1hcy8weDU5NzIxNGNkZjAxMzc0YTJhZjg3Yzc2ZTNhZTRkZmNlMzFlNjRlMzdlNDgyNmU3YjE3ZjFlNWY4NGYzMjlhNTciLCJ0eXBlIjoiSnNvblNjaGVtYSJ9LHsiaWQiOiJodHRwczovL2FwaS1waWxvdC5lYnNpLmV1L3RydXN0ZWQtc2NoZW1hcy1yZWdpc3RyeS92My9zY2hlbWFzL1BFTkRJTkdfVFNSX1JFR0lTVFJBVElPTl9FVUhFRFMiLCJ0eXBlIjoiU2hhY2xWYWxpZGF0b3IyMDE3In1dLCJjcmVkZW50aWFsU3RhdHVzIjpbeyJpZCI6InVybjpzdGF0dXM6YzNkNGU1ZjYtc3VwcC00YWJjLWFkZWYtMjM0NTY3ODkwMTIzIiwidHlwZSI6IlN0YXR1c0xpc3QyMDIxRW50cnkiLCJzdGF0dXNQdXJwb3NlIjoicmV2b2NhdGlvbiIsInN0YXR1c0xpc3RJbmRleCI6IjAiLCJzdGF0dXNMaXN0Q3JlZGVudGlhbCI6Imh0dHBzOi8vYXBpLXBpbG90LmVic2kuZXUvc3RhdHVzLWxpc3QvMjAyNS8wNyJ9XSwiZWxtOmRpc3BsYXlQYXJhbWV0ZXIiOnsiaWQiOiJ1cm46ZGlzcGxheTpldWhlZHMtamFuZS0yMDI1IiwidHlwZSI6IkRpc3BsYXlQYXJhbWV0ZXIiLCJkYzp0aXRsZSI6eyJlbiI6IkRpcGxvbWEgU3VwcGxlbWVudCBcdTIwMTMgTVNjIERhdGEgU2NpZW5jZSJ9LCJkYzpkZXNjcmlwdGlvbiI6eyJlbiI6IkRldGFpbGVkIHJlY29yZCBvZiBtb2R1bGVzIGNvbXBsZXRlZCBieSBKYW5lIFNtaXRoIGFzIHBhcnQgb2YgdGhlIE1TYyBpbiBEYXRhIFNjaWVuY2UuIn0sImRjOmxhbmd1YWdlIjpbeyJpZCI6Imh0dHA6Ly9wdWJsaWNhdGlvbnMuZXVyb3BhLmV1L3Jlc291cmNlL2F1dGhvcml0eS9sYW5ndWFnZS9FTkciLCJ0eXBlIjoiQ29uY2VwdCIsInNrb3M6bm90YXRpb24iOiJFTkcifV0sImVsbTpwcmltYXJ5TGFuZ3VhZ2UiOnsiaWQiOiJodHRwOi8vcHVibGljYXRpb25zLmV1cm9wYS5ldS9yZXNvdXJjZS9hdXRob3JpdHkvbGFuZ3VhZ2UvRU5HIiwidHlwZSI6IkNvbmNlcHQiLCJza29zOm5vdGF0aW9uIjoiRU5HIn0sImVsbTppbmRpdmlkdWFsRGlzcGxheSI6W3siaWQiOiJ1cm46ZGlzcGxheTppbmRpdmlkdWFsLTEiLCJ0eXBlIjoiSW5kaXZpZHVhbERpc3BsYXkiLCJkYzpsYW5ndWFnZSI6eyJpZCI6Imh0dHA6Ly9wdWJsaWNhdGlvbnMuZXVyb3BhLmV1L3Jlc291cmNlL2F1dGhvcml0eS9sYW5ndWFnZS9FTkciLCJ0eXBlIjoiQ29uY2VwdCIsInNrb3M6bm90YXRpb24iOiJFTkcifSwiZWxtOmRpc3BsYXlEZXRhaWwiOlt7ImlkIjoidXJuOmRpc3BsYXk6ZGV0YWlsLTEiLCJ0eXBlIjoiRGlzcGxheURldGFpbCIsImVsbTppbWFnZSI6eyJpZCI6InVybjptZWRpYTpjZXJ0aWZpY2F0ZS1pbWFnZSIsInR5cGUiOiJNZWRpYU9iamVjdCIsImVsbTpjb250ZW50VHlwZSI6eyJpZCI6Imh0dHA6Ly9wdWJsaWNhdGlvbnMuZXVyb3BhLmV1L3Jlc291cmNlL2F1dGhvcml0eS9maWxlLXR5cGUvUE5HIiwidHlwZSI6IkNvbmNlcHQiLCJza29zOm5vdGF0aW9uIjoiUE5HIn0sImVsbTpjb250ZW50RW5jb2RpbmciOnsiaWQiOiJodHRwOi8vZGF0YS5ldXJvcGEuZXUvc25iL2VuY29kaW5nLzYxNDZjZGU3ZGQiLCJ0eXBlIjoiQ29uY2VwdCIsInNrb3M6bm90YXRpb24iOiJiYXNlNjQifSwiZWxtOmNvbnRlbnQiOiJpVkJPUncwS0dnb0FBQUFOU1VoRVVnQUFBQUVBQUFBQkNBWUFBQUFmRmNTSkFBQUFDa2xFUVZSNG5HTUFBUUFBQlFBQkRRb3R0QUFBQUFCSlJVNUVya0pnZ2c9PSJ9LCJlbG06cGFnZSI6MX1dfV19fQ.vT3_hSshUkoL_3OXaJokli78k4vbWSaSUObKmhULQY4RbNkX9TNj1IILPH_aWUlydJhnytvFgAvG4vFSo782ZQ"
+  },
+  "verification": {
+    "algorithm": "ES256",
+    "public_key_jwk": {
+      "kty": "EC",
+      "crv": "P-256",
+      "kid": "did:ebsi:zABC987654321XYZ#key-heds01",
+      "use": "sig",
+      "x": "bt-8eEBuuUnJIbBk9HrffA_3EbbKBhlg-SBLi8A-KWU",
+      "y": "jCy_2d07MjFpg0RxDj0-Mx75NwT-RAxrTmMTHBrBk5M"
+    },
+    "signing_input": "eyJhbGciOiJFUzI1NiIsInR5cCI6Impvc2UiLCJjdHkiOiJ2YytsZCtqc29uIiwia2lkIjoiZGlkOmVic2k6ekFCQzk4NzY1NDMyMVhZWiNrZXktaGVkczAxIiwiY3JpdCI6WyJzaWdUIiwic2lnUGwiXSwic2lnVCI6IjIwMjUtMDctMTVUMTA6MDA6MDBaIiwic2lnUGwiOnsiYWRkcmVzc0NvdW50cnkiOiJFUyIsImFkZHJlc3NMb2NhbGl0eSI6IkJhcmNlbG9uYSJ9fQ.eyJAY29udGV4dCI6WyJodHRwczovL3d3dy53My5vcmcvbnMvY3JlZGVudGlhbHMvdjIiLCJodHRwOi8vZGF0YS5ldXJvcGEuZXUvc25iL21vZGVsL2NvbnRleHQvZWRjLWFwIl0sImlkIjoidXJuOnV1aWQ6YzNkNGU1ZjYtc3VwcC00YWJjLWFkZWYtMjM0NTY3ODkwMTIzIiwidHlwZSI6WyJWZXJpZmlhYmxlQ3JlZGVudGlhbCIsIlZlcmlmaWFibGVBdHRlc3RhdGlvbiIsIkV1cm9wZWFuRGlnaXRhbENyZWRlbnRpYWwiLCJFdXJvcGVhbkhpZ2hlckVkdWNhdGlvbkRpcGxvbWFTdXBwbGVtZW50Il0sImlkZW50aWZpZXIiOlt7ImlkIjoidXJuOmlkZW50aWZpZXI6RVVIRURTLTIwMjUtMDAwMDEiLCJ0eXBlIjoiSWRlbnRpZmllciIsIm5vdGF0aW9uIjoiRVVIRURTLTIwMjUtMDAwMDEiLCJzY2hlbWVBZ2VuY3kiOnsiZW4iOiJVbml2ZXJzaXR5IG9mIEJhcmNlbG9uYSJ9LCJkYXRlSXNzdWVkIjoiMjAyNS0wNy0xNVQxMDowMDowMFoifV0sImNyZWRlbnRpYWxQcm9maWxlcyI6W3siaWQiOiJodHRwOi8vZGF0YS5ldXJvcGEuZXUvc25iL2NyZWRlbnRpYWwvZGlwbG9tYVN1cHBsZW1lbnQiLCJ0eXBlIjoiQ29uY2VwdCIsInNrb3M6cHJlZkxhYmVsIjp7ImVuIjoiSGlnaGVyIEVkdWNhdGlvbiBEaXBsb21hIFN1cHBsZW1lbnQifX1dLCJpc3N1ZXIiOnsiaWQiOiJkaWQ6ZWJzaTp6QUJDOTg3NjU0MzIxWFlaIiwidHlwZSI6Ik9yZ2FuaXNhdGlvbiIsImVsbTpsZWdhbE5hbWUiOnsiZW4iOiJVbml2ZXJzaXR5IG9mIEJhcmNlbG9uYSJ9LCJlbG06ZWlkYXNMZWdhbElkZW50aWZpZXIiOnsidHlwZSI6IkxlZ2FsSWRlbnRpZmllciIsInNrb3M6bm90YXRpb24iOiJFUy1BLTA4MDE1NTEwIiwiZGM6c3BhdGlhbCI6eyJpZCI6Imh0dHA6Ly9wdWJsaWNhdGlvbnMuZXVyb3BhLmV1L3Jlc291cmNlL2F1dGhvcml0eS9jb3VudHJ5L0VTUCJ9fSwiZWxtOmxvY2F0aW9uIjp7ImlkIjoidXJuOmxvY2F0aW9uOnVuaXZlcnNpdHktYmFyY2Vsb25hIiwidHlwZSI6IkxvY2F0aW9uIiwiZWxtOmFkZHJlc3MiOlt7ImlkIjoidXJuOmFkZHJlc3M6dW5pdmVyc2l0eS1iYXJjZWxvbmEiLCJ0eXBlIjoiQWRkcmVzcyIsImVsbTpjb3VudHJ5Q29kZSI6eyJpZCI6Imh0dHA6Ly9wdWJsaWNhdGlvbnMuZXVyb3BhLmV1L3Jlc291cmNlL2F1dGhvcml0eS9jb3VudHJ5L0VTUCIsInR5cGUiOiJDb25jZXB0Iiwic2tvczpub3RhdGlvbiI6IkVTUCJ9LCJlbG06ZnVsbEFkZHJlc3MiOnsiaWQiOiJ1cm46bm90ZTphZGRyZXNzLXViIiwidHlwZSI6Ik5vdGUiLCJlbG06bm90ZUxpdGVyYWwiOnsiZW4iOiJHcmFuIFZpYSBkZSBsZXMgQ29ydHMgQ2F0YWxhbmVzLCA1ODUsIDA4MDA3IEJhcmNlbG9uYSwgU3BhaW4ifX19XX19LCJlbG06d2FzRGVyaXZlZEZyb20iOnsiaWQiOiJ1cm46dXVpZDpiMmMzZDRlNS1ldWhlLTRhYmMtOWRlZi0xMjM0NTY3ODkwMTIiLCJ0eXBlIjoiRXVyb3BlYW5IaWdoZXJFZHVjYXRpb25EaXBsb21hIiwiZGM6aWRlbnRpZmllciI6IkVVSEVELTIwMjUtMDAwMDEifSwiY3JlZGVudGlhbFN1YmplY3QiOnsiaWQiOiJkaWQ6ZWJzaTp6SmFuZURvZTQ1NiIsInR5cGUiOiJQZXJzb24iLCJlbG06ZGF0ZU9mQmlydGgiOiIxOTk4LTExLTIwVDAwOjAwOjAwWiIsImVsbTpmYW1pbHlOYW1lIjp7ImVuIjoiU21pdGgifSwiZWxtOmdpdmVuTmFtZSI6eyJlbiI6IkphbmUifSwiZWxtOmhhc0NsYWltIjpbeyJpZCI6InVybjpjbGFpbTpkcy1mb3VuZGF0aW9ucyIsInR5cGUiOiJMZWFybmluZ0FjaGlldmVtZW50IiwiZGM6dGl0bGUiOnsiZW4iOiJGb3VuZGF0aW9ucyBvZiBEYXRhIFNjaWVuY2UifSwiZWxtOmF3YXJkZWRCeSI6eyJpZCI6InVybjphd2FyZGluZzp1Yi1kaXBsb21hLTIwMjUiLCJ0eXBlIjoiQXdhcmRpbmdQcm9jZXNzIiwiZWxtOmF3YXJkaW5nQm9keSI6eyJpZCI6ImRpZDplYnNpOnpBQkM5ODc2NTQzMjFYWVoiLCJ0eXBlIjoiT3JnYW5pc2F0aW9uIiwiZWxtOmxlZ2FsTmFtZSI6eyJlbiI6IlVuaXZlcnNpdHkgb2YgQmFyY2Vsb25hIn0sImVsbTpsb2NhdGlvbiI6eyJpZCI6InVybjpsb2NhdGlvbjp1bml2ZXJzaXR5LWJhcmNlbG9uYSIsInR5cGUiOiJMb2NhdGlvbiIsImVsbTphZGRyZXNzIjpbeyJpZCI6InVybjphZGRyZXNzOnVuaXZlcnNpdHktYmFyY2Vsb25hIiwidHlwZSI6IkFkZHJlc3MiLCJlbG06Y291bnRyeUNvZGUiOnsiaWQiOiJodHRwOi8vcHVibGljYXRpb25zLmV1cm9wYS5ldS9yZXNvdXJjZS9hdXRob3JpdHkvY291bnRyeS9FU1AiLCJ0eXBlIjoiQ29uY2VwdCIsInNrb3M6bm90YXRpb24iOiJFU1AifX1dfX0sImVsbTphd2FyZGluZ0RhdGUiOiIyMDI1LTA3LTE1VDEwOjAwOjAwWiIsImVsbTpsb2NhdGlvbiI6eyJpZCI6InVybjpsb2NhdGlvbjp1bml2ZXJzaXR5LWJhcmNlbG9uYSIsInR5cGUiOiJMb2NhdGlvbiIsImVsbTphZGRyZXNzIjpbeyJpZCI6InVybjphZGRyZXNzOnVuaXZlcnNpdHktYmFyY2Vsb25hIiwidHlwZSI6IkFkZHJlc3MiLCJlbG06Y291bnRyeUNvZGUiOnsiaWQiOiJodHRwOi8vcHVibGljYXRpb25zLmV1cm9wYS5ldS9yZXNvdXJjZS9hdXRob3JpdHkvY291bnRyeS9FU1AiLCJ0eXBlIjoiQ29uY2VwdCIsInNrb3M6bm90YXRpb24iOiJFU1AifX1dfX0sImVsbTpzcGVjaWZpZWRCeSI6eyJpZCI6InVybjpzcGVjOmRzLWZvdW5kYXRpb25zIiwidHlwZSI6IkxlYXJuaW5nQWNoaWV2ZW1lbnRTcGVjaWZpY2F0aW9uIiwiZGM6dGl0bGUiOnsiZW4iOiJGb3VuZGF0aW9ucyBvZiBEYXRhIFNjaWVuY2UgXHUyMDEzIFNwZWNpZmljYXRpb24ifSwiZWxtOmNyZWRpdFBvaW50IjpbeyJpZCI6InVybjpjcmVkaXQ6ZHMtZm91bmRhdGlvbnMiLCJ0eXBlIjoiQ3JlZGl0UG9pbnQiLCJlbG06ZnJhbWV3b3JrIjp7ImlkIjoiaHR0cDovL2RhdGEuZXVyb3BhLmV1L3NuYi9lZHVjYXRpb24tY3JlZGl0LzZmY2VjNWM0MjUiLCJ0eXBlIjoiQ29uY2VwdCIsInNrb3M6bm90YXRpb24iOiJFQ1RTIn0sImVsbTpwb2ludCI6IjEwIn1dfSwiZWxtOnByb3ZlbkJ5IjpbeyJpZCI6InVybjphc3Nlc3NtZW50OmRzLWZvdW5kYXRpb25zIiwidHlwZSI6IkxlYXJuaW5nQXNzZXNzbWVudCIsImRjOnRpdGxlIjp7ImVuIjoiRm91bmRhdGlvbnMgb2YgRGF0YSBTY2llbmNlIFx1MjAxMyBGaW5hbCBFeGFtIn0sImVsbTpncmFkZSI6eyJpZCI6InVybjpncmFkZTpkcy1mb3VuZGF0aW9ucyIsInR5cGUiOiJOb3RlIiwiZWxtOm5vdGVMaXRlcmFsIjp7ImVuIjoiQSAoRXhjZWxsZW50KSJ9fSwiZWxtOmF3YXJkZWRCeSI6eyJpZCI6InVybjphd2FyZGluZzp1Yi1kaXBsb21hLTIwMjUiLCJ0eXBlIjoiQXdhcmRpbmdQcm9jZXNzIiwiZWxtOmF3YXJkaW5nQm9keSI6eyJpZCI6ImRpZDplYnNpOnpBQkM5ODc2NTQzMjFYWVoiLCJ0eXBlIjoiT3JnYW5pc2F0aW9uIiwiZWxtOmxlZ2FsTmFtZSI6eyJlbiI6IlVuaXZlcnNpdHkgb2YgQmFyY2Vsb25hIn0sImVsbTpsb2NhdGlvbiI6eyJpZCI6InVybjpsb2NhdGlvbjp1bml2ZXJzaXR5LWJhcmNlbG9uYSIsInR5cGUiOiJMb2NhdGlvbiIsImVsbTphZGRyZXNzIjpbeyJpZCI6InVybjphZGRyZXNzOnVuaXZlcnNpdHktYmFyY2Vsb25hIiwidHlwZSI6IkFkZHJlc3MiLCJlbG06Y291bnRyeUNvZGUiOnsiaWQiOiJodHRwOi8vcHVibGljYXRpb25zLmV1cm9wYS5ldS9yZXNvdXJjZS9hdXRob3JpdHkvY291bnRyeS9FU1AiLCJ0eXBlIjoiQ29uY2VwdCIsInNrb3M6bm90YXRpb24iOiJFU1AifX1dfX0sImVsbTphd2FyZGluZ0RhdGUiOiIyMDI1LTA3LTE1VDEwOjAwOjAwWiIsImVsbTpsb2NhdGlvbiI6eyJpZCI6InVybjpsb2NhdGlvbjp1bml2ZXJzaXR5LWJhcmNlbG9uYSIsInR5cGUiOiJMb2NhdGlvbiIsImVsbTphZGRyZXNzIjpbeyJpZCI6InVybjphZGRyZXNzOnVuaXZlcnNpdHktYmFyY2Vsb25hIiwidHlwZSI6IkFkZHJlc3MiLCJlbG06Y291bnRyeUNvZGUiOnsiaWQiOiJodHRwOi8vcHVibGljYXRpb25zLmV1cm9wYS5ldS9yZXNvdXJjZS9hdXRob3JpdHkvY291bnRyeS9FU1AiLCJ0eXBlIjoiQ29uY2VwdCIsInNrb3M6bm90YXRpb24iOiJFU1AifX1dfX19XSwiZWxtOmNyZWRpdFJlY2VpdmVkIjpbeyJpZCI6InVybjpjcmVkaXQtcmVjdjpkcy1mb3VuZGF0aW9ucyIsInR5cGUiOiJDcmVkaXRQb2ludCIsImVsbTpmcmFtZXdvcmsiOnsiaWQiOiJodHRwOi8vZGF0YS5ldXJvcGEuZXUvc25iL2VkdWNhdGlvbi1jcmVkaXQvNmZjZWM1YzQyNSIsInR5cGUiOiJDb25jZXB0Iiwic2tvczpub3RhdGlvbiI6IkVDVFMifSwiZWxtOnBvaW50IjoiMTAifV19LHsiaWQiOiJ1cm46Y2xhaW06bWwtYWR2YW5jZWQiLCJ0eXBlIjoiTGVhcm5pbmdBY2hpZXZlbWVudCIsImRjOnRpdGxlIjp7ImVuIjoiQWR2YW5jZWQgTWFjaGluZSBMZWFybmluZyJ9LCJlbG06YXdhcmRlZEJ5Ijp7ImlkIjoidXJuOmF3YXJkaW5nOnViLWRpcGxvbWEtMjAyNSIsInR5cGUiOiJBd2FyZGluZ1Byb2Nlc3MiLCJlbG06YXdhcmRpbmdCb2R5Ijp7ImlkIjoiZGlkOmVic2k6ekFCQzk4NzY1NDMyMVhZWiIsInR5cGUiOiJPcmdhbmlzYXRpb24iLCJlbG06bGVnYWxOYW1lIjp7ImVuIjoiVW5pdmVyc2l0eSBvZiBCYXJjZWxvbmEifSwiZWxtOmxvY2F0aW9uIjp7ImlkIjoidXJuOmxvY2F0aW9uOnVuaXZlcnNpdHktYmFyY2Vsb25hIiwidHlwZSI6IkxvY2F0aW9uIiwiZWxtOmFkZHJlc3MiOlt7ImlkIjoidXJuOmFkZHJlc3M6dW5pdmVyc2l0eS1iYXJjZWxvbmEiLCJ0eXBlIjoiQWRkcmVzcyIsImVsbTpjb3VudHJ5Q29kZSI6eyJpZCI6Imh0dHA6Ly9wdWJsaWNhdGlvbnMuZXVyb3BhLmV1L3Jlc291cmNlL2F1dGhvcml0eS9jb3VudHJ5L0VTUCIsInR5cGUiOiJDb25jZXB0Iiwic2tvczpub3RhdGlvbiI6IkVTUCJ9fV19fSwiZWxtOmF3YXJkaW5nRGF0ZSI6IjIwMjUtMDctMTVUMTA6MDA6MDBaIiwiZWxtOmxvY2F0aW9uIjp7ImlkIjoidXJuOmxvY2F0aW9uOnVuaXZlcnNpdHktYmFyY2Vsb25hIiwidHlwZSI6IkxvY2F0aW9uIiwiZWxtOmFkZHJlc3MiOlt7ImlkIjoidXJuOmFkZHJlc3M6dW5pdmVyc2l0eS1iYXJjZWxvbmEiLCJ0eXBlIjoiQWRkcmVzcyIsImVsbTpjb3VudHJ5Q29kZSI6eyJpZCI6Imh0dHA6Ly9wdWJsaWNhdGlvbnMuZXVyb3BhLmV1L3Jlc291cmNlL2F1dGhvcml0eS9jb3VudHJ5L0VTUCIsInR5cGUiOiJDb25jZXB0Iiwic2tvczpub3RhdGlvbiI6IkVTUCJ9fV19fSwiZWxtOnNwZWNpZmllZEJ5Ijp7ImlkIjoidXJuOnNwZWM6bWwtYWR2YW5jZWQiLCJ0eXBlIjoiTGVhcm5pbmdBY2hpZXZlbWVudFNwZWNpZmljYXRpb24iLCJkYzp0aXRsZSI6eyJlbiI6IkFkdmFuY2VkIE1hY2hpbmUgTGVhcm5pbmcgXHUyMDEzIFNwZWNpZmljYXRpb24ifSwiZWxtOmNyZWRpdFBvaW50IjpbeyJpZCI6InVybjpjcmVkaXQ6bWwtYWR2YW5jZWQiLCJ0eXBlIjoiQ3JlZGl0UG9pbnQiLCJlbG06ZnJhbWV3b3JrIjp7ImlkIjoiaHR0cDovL2RhdGEuZXVyb3BhLmV1L3NuYi9lZHVjYXRpb24tY3JlZGl0LzZmY2VjNWM0MjUiLCJ0eXBlIjoiQ29uY2VwdCIsInNrb3M6bm90YXRpb24iOiJFQ1RTIn0sImVsbTpwb2ludCI6IjE1In1dfSwiZWxtOnByb3ZlbkJ5IjpbeyJpZCI6InVybjphc3Nlc3NtZW50Om1sLWFkdmFuY2VkIiwidHlwZSI6IkxlYXJuaW5nQXNzZXNzbWVudCIsImRjOnRpdGxlIjp7ImVuIjoiQWR2YW5jZWQgTWFjaGluZSBMZWFybmluZyBcdTIwMTMgRmluYWwgRXhhbSJ9LCJlbG06Z3JhZGUiOnsiaWQiOiJ1cm46Z3JhZGU6bWwtYWR2YW5jZWQiLCJ0eXBlIjoiTm90ZSIsImVsbTpub3RlTGl0ZXJhbCI6eyJlbiI6IkIgKFZlcnkgR29vZCkifX0sImVsbTphd2FyZGVkQnkiOnsiaWQiOiJ1cm46YXdhcmRpbmc6dWItZGlwbG9tYS0yMDI1IiwidHlwZSI6IkF3YXJkaW5nUHJvY2VzcyIsImVsbTphd2FyZGluZ0JvZHkiOnsiaWQiOiJkaWQ6ZWJzaTp6QUJDOTg3NjU0MzIxWFlaIiwidHlwZSI6Ik9yZ2FuaXNhdGlvbiIsImVsbTpsZWdhbE5hbWUiOnsiZW4iOiJVbml2ZXJzaXR5IG9mIEJhcmNlbG9uYSJ9LCJlbG06bG9jYXRpb24iOnsiaWQiOiJ1cm46bG9jYXRpb246dW5pdmVyc2l0eS1iYXJjZWxvbmEiLCJ0eXBlIjoiTG9jYXRpb24iLCJlbG06YWRkcmVzcyI6W3siaWQiOiJ1cm46YWRkcmVzczp1bml2ZXJzaXR5LWJhcmNlbG9uYSIsInR5cGUiOiJBZGRyZXNzIiwiZWxtOmNvdW50cnlDb2RlIjp7ImlkIjoiaHR0cDovL3B1YmxpY2F0aW9ucy5ldXJvcGEuZXUvcmVzb3VyY2UvYXV0aG9yaXR5L2NvdW50cnkvRVNQIiwidHlwZSI6IkNvbmNlcHQiLCJza29zOm5vdGF0aW9uIjoiRVNQIn19XX19LCJlbG06YXdhcmRpbmdEYXRlIjoiMjAyNS0wNy0xNVQxMDowMDowMFoiLCJlbG06bG9jYXRpb24iOnsiaWQiOiJ1cm46bG9jYXRpb246dW5pdmVyc2l0eS1iYXJjZWxvbmEiLCJ0eXBlIjoiTG9jYXRpb24iLCJlbG06YWRkcmVzcyI6W3siaWQiOiJ1cm46YWRkcmVzczp1bml2ZXJzaXR5LWJhcmNlbG9uYSIsInR5cGUiOiJBZGRyZXNzIiwiZWxtOmNvdW50cnlDb2RlIjp7ImlkIjoiaHR0cDovL3B1YmxpY2F0aW9ucy5ldXJvcGEuZXUvcmVzb3VyY2UvYXV0aG9yaXR5L2NvdW50cnkvRVNQIiwidHlwZSI6IkNvbmNlcHQiLCJza29zOm5vdGF0aW9uIjoiRVNQIn19XX19fV0sImVsbTpjcmVkaXRSZWNlaXZlZCI6W3siaWQiOiJ1cm46Y3JlZGl0LXJlY3Y6bWwtYWR2YW5jZWQiLCJ0eXBlIjoiQ3JlZGl0UG9pbnQiLCJlbG06ZnJhbWV3b3JrIjp7ImlkIjoiaHR0cDovL2RhdGEuZXVyb3BhLmV1L3NuYi9lZHVjYXRpb24tY3JlZGl0LzZmY2VjNWM0MjUiLCJ0eXBlIjoiQ29uY2VwdCIsInNrb3M6bm90YXRpb24iOiJFQ1RTIn0sImVsbTpwb2ludCI6IjE1In1dfSx7ImlkIjoidXJuOmNsYWltOmRzLXRoZXNpcyIsInR5cGUiOiJMZWFybmluZ0FjaGlldmVtZW50IiwiZGM6dGl0bGUiOnsiZW4iOiJNU2MgRGlzc2VydGF0aW9uIn0sImVsbTphd2FyZGVkQnkiOnsiaWQiOiJ1cm46YXdhcmRpbmc6dWItZGlwbG9tYS0yMDI1IiwidHlwZSI6IkF3YXJkaW5nUHJvY2VzcyIsImVsbTphd2FyZGluZ0JvZHkiOnsiaWQiOiJkaWQ6ZWJzaTp6QUJDOTg3NjU0MzIxWFlaIiwidHlwZSI6Ik9yZ2FuaXNhdGlvbiIsImVsbTpsZWdhbE5hbWUiOnsiZW4iOiJVbml2ZXJzaXR5IG9mIEJhcmNlbG9uYSJ9LCJlbG06bG9jYXRpb24iOnsiaWQiOiJ1cm46bG9jYXRpb246dW5pdmVyc2l0eS1iYXJjZWxvbmEiLCJ0eXBlIjoiTG9jYXRpb24iLCJlbG06YWRkcmVzcyI6W3siaWQiOiJ1cm46YWRkcmVzczp1bml2ZXJzaXR5LWJhcmNlbG9uYSIsInR5cGUiOiJBZGRyZXNzIiwiZWxtOmNvdW50cnlDb2RlIjp7ImlkIjoiaHR0cDovL3B1YmxpY2F0aW9ucy5ldXJvcGEuZXUvcmVzb3VyY2UvYXV0aG9yaXR5L2NvdW50cnkvRVNQIiwidHlwZSI6IkNvbmNlcHQiLCJza29zOm5vdGF0aW9uIjoiRVNQIn19XX19LCJlbG06YXdhcmRpbmdEYXRlIjoiMjAyNS0wNy0xNVQxMDowMDowMFoiLCJlbG06bG9jYXRpb24iOnsiaWQiOiJ1cm46bG9jYXRpb246dW5pdmVyc2l0eS1iYXJjZWxvbmEiLCJ0eXBlIjoiTG9jYXRpb24iLCJlbG06YWRkcmVzcyI6W3siaWQiOiJ1cm46YWRkcmVzczp1bml2ZXJzaXR5LWJhcmNlbG9uYSIsInR5cGUiOiJBZGRyZXNzIiwiZWxtOmNvdW50cnlDb2RlIjp7ImlkIjoiaHR0cDovL3B1YmxpY2F0aW9ucy5ldXJvcGEuZXUvcmVzb3VyY2UvYXV0aG9yaXR5L2NvdW50cnkvRVNQIiwidHlwZSI6IkNvbmNlcHQiLCJza29zOm5vdGF0aW9uIjoiRVNQIn19XX19LCJlbG06c3BlY2lmaWVkQnkiOnsiaWQiOiJ1cm46c3BlYzpkcy10aGVzaXMiLCJ0eXBlIjoiTGVhcm5pbmdBY2hpZXZlbWVudFNwZWNpZmljYXRpb24iLCJkYzp0aXRsZSI6eyJlbiI6Ik1TYyBEaXNzZXJ0YXRpb24gXHUyMDEzIFNwZWNpZmljYXRpb24ifSwiZWxtOmNyZWRpdFBvaW50IjpbeyJpZCI6InVybjpjcmVkaXQ6ZHMtdGhlc2lzIiwidHlwZSI6IkNyZWRpdFBvaW50IiwiZWxtOmZyYW1ld29yayI6eyJpZCI6Imh0dHA6Ly9kYXRhLmV1cm9wYS5ldS9zbmIvZWR1Y2F0aW9uLWNyZWRpdC82ZmNlYzVjNDI1IiwidHlwZSI6IkNvbmNlcHQiLCJza29zOm5vdGF0aW9uIjoiRUNUUyJ9LCJlbG06cG9pbnQiOiIzMCJ9XX0sImVsbTpwcm92ZW5CeSI6W3siaWQiOiJ1cm46YXNzZXNzbWVudDpkcy10aGVzaXMiLCJ0eXBlIjoiTGVhcm5pbmdBc3Nlc3NtZW50IiwiZGM6dGl0bGUiOnsiZW4iOiJNU2MgRGlzc2VydGF0aW9uIFx1MjAxMyBGaW5hbCBFeGFtIn0sImVsbTpncmFkZSI6eyJpZCI6InVybjpncmFkZTpkcy10aGVzaXMiLCJ0eXBlIjoiTm90ZSIsImVsbTpub3RlTGl0ZXJhbCI6eyJlbiI6IkEgKEV4Y2VsbGVudCkifX0sImVsbTphd2FyZGVkQnkiOnsiaWQiOiJ1cm46YXdhcmRpbmc6dWItZGlwbG9tYS0yMDI1IiwidHlwZSI6IkF3YXJkaW5nUHJvY2VzcyIsImVsbTphd2FyZGluZ0JvZHkiOnsiaWQiOiJkaWQ6ZWJzaTp6QUJDOTg3NjU0MzIxWFlaIiwidHlwZSI6Ik9yZ2FuaXNhdGlvbiIsImVsbTpsZWdhbE5hbWUiOnsiZW4iOiJVbml2ZXJzaXR5IG9mIEJhcmNlbG9uYSJ9LCJlbG06bG9jYXRpb24iOnsiaWQiOiJ1cm46bG9jYXRpb246dW5pdmVyc2l0eS1iYXJjZWxvbmEiLCJ0eXBlIjoiTG9jYXRpb24iLCJlbG06YWRkcmVzcyI6W3siaWQiOiJ1cm46YWRkcmVzczp1bml2ZXJzaXR5LWJhcmNlbG9uYSIsInR5cGUiOiJBZGRyZXNzIiwiZWxtOmNvdW50cnlDb2RlIjp7ImlkIjoiaHR0cDovL3B1YmxpY2F0aW9ucy5ldXJvcGEuZXUvcmVzb3VyY2UvYXV0aG9yaXR5L2NvdW50cnkvRVNQIiwidHlwZSI6IkNvbmNlcHQiLCJza29zOm5vdGF0aW9uIjoiRVNQIn19XX19LCJlbG06YXdhcmRpbmdEYXRlIjoiMjAyNS0wNy0xNVQxMDowMDowMFoiLCJlbG06bG9jYXRpb24iOnsiaWQiOiJ1cm46bG9jYXRpb246dW5pdmVyc2l0eS1iYXJjZWxvbmEiLCJ0eXBlIjoiTG9jYXRpb24iLCJlbG06YWRkcmVzcyI6W3siaWQiOiJ1cm46YWRkcmVzczp1bml2ZXJzaXR5LWJhcmNlbG9uYSIsInR5cGUiOiJBZGRyZXNzIiwiZWxtOmNvdW50cnlDb2RlIjp7ImlkIjoiaHR0cDovL3B1YmxpY2F0aW9ucy5ldXJvcGEuZXUvcmVzb3VyY2UvYXV0aG9yaXR5L2NvdW50cnkvRVNQIiwidHlwZSI6IkNvbmNlcHQiLCJza29zOm5vdGF0aW9uIjoiRVNQIn19XX19fV0sImVsbTpjcmVkaXRSZWNlaXZlZCI6W3siaWQiOiJ1cm46Y3JlZGl0LXJlY3Y6ZHMtdGhlc2lzIiwidHlwZSI6IkNyZWRpdFBvaW50IiwiZWxtOmZyYW1ld29yayI6eyJpZCI6Imh0dHA6Ly9kYXRhLmV1cm9wYS5ldS9zbmIvZWR1Y2F0aW9uLWNyZWRpdC82ZmNlYzVjNDI1IiwidHlwZSI6IkNvbmNlcHQiLCJza29zOm5vdGF0aW9uIjoiRUNUUyJ9LCJlbG06cG9pbnQiOiIzMCJ9XX1dfSwiaXNzdWVkIjoiMjAyNS0wNy0xNVQxMDowMDowMFoiLCJ2YWxpZEZyb20iOiIyMDI1LTA3LTE1VDEwOjAwOjAwWiIsImNyZWRlbnRpYWxTY2hlbWEiOlt7ImlkIjoiaHR0cHM6Ly9hcGktcGlsb3QuZWJzaS5ldS90cnVzdGVkLXNjaGVtYXMtcmVnaXN0cnkvdjMvc2NoZW1hcy8weDU5NzIxNGNkZjAxMzc0YTJhZjg3Yzc2ZTNhZTRkZmNlMzFlNjRlMzdlNDgyNmU3YjE3ZjFlNWY4NGYzMjlhNTciLCJ0eXBlIjoiSnNvblNjaGVtYSJ9LHsiaWQiOiJodHRwczovL2FwaS1waWxvdC5lYnNpLmV1L3RydXN0ZWQtc2NoZW1hcy1yZWdpc3RyeS92My9zY2hlbWFzL1BFTkRJTkdfVFNSX1JFR0lTVFJBVElPTl9FVUhFRFMiLCJ0eXBlIjoiU2hhY2xWYWxpZGF0b3IyMDE3In1dLCJjcmVkZW50aWFsU3RhdHVzIjpbeyJpZCI6InVybjpzdGF0dXM6YzNkNGU1ZjYtc3VwcC00YWJjLWFkZWYtMjM0NTY3ODkwMTIzIiwidHlwZSI6IlN0YXR1c0xpc3QyMDIxRW50cnkiLCJzdGF0dXNQdXJwb3NlIjoicmV2b2NhdGlvbiIsInN0YXR1c0xpc3RJbmRleCI6IjAiLCJzdGF0dXNMaXN0Q3JlZGVudGlhbCI6Imh0dHBzOi8vYXBpLXBpbG90LmVic2kuZXUvc3RhdHVzLWxpc3QvMjAyNS8wNyJ9XSwiZWxtOmRpc3BsYXlQYXJhbWV0ZXIiOnsiaWQiOiJ1cm46ZGlzcGxheTpldWhlZHMtamFuZS0yMDI1IiwidHlwZSI6IkRpc3BsYXlQYXJhbWV0ZXIiLCJkYzp0aXRsZSI6eyJlbiI6IkRpcGxvbWEgU3VwcGxlbWVudCBcdTIwMTMgTVNjIERhdGEgU2NpZW5jZSJ9LCJkYzpkZXNjcmlwdGlvbiI6eyJlbiI6IkRldGFpbGVkIHJlY29yZCBvZiBtb2R1bGVzIGNvbXBsZXRlZCBieSBKYW5lIFNtaXRoIGFzIHBhcnQgb2YgdGhlIE1TYyBpbiBEYXRhIFNjaWVuY2UuIn0sImRjOmxhbmd1YWdlIjpbeyJpZCI6Imh0dHA6Ly9wdWJsaWNhdGlvbnMuZXVyb3BhLmV1L3Jlc291cmNlL2F1dGhvcml0eS9sYW5ndWFnZS9FTkciLCJ0eXBlIjoiQ29uY2VwdCIsInNrb3M6bm90YXRpb24iOiJFTkcifV0sImVsbTpwcmltYXJ5TGFuZ3VhZ2UiOnsiaWQiOiJodHRwOi8vcHVibGljYXRpb25zLmV1cm9wYS5ldS9yZXNvdXJjZS9hdXRob3JpdHkvbGFuZ3VhZ2UvRU5HIiwidHlwZSI6IkNvbmNlcHQiLCJza29zOm5vdGF0aW9uIjoiRU5HIn0sImVsbTppbmRpdmlkdWFsRGlzcGxheSI6W3siaWQiOiJ1cm46ZGlzcGxheTppbmRpdmlkdWFsLTEiLCJ0eXBlIjoiSW5kaXZpZHVhbERpc3BsYXkiLCJkYzpsYW5ndWFnZSI6eyJpZCI6Imh0dHA6Ly9wdWJsaWNhdGlvbnMuZXVyb3BhLmV1L3Jlc291cmNlL2F1dGhvcml0eS9sYW5ndWFnZS9FTkciLCJ0eXBlIjoiQ29uY2VwdCIsInNrb3M6bm90YXRpb24iOiJFTkcifSwiZWxtOmRpc3BsYXlEZXRhaWwiOlt7ImlkIjoidXJuOmRpc3BsYXk6ZGV0YWlsLTEiLCJ0eXBlIjoiRGlzcGxheURldGFpbCIsImVsbTppbWFnZSI6eyJpZCI6InVybjptZWRpYTpjZXJ0aWZpY2F0ZS1pbWFnZSIsInR5cGUiOiJNZWRpYU9iamVjdCIsImVsbTpjb250ZW50VHlwZSI6eyJpZCI6Imh0dHA6Ly9wdWJsaWNhdGlvbnMuZXVyb3BhLmV1L3Jlc291cmNlL2F1dGhvcml0eS9maWxlLXR5cGUvUE5HIiwidHlwZSI6IkNvbmNlcHQiLCJza29zOm5vdGF0aW9uIjoiUE5HIn0sImVsbTpjb250ZW50RW5jb2RpbmciOnsiaWQiOiJodHRwOi8vZGF0YS5ldXJvcGEuZXUvc25iL2VuY29kaW5nLzYxNDZjZGU3ZGQiLCJ0eXBlIjoiQ29uY2VwdCIsInNrb3M6bm90YXRpb24iOiJiYXNlNjQifSwiZWxtOmNvbnRlbnQiOiJpVkJPUncwS0dnb0FBQUFOU1VoRVVnQUFBQUVBQUFBQkNBWUFBQUFmRmNTSkFBQUFDa2xFUVZSNG5HTUFBUUFBQlFBQkRRb3R0QUFBQUFCSlJVNUVya0pnZ2c9PSJ9LCJlbG06cGFnZSI6MX1dfV19fQ",
+    "note": "Ephemeral key pair — for structure illustration only."
+  }
+}

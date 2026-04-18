@@ -1,0 +1,258 @@
+# =============================================================================
+# SHACL Shape: European Higher Education Diploma Supplement
+# Profile:     EuropeanHigherEducationDiplomaSupplement
+# Version:     1.0.0
+# Date:        2026-04-12
+# Base schema: https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/
+#              0x597214cdf01374a2af87c76e3ae4dfce31e64e37e4826e7b17f1e5f84f329a57
+# Licence:     CC BY 4.0
+#
+# Profile differentiators vs HE Microcredential:
+#   1. Type: EuropeanHigherEducationDiplomaSupplement
+#   2. wasDerivedFrom: MANDATORY – references the EUHED parent credential
+#   3. hasClaim: array of LearningAchievements (one per module/course completed)
+#   4. provenBy: present per achievement (mandatory – same as micro)
+#   5. specifiedBy: per achievement with ECTS (mandatory)
+#   6. No top-level entitlesTo: entitlements are in the parent diploma
+#
+# Shapes reused: IssuerShape, LegalIdentifierShape, EQFConceptShape,
+#                ECTSCreditShape, ECTSFrameworkShape, AwardingProcessShape,
+#                AwardingBodyShape, LearningAssessmentShape
+# =============================================================================
+
+@prefix sh:     <http://www.w3.org/ns/shacl#> .
+@prefix elm:    <http://data.europa.eu/snb/model/elm/> .
+@prefix cred:   <https://www.w3.org/2018/credentials#> .
+@prefix dc:     <http://purl.org/dc/terms/> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix rov:    <http://www.w3.org/ns/regorg#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix euheds: <https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/shacl/euheds#> .
+
+euheds:CredentialShape
+    a sh:NodeShape ;
+    sh:targetClass elm:EuropeanDigitalCredential ;
+    sh:name "European Higher Education Diploma Supplement – SHACL Profile"@en ;
+    sh:description "Level-3 constraints for EuropeanHigherEducationDiplomaSupplement under ELM 3.2 / W3C-VC 2.0 / eIDAS 2.0."@en ;
+
+    sh:property [
+        sh:path     rdf:type ;
+        sh:hasValue elm:EuropeanHigherEducationDiplomaSupplement ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "Credential must declare elm:EuropeanHigherEducationDiplomaSupplement."@en ;
+    ] ;
+    sh:property [
+        sh:path     cred:credentialSchema ;
+        sh:minCount 2 ;
+        sh:severity sh:Violation ;
+        sh:message  "credentialSchema must contain at least two entries: JsonSchema and ShaclValidator2017."@en ;
+    ] ;
+    # wasDerivedFrom MANDATORY – structural core of the Supplement
+    sh:property [
+        sh:path     elm:wasDerivedFrom ;
+        sh:minCount 1 ;
+        sh:node     euheds:DerivedFromShape ;
+        sh:severity sh:Violation ;
+        sh:message  "A Diploma Supplement must reference the parent diploma via elm:wasDerivedFrom."@en ;
+    ] ;
+    sh:property [
+        sh:path     cred:issuer ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:node     euheds:IssuerShape ;
+        sh:severity sh:Violation ;
+        sh:message  "Credential must have exactly one issuer."@en ;
+    ] ;
+    sh:property [
+        sh:path     cred:credentialSubject ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:node     euheds:CredentialSubjectShape ;
+        sh:severity sh:Violation ;
+        sh:message  "Credential must have exactly one credentialSubject."@en ;
+    ] .
+
+euheds:DerivedFromShape
+    a sh:NodeShape ;
+    sh:property [
+        sh:path     rdf:type ;
+        sh:hasValue elm:EuropeanHigherEducationDiploma ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "wasDerivedFrom target must be of type elm:EuropeanHigherEducationDiploma."@en ;
+    ] ;
+    sh:property [
+        sh:path     dc:identifier ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "The referenced parent diploma must carry a dc:identifier."@en ;
+    ] .
+
+euheds:IssuerShape
+    a sh:NodeShape ;
+    sh:property [
+        sh:path     elm:eidasLegalIdentifier ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:node     euheds:LegalIdentifierShape ;
+        sh:severity sh:Violation ;
+        sh:message  "Issuer must have exactly one eidasLegalIdentifier."@en ;
+    ] .
+
+euheds:LegalIdentifierShape
+    a sh:NodeShape ;
+    sh:property [
+        sh:path     skos:notation ;
+        sh:minCount 1 ; sh:datatype xsd:string ;
+        sh:severity sh:Violation ;
+        sh:message  "eidasLegalIdentifier must carry a skos:notation."@en ;
+    ] ;
+    sh:property [
+        sh:path     dc:spatial ;
+        sh:minCount 1 ; sh:nodeKind sh:IRI ;
+        sh:severity sh:Violation ;
+        sh:message  "Jurisdiction (dc:spatial) must be an IRI."@en ;
+    ] .
+
+euheds:CredentialSubjectShape
+    a sh:NodeShape ;
+    sh:property [
+        sh:path     elm:dateOfBirth ;
+        sh:minCount 1 ; sh:datatype xsd:dateTime ;
+        sh:severity sh:Violation ;
+        sh:message  "credentialSubject must include elm:dateOfBirth."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:hasClaim ;
+        sh:minCount 1 ;
+        sh:node     euheds:ModuleAchievementShape ;
+        sh:severity sh:Violation ;
+        sh:message  "Diploma Supplement must include at least one module/course achievement via elm:hasClaim."@en ;
+    ] .
+
+euheds:ModuleAchievementShape
+    a sh:NodeShape ;
+    sh:property [
+        sh:path     rdf:type ;
+        sh:hasValue elm:LearningAchievement ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "hasClaim node must be of type elm:LearningAchievement."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:specifiedBy ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:node     euheds:ModuleSpecShape ;
+        sh:severity sh:Violation ;
+        sh:message  "Each module achievement must reference a module specification via elm:specifiedBy."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:awardedBy ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:node     euheds:AwardingProcessShape ;
+        sh:severity sh:Violation ;
+        sh:message  "Module achievement must have exactly one elm:awardedBy."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:provenBy ;
+        sh:minCount 1 ;
+        sh:node     euheds:LearningAssessmentShape ;
+        sh:severity sh:Violation ;
+        sh:message  "Each module must include at least one assessment (elm:provenBy)."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:creditReceived ;
+        sh:node     euheds:ECTSCreditShape ;
+        sh:severity sh:Warning ;
+        sh:message  "It is recommended to declare ECTS credits received per module."@en ;
+    ] .
+
+euheds:ModuleSpecShape
+    a sh:NodeShape ;
+    sh:property [
+        sh:path     dc:title ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "Module specification must have a dc:title."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:creditPoint ;
+        sh:minCount 1 ;
+        sh:node     euheds:ECTSCreditShape ;
+        sh:severity sh:Warning ;
+        sh:message  "It is recommended to declare credit points on the module specification."@en ;
+    ] .
+
+euheds:ECTSCreditShape
+    a sh:NodeShape ;
+    sh:property [
+        sh:path     elm:framework ;
+        sh:minCount 1 ;
+        sh:node     euheds:ECTSFrameworkShape ;
+        sh:severity sh:Violation ;
+        sh:message  "Credit framework must be ECTS."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:point ;
+        sh:minCount 1 ; sh:datatype xsd:string ;
+        sh:severity sh:Violation ;
+        sh:message  "ECTS credit points must be a numeric string."@en ;
+    ] .
+
+euheds:ECTSFrameworkShape
+    a sh:NodeShape ;
+    sh:property [
+        sh:path     skos:notation ;
+        sh:hasValue "ECTS" ;
+        sh:severity sh:Violation ;
+        sh:message  "elm:framework notation must be exactly 'ECTS'."@en ;
+    ] .
+
+euheds:AwardingProcessShape
+    a sh:NodeShape ;
+    sh:property [
+        sh:path     elm:awardingBody ;
+        sh:minCount 1 ;
+        sh:node     euheds:AwardingBodyShape ;
+        sh:severity sh:Violation ;
+        sh:message  "AwardingProcess must include elm:awardingBody."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:awardingDate ;
+        sh:minCount 1 ; sh:datatype xsd:dateTime ;
+        sh:severity sh:Violation ;
+        sh:message  "AwardingProcess must include elm:awardingDate."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:location ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "AwardingProcess must include elm:location."@en ;
+    ] .
+
+euheds:AwardingBodyShape
+    a sh:NodeShape ;
+    sh:property [
+        sh:path     rov:legalName ;
+        sh:minCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message  "Recommended: include rov:legalName on awardingBody."@en ;
+    ] .
+
+euheds:LearningAssessmentShape
+    a sh:NodeShape ;
+    sh:property [
+        sh:path     elm:grade ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "LearningAssessment must include elm:grade."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:awardedBy ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "LearningAssessment must include elm:awardedBy."@en ;
+    ] .
+
+# =============================================================================
+# END OF FILE
+# =============================================================================

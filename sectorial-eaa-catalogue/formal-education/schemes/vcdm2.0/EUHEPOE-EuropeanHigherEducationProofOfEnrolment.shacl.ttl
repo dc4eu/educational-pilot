@@ -1,0 +1,389 @@
+# =============================================================================
+# SHACL Shape: European Higher Education Proof of Enrolment
+# Profile:     EuropeanHigherEducationProofOfEnrolment
+# Version:     1.0.0
+# Date:        2026-04-12
+# Base schema: https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/
+#              0x9e7bdb44d35fd008e491e82a22a35d74fa71ae2b9f7bf8e2e53db14ef8c11b09
+# EDC AP ref:  https://europa.eu/europass/elm-browser/documentation/rdf/ap/edc/
+#              documentation/edc-generic-no-cv.html
+# Licence:     CC BY 4.0
+#
+# Profile differentiators vs HE Microcredential:
+#   1. Credential type: EuropeanHigherEducationProofOfEnrolment (not Microcredential)
+#   2. hasClaim points to a LearningActivity (not LearningAchievement)
+#   3. participatedIn: mandatory (replaces provenBy — there is no assessment)
+#   4. No provenBy: a proof of enrolment certifies participation, not assessed outcomes
+#   5. No creditReceived constraint: enrolment does not imply credit award
+#   6. specifiedBy: optional (recommended) — the activity may reference a spec
+#   7. educationSubject: recommended (Warning), not mandatory (Violation)
+#      because enrolment documents may cover full programmes without subject detail
+#
+# Shapes reused without modification (same logic as he-micro profile):
+#   - IssuerShape + LegalIdentifierShape
+#   - EQFConceptShape
+#   - AwardingProcessShape + AwardingBodyShape
+#
+# Key structural difference:
+#   In HE Microcredential: credentialSubject → hasClaim → LearningAchievement
+#                           → provenBy (mandatory assessment)
+#   In Proof of Enrolment:  credentialSubject → hasClaim → LearningActivity
+#                           → participatedIn (mandatory enrolment link)
+#   elm:LearningActivity is used because enrolment certifies participation in a
+#   learning process, not the recognition of an achieved outcome.
+# =============================================================================
+
+@prefix sh:       <http://www.w3.org/ns/shacl#> .
+@prefix elm:      <http://data.europa.eu/snb/model/elm/> .
+@prefix cred:     <https://www.w3.org/2018/credentials#> .
+@prefix dc:       <http://purl.org/dc/terms/> .
+@prefix skos:     <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
+@prefix rov:      <http://www.w3.org/ns/regorg#> .
+@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix poe:      <https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/shacl/poe#> .
+
+
+# =============================================================================
+# ROOT SHAPE
+# Target: every elm:EuropeanDigitalCredential node in the graph.
+# =============================================================================
+
+poe:CredentialShape
+    a sh:NodeShape ;
+    sh:targetClass elm:EuropeanDigitalCredential ;
+    sh:name "European Higher Education Proof of Enrolment – SHACL Profile"@en ;
+    sh:description
+        "Level-3 semantic constraints for EuropeanHigherEducationProofOfEnrolment credentials issued under ELM 3.2 / W3C-VC 2.0 / eIDAS 2.0. Complements the JSON Schema registered at EBSI TSR 0x9e7bdb44d35fd008e491e82a22a35d74fa71ae2b9f7bf8e2e53db14ef8c11b09."@en ;
+
+    # -- Profile type (DIFFERENCE 1) ------------------------------------------
+    sh:property [
+        sh:path     rdf:type ;
+        sh:hasValue elm:EuropeanHigherEducationProofOfEnrolment ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message
+            "Credential must declare elm:EuropeanHigherEducationProofOfEnrolment."@en ;
+    ] ;
+
+    # -- Dual credentialSchema ------------------------------------------------
+    sh:property [
+        sh:path     cred:credentialSchema ;
+        sh:minCount 2 ;
+        sh:severity sh:Violation ;
+        sh:message
+            "credentialSchema must contain at least two entries: one of type JsonSchema and one of type ShaclValidator2017."@en ;
+    ] ;
+
+    # -- Issuer ---------------------------------------------------------------
+    sh:property [
+        sh:path     cred:issuer ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:node     poe:IssuerShape ;
+        sh:severity sh:Violation ;
+        sh:message  "Credential must have exactly one issuer conforming to IssuerShape."@en ;
+    ] ;
+
+    # -- Credential subject ---------------------------------------------------
+    sh:property [
+        sh:path     cred:credentialSubject ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:node     poe:CredentialSubjectShape ;
+        sh:severity sh:Violation ;
+        sh:message
+            "Credential must have exactly one credentialSubject conforming to CredentialSubjectShape."@en ;
+    ] .
+
+
+# =============================================================================
+# ISSUER SHAPE
+# Identical logic to HE Microcredential: eIDAS 2.0 eidasLegalIdentifier
+# with notation and spatial jurisdiction.
+# =============================================================================
+
+poe:IssuerShape
+    a sh:NodeShape ;
+    sh:property [
+        sh:path     elm:eidasLegalIdentifier ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:node     poe:LegalIdentifierShape ;
+        sh:severity sh:Violation ;
+        sh:message  "Issuer must have exactly one eidasLegalIdentifier."@en ;
+    ] .
+
+poe:LegalIdentifierShape
+    a sh:NodeShape ;
+    sh:property [
+        sh:path     skos:notation ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Violation ;
+        sh:message  "eidasLegalIdentifier must carry a skos:notation value."@en ;
+    ] ;
+    sh:property [
+        sh:path     dc:spatial ;
+        sh:minCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:severity sh:Violation ;
+        sh:message
+            "Jurisdiction (dc:spatial) must be an IRI, preferably from the EU Publications Office country vocabulary."@en ;
+    ] .
+
+
+# =============================================================================
+# CREDENTIAL SUBJECT SHAPE
+# Person with mandatory date of birth and at least one LearningActivity claim.
+# DIFFERENCE 2: hasClaim → LearningActivity (not LearningAchievement)
+# =============================================================================
+
+poe:CredentialSubjectShape
+    a sh:NodeShape ;
+    sh:property [
+        sh:path     elm:dateOfBirth ;
+        sh:minCount 1 ;
+        sh:datatype xsd:dateTime ;
+        sh:severity sh:Violation ;
+        sh:message  "credentialSubject must include elm:dateOfBirth."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:hasClaim ;
+        sh:minCount 1 ;
+        sh:node     poe:LearningActivityShape ;
+        sh:severity sh:Violation ;
+        sh:message
+            "credentialSubject must have at least one LearningActivity representing the enrolment."@en ;
+    ] .
+
+
+# =============================================================================
+# LEARNING ACTIVITY SHAPE
+# DIFFERENCE 2+3: The claim is a LearningActivity (not LearningAchievement).
+# participatedIn is MANDATORY — it links to the LearningOpportunity or
+# programme in which the student is enrolled.
+# No provenBy: proof of enrolment certifies participation, not assessed outcome.
+# No creditReceived: enrolment does not award credits.
+# =============================================================================
+
+poe:LearningActivityShape
+    a sh:NodeShape ;
+
+    # -- RDF type -------------------------------------------------------------
+    sh:property [
+        sh:path     rdf:type ;
+        sh:hasValue elm:LearningActivity ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "hasClaim node must be of type elm:LearningActivity."@en ;
+    ] ;
+
+    # -- awardedBy (mandatory in all EDC claims) ------------------------------
+    sh:property [
+        sh:path     elm:awardedBy ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:node     poe:AwardingProcessShape ;
+        sh:severity sh:Violation ;
+        sh:message  "LearningActivity must have exactly one elm:awardedBy."@en ;
+    ] ;
+
+    # -- participatedIn MANDATORY (DIFFERENCE 3) ------------------------------
+    # Links the LearningActivity to the LearningOpportunity or programme
+    # in which the student is enrolled. This is the semantic core of the
+    # Proof of Enrolment: without it, the credential does not identify what
+    # the student is enrolled in.
+    sh:property [
+        sh:path     elm:participatedIn ;
+        sh:minCount 1 ;
+        sh:node     poe:LearningOpportunityShape ;
+        sh:severity sh:Violation ;
+        sh:message
+            "A Proof of Enrolment must reference at least one LearningOpportunity via elm:participatedIn. This identifies the programme or course in which the student is enrolled."@en ;
+    ] ;
+
+    # -- specifiedBy (recommended) --------------------------------------------
+    # The activity may optionally reference a LearningActivitySpecification.
+    # Recommended but not mandatory because enrolment documents may describe
+    # the activity inline rather than via a separate specification object.
+    sh:property [
+        sh:path     elm:specifiedBy ;
+        sh:maxCount 1 ;
+        sh:node     poe:ActivitySpecificationShape ;
+        sh:severity sh:Warning ;
+        sh:message
+            "It is recommended to specify the learning activity via elm:specifiedBy (LearningActivitySpecification)."@en ;
+    ] .
+
+
+# =============================================================================
+# LEARNING OPPORTUNITY SHAPE
+# The target of participatedIn. Must identify the programme with at least
+# a title and a providing institution.
+# =============================================================================
+
+poe:LearningOpportunityShape
+    a sh:NodeShape ;
+
+    sh:property [
+        sh:path     rdf:type ;
+        sh:hasValue elm:LearningOpportunity ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message
+            "The elm:participatedIn target must be of type elm:LearningOpportunity."@en ;
+    ] ;
+
+    # -- title of the programme -----------------------------------------------
+    sh:property [
+        sh:path     dc:title ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message
+            "LearningOpportunity must have a dc:title identifying the programme."@en ;
+    ] ;
+
+    # -- providing institution ------------------------------------------------
+    sh:property [
+        sh:path     elm:providedBy ;
+        sh:minCount 1 ;
+        sh:node     poe:AwardingBodyShape ;
+        sh:severity sh:Violation ;
+        sh:message
+            "LearningOpportunity must identify the providing institution via elm:providedBy."@en ;
+    ] ;
+
+    # -- academic term / period of enrolment (recommended) --------------------
+    sh:property [
+        sh:path     elm:temporal ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message
+            "It is recommended to indicate the temporal period of enrolment (elm:temporal) on the LearningOpportunity."@en ;
+    ] ;
+
+    # -- schedule / mode (recommended) ----------------------------------------
+    sh:property [
+        sh:path     elm:mode ;
+        sh:severity sh:Warning ;
+        sh:message
+            "It is recommended to indicate the learning mode (elm:mode) on the LearningOpportunity."@en ;
+    ] ;
+
+    # -- EQF level of the programme (recommended) -----------------------------
+    sh:property [
+        sh:path     elm:EQFLevel ;
+        sh:maxCount 1 ;
+        sh:node     poe:EQFConceptShape ;
+        sh:severity sh:Warning ;
+        sh:message
+            "It is recommended to declare the EQF level of the programme (elm:EQFLevel) on the LearningOpportunity."@en ;
+    ] .
+
+
+# =============================================================================
+# ACTIVITY SPECIFICATION SHAPE
+# Optional target of elm:specifiedBy on the LearningActivity.
+# educationSubject is recommended (Warning) rather than mandatory (Violation)
+# because enrolment may cover full programmes not requiring subject granularity.
+# =============================================================================
+
+poe:ActivitySpecificationShape
+    a sh:NodeShape ;
+
+    sh:property [
+        sh:path     dc:title ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message
+            "LearningActivitySpecification must have a dc:title."@en ;
+    ] ;
+
+    # -- educationSubject: recommended, not mandatory (DIFFERENCE 4) ----------
+    sh:property [
+        sh:path     elm:educationSubject ;
+        sh:severity sh:Warning ;
+        sh:message
+            "It is recommended to include elm:educationSubject on the LearningActivitySpecification."@en ;
+    ] ;
+
+    # -- learning mode --------------------------------------------------------
+    sh:property [
+        sh:path     elm:mode ;
+        sh:severity sh:Warning ;
+        sh:message
+            "It is recommended to indicate the learning mode (elm:mode) on the LearningActivitySpecification."@en ;
+    ] .
+
+
+# =============================================================================
+# EQF CONCEPT SHAPE
+# Identical to HE Microcredential.
+# =============================================================================
+
+poe:EQFConceptShape
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:pattern  "^http://data\\.europa\\.eu/snb/eqf/" ;
+    sh:severity sh:Warning ;
+    sh:message
+        "EQF level should reference the EU Publications Office EQF vocabulary (http://data.europa.eu/snb/eqf/)."@en ;
+    sh:property [
+        sh:path     skos:notation ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:pattern  "^[1-8]$" ;
+        sh:severity sh:Violation ;
+        sh:message  "EQF level notation must be a single digit between 1 and 8."@en ;
+    ] .
+
+
+# =============================================================================
+# AWARDING PROCESS SHAPE
+# Identical logic to HE Microcredential.
+# awardingDate and location remain mandatory (sh:Violation) because the
+# institution and date of the enrolment certification are always known.
+# =============================================================================
+
+poe:AwardingProcessShape
+    a sh:NodeShape ;
+    sh:property [
+        sh:path     elm:awardingBody ;
+        sh:minCount 1 ;
+        sh:node     poe:AwardingBodyShape ;
+        sh:severity sh:Violation ;
+        sh:message  "AwardingProcess must include at least one elm:awardingBody."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:awardingDate ;
+        sh:minCount 1 ;
+        sh:datatype xsd:dateTime ;
+        sh:severity sh:Violation ;
+        sh:message  "AwardingProcess must include elm:awardingDate."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:location ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "AwardingProcess must include elm:location."@en ;
+    ] .
+
+poe:AwardingBodyShape
+    a sh:NodeShape ;
+    sh:property [
+        sh:path     rov:legalName ;
+        sh:minCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message
+            "It is recommended to include the legal name of the awarding body (rov:legalName)."@en ;
+    ] .
+
+# =============================================================================
+# END OF FILE
+# To register in EBSI TSR:
+#   POST https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas
+#   Method: insertSchema (JSON-RPC)
+#   Content: this file as a UTF-8 string
+#   Auth: Bearer JWT with scope tsr_write
+# =============================================================================

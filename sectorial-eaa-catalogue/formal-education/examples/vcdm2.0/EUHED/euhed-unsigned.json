@@ -1,0 +1,268 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "http://data.europa.eu/snb/model/context/edc-ap"
+  ],
+  "id": "urn:uuid:7b8c9d0e-f12a-43b5-9c7d-558766221112",
+  "type": [
+    "VerifiableCredential",
+    "VerifiableAttestation",
+    "EuropeanDigitalCredential",
+    "EuropeanHigherEducationDiploma"
+  ],
+  "identifier": [
+    {
+      "id": "urn:identifier:123457789-DIP-2025",
+      "type": "Identifier",
+      "notation": "123457789-DIP-2025",
+      "schemeAgency": {
+        "en": "University of Barcelona"
+      },
+      "dateIssued": "2025-07-01T09:00:00Z"
+    }
+  ],
+  "credentialProfiles": [
+    {
+      "id": "http://data.europa.eu/snb/credential/dd0f1fe2f7",
+      "type": "Concept",
+      "skos:prefLabel": {
+        "en": "Higher Education Diploma"
+      }
+    }
+  ],
+  "issuer": {
+    "id": "did:ebsi:zABC987654321XYZ",
+    "type": "Organisation",
+    "elm:legalName": {
+      "en": "University of Barcelona"
+    },
+    "elm:eidasLegalIdentifier": {
+      "type": "LegalIdentifier",
+      "skos:notation": "ES-A-08015510",
+      "dc:spatial": {
+        "id": "http://publications.europa.eu/resource/authority/country/ESP"
+      }
+    },
+    "elm:location": {
+      "id": "urn:location:university-barcelona",
+      "type": "Location",
+      "elm:address": [
+        {
+          "id": "urn:address:university-barcelona",
+          "type": "Address",
+          "elm:countryCode": {
+            "id": "http://publications.europa.eu/resource/authority/country/ESP",
+            "type": "Concept",
+            "skos:notation": "ESP"
+          },
+          "elm:fullAddress": {
+            "id": "urn:note:address-ub",
+            "type": "Note",
+            "elm:noteLiteral": {
+              "en": "Gran Via de les Corts Catalanes, 585, 08007 Barcelona, Spain"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "credentialSubject": {
+    "id": "did:ebsi:123456789",
+    "type": "Person",
+    "elm:dateOfBirth": "1995-05-15T00:00:00Z",
+    "elm:familyName": {
+      "en": "Doe"
+    },
+    "elm:givenName": {
+      "en": "John"
+    },
+    "elm:hasClaim": [
+      {
+        "id": "urn:claim:digital-competences-diploma",
+        "type": "LearningAchievement",
+        "dc:title": {
+          "en": "Bachelor's Degree in Digital Competences",
+          "es": "Grado en Competencias Digitales"
+        },
+        "dc:description": {
+          "en": "Completion of a higher education bachelor's degree programme in digital competences."
+        },
+        "elm:awardedBy": {
+          "id": "urn:awarding:university-barcelona-diploma",
+          "type": "AwardingProcess",
+          "elm:awardingBody": {
+            "id": "did:ebsi:zABC987654321XYZ",
+            "type": "Organisation",
+            "elm:legalName": {
+              "en": "University of Barcelona"
+            },
+            "elm:location": {
+              "id": "urn:location:university-barcelona",
+              "type": "Location",
+              "elm:address": [
+                {
+                  "id": "urn:address:university-barcelona",
+                  "type": "Address",
+                  "elm:countryCode": {
+                    "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                    "type": "Concept",
+                    "skos:notation": "ESP"
+                  }
+                }
+              ]
+            }
+          },
+          "elm:awardingDate": "2025-07-01T09:00:00Z",
+          "elm:location": {
+            "id": "urn:location:university-barcelona",
+            "type": "Location",
+            "elm:address": [
+              {
+                "id": "urn:address:university-barcelona",
+                "type": "Address",
+                "elm:countryCode": {
+                  "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                  "type": "Concept",
+                  "skos:notation": "ESP"
+                }
+              }
+            ]
+          }
+        },
+        "elm:specifiedBy": {
+          "id": "urn:spec:digital-competences-diploma",
+          "type": "Qualification",
+          "dc:title": {
+            "en": "Qualification in Digital Competences",
+            "es": "Cualificación en Competencias Digitales"
+          },
+          "elm:EQFLevel": {
+            "id": "http://data.europa.eu/snb/eqf/6",
+            "type": "Concept",
+            "skos:notation": "6",
+            "skos:prefLabel": {
+              "en": "EQF Level 6"
+            },
+            "skos:inScheme": {
+              "id": "http://data.europa.eu/snb/eqf/25831c2",
+              "type": "ConceptScheme"
+            }
+          },
+          "elm:educationSubject": [
+            {
+              "id": "http://data.europa.eu/snb/isced-f/0610",
+              "type": "Concept",
+              "skos:notation": "0610",
+              "skos:prefLabel": {
+                "en": "ICT not further defined"
+              }
+            }
+          ],
+          "elm:additionalNote": [
+            {
+              "id": "urn:note:diploma-details",
+              "type": "Note",
+              "elm:noteLiteral": {
+                "en": "180 ECTS credits, 3-year programme"
+              }
+            }
+          ]
+        },
+        "elm:entitlesTo": [
+          {
+            "id": "urn:entitlement:master-eligibility",
+            "type": "LearningEntitlement",
+            "dc:title": {
+              "en": "Eligibility for Master's Programme"
+            },
+            "elm:awardedBy": {
+              "id": "urn:awarding:master-eligibility",
+              "type": "AwardingProcess",
+              "elm:awardingBody": {
+                "id": "did:ebsi:zABC987654321XYZ",
+                "type": "Organisation",
+                "elm:legalName": {
+                  "en": "University of Barcelona"
+                }
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "issued": "2025-07-01T09:00:00Z",
+  "validFrom": "2025-07-01T09:00:00Z",
+  "credentialSchema": [
+    {
+      "id": "https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/0x7663df08b9a50f226e185efb7ec08f3d69f4a95e653ebffd3137b3eb6923dda8",
+      "type": "JsonSchema"
+    },
+    {
+      "id": "https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/PENDING_TSR_REGISTRATION_HE_DIPLOMA",
+      "type": "ShaclValidator2017"
+    }
+  ],
+  "credentialStatus": [
+    {
+      "id": "urn:status:7b8c9d0e-f12a-43b5-9c7d-558766221112",
+      "type": "StatusList2021Entry",
+      "statusPurpose": "revocation",
+      "statusListIndex": "1",
+      "statusListCredential": "https://api-pilot.ebsi.eu/status-list/2025/07"
+    }
+  ],
+  "elm:displayParameter": {
+    "id": "urn:display:john-doe-diploma",
+    "type": "DisplayParameter",
+    "dc:title": {
+      "en": "Bachelor's Degree in Digital Competences",
+      "es": "Grado en Competencias Digitales"
+    },
+    "dc:language": [
+      {
+        "id": "http://publications.europa.eu/resource/authority/language/ENG",
+        "type": "Concept",
+        "skos:notation": "ENG"
+      }
+    ],
+    "elm:primaryLanguage": {
+      "id": "http://publications.europa.eu/resource/authority/language/ENG",
+      "type": "Concept",
+      "skos:notation": "ENG"
+    },
+    "elm:individualDisplay": [
+      {
+        "id": "urn:display:individual-1",
+        "type": "IndividualDisplay",
+        "dc:language": {
+          "id": "http://publications.europa.eu/resource/authority/language/ENG",
+          "type": "Concept",
+          "skos:notation": "ENG"
+        },
+        "elm:displayDetail": [
+          {
+            "id": "urn:display:detail-1",
+            "type": "DisplayDetail",
+            "elm:image": {
+              "id": "urn:media:certificate-image-diploma",
+              "type": "MediaObject",
+              "elm:contentType": {
+                "id": "http://publications.europa.eu/resource/authority/file-type/PNG",
+                "type": "Concept",
+                "skos:notation": "PNG"
+              },
+              "elm:contentEncoding": {
+                "id": "http://data.europa.eu/snb/encoding/6146cde7dd",
+                "type": "Concept",
+                "skos:notation": "base64"
+              },
+              "elm:content": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAACklEQVR4nGMAAQAABQABDQottAAAAABJRU5ErkJggg=="
+            },
+            "elm:page": 1
+          }
+        ]
+      }
+    ]
+  }
+}

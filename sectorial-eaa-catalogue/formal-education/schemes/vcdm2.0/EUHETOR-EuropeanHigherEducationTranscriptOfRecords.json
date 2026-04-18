@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "European Higher Education Transcript of Records (dual-schema v2)",
+  "description": "Extends the original JSON Schema (0x1e4611…) with a mandatory dual credentialSchema: JsonSchema + ShaclValidator2017.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/0x1e4611fdfba89c9f2f4c3b5d7e8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a"
+    },
+    {
+      "type": "object",
+      "required": [
+        "credentialSchema"
+      ],
+      "properties": {
+        "credentialSchema": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "type"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "format": "uri"
+              },
+              "type": {
+                "type": "string",
+                "enum": [
+                  "JsonSchema",
+                  "ShaclValidator2017"
+                ]
+              }
+            },
+            "additionalProperties": false
+          },
+          "contains": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "const": "https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/0x1e4611fdfba89c9f2f4c3b5d7e8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a"
+              },
+              "type": {
+                "const": "JsonSchema"
+              }
+            },
+            "required": [
+              "id",
+              "type"
+            ]
+          },
+          "allOf": [
+            {
+              "contains": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "const": "https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/PENDING_TSR_REGISTRATION_EUHETOR"
+                  },
+                  "type": {
+                    "const": "ShaclValidator2017"
+                  }
+                },
+                "required": [
+                  "id",
+                  "type"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

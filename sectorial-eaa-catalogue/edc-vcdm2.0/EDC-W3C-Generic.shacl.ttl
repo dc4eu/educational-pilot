@@ -1,0 +1,1457 @@
+# =============================================================================
+# SHACL Shape: European Digital Credential – Generic Application Profile
+# Profile:     EuropeanDigitalCredential (EDC generic, no controlled vocabularies)
+# Version:     1.0.0
+# Date:        2026-03-01
+# Source:      https://europa.eu/europass/elm-browser/documentation/rdf/ap/edc/
+#              documentation/edc-generic-no-cv.html  (v1.1.0, 2023-06-05)
+# Base schema: https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/
+#              0xe9d256a96313a24d5884d56f0835047febc0ebf46fbdd20c906f49057a1e0f02
+# Licence:     CC BY 4.0
+#
+# Purpose:
+#   This file translates the human-readable EDC Application Profile SHACL
+#   documentation into machine-executable Turtle shapes, aligned with
+#   W3C-VC Data Model 2.0 and eIDAS 2.0.
+#
+#   It covers all classes defined in the EDC AP:
+#     Accreditation, Address, Agent, Amount, AwardingOpportunity,
+#     AwardingProcess, Claim, ClaimTypeNode, Concept, ConceptScheme,
+#     ContactPoint, CreditPoint, DisplayDetail, DisplayParameter,
+#     EuropeanDigitalCredential, EuropeanDigitalPresentation, Evidence,
+#     Geometry, GradingScheme, Grant, Group, Identifier, IndividualDisplay,
+#     IssuerNode, LearningAchievement, LearningAchievementSpecification,
+#     LearningActivity, LearningActivitySpecification, LearningAssessment,
+#     LearningAssessmentSpecification, LearningEntitlement,
+#     LearningEntitlementSpecification, LearningOpportunity, LearningOutcome,
+#     LegalIdentifier, Location, Mailbox, MediaObject, Note, Organisation,
+#     PeriodOfTime, Person, Phone, PriceDetail, Qualification,
+#     ResultCategory, ResultDistribution, ShaclValidator2017,
+#     ShortenedGrading, Specification, VerifiableCredential,
+#     VerifiablePresentation, VerificationCheck, WebResource.
+#
+#   Profile-specific constraints (ECTS/ECVET, provenBy mandatory, etc.)
+#   are intentionally absent. They belong to the profile-level shapes
+#   (he-micro, vet-micro, he-diploma, upper-sec).
+#
+# Relationship to profile shapes:
+#   Profile shapes extend this generic shape via sh:node references.
+#   This generic shape is the level-2 layer; profile shapes are level-3.
+# =============================================================================
+
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix elm:   <http://data.europa.eu/snb/model/elm/> .
+@prefix cred:  <https://www.w3.org/2018/credentials#> .
+@prefix dc:    <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix adms:  <http://www.w3.org/ns/adms#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix locn:  <http://www.w3.org/ns/locn#> .
+@prefix org:   <http://www.w3.org/ns/org#> .
+@prefix rov:   <http://www.w3.org/ns/regorg#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix cpv:   <http://www.w3.org/ns/person#> .
+@prefix clv:   <http://data.europa.eu/m8g/> .
+@prefix edc:   <https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/shacl/edc-generic#> .
+
+
+# =============================================================================
+# EUROPEAN DIGITAL CREDENTIAL
+# Applies to: elm:EuropeanDigitalCredential
+# =============================================================================
+
+edc:EuropeanDigitalCredentialShape
+    a sh:NodeShape ;
+    sh:targetClass elm:EuropeanDigitalCredential ;
+    sh:name "European Digital Credential"@en ;
+
+    sh:property [
+        sh:path     elm:credentialProfiles ;
+        sh:minCount 1 ;
+        sh:node     edc:ConceptShape ;
+        sh:severity sh:Violation ;
+        sh:message  "elm:credentialProfiles is mandatory (1..*) and must be a Concept."@en ;
+    ] ;
+    sh:property [
+        sh:path     cred:credentialSchema ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "cred:credentialSchema is mandatory (1..*). At least one ShaclValidator2017 entry is required."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:displayParameter ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:node     edc:DisplayParameterShape ;
+        sh:severity sh:Violation ;
+        sh:message  "elm:displayParameter is mandatory (1..1)."@en ;
+    ] ;
+    sh:property [
+        sh:path     cred:issuer ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:node     edc:IssuerNodeShape ;
+        sh:severity sh:Violation ;
+        sh:message  "cred:issuer is mandatory (1..1) and must conform to IssuerNodeShape."@en ;
+    ] ;
+    sh:property [
+        sh:path     cred:credentialSubject ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "cred:credentialSubject is mandatory (1..1)."@en ;
+    ] ;
+    sh:property [
+        sh:path     cred:issued ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:dateTime ;
+        sh:severity sh:Violation ;
+        sh:message  "cred:issued is mandatory (1..1) and must be xsd:dateTime."@en ;
+    ] ;
+    sh:property [
+        sh:path     cred:validFrom ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:dateTime ;
+        sh:severity sh:Violation ;
+        sh:message  "cred:validFrom is mandatory (1..1) and must be xsd:dateTime."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:attachment ;
+        sh:node     edc:MediaObjectShape ;
+        sh:severity sh:Warning ;
+    ] ;
+    sh:property [
+        sh:path     cred:credentialStatus ;
+        sh:severity sh:Warning ;
+    ] ;
+    sh:property [
+        sh:path     cred:validUntil ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:dateTime ;
+        sh:severity sh:Warning ;
+    ] ;
+    sh:property [
+        sh:path     adms:identifier ;
+        sh:severity sh:Warning ;
+    ] .
+
+
+# =============================================================================
+# ISSUER NODE
+# Applies to: elm:IssuerNode (shape-only, no class target)
+# An issuer must have exactly one eidasLegalIdentifier.
+# =============================================================================
+
+edc:IssuerNodeShape
+    a sh:NodeShape ;
+    sh:name "Issuer Node"@en ;
+    sh:property [
+        sh:path     elm:eidasLegalIdentifier ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:node     edc:LegalIdentifierShape ;
+        sh:severity sh:Violation ;
+        sh:message  "elm:eidasLegalIdentifier is mandatory (1..1) on the issuer."@en ;
+    ] .
+
+
+# =============================================================================
+# VERIFIABLE CREDENTIAL
+# Applies to: cred:VerifiableCredential
+# =============================================================================
+
+edc:VerifiableCredentialShape
+    a sh:NodeShape ;
+    sh:targetClass cred:VerifiableCredential ;
+    sh:name "Verifiable Credential"@en ;
+
+    sh:property [
+        sh:path     cred:credentialSchema ;
+        sh:minCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:severity sh:Violation ;
+        sh:message  "cred:credentialSchema is mandatory (1..*) and must be an IRI."@en ;
+    ] ;
+    sh:property [
+        sh:path     cred:credentialSubject ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:property [
+        sh:path     cred:issuer ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:node     edc:IssuerNodeShape ;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:property [
+        sh:path     cred:issued ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:dateTime ;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:property [
+        sh:path     cred:validFrom ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:dateTime ;
+        sh:severity sh:Violation ;
+    ] .
+
+
+# =============================================================================
+# PERSON
+# Applies to: elm:Person
+# =============================================================================
+
+edc:PersonShape
+    a sh:NodeShape ;
+    sh:targetClass elm:Person ;
+    sh:name "Person"@en ;
+
+    sh:property [
+        sh:path     elm:hasClaim ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "elm:hasClaim is mandatory (1..*) on Person."@en ;
+    ] ;
+    sh:property [
+        sh:path     foaf:familyName ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+    ] ;
+    sh:property [
+        sh:path     foaf:givenName ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+    ] ;
+    sh:property [
+        sh:path     elm:dateOfBirth ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:dateTime ;
+        sh:severity sh:Warning ;
+    ] ;
+    sh:property [
+        sh:path     elm:nationalId ;
+        sh:maxCount 1 ;
+        sh:node     edc:LegalIdentifierShape ;
+        sh:severity sh:Warning ;
+    ] ;
+    sh:property [
+        sh:path     elm:location ;
+        sh:maxCount 1 ;
+        sh:node     edc:LocationShape ;
+        sh:severity sh:Warning ;
+    ] .
+
+
+# =============================================================================
+# ORGANISATION
+# Applies to: elm:Organisation
+# =============================================================================
+
+edc:OrganisationShape
+    a sh:NodeShape ;
+    sh:targetClass elm:Organisation ;
+    sh:name "Organisation"@en ;
+
+    sh:property [
+        sh:path     rov:legalName ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "rov:legalName is mandatory (1..*) on Organisation."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:location ;
+        sh:minCount 1 ;
+        sh:node     edc:LocationShape ;
+        sh:severity sh:Violation ;
+        sh:message  "elm:location is mandatory (1..*) on Organisation."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:eidasLegalIdentifier ;
+        sh:maxCount 1 ;
+        sh:node     edc:LegalIdentifierShape ;
+        sh:severity sh:Warning ;
+        sh:message  "elm:eidasLegalIdentifier is recommended (0..1) on Organisation."@en ;
+    ] ;
+    sh:property [
+        sh:path     rov:registration ;
+        sh:maxCount 1 ;
+        sh:node     edc:LegalIdentifierShape ;
+        sh:severity sh:Warning ;
+    ] .
+
+
+# =============================================================================
+# CLAIM
+# Applies to: elm:Claim
+# Common properties for all claim subclasses.
+# =============================================================================
+
+edc:ClaimShape
+    a sh:NodeShape ;
+    sh:targetClass elm:Claim ;
+    sh:name "Claim"@en ;
+
+    sh:property [
+        sh:path     dc:title ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "dc:title is mandatory (1..*) on Claim."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:awardedBy ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:node     edc:AwardingProcessShape ;
+        sh:severity sh:Violation ;
+        sh:message  "elm:awardedBy is mandatory (1..1) on Claim."@en ;
+    ] .
+
+
+# =============================================================================
+# LEARNING ACHIEVEMENT
+# Applies to: elm:LearningAchievement
+# =============================================================================
+
+edc:LearningAchievementShape
+    a sh:NodeShape ;
+    sh:targetClass elm:LearningAchievement ;
+    sh:name "Learning Achievement"@en ;
+
+    sh:property [
+        sh:path     dc:title ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "dc:title is mandatory (1..*) on LearningAchievement."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:awardedBy ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:node     edc:AwardingProcessShape ;
+        sh:severity sh:Violation ;
+        sh:message  "elm:awardedBy is mandatory (1..1) on LearningAchievement."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:specifiedBy ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+    ] ;
+    sh:property [
+        sh:path     elm:provenBy ;
+        sh:node     edc:LearningAssessmentShape ;
+        sh:severity sh:Warning ;
+    ] ;
+    sh:property [
+        sh:path     elm:creditReceived ;
+        sh:node     edc:CreditPointShape ;
+        sh:severity sh:Warning ;
+    ] ;
+    sh:property [
+        sh:path     elm:entitlesTo ;
+        sh:node     edc:LearningEntitlementShape ;
+        sh:severity sh:Warning ;
+    ] .
+
+
+# =============================================================================
+# LEARNING ACTIVITY
+# Applies to: elm:LearningActivity
+# =============================================================================
+
+edc:LearningActivityShape
+    a sh:NodeShape ;
+    sh:targetClass elm:LearningActivity ;
+    sh:name "Learning Activity"@en ;
+
+    sh:property [
+        sh:path     dc:title ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "dc:title is mandatory (1..*) on LearningActivity."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:awardedBy ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:node     edc:AwardingProcessShape ;
+        sh:severity sh:Violation ;
+        sh:message  "elm:awardedBy is mandatory (1..1) on LearningActivity."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:levelOfCompletion ;
+        sh:datatype xsd:positiveInteger ;
+        sh:maxInclusive 100 ;
+        sh:minInclusive 0 ;
+        sh:severity sh:Warning ;
+    ] .
+
+
+# =============================================================================
+# LEARNING ASSESSMENT
+# Applies to: elm:LearningAssessment
+# =============================================================================
+
+edc:LearningAssessmentShape
+    a sh:NodeShape ;
+    sh:targetClass elm:LearningAssessment ;
+    sh:name "Learning Assessment"@en ;
+
+    sh:property [
+        sh:path     dc:title ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "dc:title is mandatory (1..*) on LearningAssessment."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:awardedBy ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:node     edc:AwardingProcessShape ;
+        sh:severity sh:Violation ;
+        sh:message  "elm:awardedBy is mandatory (1..1) on LearningAssessment."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:grade ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:node     edc:NoteShape ;
+        sh:severity sh:Violation ;
+        sh:message  "elm:grade is mandatory (1..1) on LearningAssessment."@en ;
+    ] .
+
+
+# =============================================================================
+# LEARNING ENTITLEMENT
+# Applies to: elm:LearningEntitlement
+# =============================================================================
+
+edc:LearningEntitlementShape
+    a sh:NodeShape ;
+    sh:targetClass elm:LearningEntitlement ;
+    sh:name "Learning Entitlement"@en ;
+
+    sh:property [
+        sh:path     dc:title ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "dc:title is mandatory (1..*) on LearningEntitlement."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:awardedBy ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:node     edc:AwardingProcessShape ;
+        sh:severity sh:Violation ;
+        sh:message  "elm:awardedBy is mandatory (1..1) on LearningEntitlement."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:expiryDate ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:dateTime ;
+        sh:severity sh:Warning ;
+    ] .
+
+
+# =============================================================================
+# LEARNING ACHIEVEMENT SPECIFICATION
+# Applies to: elm:LearningAchievementSpecification
+# =============================================================================
+
+edc:LearningAchievementSpecificationShape
+    a sh:NodeShape ;
+    sh:targetClass elm:LearningAchievementSpecification ;
+    sh:name "Learning Achievement Specification"@en ;
+
+    sh:property [
+        sh:path     dc:title ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "dc:title is mandatory (1..*) on LearningAchievementSpecification."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:creditPoint ;
+        sh:node     edc:CreditPointShape ;
+        sh:severity sh:Warning ;
+    ] ;
+    sh:property [
+        sh:path     elm:volumeOfLearning ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:duration ;
+        sh:severity sh:Warning ;
+    ] ;
+    sh:property [
+        sh:path     elm:maximumDuration ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:duration ;
+        sh:severity sh:Warning ;
+    ] .
+
+
+# =============================================================================
+# LEARNING ACTIVITY SPECIFICATION
+# Applies to: elm:LearningActivitySpecification
+# =============================================================================
+
+edc:LearningActivitySpecificationShape
+    a sh:NodeShape ;
+    sh:targetClass elm:LearningActivitySpecification ;
+    sh:name "Learning Activity Specification"@en ;
+
+    sh:property [
+        sh:path     dc:title ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "dc:title is mandatory (1..*) on LearningActivitySpecification."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:volumeOfLearning ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:duration ;
+        sh:severity sh:Warning ;
+    ] .
+
+
+# =============================================================================
+# LEARNING ASSESSMENT SPECIFICATION
+# Applies to: elm:LearningAssessmentSpecification
+# =============================================================================
+
+edc:LearningAssessmentSpecificationShape
+    a sh:NodeShape ;
+    sh:targetClass elm:LearningAssessmentSpecification ;
+    sh:name "Learning Assessment Specification"@en ;
+
+    sh:property [
+        sh:path     dc:title ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "dc:title is mandatory (1..*) on LearningAssessmentSpecification."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:gradingScheme ;
+        sh:maxCount 1 ;
+        sh:node     edc:GradingSchemeShape ;
+        sh:severity sh:Warning ;
+    ] .
+
+
+# =============================================================================
+# LEARNING ENTITLEMENT SPECIFICATION
+# Applies to: elm:LearningEntitlementSpecification
+# =============================================================================
+
+edc:LearningEntitlementSpecificationShape
+    a sh:NodeShape ;
+    sh:targetClass elm:LearningEntitlementSpecification ;
+    sh:name "Learning Entitlement Specification"@en ;
+
+    sh:property [
+        sh:path     dc:title ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "dc:title is mandatory (1..*) on LearningEntitlementSpecification."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:entitlementStatus ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:node     edc:ConceptShape ;
+        sh:severity sh:Violation ;
+        sh:message  "elm:entitlementStatus is mandatory (1..1) on LearningEntitlementSpecification."@en ;
+    ] ;
+    sh:property [
+        sh:path     dc:type ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:node     edc:ConceptShape ;
+        sh:severity sh:Violation ;
+        sh:message  "dc:type is mandatory (1..1) on LearningEntitlementSpecification."@en ;
+    ] .
+
+
+# =============================================================================
+# QUALIFICATION
+# Applies to: elm:Qualification (subclass of LearningAchievementSpecification)
+# =============================================================================
+
+edc:QualificationShape
+    a sh:NodeShape ;
+    sh:targetClass elm:Qualification ;
+    sh:name "Qualification"@en ;
+
+    sh:property [
+        sh:path     dc:title ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "dc:title is mandatory (1..*) on Qualification."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:EQFLevel ;
+        sh:maxCount 1 ;
+        sh:node     edc:ConceptShape ;
+        sh:severity sh:Warning ;
+    ] ;
+    sh:property [
+        sh:path     elm:accreditation ;
+        sh:node     edc:AccreditationShape ;
+        sh:severity sh:Warning ;
+    ] .
+
+
+# =============================================================================
+# LEARNING OPPORTUNITY
+# Applies to: elm:LearningOpportunity
+# =============================================================================
+
+edc:LearningOpportunityShape
+    a sh:NodeShape ;
+    sh:targetClass elm:LearningOpportunity ;
+    sh:name "Learning Opportunity"@en ;
+
+    sh:property [
+        sh:path     dc:title ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "dc:title is mandatory (1..*) on LearningOpportunity."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:providedBy ;
+        sh:minCount 1 ;
+        sh:node     edc:OrganisationShape ;
+        sh:severity sh:Violation ;
+        sh:message  "elm:providedBy is mandatory (1..*) on LearningOpportunity."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:duration ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:duration ;
+        sh:severity sh:Warning ;
+    ] .
+
+
+# =============================================================================
+# LEARNING OUTCOME
+# Applies to: elm:LearningOutcome
+# =============================================================================
+
+edc:LearningOutcomeShape
+    a sh:NodeShape ;
+    sh:targetClass elm:LearningOutcome ;
+    sh:name "Learning Outcome"@en ;
+
+    sh:property [
+        sh:path     dc:title ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "dc:title is mandatory (1..*) on LearningOutcome."@en ;
+    ] .
+
+
+# =============================================================================
+# AWARDING PROCESS
+# Applies to: elm:AwardingProcess
+# =============================================================================
+
+edc:AwardingProcessShape
+    a sh:NodeShape ;
+    sh:targetClass elm:AwardingProcess ;
+    sh:name "Awarding Process"@en ;
+
+    sh:property [
+        sh:path     elm:awardingBody ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "elm:awardingBody is mandatory (1..*) on AwardingProcess."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:awardingDate ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:dateTime ;
+        sh:severity sh:Warning ;
+    ] ;
+    sh:property [
+        sh:path     elm:location ;
+        sh:maxCount 1 ;
+        sh:node     edc:LocationShape ;
+        sh:severity sh:Warning ;
+    ] .
+
+
+# =============================================================================
+# AWARDING OPPORTUNITY
+# Applies to: elm:AwardingOpportunity
+# =============================================================================
+
+edc:AwardingOpportunityShape
+    a sh:NodeShape ;
+    sh:targetClass elm:AwardingOpportunity ;
+    sh:name "Awarding Opportunity"@en ;
+
+    sh:property [
+        sh:path     elm:awardingBody ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "elm:awardingBody is mandatory (1..*) on AwardingOpportunity."@en ;
+    ] .
+
+
+# =============================================================================
+# ACCREDITATION
+# Applies to: elm:Accreditation
+# =============================================================================
+
+edc:AccreditationShape
+    a sh:NodeShape ;
+    sh:targetClass elm:Accreditation ;
+    sh:name "Accreditation"@en ;
+
+    sh:property [
+        sh:path     dc:title ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "dc:title is mandatory (1..*) on Accreditation."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:accreditingAgent ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:node     edc:OrganisationShape ;
+        sh:severity sh:Violation ;
+        sh:message  "elm:accreditingAgent is mandatory (1..1) on Accreditation."@en ;
+    ] ;
+    sh:property [
+        sh:path     dc:type ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:node     edc:ConceptShape ;
+        sh:severity sh:Violation ;
+        sh:message  "dc:type is mandatory (1..1) on Accreditation."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:expiryDate ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:dateTime ;
+        sh:severity sh:Warning ;
+    ] ;
+    sh:property [
+        sh:path     elm:reviewDate ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:dateTime ;
+        sh:severity sh:Warning ;
+    ] .
+
+
+# =============================================================================
+# DISPLAY PARAMETER
+# Applies to: elm:DisplayParameter
+# =============================================================================
+
+edc:DisplayParameterShape
+    a sh:NodeShape ;
+    sh:targetClass elm:DisplayParameter ;
+    sh:name "Display Parameter"@en ;
+
+    sh:property [
+        sh:path     dc:title ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "dc:title is mandatory (1..*) on DisplayParameter."@en ;
+    ] ;
+    sh:property [
+        sh:path     dc:language ;
+        sh:minCount 1 ;
+        sh:node     edc:ConceptShape ;
+        sh:severity sh:Violation ;
+        sh:message  "dc:language is mandatory (1..*) on DisplayParameter."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:primaryLanguage ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:node     edc:ConceptShape ;
+        sh:severity sh:Violation ;
+        sh:message  "elm:primaryLanguage is mandatory (1..1) on DisplayParameter."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:individualDisplay ;
+        sh:minCount 1 ;
+        sh:node     edc:IndividualDisplayShape ;
+        sh:severity sh:Violation ;
+        sh:message  "elm:individualDisplay is mandatory (1..*) on DisplayParameter."@en ;
+    ] .
+
+
+# =============================================================================
+# INDIVIDUAL DISPLAY
+# Applies to: elm:IndividualDisplay
+# =============================================================================
+
+edc:IndividualDisplayShape
+    a sh:NodeShape ;
+    sh:targetClass elm:IndividualDisplay ;
+    sh:name "Individual Display"@en ;
+
+    sh:property [
+        sh:path     dc:language ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:node     edc:ConceptShape ;
+        sh:severity sh:Violation ;
+        sh:message  "dc:language is mandatory (1..1) on IndividualDisplay."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:displayDetail ;
+        sh:minCount 1 ;
+        sh:node     edc:DisplayDetailShape ;
+        sh:severity sh:Violation ;
+        sh:message  "elm:displayDetail is mandatory (1..*) on IndividualDisplay."@en ;
+    ] .
+
+
+# =============================================================================
+# DISPLAY DETAIL
+# Applies to: elm:DisplayDetail
+# =============================================================================
+
+edc:DisplayDetailShape
+    a sh:NodeShape ;
+    sh:targetClass elm:DisplayDetail ;
+    sh:name "Display Detail"@en ;
+
+    sh:property [
+        sh:path     elm:image ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:node     edc:MediaObjectShape ;
+        sh:severity sh:Violation ;
+        sh:message  "elm:image is mandatory (1..1) on DisplayDetail."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:page ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:positiveInteger ;
+        sh:severity sh:Violation ;
+        sh:message  "elm:page is mandatory (1..1) and must be xsd:positiveInteger on DisplayDetail."@en ;
+    ] .
+
+
+# =============================================================================
+# MEDIA OBJECT
+# Applies to: elm:MediaObject
+# =============================================================================
+
+edc:MediaObjectShape
+    a sh:NodeShape ;
+    sh:targetClass elm:MediaObject ;
+    sh:name "Media Object"@en ;
+
+    sh:property [
+        sh:path     elm:content ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Violation ;
+        sh:message  "elm:content is mandatory (1..1) on MediaObject."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:contentEncoding ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:node     edc:ConceptShape ;
+        sh:severity sh:Violation ;
+        sh:message  "elm:contentEncoding is mandatory (1..1) on MediaObject."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:contentType ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:node     edc:ConceptShape ;
+        sh:severity sh:Violation ;
+        sh:message  "elm:contentType is mandatory (1..1) on MediaObject."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:contentSize ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:integer ;
+        sh:severity sh:Warning ;
+    ] .
+
+
+# =============================================================================
+# NOTE
+# Applies to: elm:Note
+# =============================================================================
+
+edc:NoteShape
+    a sh:NodeShape ;
+    sh:targetClass elm:Note ;
+    sh:name "Note"@en ;
+
+    sh:property [
+        sh:path     elm:noteLiteral ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "elm:noteLiteral is mandatory (1..*) on Note."@en ;
+    ] .
+
+
+# =============================================================================
+# IDENTIFIER
+# Applies to: elm:Identifier
+# =============================================================================
+
+edc:IdentifierShape
+    a sh:NodeShape ;
+    sh:targetClass elm:Identifier ;
+    sh:name "Identifier"@en ;
+
+    sh:property [
+        sh:path     skos:notation ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "skos:notation is mandatory (1..1) on Identifier."@en ;
+    ] .
+
+
+# =============================================================================
+# LEGAL IDENTIFIER
+# Applies to: elm:LegalIdentifier (subclass of Identifier)
+# =============================================================================
+
+edc:LegalIdentifierShape
+    a sh:NodeShape ;
+    sh:targetClass elm:LegalIdentifier ;
+    sh:name "Legal Identifier"@en ;
+
+    sh:property [
+        sh:path     skos:notation ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "skos:notation is mandatory (1..1) on LegalIdentifier."@en ;
+    ] ;
+    sh:property [
+        sh:path     dc:spatial ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:node     edc:ConceptShape ;
+        sh:severity sh:Violation ;
+        sh:message  "dc:spatial is mandatory (1..1) on LegalIdentifier."@en ;
+    ] .
+
+
+# =============================================================================
+# ADDRESS
+# Applies to: elm:Address
+# =============================================================================
+
+edc:AddressShape
+    a sh:NodeShape ;
+    sh:targetClass elm:Address ;
+    sh:name "Address"@en ;
+
+    sh:property [
+        sh:path     elm:countryCode ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:node     edc:ConceptShape ;
+        sh:severity sh:Violation ;
+        sh:message  "elm:countryCode is mandatory (1..1) on Address."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:fullAddress ;
+        sh:maxCount 1 ;
+        sh:node     edc:NoteShape ;
+        sh:severity sh:Warning ;
+    ] .
+
+
+# =============================================================================
+# LOCATION
+# Applies to: dc:Location
+# =============================================================================
+
+edc:LocationShape
+    a sh:NodeShape ;
+    sh:targetClass dc:Location ;
+    sh:name "Location"@en ;
+
+    sh:property [
+        sh:path     elm:address ;
+        sh:minCount 1 ;
+        sh:node     edc:AddressShape ;
+        sh:severity sh:Violation ;
+        sh:message  "elm:address is mandatory (1..*) on Location."@en ;
+    ] .
+
+
+# =============================================================================
+# CONCEPT
+# Applies to: skos:Concept
+# =============================================================================
+
+edc:ConceptShape
+    a sh:NodeShape ;
+    sh:targetClass skos:Concept ;
+    sh:name "Concept"@en ;
+
+    sh:property [
+        sh:path     skos:notation ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+    ] ;
+    sh:property [
+        sh:path     skos:prefLabel ;
+        sh:severity sh:Warning ;
+    ] ;
+    sh:property [
+        sh:path     skos:inScheme ;
+        sh:maxCount 1 ;
+        sh:node     edc:ConceptSchemeShape ;
+        sh:severity sh:Warning ;
+    ] .
+
+
+# =============================================================================
+# CONCEPT SCHEME
+# Applies to: skos:ConceptScheme
+# =============================================================================
+
+edc:ConceptSchemeShape
+    a sh:NodeShape ;
+    sh:targetClass skos:ConceptScheme ;
+    sh:name "Concept Scheme"@en .
+
+
+# =============================================================================
+# CREDIT POINT
+# Applies to: elm:CreditPoint
+# =============================================================================
+
+edc:CreditPointShape
+    a sh:NodeShape ;
+    sh:targetClass elm:CreditPoint ;
+    sh:name "Credit Point"@en ;
+
+    sh:property [
+        sh:path     elm:framework ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:node     edc:ConceptShape ;
+        sh:severity sh:Violation ;
+        sh:message  "elm:framework is mandatory (1..1) on CreditPoint."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:point ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Violation ;
+        sh:message  "elm:point is mandatory (1..1) on CreditPoint."@en ;
+    ] .
+
+
+# =============================================================================
+# AMOUNT
+# Applies to: elm:Amount
+# =============================================================================
+
+edc:AmountShape
+    a sh:NodeShape ;
+    sh:targetClass elm:Amount ;
+    sh:name "Amount"@en ;
+
+    sh:property [
+        sh:path     elm:value ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:decimal ;
+        sh:severity sh:Violation ;
+        sh:message  "elm:value is mandatory (1..1) on Amount."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:node     edc:ConceptShape ;
+        sh:severity sh:Violation ;
+        sh:message  "elm:unit is mandatory (1..1) on Amount."@en ;
+    ] .
+
+
+# =============================================================================
+# CONTACT POINT
+# Applies to: elm:ContactPoint
+# =============================================================================
+
+edc:ContactPointShape
+    a sh:NodeShape ;
+    sh:targetClass elm:ContactPoint ;
+    sh:name "Contact Point"@en ;
+
+    sh:property [
+        sh:path     elm:address ;
+        sh:node     edc:AddressShape ;
+        sh:severity sh:Warning ;
+    ] ;
+    sh:property [
+        sh:path     elm:emailAddress ;
+        sh:severity sh:Warning ;
+    ] ;
+    sh:property [
+        sh:path     elm:phone ;
+        sh:node     edc:PhoneShape ;
+        sh:severity sh:Warning ;
+    ] .
+
+
+# =============================================================================
+# PHONE
+# Applies to: elm:Phone
+# =============================================================================
+
+edc:PhoneShape
+    a sh:NodeShape ;
+    sh:targetClass elm:Phone ;
+    sh:name "Phone"@en ;
+
+    sh:property [
+        sh:path     elm:phoneNumber ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+    ] .
+
+
+# =============================================================================
+# WEB RESOURCE
+# Applies to: elm:WebResource
+# =============================================================================
+
+edc:WebResourceShape
+    a sh:NodeShape ;
+    sh:targetClass elm:WebResource ;
+    sh:name "Web Resource"@en ;
+
+    sh:property [
+        sh:path     elm:contentUrl ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:anyURI ;
+        sh:severity sh:Violation ;
+        sh:message  "elm:contentUrl is mandatory (1..1) on WebResource."@en ;
+    ] .
+
+
+# =============================================================================
+# GRADING SCHEME
+# Applies to: elm:GradingScheme
+# =============================================================================
+
+edc:GradingSchemeShape
+    a sh:NodeShape ;
+    sh:targetClass elm:GradingScheme ;
+    sh:name "Grading Scheme"@en ;
+
+    sh:property [
+        sh:path     dc:title ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "dc:title is mandatory (1..*) on GradingScheme."@en ;
+    ] .
+
+
+# =============================================================================
+# GRANT
+# Applies to: elm:Grant
+# =============================================================================
+
+edc:GrantShape
+    a sh:NodeShape ;
+    sh:targetClass elm:Grant ;
+    sh:name "Grant"@en ;
+
+    sh:property [
+        sh:path     dc:title ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "dc:title is mandatory (1..*) on Grant."@en ;
+    ] .
+
+
+# =============================================================================
+# GROUP
+# Applies to: elm:Group
+# =============================================================================
+
+edc:GroupShape
+    a sh:NodeShape ;
+    sh:targetClass elm:Group ;
+    sh:name "Group"@en ;
+
+    sh:property [
+        sh:path     skos:prefLabel ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "skos:prefLabel is mandatory (1..*) on Group."@en ;
+    ] .
+
+
+# =============================================================================
+# PERIOD OF TIME
+# Applies to: dc:PeriodOfTime
+# =============================================================================
+
+edc:PeriodOfTimeShape
+    a sh:NodeShape ;
+    sh:targetClass dc:PeriodOfTime ;
+    sh:name "Period Of Time"@en ;
+
+    sh:property [
+        sh:path     elm:startDate ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:dateTime ;
+        sh:severity sh:Warning ;
+    ] ;
+    sh:property [
+        sh:path     elm:endDate ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:dateTime ;
+        sh:severity sh:Warning ;
+    ] .
+
+
+# =============================================================================
+# GEOMETRY
+# Applies to: locn:Geometry
+# =============================================================================
+
+edc:GeometryShape
+    a sh:NodeShape ;
+    sh:targetClass locn:Geometry ;
+    sh:name "Geometry"@en ;
+
+    sh:property [
+        sh:path     clv:latitude ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+    ] ;
+    sh:property [
+        sh:path     clv:longitude ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+    ] .
+
+
+# =============================================================================
+# RESULT DISTRIBUTION
+# Applies to: elm:ResultDistribution
+# =============================================================================
+
+edc:ResultDistributionShape
+    a sh:NodeShape ;
+    sh:targetClass elm:ResultDistribution ;
+    sh:name "Result Distribution"@en ;
+
+    sh:property [
+        sh:path     elm:resultCategory ;
+        sh:node     edc:ResultCategoryShape ;
+        sh:severity sh:Warning ;
+    ] .
+
+
+# =============================================================================
+# RESULT CATEGORY
+# Applies to: elm:ResultCategory
+# =============================================================================
+
+edc:ResultCategoryShape
+    a sh:NodeShape ;
+    sh:targetClass elm:ResultCategory ;
+    sh:name "Result Category"@en ;
+
+    sh:property [
+        sh:path     elm:label ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Violation ;
+        sh:message  "elm:label is mandatory (1..1) on ResultCategory."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:count ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:positiveInteger ;
+        sh:severity sh:Violation ;
+        sh:message  "elm:count is mandatory (1..1) on ResultCategory."@en ;
+    ] .
+
+
+# =============================================================================
+# SHORTENED GRADING
+# Applies to: elm:ShortenedGrading
+# =============================================================================
+
+edc:ShortenedGradingShape
+    a sh:NodeShape ;
+    sh:targetClass elm:ShortenedGrading ;
+    sh:name "Shortened Grading"@en ;
+
+    sh:property [
+        sh:path     elm:percentageLower ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:integer ;
+        sh:severity sh:Violation ;
+        sh:message  "elm:percentageLower is mandatory (1..1) on ShortenedGrading."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:percentageEqual ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:integer ;
+        sh:severity sh:Violation ;
+        sh:message  "elm:percentageEqual is mandatory (1..1) on ShortenedGrading."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:percentageHigher ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:integer ;
+        sh:severity sh:Violation ;
+        sh:message  "elm:percentageHigher is mandatory (1..1) on ShortenedGrading."@en ;
+    ] .
+
+
+# =============================================================================
+# VERIFICATION CHECK
+# Applies to: elm:VerificationCheck
+# =============================================================================
+
+edc:VerificationCheckShape
+    a sh:NodeShape ;
+    sh:targetClass elm:VerificationCheck ;
+    sh:name "Verification Check"@en ;
+
+    sh:property [
+        sh:path     elm:verificationStatus ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:node     edc:ConceptShape ;
+        sh:severity sh:Violation ;
+        sh:message  "elm:verificationStatus is mandatory (1..1) on VerificationCheck."@en ;
+    ] ;
+    sh:property [
+        sh:path     dc:type ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:node     edc:ConceptShape ;
+        sh:severity sh:Violation ;
+        sh:message  "dc:type is mandatory (1..1) on VerificationCheck."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:subject ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "elm:subject is mandatory (1..1) on VerificationCheck."@en ;
+    ] .
+
+
+# =============================================================================
+# EVIDENCE
+# Applies to: elm:Evidence
+# =============================================================================
+
+edc:EvidenceShape
+    a sh:NodeShape ;
+    sh:targetClass elm:Evidence ;
+    sh:name "Evidence"@en ;
+
+    sh:property [
+        sh:path     dc:type ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:node     edc:ConceptShape ;
+        sh:severity sh:Violation ;
+        sh:message  "dc:type is mandatory (1..1) on Evidence."@en ;
+    ] .
+
+
+# =============================================================================
+# PRICE DETAIL
+# Applies to: elm:PriceDetail
+# =============================================================================
+
+edc:PriceDetailShape
+    a sh:NodeShape ;
+    sh:targetClass elm:PriceDetail ;
+    sh:name "Price Detail"@en ;
+
+    sh:property [
+        sh:path     elm:amount ;
+        sh:maxCount 1 ;
+        sh:node     edc:AmountShape ;
+        sh:severity sh:Warning ;
+    ] .
+
+
+# =============================================================================
+# SHACL VALIDATOR 2017
+# Applies to: elm:ShaclValidator2017
+# Shape-only: validates the credentialSchema entry itself.
+# =============================================================================
+
+edc:ShaclValidator2017Shape
+    a sh:NodeShape ;
+    sh:targetClass elm:ShaclValidator2017 ;
+    sh:name "SHACL Validator 2017"@en ;
+
+    sh:property [
+        sh:path     sh:nodeKind ;
+        sh:hasValue sh:IRI ;
+        sh:severity sh:Warning ;
+    ] .
+
+
+# =============================================================================
+# EUROPEAN DIGITAL PRESENTATION
+# Applies to: elm:EuropeanDigitalPresentation
+# =============================================================================
+
+edc:EuropeanDigitalPresentationShape
+    a sh:NodeShape ;
+    sh:targetClass elm:EuropeanDigitalPresentation ;
+    sh:name "European Digital Presentation"@en ;
+
+    sh:property [
+        sh:path     cred:verifiableCredential ;
+        sh:node     edc:EuropeanDigitalCredentialShape ;
+        sh:severity sh:Warning ;
+    ] ;
+    sh:property [
+        sh:path     elm:verificationCheck ;
+        sh:node     edc:VerificationCheckShape ;
+        sh:severity sh:Warning ;
+    ] .
+
+# =============================================================================
+# END OF FILE
+# Shapes defined: 43
+# To register in EBSI TSR:
+#   POST https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas
+#   Method: insertSchema (JSON-RPC)
+#   Content: this file as a UTF-8 string
+#   Auth: Bearer JWT with scope tsr_write
+# =============================================================================

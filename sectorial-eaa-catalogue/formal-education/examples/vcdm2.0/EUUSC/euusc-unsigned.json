@@ -1,0 +1,250 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "http://data.europa.eu/snb/model/context/edc-ap"
+  ],
+  "id": "urn:uuid:e5f6a7b8-eusc-4abc-cdef-456789012345",
+  "type": [
+    "VerifiableCredential",
+    "VerifiableAttestation",
+    "EuropeanDigitalCredential",
+    "EuropeanUpperSecondaryCertificate"
+  ],
+  "identifier": [
+    {
+      "id": "urn:identifier:EUUSC-2024-00001",
+      "type": "Identifier",
+      "notation": "EUUSC-2024-00001",
+      "schemeAgency": {
+        "en": "IES Cervantes, Madrid"
+      },
+      "dateIssued": "2024-06-20T10:00:00Z"
+    }
+  ],
+  "credentialProfiles": [
+    {
+      "id": "http://data.europa.eu/snb/credential/upperSecondaryCertificate",
+      "type": "Concept",
+      "skos:prefLabel": {
+        "en": "Upper Secondary Certificate"
+      }
+    }
+  ],
+  "issuer": {
+    "id": "did:ebsi:zSchoolMadrid789",
+    "type": "Organisation",
+    "elm:legalName": {
+      "en": "IES Cervantes, Madrid"
+    },
+    "elm:eidasLegalIdentifier": {
+      "type": "LegalIdentifier",
+      "skos:notation": "ES-S-28000001",
+      "dc:spatial": {
+        "id": "http://publications.europa.eu/resource/authority/country/ESP"
+      }
+    },
+    "elm:location": {
+      "id": "urn:location:ies-cervantes",
+      "type": "Location",
+      "elm:address": [
+        {
+          "id": "urn:address:ies-cervantes",
+          "type": "Address",
+          "elm:countryCode": {
+            "id": "http://publications.europa.eu/resource/authority/country/ESP",
+            "type": "Concept",
+            "skos:notation": "ESP"
+          }
+        }
+      ]
+    }
+  },
+  "credentialSubject": {
+    "id": "did:ebsi:zCarlosMartinez123",
+    "type": "Person",
+    "elm:dateOfBirth": "2006-04-08T00:00:00Z",
+    "elm:familyName": {
+      "en": "Martínez"
+    },
+    "elm:givenName": {
+      "en": "Carlos"
+    },
+    "elm:hasClaim": [
+      {
+        "id": "urn:claim:ies-bachillerato-2024",
+        "type": "LearningAchievement",
+        "dc:title": {
+          "en": "Upper Secondary Certificate (Bachillerato)",
+          "es": "Título de Bachiller"
+        },
+        "dc:description": {
+          "en": "Successful completion of the two-year Spanish Upper Secondary Education programme."
+        },
+        "elm:awardedBy": {
+          "id": "urn:awarding:ies-cervantes-2024",
+          "type": "AwardingProcess",
+          "elm:awardingBody": {
+            "id": "did:ebsi:zSchoolMadrid789",
+            "type": "Organisation",
+            "rov:legalName": "IES Cervantes, Madrid",
+            "elm:location": {
+              "id": "urn:location:ies-cervantes",
+              "type": "Location",
+              "elm:address": [
+                {
+                  "id": "urn:address:ies-cervantes",
+                  "type": "Address",
+                  "elm:countryCode": {
+                    "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                    "type": "Concept",
+                    "skos:notation": "ESP"
+                  }
+                }
+              ]
+            }
+          },
+          "elm:awardingDate": "2024-06-20T10:00:00Z",
+          "elm:location": {
+            "id": "urn:location:ies-cervantes",
+            "type": "Location",
+            "elm:address": [
+              {
+                "id": "urn:address:ies-cervantes",
+                "type": "Address",
+                "elm:countryCode": {
+                  "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                  "type": "Concept",
+                  "skos:notation": "ESP"
+                }
+              }
+            ]
+          }
+        },
+        "elm:specifiedBy": {
+          "id": "urn:spec:bachillerato-ciencias",
+          "type": "LearningAchievementSpecification",
+          "dc:title": {
+            "en": "Bachillerato – Sciences Track",
+            "es": "Bachillerato – Rama de Ciencias"
+          },
+          "elm:EQFLevel": {
+            "id": "http://data.europa.eu/snb/eqf/4",
+            "type": "Concept",
+            "skos:notation": "4",
+            "skos:prefLabel": {
+              "en": "EQF Level 4"
+            },
+            "skos:inScheme": {
+              "id": "http://data.europa.eu/snb/eqf/25831c2",
+              "type": "ConceptScheme"
+            }
+          },
+          "elm:NQFLevel": {
+            "id": "http://data.europa.eu/snb/nqf/ESP/4",
+            "type": "Concept",
+            "skos:notation": "4",
+            "skos:prefLabel": {
+              "es": "Bachillerato"
+            }
+          },
+          "elm:educationSubject": [
+            {
+              "id": "http://data.europa.eu/snb/isced-f/0511",
+              "type": "Concept",
+              "skos:notation": "0511",
+              "skos:prefLabel": {
+                "en": "Biology"
+              }
+            }
+          ]
+        },
+        "elm:entitlesTo": [
+          {
+            "id": "urn:entitlement:ies-he-access",
+            "type": "LearningEntitlement",
+            "dc:title": {
+              "en": "Access to Higher Education (pending university entrance examination – Selectividad / PAU)"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "issued": "2024-06-20T10:00:00Z",
+  "validFrom": "2024-06-20T10:00:00Z",
+  "credentialSchema": [
+    {
+      "id": "https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/0x901e24c3d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2",
+      "type": "JsonSchema"
+    },
+    {
+      "id": "https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/PENDING_TSR_REGISTRATION_EUUSC",
+      "type": "ShaclValidator2017"
+    }
+  ],
+  "credentialStatus": [
+    {
+      "id": "urn:status:e5f6a7b8-eusc-4abc-cdef-456789012345",
+      "type": "StatusList2021Entry",
+      "statusPurpose": "revocation",
+      "statusListIndex": "0",
+      "statusListCredential": "https://api-pilot.ebsi.eu/status-list/2025/07"
+    }
+  ],
+  "elm:displayParameter": {
+    "id": "urn:display:euusc-carlos-2024",
+    "type": "DisplayParameter",
+    "dc:title": {
+      "en": "Upper Secondary Certificate",
+      "es": "Título de Bachiller"
+    },
+    "dc:description": {
+      "en": "Upper secondary qualification awarded by IES Cervantes, Madrid."
+    },
+    "dc:language": [
+      {
+        "id": "http://publications.europa.eu/resource/authority/language/ENG",
+        "type": "Concept",
+        "skos:notation": "ENG"
+      }
+    ],
+    "elm:primaryLanguage": {
+      "id": "http://publications.europa.eu/resource/authority/language/ENG",
+      "type": "Concept",
+      "skos:notation": "ENG"
+    },
+    "elm:individualDisplay": [
+      {
+        "id": "urn:display:individual-1",
+        "type": "IndividualDisplay",
+        "dc:language": {
+          "id": "http://publications.europa.eu/resource/authority/language/ENG",
+          "type": "Concept",
+          "skos:notation": "ENG"
+        },
+        "elm:displayDetail": [
+          {
+            "id": "urn:display:detail-1",
+            "type": "DisplayDetail",
+            "elm:image": {
+              "id": "urn:media:certificate-image",
+              "type": "MediaObject",
+              "elm:contentType": {
+                "id": "http://publications.europa.eu/resource/authority/file-type/PNG",
+                "type": "Concept",
+                "skos:notation": "PNG"
+              },
+              "elm:contentEncoding": {
+                "id": "http://data.europa.eu/snb/encoding/6146cde7dd",
+                "type": "Concept",
+                "skos:notation": "base64"
+              },
+              "elm:content": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAACklEQVR4nGMAAQAABQABDQottAAAAABJRU5ErkJggg=="
+            },
+            "elm:page": 1
+          }
+        ]
+      }
+    ]
+  }
+}

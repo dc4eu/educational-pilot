@@ -1,0 +1,261 @@
+# =============================================================================
+# SHACL Shape: European Higher Education Diploma
+# Profile:     EuropeanHigherEducationDiploma
+# Version:     1.0.0
+# Date:        2026-04-12
+# Base schema: https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/
+#              0x7663df3b6f0b9afd248de5dcfdb6bebb99e8a2cde22b30b4cc07b7f73451a00a
+# Licence:     CC BY 4.0
+#
+# Profile differentiators vs HE Microcredential (he_micro_shacl.ttl):
+#   1. Credential type: EuropeanHigherEducationDiploma
+#   2. provenBy: ABSENT – diploma certifies the awarded qualification,
+#      not individual assessments; assessment evidence is in the Supplement (EUHEDS)
+#   3. specifiedBy: MANDATORY (Violation) – qualification specification required
+#   4. creditReceived: total ECTS – Warning (recommended) not Violation
+#   5. elm:entitlesTo: optional – right to access further studies / profession
+#   6. thematicArea (educationSubject): recommended – Warning
+#
+# Shapes reused without modification:
+#   IssuerShape, LegalIdentifierShape, EQFConceptShape,
+#   ECTSCreditShape, ECTSFrameworkShape, AwardingProcessShape, AwardingBodyShape
+# =============================================================================
+
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix elm:   <http://data.europa.eu/snb/model/elm/> .
+@prefix cred:  <https://www.w3.org/2018/credentials#> .
+@prefix dc:    <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rov:   <http://www.w3.org/ns/regorg#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix euhed: <https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/shacl/euhed#> .
+
+euhed:CredentialShape
+    a sh:NodeShape ;
+    sh:targetClass elm:EuropeanDigitalCredential ;
+    sh:name "European Higher Education Diploma – SHACL Profile"@en ;
+    sh:description "Level-3 semantic constraints for EuropeanHigherEducationDiploma credentials under ELM 3.2 / W3C-VC 2.0 / eIDAS 2.0."@en ;
+
+    sh:property [
+        sh:path     rdf:type ;
+        sh:hasValue elm:EuropeanHigherEducationDiploma ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "Credential must declare elm:EuropeanHigherEducationDiploma."@en ;
+    ] ;
+    sh:property [
+        sh:path     cred:credentialSchema ;
+        sh:minCount 2 ;
+        sh:severity sh:Violation ;
+        sh:message  "credentialSchema must contain at least two entries: JsonSchema and ShaclValidator2017."@en ;
+    ] ;
+    sh:property [
+        sh:path     cred:issuer ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:node     euhed:IssuerShape ;
+        sh:severity sh:Violation ;
+        sh:message  "Credential must have exactly one issuer."@en ;
+    ] ;
+    sh:property [
+        sh:path     cred:credentialSubject ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:node     euhed:CredentialSubjectShape ;
+        sh:severity sh:Violation ;
+        sh:message  "Credential must have exactly one credentialSubject."@en ;
+    ] .
+
+euhed:IssuerShape
+    a sh:NodeShape ;
+    sh:property [
+        sh:path     elm:eidasLegalIdentifier ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:node     euhed:LegalIdentifierShape ;
+        sh:severity sh:Violation ;
+        sh:message  "Issuer must have exactly one eidasLegalIdentifier."@en ;
+    ] .
+
+euhed:LegalIdentifierShape
+    a sh:NodeShape ;
+    sh:property [
+        sh:path     skos:notation ;
+        sh:minCount 1 ; sh:datatype xsd:string ;
+        sh:severity sh:Violation ;
+        sh:message  "eidasLegalIdentifier must carry a skos:notation value."@en ;
+    ] ;
+    sh:property [
+        sh:path     dc:spatial ;
+        sh:minCount 1 ; sh:nodeKind sh:IRI ;
+        sh:severity sh:Violation ;
+        sh:message  "Jurisdiction (dc:spatial) must be an IRI from the EU Publications Office country vocabulary."@en ;
+    ] .
+
+euhed:CredentialSubjectShape
+    a sh:NodeShape ;
+    sh:property [
+        sh:path     elm:dateOfBirth ;
+        sh:minCount 1 ; sh:datatype xsd:dateTime ;
+        sh:severity sh:Violation ;
+        sh:message  "credentialSubject must include elm:dateOfBirth."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:hasClaim ;
+        sh:minCount 1 ;
+        sh:node     euhed:LearningAchievementShape ;
+        sh:severity sh:Violation ;
+        sh:message  "credentialSubject must have at least one LearningAchievement."@en ;
+    ] .
+
+euhed:LearningAchievementShape
+    a sh:NodeShape ;
+    sh:property [
+        sh:path     rdf:type ;
+        sh:hasValue elm:LearningAchievement ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "hasClaim node must be of type elm:LearningAchievement."@en ;
+    ] ;
+    # specifiedBy MANDATORY – key differentiator from microcredential where it is also mandatory
+    # but here it points to a full Qualification specification (not a module spec)
+    sh:property [
+        sh:path     elm:specifiedBy ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:node     euhed:QualificationSpecShape ;
+        sh:severity sh:Violation ;
+        sh:message  "Diploma achievement must reference exactly one QualificationSpecification via elm:specifiedBy."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:awardedBy ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:node     euhed:AwardingProcessShape ;
+        sh:severity sh:Violation ;
+        sh:message  "LearningAchievement must have exactly one elm:awardedBy."@en ;
+    ] ;
+    # provenBy ABSENT: diploma does not embed individual assessments.
+    # creditReceived: total ECTS received – recommended, not mandatory.
+    sh:property [
+        sh:path     elm:creditReceived ;
+        sh:node     euhed:ECTSCreditShape ;
+        sh:severity sh:Warning ;
+        sh:message  "It is recommended to declare total ECTS received (elm:creditReceived)."@en ;
+    ] ;
+    # entitlesTo: optional right granted by the diploma
+    sh:property [
+        sh:path     elm:entitlesTo ;
+        sh:node     euhed:EntitlementShape ;
+        sh:severity sh:Warning ;
+        sh:message  "Consider declaring the entitlement granted by this diploma (elm:entitlesTo)."@en ;
+    ] .
+
+euhed:QualificationSpecShape
+    a sh:NodeShape ;
+    sh:property [
+        sh:path     elm:EQFLevel ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:node     euhed:EQFConceptShape ;
+        sh:severity sh:Violation ;
+        sh:message  "Qualification specification must declare exactly one elm:EQFLevel."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:educationSubject ;
+        sh:minCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message  "It is recommended to declare at least one thematic area (elm:educationSubject)."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:creditPoint ;
+        sh:minCount 1 ;
+        sh:node     euhed:ECTSCreditShape ;
+        sh:severity sh:Warning ;
+        sh:message  "It is recommended to declare total ECTS credit points on the qualification spec."@en ;
+    ] .
+
+euhed:EQFConceptShape
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:pattern  "^http://data\\.europa\\.eu/snb/eqf/" ;
+    sh:severity sh:Warning ;
+    sh:message  "EQF level should reference the EU Publications Office EQF vocabulary."@en ;
+    sh:property [
+        sh:path     skos:notation ;
+        sh:minCount 1 ; sh:datatype xsd:string ;
+        sh:pattern  "^[1-8]$" ;
+        sh:severity sh:Violation ;
+        sh:message  "EQF level notation must be a digit between 1 and 8."@en ;
+    ] .
+
+euhed:ECTSCreditShape
+    a sh:NodeShape ;
+    sh:property [
+        sh:path     elm:framework ;
+        sh:minCount 1 ;
+        sh:node     euhed:ECTSFrameworkShape ;
+        sh:severity sh:Violation ;
+        sh:message  "Credit framework must be ECTS."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:point ;
+        sh:minCount 1 ; sh:datatype xsd:string ;
+        sh:severity sh:Violation ;
+        sh:message  "ECTS credit points must be a numeric string."@en ;
+    ] .
+
+euhed:ECTSFrameworkShape
+    a sh:NodeShape ;
+    sh:property [
+        sh:path     skos:notation ;
+        sh:hasValue "ECTS" ;
+        sh:severity sh:Violation ;
+        sh:message  "elm:framework notation must be exactly 'ECTS'."@en ;
+    ] .
+
+euhed:AwardingProcessShape
+    a sh:NodeShape ;
+    sh:property [
+        sh:path     elm:awardingBody ;
+        sh:minCount 1 ;
+        sh:node     euhed:AwardingBodyShape ;
+        sh:severity sh:Violation ;
+        sh:message  "AwardingProcess must include at least one elm:awardingBody."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:awardingDate ;
+        sh:minCount 1 ; sh:datatype xsd:dateTime ;
+        sh:severity sh:Violation ;
+        sh:message  "AwardingProcess must include elm:awardingDate."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:location ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "AwardingProcess must include elm:location."@en ;
+    ] .
+
+euhed:AwardingBodyShape
+    a sh:NodeShape ;
+    sh:property [
+        sh:path     rov:legalName ;
+        sh:minCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message  "It is recommended to include the legal name of the awarding body (rov:legalName)."@en ;
+    ] .
+
+euhed:EntitlementShape
+    a sh:NodeShape ;
+    sh:property [
+        sh:path     rdf:type ;
+        sh:hasValue elm:LearningEntitlement ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "entitlesTo node must be of type elm:LearningEntitlement."@en ;
+    ] ;
+    sh:property [
+        sh:path     dc:title ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "LearningEntitlement must have a dc:title."@en ;
+    ] .
+
+# =============================================================================
+# END OF FILE
+# =============================================================================

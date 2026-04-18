@@ -1,0 +1,221 @@
+# =============================================================================
+# SHACL Shape: European Upper Secondary Certificate
+# Profile:     EuropeanUpperSecondaryCertificate
+# Version:     1.0.0
+# Date:        2026-04-12
+# Base schema: https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/
+#              0x901e24c3d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2
+# Licence:     CC BY 4.0
+#
+# Profile differentiators vs HE Diploma (euhed_shacl.ttl):
+#   1. Type: EuropeanUpperSecondaryCertificate
+#   2. EQF level: expected range 3–4 (Warning outside)
+#   3. No ECTS: upper secondary uses national grading/credit systems
+#   4. elm:NQFLevel: recommended alongside EQF – Warning
+#   5. entitlesTo: right to access HE – recommended (Warning)
+#   6. provenBy ABSENT at diploma level (same rationale as EUHED)
+#   7. specifiedBy MANDATORY (Violation)
+# =============================================================================
+
+@prefix sh:   <http://www.w3.org/ns/shacl#> .
+@prefix elm:  <http://data.europa.eu/snb/model/elm/> .
+@prefix cred: <https://www.w3.org/2018/credentials#> .
+@prefix dc:   <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix rov:  <http://www.w3.org/ns/regorg#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix euusc: <https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/shacl/euusc#> .
+
+euusc:CredentialShape
+    a sh:NodeShape ;
+    sh:targetClass elm:EuropeanDigitalCredential ;
+    sh:name "European Upper Secondary Certificate – SHACL Profile"@en ;
+    sh:description "Level-3 constraints for EuropeanUpperSecondaryCertificate under ELM 3.2 / W3C-VC 2.0 / eIDAS 2.0."@en ;
+
+    sh:property [
+        sh:path     rdf:type ;
+        sh:hasValue elm:EuropeanUpperSecondaryCertificate ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "Credential must declare elm:EuropeanUpperSecondaryCertificate."@en ;
+    ] ;
+    sh:property [
+        sh:path     cred:credentialSchema ;
+        sh:minCount 2 ;
+        sh:severity sh:Violation ;
+        sh:message  "credentialSchema must contain at least two entries: JsonSchema and ShaclValidator2017."@en ;
+    ] ;
+    sh:property [
+        sh:path     cred:issuer ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:node     euusc:IssuerShape ;
+        sh:severity sh:Violation ;
+        sh:message  "Credential must have exactly one issuer."@en ;
+    ] ;
+    sh:property [
+        sh:path     cred:credentialSubject ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:node     euusc:CredentialSubjectShape ;
+        sh:severity sh:Violation ;
+        sh:message  "Credential must have exactly one credentialSubject."@en ;
+    ] .
+
+euusc:IssuerShape
+    a sh:NodeShape ;
+    sh:property [
+        sh:path     elm:eidasLegalIdentifier ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:node     euusc:LegalIdentifierShape ;
+        sh:severity sh:Violation ;
+        sh:message  "Issuer must have exactly one eidasLegalIdentifier."@en ;
+    ] .
+
+euusc:LegalIdentifierShape
+    a sh:NodeShape ;
+    sh:property [
+        sh:path     skos:notation ;
+        sh:minCount 1 ; sh:datatype xsd:string ;
+        sh:severity sh:Violation ;
+        sh:message  "eidasLegalIdentifier must carry a skos:notation."@en ;
+    ] ;
+    sh:property [
+        sh:path     dc:spatial ;
+        sh:minCount 1 ; sh:nodeKind sh:IRI ;
+        sh:severity sh:Violation ;
+        sh:message  "Jurisdiction (dc:spatial) must be an IRI."@en ;
+    ] .
+
+euusc:CredentialSubjectShape
+    a sh:NodeShape ;
+    sh:property [
+        sh:path     elm:dateOfBirth ;
+        sh:minCount 1 ; sh:datatype xsd:dateTime ;
+        sh:severity sh:Violation ;
+        sh:message  "credentialSubject must include elm:dateOfBirth."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:hasClaim ;
+        sh:minCount 1 ;
+        sh:node     euusc:LearningAchievementShape ;
+        sh:severity sh:Violation ;
+        sh:message  "credentialSubject must have at least one LearningAchievement."@en ;
+    ] .
+
+euusc:LearningAchievementShape
+    a sh:NodeShape ;
+    sh:property [
+        sh:path     rdf:type ;
+        sh:hasValue elm:LearningAchievement ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "hasClaim node must be of type elm:LearningAchievement."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:specifiedBy ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:node     euusc:QualSpecShape ;
+        sh:severity sh:Violation ;
+        sh:message  "Achievement must reference exactly one qualification specification (elm:specifiedBy)."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:awardedBy ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:node     euusc:AwardingProcessShape ;
+        sh:severity sh:Violation ;
+        sh:message  "Achievement must have exactly one elm:awardedBy."@en ;
+    ] ;
+    # entitlesTo: right granted by the certificate (recommended)
+    sh:property [
+        sh:path     elm:entitlesTo ;
+        sh:node     euusc:EntitlementShape ;
+        sh:severity sh:Warning ;
+        sh:message  "Consider declaring the entitlement granted by this certificate (elm:entitlesTo)."@en ;
+    ] .
+
+euusc:QualSpecShape
+    a sh:NodeShape ;
+    sh:property [
+        sh:path     elm:EQFLevel ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:node     euusc:EQFConceptShape ;
+        sh:severity sh:Violation ;
+        sh:message  "Qualification specification must declare exactly one elm:EQFLevel."@en ;
+    ] ;
+    # NQF level recommended alongside EQF for national recognition
+    sh:property [
+        sh:path     elm:NQFLevel ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message  "It is recommended to declare the National Qualifications Framework level (elm:NQFLevel)."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:educationSubject ;
+        sh:severity sh:Warning ;
+        sh:message  "Recommended: include at least one thematic area (elm:educationSubject)."@en ;
+    ] .
+
+euusc:EQFConceptShape
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:pattern  "^http://data\\.europa\\.eu/snb/eqf/" ;
+    sh:severity sh:Warning ;
+    sh:message  "EQF level should reference the EU Publications Office EQF vocabulary."@en ;
+    sh:property [
+        sh:path     skos:notation ;
+        sh:minCount 1 ; sh:datatype xsd:string ;
+        sh:pattern  "^[34]$" ;
+        sh:severity sh:Warning ;
+        sh:message  "Upper secondary qualifications are typically EQF 3 or 4."@en ;
+    ] .
+
+euusc:AwardingProcessShape
+    a sh:NodeShape ;
+    sh:property [
+        sh:path     elm:awardingBody ;
+        sh:minCount 1 ;
+        sh:node     euusc:AwardingBodyShape ;
+        sh:severity sh:Violation ;
+        sh:message  "AwardingProcess must include elm:awardingBody."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:awardingDate ;
+        sh:minCount 1 ; sh:datatype xsd:dateTime ;
+        sh:severity sh:Violation ;
+        sh:message  "AwardingProcess must include elm:awardingDate."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:location ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "AwardingProcess must include elm:location."@en ;
+    ] .
+
+euusc:AwardingBodyShape
+    a sh:NodeShape ;
+    sh:property [
+        sh:path     rov:legalName ;
+        sh:minCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message  "Recommended: include rov:legalName on awardingBody."@en ;
+    ] .
+
+euusc:EntitlementShape
+    a sh:NodeShape ;
+    sh:property [
+        sh:path     rdf:type ;
+        sh:hasValue elm:LearningEntitlement ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "entitlesTo node must be of type elm:LearningEntitlement."@en ;
+    ] ;
+    sh:property [
+        sh:path     dc:title ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "LearningEntitlement must have a dc:title."@en ;
+    ] .
+
+# =============================================================================
+# END OF FILE
+# =============================================================================

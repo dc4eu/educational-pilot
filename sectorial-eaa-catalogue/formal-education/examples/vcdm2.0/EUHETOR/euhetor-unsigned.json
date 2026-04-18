@@ -1,0 +1,720 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "http://data.europa.eu/snb/model/context/edc-ap"
+  ],
+  "id": "urn:uuid:d4e5f6a7-tor0-4abc-bdef-345678901234",
+  "type": [
+    "VerifiableCredential",
+    "VerifiableAttestation",
+    "EuropeanDigitalCredential",
+    "EuropeanHigherEducationTranscriptOfRecords"
+  ],
+  "identifier": [
+    {
+      "id": "urn:identifier:EUHETOR-2025-00001",
+      "type": "Identifier",
+      "notation": "EUHETOR-2025-00001",
+      "schemeAgency": {
+        "en": "University of Barcelona"
+      },
+      "dateIssued": "2025-07-15T10:00:00Z"
+    }
+  ],
+  "credentialProfiles": [
+    {
+      "id": "http://data.europa.eu/snb/credential/transcriptOfRecords",
+      "type": "Concept",
+      "skos:prefLabel": {
+        "en": "Higher Education Transcript of Records"
+      }
+    }
+  ],
+  "issuer": {
+    "id": "did:ebsi:zABC987654321XYZ",
+    "type": "Organisation",
+    "elm:legalName": {
+      "en": "University of Barcelona"
+    },
+    "elm:eidasLegalIdentifier": {
+      "type": "LegalIdentifier",
+      "skos:notation": "ES-A-08015510",
+      "dc:spatial": {
+        "id": "http://publications.europa.eu/resource/authority/country/ESP"
+      }
+    },
+    "elm:location": {
+      "id": "urn:location:university-barcelona",
+      "type": "Location",
+      "elm:address": [
+        {
+          "id": "urn:address:university-barcelona",
+          "type": "Address",
+          "elm:countryCode": {
+            "id": "http://publications.europa.eu/resource/authority/country/ESP",
+            "type": "Concept",
+            "skos:notation": "ESP"
+          },
+          "elm:fullAddress": {
+            "id": "urn:note:address-ub",
+            "type": "Note",
+            "elm:noteLiteral": {
+              "en": "Gran Via de les Corts Catalanes, 585, 08007 Barcelona, Spain"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "elm:wasDerivedFrom": {
+    "id": "urn:uuid:b2c3d4e5-euhe-4abc-9def-123456789012",
+    "type": "EuropeanHigherEducationDiploma",
+    "dc:identifier": "EUHED-2025-00001"
+  },
+  "elm:temporal": {
+    "type": "PeriodOfTime",
+    "elm:startDate": "2023-09-01T00:00:00Z",
+    "elm:endDate": "2025-07-15T00:00:00Z"
+  },
+  "credentialSubject": {
+    "id": "did:ebsi:zJaneDoe456",
+    "type": "Person",
+    "elm:dateOfBirth": "1998-11-20T00:00:00Z",
+    "elm:familyName": {
+      "en": "Smith"
+    },
+    "elm:givenName": {
+      "en": "Jane"
+    },
+    "elm:hasClaim": [
+      {
+        "id": "urn:claim:y1-ds-foundations",
+        "type": "LearningAchievement",
+        "dc:title": {
+          "en": "Year 1 – Foundations of Data Science"
+        },
+        "elm:awardedBy": {
+          "id": "urn:awarding:ub-diploma-2025",
+          "type": "AwardingProcess",
+          "elm:awardingBody": {
+            "id": "did:ebsi:zABC987654321XYZ",
+            "type": "Organisation",
+            "elm:legalName": {
+              "en": "University of Barcelona"
+            },
+            "elm:location": {
+              "id": "urn:location:university-barcelona",
+              "type": "Location",
+              "elm:address": [
+                {
+                  "id": "urn:address:university-barcelona",
+                  "type": "Address",
+                  "elm:countryCode": {
+                    "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                    "type": "Concept",
+                    "skos:notation": "ESP"
+                  }
+                }
+              ]
+            }
+          },
+          "elm:awardingDate": "2025-07-15T10:00:00Z",
+          "elm:location": {
+            "id": "urn:location:university-barcelona",
+            "type": "Location",
+            "elm:address": [
+              {
+                "id": "urn:address:university-barcelona",
+                "type": "Address",
+                "elm:countryCode": {
+                  "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                  "type": "Concept",
+                  "skos:notation": "ESP"
+                }
+              }
+            ]
+          }
+        },
+        "elm:specifiedBy": {
+          "id": "urn:spec:y1-ds-foundations",
+          "type": "LearningAchievementSpecification",
+          "dc:title": {
+            "en": "Year 1 – Foundations of Data Science – Specification"
+          },
+          "elm:creditPoint": [
+            {
+              "id": "urn:credit:y1-ds-foundations",
+              "type": "CreditPoint",
+              "elm:framework": {
+                "id": "http://data.europa.eu/snb/education-credit/6fcec5c425",
+                "type": "Concept",
+                "skos:notation": "ECTS"
+              },
+              "elm:point": "10"
+            }
+          ]
+        },
+        "elm:provenBy": [
+          {
+            "id": "urn:assessment:y1-ds-foundations",
+            "type": "LearningAssessment",
+            "dc:title": {
+              "en": "Year 1 – Foundations of Data Science – Final Exam"
+            },
+            "elm:grade": {
+              "id": "urn:grade:y1-ds-foundations",
+              "type": "Note",
+              "elm:noteLiteral": {
+                "en": "8.5 / 10"
+              }
+            },
+            "elm:awardedBy": {
+              "id": "urn:awarding:ub-diploma-2025",
+              "type": "AwardingProcess",
+              "elm:awardingBody": {
+                "id": "did:ebsi:zABC987654321XYZ",
+                "type": "Organisation",
+                "elm:legalName": {
+                  "en": "University of Barcelona"
+                },
+                "elm:location": {
+                  "id": "urn:location:university-barcelona",
+                  "type": "Location",
+                  "elm:address": [
+                    {
+                      "id": "urn:address:university-barcelona",
+                      "type": "Address",
+                      "elm:countryCode": {
+                        "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                        "type": "Concept",
+                        "skos:notation": "ESP"
+                      }
+                    }
+                  ]
+                }
+              },
+              "elm:awardingDate": "2025-07-15T10:00:00Z",
+              "elm:location": {
+                "id": "urn:location:university-barcelona",
+                "type": "Location",
+                "elm:address": [
+                  {
+                    "id": "urn:address:university-barcelona",
+                    "type": "Address",
+                    "elm:countryCode": {
+                      "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                      "type": "Concept",
+                      "skos:notation": "ESP"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "elm:creditReceived": [
+          {
+            "id": "urn:credit-recv:y1-ds-foundations",
+            "type": "CreditPoint",
+            "elm:framework": {
+              "id": "http://data.europa.eu/snb/education-credit/6fcec5c425",
+              "type": "Concept",
+              "skos:notation": "ECTS"
+            },
+            "elm:point": "10"
+          }
+        ]
+      },
+      {
+        "id": "urn:claim:y1-stats",
+        "type": "LearningAchievement",
+        "dc:title": {
+          "en": "Year 1 – Statistical Inference"
+        },
+        "elm:awardedBy": {
+          "id": "urn:awarding:ub-diploma-2025",
+          "type": "AwardingProcess",
+          "elm:awardingBody": {
+            "id": "did:ebsi:zABC987654321XYZ",
+            "type": "Organisation",
+            "elm:legalName": {
+              "en": "University of Barcelona"
+            },
+            "elm:location": {
+              "id": "urn:location:university-barcelona",
+              "type": "Location",
+              "elm:address": [
+                {
+                  "id": "urn:address:university-barcelona",
+                  "type": "Address",
+                  "elm:countryCode": {
+                    "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                    "type": "Concept",
+                    "skos:notation": "ESP"
+                  }
+                }
+              ]
+            }
+          },
+          "elm:awardingDate": "2025-07-15T10:00:00Z",
+          "elm:location": {
+            "id": "urn:location:university-barcelona",
+            "type": "Location",
+            "elm:address": [
+              {
+                "id": "urn:address:university-barcelona",
+                "type": "Address",
+                "elm:countryCode": {
+                  "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                  "type": "Concept",
+                  "skos:notation": "ESP"
+                }
+              }
+            ]
+          }
+        },
+        "elm:specifiedBy": {
+          "id": "urn:spec:y1-stats",
+          "type": "LearningAchievementSpecification",
+          "dc:title": {
+            "en": "Year 1 – Statistical Inference – Specification"
+          },
+          "elm:creditPoint": [
+            {
+              "id": "urn:credit:y1-stats",
+              "type": "CreditPoint",
+              "elm:framework": {
+                "id": "http://data.europa.eu/snb/education-credit/6fcec5c425",
+                "type": "Concept",
+                "skos:notation": "ECTS"
+              },
+              "elm:point": "10"
+            }
+          ]
+        },
+        "elm:provenBy": [
+          {
+            "id": "urn:assessment:y1-stats",
+            "type": "LearningAssessment",
+            "dc:title": {
+              "en": "Year 1 – Statistical Inference – Final Exam"
+            },
+            "elm:grade": {
+              "id": "urn:grade:y1-stats",
+              "type": "Note",
+              "elm:noteLiteral": {
+                "en": "9.0 / 10"
+              }
+            },
+            "elm:awardedBy": {
+              "id": "urn:awarding:ub-diploma-2025",
+              "type": "AwardingProcess",
+              "elm:awardingBody": {
+                "id": "did:ebsi:zABC987654321XYZ",
+                "type": "Organisation",
+                "elm:legalName": {
+                  "en": "University of Barcelona"
+                },
+                "elm:location": {
+                  "id": "urn:location:university-barcelona",
+                  "type": "Location",
+                  "elm:address": [
+                    {
+                      "id": "urn:address:university-barcelona",
+                      "type": "Address",
+                      "elm:countryCode": {
+                        "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                        "type": "Concept",
+                        "skos:notation": "ESP"
+                      }
+                    }
+                  ]
+                }
+              },
+              "elm:awardingDate": "2025-07-15T10:00:00Z",
+              "elm:location": {
+                "id": "urn:location:university-barcelona",
+                "type": "Location",
+                "elm:address": [
+                  {
+                    "id": "urn:address:university-barcelona",
+                    "type": "Address",
+                    "elm:countryCode": {
+                      "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                      "type": "Concept",
+                      "skos:notation": "ESP"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "elm:creditReceived": [
+          {
+            "id": "urn:credit-recv:y1-stats",
+            "type": "CreditPoint",
+            "elm:framework": {
+              "id": "http://data.europa.eu/snb/education-credit/6fcec5c425",
+              "type": "Concept",
+              "skos:notation": "ECTS"
+            },
+            "elm:point": "10"
+          }
+        ]
+      },
+      {
+        "id": "urn:claim:y2-ml",
+        "type": "LearningAchievement",
+        "dc:title": {
+          "en": "Year 2 – Advanced Machine Learning"
+        },
+        "elm:awardedBy": {
+          "id": "urn:awarding:ub-diploma-2025",
+          "type": "AwardingProcess",
+          "elm:awardingBody": {
+            "id": "did:ebsi:zABC987654321XYZ",
+            "type": "Organisation",
+            "elm:legalName": {
+              "en": "University of Barcelona"
+            },
+            "elm:location": {
+              "id": "urn:location:university-barcelona",
+              "type": "Location",
+              "elm:address": [
+                {
+                  "id": "urn:address:university-barcelona",
+                  "type": "Address",
+                  "elm:countryCode": {
+                    "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                    "type": "Concept",
+                    "skos:notation": "ESP"
+                  }
+                }
+              ]
+            }
+          },
+          "elm:awardingDate": "2025-07-15T10:00:00Z",
+          "elm:location": {
+            "id": "urn:location:university-barcelona",
+            "type": "Location",
+            "elm:address": [
+              {
+                "id": "urn:address:university-barcelona",
+                "type": "Address",
+                "elm:countryCode": {
+                  "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                  "type": "Concept",
+                  "skos:notation": "ESP"
+                }
+              }
+            ]
+          }
+        },
+        "elm:specifiedBy": {
+          "id": "urn:spec:y2-ml",
+          "type": "LearningAchievementSpecification",
+          "dc:title": {
+            "en": "Year 2 – Advanced Machine Learning – Specification"
+          },
+          "elm:creditPoint": [
+            {
+              "id": "urn:credit:y2-ml",
+              "type": "CreditPoint",
+              "elm:framework": {
+                "id": "http://data.europa.eu/snb/education-credit/6fcec5c425",
+                "type": "Concept",
+                "skos:notation": "ECTS"
+              },
+              "elm:point": "15"
+            }
+          ]
+        },
+        "elm:provenBy": [
+          {
+            "id": "urn:assessment:y2-ml",
+            "type": "LearningAssessment",
+            "dc:title": {
+              "en": "Year 2 – Advanced Machine Learning – Final Exam"
+            },
+            "elm:grade": {
+              "id": "urn:grade:y2-ml",
+              "type": "Note",
+              "elm:noteLiteral": {
+                "en": "8.0 / 10"
+              }
+            },
+            "elm:awardedBy": {
+              "id": "urn:awarding:ub-diploma-2025",
+              "type": "AwardingProcess",
+              "elm:awardingBody": {
+                "id": "did:ebsi:zABC987654321XYZ",
+                "type": "Organisation",
+                "elm:legalName": {
+                  "en": "University of Barcelona"
+                },
+                "elm:location": {
+                  "id": "urn:location:university-barcelona",
+                  "type": "Location",
+                  "elm:address": [
+                    {
+                      "id": "urn:address:university-barcelona",
+                      "type": "Address",
+                      "elm:countryCode": {
+                        "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                        "type": "Concept",
+                        "skos:notation": "ESP"
+                      }
+                    }
+                  ]
+                }
+              },
+              "elm:awardingDate": "2025-07-15T10:00:00Z",
+              "elm:location": {
+                "id": "urn:location:university-barcelona",
+                "type": "Location",
+                "elm:address": [
+                  {
+                    "id": "urn:address:university-barcelona",
+                    "type": "Address",
+                    "elm:countryCode": {
+                      "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                      "type": "Concept",
+                      "skos:notation": "ESP"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "elm:creditReceived": [
+          {
+            "id": "urn:credit-recv:y2-ml",
+            "type": "CreditPoint",
+            "elm:framework": {
+              "id": "http://data.europa.eu/snb/education-credit/6fcec5c425",
+              "type": "Concept",
+              "skos:notation": "ECTS"
+            },
+            "elm:point": "15"
+          }
+        ]
+      },
+      {
+        "id": "urn:claim:y2-thesis",
+        "type": "LearningAchievement",
+        "dc:title": {
+          "en": "Year 2 – MSc Dissertation"
+        },
+        "elm:awardedBy": {
+          "id": "urn:awarding:ub-diploma-2025",
+          "type": "AwardingProcess",
+          "elm:awardingBody": {
+            "id": "did:ebsi:zABC987654321XYZ",
+            "type": "Organisation",
+            "elm:legalName": {
+              "en": "University of Barcelona"
+            },
+            "elm:location": {
+              "id": "urn:location:university-barcelona",
+              "type": "Location",
+              "elm:address": [
+                {
+                  "id": "urn:address:university-barcelona",
+                  "type": "Address",
+                  "elm:countryCode": {
+                    "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                    "type": "Concept",
+                    "skos:notation": "ESP"
+                  }
+                }
+              ]
+            }
+          },
+          "elm:awardingDate": "2025-07-15T10:00:00Z",
+          "elm:location": {
+            "id": "urn:location:university-barcelona",
+            "type": "Location",
+            "elm:address": [
+              {
+                "id": "urn:address:university-barcelona",
+                "type": "Address",
+                "elm:countryCode": {
+                  "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                  "type": "Concept",
+                  "skos:notation": "ESP"
+                }
+              }
+            ]
+          }
+        },
+        "elm:specifiedBy": {
+          "id": "urn:spec:y2-thesis",
+          "type": "LearningAchievementSpecification",
+          "dc:title": {
+            "en": "Year 2 – MSc Dissertation – Specification"
+          },
+          "elm:creditPoint": [
+            {
+              "id": "urn:credit:y2-thesis",
+              "type": "CreditPoint",
+              "elm:framework": {
+                "id": "http://data.europa.eu/snb/education-credit/6fcec5c425",
+                "type": "Concept",
+                "skos:notation": "ECTS"
+              },
+              "elm:point": "30"
+            }
+          ]
+        },
+        "elm:provenBy": [
+          {
+            "id": "urn:assessment:y2-thesis",
+            "type": "LearningAssessment",
+            "dc:title": {
+              "en": "Year 2 – MSc Dissertation – Final Exam"
+            },
+            "elm:grade": {
+              "id": "urn:grade:y2-thesis",
+              "type": "Note",
+              "elm:noteLiteral": {
+                "en": "9.5 / 10"
+              }
+            },
+            "elm:awardedBy": {
+              "id": "urn:awarding:ub-diploma-2025",
+              "type": "AwardingProcess",
+              "elm:awardingBody": {
+                "id": "did:ebsi:zABC987654321XYZ",
+                "type": "Organisation",
+                "elm:legalName": {
+                  "en": "University of Barcelona"
+                },
+                "elm:location": {
+                  "id": "urn:location:university-barcelona",
+                  "type": "Location",
+                  "elm:address": [
+                    {
+                      "id": "urn:address:university-barcelona",
+                      "type": "Address",
+                      "elm:countryCode": {
+                        "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                        "type": "Concept",
+                        "skos:notation": "ESP"
+                      }
+                    }
+                  ]
+                }
+              },
+              "elm:awardingDate": "2025-07-15T10:00:00Z",
+              "elm:location": {
+                "id": "urn:location:university-barcelona",
+                "type": "Location",
+                "elm:address": [
+                  {
+                    "id": "urn:address:university-barcelona",
+                    "type": "Address",
+                    "elm:countryCode": {
+                      "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                      "type": "Concept",
+                      "skos:notation": "ESP"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "elm:creditReceived": [
+          {
+            "id": "urn:credit-recv:y2-thesis",
+            "type": "CreditPoint",
+            "elm:framework": {
+              "id": "http://data.europa.eu/snb/education-credit/6fcec5c425",
+              "type": "Concept",
+              "skos:notation": "ECTS"
+            },
+            "elm:point": "30"
+          }
+        ]
+      }
+    ]
+  },
+  "issued": "2025-07-15T10:00:00Z",
+  "validFrom": "2025-07-15T10:00:00Z",
+  "credentialSchema": [
+    {
+      "id": "https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/0x1e4611fdfba89c9f2f4c3b5d7e8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a",
+      "type": "JsonSchema"
+    },
+    {
+      "id": "https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/PENDING_TSR_REGISTRATION_EUHETOR",
+      "type": "ShaclValidator2017"
+    }
+  ],
+  "credentialStatus": [
+    {
+      "id": "urn:status:d4e5f6a7-tor0-4abc-bdef-345678901234",
+      "type": "StatusList2021Entry",
+      "statusPurpose": "revocation",
+      "statusListIndex": "0",
+      "statusListCredential": "https://api-pilot.ebsi.eu/status-list/2025/07"
+    }
+  ],
+  "elm:displayParameter": {
+    "id": "urn:display:euhetor-jane-2025",
+    "type": "DisplayParameter",
+    "dc:title": {
+      "en": "Transcript of Records – MSc Data Science"
+    },
+    "dc:description": {
+      "en": "Official transcript of academic results achieved by Jane Smith during the MSc in Data Science programme."
+    },
+    "dc:language": [
+      {
+        "id": "http://publications.europa.eu/resource/authority/language/ENG",
+        "type": "Concept",
+        "skos:notation": "ENG"
+      }
+    ],
+    "elm:primaryLanguage": {
+      "id": "http://publications.europa.eu/resource/authority/language/ENG",
+      "type": "Concept",
+      "skos:notation": "ENG"
+    },
+    "elm:individualDisplay": [
+      {
+        "id": "urn:display:individual-1",
+        "type": "IndividualDisplay",
+        "dc:language": {
+          "id": "http://publications.europa.eu/resource/authority/language/ENG",
+          "type": "Concept",
+          "skos:notation": "ENG"
+        },
+        "elm:displayDetail": [
+          {
+            "id": "urn:display:detail-1",
+            "type": "DisplayDetail",
+            "elm:image": {
+              "id": "urn:media:certificate-image",
+              "type": "MediaObject",
+              "elm:contentType": {
+                "id": "http://publications.europa.eu/resource/authority/file-type/PNG",
+                "type": "Concept",
+                "skos:notation": "PNG"
+              },
+              "elm:contentEncoding": {
+                "id": "http://data.europa.eu/snb/encoding/6146cde7dd",
+                "type": "Concept",
+                "skos:notation": "base64"
+              },
+              "elm:content": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAACklEQVR4nGMAAQAABQABDQottAAAAABJRU5ErkJggg=="
+            },
+            "elm:page": 1
+          }
+        ]
+      }
+    ]
+  }
+}

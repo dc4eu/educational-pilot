@@ -1,0 +1,235 @@
+# =============================================================================
+# SHACL Shape: European Upper Secondary Transcript of Records
+# Profile:     EuropeanUpperSecondaryTranscriptOfRecords
+# Version:     1.0.0
+# Date:        2026-04-12
+# Base schema: https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/
+#              0xaf7975b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1
+# Licence:     CC BY 4.0
+#
+# Profile differentiators vs Upper Secondary Certificate (euusc_shacl.ttl):
+#   1. Type: EuropeanUpperSecondaryTranscriptOfRecords
+#   2. wasDerivedFrom: MANDATORY – references parent EUUSC credential
+#   3. hasClaim: per-subject results with grades (LearningAchievement + provenBy)
+#   4. No ECTS (upper secondary national grading)
+#   5. elm:gradingScheme: recommended (Warning) – national grade scale description
+#   6. elm:temporal: recommended (covers academic year or period)
+#
+# vs EUHETOR: same wasDerivedFrom + hasClaim + provenBy structure,
+#   but no ECTS, added gradingScheme, and EQF level 3–4 range warning.
+# =============================================================================
+
+@prefix sh:      <http://www.w3.org/ns/shacl#> .
+@prefix elm:     <http://data.europa.eu/snb/model/elm/> .
+@prefix cred:    <https://www.w3.org/2018/credentials#> .
+@prefix dc:      <http://purl.org/dc/terms/> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rov:     <http://www.w3.org/ns/regorg#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix euustor: <https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/shacl/euustor#> .
+
+euustor:CredentialShape
+    a sh:NodeShape ;
+    sh:targetClass elm:EuropeanDigitalCredential ;
+    sh:name "European Upper Secondary Transcript of Records – SHACL Profile"@en ;
+    sh:description "Level-3 constraints for EuropeanUpperSecondaryTranscriptOfRecords under ELM 3.2 / W3C-VC 2.0 / eIDAS 2.0."@en ;
+
+    sh:property [
+        sh:path     rdf:type ;
+        sh:hasValue elm:EuropeanUpperSecondaryTranscriptOfRecords ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "Credential must declare elm:EuropeanUpperSecondaryTranscriptOfRecords."@en ;
+    ] ;
+    sh:property [
+        sh:path     cred:credentialSchema ;
+        sh:minCount 2 ;
+        sh:severity sh:Violation ;
+        sh:message  "credentialSchema must contain at least two entries: JsonSchema and ShaclValidator2017."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:wasDerivedFrom ;
+        sh:minCount 1 ;
+        sh:node     euustor:DerivedFromShape ;
+        sh:severity sh:Violation ;
+        sh:message  "An Upper Secondary Transcript must reference the parent certificate via elm:wasDerivedFrom."@en ;
+    ] ;
+    sh:property [
+        sh:path     cred:issuer ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:node     euustor:IssuerShape ;
+        sh:severity sh:Violation ;
+        sh:message  "Credential must have exactly one issuer."@en ;
+    ] ;
+    sh:property [
+        sh:path     cred:credentialSubject ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:node     euustor:CredentialSubjectShape ;
+        sh:severity sh:Violation ;
+        sh:message  "Credential must have exactly one credentialSubject."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:temporal ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message  "Recommended: indicate the academic year or period covered (elm:temporal)."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:gradingScheme ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message  "Recommended: include a grading scheme description (elm:gradingScheme) to enable cross-border grade comparison."@en ;
+    ] .
+
+euustor:DerivedFromShape
+    a sh:NodeShape ;
+    sh:property [
+        sh:path     rdf:type ;
+        sh:hasValue elm:EuropeanUpperSecondaryCertificate ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "wasDerivedFrom target must be of type elm:EuropeanUpperSecondaryCertificate."@en ;
+    ] ;
+    sh:property [
+        sh:path     dc:identifier ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "The referenced parent certificate must carry a dc:identifier."@en ;
+    ] .
+
+euustor:IssuerShape
+    a sh:NodeShape ;
+    sh:property [
+        sh:path     elm:eidasLegalIdentifier ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:node     euustor:LegalIdentifierShape ;
+        sh:severity sh:Violation ;
+        sh:message  "Issuer must have exactly one eidasLegalIdentifier."@en ;
+    ] .
+
+euustor:LegalIdentifierShape
+    a sh:NodeShape ;
+    sh:property [
+        sh:path     skos:notation ;
+        sh:minCount 1 ; sh:datatype xsd:string ;
+        sh:severity sh:Violation ;
+        sh:message  "eidasLegalIdentifier must carry a skos:notation."@en ;
+    ] ;
+    sh:property [
+        sh:path     dc:spatial ;
+        sh:minCount 1 ; sh:nodeKind sh:IRI ;
+        sh:severity sh:Violation ;
+        sh:message  "Jurisdiction (dc:spatial) must be an IRI."@en ;
+    ] .
+
+euustor:CredentialSubjectShape
+    a sh:NodeShape ;
+    sh:property [
+        sh:path     elm:dateOfBirth ;
+        sh:minCount 1 ; sh:datatype xsd:dateTime ;
+        sh:severity sh:Violation ;
+        sh:message  "credentialSubject must include elm:dateOfBirth."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:hasClaim ;
+        sh:minCount 1 ;
+        sh:node     euustor:SubjectResultShape ;
+        sh:severity sh:Violation ;
+        sh:message  "Transcript must include at least one subject result via elm:hasClaim."@en ;
+    ] .
+
+euustor:SubjectResultShape
+    a sh:NodeShape ;
+    sh:property [
+        sh:path     rdf:type ;
+        sh:hasValue elm:LearningAchievement ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "hasClaim node must be of type elm:LearningAchievement."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:specifiedBy ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:node     euustor:SubjectSpecShape ;
+        sh:severity sh:Violation ;
+        sh:message  "Subject result must reference a subject specification via elm:specifiedBy."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:awardedBy ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:node     euustor:AwardingProcessShape ;
+        sh:severity sh:Violation ;
+        sh:message  "Subject result must have exactly one elm:awardedBy."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:provenBy ;
+        sh:minCount 1 ;
+        sh:node     euustor:LearningAssessmentShape ;
+        sh:severity sh:Violation ;
+        sh:message  "Each subject result must include at least one assessment (elm:provenBy)."@en ;
+    ] .
+
+euustor:SubjectSpecShape
+    a sh:NodeShape ;
+    sh:property [
+        sh:path     dc:title ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "Subject specification must have a dc:title."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:educationSubject ;
+        sh:severity sh:Warning ;
+        sh:message  "Recommended: include elm:educationSubject (ISCED-F code) on the subject specification."@en ;
+    ] .
+
+euustor:AwardingProcessShape
+    a sh:NodeShape ;
+    sh:property [
+        sh:path     elm:awardingBody ;
+        sh:minCount 1 ;
+        sh:node     euustor:AwardingBodyShape ;
+        sh:severity sh:Violation ;
+        sh:message  "AwardingProcess must include elm:awardingBody."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:awardingDate ;
+        sh:minCount 1 ; sh:datatype xsd:dateTime ;
+        sh:severity sh:Violation ;
+        sh:message  "AwardingProcess must include elm:awardingDate."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:location ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "AwardingProcess must include elm:location."@en ;
+    ] .
+
+euustor:AwardingBodyShape
+    a sh:NodeShape ;
+    sh:property [
+        sh:path     rov:legalName ;
+        sh:minCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message  "Recommended: include rov:legalName on awardingBody."@en ;
+    ] .
+
+euustor:LearningAssessmentShape
+    a sh:NodeShape ;
+    sh:property [
+        sh:path     elm:grade ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "LearningAssessment must include elm:grade."@en ;
+    ] ;
+    sh:property [
+        sh:path     elm:awardedBy ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message  "LearningAssessment must include elm:awardedBy."@en ;
+    ] .
+
+# =============================================================================
+# END OF FILE
+# =============================================================================

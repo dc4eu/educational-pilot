@@ -1,0 +1,337 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "http://data.europa.eu/snb/model/context/edc-ap"
+  ],
+  "id": "urn:uuid:7b8c9d0e-f12a-43b5-9c7d-558766221111",
+  "type": [
+    "VerifiableCredential",
+    "VerifiableAttestation",
+    "EuropeanDigitalCredential",
+    "EuropeanHigherEducationMicrocredential"
+  ],
+  "identifier": [
+    {
+      "id": "urn:identifier:123457789-MICRO-2025",
+      "type": "Identifier",
+      "notation": "123457789-MICRO-2025",
+      "schemeAgency": {
+        "en": "University of Barcelona"
+      },
+      "dateIssued": "2025-07-01T09:00:00Z"
+    }
+  ],
+  "credentialProfiles": [
+    {
+      "id": "http://data.europa.eu/snb/credential/e34929035b",
+      "type": "Concept",
+      "skos:prefLabel": {
+        "en": "Higher Education Microcredential"
+      }
+    }
+  ],
+  "issuer": {
+    "id": "did:ebsi:zABC987654321XYZ",
+    "type": "Organisation",
+    "elm:legalName": {
+      "en": "University of Barcelona"
+    },
+    "elm:eidasLegalIdentifier": {
+      "type": "LegalIdentifier",
+      "skos:notation": "ES-A-08015510",
+      "dc:spatial": {
+        "id": "http://publications.europa.eu/resource/authority/country/ESP"
+      }
+    },
+    "elm:location": {
+      "id": "urn:location:university-barcelona",
+      "type": "Location",
+      "elm:address": [
+        {
+          "id": "urn:address:university-barcelona",
+          "type": "Address",
+          "elm:countryCode": {
+            "id": "http://publications.europa.eu/resource/authority/country/ESP",
+            "type": "Concept",
+            "skos:notation": "ESP"
+          },
+          "elm:fullAddress": {
+            "id": "urn:note:address-ub",
+            "type": "Note",
+            "elm:noteLiteral": {
+              "en": "Gran Via de les Corts Catalanes, 585, 08007 Barcelona, Spain"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "credentialSubject": {
+    "id": "did:ebsi:123456789",
+    "type": "Person",
+    "elm:dateOfBirth": "1995-05-15T00:00:00Z",
+    "elm:familyName": {
+      "en": "Doe"
+    },
+    "elm:givenName": {
+      "en": "John"
+    },
+    "elm:hasClaim": [
+      {
+        "id": "urn:claim:digital-competences-micro",
+        "type": "LearningAchievement",
+        "dc:title": {
+          "en": "Microcredential in Digital Competences",
+          "es": "Microcredencial en Competencias Digitales"
+        },
+        "dc:description": {
+          "en": "Completion of a higher education microcredential programme in digital competences."
+        },
+        "elm:awardedBy": {
+          "id": "urn:awarding:university-barcelona-micro",
+          "type": "AwardingProcess",
+          "elm:awardingBody": {
+            "id": "did:ebsi:zABC987654321XYZ",
+            "type": "Organisation",
+            "elm:legalName": {
+              "en": "University of Barcelona"
+            },
+            "elm:location": {
+              "id": "urn:location:university-barcelona",
+              "type": "Location",
+              "elm:address": [
+                {
+                  "id": "urn:address:university-barcelona",
+                  "type": "Address",
+                  "elm:countryCode": {
+                    "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                    "type": "Concept",
+                    "skos:notation": "ESP"
+                  }
+                }
+              ]
+            }
+          },
+          "elm:awardingDate": "2025-07-01T09:00:00Z",
+          "elm:location": {
+            "id": "urn:location:university-barcelona",
+            "type": "Location",
+            "elm:address": [
+              {
+                "id": "urn:address:university-barcelona",
+                "type": "Address",
+                "elm:countryCode": {
+                  "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                  "type": "Concept",
+                  "skos:notation": "ESP"
+                }
+              }
+            ]
+          }
+        },
+        "elm:provenBy": [
+          {
+            "id": "urn:assessment:digital-competences",
+            "type": "LearningAssessment",
+            "dc:title": {
+              "en": "Digital Competences Assessment"
+            },
+            "elm:grade": {
+              "id": "urn:grade:digital-competences",
+              "type": "Note",
+              "elm:noteLiteral": {
+                "en": "Pass"
+              }
+            },
+            "elm:awardedBy": {
+              "id": "urn:awarding:assessment-barcelona",
+              "type": "AwardingProcess",
+              "elm:awardingBody": {
+                "id": "did:ebsi:zABC987654321XYZ",
+                "type": "Organisation",
+                "elm:legalName": {
+                  "en": "University of Barcelona"
+                },
+                "elm:location": {
+                  "id": "urn:location:university-barcelona",
+                  "type": "Location",
+                  "elm:address": [
+                    {
+                      "id": "urn:address:university-barcelona",
+                      "type": "Address",
+                      "elm:countryCode": {
+                        "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                        "type": "Concept",
+                        "skos:notation": "ESP"
+                      }
+                    }
+                  ]
+                }
+              },
+              "elm:awardingDate": "2025-07-01T09:00:00Z",
+              "elm:location": {
+                "id": "urn:location:university-barcelona",
+                "type": "Location",
+                "elm:address": [
+                  {
+                    "id": "urn:address:university-barcelona",
+                    "type": "Address",
+                    "elm:countryCode": {
+                      "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                      "type": "Concept",
+                      "skos:notation": "ESP"
+                    }
+                  }
+                ]
+              }
+            },
+            "elm:specifiedBy": {
+              "id": "urn:spec:assessment-digital-competences",
+              "type": "LearningAssessmentSpecification",
+              "dc:title": {
+                "en": "Digital Competences Assessment Specification"
+              }
+            }
+          }
+        ],
+        "elm:specifiedBy": {
+          "id": "urn:spec:digital-competences-micro",
+          "type": "LearningAchievementSpecification",
+          "dc:title": {
+            "en": "Qualification in Digital Competences",
+            "es": "Cualificación en Competencias Digitales"
+          },
+          "elm:EQFLevel": {
+            "id": "http://data.europa.eu/snb/eqf/6",
+            "type": "Concept",
+            "skos:notation": "6",
+            "skos:prefLabel": {
+              "en": "EQF Level 6"
+            },
+            "skos:inScheme": {
+              "id": "http://data.europa.eu/snb/eqf/25831c2",
+              "type": "ConceptScheme"
+            }
+          },
+          "elm:educationSubject": [
+            {
+              "id": "http://data.europa.eu/snb/isced-f/0610",
+              "type": "Concept",
+              "skos:notation": "0610",
+              "skos:prefLabel": {
+                "en": "ICT not further defined"
+              }
+            }
+          ],
+          "elm:mode": [
+            {
+              "id": "http://data.europa.eu/snb/learning-assessment/944fb5c5b9",
+              "type": "Concept",
+              "skos:prefLabel": {
+                "en": "Blended"
+              }
+            }
+          ],
+          "elm:creditPoint": [
+            {
+              "id": "urn:credit:ects-3",
+              "type": "CreditPoint",
+              "elm:framework": {
+                "id": "http://data.europa.eu/snb/education-credit/6fcec5c425",
+                "type": "Concept",
+                "skos:notation": "ECTS"
+              },
+              "elm:point": "3"
+            }
+          ]
+        },
+        "elm:creditReceived": [
+          {
+            "id": "urn:credit-received:ects-3",
+            "type": "CreditPoint",
+            "elm:framework": {
+              "id": "http://data.europa.eu/snb/education-credit/6fcec5c425",
+              "type": "Concept",
+              "skos:notation": "ECTS"
+            },
+            "elm:point": "3"
+          }
+        ]
+      }
+    ]
+  },
+  "issued": "2025-07-01T09:00:00Z",
+  "validFrom": "2025-07-01T09:00:00Z",
+  "credentialSchema": [
+    {
+      "id": "https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/0x05332a9dc53a4a26a15711262904f2a1dd081cf3da735350f42dac20426530a4",
+      "type": "JsonSchema"
+    },
+    {
+      "id": "https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/PENDING_TSR_REGISTRATION_HE_MICRO",
+      "type": "ShaclValidator2017"
+    }
+  ],
+  "credentialStatus": [
+    {
+      "id": "urn:status:7b8c9d0e-f12a-43b5-9c7d-558766221111",
+      "type": "StatusList2021Entry",
+      "statusPurpose": "revocation",
+      "statusListIndex": "0",
+      "statusListCredential": "https://api-pilot.ebsi.eu/status-list/2025/07"
+    }
+  ],
+  "elm:displayParameter": {
+    "id": "urn:display:john-doe-microcredential",
+    "type": "DisplayParameter",
+    "dc:title": {
+      "en": "Microcredential in Digital Competences",
+      "es": "Microcredencial en Competencias Digitales"
+    },
+    "dc:language": [
+      {
+        "id": "http://publications.europa.eu/resource/authority/language/ENG",
+        "type": "Concept",
+        "skos:notation": "ENG"
+      }
+    ],
+    "elm:primaryLanguage": {
+      "id": "http://publications.europa.eu/resource/authority/language/ENG",
+      "type": "Concept",
+      "skos:notation": "ENG"
+    },
+    "elm:individualDisplay": [
+      {
+        "id": "urn:display:individual-1",
+        "type": "IndividualDisplay",
+        "dc:language": {
+          "id": "http://publications.europa.eu/resource/authority/language/ENG",
+          "type": "Concept",
+          "skos:notation": "ENG"
+        },
+        "elm:displayDetail": [
+          {
+            "id": "urn:display:detail-1",
+            "type": "DisplayDetail",
+            "elm:image": {
+              "id": "urn:media:certificate-image",
+              "type": "MediaObject",
+              "elm:contentType": {
+                "id": "http://publications.europa.eu/resource/authority/file-type/PNG",
+                "type": "Concept",
+                "skos:notation": "PNG"
+              },
+              "elm:contentEncoding": {
+                "id": "http://data.europa.eu/snb/encoding/6146cde7dd",
+                "type": "Concept",
+                "skos:notation": "base64"
+              },
+              "elm:content": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAACklEQVR4nGMAAQAABQABDQottAAAAABJRU5ErkJggg=="
+            },
+            "elm:page": 1
+          }
+        ]
+      }
+    ]
+  }
+}

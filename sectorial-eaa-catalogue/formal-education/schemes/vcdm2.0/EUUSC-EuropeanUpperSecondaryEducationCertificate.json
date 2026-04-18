@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "European Upper Secondary Education Certificate (dual-schema v2)",
+  "description": "Extends the original Upper Secondary Certificate JSON Schema (0x901e24...) with a mandatory dual credentialSchema: JsonSchema + ShaclValidator2017. All credential logic is unchanged; only credentialSchema gains a structural constraint enforcing both validation layers.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/0x901e24612f601d3f6932b3d20ba50615cfd6d64ce4e8c263312b5c3c3b2f9623"
+    },
+    {
+      "type": "object",
+      "required": [
+        "credentialSchema"
+      ],
+      "properties": {
+        "credentialSchema": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "type"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "format": "uri"
+              },
+              "type": {
+                "type": "string",
+                "enum": [
+                  "JsonSchema",
+                  "ShaclValidator2017"
+                ]
+              }
+            },
+            "additionalProperties": false
+          },
+          "contains": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "const": "https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/0x901e24612f601d3f6932b3d20ba50615cfd6d64ce4e8c263312b5c3c3b2f9623"
+              },
+              "type": {
+                "const": "JsonSchema"
+              }
+            },
+            "required": [
+              "id",
+              "type"
+            ]
+          },
+          "allOf": [
+            {
+              "contains": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "const": "https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/PENDING_TSR_REGISTRATION_UPPER_SEC"
+                  },
+                  "type": {
+                    "const": "ShaclValidator2017"
+                  }
+                },
+                "required": [
+                  "id",
+                  "type"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

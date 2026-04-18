@@ -1,0 +1,337 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "http://data.europa.eu/snb/model/context/edc-ap"
+  ],
+  "id": "urn:uuid:9c1d2e3f-a45b-67c8-9d0e-112233445566",
+  "type": [
+    "VerifiableCredential",
+    "VerifiableAttestation",
+    "EuropeanDigitalCredential",
+    "EuropeanVocationalEducationTrainingMicrocredential"
+  ],
+  "identifier": [
+    {
+      "id": "urn:identifier:987654321-VETMC-2025",
+      "type": "Identifier",
+      "notation": "987654321-VETMC-2025",
+      "schemeAgency": {
+        "en": "Barcelona Vocational Training Centre"
+      },
+      "dateIssued": "2025-07-01T09:00:00Z"
+    }
+  ],
+  "credentialProfiles": [
+    {
+      "id": "http://data.europa.eu/snb/credential/f2a3b4c5d6",
+      "type": "Concept",
+      "skos:prefLabel": {
+        "en": "VET Microcredential"
+      }
+    }
+  ],
+  "issuer": {
+    "id": "did:ebsi:zABC987654321XYZ",
+    "type": "Organisation",
+    "elm:legalName": {
+      "en": "Barcelona Vocational Training Centre"
+    },
+    "elm:eidasLegalIdentifier": {
+      "type": "LegalIdentifier",
+      "skos:notation": "ES-A-08123456",
+      "dc:spatial": {
+        "id": "http://publications.europa.eu/resource/authority/country/ESP"
+      }
+    },
+    "elm:location": {
+      "id": "urn:location:bvtc-barcelona",
+      "type": "Location",
+      "elm:address": [
+        {
+          "id": "urn:address:bvtc-barcelona",
+          "type": "Address",
+          "elm:countryCode": {
+            "id": "http://publications.europa.eu/resource/authority/country/ESP",
+            "type": "Concept",
+            "skos:notation": "ESP"
+          },
+          "elm:fullAddress": {
+            "id": "urn:note:address-bvtc",
+            "type": "Note",
+            "elm:noteLiteral": {
+              "en": "Carrer de la Industria, 45, 08025 Barcelona, Spain"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "credentialSubject": {
+    "id": "did:ebsi:987654321abc",
+    "type": "Person",
+    "elm:dateOfBirth": "1998-03-22T00:00:00Z",
+    "elm:familyName": {
+      "en": "Smith"
+    },
+    "elm:givenName": {
+      "en": "Jane"
+    },
+    "elm:hasClaim": [
+      {
+        "id": "urn:claim:industrial-automation-vet",
+        "type": "LearningAchievement",
+        "dc:title": {
+          "en": "Microcredential in Industrial Automation",
+          "es": "Microcredencial en Automatización Industrial"
+        },
+        "dc:description": {
+          "en": "Completion of a VET microcredential programme in industrial automation, covering PLC programming, sensor integration, and automated process control."
+        },
+        "elm:awardedBy": {
+          "id": "urn:awarding:bvtc-vetmc",
+          "type": "AwardingProcess",
+          "elm:awardingBody": {
+            "id": "did:ebsi:zABC987654321XYZ",
+            "type": "Organisation",
+            "elm:legalName": {
+              "en": "Barcelona Vocational Training Centre"
+            },
+            "elm:location": {
+              "id": "urn:location:bvtc-barcelona",
+              "type": "Location",
+              "elm:address": [
+                {
+                  "id": "urn:address:bvtc-barcelona",
+                  "type": "Address",
+                  "elm:countryCode": {
+                    "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                    "type": "Concept",
+                    "skos:notation": "ESP"
+                  }
+                }
+              ]
+            }
+          },
+          "elm:awardingDate": "2025-07-01T09:00:00Z",
+          "elm:location": {
+            "id": "urn:location:bvtc-barcelona",
+            "type": "Location",
+            "elm:address": [
+              {
+                "id": "urn:address:bvtc-barcelona",
+                "type": "Address",
+                "elm:countryCode": {
+                  "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                  "type": "Concept",
+                  "skos:notation": "ESP"
+                }
+              }
+            ]
+          }
+        },
+        "elm:provenBy": [
+          {
+            "id": "urn:assessment:industrial-automation",
+            "type": "LearningAssessment",
+            "dc:title": {
+              "en": "Industrial Automation Practical Assessment"
+            },
+            "elm:grade": {
+              "id": "urn:grade:industrial-automation",
+              "type": "Note",
+              "elm:noteLiteral": {
+                "en": "Merit"
+              }
+            },
+            "elm:awardedBy": {
+              "id": "urn:awarding:assessment-bvtc",
+              "type": "AwardingProcess",
+              "elm:awardingBody": {
+                "id": "did:ebsi:zABC987654321XYZ",
+                "type": "Organisation",
+                "elm:legalName": {
+                  "en": "Barcelona Vocational Training Centre"
+                },
+                "elm:location": {
+                  "id": "urn:location:bvtc-barcelona",
+                  "type": "Location",
+                  "elm:address": [
+                    {
+                      "id": "urn:address:bvtc-barcelona",
+                      "type": "Address",
+                      "elm:countryCode": {
+                        "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                        "type": "Concept",
+                        "skos:notation": "ESP"
+                      }
+                    }
+                  ]
+                }
+              },
+              "elm:awardingDate": "2025-07-01T09:00:00Z",
+              "elm:location": {
+                "id": "urn:location:bvtc-barcelona",
+                "type": "Location",
+                "elm:address": [
+                  {
+                    "id": "urn:address:bvtc-barcelona",
+                    "type": "Address",
+                    "elm:countryCode": {
+                      "id": "http://publications.europa.eu/resource/authority/country/ESP",
+                      "type": "Concept",
+                      "skos:notation": "ESP"
+                    }
+                  }
+                ]
+              }
+            },
+            "elm:specifiedBy": {
+              "id": "urn:spec:assessment-industrial-automation",
+              "type": "LearningAssessmentSpecification",
+              "dc:title": {
+                "en": "Industrial Automation Assessment Specification"
+              }
+            }
+          }
+        ],
+        "elm:specifiedBy": {
+          "id": "urn:spec:industrial-automation-vet",
+          "type": "LearningAchievementSpecification",
+          "dc:title": {
+            "en": "Qualification in Industrial Automation",
+            "es": "Cualificación en Automatización Industrial"
+          },
+          "elm:EQFLevel": {
+            "id": "http://data.europa.eu/snb/eqf/4",
+            "type": "Concept",
+            "skos:notation": "4",
+            "skos:prefLabel": {
+              "en": "EQF Level 4"
+            },
+            "skos:inScheme": {
+              "id": "http://data.europa.eu/snb/eqf/25831c2",
+              "type": "ConceptScheme"
+            }
+          },
+          "elm:educationSubject": [
+            {
+              "id": "http://data.europa.eu/snb/isced-f/0715",
+              "type": "Concept",
+              "skos:notation": "0715",
+              "skos:prefLabel": {
+                "en": "Mechanics and metal trades"
+              }
+            }
+          ],
+          "elm:mode": [
+            {
+              "id": "http://data.europa.eu/snb/learning-assessment/944fb5c5b9",
+              "type": "Concept",
+              "skos:prefLabel": {
+                "en": "Blended"
+              }
+            }
+          ],
+          "elm:creditPoint": [
+            {
+              "id": "urn:credit:ecvet-5",
+              "type": "CreditPoint",
+              "elm:framework": {
+                "id": "http://data.europa.eu/snb/education-credit/ECVET",
+                "type": "Concept",
+                "skos:notation": "ECVET"
+              },
+              "elm:point": "5"
+            }
+          ]
+        },
+        "elm:creditReceived": [
+          {
+            "id": "urn:credit-received:ecvet-5",
+            "type": "CreditPoint",
+            "elm:framework": {
+              "id": "http://data.europa.eu/snb/education-credit/ECVET",
+              "type": "Concept",
+              "skos:notation": "ECVET"
+            },
+            "elm:point": "5"
+          }
+        ]
+      }
+    ]
+  },
+  "issued": "2025-07-01T09:00:00Z",
+  "validFrom": "2025-07-01T09:00:00Z",
+  "credentialSchema": [
+    {
+      "id": "https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/0x690878adbdbc2c6b2865829003a1e34800df5d173d302ff11958836f8f977a26",
+      "type": "JsonSchema"
+    },
+    {
+      "id": "https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/PENDING_TSR_REGISTRATION_VET_MICRO",
+      "type": "ShaclValidator2017"
+    }
+  ],
+  "credentialStatus": [
+    {
+      "id": "urn:status:9c1d2e3f-a45b-67c8-9d0e-112233445566",
+      "type": "StatusList2021Entry",
+      "statusPurpose": "revocation",
+      "statusListIndex": "2",
+      "statusListCredential": "https://api-pilot.ebsi.eu/status-list/2025/07"
+    }
+  ],
+  "elm:displayParameter": {
+    "id": "urn:display:jane-smith-vetmc",
+    "type": "DisplayParameter",
+    "dc:title": {
+      "en": "Microcredential in Industrial Automation",
+      "es": "Microcredencial en Automatización Industrial"
+    },
+    "dc:language": [
+      {
+        "id": "http://publications.europa.eu/resource/authority/language/ENG",
+        "type": "Concept",
+        "skos:notation": "ENG"
+      }
+    ],
+    "elm:primaryLanguage": {
+      "id": "http://publications.europa.eu/resource/authority/language/ENG",
+      "type": "Concept",
+      "skos:notation": "ENG"
+    },
+    "elm:individualDisplay": [
+      {
+        "id": "urn:display:individual-1",
+        "type": "IndividualDisplay",
+        "dc:language": {
+          "id": "http://publications.europa.eu/resource/authority/language/ENG",
+          "type": "Concept",
+          "skos:notation": "ENG"
+        },
+        "elm:displayDetail": [
+          {
+            "id": "urn:display:detail-1",
+            "type": "DisplayDetail",
+            "elm:image": {
+              "id": "urn:media:vetmc-certificate-image",
+              "type": "MediaObject",
+              "elm:contentType": {
+                "id": "http://publications.europa.eu/resource/authority/file-type/PNG",
+                "type": "Concept",
+                "skos:notation": "PNG"
+              },
+              "elm:contentEncoding": {
+                "id": "http://data.europa.eu/snb/encoding/6146cde7dd",
+                "type": "Concept",
+                "skos:notation": "base64"
+              },
+              "elm:content": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAACklEQVR4nGMAAQAABQABDQottAAAAABJRU5ErkJggg=="
+            },
+            "elm:page": 1
+          }
+        ]
+      }
+    ]
+  }
+}
