@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+._*
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build artefacts
+/build/
+/_site/
+/.jekyll-cache/

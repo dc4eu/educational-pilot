@@ -1,0 +1,151 @@
+# Annex A — Glossary
+
+This glossary collects the acronyms, technical terms and normative references used in the documentation. The purpose is to facilitate the reading of the text by diverse audiences (regulators, technical staff, persons in charge of educational quality assurance, institutional stakeholders).
+
+## A.1 Acronyms
+
+- **AAL** — Authenticator Assurance Level. Authenticator assurance level according to NIST SP 800-63B.
+- **AJV** — Another JSON Validator. JSON Schema validation library in JavaScript.
+- **AMT** — Attestation of Mandatory Training. Type in the Sectoral EAA Catalogue.
+- **API** — Application Programming Interface.
+- **APEL** — Accreditation of Prior Experiential Learning.
+- **BBS** — Cryptosuite Boneh-Boyen-Shacham. Used in `bbs-2023` over BLS12-381.
+- **BLS12-381** — Elliptic pairing curve used in BBS and other constructions.
+- **CBOR** — Concise Binary Object Representation (RFC 8949).
+- **CDDL** — Concise Data Definition Language (RFC 8610).
+- **CIR** — Commission Implementing Regulation.
+- **COSE** — CBOR Object Signing and Encryption.
+- **CPD** — Continuing Professional Development.
+- **CPS** — Certificate of Professional Skills. Type in the Sectoral EAA Catalogue.
+- **CRUE** — Conference of Rectors of Spanish Universities (Conferencia de Rectores de las Universidades Españolas).
+- **CTDL** — Credential Transparency Description Language (Credential Engine).
+- **DC4EU** — Digital Credentials for Europe, Large Scale Pilot funded by the Digital Europe Programme.
+- **DG** — Directorate-General (European Commission).
+- **DID** — Decentralised Identifier.
+- **dPKI** — decentralised Public Key Infrastructure.
+- **ECTS** — European Credit Transfer and Accumulation System.
+- **ECVET** — European Credit system for Vocational Education and Training.
+- **EAA** — (Qualified) Electronic Attestation of Attributes.
+- **EBSI** — European Blockchain Services Infrastructure.
+- **EDC** — European Digital Credentials for Learning.
+- **EDCT** — Europass Digital Credentials Transition (project).
+- **ELI** — European Legislation Identifier.
+- **ELM** — European Learning Model.
+- **ENQA** — European Association for Quality Assurance in Higher Education.
+- **EQAR** — European Quality Assurance Register for Higher Education.
+- **EQF** — European Qualifications Framework.
+- **ESCO** — European Skills, Competences, Qualifications and Occupations.
+- **ETSI** — European Telecommunications Standards Institute.
+- **ETSI TC ESI** — ETSI Technical Committee Electronic Signatures and Infrastructures.
+- **EUDIW** — European Digital Identity Wallet.
+- **EUHED** — European Higher Education Diploma. Type in the Sectoral EAA Catalogue.
+- **EUHEDS** — European Higher Education Diploma Supplement. Type in the Sectoral EAA Catalogue.
+- **EUHEMC** — European Higher Education Microcredential. Type in the Sectoral EAA Catalogue.
+- **EUHEPOE** — European Higher Education Proof of Enrolment. Type in the Sectoral EAA Catalogue.
+- **EUHETOR** — European Higher Education Transcript of Records. Type in the Sectoral EAA Catalogue.
+- **EUQAA** — European Quality Assurance Authorisation. Type in the Sectoral EAA Catalogue.
+- **EUSCC** — European Secondary Completion Certificate. Type in the Sectoral EAA Catalogue.
+- **EUUSC** — European University Student Card. Type in the Sectoral EAA Catalogue.
+- **EUUSTOR** — European University Short-Term Organised Response. Type in the Sectoral EAA Catalogue.
+- **EUVETMC** — European VET Microcredential. Type in the Sectoral EAA Catalogue.
+- **GDPR** — General Data Protection Regulation (Regulation (EU) 2016/679).
+- **HAIP** — High Assurance Interoperability Profile.
+- **IAL** — Identity Assurance Level.
+- **IETF** — Internet Engineering Task Force.
+- **IRI** — Internationalised Resource Identifier.
+- **ISCED-F** — International Standard Classification of Education, Fields.
+- **JOSE** — JSON Object Signing and Encryption.
+- **JSON** — JavaScript Object Notation.
+- **JSON-LD** — JSON for Linked Data (W3C Recommendation).
+- **JWT** — JSON Web Token.
+- **LER** — Learning and Employment Records.
+- **LoA** — Level of Assurance.
+- **LOTL** — List of Trusted Lists (EU).
+- **LSP** — Large Scale Pilot.
+- **mdoc** — Mobile Document (ISO/IEC 18013-5).
+- **NACE** — Nomenclature statistique des activités économiques dans la Communauté européenne.
+- **OWL** — Web Ontology Language.
+- **OID4VCI** — OpenID for Verifiable Credential Issuance.
+- **OID4VP** — OpenID for Verifiable Presentations.
+- **PID** — Personal Identification Data.
+- **PKI** — Public Key Infrastructure.
+- **PR** — Pull Request.
+- **PTC** — Professional Training Certificate. Type in the Sectoral EAA Catalogue.
+- **QSealC** — Qualified Electronic Seal Certificate.
+- **QTS** — Qualified Trust Service.
+- **QWAC** — Qualified Website Authentication Certificate.
+- **R** — Lifelong-learning requirement (R1–R10).
+- **RDF** — Resource Description Framework.
+- **RDFS** — RDF Schema.
+- **SD-JWT VC** — Selective Disclosure JSON Web Token Verifiable Credential (IETF OAuth WG).
+- **SIS** — Student Information System.
+- **SHACL** — Shapes Constraint Language (W3C Recommendation).
+- **SNB** — Sub-Namespace Base (Publications Office of the EU).
+- **SPARQL** — SPARQL Protocol and RDF Query Language.
+- **TAO** — Trusted Accreditation Organisation.
+- **TAOR** — Trusted Accreditation Organisations Registry (EBSI).
+- **TIR** — Trusted Issuers Registry (EBSI).
+- **TSR** — Trusted Schemas Registry (EBSI).
+- **U** — Unique capability of W3C-VCDM (U1–U15).
+- **EU** — European Union.
+- **URI** — Uniform Resource Identifier.
+- **URL** — Uniform Resource Locator.
+- **URV** — Universitat Rovira i Virgili.
+- **VC** — Verifiable Credential.
+- **VCDM** — Verifiable Credentials Data Model (W3C).
+- **VET** — Vocational Education and Training.
+- **VP** — Verifiable Presentation.
+- **W3C** — World Wide Web Consortium.
+
+## A.2 Technical terms
+
+- **`@context`**: JSON-LD attribute that declares the vocabularies and IRIs applicable to the serialisation. Determines the mapping from JSON to RDF and is the discriminant of the VCDM 1.1 ↔ VCDM 2.0 profile.
+- **Credential Integrity Proof**: cryptographic proof embedded in the credential. Two families: Data Integrity (with `proof` in JSON-LD) and JOSE/COSE (with JWT/CWT envelopes).
+- **Candidate Recommendation**: W3C process state in which the specification is considered technically stable and implementation is requested before the final Recommendation.
+- **Data Integrity**: family of W3C cryptosuites that sign the canonical RDF graph of the credential. Recommendations `ecdsa-rdfc-2019`, `eddsa-rdfc-2022`; Candidate `bbs-2023`.
+- **Derivation (BBS)**: cryptographic operation that produces, from a base signature, a presentable proof that is not correlatable with the base signature nor with other derivations.
+- **`digestMultibase`**: attribute that contains the hash of the referenced artefact encoded in multibase. Guarantees integrity of schemas and lists.
+- **`eidasLegalIdentifier`**: legal-person identifier under eIDAS (Implementing Regulation (EU) 2015/1501).
+- **Issuer**: entity that issues the credential; cryptographically signs the content; identified by a DID or a resolvable URI and, for qualified EAAs, by `eidasLegalIdentifier`.
+- **`FullJsonSchemaValidator2021`**: `credentialSchema` type that indicates application of JSON Schema Draft 2020-12 to the credential.
+- **Holder**: person or entity that holds the credential in their wallet and presents it to third parties.
+- **JSON-LD 1.1**: W3C Recommendation that defines JSON serialisation for RDF graphs with `@context` support.
+- **`LearningAchievement` (ELM)**: ELM class that represents an assessed learning achievement.
+- **LOA (Level of Assurance)**: level of assurance of identity and authentication (Low, Substantial, High) under Regulation 2024/1183.
+- **`Qualification` (ELM)**: ELM class that represents a formal qualification (degree, diploma, microcredential).
+- **Recommendation (W3C)**: final state of the W3C process; the specification is stable and endorsed by W3C.
+- **`ShaclValidator2017`**: `credentialSchema` type that indicates application of SHACL 1.0 to the RDF graph of the credential.
+- **`statusListCredential`**: URI of the status list referenced by `BitstringStatusListEntry`.
+- **`statusPurpose`**: purpose of the status entry; standardised values `"revocation"` and `"suspension"`.
+- **Trusted List (TL)**: national list of QTS under eIDAS; its aggregation at the European level is the LOTL.
+- **Unlinkability (cryptographic)**: property by which two presentations of the same credential cannot be correlated by the verifiers, not even under collusion.
+- **Verifiable Presentation (VP)**: envelope signed by the holder that contains one or more credentials or their BBS derivations.
+- **Verifier**: entity that receives the credential or presentation and executes the verification pipeline.
+
+## A.3 Abbreviated normative references
+
+- **Regulation 2024/1183** — Regulation (EU) 2024/1183 of the European Parliament and of the Council, of 11 April 2024, on European digital identity (eIDAS 2.0).
+- **CIR 2024/2977** — Commission Implementing Regulation (EU) 2024/2977, with Annex I on PID encoding.
+- **CIR 2024/2979** — Commission Implementing Regulation (EU) 2024/2979, with Annex V on interoperability rules.
+- **CIR 2024/2982** — Commission Implementing Regulation (EU) 2024/2982, on integrity and EUDIW Core (includes Article 3(10) on unlinkability).
+- **CIR 2015/1501** — Commission Implementing Regulation (EU) 2015/1501, on unique legal-person identifier.
+- **CIR 2015/1505** — Commission Implementing Regulation (EU) 2015/1505, on national Trusted Lists.
+- **Directive 2005/36/EC** — on the recognition of professional qualifications.
+- **GDPR (Regulation 2016/679)** — General Data Protection Regulation.
+- **Regulation (EU) 1025/2012** — on European standardisation.
+- **Council Recommendation of 2022** — on microcredentials for lifelong learning and employability.
+- **ETSI TS 119 472-1 V1.1.1** — ETSI technical profile, clause 7 dedicated to W3C-VC.
+- **ETSI TS 119 472-3** — (under development) OID4VCI flow in the ETSI ecosystem.
+- **W3C VCDM 1.1** — Verifiable Credentials Data Model 1.1 (W3C Recommendation).
+- **W3C VCDM 2.0** — Verifiable Credentials Data Model 2.0 (W3C Recommendation, 15 May 2025).
+- **W3C VC-Data-Integrity** — W3C Recommendation of 15 May 2025.
+- **W3C VC-JOSE-COSE** — W3C Recommendation of 15 May 2025.
+- **W3C Bitstring Status List v1.0** — W3C Recommendation of 15 May 2025.
+- **W3C ECDSA Cryptosuites v1.0** — W3C Recommendation of 15 May 2025.
+- **W3C BBS Cryptosuites v1.0** — W3C Candidate Recommendation of 3 April 2025.
+- **W3C JSON-LD 1.1** — W3C Recommendation of 16 July 2020.
+- **W3C SHACL 1.0** — W3C Recommendation of 20 July 2017.
+- **ISO/IEC 18013-5** — Mobile driving licence (mdoc).
+- **IETF SD-JWT VC** — Selective Disclosure for JWT VC (IETF OAuth WG).
+- **P10_TA(2026)0022** — Resolution of the European Parliament on digital sovereignty.
+- **Ref. Ares(2026)1286304** — Public consultation of the Commission on the technical profile of the EUDIW.
