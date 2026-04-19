@@ -91,49 +91,49 @@ Siemens' verifier executes a six-step pipeline:
 ```mermaid
 sequenceDiagram
     autonumber
-    participant A as Alumna Wallet<br/>(did:key)
-    participant U as URV Issuer Service<br/>(did:web:urv.cat)
-    participant T as EBSI<br/>TIR / TAOR / TSR v3
-    participant S as URV Status Endpoint<br/>(BitstringStatusList)
+    participant A as Alumna Wallet
+    participant U as URV Issuer
+    participant T as EBSI TIR TAOR TSR
+    participant S as URV Status List
     participant V as Siemens Verifier
-    participant L as EU LOTL<br/>(ES Trusted List)
+    participant L as EU LOTL
 
-    Note over U,T: Pre-flight: URV in TIR, ANECA in TAOR, EUHEMC schemas in TSR v3
+    Note over U,T: Pre-flight. URV in TIR, ANECA in TAOR, EUHEMC schemas in TSR v3
 
     rect rgb(235, 245, 255)
-    Note over A,U: Phase 1 — Issuance (OpenID4VCI)
+    Note over A,U: Phase 1. Issuance (OpenID4VCI)
     A->>U: Credential Request (format=ldp_vc, type=EUHEMC)
-    U->>U: Sign EUHEMC with bbs-2023 (BLS12-381)
-    U-->>A: EUHEMC + BBS+ base proof
+    U->>U: Sign EUHEMC with bbs-2023 over BLS12-381
+    U-->>A: EUHEMC with BBS+ base proof
     end
 
     rect rgb(240, 255, 240)
-    Note over A,T: Phase 2 — Wallet validation
-    A->>T: Resolve did:web:urv.cat; fetch JSON Schema + SHACL
+    Note over A,T: Phase 2. Wallet validation
+    A->>T: Resolve did web urv.cat and fetch JSON Schema and SHACL
     A->>A: Verify BBS+ base proof
-    A->>A: Dual validation JSON Schema + SHACL — OK
+    A->>A: Dual validation JSON Schema and SHACL OK
     A->>A: Store credential with BBS+ base signature
     end
 
-    Note over A,V: Later — Siemens issues a job offer
+    Note over A,V: Later. Siemens issues a job offer
 
     rect rgb(255, 250, 235)
-    Note over A,V: Phase 3 — Selective presentation (OpenID4VP)
-    V-->>A: presentation_definition (EQF≥7, ISCED-F∈{…}, awardingBody)
-    A->>A: Derive BBS+ proof (reveal 4 claims only)
-    A->>V: VerifiablePresentation (ldp_vp) — unlinkable
+    Note over A,V: Phase 3. Selective presentation (OpenID4VP)
+    V-->>A: presentation_definition (EQF 7+, ISCED-F set, awardingBody)
+    A->>A: Derive BBS+ proof, reveal 4 claims only
+    A->>V: VerifiablePresentation (ldp_vp), unlinkable
     end
 
     rect rgb(255, 240, 245)
-    Note over V,L: Phase 4 — Verification
-    V->>T: Resolve did:web:urv.cat; fetch schemas
+    Note over V,L: Phase 4. Verification
+    V->>T: Resolve did web urv.cat and fetch schemas
     V->>V: Verify BBS+ derived proof
-    V->>V: Dual validation JSON Schema + SHACL — OK
-    V->>S: Download BitstringStatusList (revocation + suspension)
-    V->>V: Check bits — credential active
+    V->>V: Dual validation JSON Schema and SHACL OK
+    V->>S: Download BitstringStatusList (revocation and suspension)
+    V->>V: Check bits, credential active
     V->>T: Fetch ANECA Accreditation of URV programme
-    V->>L: Verify ANECA ∈ TAOR/EQAR; URV QSealC ∈ ES Trusted List
-    V-->>V: VERIFIED — only 4 claims disclosed, no phone home
+    V->>L: Verify ANECA in TAOR EQAR and URV QSealC in ES Trusted List
+    V-->>V: VERIFIED. Only 4 claims disclosed, no phone home
     end
 ```
 
