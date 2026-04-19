@@ -61,7 +61,7 @@ An EUHEMC (European Higher Education Microcredential) credential over W3C-VCDM 2
   "id": "urn:uuid:3c39ff5d-58d7-4f9a-a3e4-5f1f6e0e7d2b",
   "type": ["VerifiableCredential", "EuropeanHigherEducationMicrocredential"],
   "issuer": {
-    "id": "did:web:urv.cat",
+    "id": "did:ebsi:zDnaeUC5QAe9gpMJhbU1J4s7A",
     "type": "Organisation",
     "legalName": "Universitat Rovira i Virgili",
     "eidasLegalIdentifier": "urn:eidas:legalPersonIdentifier:ES:Q9350003A",
@@ -86,7 +86,7 @@ An EUHEMC (European Higher Education Microcredential) credential over W3C-VCDM 2
       {
         "id": "urn:uuid:a4e1-...-claim-01",
         "type": "LearningAchievementClaim",
-        "awardingBody": "did:web:urv.cat",
+        "awardingBody": "did:ebsi:zDnaeUC5QAe9gpMJhbU1J4s7A",
         "awardedBy": {
           "id": "urn:uuid:proc-01",
           "type": "AwardingProcess",

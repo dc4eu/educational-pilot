@@ -15,7 +15,7 @@ An alumna of **Universitat Rovira i Virgili (URV, Tarragona, Spain)** has comple
 ### 3. Actors and components
 
 - **Alumna**: holder of the EUDI Wallet. Owns a `did:key` (or `did:jwk`) holder identifier.
-- **URV Issuer Service**: connected to URV's Student Information System; signs credentials with the institutional key under `did:web:urv.cat`. Registered in EBSI TIR.
+- **URV Issuer Service**: connected to URV's Student Information System; signs credentials with the institutional key under `did:ebsi:zDnaeUC5QAe9gpMJhbU1J4s7A`. Registered in EBSI TIR.
 - **EBSI registers**: Trusted Issuers Registry (TIR), Trusted Accreditation Organisations Registry (TAOR), Trusted Schemas Registry v3 (TSR v3), Verifiable Revocation Registry.
 - **URV Status endpoint**: publishes two `BitstringStatusList` credentials signed by URV, one for `statusPurpose: "revocation"`, one for `statusPurpose: "suspension"`.
 - **ANECA**: Spanish national quality agency, ENQA/EQAR member, registered in EBSI TAOR. Issues the `Accreditation` credential of URV's higher-education programmes.
@@ -27,7 +27,7 @@ An alumna of **Universitat Rovira i Virgili (URV, Tarragona, Spain)** has comple
 URV issues an `EuropeanHigherEducationMicrocredential` (EUHEMC) credential conformant with **ELM v3.2** and **W3C VCDM 2.0**:
 
 - `@context`: `https://www.w3.org/ns/credentials/v2` + `http://data.europa.eu/snb/model/context/edc-ap.jsonld`.
-- `issuer.id = did:web:urv.cat`; `issuer.eidasLegalIdentifier = urn:eidas:legalPersonIdentifier:ES:Q9350003A`.
+- `issuer.id = did:ebsi:zDnaeUC5QAe9gpMJhbU1J4s7A`; `issuer.eidasLegalIdentifier = urn:eidas:legalPersonIdentifier:ES:Q9350003A`.
 - `credentialSubject.hasClaim.specifiedBy.hasEQFLevel = http://data.europa.eu/snb/eqf/7`.
 - `credentialSubject.hasClaim.specifiedBy.hasISCEDFCode = http://data.europa.eu/snb/isced-f/0619`.
 - `credentialSubject.hasClaim.specifiedBy.creditPoints.point = 6.0`.
@@ -41,7 +41,7 @@ The credential is delivered via **OpenID4VCI** (Credential Offer → Authorizati
 
 On receipt, the wallet:
 
-1. Resolves `did:web:urv.cat` to retrieve the DID document with URV's public keys.
+1. Resolves `did:ebsi:zDnaeUC5QAe9gpMJhbU1J4s7A` to retrieve the DID document with URV's public keys.
 2. Confirms `urv.cat` is in **EBSI TIR** with an active accreditation reference.
 3. Verifies the BBS+ base proof against the resolved `verificationMethod`.
 4. Executes the **dual schema validation**: JSON Schema Draft 2020-12 (structural) and SHACL (semantic — confirms ECTS–EQF coherence, ISCED-F code membership in the authoritative concept scheme, presence of mandatory ELM attributes).
@@ -74,7 +74,7 @@ Siemens' verifier executes a six-step pipeline:
 
 **(a) Envelope**: parses the VP, resolves the holder's DID, verifies the holder's proof-of-possession.
 
-**(b) BBS+ derived proof**: retrieves URV's public key from the resolved `did:web:urv.cat`; verifies the derived proof cryptographically against the base-signature commitment and the disclosed claims.
+**(b) BBS+ derived proof**: retrieves URV's public key from the resolved `did:ebsi:zDnaeUC5QAe9gpMJhbU1J4s7A`; verifies the derived proof cryptographically against the base-signature commitment and the disclosed claims.
 
 **(c) Dual schema validation**: fetches the JSON Schema from EBSI TSR v3 and the SHACL shape from URV's authoritative registry; applies both to the revealed claim graph. The SHACL shape validates EQF ↔ ECTS coherence and that `hasISCEDFCode` belongs to the authoritative EU scheme.
 
@@ -82,7 +82,7 @@ Siemens' verifier executes a six-step pipeline:
 
 **(e) Accreditation**: fetches URV's `Accreditation` credential from EBSI; verifies it is signed by ANECA; verifies ANECA is registered in EBSI TAOR and in the EQAR register.
 
-**(f) eIDAS legal identity**: correlates `did:web:urv.cat` ↔ `eidasLegalIdentifier = ES:Q9350003A` through URV's DID document; verifies URV's QSealC is in the **Spanish Trusted List** published in the EU LOTL under CIR 2015/1505.
+**(f) eIDAS legal identity**: correlates `did:ebsi:zDnaeUC5QAe9gpMJhbU1J4s7A` ↔ `eidasLegalIdentifier = ES:Q9350003A` through URV's DID document; verifies URV's QSealC is in the **Spanish Trusted List** published in the EU LOTL under CIR 2015/1505.
 
 **Output**: **VERIFIED**. Siemens has cryptographic, semantic, regulatory and institutional confidence that the alumna holds an EQF-7 microcredential in an ISCED-F field within the required set, issued by an ANECA-accredited European higher-education institution. **Zero** attributes beyond the four requested were disclosed.
 
@@ -109,7 +109,7 @@ sequenceDiagram
 
     rect rgb(240, 255, 240)
     Note over A,T: Phase 2. Wallet validation
-    A->>T: Resolve did web urv.cat and fetch JSON Schema and SHACL
+    A->>T: Resolve did ebsi URV and fetch JSON Schema and SHACL
     A->>A: Verify BBS+ base proof
     A->>A: Dual validation JSON Schema and SHACL OK
     A->>A: Store credential with BBS+ base signature
@@ -126,7 +126,7 @@ sequenceDiagram
 
     rect rgb(255, 240, 245)
     Note over V,L: Phase 4. Verification
-    V->>T: Resolve did web urv.cat and fetch schemas
+    V->>T: Resolve did ebsi URV and fetch schemas
     V->>V: Verify BBS+ derived proof
     V->>V: Dual validation JSON Schema and SHACL OK
     V->>S: Download BitstringStatusList (revocation and suspension)
@@ -150,7 +150,7 @@ sequenceDiagram
 | Status: revocation | `BitstringStatusListEntry` with `statusPurpose: "revocation"` | W3C Bitstring Status List v1.0 (Rec, 15 May 2025) |
 | Status: suspension | `BitstringStatusListEntry` with `statusPurpose: "suspension"` | W3C Bitstring Status List v1.0 |
 | No "phone home" | Aggregated list download + cache | Architectural property |
-| Issuer identity (dPKI) | `did:web:urv.cat` in EBSI TIR | EBSI TIR; W3C DID Core |
+| Issuer identity (dPKI) | `did:ebsi:zDnaeUC5QAe9gpMJhbU1J4s7A` in EBSI TIR | EBSI TIR; W3C DID Core |
 | Issuer identity (PKI eIDAS) | `eidasLegalIdentifier` ES:Q9350003A + QSealC | CIR 2015/1501; CIR 2015/1505 |
 | Accreditation | `Accreditation` VC signed by ANECA; ANECA in TAOR/EQAR | ENQA/EQAR; EBSI TAOR |
 | Issuance transport | OpenID4VCI | OpenID Foundation; HAIP |

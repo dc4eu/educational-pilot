@@ -119,7 +119,7 @@ Article 3(6) and Annex V of Regulation 2024/1183 establish that a qualified EAA 
 
 ```json
 "issuer": {
-  "id": "did:web:urv.cat",
+  "id": "did:ebsi:zDnaeUC5QAe9gpMJhbU1J4s7A",
   "type": "Organisation",
   "legalName": "Universitat Rovira i Virgili",
   "eidasLegalIdentifier": "urn:eidas:legalPersonIdentifier:ES:Q9350003A",
@@ -145,7 +145,7 @@ Quality accreditations are represented as independent credentials, typed as `Acc
   "type": ["VerifiableCredential", "Accreditation"],
   "issuer": "did:ebsi:zAccredAgent-ANECA",
   "credentialSubject": {
-    "id": "did:web:urv.cat",
+    "id": "did:ebsi:zDnaeUC5QAe9gpMJhbU1J4s7A",
     "type": "Organisation",
     "accreditationFor": "http://data.europa.eu/snb/qualification-type/he-programme",
     "decisionDate": "2024-06-15",
