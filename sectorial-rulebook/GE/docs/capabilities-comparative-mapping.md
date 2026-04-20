@@ -157,7 +157,7 @@ For an operational verification system at university scale (thousands of verific
 
 ## 11. U11 — Interoperability between wallet implementations
 
-**Capability.** Four independent wallets validated operationally in DC4EU (ISRAEL/Izertis, UAegean, Netcompany, Cappatrust) exchanging the 2,790 real credentials of the pilot.
+**Capability.** Four independent wallets validated operationally in DC4EU (Identify/Izertis, UAegean, Netcompany, Cappatrust) exchanging the 2,790 real credentials of the pilot.
 
 **Foreseeable objection.** "Equivalent interoperability demonstrations exist in SD-JWT VC, especially in the pilots led by Germany."
 

@@ -73,7 +73,7 @@ The catalogue was validated operationally in the **DC4EU** pilot with the follow
 | EU population coverage | 89 % |
 | Real credentials issued | 2,790 |
 | Types effectively deployed | 18 |
-| Interoperable wallets validated | 4 (ISRAEL, UAegean, Netcompany, Cappatrust) |
+| Interoperable wallets validated | 4 (Identify, UAegean, Netcompany, Cappatrust) |
 | Pilot funding | €19M (Digital Europe Programme) |
 
 The credentials issued covered real cases: cross-border university admission, recognition of VET microcredentials between Member States, certification of continuing training of regulated professionals, portable academic transcripts.

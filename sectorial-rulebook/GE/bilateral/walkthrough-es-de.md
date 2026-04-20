@@ -10,7 +10,7 @@ This document converts the regulatory proposal of the [executive brief](./execut
 
 ### 2. Scenario
 
-An alumna of **Universitat Rovira i Virgili (URV, Tarragona, Spain)** has completed a *Microcredential in Data Analytics for Humanities* — **6 ECTS, EQF level 7**, ISCED-F 0619 (ICT, not elsewhere classified). She applies to a data-engineer position at **Siemens AG (Munich, Germany)**, which requires verifying that the candidate holds at least an EQF-7 qualification in a data-analytics-related field from an accredited European higher-education institution. She uses an EUDI Wallet certified under the EUDIW profile (ISRAEL, UAegean, Netcompany or Cappatrust — any of the four DC4EU-validated wallets operate identically here).
+An alumna of **Universitat Rovira i Virgili (URV, Tarragona, Spain)** has completed a *Microcredential in Data Analytics for Humanities* — **6 ECTS, EQF level 7**, ISCED-F 0619 (ICT, not elsewhere classified). She applies to a data-engineer position at **Siemens AG (Munich, Germany)**, which requires verifying that the candidate holds at least an EQF-7 qualification in a data-analytics-related field from an accredited European higher-education institution. She uses an EUDI Wallet certified under the EUDIW profile (Identify, UAegean, Netcompany or Cappatrust — any of the four DC4EU-validated wallets operate identically here).
 
 ### 3. Actors and components
 

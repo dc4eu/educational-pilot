@@ -45,7 +45,7 @@ This annex consolidates the map of stakeholders who participate in the W3C-VCDM 
 - **Educational scope**: 36 institutions in 16 Member States, 89 % of the EU population.
 - **Credentials issued**: 2,790 real, 18 types of the Sectoral EAA Catalogue.
 - **Relevant deliverables**: D5.1.1 (Justification), D5.1.2 (Catalogue), D5.2 (Pilot report).
-- **Validated wallet implementations**: ISRAEL (Izertis), UAegean, Netcompany, Cappatrust.
+- **Validated wallet implementations**: Identify (Izertis), UAegean, Netcompany, Cappatrust.
 
 ### C.4.2 Other convergent European LSPs
 
@@ -96,7 +96,7 @@ This annex consolidates the map of stakeholders who participate in the W3C-VCDM 
 
 ### C.8.1 Wallet implementations validated in DC4EU
 
-- **ISRAEL wallet** (Izertis, Spain).
+- **Identify wallet** (Izertis, Spain).
 - **UAegean wallet** (University of the Aegean, Greece).
 - **Netcompany wallet** (Netcompany-Intrasoft, Luxembourg/Denmark).
 - **Cappatrust wallet** (Cappatrust, Belgium).

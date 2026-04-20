@@ -179,7 +179,7 @@ The architecture satisfies the applicable GDPR principles:
 
 Within the DC4EU framework, the interoperability of the EUDIW W3C-VC profile was validated between **four independent wallet implementations**:
 
-- **ISRAEL wallet** (Izertis, Spain).
+- **Identify wallet** (Izertis, Spain).
 - **UAegean wallet** (University of the Aegean, Greece).
 - **Netcompany wallet** (Netcompany-Intrasoft, Luxembourg/Denmark).
 - **Cappatrust wallet** (Cappatrust, Belgium).

@@ -112,7 +112,7 @@ The chapter closes the argumentative part of the document and prepares the [road
 
 **How it demonstrates it**: the VCDM + ELM + OID4VCI/VP + HAIP combination contains no implementation ambiguities; the canonical fields are identical.
 
-**Operational evidence**: validation in DC4EU with four independent implementations (ISRAEL, UAegean, Netcompany, Cappatrust) exchanging the 2,790 real credentials of the pilot.
+**Operational evidence**: validation in DC4EU with four independent implementations (Identify, UAegean, Netcompany, Cappatrust) exchanging the 2,790 real credentials of the pilot.
 
 **References**: [06 — Lifecycle and trust](./06-lifecycle-and-trust.md), §6.9.
 
