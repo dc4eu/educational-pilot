@@ -2,7 +2,9 @@
 
 ## Central thesis
 
-The **W3C Verifiable Credentials Data Model (W3C-VCDM)**, in its versions 1.1 (the mandate currently in force under the first batch of Implementing Acts of eIDAS 2.0) and 2.0 (W3C Recommendation of 15 May 2025, forward-looking optional profile), is the appropriate technical foundation for credentialing of **education understood as lifelong learning** within the European Digital Identity Wallet (EUDIW). The format natively provides — and has demonstrated in production — the set of capabilities that lifelong learning needs: machine-to-machine semantic interoperability, dual structural + semantic validation, lifecycle with native suspension and revocation, cryptographic unlinkability for LoA High, digital sovereignty by design, native integration with the European semantic assets (ELM, ELI, EQF, ESCO, ISCED-F), and compatibility with the global educational credentialing ecosystems (Open Badges 3.0, CTDL, LER).
+The **W3C Verifiable Credentials Data Model (W3C-VCDM)**, in its versions 1.1 (the mandate currently in force under the first batch of Implementing Acts of eIDAS 2.0) and 2.0 (W3C Recommendation of 15 May 2025, forward-looking profile), is the appropriate technical foundation for credentialing of **education understood as lifelong learning** within the European Digital Identity Wallet (EUDIW). The format natively provides — and has demonstrated in production — the set of capabilities that lifelong learning needs: machine-to-machine semantic interoperability, dual structural + semantic validation, lifecycle with native suspension and revocation, structural privacy (no "phone home", selective disclosure), digital sovereignty by design, native integration with the European semantic assets (ELM, ELI, EQF, ESCO, ISCED-F), and compatibility with the global educational credentialing ecosystems (Open Badges 3.0, CTDL, LER).
+
+For qualified EAAs with enveloping proofs, **JAdES-B-B** (ETSI TS 119 182-1) is the currently operative signature mechanism, prescribed by ETSI TS 119 472-1 V1.1.1 clause 7.6.4.2 and accepted by all Member State governments. Cryptographic unlinkability — required by Article 3(10) of CIR 2024/2982 — is technically realisable with the `bbs-2023` BBS cryptosuite; its adoption within the EUDIW regulatory perimeter is contingent on its incorporation into ETSI TS 119 312, which is under active revision to include privacy-preserving mechanisms.
 
 ## The argument in ten lines
 
@@ -10,12 +12,12 @@ The **W3C Verifiable Credentials Data Model (W3C-VCDM)**, in its versions 1.1 (t
 2. W3C-VCDM provides that semantic interoperability through **JSON-LD** and `@context`, binding the credential to the authoritative European vocabularies.
 3. The dual **JSON Schema + SHACL** architecture over the RDF graph, formalised in the requirements `EAA-7.2.1.3-W3C-01..04` of the EUDIW profile, enables executable structural + semantic validation.
 4. The W3C **Bitstring Status List v1.0** Recommendation natively supports `statusPurpose: "revocation"` and `statusPurpose: "suspension"`, covering Article 24 and Section 9 of Regulation 2024/1183.
-5. The **`bbs-2023`** cryptosuite over BLS12-381 provides native cryptographic unlinkability, required by Article 3(10) of Regulation 2024/2982 at LoA High assurance level.
-6. Embedded **Data Integrity** proofs (`ecdsa-rdfc-2019`, `bbs-2023`) are verified without proprietary APIs, realising the principle of **digital sovereignty by design** invoked by European Parliament resolution P10_TA(2026)0022.
-7. **DC4EU** validated W3C-VCDM in 36 institutions from 16 Member States (89 % of the European population), with 2,790 real credentials issued and 18 credential types published as the **Sectoral EAA Catalogue**.
-8. The **European Learning Model v3.2** and the **EDC** profile are already registered in the **EBSI Trusted Schemas Registry v3** with an operational dual JSON Schema + SHACL architecture.
-9. Globally, **80 % of the 267 decentralised-identity projects** analysed by the Web of Trust Map 2025 use W3C Verifiable Credentials, with more than 50 national programmes being deployed.
-10. The regulatory path to complete operational treatment of W3C-VC in the EUDIW is **technically ready and regulatorily proposed**: eight symmetrical adaptations to those already applied to the other two formats, condensed into a regulatory proposal for CIR 2024/2977 (new Section 4.3 of Annex I) and CIR 2024/2979 (adaptation points 9–16 of Annex V).
+5. **JAdES-B-B** (ETSI TS 119 182-1) is the operative signature format for W3C-VC qualified EAAs with enveloping JOSE proofs, as prescribed in ETSI TS 119 472-1 clause 7.6.4.2. It is accepted by all EU Member State governments and compliant with eIDAS 2.0.
+6. The **`bbs-2023`** cryptosuite over BLS12-381 provides the technical mechanism for native cryptographic unlinkability, required by Article 3(10) of Regulation 2024/2982 at LoA High assurance level. Its incorporation into ETSI TS 119 312 — currently under revision — is the regulatory pathway for its adoption within the EUDIW perimeter.
+7. Embedded **Data Integrity** proofs (`ecdsa-rdfc-2019`) and enveloping JAdES-B-B proofs are verified without proprietary APIs, realising the principle of **digital sovereignty by design** invoked by European Parliament resolution P10_TA(2026)0022.
+8. **DC4EU** validated W3C-VCDM in 36 institutions from 16 Member States (89 % of the European population), with 2,790 real credentials issued and 18 credential types published as the **Sectoral EAA Catalogue**.
+9. The **European Learning Model v3.2** and the **EDC** profile are already registered in the **EBSI Trusted Schemas Registry v3** with an operational dual JSON Schema + SHACL architecture.
+10. Globally, **80 % of the 267 decentralised-identity projects** analysed by the Web of Trust Map 2025 use W3C Verifiable Credentials. The interoperability map at **https://canivc.com** documents wallet support across more than 50 global implementations.
 
 ## Ten requirements of lifelong learning
 
@@ -23,20 +25,21 @@ The **W3C Verifiable Credentials Data Model (W3C-VCDM)**, in its versions 1.1 (t
 2. Cross-border interoperability without intermediaries or bilateral mappings.
 3. Verifiable issuer identity and assurance (including `eidasLegalIdentifier`).
 4. Complete lifecycle with suspension + revocation.
-5. Structural privacy (no "phone home", unlinkability, selective disclosure).
+5. Structural privacy (no "phone home", selective disclosure).
 6. Integrated quality assurance with European educational quality frameworks.
 7. Portability across formats, wallets and implementations.
 8. Integration with OpenID4VCI / OpenID4VP protocols within the regulated HAIP.
 9. Coverage of formal education, VET, secondary education, professional qualifications, CPD and informal learning.
-10. Consistent verification with simultaneous support for VCDM 1.1 and VCDM 2.0 profiles during the transition.
+10. Consistent verification with support for both VCDM 1.1 (current mandate) and VCDM 2.0 (forward-looking Recommendation) during the transition, detected automatically via the primary `@context` URI.
 
 The ten requirements are developed in [02 — Requirements of lifelong learning](./02-lifelong-learning-requirements.md) and their coverage by W3C-VCDM is detailed in [03 — Benefits of W3C-VCDM](./03-w3c-vcdm-benefits.md).
 
 ## Why now
 
 - The **first batch of Implementing Acts** of Regulation 2024/1183 (CIR 2024/2977, CIR 2024/2979, CIR 2024/2982) is in force. W3C-VCDM 1.1 is the technical mandate for the syntactic layer.
-- The **W3C VCDM 2.0 Recommendation** was published on 15 May 2025 together with the full package of complementary Recommendations (VC-JOSE-COSE, VC-Data-Integrity, Bitstring Status List, ECDSA Cryptosuites) and the BBS Cryptosuites Candidate Recommendation (3 April 2025).
-- **ETSI TS 119 472-1 V1.1.1** (December 2025) contains clause 7 with the W3C-VC technical profile, already referenced by the Implementing Acts.
+- The **W3C VCDM 2.0 Recommendation** was published on 15 May 2025 together with the full package of complementary Recommendations (VC-JOSE-COSE, VC-Data-Integrity, Bitstring Status List, ECDSA Cryptosuites) and the BBS Cryptosuites Candidate Recommendation (3 April 2025). The transition from VCDM 1.1 to 2.0 is straightforward and backward-compatible via the `@context` mechanism; VCDM 2.0 support is sufficient for forward-looking implementations.
+- **ETSI TS 119 472-1 V1.1.1** (December 2025) contains clause 7 with the W3C-VC technical profile, already referenced by the Implementing Acts, including the prescription of JAdES-B-B for JOSE enveloping proofs (clause 7.6.4.2).
+- **ETSI TS 119 472-1** also references the compatibility requirements of **ETSI TS 119 472-1 V1.1.1**, which aligns W3C-VC credentials with the European eIDAS-compliant signature infrastructure.
 - The public consultation **Ref. Ares(2026)1286304** (5 February to early March 2026) gathered 43 contributions with broad convergence on the need to complete the W3C-VC profile in the EUDIW.
 - The European ecosystem has invested **more than €80 million** of public funds in more than 200 organisations from more than 20 countries in solutions built on W3C-VCDM.
 
@@ -59,15 +62,17 @@ See [10 — Roadmap and recommendations](./10-roadmap.md) for concrete steps.
 | DC4EU — funding | €19M Digital Europe Programme |
 | CRUE Spanish Universities | 77 universities, 1.3M+ students |
 | Global decentralised-identity projects on VC | 80 % of 267 (Web of Trust Map 2025) |
+| Global wallet implementations supporting W3C-VC | > 50 (https://canivc.com) |
 | National programmes on VC worldwide | > 50 (Bhutan, Singapore, Canada, USA, Australia, UAE, etc.) |
 
 ## Suggested next steps for the Commission
 
-1. **Adopt** the new Section 4.3 of Annex I of CIR 2024/2977 with the encoding of the PID in JSON-LD W3C-VC (Table 9 with 27 attributes).
+1. **Adopt** the new Section 4.3 of Annex I of CIR 2024/2977 with the encoding of the PID in JSON-LD W3C-VC (Table 9 with 27 attributes), with JAdES-B-B as the operative enveloping signature format.
 2. **Adopt** the adaptation points (9)–(16) of Annex V of CIR 2024/2979 with the rules for W3C-VC (normative references, dual schema, revocation, data structures, HAIP and OID4VCI).
 3. **Issue** the standardisation request to ETSI ESI for the European High Assurance Interoperability Profile.
 4. **Verify** that ETSI TS 119 472-3 covers the full OID4VCI flow for W3C-VC; if not, complete the coverage before the next amendment cycle.
-5. **Recognise** explicitly the VCDM 1.1 (current) and VCDM 2.0 (forward-looking) profiles during the transition period.
+5. **Recognise** explicitly the VCDM 2.0 profile as the forward-looking target, with VCDM 1.1 credentials remaining valid during the transition period.
+6. **Include** the `bbs-2023` cryptosuite in the scope of the ongoing revision of ETSI TS 119 312, enabling a regulatory path for cryptographic unlinkability as required by Article 3(10) of CIR 2024/2982.
 
 ---
 

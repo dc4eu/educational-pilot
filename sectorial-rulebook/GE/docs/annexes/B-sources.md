@@ -15,7 +15,7 @@ Citations are grouped by family: EU normative texts, W3C Recommendations, ETSI s
 
 - **Regulation (EU) 2024/1183** of the European Parliament and of the Council, of 11 April 2024, on European digital identity (eIDAS 2.0). OJEU L, 30.4.2024.
 - **Commission Implementing Regulation (EU) 2024/2977**, of 28 November 2024, laying down implementing provisions of Regulation (EU) 2024/1183 in relation to personal identification data and EAAs. OJEU L, 4.12.2024.
-- **Commission Implementing Regulation (EU) 2024/2979**, of 28 November 2024, on interoperability, certification and procedures for compliance with Regulation (EU) 2024/1183.
+- **Commission Implementing Regulation (EU) 2024/2979**, of 28 November 2024, on interoperability, certification and procedures for compliance with Regulation (EU) 2024/1183. Annex IV lists JAdES (ETSI TS 119 182-1 V1.2.1) as an optional signature format for JSON content.
 - **Commission Implementing Regulation (EU) 2024/2982**, of 28 November 2024, on technical and operational requirements of the EUDIW, including unlinkability LoA High (Article 3(10)).
 - **Commission Implementing Regulation (EU) 2015/1501**, on unique legal-person identifier under eIDAS.
 - **Commission Implementing Regulation (EU) 2015/1505**, on national Trusted Lists.
@@ -34,7 +34,7 @@ Citations are grouped by family: EU normative texts, W3C Recommendations, ETSI s
 - **W3C. Verifiable Credential Data Integrity 1.0**. W3C Recommendation, 15 May 2025. https://www.w3.org/TR/vc-data-integrity/
 - **W3C. Bitstring Status List v1.0**. W3C Recommendation, 15 May 2025. https://www.w3.org/TR/vc-bitstring-status-list/
 - **W3C. Data Integrity ECDSA Cryptosuites v1.0**. W3C Recommendation, 15 May 2025. https://www.w3.org/TR/vc-di-ecdsa/
-- **W3C. Data Integrity BBS Cryptosuites v1.0**. W3C Candidate Recommendation, 3 April 2025. https://www.w3.org/TR/vc-di-bbs/
+- **W3C. Data Integrity BBS Cryptosuites v1.0**. W3C Candidate Recommendation, 3 April 2025. https://www.w3.org/TR/vc-di-bbs/ *Pathway to EUDIW adoption via ETSI TS 119 312 revision.*
 - **W3C. JSON-LD 1.1**. W3C Recommendation, 16 July 2020. https://www.w3.org/TR/json-ld11/
 - **W3C. Shapes Constraint Language (SHACL)**. W3C Recommendation, 20 July 2017. https://www.w3.org/TR/shacl/
 - **W3C. Decentralized Identifiers (DIDs) v1.0**. W3C Recommendation, 19 July 2022. https://www.w3.org/TR/did-core/
@@ -42,8 +42,11 @@ Citations are grouped by family: EU normative texts, W3C Recommendations, ETSI s
 
 ## B.4 ETSI specifications
 
-- **ETSI TS 119 472-1 V1.1.1** (December 2025). Profile for EU Digital Identity Wallet Attestations — Part 1.
+- **ETSI TS 119 472-1 V1.1.1** (December 2025). Profile for EU Digital Identity Wallet Attestations — Part 1. Clause 7.6.4.2 prescribes JAdES-B-B for W3C-VC JOSE enveloping proofs; clause 7.6.5 covers Data Integrity embedded proofs.
 - **ETSI TS 119 472-3** (under development). OID4VCI flow in the ETSI ecosystem.
+- **ETSI TS 119 182-1** (V1.2.1, 2024-07). JAdES digital signatures — Part 1: Building blocks and JAdES baseline signatures. **Operative European standard for advanced and qualified electronic signatures on JSON content**; referenced in CIR 2024/2979 Annex IV. JAdES-B-B is the prescribed enveloping signature for W3C-VC QEAAs under ETSI TS 119 472-1 clause 7.6.4.2.
+- **ETSI TS 119 312** — Cryptographic algorithm catalogue. Under active revision to include privacy-preserving cryptographic mechanisms; revision scope includes BLS12-381/BBS-family schemes, providing the regulatory pathway for `bbs-2023` unlinkability within the EUDIW perimeter.
+- **ETSI TR 119 476-1 v1.3.1** — Unlinkability analysis. Section 7.7.2 documents BBS schemes and confirms their applicability to the EUDI Wallet.
 - **ETSI EN 319 412**. X.509 Certificate profiles.
 - **ETSI EN 319 422**. Trust Service Status List format.
 - **ETSI EN 319 411**. Policy requirements for TSPs issuing certificates.
@@ -65,6 +68,7 @@ Citations are grouped by family: EU normative texts, W3C Recommendations, ETSI s
 - **ISO/IEC 18013-5** — Mobile driving licence (mdoc).
 - **ISO/IEC 23220-3** — Building blocks for identity management.
 - **ISO/IEC TR 17015** — Mobile credential revocation.
+- **ISO/IEC 20008** — Anonymous digital signatures; normative framework for anonymous signature schemes applicable to the unlinkability pathway.
 
 ## B.7 Deliverables of DEP (Digital Europe Programme) and CEF projects
 
@@ -109,6 +113,9 @@ Citations are grouped by family: EU normative texts, W3C Recommendations, ETSI s
 - **Credential Engine**. Credential Transparency Description Language (CTDL). https://credentialengine.org/
 - **T3 Network**. Learning and Employment Records (LER).
 - **Web of Trust Map 2025**. Analysis of 267 global decentralised-identity projects.
+- **canivc.com** — Interoperability map for W3C Verifiable Credentials. Documents wallet and verifier support across 50+ global implementations. https://canivc.com
+- **Longfellow-ZK**. Initiative exploring zero-knowledge proof mechanisms compatible with JSON-based credentials and SD-JWT VC signature schemes. Architecturally compatible with W3C-VCDM; to be referenced once stabilised.
+- **IRTF CFRG BBS signatures** (draft-irtf-cfrg-bbs-signatures). Active work item of the IRTF Crypto Forum Research Group providing the cryptographic specification underlying `bbs-2023`.
 
 ## B.11 Institutional publications
 
@@ -116,6 +123,7 @@ Citations are grouped by family: EU normative texts, W3C Recommendations, ETSI s
 - **European Commission, DG EMPL**. European Approach to Micro-credentials for Lifelong Learning and Employability (technical documents associated with the 2022 Council Recommendation).
 - **European Parliament, Committee on Culture and Education**. Reports on educational digitalisation and cross-border recognition.
 - **Council of Europe, Recommendation CM/Rec(2022)18** on the use of digital credentials in educational mobility.
+- **ENISA. Agreed Cryptographic Mechanisms v2.0** (April 2025). Current list; does not yet include BLS12-381 or BBS-family schemes. Update coordinated with ETSI TS 119 312 revision is required to resolve the Article 3(10) unlinkability gap.
 
 ## B.12 Note on source traceability
 

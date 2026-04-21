@@ -6,7 +6,7 @@ An educational credential is not a static artefact. From its issuance to its exp
 
 | State | Meaning | W3C-VCDM mechanism |
 |---|---|---|
-| **Issued** | The credential has been signed and published. | Cryptographic proof (Data Integrity or JOSE/COSE) in the credential. |
+| **Issued** | The credential has been signed and published. | JAdES-B-B enveloping proof (JOSE) or Data Integrity embedded proof (`ecdsa-rdfc-2019`). |
 | **Active** | The credential is presentable and verifiable by third parties. | Absence of an entry in `BitstringStatusList` with `statusPurpose: "revocation"`. |
 | **Suspended** | The credential has been temporarily suspended (investigation, complaint, doubt about the achievement). | Active bit in `BitstringStatusList` with `statusPurpose: "suspension"`. |
 | **Restored** | The credential becomes valid again after a suspension. | Deactivated bit in `BitstringStatusList` with `statusPurpose: "suspension"`. |
@@ -64,35 +64,69 @@ W3C-VCDM, combined with `BitstringStatusList`, guarantees this property:
 
 This property partially realises **Requirement R5** (structural privacy) of chapter 02.
 
-## 6.4 Selective disclosure and unlinkability
+## 6.4 Signature mechanisms: JAdES-B-B and Data Integrity
+
+W3C-VCDM supports two families of credential proof mechanisms, both operative within the EUDIW profile:
+
+### 6.4.1 JAdES-B-B (enveloping JOSE proof) — operative today
+
+**JAdES** (JSON Advanced Electronic Signatures, ETSI TS 119 182-1) is the European standard for advanced and qualified electronic signatures over JSON content. For W3C-VC EAAs with JOSE enveloping proofs:
+
+- **Clause 7.6.4.2 of ETSI TS 119 472-1 V1.1.1** prescribes JAdES-B-B when Flattened JSON Serialisation is used.
+- For **QEAAs**, the additional requirements of clause 5.6.2 (qualified seal requirements) apply under requirement `QEAA-7.6.4.4-01`.
+- JAdES-B-B is accepted by all EU Member State governments, compliant with eIDAS 2.0, and verifiable with standard European trust service tools.
+- **SD-JWT EAAs** with Flattened JSON Serialisation also use JAdES-B-B; with Compact Serialisation the structure is a JAdES-B-B Compact Serialisation followed by SD-JWT disclosures.
+
+JAdES-B-B is the **primary operative signature mechanism** for W3C-VC qualified EAAs in the current regulatory cycle.
+
+### 6.4.2 Data Integrity embedded proofs — operative today
+
+**Data Integrity** proofs (`ecdsa-rdfc-2019`, as specified in W3C Recommendation of 15 May 2025) are embedded within the JSON-LD credential as a `proof` property. They:
+
+- Are verified without proprietary APIs, realising **digital sovereignty by design**.
+- Enable offline verification (no server round-trip required).
+- Are compatible with the `ldp_vc` / `ldp_vp` presentation format identifiers defined in OpenID4VP.
+
+Requirement `EAA-7.6.5-W3C-01` (proposed) prescribes `ecdsa-rdfc-2019` as the minimum admissible embedded cryptosuite.
+
+### 6.4.3 BBS+ (`bbs-2023`) and the pathway to cryptographic unlinkability
+
+The **W3C Candidate Recommendation Data Integrity BBS Cryptosuites v1.0** (3 April 2025) formalises `bbs-2023` as a Data Integrity cryptosuite over BLS12-381. Its characteristic property is **cryptographic unlinkability** between presentations: two presentations of the same credential to two different verifiers produce probabilistically uncorrelatable proofs — even under verifier collusion.
+
+This property is the technical mechanism for realising **Article 3(10) of Regulation 2024/2982**, which requires unlinkability for PID at LoA High.
+
+**Current regulatory status**: BLS12-381 is not currently listed among the agreed curves in the ENISA Agreed Cryptographic Mechanisms (v2.0, April 2025), and `bbs-2023` is not yet incorporated into ETSI TS 119 312. ETSI TS 119 312 is under active revision, and the inclusion of privacy-preserving cryptographic mechanisms — including pairing-based schemes — is within its declared scope. The pathway for `bbs-2023` adoption in the EUDIW perimeter is:
+
+1. Incorporation of `bbs-2023` / BLS12-381 into ETSI TS 119 312.
+2. Update of ETSI TS 119 472-1 to reference the incorporated cryptosuite.
+3. Commission adaptation of ENISA Agreed Cryptographic Mechanisms to include the scheme.
+
+Until that incorporation, `ecdsa-rdfc-2019` (Data Integrity) and JAdES-B-B (enveloping JOSE) are the operative proof mechanisms. Implementations wishing to offer forward-compatible unlinkability may implement `bbs-2023` in addition, and the proposed EUDIW profile (`EAA-7.6.5-W3C-01`) specifies that `bbs-2023` shall be added to the admitted cryptosuites upon its ETSI TS 119 312 incorporation.
+
+For selective disclosure without full unlinkability, SD-JWT-based disclosure (salted-hash) is available using the same JSON payload, as the two serialisations are structurally compatible. Zero-knowledge proof mechanisms compatible with the SD-JWT VC signature scheme — such as those under development in the Longfellow-ZK initiative — may also be referenced once stabilised, as they are architecturally compatible with JSON-based credentials.
+
+## 6.5 Selective disclosure
 
 Selective presentation is the mechanism by which the person reveals to the verifier only the attributes strictly necessary for the specific purpose (GDPR minimisation principle).
 
-W3C-VCDM supports two families of selective-disclosure mechanisms with distinct properties:
+Within the W3C-VCDM profile, two selective-disclosure mechanisms are operative:
 
-### 6.4.1 SD-based selective disclosure (salted-hash)
+- **SD-based selective disclosure (salted-hash)**: fields are disclosed by revealing the corresponding salts; the rest remain protected. Compatible with JAdES-B-B and JOSE enveloping proofs. The verifier receives a presentation containing only the requested attributes, under a signature that was produced by the issuer.
+- **BBS+ derived proofs** (`bbs-2023`): once incorporated into ETSI TS 119 312, provides cryptographic unlinkability in addition to selective disclosure. The wallet generates a derived proof per presentation; no two derivations are correlatable. This is the mechanism that natively satisfies Article 3(10) of CIR 2024/2982.
 
-Mechanisms such as SD-JWT (and its JOSE/COSE counterpart) allow fields to be revealed by de-salting their hashes. The person presents the salts corresponding to the attributes to be revealed; the rest remain protected.
+Both mechanisms are JSON-based and structurally compatible; the issuer signature scheme determines which selective-disclosure path is available at presentation time.
 
-**Property**: the verifier receives a document signed by the issuer with only the requested attributes.
-
-### 6.4.2 BBS+ signatures (`bbs-2023`) and cryptographic unlinkability
-
-The **W3C Candidate Recommendation Data Integrity BBS Cryptosuites v1.0** (3 April 2025) formalises `bbs-2023` as a Data Integrity cryptosuite over BLS12-381. The characteristic property is **unlinkability** between presentations: the person can present the same credential to two different verifiers, generating cryptographically **uncorrelatable** proofs.
-
-Operational consequence: even if two verifiers collaborate and compare the identifiers received, **they cannot determine** whether the two presentations correspond to the same person or to different persons.
-
-This property realises **Article 3(10) of Regulation 2024/2982**, which requires unlinkability for PID with LoA High. W3C-VCDM is the only format referenced in the EUDIW that has a **native Data Integrity cryptosuite with unlinkability**, documented as a W3C Candidate Recommendation.
-
-## 6.5 Hybrid PKI-dPKI trust framework
+## 6.6 Hybrid PKI-dPKI trust framework
 
 The EUDIW trust framework combines two architectures:
 
-### 6.5.1 Classical eIDAS PKI (hierarchical)
+### 6.6.1 Classical eIDAS PKI (hierarchical)
 
 The chain of qualified certificates (QTS, QSealC, QWAC) rests on the **EU Trusted List (LOTL)** published by the Commission and maintained by the Member States. Each Member State publishes its national Trusted List (clause 3.1 of Implementing Regulation (EU) 2015/1505) with the authorised Qualified Trust Service Providers.
 
-### 6.5.2 Decentralised infrastructure (EBSI)
+JAdES-B-B proofs on W3C-VC credentials are anchored to this PKI chain: the issuer's QSealC appears in the national Trusted List, and the verifier confirms it via the EU LOTL under CIR 2015/1505.
+
+### 6.6.2 Decentralised infrastructure (EBSI)
 
 The **European Blockchain Services Infrastructure (EBSI)** operates as a complementary decentralised register:
 
@@ -101,7 +135,7 @@ The **European Blockchain Services Infrastructure (EBSI)** operates as a complem
 - **Trusted Schemas Registry (TSR) v3**: register of authoritative schemas (JSON Schemas and SHACL shapes).
 - **Verifiable Revocation Registry**: registers of status lists.
 
-### 6.5.3 Convergence for the educational domain
+### 6.6.3 Convergence for the educational domain
 
 For educational EAAs, the operational convergence between both architectures is as follows:
 
@@ -110,10 +144,11 @@ For educational EAAs, the operational convergence between both architectures is 
 - Accreditations are themselves Verifiable Credentials signed by quality agencies (members of **ENQA / EQAR** or equivalents) registered in the **TAOR**.
 - Schemas (JSON + SHACL) are registered in the **TSR v3** with immutable identifiers.
 - Status lists are published as Verifiable Credentials signed by the issuer.
+- JAdES-B-B signatures on QEAAs are anchored through the issuer's QSealC in the national Trusted List.
 
 The result is a **verifiable end-to-end trust chain**: any verifier can, with only the credential received and access to the EBSI registers and to the European LOTL, establish technical, semantic, accreditation and status validity without mediation by the issuer.
 
-## 6.6 Issuer identity and `eidasLegalIdentifier`
+## 6.7 Issuer identity and `eidasLegalIdentifier`
 
 Article 3(6) and Annex V of Regulation 2024/1183 establish that a qualified EAA must be traceable to a **real legal person identified under eIDAS**. W3C-VCDM supports this requirement through the `eidasLegalIdentifier` field in the `issuer`:
 
@@ -130,9 +165,9 @@ Article 3(6) and Annex V of Regulation 2024/1183 establish that a qualified EAA 
 }
 ```
 
-The identifier is constructed with the scheme defined in the Annex of Implementing Regulation (EU) 2015/1501 (unique legal-person identifier in the country–type–national-identifier format). The correspondence between the DID `did:web` (or `did:ebsi`) and the `eidasLegalIdentifier` is declared by the issuer and attested by the accreditation agency, closing the PKI ↔ dPKI bridge for legal identity.
+The identifier is constructed with the scheme defined in the Annex of Implementing Regulation (EU) 2015/1501. The JAdES-B-B enveloping proof anchors the issuer's legal identity to the QSealC in the national Trusted List, establishing the PKI ↔ dPKI bridge for qualified credentials.
 
-## 6.7 Mapping of quality accreditations (ENQA/EQAR)
+## 6.8 Mapping of quality accreditations (ENQA/EQAR)
 
 Quality accreditations are represented as independent credentials, typed as `Accreditation` in ELM:
 
@@ -162,20 +197,18 @@ Quality accreditations are represented as independent credentials, typed as `Acc
 
 The `Accreditation` is itself an EAA, following the same dual JSON Schema + SHACL profile. It can be suspended or revoked via `BitstringStatusList`, and its issuer (the quality agency) is in turn registered in the TAOR.
 
-This **uniform recursion** (credentials over credentials, with the same lifecycle) is a property of W3C-VCDM that drastically simplifies the architecture of the educational trust framework.
-
-## 6.8 Protection of personal data and GDPR
+## 6.9 Protection of personal data and GDPR
 
 The architecture satisfies the applicable GDPR principles:
 
 - **Lawfulness and transparency**: the legal basis is established by eIDAS 2.0 and by the sectoral educational rules.
 - **Minimisation**: selective disclosure limits the data revealed to the specific purpose.
 - **Purpose limitation**: the verifier can only process the attributes revealed.
-- **Integrity and confidentiality**: cryptographic proofs guarantee integrity; the presentation channel (OID4VP) guarantees confidentiality.
+- **Integrity and confidentiality**: JAdES-B-B and Data Integrity proofs guarantee integrity; the presentation channel (OID4VP) guarantees confidentiality.
 - **Right to erasure**: although an issued credential cannot be "erased" retrospectively, revocation definitively invalidates its use. Expired credentials may be purged from the wallet's store if the person so decides.
 - **Portability**: the VCDM format is open; the person can export their credentials to any conformant wallet.
 
-## 6.9 Interoperability between wallets
+## 6.10 Interoperability between wallets
 
 Within the DC4EU framework, the interoperability of the EUDIW W3C-VC profile was validated between **four independent wallet implementations**:
 
@@ -184,21 +217,20 @@ Within the DC4EU framework, the interoperability of the EUDIW W3C-VC profile was
 - **Netcompany wallet** (Netcompany-Intrasoft, Luxembourg/Denmark).
 - **Cappatrust wallet** (Cappatrust, Belgium).
 
-Credentials issued by one implementer were received, stored and presented by the other three without modifications. This outcome demonstrates that the W3C-VC profile is **effectively portable** and satisfies **Requirement R7** of chapter 02.
+Credentials issued by one implementer were received, stored and presented by the other three without modifications. Broader global wallet support for W3C-VCDM is documented at **https://canivc.com**, which tracks conformance across more than 50 implementations worldwide.
 
-## 6.10 Outcome
+## 6.11 Outcome
 
 The lifecycle and trust framework for an educational EAA over W3C-VCDM covers all identified regulatory and operational requirements:
 
 1. Full lifecycle with native suspension and revocation (Article 24, Section 9 of Regulation 2024/1183).
 2. Absence of "phone home" effect via `BitstringStatusList`.
-3. Selective disclosure and cryptographic unlinkability (BBS+).
-4. Issuer identity with `eidasLegalIdentifier` and verifiable accreditation chain.
-5. Hybrid PKI eIDAS ↔ dPKI EBSI trust framework.
-6. Structural GDPR compliance.
-7. Interoperable portability between wallet implementations.
-
-These properties are complemented by the semantics provided by the [European Learning Model](./05-european-learning-model.md), the [dual validation architecture](./04-dual-validation-architecture.md) and the [Sectoral EAA catalogue](./07-sectoral-eaa-catalogue.md).
+3. Selective disclosure (salted-hash, SD-JWT) operative today; cryptographic unlinkability (BBS+) on the ETSI TS 119 312 incorporation pathway.
+4. JAdES-B-B enveloping signatures for qualified EAAs, accepted by all EU governments.
+5. Issuer identity with `eidasLegalIdentifier` and verifiable accreditation chain.
+6. Hybrid PKI eIDAS ↔ dPKI EBSI trust framework.
+7. Structural GDPR compliance.
+8. Interoperable portability between wallet implementations.
 
 ---
 

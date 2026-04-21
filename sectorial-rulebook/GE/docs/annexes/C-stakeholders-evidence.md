@@ -29,9 +29,10 @@ This annex consolidates the map of stakeholders who participate in the W3C-VCDM 
 - **W3C Verifiable Credentials Working Group** — develops VCDM, VC-Data-Integrity, VC-JOSE-COSE, Bitstring Status List.
 - **W3C Data Integrity Community Group** — develops the cryptosuites (ECDSA, BBS).
 - **W3C Credentials Community Group** — discussion forum with active European participation.
-- **ETSI TC ESI** — Electronic Signatures and Infrastructures, responsible for ETSI TS 119 472-1 and ETSI TS 119 472-3.
+- **ETSI TC ESI** — Electronic Signatures and Infrastructures, responsible for ETSI TS 119 472-1, ETSI TS 119 472-3, **ETSI TS 119 182-1 (JAdES)** and ETSI TS 119 312 (cryptographic algorithms, under revision to include privacy-preserving mechanisms).
 - **OpenID Foundation** — OID4VCI, OID4VP, HAIP.
 - **IETF OAuth Working Group** — SD-JWT, SD-JWT VC.
+- **IRTF Crypto Forum Research Group (CFRG)** — BBS signatures (draft-irtf-cfrg-bbs-signatures); underpins the `bbs-2023` cryptosuite.
 - **ISO/IEC JTC 1/SC 17** — mdoc (ISO/IEC 18013-5).
 - **UNESCO** — ISCED-F classification.
 
@@ -44,6 +45,7 @@ This annex consolidates the map of stakeholders who participate in the W3C-VCDM 
 - **Coverage**: 80 organisations in 23 Member States.
 - **Educational scope**: 36 institutions in 16 Member States, 89 % of the EU population.
 - **Credentials issued**: 2,790 real, 18 types of the Sectoral EAA Catalogue.
+- **Cryptographic profile**: JAdES D-Zero, QSealC, QWAC, QTS, ES256/EdDSA (operative today); BBS+ (forward-compatible extension).
 - **Relevant deliverables**: D5.1.1 (Justification), D5.1.2 (Catalogue), D5.2 (Pilot report).
 - **Validated wallet implementations**: Identify (Izertis), UAegean, Netcompany, Cappatrust.
 
@@ -101,7 +103,11 @@ This annex consolidates the map of stakeholders who participate in the W3C-VCDM 
 - **Netcompany wallet** (Netcompany-Intrasoft, Luxembourg/Denmark).
 - **Cappatrust wallet** (Cappatrust, Belgium).
 
-### C.8.2 Other relevant implementations in the ecosystem
+### C.8.2 Global W3C-VC wallet and verifier implementations
+
+The interoperability map at **https://canivc.com** documents W3C-VC conformance across more than 50 global wallet and verifier implementations. This evidence confirms that European W3C-VC credentials — including those in the EUDIW profile — are verifiable by the global ecosystem without reissuance, and that the format is the convergent global standard for digital credentials.
+
+Selected implementations with European relevance:
 
 - Digital Bazaar (USA, W3C VC reference).
 - MATTR (New Zealand/Finland, member of the European ecosystem).
@@ -140,6 +146,7 @@ This annex consolidates the map of stakeholders who participate in the W3C-VCDM 
 |---|---|
 | Global projects on decentralised identity | 267 (Web of Trust Map 2025) |
 | Global projects on W3C-VC | 213 (80 %) |
+| Global wallet/verifier implementations supporting W3C-VC | > 50 (https://canivc.com) |
 | National programmes on W3C-VC | > 50 |
 | Countries with W3C-VC programmes | Bhutan, Singapore, Canada, USA, Australia, UAE, and others |
 
@@ -172,8 +179,8 @@ The three posts are incorporated into the project's working material and have in
 
 ## C.11 Acknowledgements
 
-The articulation of the lifelong-learning requirements and the mapping with W3C-VCDM rests on successive contributions of the **DC4EU** consortium (in particular of WP5 on educational credentials), of the **Europass Team (DG EMPL)** in the consolidation of ELM, of the **EBSI Programme** in the provision of the trust registers, of the **W3C VC Working Group** community in the development of the model, of **ETSI TC ESI** in the integration with the eIDAS normative corpus, and of the actors of the Spanish educational ecosystem (CRUE, URV, quality agencies).
+The articulation of the lifelong-learning requirements and the mapping with W3C-VCDM rests on successive contributions of the **DC4EU** consortium (in particular of WP5 on educational credentials), of the **Europass Team (DG EMPL)** in the consolidation of ELM, of the **EBSI Programme** in the provision of the trust registers, of the **W3C VC Working Group** community in the development of the model, of **ETSI TC ESI** in the integration with the eIDAS normative corpus and in the development of JAdES as the European JSON signature standard, and of the actors of the Spanish educational ecosystem (CRUE, URV, quality agencies).
 
 ## C.12 Traceability of affirmations
 
-Every empirical affirmation quantified in chapters 00–10 can be verified against one or more of the sources listed in [Annex B — Sources](./B-sources.md) and in the DC4EU deliverables accessible from the project portal. The DC4EU figures come from deliverables D5.1.1, D5.1.2 and D5.2 and from the material presented at the pilot-closing events. The global figures come from the Web of Trust Map 2025 and from the successive Digital Identity Landscape reports published by the community. European public investments are estimated from the open GAs of the Digital Europe Programme and the Connecting Europe Facility.
+Every empirical affirmation quantified in chapters 00–10 can be verified against one or more of the sources listed in [Annex B — Sources](./B-sources.md) and in the DC4EU deliverables accessible from the project portal. The DC4EU figures come from deliverables D5.1.1, D5.1.2 and D5.2 and from the material presented at the pilot-closing events. The global figures come from the Web of Trust Map 2025 and from the successive Digital Identity Landscape reports published by the community. The global wallet/verifier implementation count is sourced from https://canivc.com. European public investments are estimated from the open GAs of the Digital Europe Programme and the Connecting Europe Facility.

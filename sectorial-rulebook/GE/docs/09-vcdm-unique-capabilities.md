@@ -46,25 +46,27 @@ The chapter closes the argumentative part of the document and prepares the [road
 
 **References**: [06 — Lifecycle and trust](./06-lifecycle-and-trust.md), §6.3.
 
-## 9.6 Capability U5 — Native cryptographic unlinkability with BBS+
+## 9.6 Capability U5 — Pathway to cryptographic unlinkability with BBS+
 
-**What it contributes**: two presentations of the same credential to two different verifiers are **cryptographically uncorrelatable**: not even with collusion between verifiers can the traces of one and the same person be reconstructed.
+**What it contributes**: the technical mechanism by which two presentations of the same credential to two different verifiers can be made **cryptographically uncorrelatable** — not even with verifier collusion.
 
-**How it demonstrates it**: the `bbs-2023` cryptosuite (BLS12-381) generates probabilistic derivations in each presentation, over a standard W3C Data Integrity scheme.
+**How it demonstrates it**: the `bbs-2023` cryptosuite (BLS12-381, W3C Candidate Recommendation 3 April 2025) generates probabilistic derivations in each presentation, over a standard W3C Data Integrity scheme. Article 3(10) of Regulation 2024/2982 requires cryptographic unlinkability for PID at LoA High; `bbs-2023` is the technically identified mechanism to satisfy this requirement.
 
-**Operational evidence**: the specification has been a W3C Candidate Recommendation since 3 April 2025; Rust and JavaScript implementations are already available. Article 3(10) of Regulation 2024/2982 requires unlinkability for LoA High in PID; W3C-VCDM with `bbs-2023` satisfies this requirement with a single native cryptosuite.
+**Current regulatory status**: `bbs-2023` is not yet incorporated into ETSI TS 119 312, which is the regulatory pathway for its adoption within the EUDIW perimeter. ETSI TS 119 312 is under active revision; the inclusion of privacy-preserving cryptographic mechanisms is within its declared scope. The ETSI TR 119 476-1 v1.3.1 unlinkability analysis documents BBS schemes and confirms their applicability to the wallet. Until incorporation, `ecdsa-rdfc-2019` and JAdES-B-B are the operative proof mechanisms, and selective disclosure without full unlinkability is available via SD-JWT salted-hash. Implementations may optionally implement `bbs-2023` today to be forward-compatible.
 
-**References**: [03 — Benefits of W3C-VCDM](./03-w3c-vcdm-benefits.md), [06 — Lifecycle and trust](./06-lifecycle-and-trust.md), §6.4.
+**Operational evidence**: Rust and JavaScript implementations of `bbs-2023` are available. The W3C VC Working Group and IRTF Crypto Forum Research Group are active on the specification. Article 3(10) of Regulation 2024/2982 creates a legal obligation for which `bbs-2023` is the identified technical pathway.
+
+**References**: [03 — Benefits of W3C-VCDM](./03-w3c-vcdm-benefits.md), [06 — Lifecycle and trust](./06-lifecycle-and-trust.md), §6.4.3.
 
 ## 9.7 Capability U6 — Extensible trust model (eIDAS PKI ↔ EBSI dPKI)
 
-**What it contributes**: smooth coexistence between the hierarchical eIDAS-PKI trust (QTS, LOTL) and the decentralised EBSI trust (TIR, TAOR, TSR). An issuer can be identified simultaneously by an `eidasLegalIdentifier` (PKI) and a DID (dPKI), and its accreditations are themselves verifiable credentials.
+**What it contributes**: smooth coexistence between the hierarchical eIDAS-PKI trust (QTS, LOTL, JAdES) and the decentralised EBSI trust (TIR, TAOR, TSR). An issuer can be identified simultaneously by an `eidasLegalIdentifier` (PKI), a JAdES-B-B qualified seal, and a DID (dPKI), and its accreditations are themselves verifiable credentials.
 
-**How it demonstrates it**: the EUDIW profile for W3C-VC includes `eidasLegalIdentifier` as a canonical field in the `issuer`, and admits DID resolution against the EBSI TIR.
+**How it demonstrates it**: the EUDIW profile for W3C-VC includes `eidasLegalIdentifier` as a canonical field in the `issuer`, admits DID resolution against the EBSI TIR, and prescribes JAdES-B-B for QEAAs with JOSE enveloping proofs (ETSI TS 119 472-1 clause 7.6.4.2).
 
 **Operational evidence**: operated by DC4EU in 16 Member States and 36 accredited institutions.
 
-**References**: [06 — Lifecycle and trust](./06-lifecycle-and-trust.md), §6.5–§6.6.
+**References**: [06 — Lifecycle and trust](./06-lifecycle-and-trust.md), §6.6–§6.7.
 
 ## 9.8 Capability U7 — Multilingual traceability
 
@@ -80,7 +82,7 @@ The chapter closes the argumentative part of the document and prepares the [road
 
 **What it contributes**: native semantic compatibility with **Open Badges 3.0** (1EdTech), mappability with **CTDL** (Credential Engine) and **LER**. A European EAA is interpreted in global contexts without reissuance.
 
-**How it demonstrates it**: Open Badges 3.0 is built on VCDM. The ELM ↔ CTDL mapping is documented by 1EdTech and Credential Engine.
+**How it demonstrates it**: Open Badges 3.0 is built on VCDM. The ELM ↔ CTDL mapping is documented by 1EdTech and Credential Engine. The interoperability map at **https://canivc.com** tracks W3C-VC support across more than 50 global wallet and verifier implementations, evidencing the convergence of the global ecosystem on VCDM.
 
 **Operational evidence**: **80 % of the 267 decentralised-identity projects** analysed by the Web of Trust Map 2025 use W3C-VC; more than 50 national programmes worldwide adopt it (Bhutan, Singapore, Canada, USA, Australia, United Arab Emirates, among others).
 
@@ -90,11 +92,11 @@ The chapter closes the argumentative part of the document and prepares the [road
 
 **What it contributes**: all technical specifications are **W3C Recommendations**, ETSI standards or open IETF/OpenID specifications. No piece requires a proprietary licence or a private API. The Commission, the Member States and the European ecosystem can implement without external dependencies.
 
-**How it demonstrates it**: the key components (VCDM, VC-JOSE-COSE, VC-Data-Integrity, BitstringStatusList, BBS Cryptosuites, ECDSA Cryptosuites, ELM, JSON Schema, SHACL) are open and W3C/ETSI/W3C-CG/IETF reference standards.
+**How it demonstrates it**: the key components (VCDM, VC-JOSE-COSE, VC-Data-Integrity, BitstringStatusList, BBS Cryptosuites, ECDSA Cryptosuites, **JAdES — ETSI TS 119 182-1**, ELM, JSON Schema, SHACL) are open and W3C/ETSI/IETF reference standards. In particular, **JAdES-B-B** as the operative enveloping signature is a fully European standard, governed by ETSI and formally referenced in CIR 2024/2979 Annex IV, with no dependency on non-European governance bodies.
 
-**Operational evidence**: the principle is the one invoked by the European Parliament resolution **P10_TA(2026)0022**, which demands that European critical infrastructure rest on open standards and auditable components.
+**Operational evidence**: the principle is the one invoked by the European Parliament resolution **P10_TA(2026)0022**, which demands that European critical infrastructure rest on open standards and auditable components. JAdES is a product of ETSI TC ESI — the same body responsible for ETSI TS 119 472-1 — providing end-to-end European governance for the W3C-VC signature stack.
 
-**References**: [01 — Context and foundations](./01-context-and-foundations.md), §1.7; [Annex B — Sources](./annexes/B-sources.md).
+**References**: [01 — Context and foundations](./01-context-and-foundations.md), §1.2.3; [Annex B — Sources](./annexes/B-sources.md).
 
 ## 9.11 Capability U10 — Uniform recursion of the model
 
@@ -104,25 +106,25 @@ The chapter closes the argumentative part of the document and prepares the [road
 
 **Operational evidence**: the DC4EU trust framework operates over this recursion in the 16 Member States of the pilot.
 
-**References**: [06 — Lifecycle and trust](./06-lifecycle-and-trust.md), §6.7.
+**References**: [06 — Lifecycle and trust](./06-lifecycle-and-trust.md), §6.8.
 
 ## 9.12 Capability U11 — Interoperability between wallet implementations
 
-**What it contributes**: the W3C-VC profile issued by one implementer is received, stored and presented by any other conformant wallet, without modifications.
+**What it contributes**: the W3C-VC profile issued by one implementer is received, stored and presented by any other conformant wallet, without modifications — both within Europe and globally.
 
-**How it demonstrates it**: the VCDM + ELM + OID4VCI/VP + HAIP combination contains no implementation ambiguities; the canonical fields are identical.
+**How it demonstrates it**: the VCDM + ELM + OID4VCI/VP + HAIP + JAdES-B-B combination contains no implementation ambiguities; the canonical fields are identical.
 
-**Operational evidence**: validation in DC4EU with four independent implementations (Identify, UAegean, Netcompany, Cappatrust) exchanging the 2,790 real credentials of the pilot.
+**Operational evidence**: validated in DC4EU with four independent implementations (Identify, UAegean, Netcompany, Cappatrust) exchanging the 2,790 real credentials of the pilot. Global wallet support is tracked at **https://canivc.com**, which documents W3C-VC conformance across more than 50 implementations worldwide — demonstrating that European W3C-VC credentials can be verified by the global ecosystem without reissuance.
 
-**References**: [06 — Lifecycle and trust](./06-lifecycle-and-trust.md), §6.9.
+**References**: [06 — Lifecycle and trust](./06-lifecycle-and-trust.md), §6.10.
 
 ## 9.13 Capability U12 — Dual-profile detection VCDM 1.1 / VCDM 2.0
 
-**What it contributes**: one and the same wallet or verifier can detect and process credentials issued under VCDM 1.1 (the mandate in force by the first batch of Implementing Acts) and VCDM 2.0 (forward-looking Recommendation) without ambiguity, by inspecting the primary `@context`.
+**What it contributes**: one and the same wallet or verifier can detect and process credentials issued under VCDM 1.1 (the mandate in force by the first batch of Implementing Acts) and VCDM 2.0 (forward-looking Recommendation) without ambiguity, by inspecting the primary `@context`. The transition is technically straightforward.
 
-**How it demonstrates it**: `"https://www.w3.org/2018/credentials/v1"` ↔ VCDM 1.1; `"https://www.w3.org/ns/credentials/v2"` ↔ VCDM 2.0. The two processing paths are isomorphic except for optional fields added in 2.0.
+**How it demonstrates it**: `"https://www.w3.org/2018/credentials/v1"` ↔ VCDM 1.1; `"https://www.w3.org/ns/credentials/v2"` ↔ VCDM 2.0. The two processing paths are isomorphic except for optional fields added in 2.0. VCDM 2.0 support is sufficient for all new deployments.
 
-**Operational evidence**: the proposed EUDIW profile explicitly declares simultaneous support; the DC4EU pilot wallets already realise it.
+**Operational evidence**: the proposed EUDIW profile explicitly declares simultaneous support during the transition; the DC4EU pilot wallets already realise it.
 
 **References**: [01 — Context and foundations](./01-context-and-foundations.md), §1.5; [02 — Requirements R10](./02-lifelong-learning-requirements.md).
 
@@ -158,22 +160,20 @@ The chapter closes the argumentative part of the document and prepares the [road
 
 ## 9.17 Aggregate summary
 
-The table below consolidates the 15 unique capabilities and their operational realisation:
-
 | # | Capability | Operational realisation |
 |---|---|---|
 | U1 | Native semantics | ELM v3.2 + EQF/ESCO/ISCED-F |
 | U2 | Dual validation | JSON Schema + SHACL in `credentialSchema` |
 | U3 | Suspension and revocation | `BitstringStatusList` (W3C Rec 2025-05-15) |
 | U4 | No "phone home" | Aggregated status lists |
-| U5 | Cryptographic unlinkability | `bbs-2023` over BLS12-381 |
-| U6 | Hybrid PKI ↔ dPKI | `eidasLegalIdentifier` + DID + EBSI TIR |
+| U5 | Pathway to cryptographic unlinkability | `bbs-2023` over BLS12-381 — upon ETSI TS 119 312 incorporation |
+| U6 | Hybrid PKI ↔ dPKI | `eidasLegalIdentifier` + JAdES-B-B + DID + EBSI TIR |
 | U7 | Multilingual traceability | EU multilingual controlled vocabularies |
-| U8 | Global compatibility | Open Badges 3.0 + CTDL + LER |
-| U9 | Sovereignty by design | Open W3C + ETSI Recommendations |
+| U8 | Global compatibility | Open Badges 3.0 + CTDL + LER + canivc.com (50+ wallets) |
+| U9 | Sovereignty by design | Open W3C + ETSI (JAdES-B-B) standards; no proprietary APIs |
 | U10 | Uniform recursion | Accreditations, lists, presentations over VCDM |
-| U11 | Wallet interoperability | 4 validated implementations DC4EU |
-| U12 | VCDM 1.1/2.0 dual profile | Detection via `@context` |
+| U11 | Wallet interoperability | 4 DC4EU implementations + 50+ global (canivc.com) |
+| U12 | VCDM 1.1/2.0 dual profile | Detection via `@context`; VCDM 2.0 sufficient for new deployments |
 | U13 | Sectoral extensibility | DC4EU + PH4H + TRACE4EU + Catena-X + Safe Island |
 | U14 | HAIP + OID4VC* | `ldp_vc`, `jwt_vc_json-ld` formats in metadata |
 | U15 | Sustainable evolution | Mature W3C process with backward compatibility |

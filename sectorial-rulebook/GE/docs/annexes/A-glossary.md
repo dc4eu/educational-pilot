@@ -9,8 +9,8 @@ This glossary collects the acronyms, technical terms and normative references us
 - **AMT** — Attestation of Mandatory Training. Type in the Sectoral EAA Catalogue.
 - **API** — Application Programming Interface.
 - **APEL** — Accreditation of Prior Experiential Learning.
-- **BBS** — Cryptosuite Boneh-Boyen-Shacham. Used in `bbs-2023` over BLS12-381.
-- **BLS12-381** — Elliptic pairing curve used in BBS and other constructions.
+- **BBS** — Cryptosuite Boneh-Boyen-Shacham. Used in `bbs-2023` over BLS12-381. See also: *BBS+ (`bbs-2023`)* in §A.2.
+- **BLS12-381** — Elliptic pairing curve used in BBS and other constructions. Not currently listed in ENISA Agreed Cryptographic Mechanisms v2.0; incorporation into ETSI TS 119 312 is under active revision.
 - **CBOR** — Concise Binary Object Representation (RFC 8949).
 - **CDDL** — Concise Data Definition Language (RFC 8610).
 - **CIR** — Commission Implementing Regulation.
@@ -54,6 +54,7 @@ This glossary collects the acronyms, technical terms and normative references us
 - **IETF** — Internet Engineering Task Force.
 - **IRI** — Internationalised Resource Identifier.
 - **ISCED-F** — International Standard Classification of Education, Fields.
+- **JAdES** — JSON Advanced Electronic Signatures (ETSI TS 119 182-1). European standard for advanced and qualified electronic signatures over JSON content. JAdES-B-B (baseline signed) is the operative signature for W3C-VC QEAAs with JOSE enveloping proofs, as prescribed in ETSI TS 119 472-1 V1.1.1 clause 7.6.4.2. Accepted by all EU Member State governments under eIDAS 2.0.
 - **JOSE** — JSON Object Signing and Encryption.
 - **JSON** — JavaScript Object Notation.
 - **JSON-LD** — JSON for Linked Data (W3C Recommendation).
@@ -100,17 +101,20 @@ This glossary collects the acronyms, technical terms and normative references us
 ## A.2 Technical terms
 
 - **`@context`**: JSON-LD attribute that declares the vocabularies and IRIs applicable to the serialisation. Determines the mapping from JSON to RDF and is the discriminant of the VCDM 1.1 ↔ VCDM 2.0 profile.
-- **Credential Integrity Proof**: cryptographic proof embedded in the credential. Two families: Data Integrity (with `proof` in JSON-LD) and JOSE/COSE (with JWT/CWT envelopes).
+- **BBS+ (`bbs-2023`)**: Data Integrity cryptosuite over BLS12-381 (W3C Candidate Recommendation, 3 April 2025) that provides cryptographic unlinkability between presentations. Adoption within the EUDIW regulatory perimeter is contingent on incorporation into ETSI TS 119 312, which is under active revision. Until that incorporation, `ecdsa-rdfc-2019` and JAdES-B-B are the operative proof mechanisms.
+- **Credential Integrity Proof**: cryptographic proof embedded in the credential. Two families: Data Integrity (with `proof` in JSON-LD) and JOSE/COSE (with JWT/CWT envelopes, including JAdES-B-B for European qualified credentials).
 - **Candidate Recommendation**: W3C process state in which the specification is considered technically stable and implementation is requested before the final Recommendation.
 - **Data Integrity**: family of W3C cryptosuites that sign the canonical RDF graph of the credential. Recommendations `ecdsa-rdfc-2019`, `eddsa-rdfc-2022`; Candidate `bbs-2023`.
-- **Derivation (BBS)**: cryptographic operation that produces, from a base signature, a presentable proof that is not correlatable with the base signature nor with other derivations.
+- **Derivation (BBS)**: cryptographic operation that produces, from a base signature, a presentable proof that is not correlatable with the base signature nor with other derivations. Available once `bbs-2023` is incorporated into ETSI TS 119 312.
 - **`digestMultibase`**: attribute that contains the hash of the referenced artefact encoded in multibase. Guarantees integrity of schemas and lists.
 - **`eidasLegalIdentifier`**: legal-person identifier under eIDAS (Implementing Regulation (EU) 2015/1501).
-- **Issuer**: entity that issues the credential; cryptographically signs the content; identified by a DID or a resolvable URI and, for qualified EAAs, by `eidasLegalIdentifier`.
+- **Issuer**: entity that issues the credential; cryptographically signs the content; identified by a DID or a resolvable URI and, for qualified EAAs, by `eidasLegalIdentifier` and a JAdES-B-B QSealC.
+- **JAdES-B-B**: Baseline Signed JSON Advanced Electronic Signature (ETSI TS 119 182-1). The operative enveloping proof format for W3C-VC QEAAs, prescribed by ETSI TS 119 472-1 V1.1.1 clause 7.6.4.2. Produces an advanced or qualified electronic seal accepted under eIDAS 2.0 by all EU Member States.
 - **`FullJsonSchemaValidator2021`**: `credentialSchema` type that indicates application of JSON Schema Draft 2020-12 to the credential.
 - **Holder**: person or entity that holds the credential in their wallet and presents it to third parties.
 - **JSON-LD 1.1**: W3C Recommendation that defines JSON serialisation for RDF graphs with `@context` support.
 - **`LearningAchievement` (ELM)**: ELM class that represents an assessed learning achievement.
+- **Longfellow-ZK**: initiative exploring zero-knowledge proof mechanisms architecturally compatible with JSON-based credentials and SD-JWT VC signatures. May be referenced in the ZKP roadmap once stabilised.
 - **LOA (Level of Assurance)**: level of assurance of identity and authentication (Low, Substantial, High) under Regulation 2024/1183.
 - **`Qualification` (ELM)**: ELM class that represents a formal qualification (degree, diploma, microcredential).
 - **Recommendation (W3C)**: final state of the W3C process; the specification is stable and endorsed by W3C.
@@ -118,15 +122,15 @@ This glossary collects the acronyms, technical terms and normative references us
 - **`statusListCredential`**: URI of the status list referenced by `BitstringStatusListEntry`.
 - **`statusPurpose`**: purpose of the status entry; standardised values `"revocation"` and `"suspension"`.
 - **Trusted List (TL)**: national list of QTS under eIDAS; its aggregation at the European level is the LOTL.
-- **Unlinkability (cryptographic)**: property by which two presentations of the same credential cannot be correlated by the verifiers, not even under collusion.
-- **Verifiable Presentation (VP)**: envelope signed by the holder that contains one or more credentials or their BBS derivations.
+- **Unlinkability (cryptographic)**: property by which two presentations of the same credential cannot be correlated by the verifiers, not even under collusion. Realised by `bbs-2023` (upon ETSI TS 119 312 incorporation) or operationally approximated by SD-JWT salted-hash selective disclosure (which does not provide full unlinkability).
+- **Verifiable Presentation (VP)**: envelope signed by the holder that contains one or more credentials or their selective-disclosure presentations.
 - **Verifier**: entity that receives the credential or presentation and executes the verification pipeline.
 
 ## A.3 Abbreviated normative references
 
 - **Regulation 2024/1183** — Regulation (EU) 2024/1183 of the European Parliament and of the Council, of 11 April 2024, on European digital identity (eIDAS 2.0).
 - **CIR 2024/2977** — Commission Implementing Regulation (EU) 2024/2977, with Annex I on PID encoding.
-- **CIR 2024/2979** — Commission Implementing Regulation (EU) 2024/2979, with Annex V on interoperability rules.
+- **CIR 2024/2979** — Commission Implementing Regulation (EU) 2024/2979, with Annex V on interoperability rules and Annex IV listing JAdES as an optional signature format for JSON content.
 - **CIR 2024/2982** — Commission Implementing Regulation (EU) 2024/2982, on integrity and EUDIW Core (includes Article 3(10) on unlinkability).
 - **CIR 2015/1501** — Commission Implementing Regulation (EU) 2015/1501, on unique legal-person identifier.
 - **CIR 2015/1505** — Commission Implementing Regulation (EU) 2015/1505, on national Trusted Lists.
@@ -134,18 +138,21 @@ This glossary collects the acronyms, technical terms and normative references us
 - **GDPR (Regulation 2016/679)** — General Data Protection Regulation.
 - **Regulation (EU) 1025/2012** — on European standardisation.
 - **Council Recommendation of 2022** — on microcredentials for lifelong learning and employability.
-- **ETSI TS 119 472-1 V1.1.1** — ETSI technical profile, clause 7 dedicated to W3C-VC.
+- **ETSI TS 119 472-1 V1.1.1** — ETSI technical profile, clause 7 dedicated to W3C-VC, including JAdES-B-B prescription (clause 7.6.4.2).
 - **ETSI TS 119 472-3** — (under development) OID4VCI flow in the ETSI ecosystem.
-- **W3C VCDM 1.1** — Verifiable Credentials Data Model 1.1 (W3C Recommendation).
-- **W3C VCDM 2.0** — Verifiable Credentials Data Model 2.0 (W3C Recommendation, 15 May 2025).
+- **ETSI TS 119 182-1** — JAdES digital signatures — Part 1: Building blocks and JAdES baseline signatures.
+- **ETSI TS 119 312** — (under revision) Cryptographic algorithm catalogue; revision in progress to include privacy-preserving mechanisms (BLS12-381/BBS).
+- **W3C VCDM 1.1** — Verifiable Credentials Data Model 1.1 (W3C Recommendation). Current mandate under first-batch Implementing Acts; valid during transition.
+- **W3C VCDM 2.0** — Verifiable Credentials Data Model 2.0 (W3C Recommendation, 15 May 2025). Forward-looking target; backward compatible with VCDM 1.1 via `@context`.
 - **W3C VC-Data-Integrity** — W3C Recommendation of 15 May 2025.
 - **W3C VC-JOSE-COSE** — W3C Recommendation of 15 May 2025.
 - **W3C Bitstring Status List v1.0** — W3C Recommendation of 15 May 2025.
 - **W3C ECDSA Cryptosuites v1.0** — W3C Recommendation of 15 May 2025.
-- **W3C BBS Cryptosuites v1.0** — W3C Candidate Recommendation of 3 April 2025.
+- **W3C BBS Cryptosuites v1.0** — W3C Candidate Recommendation of 3 April 2025. Pathway to adoption via ETSI TS 119 312 revision.
 - **W3C JSON-LD 1.1** — W3C Recommendation of 16 July 2020.
 - **W3C SHACL 1.0** — W3C Recommendation of 20 July 2017.
 - **ISO/IEC 18013-5** — Mobile driving licence (mdoc).
 - **IETF SD-JWT VC** — Selective Disclosure for JWT VC (IETF OAuth WG).
 - **P10_TA(2026)0022** — Resolution of the European Parliament on digital sovereignty.
 - **Ref. Ares(2026)1286304** — Public consultation of the Commission on the technical profile of the EUDIW.
+- **https://canivc.com** — Interoperability map documenting W3C-VC support across global wallet and verifier implementations.
